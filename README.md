@@ -12,15 +12,12 @@ Three schools participated in this project:
 
 The 9 projects where proposed by different local and national media and independent journalists:
 
-- [Project 1](http://)
-- [Project 2](http://)
-- [Project 3](http://)
-- [Project 4](http://)
-- [Project 5](http://)
-- [Project 6](http://)
-- [Project 7](http://)
-- [Project 8](http://)
-- [Project 9](http://)
+- [Air Pays de la Loire](http://www.airpl.org) (two projects)
+- [Euradio](http://euradio.fr)
+- [Music Data](https://musicdata.org)
+- [Press Pepper](http://www.presspepper.fr)
+- [Région Pays de la Loire ](http://www.paysdelaloire.fr) (two projects)
+- [Ville de Saint-Nazaire](http://www.saintnazaire.fr) (two projects)
 
 [1]: https://www.hyblab.fr/wp-content/uploads/2018/10/Datajournalisme2.png
 [2]: http://www.hyblab.fr
