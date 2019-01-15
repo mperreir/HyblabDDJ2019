@@ -9,7 +9,8 @@ var app = express()
 //app.use(basicAuth('ddj2019', 'iloveddj'));
 
 // declare the list of sub apps
-var app_names = ['simple-example'];
+var app_names = ['simple-example', 'air-pdl1', 'air-pdl2', 'euradio', 'music-data', 'press-pepper',
+ 'region-pdl-aides', 'region-pdl-audio', 'ville-saint-nazaire1', 'ville-saint-nazaire2'];
 
 var ddj2019_names = [];
 
