@@ -1,17 +1,24 @@
 # Descriptif du projet
 
-Média :
+Porteur de projet :
 
 Sujet :
 
 Equipe :
 
-Patricipants :
+Participants : 
 
-- AGR :
+- Sciencescom
+
+- EDNA :
 - Polytech :  
-- SciencesCom :
 
 # Installation
 
+TODO
+
+
+
 # Informations complémentaires
+
+TODO
