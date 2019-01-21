@@ -1,17 +1,16 @@
 # Descriptif du projet
 
-Porteur de projet :
+Porteur de projet : Air Pays de la Loire
 
-Sujet :
+Sujet : La pollution en NO2 en Pays de la Loire
 
-Equipe :
+Equipe : Hyb com' l'air
 
 Participants : 
 
-- Sciencescom
-
-- EDNA :
-- Polytech :  
+- Sciencescom : Alice VAILLANT, Capucine DESMARES
+- EDNA : Flora MONNIN, Marie RALPH, Mathilde MARIE
+- Polytech : Romain ANDRIEUX, Xinyao JIANG
 
 # Installation
 
