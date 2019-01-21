@@ -9,7 +9,7 @@ Equipe : Hyb com' l'air
 Participants : 
 
 - Sciencescom : Alice VAILLANT, Capucine DESMARES
-- EDNA : Flora MONNIN, Marie RALPH, Mathilde MARIE
+- AGR : Flora MONNIN, Marie RALPH, Mathilde MARIE
 - Polytech : Romain ANDRIEUX, Xinyao JIANG
 
 # Installation
