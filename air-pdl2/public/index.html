@@ -8,34 +8,13 @@
     <title>view</title>
     <!-- Bootstrap -->
     <link href="../libraries/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-    <style type="text/css">
-        .carousel img {
-            width: 100%;
-            height: 100%;
-        }
-        .carousel {
-            height: 750px;
-            background-color: rgba(0, 0, 0, 0);
+    <link rel="stylesheet" href="css/style.css" media="screen">
 
-        }
-
-        .carousel .item {
-            height: 500px;
-            background-color: rgba(0, 0, 0, 0);
-        }
-        #box{
-            height: 100px;
-            width: 100px;
-            position:absolute;
-        }
-    </style>
 </head>
 <body>
 
 <!--定义导航栏-->
-<div class="container-fiuled">
-
-
+<div class="container-fluid">
     <div id="carousel-example-generic" class="carousel slide" data-interval="false">
 
         <!-- Wrapper for slides -->
@@ -43,29 +22,19 @@
         <div class="carousel-inner" role="listbox">
 
             <div class="item active">
-
-                <img src="img/dfd.png" alt="...">
-
                 <div class="carousel-caption">
-                    <h1>first</h1>
                 </div>
             </div>
             <div class="item">
-                <img src="img/logo_hyblab.png" alt="...">
                 <div class="carousel-caption">
-                    <h2>second</h2>
                 </div>
             </div>
             <div class="item">
-                <!--<img src="" alt="...">-->
                 <div class="carousel-caption">
-                    <h1>Last</h1>
                 </div>
             </div>
         </div>
-        <div id="box" style="left:0" >
-            <img src="img/images.png" >
-        </div>
+
         <!-- Controls -->
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>

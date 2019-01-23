@@ -13,3 +13,39 @@ header img{
   max-width: 100%;
 	height: auto;
 }
+
+html {
+    height:100%;
+    width: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background:#176261 url(../img/bg2.png) no-repeat fixed top center;
+    background-size:contain;
+    color:white;
+}
+section {
+    height: 100%;
+}
+
+.carousel {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.carousel .item {
+    background-color: rgba(0, 0, 0, 0);
+}
+.carousel-caption{
+    position: relative;
+}
+
+.container-fluid{
+    height: 100%;
+    padding: 0px;
+}
+#carousel-example-generic{
+    height:100%;
+    width:100%;
+}
