@@ -1,15 +1,43 @@
 /* just a sample css rule to show that everything works */
-footer p
-{
-  font-size: small;
-  text-align: center;
+
+footer p {
+	font-size: small;
+	text-align: center;
 }
 
-header{
-  text-align: center;
+header {
+	text-align: center;
 }
 
-header img{
-  max-width: 100%;
+header img {
+	max-width: 100%;
 	height: auto;
+}
+
+.stats_accueil {
+	font-weight: bold;
+	color: greenyellow;
+}
+
+h1 {
+	font-size: 5em;
+	font-family: arial, helvetica;
+	color: #fff;
+	margin: 0;
+}
+
+.section {
+	text-align: center;
+}
+
+.fp-slidesNav.bottom {
+	bottom: 25px;
+}
+
+#infoMenu li a {
+	color: #fff;
+}
+
+#section2 h1 {
+	color: #333;
 }

@@ -1,40 +1,104 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
-  <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-    <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-		<!-- Basic viewport setting for mobile friendly page -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
-		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-		<!-- Simple sample script that loads data from a dummy json file -->
-		<script src="js/example.js" defer></script>
-  </head>
-  <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+<html lang="fr">
+<!-- Notre page est en français -->
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
-      <h1>Hyblab Datajournalism 2019</h1>
-    </header>
+<head>
+  <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
+  <meta charset="utf-8">
+  <title>Archi-Sons</title>
+  <!-- Basic viewport setting for mobile friendly page -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Déclaration de la feuille de style du document-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fullpage.css">
+  <!-- Those polyfills are required so that old browsers support fetch mecanism -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+  <!-- Simple sample script that loads data from a dummy json file -->
+  <script src="js/example.js" defer></script>
+  <script src="js/fullpage.js"></script>
+</head>
 
-    <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
+<body>
+  <div id="fullpage">
 
-		<p>Here is some data from a json file : <span id="data"></span><p>
-
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2019</p>
-    </footer>
+    <div class="section " id="accueil">
+      <h1>Accueil</h1>
+      <p>
+        Vous trouverez ici <span class="stats_accueil" id="nb_fichier_audio"></span> extraits audio du conseil
+        régional des Pays de la Loire pour une durée de <span class="stats_accueil" id="duree_totale"></span> et une taille de
+        <span class="stats_accueil" id="taille_totale"></span> octet(s).
+      </p>
     </div>
-  </body>
+    <div class="section" id="welcome">
+      <h1>Welcome</h1>
+      <p>
+        Trouvez ici la page de bienvenue.
+      </p>
+    </div>
+    <div class="section" id="president">
+      <h1>Présidents</h1>
+      <p>
+        Trouvez ici les informations sur les présidents.
+      </p>
+    </div>
+    <div class="section" id="elu">
+      <h1>Élus</h1>
+      <p>
+        Trouvez ici les informations sur les élus.
+      </p>
+    </div>
+    <div class="section" id="enregistrement">
+      <h1>Nombre d'enregistrements</h1>
+      <p>
+        Trouvez ici les informations sur les enregistrements.
+      </p>
+    </div>
+    <div class="section" id="reunion">
+      <h1>Objets des réunions</h1>
+      <p>
+        Trouvez ici les informations sur les réunions.
+      </p>
+    </div>
+    <div class="section" id="mot_cle">
+      <h1>Mots clés</h1>
+      <p>
+        Trouvez ici informations sur les mots clés.
+      </p>
+    </div>
+    <div class="section" id="bye">
+      <h1>La scéance est lévée</h1>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+      anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage', '8thPage'],
+      sectionsColor: ['#D84525', '#D84525', '#D84525', '#D84525', '#D84525', '#D84525', '#D84525', '#D84525'],
+      navigation: true,
+      navigationPosition: 'right',
+      navigationTooltips: ['First page', 'Second page', 'Third page', 'Fourth page', 'Fifth page', 'Sixth page', 'Seventh page', 'Eighth and last page'],
+    });
+  </script>
+</body>
+
 </html>
+
+<!--
+  <!DOCTYPE html>
+<span id="mySpan" style="font-size: 30px;"></span>
+ 
+<script type="text/javascript">
+function extraire() {
+     character = message.substring(I, I=I+1) ;
+     if ( character == "-" &&  message.substr(I, 5) == "stop-" ) {              
+          character = "<br>" ;
+          I = I + 5;
+          }
+     mySpan.innerHTML += character;
+     if ( I < message.length ) setTimeout(extraire, 100);
+     }
+I = 0 ;
+message = "-stop- Ceci est le texte à afficher !... -stop- Fin de message ./";
+extraire();
+</script>
+-->
