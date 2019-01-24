@@ -23,3 +23,21 @@ fetch('data/dummy.json')
         document.querySelector('#data')
             .textContent = json.data;
     });
+
+
+function en_route(){
+  document.getElementsByClassName("bouton_accueil")[0].textContent = "GO ! ";
+  document.getElementById("velo_accueil").style.display="block";
+  document.getElementById("dial_accueil").style.display="block";
+  document.getElementsByClassName("bouton_accueil")[0].addEventListener("click", go);
+}
+
+
+function go(){
+
+  document.getElementById("accueil").style.display="none";
+  document.getElementById("carte_generale").style.display="block";
+  document.getElementById("velo_carte_generale").style.display="block";
+  document.getElementById("dial_carte_generale").style.display="block";
+
+}
