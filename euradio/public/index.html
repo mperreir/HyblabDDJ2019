@@ -8,33 +8,65 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Déclaration de la feuille de style du document-->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+    <link rel="stylesheet" href="css/juxtapose.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script src="js/fullpage.js" defer></script>
+    <script src="js/juxtapose.js" defer></script>
+    <script src="js/example.js" defer></script>
+
 		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
 		<!-- Simple sample script that loads data from a dummy json file -->
-		<script src="js/example.js" defer></script>
   </head>
   <body>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
     <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
     <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+    <div id="fullpage">
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
-      <h1>Parce que HyblabFM c'est ceux qui auront le prix ;)</h1>
-    </header>
 
-    <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
+    <div class="section"> <!-- Page 1 -->
+        <header>
+    			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
+          <h1>Parce que HyblabFM c'est ceux qui auront le prix ;)</h1>
+        </header>
+        <p>Replace this content by your web app !</p>
 
-		<p>Here is some data from a json file : <span id="data"></span><p>
+    		<p>Here is some data from a json file : <span id="data"></span><p>
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2019</p>
-    </footer>
+        <button type="button" class="next">Suivant</button>
+        <footer>
+          <p>Copyright Hyblab team 2019</p>
+        </footer>
+    </div>
+
+
+    <div class="section"> <!-- Page 2 -->
+      <div class="juxtapose" data-startingposition="45%">
+        <img src="img/radio-svgrepo-com.svg" height="420" width="420"/>
+        <img src="img/radio.png" height="420" width="420"/>
+      </div>
+      <button type="button" class="previous">Precedent</button>
+      <button type="button" class="next">Suivant</button>
+
+    </div>
+
+
+    <div class="section">Section 3  <!-- Page 3 -->
+      <button type="button" class="previous">Precedent</button>
+      <button type="button" class="next">Suivant</button>
+
+    </div>
+
+
+    <div class="section">Section 4 <!-- Page 4 -->
+      <button type="button" class="previous">Precedent</button>
+    </div>
+</div>
+    </div>
     </div>
   </body>
 </html>
