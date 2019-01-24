@@ -23,3 +23,12 @@ fetch('data/dummy.json')
         document.querySelector('#data')
             .textContent = json.data;
     });
+      new fullpage('#fullpage', {
+      });
+      fullpage_api.setAllowScrolling(false);
+      $('.next').click(function(){
+        fullpage_api.moveSectionDown();
+      });
+      $('.previous').click(function(){
+        fullpage_api.moveSectionUp();
+      });
