@@ -2,16 +2,15 @@
 
 Porteur de projet :
 
-Sujet :
+Sujet : #DeuxRoues1
 
-Equipe :
+Equipe : Roues Libres
 
 Participants : 
 
-- Sciencescom
-
-- EDNA :
-- Polytech :  
+- Sciencescom : 
+- EDNA : 
+- Polytech : TRANNOY Julien / GOMES Allan
 
 # Installation
 
