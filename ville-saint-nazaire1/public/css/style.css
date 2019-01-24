@@ -1,4 +1,4 @@
-/* just a sample css rule to show that everything works */
+/* just a sample  css rule to show that everything works */
 footer p
 {
   font-size: small;
@@ -11,5 +11,177 @@ header{
 
 header img{
   max-width: 100%;
-	height: auto;
+  height: auto;
+}
+
+
+
+/* Page Accueil */
+
+#accueil{
+  position:relative;
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#accueil #img_accueil{
+  padding-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+  z-index:1;
+}
+
+#accueil #velo_accueil{
+  left :0%;
+  width: 30%;
+  bottom:0%;
+  height: auto;
+  z-index:2;
+  position: absolute;
+  display:none;
+}
+
+#accueil #dial_accueil{
+  left :25%;
+  width:20%;
+  bottom:30%;
+  height: auto;
+  z-index:2;
+  position: absolute;
+  background-color: white;
+  border: black solid 2px;
+  border-radius:5px;
+  padding:6px 10px;
+  border-color:#4e687f;
+  display:none;
+}
+
+#accueil #dial_accueil:before{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -20px;
+  right: auto;
+  top: -2px;
+  bottom: auto;
+  border: 10px solid;
+  border-color: #4e687f #4e687f transparent transparent;
+}
+#accueil #dial_accueil:after{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -15px;
+  right: auto;
+  top: auto;
+  top: 0px;
+  border: 10px solid;
+  border-color: white white transparent transparent ;
+}
+
+#accueil .bouton_accueil{
+  position: absolute;
+  top : 85%;
+  left: 50%;
+  z-index:3;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  padding: 6px 40px;
+  font-size: 16px;
+  background-color: #4e687f;
+  border-color: #4e687f;
+  color: white;
+  cursor: pointer;
+  /* font-family:    ;  A completer; */
+  font-weight:bold;
+}
+
+
+
+/* Page Carte avant Personnalisation */
+
+#carte_generale{
+  display:none;
+  position:relative;
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#carte_generale #img_carte_generale{
+  left :30%;
+  width: 100%;
+  height: auto;
+  z-index:1;
+}
+
+#carte_generale #velo_carte_generale{
+  left :0%;
+  width: 30%;
+  bottom:0%;
+  height: auto;
+  z-index:2;
+  position: absolute;
+  display:none;
+}
+
+#carte_generale #dial_carte_generale{
+  left :3%;
+  width:30%;
+  top:30%;
+  height: auto;
+  z-index:2;
+  position: absolute;
+  background-color: white;
+  border: black solid 2px;
+  border-radius:5px;
+  padding:6px 10px;
+  border-color:#4e687f;
+  display:none;
+}
+
+#carte_generale #dial_carte_generale:before{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50px;
+  right: auto;
+  bottom: -20px;
+  border: 10px solid;
+  border-color: #4e687f transparent transparent  #4e687f;
+}
+#carte_generale #dial_carte_generale:after{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 52px;
+  right: auto;
+  top: auto;
+  bottom: -15px;
+  border: 10px solid;
+  border-color: white transparent transparent white ;
+}
+
+#carte_generale .bouton_personnaliser{
+  margin-top:15%;
+  padding: 6px 30px;
+  position: relative;
+  left: 50%;
+  z-index:3;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #4e687f;
+  border-color: #4e687f;
+  color: white;
+  cursor: pointer;
+  /* font-family:    ;  A completer; */
+  font-weight:bold;
 }
