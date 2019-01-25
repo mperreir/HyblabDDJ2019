@@ -1,5 +1,4 @@
 /* just a sample css rule to show that everything works */
-
 footer p
 {
   font-size: small;
@@ -9,14 +8,81 @@ footer p
 header{
   text-align: center;
 }
+.haut{
+  text-align: center;
+}
 
 header img{
   max-width: 100%;
 	height: auto;
 }
 
-.forJuxta{
-  width: 600px;
+#content-juxta{
+  width: 960px;
+  height: 400px;
+
+  margin: auto;
+}
+
+#section2{
+  background-color: #60BEEC;
+}
+
+h2 {
+	color: #312783;
+	font-family: Roboto;
+	font-size: 47.27px;
+	font-style: italic;
+	font-weight: 900;
+	line-height: NaNpx;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+h3 {
+	color: #312783;
+	font-family: Roboto;
+	font-size: 18.22px;
+	font-style: italic;
+	font-weight: bold;
+	line-height: 21px;
+	text-align: center;
+}
+#containerRnt{
+  margin: auto;
+  text-align: center;
+}
+.arrow {
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 3vw;
+  width: 3vw;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 1px 1px 0px;
+
+  transition: border-width 150ms ease-in-out;
+  z-index: 100;
+  margin: auto;
+}
+
+.arrow:hover {
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+  z-index: 100;
+}
+
+#full {
+  height: 100vh;
+  background-color: #256347;
+  z-index: 100;
+}
+.down{
+  margin-bottom:-15px;
+  transform: rotate(45deg);
+}
+.up{
+  margin-top : -10px;
+  transform: rotate(-135deg);
 }
 
 

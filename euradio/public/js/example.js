@@ -26,9 +26,9 @@ fetch('data/dummy.json')
       new fullpage('#fullpage', {
       });
       //fullpage_api.setAllowScrolling(false);
-      $('.next').click(function(){
+      $('.down').click(function(){
         fullpage_api.moveSectionDown();
       });
-      $('.previous').click(function(){
+      $('.up').click(function(){
         fullpage_api.moveSectionUp();
       });
