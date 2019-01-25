@@ -1,0 +1,100 @@
+[
+  {
+    "Commune": "La-Chapelle-des-marais",
+    "Type": "Restaurant",
+    "Nom": "Crêperie du Sabotier",
+    "Latitude": 47.445497,
+    "Longitude": -2.244379
+  },
+  {
+    "Commune": "Saint-Nazaire",
+    "Type": "Restaurant",
+    "Nom": "Le 8ème",
+    "Latitude": 47.273777,
+    "Longitude": -2.21469
+  },
+  {
+    "Commune": "Saint-Nazaire",
+    "Type": "Restaurant",
+    "Nom": "Le Sabayon",
+    "Latitude": 47.276552,
+    "Longitude": -2.209573
+  },
+  {
+    "Commune": "Saint-Nazaire",
+    "Type": "Restaurant",
+    "Nom": "Assya Couscous",
+    "Latitude": 47.263495,
+    "Longitude": -2.242
+  },
+  {
+    "Commune": "Pornichet",
+    "Type": "Restaurant",
+    "Nom": "Les Tourelles",
+    "Latitude": 47.256952,
+    "Longitude": -2.338964
+  },
+  {
+    "Commune": "Saint-André-des-Eaux",
+    "Type": "Restaurant",
+    "Nom": "Restaurant Tykaz",
+    "Latitude": 47.314833,
+    "Longitude": -2.311416
+  },
+  {
+    "Commune": "Saint-André-des-Eaux",
+    "Type": "Restaurant",
+    "Nom": "Crêperie Ty Manou",
+    "Latitude": 47.313807,
+    "Longitude": -2.311866
+  },
+  {
+    "Commune": "Saint-Joachim",
+    "Type": "Restaurant",
+    "Nom": "La Mare aux Oiseaux",
+    "Latitude": 47.373987,
+    "Longitude": -2.213308
+  },
+  {
+    "Commune": "Donges",
+    "Type": "Restaurant",
+    "Nom": "La Pommeraie",
+    "Latitude": 47.354831,
+    "Longitude": -2.104243
+  },
+  {
+    "Commune": "Saint-Lyphard",
+    "Type": "Restaurant",
+    "Nom": "L'Auberge de Bréca",
+    "Latitude": 47.363058,
+    "Longitude": -2.314245
+  },
+  {
+    "Commune": "Pornichet",
+    "Type": "Restaurant",
+    "Nom": "L'Atypic",
+    "Latitude": 47.258943,
+    "Longitude": -2.345931
+  },
+  {
+    "Commune": "Pornichet",
+    "Type": "Restaurant",
+    "Nom": "Le Grain de Folie",
+    "Latitude": 47.271408,
+    "Longitude": -2.350222
+  },
+  {
+    "Commune": "Montoir-de-Bretagne",
+    "Type": "Restaurant",
+    "Nom": "L'Authentik",
+    "Latitude": 47.326569,
+    "Longitude": -2.14787
+  },
+  {
+    "Commune": "Saint-Nazaire",
+    "Type": "PicNic",
+    "Nom": "Aire de repos - Le Vivier",
+    "Latitude": 47.313587,
+    "Longitude": -2.262077
+  }
+]

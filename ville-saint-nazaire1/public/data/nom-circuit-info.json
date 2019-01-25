@@ -1,0 +1,51 @@
+[
+  {
+    "nom": "trace-circuit-les-charmes-de-la-briere-boucle-1",
+    "distance_en_km": 22,
+    "temps_en_min": 100,
+    "description": "Au départ de l%u2019église de Saint-André-des-Eaux, cet itinéraire offre plusieurs boucles possibles de 10, 20 ou 30 km, à vous de choisir ! Par les petites routes reliant les hameaux vous découvrirez le bocage de la partie sud du Parc naturel régional de Brière. Ne manquez pas le petit port de Tréhé au bord du marais de Grande Brière et le panorama du haut de la table d%u2019orientation au port de la Chaussée Neuve.",
+    "caractéristique": "Itinéraire sur route à faible circulation et sur piste dédiée aux vélos. Itinéraire La CARENE à vélo."
+  },
+  {
+    "nom": "trace-circuit-les-charmes-de-la-briere-boucle-2",
+    "distance_en_km": 10.7,
+    "temps_en_min": 50,
+    "description": "Au départ de l%u2019église de Saint-André-des-Eaux, cet itinéraire offre plusieurs boucles possibles de 10, 20 ou 30 km, à vous de choisir ! Par les petites routes reliant les hameaux vous découvrirez le bocage de la partie sud du Parc naturel régional de Brière. Ne manquez pas le petit port de Tréhé au bord du marais de Grande Brière et le panorama du haut de la table d%u2019orientation au port de la Chaussée Neuve.",
+    "caractéristique": "Itinéraire sur route à faible circulation et sur piste dédiée aux vélos. Itinéraire La CARENE à vélo."
+  },
+  {
+    "nom": "trace-circuit-entre-plage-et-bocage-pornichet",
+    "distance_en_km": 15.5,
+    "temps_en_min": 270,
+    "description": "Ce circuit reflète les atouts de Pornichet : une ville bleue avec l%u2019océan, et une ville verte avec la nature. La diversité du circuit permet aux randonneurs d%u2019apprécier les différents paysages, mais aussi de s%u2019imprégner de leur ambiance. Chaque site a son histoire : le lieu-dit « Les Forges » fait référence au travail du fer et du bronze à l%u2019époque gauloise, Sainte-Marguerite, station de prédilection pour les premiers villégiateurs au XIXe siècle, le sentier côtier, et sa vue imprenable sur l%u2019estuaire de la Loire et l%u2019océan.",
+    "caractéristique": "Accès Suivre le balisage au départ du rond-point situé près de l%u2019espace culturel Quai des Arts"
+  },
+  {
+    "nom": "trace-circuit-guerande-pornichet",
+    "distance_en_km": 16.8,
+    "temps_en_min": 75,
+    "description": "16.8 km : Après avoir profité de la cité médiévale de Guérande intra-muros, direction La Baule, pour accéder par la voie verte, à la plus belle baie d%u2019Europe. Le passage en forêt d%u2019Escoublac est l%u2019occasion rêvée pour sortir le pique-nique des sacoches et s%u2019octroyer un joyeux moment de détente. Ensuite, quelques tours de roue et la plage bauloise contentera les velléités de baignade.",
+    "caractéristique": "L%u2019itinéraire Jalonnement « Vélocéan ». Petites routes puis piste cyclable de la cité de Guérande au départ de la voie verte qui s%u2019arrête à Beslon, quartier de la Baule. Passage un peu tout terrain en forêt d%u2019Escoublac à bien négocier. Alternance de rues à trafic apaisé et de pistes cyclables. Bandes cyclables le long du front de mer."
+  },
+  {
+    "nom": "trace-circuit-la-baule-le-croisic",
+    "distance_en_km": 30,
+    "temps_en_min": 135,
+    "description": "30 km : Au niveau de la voie verte à Beslon, une échappée du bout du monde vers Le Croisic est possible. L%u2019itinéraire passe au c%u0153ur de la petite cité de caractère de Batzsur-Mer, et opère un panoramique tour de la presqu%u2019île du Croisic. La superbe piste cyclable de la Grande Côte permet un retour inédit par le port du Pouliguen avant de gagner La Baule.",
+    "caractéristique": "L%u2019itinéraire Jalonnement disparate « Vélocéan » et boucles locales. Discontinuité de l%u2019itinéraire à la Baule-Escoublac, et fin officielle de Vélocéan à la sortie de Batz-sur-Mer (D45). Alternance de pistes et bandes cyclables, de petites routes à faible circulation. Attention, arrêt brutal de la piste cyclable le long de la D192 juste avant de passer sous la voie ferrée à La Baule-Escoublac."
+  },
+  {
+    "nom": "trace-circuit-la-baule-saint-nazaire",
+    "distance_en_km": 29,
+    "temps_en_min": 130,
+    "description": "29 km : Une étape un brin rétro littorale qui dessert le site du tumulus de Dissignac et l%u2019étang du Bois Joalland, haut lieu des sports nautiques nazairiens. Ce parcours jusqu%u2019alors entre bois et campagne devient plus urbain après l%u2019étang. Les boulevards facilitent l%u2019arrivée sur le beau front de mer réaménagé, où le monument américain de Saint-Nazaire vous ouvre ses bras.",
+    "caractéristique": "L%u2019itinéraire Jalonnement Vélocéan. Alternance de chemins carrossables et de routes à faible circulation. Passage à 10% peu avant Pont Saillant dans une allée couverte. Attention, la fin du parcours sur la zone portuaire n%u2019est pas encore aménagée. Possibilité de rejoindre La Loire à vélo ou la Vélodyssée via la ligne de bus Lila 17 qui permet la traversée du Pont de Saint-Nazaire."
+  },
+  {
+    "nom": "trace-circuit-port-de-peche-plaisance-aux-chantiers-navals",
+    "distance_en_km": 20.7,
+    "temps_en_min": 95,
+    "description": "Au départ de la place du marché de Pornichet, vous longerez la baie de Pornichet et La Baule pour découvrir le charme du front de mer. Les chemins de campagnes vous mèneront jusqu%u2019à Saint-Nazaire et ses plages. Vous ne serez, alors, plus très loin de la base sous-marine et des chantiers navals qui vous ouvrent leurs portes pour des visites insolites.",
+    "caractéristique": "Itinéraire sur route à faible circulation et sur piste dédiée aux vélos. Itinéraire Vélocéan"
+  }
+]
