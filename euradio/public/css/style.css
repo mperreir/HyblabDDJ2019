@@ -1,14 +1,15 @@
-/* just a sample css rule to show that everything works */
+/* Basic */
+
 footer p
 {
   font-size: small;
   text-align: center;
 }
-
-header{
+.haut{
   text-align: center;
 }
-.haut{
+
+header{
   text-align: center;
 }
 
@@ -16,18 +17,6 @@ header img{
   max-width: 100%;
 	height: auto;
 }
-
-#content-juxta{
-  width: 960px;
-  height: 400px;
-
-  margin: auto;
-}
-
-#section2{
-  background-color: #60BEEC;
-}
-
 h2 {
 	color: #312783;
 	font-family: Roboto;
@@ -47,17 +36,15 @@ h3 {
 	line-height: 21px;
 	text-align: center;
 }
-#containerRnt{
-  margin: auto;
-  text-align: center;
-}
+
+/* Arrow */
 .arrow {
   cursor: pointer;
   box-sizing: border-box;
   height: 3vw;
   width: 3vw;
   border-style: solid;
-  border-color: white;
+  border-color: #312783;
   border-width: 0px 1px 1px 0px;
 
   transition: border-width 150ms ease-in-out;
@@ -73,7 +60,7 @@ h3 {
 
 #full {
   height: 100vh;
-  background-color: #256347;
+  background-color: #312783;
   z-index: 100;
 }
 .down{
@@ -92,25 +79,19 @@ h3 {
   background-color: #FCEA10;
 }
 
-h2 {
-	color: #312783;
-	font-family: Roboto;
-	font-size: 47.38px;
-	font-style: italic;
-	font-weight: 900;
-	line-height: 15%;
-}
-
-h3 {
-	color: #312783;
-	font-family: Roboto;
-	font-size: 18.22px;
-	font-style: italic;
-	font-weight: bold;
-	line-height: NaNpx;
-}
 
 .images_petit {
-width:800px;
-height:454px;
+height:354px;
+}
+
+/* DIAPO 2 */
+
+#section2{
+  background-color: #60BEEC;
+}
+
+
+#containerRnt{
+  margin: auto;
+  text-align: center;
 }
