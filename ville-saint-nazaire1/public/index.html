@@ -11,8 +11,8 @@
   <!-- Those polyfills are required so that old browsers support fetch mecanism -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-  <!-- Simple sample script that loads data from a dummy json file -->
-  <script src="js/example.js" defer></script>
+    <!-- Simple sample script that loads data from a dummy json file -->
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
@@ -38,6 +38,30 @@
         <button class="bouton_personnaliser" onclick="personnaliser()" type="button"> MON PARCOURS </button>
       </div>
     </div>
+    <div id="personnalisation">
+      <h2> Alors, qu'avez vous envie de faire aujourd'hui ? </h2>
+      <img id="velo_personnalisation" src="img/velo.jpg"  alt="velo personnalisation"/>
+      <div id="curseurs">
+        <div id="curs_dist">
+          <label for="distance">Distance</label>
+          <br/><br/>
+          <input type="range" min="1" max="3" step="1" value="2" class="slider" id="distance" name="distance">
+        </div>
+        <div id="curs_theme">
+          <label for="distance">Theme</label>
+          <br/><br/>
+          <input type="range" min="1" max="3" step="1" value="2" class="slider" id="theme" name="theme" >
+          <ul class="range-labels-theme">
+            <li onclick="click_curseur('3')">Plage / Bord de Mer</li>
+            <li onclick="click_curseur('2')" class="active selected">Musée / Culturel</li>
+            <li onclick="click_curseur('1')" >Forêt / Nature</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
   </div>
 </body>
 <footer>
