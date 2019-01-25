@@ -95,12 +95,12 @@
 
   function getNaturalDimensions(DOMelement) {
     if (DOMelement.naturalWidth && DOMelement.naturalHeight) {
-      return {width: DOMelement.naturalWidth, height: DOMelement.naturalHeight};
+      return {width: DOMelement.naturalWidth/2, height: DOMelement.naturalHeight/2};
     }
     // http://www.jacklmoore.com/notes/naturalwidth-and-naturalheight-in-ie/
     var img = new Image();
     img.src = DOMelement.src;
-    return {width: img.width, height: img.height};
+    return {width: img.width/2, height: img.height/2};
   }
 
   function getImageDimensions(img) {

@@ -1,4 +1,4 @@
-.juxtapose { max-width: 80%;}
+.juxtapose { max-width: 50%;}
 .jx-slider {}
 
 
@@ -8,13 +8,12 @@ div.juxtapose {
 }
 
 div.jx-slider {
-	width: 30%; /*modifié */
-	height: 30%;/*modifié */
+	width: 100%; /*modifié */
+	height: 100%;/*modifié */
 	position: absolute;
 	overflow: hidden;
 	cursor: pointer;
   margin: auto;
-  margin-left: 100px;
 }
 
 
