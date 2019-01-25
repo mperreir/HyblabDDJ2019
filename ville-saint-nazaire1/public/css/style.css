@@ -1,6 +1,9 @@
 *{
   max-width:1280px;
   max-height:850px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
 }
 /* just a sample  css rule to show that everything works */
 footer p
@@ -10,6 +13,10 @@ footer p
   position: fixed;
   Width: 100%;
   bottom: 0;
+}
+
+body{
+  background-color:#4e687f;
 }
 
 header{
@@ -27,14 +34,16 @@ header img{
 
 #accueil{
   position:relative;
-  width:50%;
   margin-left: auto;
   margin-right: auto;
+  display:block;
 }
 
-#accueil #img_accueil{
-  padding-left: auto;
+#img_accueil{
+  position:relative;
+  margin-left: auto;
   margin-right: auto;
+  display:block;
   width: 100%;
   height: auto;
   z-index:1;
@@ -196,12 +205,17 @@ header img{
 /* Page Personnalisation */
 
 #personnalisation{
+  border-radius: 20px;
+  padding-top:10px;
   display:none;
   position:relative;
   text-align:center;
   width:100%;
+  min-height:600px;;
   margin-left: auto;
   margin-right: auto;
+  background-color: #ffffff;
+  color:#4e687f;
 }
 
 #personnalisation #velo_personnalisation{
@@ -215,16 +229,10 @@ header img{
   float:left;
 }
 
-
 #personnalisation #curseurs{
-  /*
-  padding-top:15%;
-  float:right;
-  width: 35%;
-  top:50%;
-  */
+  background-color:#ffffff;
   height: auto;
-  z-index:2;
+  z-index:1;
   position: relative;
   display:none;
 }
@@ -242,60 +250,76 @@ header img{
 
 
 #curs_theme input, #curs_dist input{
-  width: 60%;
+  width: 65%;
   float:right;
   position: relative;
   top: 2px;
-
-
 }
 
 #curs_theme label, #curs_dist label{
-  width: 60%;
-  float:left;
+  width: 80%;
+  text-align:left;
+  float:right;
   position: relative;
   top: 2px;
-
 }
 
-.range-labels-theme {
+#personnalisation .bouton_personnalisation{
+  margin-top:15%;
+  padding: 6px 30px;
+  position: absolute;
+  right:5%;
+  bottom:100px;
+  z-index:3;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #4e687f;
+  border-color: #4e687f;
+  color: white;
+  cursor: pointer;
+  /* font-family:    ;  A completer; */
+  font-weight:bold;
+}
+
+.range-labels-dist, .range-labels-theme {
   margin: 18px -41px 0;
   padding: 0;
   list-style: none;
 }
-.range-labels-theme li {
+
+.range-labels-dist li {
     position: relative;
     float:right;
     width:auto;
-    padding-left:5%;
-    text-align: center;
+    min-width:28%;
+    text-align: right;
+    right:6%;
     color: #4e687f;
     font-size: 14px;
     cursor: pointer;
+}
 
-    &::before {
-      position: absolute;
-      top: -25px;
-      right: 0;
-      left: 0;
-      content: "";
-      margin: 0 auto;
-      width: 9px;
-      height: 9px;
-      background: #b2b2b2;
-      border-radius: 50%;
-    }
-  }
+.range-labels-theme li {
+    position: relative;
+    float:right;
+    width:30%;
+    text-align: right;
+    color: #4e687f;
+    font-size: 14px;
+    cursor: pointer;
+    right:-5%;
+}
 
-  .active {
-    color: #37adbf;
-  }
+.active {
+  color: #37adbf;
+}
 
-  .selected::before {
-    background: #37adbf;
-  }
+.selected::before {
+  background: #37adbf;
+}
 
-  .active.selected::before {
-    display: none;
-  }
+.active.selected::before {
+  display: none;
+
 }

@@ -41,15 +41,32 @@ function go(){
 }
 
 function personnaliser(){
-
   document.getElementById("carte_generale").style.display="none";
   document.getElementById("personnalisation").style.display="block";
   document.getElementById("velo_personnalisation").style.display="block";
   document.getElementById("curseurs").style.display="block";
 }
 
-// Change input value on label click
-function click_curseur(x) {
-  document.getElementById("theme").value = x ;
+function click_curseur_theme(x) {
+  document.getElementById("num_theme").value = x ;
+}
 
+function click_curseur_dist(x) {
+  document.getElementById("distance").value = x ;
+}
+
+var nb = document.getElementById("distance").value;
+document.getElementById("val").innerHTML = Math.round(nb*10) /10;
+
+function actualiser_dist() {
+  var nb = document.getElementById("distance").value;
+  document.getElementById("val").innerHTML = Math.round(nb*10) /10;
+}
+
+
+function c_est_parti(){
+  document.getElementById("personnalisation").style.display="none";
+  var dist = document.getElementById("distance").value;
+  var num_theme = document.getElementById("num_theme").value;
+  var theme = document.getElementById("theme").getElementsByTagName("li")[num_theme-1].innerHTML;
 }

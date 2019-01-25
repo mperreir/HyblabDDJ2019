@@ -19,7 +19,6 @@
   <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
   <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
   <div id="container">
-
     <!-- Page d'accueil -->
     <div id="accueil">
       <img id="velo_accueil" src="img/velo.jpg"  alt="velo d'accueil"/>
@@ -43,25 +42,28 @@
       <img id="velo_personnalisation" src="img/velo.jpg"  alt="velo personnalisation"/>
       <div id="curseurs">
         <div id="curs_dist">
-          <label for="distance">Distance</label>
+          <label for="distance">Distance (Km) : <span id="val"></span></label>
           <br/><br/>
-          <input type="range" min="1" max="3" step="1" value="2" class="slider" id="distance" name="distance">
+          <input onchange="actualiser_dist()" type="range" min="10" max="30" step="0.001" value="20" class="slider" id="distance" name="distance">
+          <ul class="range-labels-dist">
+            <li onclick="click_curseur_dist('30')">30</li>
+            <li onclick="click_curseur_dist('20')" class="active selected">20</li>
+            <li onclick="click_curseur_dist('10')" >10</li>
+          </ul>
         </div>
         <div id="curs_theme">
-          <label for="distance">Theme</label>
+          <label for="distance">Theme :</label>
           <br/><br/>
-          <input type="range" min="1" max="3" step="1" value="2" class="slider" id="theme" name="theme" >
-          <ul class="range-labels-theme">
-            <li onclick="click_curseur('3')">Plage / Bord de Mer</li>
-            <li onclick="click_curseur('2')" class="active selected">Musée / Culturel</li>
-            <li onclick="click_curseur('1')" >Forêt / Nature</li>
+          <input type="range" min="1" max="3" step="1" value="2" class="slider" id="num_theme" name="theme" >
+          <ul id="theme" class="range-labels-theme">
+            <li onclick="click_curseur_theme('3')">Plage / Bord de Mer</li>
+            <li onclick="click_curseur_theme('2')" class="active selected">Musée / Culturel</li>
+            <li onclick="click_curseur_theme('1')" >Forêt / Nature</li>
           </ul>
         </div>
       </div>
+    <button class="bouton_personnalisation" onclick="c_est_parti()" type="button"> C'EST PARTI !</button>
     </div>
-
-
-
   </div>
 </body>
 <footer>
