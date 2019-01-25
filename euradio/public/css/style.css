@@ -18,3 +18,33 @@ header img{
 .forJuxta{
   width: 600px;
 }
+
+
+/* DIAPO 1 */
+
+#section1{
+  background-color: #FCEA10;
+}
+
+h2 {
+	color: #312783;
+	font-family: Roboto;
+	font-size: 47.38px;
+	font-style: italic;
+	font-weight: 900;
+	line-height: 15%;
+}
+
+h3 {
+	color: #312783;
+	font-family: Roboto;
+	font-size: 18.22px;
+	font-style: italic;
+	font-weight: bold;
+	line-height: NaNpx;
+}
+
+.images_petit {
+width:800px;
+height:454px;
+}
