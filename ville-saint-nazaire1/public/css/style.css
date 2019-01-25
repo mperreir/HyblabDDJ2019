@@ -1,8 +1,15 @@
+*{
+  max-width:1280px;
+  max-height:850px;
+}
 /* just a sample  css rule to show that everything works */
 footer p
 {
   font-size: small;
   text-align: center;
+  position: fixed;
+  Width: 100%;
+  bottom: 0;
 }
 
 header{
@@ -184,4 +191,111 @@ header img{
   cursor: pointer;
   /* font-family:    ;  A completer; */
   font-weight:bold;
+}
+
+/* Page Personnalisation */
+
+#personnalisation{
+  display:none;
+  position:relative;
+  text-align:center;
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#personnalisation #velo_personnalisation{
+  left :15%;
+  width: 35%;
+  bottom:0%;
+  height: auto;
+  z-index:2;
+  position: relative;
+  display:none;
+  float:left;
+}
+
+
+#personnalisation #curseurs{
+  /*
+  padding-top:15%;
+  float:right;
+  width: 35%;
+  top:50%;
+  */
+  height: auto;
+  z-index:2;
+  position: relative;
+  display:none;
+}
+
+#curs_dist, #curs_theme{
+  padding-top: 5px;
+  margin-top:5%;
+  position: relative;
+  right:15%;
+  float:right;
+  width: 40%;
+  height: 5px;
+  padding-top:3%;
+}
+
+
+#curs_theme input, #curs_dist input{
+  width: 60%;
+  float:right;
+  position: relative;
+  top: 2px;
+
+
+}
+
+#curs_theme label, #curs_dist label{
+  width: 60%;
+  float:left;
+  position: relative;
+  top: 2px;
+
+}
+
+.range-labels-theme {
+  margin: 18px -41px 0;
+  padding: 0;
+  list-style: none;
+}
+.range-labels-theme li {
+    position: relative;
+    float:right;
+    width:auto;
+    padding-left:5%;
+    text-align: center;
+    color: #4e687f;
+    font-size: 14px;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: -25px;
+      right: 0;
+      left: 0;
+      content: "";
+      margin: 0 auto;
+      width: 9px;
+      height: 9px;
+      background: #b2b2b2;
+      border-radius: 50%;
+    }
+  }
+
+  .active {
+    color: #37adbf;
+  }
+
+  .selected::before {
+    background: #37adbf;
+  }
+
+  .active.selected::before {
+    display: none;
+  }
 }

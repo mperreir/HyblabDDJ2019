@@ -62,11 +62,23 @@ function en_route(){
 }
 
 function go(){
-
   document.getElementById("accueil").style.display="none";
   document.getElementById("carte_generale").style.display="block";
   document.getElementById("velo_carte_generale").style.display="block";
   document.getElementById("dial_carte_generale").style.display="block";
+}
+
+function personnaliser(){
+
+  document.getElementById("carte_generale").style.display="none";
+  document.getElementById("personnalisation").style.display="block";
+  document.getElementById("velo_personnalisation").style.display="block";
+  document.getElementById("curseurs").style.display="block";
+}
+
+// Change input value on label click
+function click_curseur(x) {
+  document.getElementById("theme").value = x ;
 
 }
 
