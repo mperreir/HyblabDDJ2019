@@ -25,7 +25,7 @@ fetch('data/dummy.json')
     });
       new fullpage('#fullpage', {
       });
-      fullpage_api.setAllowScrolling(false);
+      //fullpage_api.setAllowScrolling(false);
       $('.next').click(function(){
         fullpage_api.moveSectionDown();
       });
