@@ -9,6 +9,8 @@
     <!-- Déclaration de la feuille de style du document-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="css/twentytwenty.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
     <!--<link rel="stylesheet" href="css/juxtapose.css">-->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -21,8 +23,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
 		<!-- Simple sample script that loads data from a dummy json file -->
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
   </head>
   <body>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
@@ -32,45 +32,59 @@
 
 
     <div class="section" id="section1"> <!-- Page 1 -->
-        <header>
+        <div class="haut">
     			<h2>DÉCOUVREZ LA RADIO DU FUTUR...</h2>
           <h3>DÉPLACE LE CURSEUR POUR CHANGER LES FRÉQUENCES<br>
             ET PASSER À LA RADIO NUMÉRIQUE</h3>
           <img src="img/Ecran 1 Copy.png" class="images_petit"/>
-        </header>
+        </div>
         <div class="arrow down"></div>
-        <footer>
-        </footer>
     </div>
 
 
     <div class="section" id="section2"> <!-- Page 2 -->
       <div class="haut">
-        <div class="arrow up"></div>
-        <h2>QUELS SONT LES DIFFÉRENCES ?</h2>
+      <div class="arrow up"></div>
+        <h2>QUELLES SONT LES DIFFÉRENCES ?</h2>
         <h3>DÉCOUVREZ LES DIFFÉRENCES ENTRE LA RNT ET LA RADIO FM</h3>
       </div>
-      <div id="containerRnt">
-        <img src="img/radio rnt.png" alt="rnt" width="500px" margin="auto"/>
+      <div id="before_after_images">
+			     <img src="img/radio page 1.png">
+			     <img src="img/radio rnt.png">
       </div>
       <div>
         <h3>MAIS OÙ EN EST LE DÉVELOPPEMENT  DE CETTE TECHNOLOGIE EN EUROPE ?</h3>
-        <div class="arrow down"></div>
+      <div class="arrow down"></div>
       </div>
 
     </div>
 
 
-    <div class="section">  <!-- Page 3 -->
-
+    <div class="section" id="section3">  <!-- Page 3 -->
+      <div class="haut">
+      <div class="arrow up"></div>
+        <h2>DÉPLOIEMENT DU DAB+ EN EUROPE</h2>
+        <h3>COMPARE LES DIFFÉRENTS DEVELOPPEMENTS DU DAB+ EN EUROPE</h3>
+      </div>
+      <div class="arrow down"></div>
     </div>
 
 
-    <div class="section">Section 4 <!-- Page 4 -->
-      <button type="button" class="previous">Precedent</button>
-    </div>
-</div>
-    </div>
-    </div>
+    <div class="section" id="section4">  <!-- Page 4 -->
+        <div class="logo_container">
+					<a href="https://euradio.fr/"><div class="logos" id="euradio"></div></a>
+					<a href="http://www.agrnantes.fr"><div class="logos" id="AGR"></div></a>
+					<a href="http://web.polytech.univ-nantes.fr"><div class="logos" id="Polytech"></div></a>
+					<a href="http://www.sciencescom.org"><div class="logos" id="SciencesCom"></div></a>
+				</div>
+
+				<div class="logo_container_bis">
+					<a href="https://www.facebook.com/nantes.fr?fref=ts"><div class="logosBis" id="facebook"></div></a>
+					<a href="https://twitter.com/nantesfr?lang=fr"><div class="logosBis" id="twitter"></div></a>
+				</div>
+      </div>
   </body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="js/jquery.event.move.js"></script>
+  <script src="js/jquery.twentytwenty.js"></script>
 </html>
