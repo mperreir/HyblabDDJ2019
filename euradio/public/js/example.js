@@ -23,12 +23,14 @@ fetch('data/dummy.json')
         document.querySelector('#data')
             .textContent = json.data;
     });
+
+    //Pour le onepage
       new fullpage('#fullpage', {
       });
       //fullpage_api.setAllowScrolling(false);
-      $('.down').click(function(){
+      $('.down').click(function(){ //Fleche du bas qui fait changer la slide
         fullpage_api.moveSectionDown();
       });
-      $('.up').click(function(){
+      $('.up').click(function(){ //Fleche du haut qui fait changer la slide
         fullpage_api.moveSectionUp();
       });

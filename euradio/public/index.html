@@ -11,32 +11,48 @@
     <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
     <link rel="stylesheet" type="text/css" href="css/foundation.css">
     <link rel="stylesheet" type="text/css" href="css/twentytwenty.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.css">
+
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
     <!--<link rel="stylesheet" href="css/juxtapose.css">-->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
+    <script src="jquery-ui-1.12.1/jquery-ui.js" defer></script>
     <script src="js/fullpage.js" defer></script>
     <!--<script src="js/juxtapose.js" defer></script>-->
     <script src="js/example.js" defer></script>
-
+    <script src="js/slider.js" defer></script>
 		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 		<!-- Simple sample script that loads data from a dummy json file -->
   </head>
   <body>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
     <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
+    <!-- Mais on va s'efforce dde respecter et brouiller le moins possible la structure logique du contenu -->
     <div id="fullpage">
 
 
     <div class="section" id="section1"> <!-- Page 1 -->
         <div class="haut">
     			<h2>DÉCOUVREZ LA RADIO DU FUTUR...</h2>
-          <h3>DÉPLACE LE CURSEUR POUR CHANGER LES FRÉQUENCES<br>
+          <h3>DÉPLACEZ LE CURSEUR POUR CHANGER LES FRÉQUENCES<br>
             ET PASSER À LA RADIO NUMÉRIQUE</h3>
-          <img src="img/Ecran 1 Copy.png" class="images_petit"/>
+            <div id="nomRadio">
+              <p>Euradio</p>
+            </div>
+            <div class="imagesPage1">
+              <img src="img/Ecran 1 Copy.png" class="images_petit"/>
+
+                <img src="img/BTN slider.png" id="draggable" width="30px"/>
+
+            </div>
+
         </div>
         <div class="arrow down"></div>
     </div>
