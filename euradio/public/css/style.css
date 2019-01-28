@@ -78,10 +78,40 @@ h3 {
 #section1{
   background-color: #FCEA10;
 }
+#draggable{
+  z-index: 100;
+  position: absolute;
+  top:475px;
+  left:667px;
+  cursor: move;
+}
 
-
+.imagesPage1{
+  width: 625px;
+  margin: auto;
+}
 .images_petit {
 height:354px;
+display: block;
+margin: auto;
+width: 100%;
+}
+#conteneurSlider{
+  width: 625px;
+}
+#nomRadio{
+  z-index: 100;
+  position: absolute; /* Important pour les éléments superposables */
+  top:400px;
+  left:650px;
+}
+#nomRadio p {
+  color: #312783;
+	font-family: Roboto;
+	font-size: 18.22px;
+	font-weight: bold;
+	line-height: 21px;
+	text-align: center;
 }
 
 /* DIAPO 2 */
@@ -94,6 +124,7 @@ height:354px;
   margin: auto;
   text-align: center;
 }
+/* DIAPO 3 */
 
 /* DIAPO 3*/
 
