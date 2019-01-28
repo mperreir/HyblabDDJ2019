@@ -11,30 +11,58 @@
 		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<!-- Simple sample script that loads data from a dummy json file -->
 		<script src="js/example.js" defer></script>
+        <script src="js/page-nav.js"></script>
   </head>
   <body>
+
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
     <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
     <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
 
     <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
-      <h1>Hyblab Datajournalism 2019</h1>
-    </header>
+        <header>
+            <nav>
+                <div id="menu">
+                    <ul>
+                        <li><div id="section0"></div></li>
+                        <li><a href="#section1"></a></li>
+                        <li><a href="#section2"></a></li>
+                        <li><a href="#section3"></a></li>
+                        <li><a href="#section4"></a></li>
+                        <li><a href="#section5"></a></li>
+                        <li><a href="#section6"></a></li>
+                        <li><a href="#section7"></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="header-section">
+                <!--<div id="content"></div>-->
+            </div>
+        </header>
 
-    <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
-
-		<p>Here is some data from a json file : <span id="data"></span><p>
-
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2019</p>
-    </footer>
-    </div>
+        <section id="section1">
+            <!--<div id="content"></div>-->
+        </section>
+        <section id="section2">
+            <!--<div id="content"></div>-->
+        </section>
+        <section id="section3">
+            <!--<div id="content"></div>-->
+        </section>
+        <section id="section4">
+            <!--<div id="content"></div>-->
+        </section>
+        <section id="section5">
+            <!--<div id="content"></div>-->
+        </section>
+        <section id="section6">
+            <!--<div id="content"></div>-->
+        </section>
+        <section id="section7">
+            <!--<div id="content"></div>-->
+        </section>
   </body>
 </html>

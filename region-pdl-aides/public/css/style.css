@@ -5,11 +5,72 @@ footer p
   text-align: center;
 }
 
-header{
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+header {
+    width: 100vw;
+    height: 100vh;
+    background: #6c1d65;
+    display: flex;
+}
+nav {
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    transition: all 0.3s;
+    justify-content: center;
+}
+#menu, ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+#section0 {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#menu {
+    justify-content: flex-end;
 }
 
-header img{
-  max-width: 100%;
-	height: auto;
+li a {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    display: block;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+#header-section {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+section:nth-child(odd) {
+    background: #91cef5;
+}
+section:nth-child(even) {
+    background: #99cd5b;
 }
