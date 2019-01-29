@@ -24,7 +24,7 @@ body{
     font-size: 34px;
     font-style: italic;
     letter-spacing:-1px;
-    width:10400px;
+    width:12800px;
     position:absolute;
     top:0px;
     left:0px;
@@ -34,7 +34,7 @@ body{
 .section{
     margin:0px;
     bottom:0px;
-    width:1300px;
+    width:1600px;
     float:left;
     height:100%;
     text-shadow:1px 1px 2px #f0f0f0;
