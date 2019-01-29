@@ -1,16 +1,16 @@
 # Descriptif du projet
 
-Porteur de projet :
+Porteur de projet : Guillaume Frouin
 
-Sujet :
+Sujet : 
 
-Equipe :
+Equipe : Team Scoville
 
-Participants : 
+Participants : FRESNEAU Léa , GUILLEMAIN Marius, HALLOT Liza , BERNARD Maëva, 
 
 - Sciencescom
 
-- EDNA :
+- AGR :
 - Polytech :  
 
 # Installation
