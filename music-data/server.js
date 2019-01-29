@@ -102,18 +102,20 @@ if(k==1){
 });
 app.get('/tracks/:genre', function(req,resp){
   //il faut enlever les espaces de tous les genre qui contient des espaces, sinon ça donne pas un résultat
-  var p1 = req.params.genre;
-  console.log(p1);
+  var p = escape(req.params.genre);
+  var p1=p.replace("%20"," ");
+
+  console.log("p1",p1);
   let tracksgenre=[];
   let rowData = {};
     if(k==1){
 
       for(var i=0;i<csvData.length;i++)
       {
-
+      console.log(csvData[i].Genre);
             if(csvData[i].Genre == p1)
             {
-
+              rowData["id"]=csvData[i].id;
               rowData["NomdeBlog"] = csvData[i].Name;
               rowData["NombredeTracks"] = csvData[i].Tracks;
               tracksgenre.push(rowData);
@@ -133,8 +135,11 @@ app.get('/tracks/:genre', function(req,resp){
 });
 app.get('/followers/:genre', function(req,resp){
   //il faut enlever les espaces de tous les genre qui contient des espaces, sinon ça donne pas un résultat
-  var p1 = req.params.genre;
-  console.log(p1);
+;
+  var p = escape(req.params.genre);
+  var p1=p.replace("%20"," ");
+
+  console.log("p1",p1);
   let followersgenre=[];
   let rowData = {};
     if(k==1){
@@ -159,8 +164,10 @@ app.get('/followers/:genre', function(req,resp){
 });
 app.get('/artistes/:genre', function(req,resp){
   //il faut enlever les espaces de tous les genre qui contient des espaces, sinon ça donne pas un résultat
-  var p1 = req.params.genre;
-  console.log(p1);
+  var p = escape(req.params.genre);
+  var p1=p.replace("%20"," ");
+
+  console.log("p1",p1);
   let followersgenre=[];
   let rowData = {};
     if(k==1){
@@ -183,7 +190,39 @@ app.get('/artistes/:genre', function(req,resp){
   }
 
 });
+app.get('/blogs/:id', function(req,resp){
 
+  var p1=req.params.id;
+
+  console.log("p1",p1);
+  let blog=[];
+  let rowData = {};
+    if(k==1){
+
+      for(var i=0;i<csvData.length;i++)
+      {
+            console.log(csvData[i].id);
+            if(csvData[i].id == p1)
+            {
+
+
+              //rowData={};
+              Object.keys(csvData[i]).forEach(current_key => {
+              rowData[current_key] = csvData[i][current_key];
+
+              });
+              blog.push(rowData);
+              break;
+
+            }
+
+      }
+
+
+      resp.send(JSON.stringify(blog));
+  }
+
+});
 module.exports = app;
 /*
 
