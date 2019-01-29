@@ -77,7 +77,7 @@ function d_accord(){
 
 function curseurs(){
   document.getElementById("presentation2").style.display="none";
-  document.getElementById("personnalisation").style.display="block";
+  document.getElementById("plus_tard").style.display="block";
   /*
   document.getElementById("carte_generale").style.display="block";
   document.getElementById("velo_carte_generale").style.display="block";
@@ -87,18 +87,50 @@ function curseurs(){
 
 function click_curseur_theme(x) {
   document.getElementById("num_theme").value = x ;
+  actualiser_decor();
 }
 
 function click_curseur_dist(x) {
   document.getElementById("distance").value = x ;
+  actualiser_decor();
 }
 
 var nb = document.getElementById("distance").value;
 document.getElementById("val").innerHTML = Math.round(nb*10) /10;
+actualiser_decor();
 
 function actualiser_dist() {
   var nb = document.getElementById("distance").value;
   document.getElementById("val").innerHTML = Math.round(nb*10) /10;
+  actualiser_decor();
+}
+
+
+function actualiser_decor() {
+  var dist = parseInt(document.getElementById("distance").value);
+  var num_theme = parseInt(document.getElementById("num_theme").value);
+
+  /* Mise a jour suivant la distance */
+  if (dist < 16.6)
+    document.getElementById("velo_curseurs").setAttribute("src", "img/velo_court.png");
+  else if (dist > 23.3)
+      document.getElementById("velo_curseurs").setAttribute("src", "img/velo_long.png");
+  else
+      document.getElementById("velo_curseurs").setAttribute("src", "img/velo_moyen.png");
+
+  /* Mise a jour suivant le theme */
+  if(num_theme == 1){
+    document.getElementById("socle_curseurs").setAttribute("src", "img/socle_foret.png");
+    document.getElementById("plus_tard").style.backgroundImage = "url('img/fond_slider_foret.png')";
+  }
+  else if(num_theme == 2){
+    document.getElementById("socle_curseurs").setAttribute("src", "img/socle_musee.png");
+    document.getElementById("plus_tard").style.backgroundImage = "url('img/fond_slider_musee.png')";
+  }
+  else {
+    document.getElementById("socle_curseurs").setAttribute("src", "img/socle_mer.png");
+    document.getElementById("plus_tard").style.backgroundImage = "url('img/fond_slider_mer.png')";
+  }
 }
 
 
