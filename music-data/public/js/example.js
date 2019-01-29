@@ -39,52 +39,26 @@ function GetAllData()
 
           .then(function (json) {
                console.log("données",json);
-               creehistogram("#trackspourungenre",json);
-               //je fais cette affichage juste pour que les choses soit claire, mais apres on doit la changer par le design et le mode d'affichage que l'on veut
-               // la je devrais faire l'histogramme
-               /*$('#trackspourungenre').append('<table>' );
-               $('#trackspourungenre').append('<tr>' );
-               $('#trackspourungenre').append( '<td>Blog</td>' );
-               $('#trackspourungenre').append( '<td>Track</td>' );
-               $('#trackspourungenre').append('</tr>' );
-               for(var i=0;i<json.length;i++){
-                  var id=json[i]["NomdeBlog"];
-                  console.log(escape(id));
-                       $('#trackspourungenre').append('<tr>' );
-                       $('#trackspourungenre').append( '<td class="mouse" id='+escape(id)+'>' +  json[i]["NomdeBlog"]+ '</td>' );
-                       $('#trackspourungenre').append( '<td>' +  json[i]["NombredeTracks"]+ '</td></tr>' );
 
-                     }
-               $('#trackspourungenre').append(  '</table>' );
-               $('#trackspourungenre').append("<button id='retour'> Retour à l'ensemble des Genres </button>");
+
 
                $('#menu').append("<button id='followers' class='buttonmenu' value="+key+"> Followers/Blogs/"+ key + "</button><br>");
                $('#menu').append("<button id='artistes' class='buttonmenu' value="+key+"> Artistes/Blogs/"+ key + "</button><br>");
-                //On passant la souris sur le nom de blog
-                $(document).ready(function(){
-                $(".mouse").hover(function(){
-                  var x = $(this).attr("id");
-                  var y=x.replace("%20"," ");
-                  //id est dans y
-                  //j'envoie la requete
-                  console.log("y",y);
-            }
-            );
-          });
 
-
-
+               creehistogram("#trackspourungenre",json);
+               $('#trackspourungenre').append("<button id='retour'> Retour à l'ensemble des Genres </button>");
                $(document).on("click", "#retour", function(){
 
                 $('#geresmusicales').show();
                 $("#trackspourungenre").empty();
                 $('#artistespourungenre').empty();
                 $("#menu").empty();
+                  $("#bloginformations").empty();
 
 
 
-             });*/
-
+             });
+               
              });
 
            }
@@ -226,7 +200,38 @@ function GetAllData()
                   });
                 }
 
+        function bloginformations(key) {
 
+           let lien="/blogs/"+key
+            fetch(lien)
+            .then(function (response){
+             if( response.ok )
+             {return response.json();  }
+                                 else
+                                     return {data: "JSON file not found"};
+                                 })
+             .catch( function (error){
+                                 return {data: "Invalid JSON"};
+                             })
+
+             .then(function (json) {
+                  console.log(json);
+                  var cles = Object.keys(json[0]);
+                  $('#bloginformations').append('<table>' );
+                  $('#bloginformations').append('<tr>' );
+                  for(var i=0;i<cles.length;i++){
+                  $('#bloginformations').append( '<td>' +  cles[i] + '</td>' );
+                  }
+                $('#bloginformations').append('</tr>' );
+                $('#bloginformations').append('<tr>' );
+                for(var j=0;j<cles.length;j++){
+                var v=cles[j];
+                $('#bloginformations').append( '<td>' +  json[0][v]+ '</td>' );
+                }
+                $('#bloginformations').append('</tr>' );
+                $('#bloginformations').append(  '</table>' );
+                });
+                       }
 
     GetAllData();
     GetGenres();
@@ -309,13 +314,20 @@ function creehistogram(id,data)
         .attr("y", function(d) { return y(d.NombredeTracks); })
         .attr("height", function(d) { return height - y(d.NombredeTracks); })
         $(document).ready(function(){
-        $(".bar").hover(function(){
-          var x = $(this).attr("id");
-          //var y=x.replace("%20"," ");
-          //id est dans y
-          //j'envoie la requete
-          console.log("x",x);
-    }
+        $(".bar").hover(
+          function() {
+            $("#bloginformations").empty();
+            var x = $(this).attr("id");
+            //var y=x.replace("%20"," ");
+            //id est dans y
+            //j'envoie la requete
+            console.log("x",x);
+            bloginformations(x);
+  }, function() {
+      console.log("rien");
+  }
+
+
     );
 
 });}
