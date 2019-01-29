@@ -11,7 +11,7 @@ footer p
   font-size: small;
   text-align: center;
   position: fixed;
-  Width: 100%;
+  width: 100%;
   bottom: 0;
 }
 
@@ -39,7 +39,7 @@ header img{
   display:block;
 }
 
-#img_accueil{
+#video_accueil{
   position:relative;
   margin-left: auto;
   margin-right: auto;
@@ -99,7 +99,7 @@ header img{
   border-color: white white transparent transparent ;
 }
 
-#accueil .bouton_accueil{
+.bouton_accueil{
   position: absolute;
   top : 85%;
   left: 50%;
@@ -116,6 +116,11 @@ header img{
   font-weight:bold;
 }
 
+/* Page Présentation 1 */
+
+#presentation, #presentation2{
+  display:none;
+}
 
 
 /* Page Carte avant Personnalisation */
@@ -225,7 +230,6 @@ header img{
   height: auto;
   z-index:2;
   position: relative;
-  display:none;
   float:left;
 }
 
@@ -234,7 +238,6 @@ header img{
   height: auto;
   z-index:1;
   position: relative;
-  display:none;
 }
 
 #curs_dist, #curs_theme{
