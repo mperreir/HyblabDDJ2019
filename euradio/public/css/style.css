@@ -81,8 +81,8 @@ h3 {
 #draggable{
   z-index: 100;
   position: absolute;
-  top:80%;
-  left:47.8%;
+  top:76%;
+  left:49%;
   cursor: move;
 }
 
@@ -91,20 +91,23 @@ h3 {
   position: relative;
   margin: auto;
 }
+#conteneurRadio{
+  width:55%;
+  margin: auto;
+  margin-bottom: 5%;
+}
+#conteneurLigne{
+  width:40%;
+  margin: auto;
+  margin-right: 27%;
+  margin-top: -15px;
+  margin-bottom: 2%;
+}
 .images_petit {
-height:354px;
+height:40%;
 display: block;
 margin: auto;
 width: 100%;
-}
-.images_petit2 {
-display: block;
-margin: auto;
-width: 100%;
-margin-top: 40px;
-}
-#conteneurSlider{
-  width: 625px;
 }
 
 .imagesPage1 p {
@@ -113,10 +116,12 @@ margin-top: 40px;
 	font-size: 18.22px;
 	font-weight: bold;
 	line-height: 21px;
-  top:58%;
+  top:93%;
   left: 45%;
   z-index: 100;
   position: absolute;
+  margin-top: 0px;
+  margin-bottom: -4px;
 }
 
 /* DIAPO 2 */
