@@ -54,25 +54,35 @@ async function construire_map(map, folder, lien, indice) {
 
 
 
-function en_route(){
-  document.getElementsByClassName("bouton_accueil")[0].textContent = "GO ! ";
-  document.getElementById("velo_accueil").style.display="block";
-  document.getElementById("dial_accueil").style.display="block";
-  document.getElementsByClassName("bouton_accueil")[0].addEventListener("click", go);
-}
+async function en_avant_toute(){
+  /* Création des maps contenant les données */
+  await construire_map(map_circuits, 'data/trace-circuit-json/', 'nom-circuit', 'nom circuit');
+  await construire_map(map_lieux, 'data/trace-lieux-json/', 'nom-lieux', 'nom lieu');
 
-function go(){
+  /* Mise a jour de l'affichage */
   document.getElementById("accueil").style.display="none";
-  document.getElementById("carte_generale").style.display="block";
-  document.getElementById("velo_carte_generale").style.display="block";
-  document.getElementById("dial_carte_generale").style.display="block";
+  document.getElementById("presentation").style.display="block";
 }
 
-function personnaliser(){
-  document.getElementById("carte_generale").style.display="none";
+function d_accord(){
+  document.getElementById("presentation").style.display="none";
+  document.getElementById("presentation2").style.display="block";
+  /*
   document.getElementById("personnalisation").style.display="block";
   document.getElementById("velo_personnalisation").style.display="block";
   document.getElementById("curseurs").style.display="block";
+
+  */
+}
+
+function curseurs(){
+  document.getElementById("presentation2").style.display="none";
+  document.getElementById("personnalisation").style.display="block";
+  /*
+  document.getElementById("carte_generale").style.display="block";
+  document.getElementById("velo_carte_generale").style.display="block";
+  document.getElementById("dial_carte_generale").style.display="block";
+  */
 }
 
 function click_curseur_theme(x) {
@@ -92,13 +102,27 @@ function actualiser_dist() {
 }
 
 
-function c_est_parti(){
+async function c_est_parti(){
   document.getElementById("personnalisation").style.display="none";
   var dist = document.getElementById("distance").value;
   var num_theme = document.getElementById("num_theme").value;
   var theme = document.getElementById("theme").getElementsByTagName("li")[num_theme-1].innerHTML;
+  var liste_circuit_selection = await selection_circuit(dist, theme);
+  console.log(liste_circuit_selection);
 }
 
-// Appel des fonctions pour charger les maps en mémoire 
-construire_map(map_circuits, 'data/trace-circuit-json/', 'nom-circuit', 'nom circuit');
-construire_map(map_lieux, 'data/trace-lieux-json/', 'nom-lieux', 'nom lieu');
+
+function selection_circuit(distance, theme){
+  return liste_infos_circuit
+    .then(function(value){
+      theme = theme.toLowerCase();
+      distance = parseInt(distance);
+      var liste_circuit_selection_interne = [];
+      value.forEach(function(element){
+        if ((element["theme"] == theme) && (element["distance_en_km"] <= distance)){
+          liste_circuit_selection_interne.push(element);
+        }
+      });
+      return liste_circuit_selection_interne
+  });
+}

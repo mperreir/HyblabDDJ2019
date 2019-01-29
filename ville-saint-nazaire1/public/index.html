@@ -21,10 +21,20 @@
   <div id="container">
     <!-- Page d'accueil -->
     <div id="accueil">
-      <img id="velo_accueil" src="img/velo.jpg"  alt="velo d'accueil"/>
-      <img id="img_accueil" src="img/fond_accueil.png"  alt="image d'accueil"/>
-      <button class="bouton_accueil" onclick="en_route()" type="button"> EN ROUTE !</button>
-      <div id="dial_accueil">Ce texte AAAAAAA AAAAAAA AAAAAAA AAAAAAA AAAAAAAAA AAAAAAA</div>
+      <video id="video_accueil" autoplay muted preload="metadata" poster="img/fond_accueil.png">
+        <source src="img/CARENE_1.mp4">
+      </video>
+      <button class="bouton_accueil" onclick="en_avant_toute()" type="button"> EN AVANT TOUTE !</button>
+    </div>
+
+    <div id="presentation">
+      <img id="img_fond_2" src="img/fond_ecran_2.jpg"  alt="fond_ecran"/>
+      <button class="bouton_accueil" onclick="d_accord()" type="button"> D'ACCORD !</button>
+    </div>
+
+    <div id="presentation2">
+      <img id="img_fond_3" src="img/fond_ecran_2.jpg"  alt="fond_ecran"/>
+      <button class="bouton_accueil" onclick="curseurs()" type="button"> C'EST PARTI !</button>
     </div>
 
     <!-- Page Carte avant Personnalisation -->
