@@ -208,7 +208,11 @@ app.get('/blogs/:id', function(req,resp){
 
               //rowData={};
               Object.keys(csvData[i]).forEach(current_key => {
-              rowData[current_key] = csvData[i][current_key];
+
+              if(csvData[i][current_key] != "")
+                { rowData[current_key] = csvData[i][current_key];}
+
+
 
               });
               blog.push(rowData);
