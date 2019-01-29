@@ -7,7 +7,11 @@ var http = require('http');
 var app = express();
 let fs = require('fs');
 let fastcsv = require('fast-csv');
+<<<<<<< HEAD
 let readableStreamInput = fs.createReadStream('./public/data/musicdata.csv');
+=======
+let readableStreamInput = fs.createReadStream('./music-data/public/data/musicdata.csv');
+>>>>>>> e8fba5fd84779b4db7b1359d74e1027cfeed9e40
 let csvData = [];
 let genremusicales=[];
 let k=0;
