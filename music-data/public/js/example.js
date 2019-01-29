@@ -1,5 +1,12 @@
 'use strict';
+let datafollowers=[];
 
+function sortByy1(key1, key2){
+  var x= parseInt(key1.y1);
+  var y=parseInt(key2.y1);
+  return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+   r//eturn key1.y1 > key2.y1;
+}
 function GetAllData()
 {
 
@@ -38,14 +45,12 @@ function GetAllData()
           })
 
           .then(function (json) {
-               console.log("données",json);
-
 
 
                $('#menu').append("<button id='followers' class='buttonmenu' value="+key+"> Followers/Blogs/"+ key + "</button><br>");
                $('#menu').append("<button id='artistes' class='buttonmenu' value="+key+"> Artistes/Blogs/"+ key + "</button><br>");
 
-               creehistogram("#trackspourungenre",json);
+               creehistogram("#trackspourungenre",json,20);
                $('#trackspourungenre').append("<button id='retour'> Retour à l'ensemble des Genres </button>");
                $(document).on("click", "#retour", function(){
 
@@ -58,7 +63,7 @@ function GetAllData()
 
 
              });
-               
+
              });
 
            }
@@ -80,21 +85,15 @@ function GetAllData()
                      return {data: "Invalid JSON"};
                  })
 
-                 .then(function (json) {
-                      console.log(json);
-                      //je fais cette affichage juste pour que les choses soit claire, mais apres on doit la changer par le design et le mode d'affichage que l'on veut
+                 .then(function (data) {
+                   //par defaut
+                   //il faut definir le cursseur
 
-                      $('#followerspourungenre').append('<table>' );
-                      $('#followerspourungenre').append('<tr>' );
-                      $('#followerspourungenre').append( '<td>Blog</td>' );
-                      $('#followerspourungenre').append( '<td>Followers</td>' );
-                      $('#followerspourungenre').append('</tr>' );
-                      for(var i=0;i<json.length;i++){
-                              $('#followerspourungenre').append('<tr>' );
-                              $('#followerspourungenre').append( '<td>' +  json[i]["NomdeBlog"]+ '</td>' );
-                              $('#followerspourungenre').append( '<td>' +  json[i]["NombredeFollowers"]+ '</td></tr>' );
-                            }
-                      $('#followerspourungenre').append(  '</table>' );
+                    datafollowers=data;
+
+                      //je fais cette affichage juste pour que les choses soit claire, mais apres on doit la changer par le design et le mode d'affichage que l'on veut
+                      AfficherCursseur();
+                      creehistogram("#followerspourungenre",data,20);
                       $('#menu').append("<button id='tracks' class='buttonmenu' value="+key+"> Tracks/Blogs/"+ key + "</button><br>");
                       $('#menu').append("<button id='artistes' class='buttonmenu' value="+key+"> Artistes/Blogs/"+ key + "</button><br>");
                       $('#followerspourungenre').append("<button id='retour'> Retour à l'ensemble des Genres </button>");
@@ -104,6 +103,7 @@ function GetAllData()
                        $("#followerspourungenre").empty();
                        $('#artistespourungenre').empty();
                        $("#menu").empty();
+                       $("#bloginformations").empty();
 
 
                     });
@@ -176,7 +176,7 @@ function GetAllData()
 
           .then(function (json) {
                console.log(json);
-
+               $('.slidecontainer').hide();
                $.each( json, function( key, val ) {
                  // ici je vais affcher l'ensemble des genre accompagnés chacun par le nombre de blog qui le contient
                  $('#geresmusicales').append("<button id= "+ escape(key)+ ">"+key+"</button>");
@@ -236,13 +236,15 @@ function GetAllData()
     GetAllData();
     GetGenres();
     $(document).on("click", "#followers", function(){
+
         var x = $(this).attr("value");
         console.log("x",x);
+          $(".slidecontainer").show();
 
+          $("#bloginformations").empty();
           $('#trackspourungenre').empty();
           $('#artistespourungenre').empty();
           $("#menu").empty();
-
           followersdesblog(x);
 
 
@@ -251,6 +253,7 @@ function GetAllData()
   $(document).on("click", "#tracks", function(){
       var x = $(this).attr("value");
       console.log("x",x);
+      $(".slidecontainer").hide();
       $('#followerspourungenre').empty();
       $('#artistespourungenre').empty();
       $("#menu").empty();
@@ -265,16 +268,37 @@ function GetAllData()
 $(document).on("click", "#artistes", function(){
     var x = $(this).attr("value");
     console.log("x",x);
+
+      $("#bloginformations").empty();
     $('#followerspourungenre').empty();
     $('#trackspourungenre').empty();
     $("#menu").empty();
     artistesdesblog(x);
 });
-function creehistogram(id,data)
+function creehistogram(id,data1,val)
 {
+    //console.log("data1",data1);
+    //var data = data1;
+    var data=JSON.parse(JSON.stringify(data1));
+    console.log("data1",data1);
+    console.log("data",data);
+    data.sort(sortByy1);
+
+    if(data.length>val)
+    {
+      var t=data.length -val;
+       data.splice(0,t);
+    }
+    //data.length<val
+    else if(data.length>20)
+    {
+      var t=data.length -20;
+       data.splice(0,t);
+    }
+
   const margin = {top: 20, right: 20, bottom: 150, left: 120},
-    width = 800 - margin.left - margin.right,
-    height = 300 - margin.top - margin.bottom;
+    width = 1000 - margin.left - margin.right,
+    height = 700 - margin.top - margin.bottom;
     const x = d3.scaleBand()
     .range([0, width])
     .padding(0.1);
@@ -289,10 +313,12 @@ function creehistogram(id,data)
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     data.forEach(function(d) {
-       d.NombredeTracks = +d.NombredeTracks;
+       d.y1 = +d.y1;
    });
-    x.domain(data.map(function(d) { return d.NomdeBlog; }));
-    y.domain([0, d3.max(data, function(d) { return d.NombredeTracks; })]);
+   var variable=d3.max(data, function(d) { return d.y1; });
+   console.log("max",variable);
+    x.domain(data.map(function(d) { return d.x1; }));
+    y.domain([0, d3.max(data, function(d) { return d.y1; })]);
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(x).tickSize(0))
@@ -309,21 +335,18 @@ function creehistogram(id,data)
         .enter().append("rect")
         .attr("class", "bar")
         .attr("id",function(d) { return d.id; })
-        .attr("x", function(d) { return x(d.NomdeBlog); })
+        .attr("x", function(d) { return x(d.x1); })
         .attr("width", x.bandwidth())
-        .attr("y", function(d) { return y(d.NombredeTracks); })
-        .attr("height", function(d) { return height - y(d.NombredeTracks); })
+        .attr("y", function(d) { return y(d.y1); })
+        .attr("height", function(d) { return height - y(d.y1); })
         $(document).ready(function(){
         $(".bar").hover(
           function() {
             $("#bloginformations").empty();
             var x = $(this).attr("id");
-            //var y=x.replace("%20"," ");
-            //id est dans y
-            //j'envoie la requete
             console.log("x",x);
             bloginformations(x);
-  }, function() {
+      }, function() {
       console.log("rien");
   }
 
@@ -331,6 +354,26 @@ function creehistogram(id,data)
     );
 
 });}
+
+
+function AfficherCursseur()
+{
+  $('.slidecontainer').append('<input type=range id="slider" class="slider" min="1" max="157" value="20">');
+
+  $('.slidecontainer').append('<p id="valeurdeslider" style="text-align: center;">  </p>');
+  $('input[type=range]').on('input', function () {
+    var newval=$(this).val();
+    alert(newval);
+    $('#followerspourungenre').empty();
+
+    console.log("datafollowers",datafollowers);
+    creehistogram("#followerspourungenre",datafollowers,parseInt(newval));
+});
+
+}
+
+
+
 
 
 
