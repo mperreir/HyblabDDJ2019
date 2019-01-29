@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="75px" height="24px" viewBox="0 0 75 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>CA3863A6-91D1-43F3-972F-A73A61388347</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ECRAN-3" transform="translate(-766.000000, -374.000000)">
+            <g id="BOUTON-OUI" transform="translate(766.000000, 374.000000)">
+                <rect id="Rectangle-2" fill="#8F8A8D" x="1" y="1" width="74" height="23" rx="11.5"></rect>
+                <rect id="Rectangle-2" fill="#AC0759" x="0" y="0" width="74" height="23" rx="11.5"></rect>
+                <text id="OUI" font-family="Sarabun-SemiBold, Sarabun SemiBold" font-size="12" font-weight="500" letter-spacing="1.43290412" fill="#FFFFFF">
+                    <tspan x="25" y="16">OUI</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

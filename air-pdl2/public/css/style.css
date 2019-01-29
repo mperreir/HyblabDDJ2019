@@ -21,31 +21,163 @@ html {
 body {
     width: 100%;
     height: 100%;
-    margin: 0px;
-    background:#176261 url(../img/bg2.png) no-repeat fixed top center;
-    background-size:contain;
     color:white;
 }
+
 section {
     height: 100%;
+}
+
+#item1{
+    background: url(../img/bg.png) no-repeat center;
+    background-size:cover;
+    height:100%;
+}
+
+#item2{
+    background: url(../img/bg.png) no-repeat center;
+    background-size:cover;
+    height:100%;
 }
 
 .carousel {
     background-color: rgba(0, 0, 0, 0);
 }
 
-.carousel .item {
-    background-color: rgba(0, 0, 0, 0);
+.item {
+    background-color: #176261;
+    height: 100%;
+    width:100%;
 }
+
+.carousel-inner>.item>.fond{
+    height:100%;
+}
+
 .carousel-caption{
-    position: relative;
+    position: absolute;
 }
 
 .container-fluid{
     height: 100%;
+    width:100%;
     padding: 0px;
+    position: relative;
+    overflow: hidden;
 }
 #carousel-example-generic{
     height:100%;
     width:100%;
 }
+.carousel-inner{
+    width:100%;
+    height:100%;
+}
+
+.fond{
+    position: relative;
+    height: 100%;
+    float:right;
+}
+
+.questions {
+    position: absolute;
+    width:20%;
+    height: 6%;
+    right: 5%;
+    top:30%;
+}
+
+.boutonOui a{
+    position: absolute;
+    right:20%;
+    top:50%;
+    overflow: hidden;
+}
+
+.boutonNon a{
+    position: absolute;
+    right:5%;
+    top:50%;
+    overflow: hidden;
+}
+
+#rural{
+    position: absolute;
+    left: 25%;
+    top: 36%;
+}
+
+#ville{
+    position: absolute;
+    left:44.5%;
+    top:35%;
+}
+
+#trafic{
+    position: absolute;
+    right: 25%;
+    top:38%;
+}
+
+#perso {
+    position: absolute;
+    bottom: 5%;
+    left: 10.4%;
+    height: 15%;
+    width: auto;
+}
+
+#voiture{
+    position: absolute;
+    bottom: 5%;
+    right: 20%;
+    height: 15%;
+    width: auto;
+}
+
+#nuage{
+    position: absolute;
+    bottom: 100px;
+    right: 700px;
+    height: 150px;
+    width: auto;
+    opacity: 0;
+}
+
+.fadein{
+    animation: fadein 2s 1 normal forwards;
+}
+
+@keyframes fadein {
+    0% { opacity: 0;}
+    100% { opacity: 1; transform: translate3d(-200px,-300px,0px) scale(2.0);}
+}
+
+#cache1{
+    height: 61.96%;
+    float: right;
+}
+
+#cache2{
+    height:100%;
+}
+
+.translate{
+    animation: translate 4s linear forwards;
+}
+
+@keyframes translate {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(800px);
+    }
+}
+
+.translate2{
+    opacity: 1;
+    transform: translate3d(-200px,-300px,0px) scale(2.0);
+}
+
