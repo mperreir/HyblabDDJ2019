@@ -2,7 +2,7 @@
 
 Porteur de projet : Guillaume Frouin
 
-Sujet : 
+Sujet :  Mise en avant des activités de press pepper
 
 Equipe : Team Scoville
 
