@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/parallax.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/15af25ac7b.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700|Zilla+Slab:300,400,700" rel="stylesheet">
   <!-- Those polyfills are required so that old browsers support fetch mecanism -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
@@ -20,6 +21,7 @@
   <script src="https://cdn.jsdelivr.net/npm/typeit@6.0.2/dist/typeit.min.js"></script>
   <!-- Simple sample script that loads data from a dummy json file -->
   <script src="js/script.js" defer></script>
+  <script src="js/audio_accueil.js" defer></script>
   <script src="js/fullpage.js"></script>
 </head>
 
@@ -27,27 +29,27 @@
   <div id="fullpage">
 
     <div class="section" id="accueil">
-      <div class="content-wrapper">
-        <div id="accueil_left" class="accueil_block">
-          <img id="pdl_logo" src="img/pdl_logo.svg" alt="Logo de la région des Pays de la Loire" />
-          <h1 id="title_au_coeur"><span class="au_coeur">Au c&oelig;ur des</span> <span class="archives_sonores">archives
-              sonores</span></h1>
-          <h2 id="title_notre_patrimoine">Notre patrimoine est aussi le vôtre</h2>
-          <audio id="music" preload="true" data-autoplay><!-- data-autoplay -->
-            <source src="./data/audio_accueil.mp3">
-          </audio>
-          <div id="audioplayer">
-            <button id="pButton" class="play"></button>
-            <div id="timeline">
-              <div id="playhead"></div>
-              <span id="current-time">--:--</span>
-              <span id="total-time">--:--</span>
-            </div>
+      <div id="accueil_left" class="accueil_block">
+        <img id="pdl_logo" src="img/pdl_logo.svg" alt="Logo de la région des Pays de la Loire" />
+        <h1 id="title_au_coeur"><span class="au_coeur">Au c&oelig;ur des</span> <span class="archives_sonores">archives
+            sonores</span></h1>
+        <h2 id="title_notre_patrimoine">Notre patrimoine est aussi le vôtre</h2>
+        <audio id="audio_accueil" preload="true" data-autoplay>
+          <!-- data-autoplay -->
+          <source src="./data/audio_accueil.mp3">
+        </audio>
+        <div id="audioplayer">
+          <button id="pButton" class="play"></button>
+          <div id="timeline">
+            <div id="playhead"></div>
+            <span id="current-time">--:--</span>
+            <span id="total-time">--:--</span>
           </div>
-          <p id="discours">
-              
-          </p>
-          <!--
+        </div>
+        <p id="discours">
+
+        </p>
+        <!--
             <p>
             Vous trouverez ici <span class="stats_accueil" id="nb_fichier_audio"></span> extraits audio du conseil
             régional des Pays de la Loire pour une durée de <span class="stats_accueil" id="duree_totale"></span> et
@@ -56,47 +58,28 @@
             <span class="stats_accueil" id="taille_totale"></span> octet(s).
           </p>
           -->
-        </div>
-        <div id="accueil_right" class="accueil_block">
-          <h1>Accueil</h1>
-          <audio controls>
-            <!-- data-autoplay data-keepplaying-->
-            <source src="./data/FRAR52_396PR1_5_BM_1.mp3" type="audio/mp3">
-          </audio>
-          <p>
-            Vous trouverez ici <span class="stats_accueil" id="nb_fichier_audio"></span> extraits audio du conseil
-            régional des Pays de la Loire pour une durée de <span class="stats_accueil" id="duree_totale"></span> et
-            une
-            taille de
-            <span class="stats_accueil" id="taille_totale"></span> octet(s).
-          </p>
-        </div>
-
+      </div>
+      <div id="accueil_right" class="accueil_block">
+        <img id="magneto" src="img/magneto.png" alt="Gif d'un magnéto" />
       </div>
     </div>
     <div class="section" id="welcome">
-      <div class="content-wrapper">
-        <h1>Welcome</h1>
-        <p>
-          Trouvez ici la page de bienvenue.
-        </p>
-      </div>
+      <h1>Welcome</h1>
+      <p>
+        Trouvez ici la page de bienvenue.
+      </p>
     </div>
     <div class="section" id="president">
-      <div class="content-wrapper">
-        <h1>Présidents</h1>
-        <p>
-          Trouvez ici les informations sur les présidents.
-        </p>
-      </div>
+      <h1>Présidents</h1>
+      <p>
+        Trouvez ici les informations sur les présidents.
+      </p>
     </div>
     <div class="section" id="elu">
-      <div class="content-wrapper">
-        <h1>Élus</h1>
-        <p>
-          Trouvez ici les informations sur les élus.
-        </p>
-      </div>
+      <h1>Élus</h1>
+      <p>
+        Trouvez ici les informations sur les élus.
+      </p>
     </div>
     <div class="section" id="enregistrement">
       <div class="content-wrapper">
@@ -107,25 +90,19 @@
       </div>
     </div>
     <div class="section" id="reunion">
-      <div class="content-wrapper">
-        <h1>Objets des réunions</h1>
-        <p>
-          Trouvez ici les informations sur les réunions.
-        </p>
-      </div>
+      <h1>Objets des réunions</h1>
+      <p>
+        Trouvez ici les informations sur les réunions.
+      </p>
     </div>
     <div class="section" id="mot_cle">
-      <div class="content-wrapper">
-        <h1>Mots clés</h1>
-        <p>
-          Trouvez ici informations sur les mots clés.
-        </p>
-      </div>
+      <h1>Mots clés</h1>
+      <p>
+        Trouvez ici informations sur les mots clés.
+      </p>
     </div>
     <div class="section" id="bye">
-      <div class="content-wrapper">
-        <h1>La scéance est lévée</h1>
-      </div>
+      <h1>La scéance est lévée</h1>
     </div>
   </div>
   <div class="arrowDown"></div>
