@@ -9,76 +9,126 @@
   <!-- Basic viewport setting for mobile friendly page -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Déclaration de la feuille de style du document-->
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fullpage.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/parallax.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/15af25ac7b.css">
   <!-- Those polyfills are required so that old browsers support fetch mecanism -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/typeit@6.0.2/dist/typeit.min.js"></script>
   <!-- Simple sample script that loads data from a dummy json file -->
-  <script src="js/example.js" defer></script>
+  <script src="js/script.js" defer></script>
   <script src="js/fullpage.js"></script>
 </head>
 
 <body>
   <div id="fullpage">
 
-    <div class="section " id="accueil">
-      <h1>Accueil</h1>
-      <p>
-        Vous trouverez ici <span class="stats_accueil" id="nb_fichier_audio"></span> extraits audio du conseil
-        régional des Pays de la Loire pour une durée de <span class="stats_accueil" id="duree_totale"></span> et une taille de
-        <span class="stats_accueil" id="taille_totale"></span> octet(s).
-      </p>
+    <div class="section" id="accueil">
+      <div class="content-wrapper">
+        <div id="accueil_left" class="accueil_block">
+          <img id="pdl_logo" src="img/pdl_logo.svg" alt="Logo de la région des Pays de la Loire" />
+          <h1 id="title_au_coeur"><span class="au_coeur">Au c&oelig;ur des</span> <span class="archives_sonores">archives
+              sonores</span></h1>
+          <h2 id="title_notre_patrimoine">Notre patrimoine est aussi le vôtre</h2>
+          <audio id="music" preload="true" data-autoplay><!-- data-autoplay -->
+            <source src="./data/audio_accueil.mp3">
+          </audio>
+          <div id="audioplayer">
+            <button id="pButton" class="play"></button>
+            <div id="timeline">
+              <div id="playhead"></div>
+              <span id="current-time">--:--</span>
+              <span id="total-time">--:--</span>
+            </div>
+          </div>
+          <p id="discours">
+              
+          </p>
+          <!--
+            <p>
+            Vous trouverez ici <span class="stats_accueil" id="nb_fichier_audio"></span> extraits audio du conseil
+            régional des Pays de la Loire pour une durée de <span class="stats_accueil" id="duree_totale"></span> et
+            une
+            taille de
+            <span class="stats_accueil" id="taille_totale"></span> octet(s).
+          </p>
+          -->
+        </div>
+        <div id="accueil_right" class="accueil_block">
+          <h1>Accueil</h1>
+          <audio controls>
+            <!-- data-autoplay data-keepplaying-->
+            <source src="./data/FRAR52_396PR1_5_BM_1.mp3" type="audio/mp3">
+          </audio>
+          <p>
+            Vous trouverez ici <span class="stats_accueil" id="nb_fichier_audio"></span> extraits audio du conseil
+            régional des Pays de la Loire pour une durée de <span class="stats_accueil" id="duree_totale"></span> et
+            une
+            taille de
+            <span class="stats_accueil" id="taille_totale"></span> octet(s).
+          </p>
+        </div>
+
+      </div>
     </div>
     <div class="section" id="welcome">
-      <h1>Welcome</h1>
-      <p>
-        Trouvez ici la page de bienvenue.
-      </p>
+      <div class="content-wrapper">
+        <h1>Welcome</h1>
+        <p>
+          Trouvez ici la page de bienvenue.
+        </p>
+      </div>
     </div>
     <div class="section" id="president">
-      <h1>Présidents</h1>
-      <p>
-        Trouvez ici les informations sur les présidents.
-      </p>
+      <div class="content-wrapper">
+        <h1>Présidents</h1>
+        <p>
+          Trouvez ici les informations sur les présidents.
+        </p>
+      </div>
     </div>
     <div class="section" id="elu">
-      <h1>Élus</h1>
-      <p>
-        Trouvez ici les informations sur les élus.
-      </p>
+      <div class="content-wrapper">
+        <h1>Élus</h1>
+        <p>
+          Trouvez ici les informations sur les élus.
+        </p>
+      </div>
     </div>
     <div class="section" id="enregistrement">
-      <h1>Nombre d'enregistrements</h1>
-      <p>
-        Trouvez ici les informations sur les enregistrements.
-      </p>
+      <div class="content-wrapper">
+        <h1>Nombre d'enregistrements</h1>
+        <p>
+          Trouvez ici les informations sur les enregistrements.
+        </p>
+      </div>
     </div>
     <div class="section" id="reunion">
-      <h1>Objets des réunions</h1>
-      <p>
-        Trouvez ici les informations sur les réunions.
-      </p>
+      <div class="content-wrapper">
+        <h1>Objets des réunions</h1>
+        <p>
+          Trouvez ici les informations sur les réunions.
+        </p>
+      </div>
     </div>
     <div class="section" id="mot_cle">
-      <h1>Mots clés</h1>
-      <p>
-        Trouvez ici informations sur les mots clés.
-      </p>
+      <div class="content-wrapper">
+        <h1>Mots clés</h1>
+        <p>
+          Trouvez ici informations sur les mots clés.
+        </p>
+      </div>
     </div>
     <div class="section" id="bye">
-      <h1>La scéance est lévée</h1>
+      <div class="content-wrapper">
+        <h1>La scéance est lévée</h1>
+      </div>
     </div>
   </div>
-  <script type="text/javascript">
-    var myFullpage = new fullpage('#fullpage', {
-      anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage', '8thPage'],
-      sectionsColor: ['#D84525', '#D84525', '#D84525', '#D84525', '#D84525', '#D84525', '#D84525', '#D84525'],
-      navigation: true,
-      navigationPosition: 'right',
-      navigationTooltips: ['First page', 'Second page', 'Third page', 'Fourth page', 'Fifth page', 'Sixth page', 'Seventh page', 'Eighth and last page'],
-    });
-  </script>
+  <div class="arrowDown"></div>
 </body>
 
 </html>

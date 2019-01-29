@@ -41,3 +41,197 @@ h1 {
 #section2 h1 {
 	color: #333;
 }
+
+#fp-nav {
+	background-color: #3E201B;
+	height: 100vh;
+	width: 56px;
+}
+
+#fp-nav.fp-right {
+	right: 17px;
+}
+
+#fp-nav ul {
+	/*margin-top: 26.5vh;*/
+	margin: 26.5vh 0 0 15px;
+}
+
+#fp-nav ul li {
+	margin: 5vh 0 0 6px;
+}
+
+#fp-nav ul li a span {
+	background-color: white;
+	height: 8px;
+	width: 8px;
+	margin: -4px 0 0 -4px;
+}
+
+#fp-nav ul li:hover a span {
+	width: 12px;
+	height: 12px;
+	margin: -6px 0px 0px -6px;
+}
+
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span {
+	height: 16px;
+	width: 16px;
+	margin: -8px 0 0 -8px;
+}
+
+body.fp-viewing-1stPage #fp-nav {
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+.arrowUp, .arrowDown {
+	position: fixed;
+	z-index: 99;
+	cursor: pointer;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	margin-left: -38px;
+	left: 50%;
+}
+
+.arrowDown {
+	bottom: 20px;
+	border-width: 38.5px 34px 0 38.5px;
+	border-color: #fff transparent transparent transparent;
+}
+
+.arrowUp {
+	top: 20px;
+	border-width: 0 38.5px 34px 38.5px;
+	border-color: transparent transparent #fff transparent;
+}
+
+#accueil .accueil_block {
+	display: inline-block;
+}
+
+#accueil #accueil_left {
+	float: left;
+	height: 100vh;
+	width: 43vw;
+	background-color: #EEE7D3;
+	margin: 0 auto;
+}
+
+#accueil #accueil_right {
+	float: right;
+	height: 100vh;
+	width: 57vw;
+	background-color: white;
+}
+
+#pdl_logo {
+	display: block;
+	width: 13vw;
+	height: 7.5vh;
+	margin-left: 8vw;
+	margin-top: 8vh;
+}
+
+#title_au_coeur {
+	margin-top: 5vh;
+	margin-left: 8vw;
+	text-align: left;
+	height: 7vw;
+	width: 30vw;
+	font-size: 4vw;
+	line-height: 0.8;
+}
+
+.au_coeur {
+	display: inline-block;
+	color: #B94A5B;
+	font-family: "Zilla Slab";
+	font-weight: normal;
+}
+
+.archives_sonores {
+	display: inline-block;
+	color: #512C51;
+	font-family: "Zilla Slab";
+}
+
+#title_notre_patrimoine {
+	margin-left: 8vw;
+	text-align: left;
+	height: 2vw;
+	width: 22vw;
+	color: #512C51;
+	font-family: Ubuntu;
+	font-size: 1.5vw;
+	font-style: italic;
+	line-height: 0.7;
+}
+
+#audioplayer {
+	margin-left: 8vw;
+	width: 26vw;
+	height: 6vw;
+}
+
+#pButton {
+	display: block;
+	height: 10vh;
+	width: 5.5vw;
+	border: none;
+	background-size: 50% 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-left: auto;
+	margin-right: auto;
+	outline: none;
+}
+
+.play {
+	background-image: url('../img/play.svg');
+	background-color: transparent;
+}
+
+.pause {
+	background-image: url('../img/pause.svg');
+	background-color: transparent;
+}
+
+#timeline {
+	width: 26vw;
+	height: 4px;
+	float: left;
+	border-radius: 15px;
+	background: #B94A5B;
+}
+
+#playhead {
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	margin-top: -7px;
+	background: rgba(0, 0, 0, 1);
+}
+
+#timeline #current-time {
+	float: left;
+}
+
+#timeline #total-time {
+	float: right;
+}
+
+#discours {
+	margin-top: 4vh;
+	margin-left: 8vw;
+	text-align: left;
+	height: 6.5vw;
+	width: 34.5vw;
+	color: #512C51;
+	font-family: "Zilla Slab Light";
+	font-size: 1vw;
+	line-height: 1;	
+}
