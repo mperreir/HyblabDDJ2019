@@ -81,8 +81,8 @@ h3 {
 #draggable{
   z-index: 100;
   position: absolute;
-  top:76%;
-  left:49%;
+  top:31%;
+  left:40%;
   cursor: move;
 }
 
@@ -94,14 +94,15 @@ h3 {
 #conteneurRadio{
   width:55%;
   margin: auto;
-  margin-bottom: 5%;
 }
 #conteneurLigne{
   width:40%;
   margin: auto;
+  margin-top: 1.5%;
   margin-right: 27%;
-  margin-top: -15px;
-  margin-bottom: 2%;
+  position: relative;
+  /*margin-top: -15px;
+  margin-bottom: 2%;*/
 }
 .images_petit {
 height:40%;

@@ -39,7 +39,7 @@ function changer_radio(xPos){
 
     document.getElementById('conteneurLigne').style.width= "50%";
     document.getElementById('conteneurLigne').style.margin= "auto";
-    document.getElementById('conteneurLigne').style.marginTop= "-1%";
+    document.getElementById('conteneurLigne').style.marginTop= "1.5%";
     //document.getElementById('imgBackground').marginRight="5px";
     $('#draggable').draggable({
       axis: "x",
