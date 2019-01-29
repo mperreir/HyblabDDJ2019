@@ -129,6 +129,6 @@ class ScrollPages {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    var s = new ScrollPages(1,3,document.getElementById('all-pages'));
+    var s = new ScrollPages(1,4,document.getElementById('all-pages'));
     s.init();
 })

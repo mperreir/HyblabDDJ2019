@@ -13,3 +13,7 @@ header img{
   max-width: 100%;
 	height: auto;
 }
+#mapid { 
+	height: 550px;
+	width: 800px;
+ }
