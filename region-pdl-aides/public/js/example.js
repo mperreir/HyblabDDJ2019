@@ -4,7 +4,7 @@
 // when loading our scripts
 
 // Load a dummy json file using the fetch API
-fetch('data/dummy.json')
+/*fetch('data/dummy.json')
     // this promise will be fulfilled when the json fill will be
     .then(function (response){
         // if we could load the resource, parse it
@@ -23,3 +23,4 @@ fetch('data/dummy.json')
         document.querySelector('#data')
             .textContent = json.data;
     });
+*/
