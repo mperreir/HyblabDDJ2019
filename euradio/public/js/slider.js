@@ -35,11 +35,10 @@ function changer_radio(xPos){
     //document.getElementById('conteneurRadio').style.marginTop= "6%";
     //document.getElementById('conteneurRadio').style.marginBottom= "5%";
 
-    document.getElementById('sliderBackground').src="img/slider_rnt_ok.png";
+    document.getElementById('sliderBackground').src="img/qvve.png";
 
     document.getElementById('conteneurLigne').style.width= "50%";
     document.getElementById('conteneurLigne').style.margin= "auto";
-    document.getElementById('conteneurLigne').style.marginTop= "1.5%";
     //document.getElementById('imgBackground').marginRight="5px";
     $('#draggable').draggable({
       axis: "x",
