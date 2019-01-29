@@ -11,7 +11,7 @@
   <!-- Those polyfills are required so that old browsers support fetch mecanism -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-    <!-- Simple sample script that loads data from a dummy json file -->
+  <!-- Simple sample script that loads data from a dummy json file -->
   <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -23,60 +23,70 @@
     <div id="accueil">
       <video id="video_accueil" autoplay muted preload="metadata" poster="img/fond_accueil.png">
         <source src="img/CARENE_1.mp4">
-      </video>
-      <button class="bouton_accueil" onclick="en_avant_toute()" type="button"> EN AVANT TOUTE !</button>
-    </div>
+        </video>
+        <button class="bouton_accueil" onclick="en_avant_toute()" type="button"> EN AVANT TOUTE !</button>
+      </div>
 
-    <div id="presentation">
-      <img id="img_fond_2" src="img/fond_ecran_2.jpg"  alt="fond_ecran"/>
-      <button class="bouton_accueil" onclick="d_accord()" type="button"> D'ACCORD !</button>
-    </div>
+      <div id="presentation">
+        <img id="img_fond_2" src="img/fond_ecran_2.jpg"  alt="fond_ecran"/>
+        <button class="bouton_accueil" onclick="d_accord()" type="button"> D'ACCORD !</button>
+      </div>
 
-    <div id="presentation2">
-      <img id="img_fond_3" src="img/fond_ecran_2.jpg"  alt="fond_ecran"/>
-      <button class="bouton_accueil" onclick="curseurs()" type="button"> C'EST PARTI !</button>
-    </div>
+      <div id="presentation2">
+        <img id="img_fond_3" src="img/fond_ecran_2.jpg"  alt="fond_ecran"/>
+        <button class="bouton_accueil" onclick="curseurs()" type="button"> C'EST PARTI !</button>
+      </div>
 
-    <!-- Page Carte avant Personnalisation -->
-    <div id="carte_generale">
-      <img id="img_carte_generale" src="img/carte_generale.jpg"  alt="carte des pistes Carene"/>
-      <img id="velo_carte_generale" src="img/velo.jpg"  alt="velo carte generale"/>
-      <div id="dial_carte_generale">
-        Ce texte AAAAAAA AAAAAAA AAAAAAA AAAAAAA AAAAAAAAA AAAAAAA AAAAA AAAAA AAAAA AAAAA AAAAA
-        <br/>
-        <button class="bouton_personnaliser" onclick="personnaliser()" type="button"> MON PARCOURS </button>
+      <div id="plus_tard">
+        <div id="personnalisation">
+          <h2> Alors, qu'avez vous envie de faire aujourd'hui ? </h2>
+          <div id="div_personnage">
+
+            <img id="socle_curseurs" src="img/socle_musee.png"  alt="socle"/>
+            <img id="velo_curseurs" src="img/velo_moyen.png"  alt="velo"/>
+            <img id="personnage" src="img/leon.png"  alt="personnage"/>
+          </div>
+          <div id="curseurs">
+            <div id="curs_dist">
+              <label for="distance">Distance (Km) : <span id="val"></span></label>
+              <br/><br/>
+              <div width="100%">
+                <input onchange="actualiser_dist()" type="range" min="10" max="30" step="0.001" value="20" class="slider" id="distance" name="distance">
+              </div><br/>
+              <ul class="range-labels-dist">
+                <li onclick="click_curseur_dist('30')">30</li>
+                <li onclick="click_curseur_dist('20')" class="active selected">20</li>
+                <li onclick="click_curseur_dist('10')" >10</li>
+              </ul>
+            </div>
+            <div id="curs_theme">
+              <label for="distance">Theme :</label>
+              <br/><br/>
+              <div width="100%">
+                <input onchange="actualiser_decor()" type="range" min="1" max="3" step="1" value="2" class="slider" id="num_theme" name="theme" >
+              </div>
+              <br/>
+              <ul id="theme" class="range-labels-theme">
+                <li onclick="click_curseur_theme('3')">Plage / Bord de Mer</li>
+                <li onclick="click_curseur_theme('2')" class="active selected">Musée / Culturel</li>
+                <li onclick="click_curseur_theme('1')" >Forêt / Nature</li>
+              </ul>
+            </div>
+          </div>
+          <button class="bouton_personnalisation" onclick="c_est_parti()" type="button"> C'EST PARTI !</button>
+        </div>
+      </div>
+
+      <!-- Page Carte avant Personnalisation -->
+      <div id="carte_generale">
+        <img id="img_carte_generale" src="img/carte_generale.jpg"  alt="carte des pistes Carene"/>
+        <img id="velo_carte_generale" src="img/velo.jpg"  alt="velo carte generale"/>
+        <div id="dial_carte_generale">
+          Ce texte AAAAAAA AAAAAAA AAAAAAA AAAAAAA AAAAAAAAA AAAAAAA AAAAA AAAAA AAAAA AAAAA AAAAA
+          <br/>
+          <button class="bouton_personnaliser" onclick="personnaliser()" type="button"> MON PARCOURS </button>
+        </div>
       </div>
     </div>
-    <div id="personnalisation">
-      <h2> Alors, qu'avez vous envie de faire aujourd'hui ? </h2>
-      <img id="velo_personnalisation" src="img/velo.jpg"  alt="velo personnalisation"/>
-      <div id="curseurs">
-        <div id="curs_dist">
-          <label for="distance">Distance (Km) : <span id="val"></span></label>
-          <br/><br/>
-          <input onchange="actualiser_dist()" type="range" min="10" max="30" step="0.001" value="20" class="slider" id="distance" name="distance">
-          <ul class="range-labels-dist">
-            <li onclick="click_curseur_dist('30')">30</li>
-            <li onclick="click_curseur_dist('20')" class="active selected">20</li>
-            <li onclick="click_curseur_dist('10')" >10</li>
-          </ul>
-        </div>
-        <div id="curs_theme">
-          <label for="distance">Theme :</label>
-          <br/><br/>
-          <input type="range" min="1" max="3" step="1" value="2" class="slider" id="num_theme" name="theme" >
-          <ul id="theme" class="range-labels-theme">
-            <li onclick="click_curseur_theme('3')">Plage / Bord de Mer</li>
-            <li onclick="click_curseur_theme('2')" class="active selected">Musée / Culturel</li>
-            <li onclick="click_curseur_theme('1')" >Forêt / Nature</li>
-          </ul>
-        </div>
-      </div>
-    <button class="bouton_personnalisation" onclick="c_est_parti()" type="button"> C'EST PARTI !</button>
-    </div>
-  </div>
-</body>
-<footer>
-  <p>Copyright Hyblab team 2019</p>
-</footer>
-</html>
+  </body>
+  </html>

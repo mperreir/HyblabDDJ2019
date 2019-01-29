@@ -1,10 +1,13 @@
-*{
+#container{
+  height:100%;
+  width:auto;
   max-width:1280px;
   max-height:850px;
   margin-left: auto;
   margin-right: auto;
   text-align:center;
 }
+
 /* just a sample  css rule to show that everything works */
 footer p
 {
@@ -17,6 +20,7 @@ footer p
 
 body{
   background-color:#4e687f;
+  margin:0px;
 }
 
 header{
@@ -34,6 +38,8 @@ header img{
 
 #accueil{
   position:relative;
+  height:100vh;
+  width:auto;
   margin-left: auto;
   margin-right: auto;
   display:block;
@@ -44,8 +50,8 @@ header img{
   margin-left: auto;
   margin-right: auto;
   display:block;
-  width: 100%;
-  height: auto;
+  height:100%;
+  width:auto;
   z-index:1;
 }
 
@@ -108,8 +114,8 @@ header img{
   border-radius: 8px;
   padding: 6px 40px;
   font-size: 16px;
-  background-color: #4e687f;
-  border-color: #4e687f;
+  background-color: #ec1c24;
+  border-color: #ec1c24;
   color: white;
   cursor: pointer;
   /* font-family:    ;  A completer; */
@@ -119,6 +125,8 @@ header img{
 /* Page Présentation 1 */
 
 #presentation, #presentation2{
+  height:100%;
+  width:auto;
   display:none;
 }
 
@@ -126,9 +134,10 @@ header img{
 /* Page Carte avant Personnalisation */
 
 #carte_generale{
+  height:100vh;
+  width:auto;
   display:none;
   position:relative;
-  width:80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -136,8 +145,15 @@ header img{
 
 #carte_generale #img_carte_generale{
   left :30%;
-  width: 100%;
-  height: auto;
+  height:100%;
+  width:auto;
+  z-index:1;
+}
+
+#img_fond_2, #img_fond_3{
+  position:relative;
+  height:99vh;
+  width:auto;
   z-index:1;
 }
 
@@ -208,52 +224,102 @@ header img{
 }
 
 /* Page Personnalisation */
-
-#personnalisation{
-  border-radius: 20px;
-  padding-top:10px;
-  display:none;
-  position:relative;
-  text-align:center;
-  width:100%;
-  min-height:600px;;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #ffffff;
-  color:#4e687f;
+#plus_tard{
+  background-image: url('img/fond_slider_musee.png');
+  display: none;
+  height:100vh;
+  width:100vw;
+  left:0%;
+  position:absolute;
 }
 
-#personnalisation #velo_personnalisation{
-  left :15%;
-  width: 35%;
+#fond_curseurs{
+  position:relative;
+  height:99vh;
+  width:auto;
+  z-index:1;
+}
+
+#socle_curseurs{
+  width:40%;
+  position:absolute;
+  left:5%;
   bottom:0%;
+}
+
+#velo_curseurs{
+  left :5%;
+  width: 40%;
+  bottom:10%;
   height: auto;
   z-index:2;
-  position: relative;
+  position: absolute;
   float:left;
 }
 
-#personnalisation #curseurs{
-  background-color:#ffffff;
+#personnage{
+  left :5%;
+  width: 40%;
+  bottom:22%;
   height: auto;
-  z-index:1;
+  z-index:2;
+  position: absolute;
+  float:left;
+}
+
+
+#personnalisation{
+  border-radius: 20px;
+  position:absolute;
+  text-align:center;
+  top:5%;
+  width:82%;
+  margin-left:7%;
+  height:85vh;
+  background-color: #ffffff;
+  color:#4e687f;
+  z-index:2;
+}
+
+#div_personnage{
+  width:50%;
+  float:left;
+}
+ 
+#curseurs{
+  background-color:#ffffff;
+  z-index:2;
   position: relative;
+  width:50%;
+  float:right;
+  font-size:16px;
 }
 
 #curs_dist, #curs_theme{
   padding-top: 5px;
-  margin-top:5%;
+  margin-top:2%;
   position: relative;
   right:15%;
   float:right;
-  width: 40%;
+  width: 80%;
+  height: 5px;
+  padding-top:3%;
+}
+
+#curs_theme{
+  padding-top: 5px;
+  margin-top:20%;
+  position: relative;
+  right:15%;
+  float:right;
+  width: 80%;
   height: 5px;
   padding-top:3%;
 }
 
 
 #curs_theme input, #curs_dist input{
-  width: 65%;
+  width: 70%;
   float:right;
   position: relative;
   top: 2px;
@@ -264,7 +330,7 @@ header img{
   text-align:left;
   float:right;
   position: relative;
-  top: 2px;
+  top: 1px;
 }
 
 #personnalisation .bouton_personnalisation{
@@ -291,25 +357,27 @@ header img{
   list-style: none;
 }
 
-.range-labels-dist li {
+
+
+.range-labels-dist li, .range-labels-theme li {
     position: relative;
     float:right;
-    width:auto;
-    min-width:28%;
     text-align: right;
-    right:6%;
-    color: #4e687f;
     font-size: 14px;
+    color: #4e687f;
+    text-transform: uppercase;
+}
+
+
+.range-labels-dist li {
+    width:auto;
+    min-width:30%;
+    right:6%;
     cursor: pointer;
 }
 
 .range-labels-theme li {
-    position: relative;
-    float:right;
     width:30%;
-    text-align: right;
-    color: #4e687f;
-    font-size: 14px;
     cursor: pointer;
     right:-5%;
 }
@@ -324,5 +392,32 @@ header img{
 
 .active.selected::before {
   display: none;
+}
+/* Style des curseurs */
+input[type="range"] {
+  display: block;
+  -webkit-appearance: none;
+  width: 300px;
+  height: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  outline: 0;
+}
 
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #e74c3c;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}​
+input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: white;
+  border: 2px solid #e74c3c;
+}
+input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.6);
 }
