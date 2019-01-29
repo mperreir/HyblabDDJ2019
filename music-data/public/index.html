@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="css/style.css">
 		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
 		<!-- Simple sample script that loads data from a dummy json file -->
-		<script src="js/example.js" defer></script>
+		<script  type="module" src="js/example.js" defer></script>
+
   </head>
   <body>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
@@ -26,10 +28,26 @@
       <h1>Hyblab Datajournalism 2019</h1>
     </header>
 
-    <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
 
-		<p>Here is some data from a json file : <span id="data"></span><p>
+
+    <div id="geresmusicales">
+
+    </div>
+    <div id="menu">
+
+    </div>
+      <div id="trackspourungenre">
+
+      </div>
+      <div id="followerspourungenre">
+
+      </div>
+      <div id="artistespourungenre">
+
+      </div>
+
+
+
 
     <!-- Notre pied de page -->
     <footer>
