@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Si le site est à utiliser pour raison commercial il faut avoir une licence pour le module fullpage -->
 <html lang="fr"> <!-- Notre page est en français -->
   <head>
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
@@ -15,38 +16,73 @@
 		<!-- Simple sample script that loads data from a dummy json file -->
 		<script  type="module" src="js/example.js" defer></script>
 
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
+    <!-- <script src="vendors/jquery.easings.min.js"></script> -->
+
+
+    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+    <!-- <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script> -->
+
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
   </head>
   <body>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
     <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
     <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+    <div id="fullpage">
 
     <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
-      <h1>Hyblab Datajournalism 2019</h1>
-    </header>
+    <div class="section" id="introduction1">
+      <header>
+        <img src="img/logo_hyblab.png" alt="logo hyblab"/>
+        <h1>Hyblab Datajournalism 2019</h1>
+      </header>
 
-
-
-    <div id="geresmusicales">
-
+      <h1>Introduction : section 1</h1>
     </div>
-    <div id="menu">
 
+    <div class="section" id="introduction2">
+      <h1>Introduction : section 2</h1>
     </div>
-      <div id="trackspourungenre">
+
+    <div class="section" id="introduction3">
+      <h1>Introduction : section 3</h1>
+    </div>
+
+    <div class="section genres" id="genres">
+      <h1>Liste des genres avec nb blogs, nb followers etc ...</h1>
+      <div id="geresmusicales">
 
       </div>
-      <div id="followerspourungenre">
+      <div class="slide"> Genre 1 </div>
+      <div class="slide"> Genre 2 </div>
+      <div class="slide"> Genre 3 </div>
+      <div class="slide"> Genre 4 </div>
+      <div class="slide"> Genre 5 </div>
+      <div class="slide"> Genre 6 </div>
+    </div>
+
+    <!-- PLATEFORME MUSIC DATA -->
+    <div class="section" id="blogs_stats">
+
+      <div id="menu">
 
       </div>
-      <div id="artistespourungenre">
+        <div id="trackspourungenre">
 
-      </div>
+        </div>
+        <div id="followerspourungenre">
 
+        </div>
+        <div id="artistespourungenre">
 
+        </div>
+
+      </div><!-- end of section stats -->
 
 
     <!-- Notre pied de page -->

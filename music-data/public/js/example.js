@@ -21,8 +21,10 @@ function GetAllData()
 
       });
 }
+
     function tracksdesblog(key) {
-      console.log("lien",key)  ;
+      key.replace(" ", "_");
+      console.log("lien",key);
       let lien="/tracks/"+key
       fetch(lien)
           .then(function (response){
@@ -72,6 +74,7 @@ function GetAllData()
     function followersdesblog(key)
            {
              //$(document).ready(function(){
+             key.replace(" ", "_");
              console.log("lien",key)  ;
              let lien="/followers/"+key
              fetch(lien)
@@ -119,6 +122,7 @@ function GetAllData()
            }
            function artistesdesblog(key)
                   {
+                    key.replace(" ", "_");
                     //$(document).ready(function(){
                     console.log("lien",key)  ;
                     let lien="/artistes/"+key
@@ -230,9 +234,6 @@ function GetAllData()
       tracksdesblog(x);
 
 
-
-
-
 });
 //artistes
 $(document).on("click", "#artistes", function(){
@@ -242,9 +243,18 @@ $(document).on("click", "#artistes", function(){
     $('#trackspourungenre').empty();
     $("#menu").empty();
     artistesdesblog(x);
+});
 
-
-
-
-
+/*
+$(document).ready(function() {
+  	$('#fullpage').fullpage();
+});
+*/
+$(document).ready(function(){
+  $('#fullpage').fullpage({
+    //options here
+    autoScrolling:true,
+    scrollHorizontally: true
+  });
+  //$.fn.fullpage.setAllowScrolling(false);
 });

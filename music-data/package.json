@@ -122,6 +122,7 @@
       "resolved": "https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz",
       "version": "0.5.2"
     },
+    "fullpage.js": "^3.0.4",
     "http-errors": {
       "integrity": "sha1-i1VoC7S+KDoLW/TqLjhYC+HZMg0=",
       "requires": {
