@@ -135,13 +135,22 @@ function actualiser_decor() {
 
 
 async function c_est_parti(){
-  document.getElementById("personnalisation").style.display="none";
+  document.getElementById("page_personnalisation").style.display="none";
   var dist = document.getElementById("distance").value;
   var num_theme = document.getElementById("num_theme").value;
   var theme = document.getElementById("theme").getElementsByTagName("li")[num_theme-1].innerHTML;
   var liste_circuit_selection = await selection_circuit(dist, theme);
 
-  
+  document.getElementById("page_carte").style.display="block";
+  console.log(liste_circuit_selection);
+  liste_circuit_selection
+    .then(function(value){
+      value.forEach(function(element){
+        var numero = element["numero"];
+        document.getElementById("circuit-0"+numero).style.display="block";
+        console.log(document.getElementById("circuit-0"+numero).style.display="block");
+      })
+    });
 }
 
 
