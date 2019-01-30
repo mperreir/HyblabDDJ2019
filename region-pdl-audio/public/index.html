@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/parallax.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/15af25ac7b.css">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700|Zilla+Slab:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,700|Zilla+Slab:300,400,700" rel="stylesheet">
   <!-- Those polyfills are required so that old browsers support fetch mecanism -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
@@ -46,18 +46,7 @@
             <span id="total-time">--:--</span>
           </div>
         </div>
-        <p id="discours">
-
-        </p>
-        <!--
-            <p>
-            Vous trouverez ici <span class="stats_accueil" id="nb_fichier_audio"></span> extraits audio du conseil
-            régional des Pays de la Loire pour une durée de <span class="stats_accueil" id="duree_totale"></span> et
-            une
-            taille de
-            <span class="stats_accueil" id="taille_totale"></span> octet(s).
-          </p>
-          -->
+        <p id="discours"></p>
       </div>
       <div id="accueil_right" class="accueil_block">
         <img id="magneto" src="img/magneto.png" alt="Gif d'un magnéto" />
@@ -82,12 +71,21 @@
       </p>
     </div>
     <div class="section" id="enregistrement">
-      <div class="content-wrapper">
-        <h1>Nombre d'enregistrements</h1>
-        <p>
-          Trouvez ici les informations sur les enregistrements.
-        </p>
+      <div id="enregistrement_entete">
+        <div id="enregistrement_intro">
+          <h1 id="title_zoom_archive"><span class="zoom">Zoom sur les</span> <span class="archive">archives sonores</span></h1>
+          <p id="intro">
+            Pendant 20 ans, le conseil régional a fait <span id="nb_reunion"></span> réunions,</br>
+            dont <span id="nb_fichier_audio"></span> enregistrements audio.
+          </p>
+          <div class="separator"></div>
+          <p id="click_k7">
+            Cliquez sur une cassette pour écouter.
+          </p>
+        </div>
+        <div id="enregistrement_info"></div>
       </div>
+      <div id="graph_k7"></div>
     </div>
     <div class="section" id="reunion">
       <h1>Objets des réunions</h1>

@@ -20,7 +20,7 @@ var typewriter = new TypeIt('#discours', {
     .type('.')
     .pause(1000)
     .type('.')
-    .pause(1000)
+    .pause(800)
     .type(" La séance est ouverte »");
 
 audio.addEventListener("pause", function () {
