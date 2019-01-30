@@ -1,6 +1,7 @@
 'use strict';
 let datafollowers=[];
-
+let datatracks=[];
+// fonction de trie des elements
 function sortByy1(key1, key2){
   var x= parseInt(key1.y1);
   var y=parseInt(key2.y1);
@@ -46,19 +47,19 @@ function GetAllData()
 
           .then(function (json) {
 
-
+                datatracks=json;
                $('#menu').append("<button id='followers' class='buttonmenu' value="+key+"> Followers/Blogs/"+ key + "</button><br>");
                $('#menu').append("<button id='artistes' class='buttonmenu' value="+key+"> Artistes/Blogs/"+ key + "</button><br>");
-
+               AfficherCursseur("#trackspourungenre",datatracks);
                creehistogram("#trackspourungenre",json,20);
-               $('#trackspourungenre').append("<button id='retour'> Retour à l'ensemble des Genres </button>");
+               $('#menu').append("<button id='retour'> Retour à l'ensemble des Genres </button>");
                $(document).on("click", "#retour", function(){
-
+                  $('.slidecontainer').empty();
                 $('#geresmusicales').show();
                 $("#trackspourungenre").empty();
                 $('#artistespourungenre').empty();
                 $("#menu").empty();
-                  $("#bloginformations").empty();
+                $("#bloginformations").empty();
 
 
 
@@ -92,13 +93,14 @@ function GetAllData()
                     datafollowers=data;
 
                       //je fais cette affichage juste pour que les choses soit claire, mais apres on doit la changer par le design et le mode d'affichage que l'on veut
-                      AfficherCursseur();
+                      AfficherCursseur("#followerspourungenre",datafollowers);
                       creehistogram("#followerspourungenre",data,20);
                       $('#menu').append("<button id='tracks' class='buttonmenu' value="+key+"> Tracks/Blogs/"+ key + "</button><br>");
                       $('#menu').append("<button id='artistes' class='buttonmenu' value="+key+"> Artistes/Blogs/"+ key + "</button><br>");
-                      $('#followerspourungenre').append("<button id='retour'> Retour à l'ensemble des Genres </button>");
+                      $('#menu').append("<button id='retour'> Retour à l'ensemble des Genres </button>");
 
                       $(document).on("click", "#retour", function(){
+                        $('.slidecontainer').empty();
                        $('#geresmusicales').show();
                        $("#followerspourungenre").empty();
                        $('#artistespourungenre').empty();
@@ -145,9 +147,10 @@ function GetAllData()
                              $('#artistespourungenre').append(  '</table>' );
                              $('#menu').append("<button id='tracks' class='buttonmenu' value="+key+"> Tracks/Blogs/"+ key + "</button><br>");
                              $('#menu').append("<button id='followers' class='buttonmenu' value="+key+"> Followers/Blogs/"+ key + "</button><br>");
-                             $('#artistespourungenre').append("<button id='retour'> Retour à l'ensemble des Genres </button>");
+                             $('#menu').append("<button id='retour'> Retour à l'ensemble des Genres </button>");
 
                              $(document).on("click", "#retour", function(){
+                                 $('.slidecontainer').empty();
                               $('#geresmusicales').show();
                               $("#followerspourungenre").empty();
                               $("#trackspourungenre").empty();
@@ -176,7 +179,7 @@ function GetAllData()
 
           .then(function (json) {
                console.log(json);
-               $('.slidecontainer').hide();
+               //$('.slidecontainer').hide();
                $.each( json, function( key, val ) {
                  // ici je vais affcher l'ensemble des genre accompagnés chacun par le nombre de blog qui le contient
                  $('#geresmusicales').append("<button id= "+ escape(key)+ ">"+key+"</button>");
@@ -239,7 +242,7 @@ function GetAllData()
 
         var x = $(this).attr("value");
         console.log("x",x);
-          $(".slidecontainer").show();
+          $('.slidecontainer').empty();
 
           $("#bloginformations").empty();
           $('#trackspourungenre').empty();
@@ -253,7 +256,7 @@ function GetAllData()
   $(document).on("click", "#tracks", function(){
       var x = $(this).attr("value");
       console.log("x",x);
-      $(".slidecontainer").hide();
+      $('.slidecontainer').empty();
       $('#followerspourungenre').empty();
       $('#artistespourungenre').empty();
       $("#menu").empty();
@@ -290,6 +293,7 @@ function creehistogram(id,data1,val)
        data.splice(0,t);
     }
     //data.length<val
+    //alors on teste si data.length>20 ==> si c'est le cas alors on affiche 20 bars
     else if(data.length>20)
     {
       var t=data.length -20;
@@ -356,18 +360,17 @@ function creehistogram(id,data1,val)
 });}
 
 
-function AfficherCursseur()
+function AfficherCursseur(zone,data)
 {
   $('.slidecontainer').append('<input type=range id="slider" class="slider" min="1" max="157" value="20">');
-
   $('.slidecontainer').append('<p id="valeurdeslider" style="text-align: center;">  </p>');
   $('input[type=range]').on('input', function () {
     var newval=$(this).val();
     alert(newval);
-    $('#followerspourungenre').empty();
+    $(zone).empty();
 
-    console.log("datafollowers",datafollowers);
-    creehistogram("#followerspourungenre",datafollowers,parseInt(newval));
+    console.log(zone,data);
+    creehistogram(zone,data,parseInt(newval));
 });
 
 }
