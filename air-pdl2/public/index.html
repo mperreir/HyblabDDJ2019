@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style.css" media="screen">
     <link rel="stylesheet" href="../libraries/animate/animate.min.css">
     <link rel="stylesheet" href="../libraries/fontawesome/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery.range.css">
     <link rel="stylesheet" href="css/carousel-fade-tarnsition.css">
 
 </head>
@@ -62,19 +63,19 @@
                 <img class="fond" src="img/cache_1_.svg" alt="fond"/>
                 <img class="questions" src="img/question3.png" alt="q3"/>
             </div>
-            <div class="item">
+            <div class="item"id="choix">
                 <div id="rural">
-                    <a href="#">
-                        <img src="img/RURAL.png"/>
+                    <a href="#r">
+                        <img src="img/RURAL@2x.svg"/>
                     </a>
                 </div>
                 <div id="ville">
-                    <a href="#">
+                    <a href="#in">
                         <img src="img/VILLE.png"/>
                     </a>
                 </div>
                 <div id="trafic">
-                    <a href="#">
+                    <a href="#tr">
                         <img src="img/TRAFIC.png"/>
                     </a>
                 </div>
@@ -84,6 +85,59 @@
             </div>
             <div class="item">
                 <img class="questions"src="img/equipe.png" alt="team"/>
+            </div>
+        </div>
+//pour rural
+        <div id="r">
+            <a class="button" href="#choix">Button</a>
+            <div class="container" id="my">
+                <div class="progress">
+                    <div class="progress-bar">
+                        <span class="progress-in" id="bar" style="width:0%"></span>
+                    </div>
+                </div>
+                <div id="value">  <h1>Value:<span id="demo"></span></h1>
+                                 <h1>Heur:<span id="demo2"></span></h1>
+                </div>
+            </div>
+            <div id="myR">
+                <input type="hidden"id="myRange" class="single-slider" onchange="ran()"value="12" />
+            </div>
+        </div>
+//pour urban
+        <div id="in">
+            <a class="button" href="#choix">Button</a>
+            <div class="container" id="my2">
+                <div class="progress">
+                    <div class="progress-bar">
+                        <span class="progress-in" id="bar2" style="width:0%"></span>
+                    </div>
+                </div>
+                <div id="value2">  <h1>Value:<span id="demo21"></span></h1>
+                    <h1>Heur:<span id="demo22"></span></h1>
+                </div>
+            </div>
+
+            <div id="myR2">
+                <input type="hidden"id="myRange2" class="single-slider" onchange="ran2()"value="12" />
+            </div>
+        </div>
+//pour traffic
+        <div id="tr">
+            <a class="button" href="#choix">Button</a>
+            <div class="container" id="my3">
+                <div class="progress">
+                    <div class="progress-bar">
+                        <span class="progress-in" id="bar3" style="width:0%"></span>
+                    </div>
+                </div>
+                <div id="value3">  <h1>Value:<span id="demo31"></span></h1>
+                    <h1>Heur:<span id="demo32"></span></h1>
+                </div>
+            </div>
+
+            <div id="myR3">
+                <input type="hidden"id="myRange3" class="single-slider" onchange="ran3()"value="12" />
             </div>
         </div>
 
@@ -101,10 +155,11 @@
 <script src="../libraries/jquery/jquery.js"></script>
 
 <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="js/jquery.range.js"></script>
 
 <script src="../libraries/bootstrap/js/bootstrap.min.js"></script>
 <script src="js/animation.js"></script>
-
+<script src="./js/Myrange.js"></script>
 
 </body>
 
