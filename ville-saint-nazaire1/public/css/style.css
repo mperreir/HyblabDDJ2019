@@ -1,10 +1,8 @@
 #container{
-  height:100%;
+  height:100vh;
   width:auto;
   max-width:1280px;
   max-height:850px;
-  margin-left: auto;
-  margin-right: auto;
   text-align:center;
 }
 
@@ -39,7 +37,7 @@ header img{
 #accueil{
   position:relative;
   height:100vh;
-  width:auto;
+  width:100vw;
   margin-left: auto;
   margin-right: auto;
   display:block;
@@ -47,14 +45,36 @@ header img{
 
 #video_accueil{
   position:relative;
-  margin-left: auto;
-  margin-right: auto;
   display:block;
-  height:100%;
-  width:auto;
+  height:100vh;
+  width:100vw;
   z-index:1;
 }
 
+#bouton_accueil{
+  position: absolute;
+  top : 92%;
+  left: 80%;
+  z-index:3;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  border-color: #ec1c24;
+  cursor: pointer;
+
+  color: #FFFFFF;
+  font-family: 'Lato';
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 22px;
+
+  height: 55px;
+  width: 209px;
+  background-color: #EC1C24;
+  box-shadow: 0 2px 7px 0 rgba(0,0,0,0.5);
+}
+
+
+/*
 #accueil #velo_accueil{
   left :0%;
   width: 30%;
@@ -64,6 +84,7 @@ header img{
   position: absolute;
   display:none;
 }
+
 
 #accueil #dial_accueil{
   left :25%;
@@ -104,31 +125,60 @@ header img{
   border: 10px solid;
   border-color: white white transparent transparent ;
 }
-
-.bouton_accueil{
-  position: absolute;
-  top : 85%;
-  left: 50%;
-  z-index:3;
-  transform: translate(-50%, -50%);
-  border-radius: 8px;
-  padding: 6px 40px;
-  font-size: 16px;
-  background-color: #ec1c24;
-  border-color: #ec1c24;
-  color: white;
-  cursor: pointer;
-  /* font-family:    ;  A completer; */
-  font-weight:bold;
-}
+*/
 
 /* Page Présentation 1 */
 
 #presentation, #presentation2{
-  height:100%;
-  width:auto;
+  height:100vh;
+  width:100vw;
   display:none;
 }
+
+#bouton_presentation_1{
+  position: absolute;
+  top : 60%;
+  left: 65%;
+  z-index:3;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  border-color: #ec1c24;
+  cursor: pointer;
+
+  color: #FFFFFF;
+  font-family: 'Lato';
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 22px;
+
+  height: 55px;
+  width: 155px;
+  background-color: #EC1C24;
+  box-shadow: 0 2px 7px 0 rgba(0,0,0,0.5);
+}
+
+#bouton_presentation_2{
+  position: absolute;
+  top : 60%;
+  left: 65%;
+  z-index:3;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  border-color: #ec1c24;
+  cursor: pointer;
+
+  color: #FFFFFF;
+  font-family: 'Lato';
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 22px;
+
+  height: 55px;
+  width: 155px;
+  background-color: #EC1C24;
+  box-shadow: 0 2px 7px 0 rgba(0,0,0,0.5);
+}
+
 
 
 /* Page Carte avant Personnalisation */
@@ -226,6 +276,8 @@ header img{
 /* Page Personnalisation */
 #plus_tard{
   background-image: url('img/fond_slider_musee.png');
+  background-repeat:no-repeat;
+  background-size: cover;
   display: none;
   height:100vh;
   width:100vw;
@@ -254,13 +306,13 @@ header img{
   height: auto;
   z-index:2;
   position: absolute;
-  float:left;
+  float:left;20
 }
 
 #personnage{
   left :5%;
   width: 40%;
-  bottom:22%;
+  bottom:17%;
   height: auto;
   z-index:2;
   position: absolute;
@@ -273,8 +325,8 @@ header img{
   position:absolute;
   text-align:center;
   top:5%;
-  width:82%;
-  margin-left:7%;
+  width:90%;
+  margin-left:5%;
   height:85vh;
   background-color: #ffffff;
   color:#4e687f;
@@ -285,7 +337,7 @@ header img{
   width:50%;
   float:left;
 }
- 
+
 #curseurs{
   background-color:#ffffff;
   z-index:2;
@@ -293,6 +345,8 @@ header img{
   width:50%;
   float:right;
   font-size:16px;
+  margin-top:5%;
+  margin-right:10%;
 }
 
 #curs_dist, #curs_theme{
