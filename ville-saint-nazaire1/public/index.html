@@ -1,49 +1,38 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
+<html lang="fr">
 <head>
-  <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-  <meta charset="utf-8">
   <title>Hyblab 2019</title>
-  <!-- Basic viewport setting for mobile friendly page -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Déclaration de la feuille de style du document-->
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
-  <!-- Those polyfills are required so that old browsers support fetch mecanism -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-
-  <!-- Simple sample script that loads data from a dummy json file -->
   <script src="js/script.js" defer></script>
 </head>
 <body>
-  <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-  <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-  <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
   <div id="container">
     <!-- Page d'accueil -->
     <div id="accueil">
       <video id="video_accueil" autoplay muted preload="metadata" poster="img/fond_accueil.png">
         <source src="img/CARENE_1.mp4">
         </video>
-        <button id="bouton_accueil" onclick="en_avant_toute()" type="button"> EN AVANT TOUTE !</button>
+        <button id="bouton_accueil" class="bouton" onclick="en_avant_toute()" type="button"> EN AVANT TOUTE !</button>
       </div>
 
       <div id="presentation">
         <img id="img_fond_2" src="img/fond_ecran_2.jpg"  alt="fond_ecran"/>
-        <button id="bouton_presentation_1" onclick="d_accord()" type="button"> D'ACCORD !</button>
+        <button id="bouton_presentation_1" class="bouton" onclick="d_accord()" type="button"> D'ACCORD !</button>
       </div>
 
       <div id="presentation2">
         <img id="img_fond_3" src="img/fond_ecran_2.jpg"  alt="fond_ecran"/>
-        <button id="bouton_presentation_2" onclick="curseurs()" type="button"> C'EST PARTI !</button>
+        <button id="bouton_presentation_2" class="bouton" onclick="curseurs()" type="button"> C'EST PARTI !</button>
       </div>
 
       <div id="page_personnalisation">
         <div id="personnalisation">
           <h2> Alors, qu'avez vous envie de faire aujourd'hui ? </h2>
           <div id="div_personnage">
-
             <img id="socle_curseurs" src="img/socle_musee.png"  alt="socle"/>
             <img id="velo_curseurs" src="img/velo_moyen.png"  alt="velo"/>
             <img id="personnage" src="img/leon.png"  alt="personnage"/>
@@ -75,22 +64,9 @@
               </ul>
             </div>
           </div>
-          <button id="bouton_personnalisation" onclick="c_est_parti()" type="button"> C'EST PARTI !</button>
+          <button id="bouton_personnalisation" class="bouton" onclick="c_est_parti()" type="button"> C'EST PARTI !</button>
         </div>
       </div>
-
-      <!-- Page Carte avant Personnalisation
-      <div id="carte_generale">
-        <img id="img_carte_generale" src="img/carte_generale.jpg"  alt="carte des pistes Carene"/>
-        <img id="velo_carte_generale" src="img/velo.jpg"  alt="velo carte generale"/>
-        <div id="dial_carte_generale">
-          Ce texte AAAAAAA AAAAAAA AAAAAAA AAAAAAA AAAAAAAAA AAAAAAA AAAAA AAAAA AAAAA AAAAA AAAAA
-          <br/>
-          <button class="bouton_personnaliser" onclick="personnaliser()" type="button"> MON PARCOURS </button>
-        </div>
-      </div>
-
-    -->
     </div>
   </body>
   </html>
