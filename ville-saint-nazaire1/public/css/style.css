@@ -284,7 +284,7 @@ input[type=range]::-moz-range-track {
 
 #carte_generale{
   height:100vh;
-  width:100vw;
+  width:auto;
   left:0%;
   position:absolute;
   z-index: 1;
@@ -293,8 +293,52 @@ input[type=range]::-moz-range-track {
 .circuit{
   z-index:2;
   height:100vh;
-  width:100vw;
+  width:auto;
   position:absolute;
   left:0%;
   display: none;
+}
+
+.lieu{
+  z-index:3;
+  height:100vh;
+  width:auto;
+  position:absolute;
+  left:0%;
+  display:none;
+}
+
+#choix_lieu{
+  z-index:5;
+  height:auto;
+  width:auto;
+  position:absolute;
+  left:0%;
+  top:0%;
+  display: block;
+}
+
+.checkbox_lieu{
+  left:0%;
+  margin-left: 0%;
+  text-align: left; 
+}
+
+legend{
+  color: black;
+}
+
+fieldset {
+  background: #d8d8d8;
+  border: 2px solid blue;
+}
+
+#leon_leon{
+  z-index:5;
+  height:15%;
+  width:auto;
+  position:absolute;
+  left:0%;
+  top:75%;
+  display: block;
 }

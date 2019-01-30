@@ -16,7 +16,7 @@ function charger_donnees(lien){
         return response.json();
       else // if not, send some error message as JSON data
         return {data: "JSON file not found"};
-      })
+    })
       // in case of invalid JSON (parse error) send some error message as JSON data
       .catch( function (error){
         return {data: "Invalid JSON"};
@@ -25,14 +25,13 @@ function charger_donnees(lien){
       .then(function (data) {
         return data;
       });
-}
+    }
 
 //Fonction pour remplir les maps avec les infos des fichiers récupérés
 async function construire_map(map, folder, lien, indice) {
   let liste_interne = await charger_donnees(lien);
   liste_interne.forEach(function(element) {
-  //console.log(element['nom circuit']);
-  fetch(folder + element[indice] + '.json')
+    fetch(folder + element[indice] + '.json')
     .then(function (response) {
       if( response.ok )
         return response.json();
@@ -40,9 +39,9 @@ async function construire_map(map, folder, lien, indice) {
         return {data: "JSON file not found"};
     })
     .then( function (json) {
-        map.set(element[indice], json);
+      map.set(element[indice], json);
         // Ajouter de l'affichage ici
-    })
+      })
     .catch( function (error) {
       return {data: "Invalid JSON"};
     })
@@ -95,9 +94,9 @@ function actualiser_decor() {
   if (dist < 16.6)
     document.getElementById("velo_curseurs").setAttribute("src", "img/velo_court.png");
   else if (dist > 23.3)
-      document.getElementById("velo_curseurs").setAttribute("src", "img/velo_long.png");
+    document.getElementById("velo_curseurs").setAttribute("src", "img/velo_long.png");
   else
-      document.getElementById("velo_curseurs").setAttribute("src", "img/velo_moyen.png");
+    document.getElementById("velo_curseurs").setAttribute("src", "img/velo_moyen.png");
   /* Mise a jour suivant le theme */
   if(num_theme == 1){
     document.getElementById("socle_curseurs").setAttribute("src", "img/socle_foret.png");
@@ -113,36 +112,58 @@ function actualiser_decor() {
   }
 }
 
-async function c_est_parti(){
+function c_est_parti(){
   document.getElementById("page_personnalisation").style.display="none";
   var dist = document.getElementById("distance").value;
   var num_theme = document.getElementById("num_theme").value;
-  var theme = document.getElementById("theme").getElementsByTagName("li")[num_theme-1].innerHTML;
-  var liste_circuit_selection = await selection_circuit(dist, theme);
-
+  var theme = document.getElementById("theme").getElementsByTagName("li")[3-num_theme].innerHTML;
+  
   document.getElementById("page_carte").style.display="block";
-  console.log(liste_circuit_selection);
-  liste_circuit_selection
-    .then(function(value){
-      value.forEach(function(element){
-        var numero = element["numero"];
-        document.getElementById("circuit-0"+numero).style.display="block";
-        console.log(document.getElementById("circuit-0"+numero).style.display="block");
-      })
-    });
+  //console.log(theme);
+
+  selection_circuit(dist, theme)
+  .then(function(value){
+    value.forEach(function(element){
+      var numero = element["numero"];
+      document.getElementById("circuit-0" + numero).style.display="block";
+    })
+  });
 }
 
 function selection_circuit(distance, theme){
   return liste_infos_circuit
-    .then(function(value){
-      theme = theme.toLowerCase();
-      distance = parseInt(distance);
-      var liste_circuit_selection_interne = [];
-      value.forEach(function(element){
-        if ((element["theme"] == theme) && (element["distance_en_km"] <= distance)){
-          liste_circuit_selection_interne.push(element);
-        }
-      });
-      return liste_circuit_selection_interne
+  .then(function(value){
+    theme = theme.toLowerCase();
+    distance = parseInt(distance);
+    var liste_circuit_selection_interne = [];
+    value.forEach(function(element){
+      if ((element["theme"] == theme) && (element["distance_en_km"] <= distance)){
+        liste_circuit_selection_interne.push(element);
+      }
+    });
+    return liste_circuit_selection_interne
   });
+}
+
+function modif_checkbox(){
+  var form = document.getElementById("choix_lieu");
+  if (form.hotspot.checked)
+    document.getElementById("hotspot").style.display="block";
+  else
+    document.getElementById("hotspot").style.display="none";
+
+  if (form.office.checked)
+    document.getElementById("office").style.display="block";
+  else
+    document.getElementById("office").style.display="none";
+
+  if (form.culturels.checked)
+    document.getElementById("culturels").style.display="block";
+  else
+    document.getElementById("culturels").style.display="none";
+
+  if (form.toilettes.checked)
+    document.getElementById("toilettes").style.display="block";
+  else
+    document.getElementById("toilettes").style.display="none";
 }
