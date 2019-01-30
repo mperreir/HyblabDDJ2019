@@ -284,7 +284,7 @@ header img{
 
 /* Page Personnalisation */
 #page_personnalisation{
-  background-image: url('img/fond_slider_musee.png');
+  background-image:url('img/fond_slider_musee.png');
   background-repeat:no-repeat;
   background-size: cover;
   display: none;
@@ -444,8 +444,6 @@ border-radius: 3px;
   list-style: none;
 }
 
-
-
 .range-labels-dist li, .range-labels-theme li {
     position: relative;
     float:right;
@@ -454,7 +452,6 @@ border-radius: 3px;
     color: #4e687f;
     text-transform: uppercase;
 }
-
 
 .range-labels-dist li {
     width:auto;
@@ -507,4 +504,33 @@ input[type="range"]::-webkit-slider-thumb:hover {
 }
 input[type="range"]::-webkit-slider-thumb:active {
   transform: scale(1.6);
+}
+
+
+/* Page de la carte */
+
+#page_carte{
+  display:none;
+  height:100vh;
+  width:100vw;
+  left:0%;
+  position:absolute;
+
+}
+
+#carte_generale{
+  height:100vh;
+  width:100vw;
+  left:0%;
+  position:absolute;
+  z-index: 1;
+}
+
+.circuit{
+  z-index:2;
+  height:100vh;
+  width:100vw;
+  position:absolute;
+  left:0%;
+  display: none;
 }
