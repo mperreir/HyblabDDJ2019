@@ -77,7 +77,7 @@ function d_accord(){
 
 function curseurs(){
   document.getElementById("presentation2").style.display="none";
-  document.getElementById("plus_tard").style.display="block";
+  document.getElementById("page_personnalisation").style.display="block";
   /*
   document.getElementById("carte_generale").style.display="block";
   document.getElementById("velo_carte_generale").style.display="block";
@@ -121,15 +121,15 @@ function actualiser_decor() {
   /* Mise a jour suivant le theme */
   if(num_theme == 1){
     document.getElementById("socle_curseurs").setAttribute("src", "img/socle_foret.png");
-    document.getElementById("plus_tard").style.backgroundImage = "url('img/fond_slider_foret.png')";
+    document.getElementById("page_personnalisation").style.backgroundImage = "url('img/fond_slider_foret.png')";
   }
   else if(num_theme == 2){
     document.getElementById("socle_curseurs").setAttribute("src", "img/socle_musee.png");
-    document.getElementById("plus_tard").style.backgroundImage = "url('img/fond_slider_musee.png')";
+    document.getElementById("page_personnalisation").style.backgroundImage = "url('img/fond_slider_musee.png')";
   }
   else {
     document.getElementById("socle_curseurs").setAttribute("src", "img/socle_mer.png");
-    document.getElementById("plus_tard").style.backgroundImage = "url('img/fond_slider_mer.png')";
+    document.getElementById("page_personnalisation").style.backgroundImage = "url('img/fond_slider_mer.png')";
   }
 }
 
@@ -140,7 +140,8 @@ async function c_est_parti(){
   var num_theme = document.getElementById("num_theme").value;
   var theme = document.getElementById("theme").getElementsByTagName("li")[num_theme-1].innerHTML;
   var liste_circuit_selection = await selection_circuit(dist, theme);
-  console.log(liste_circuit_selection);
+
+  
 }
 
 
