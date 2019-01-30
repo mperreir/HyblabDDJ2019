@@ -1,5 +1,5 @@
 // Implemetion reference: https://juejin.im/post/5aeef41cf265da0ba0630de0
-// Background image from free image website: https://pixabay.com/
+// Background image from free image website: https://spixabay.com/
 
 const helper = {
     getDelta(event) {
@@ -131,4 +131,10 @@ class ScrollPages {
 document.addEventListener('DOMContentLoaded', function() {
     var s = new ScrollPages(1,4,document.getElementById('all-pages'));
     s.init();
+	
+	var delayInMilliseconds = 2000; 
+	setTimeout(function() {
+		s.scrollTo(2);
+	}, delayInMilliseconds);
+	
 })
