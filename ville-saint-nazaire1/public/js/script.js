@@ -135,13 +135,13 @@ function actualiser_decor() {
 
 
 async function c_est_parti(){
-  document.getElementById("personnalisation").style.display="none";
+  document.getElementById("page_personnalisation").style.display="none";
   var dist = document.getElementById("distance").value;
   var num_theme = document.getElementById("num_theme").value;
   var theme = document.getElementById("theme").getElementsByTagName("li")[num_theme-1].innerHTML;
   var liste_circuit_selection = await selection_circuit(dist, theme);
 
-  
+
 }
 
 

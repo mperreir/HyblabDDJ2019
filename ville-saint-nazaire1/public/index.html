@@ -53,7 +53,7 @@
               <label for="distance">Distance (Km) : <span id="val"></span></label>
               <br/><br/>
               <div width="100%">
-                <input onchange="actualiser_dist()" type="range" min="10" max="30" step="0.001" value="20" class="slider" id="distance" name="distance">
+                <input oninput="actualiser_dist()" onchange="actualiser_dist()" type="range" min="10" max="30" step="0.001" value="20" class="slider" id="distance" name="distance">
               </div><br/>
               <ul class="range-labels-dist">
                 <li onclick="click_curseur_dist('30')">30</li>
@@ -65,7 +65,7 @@
               <label for="distance">Theme :</label>
               <br/><br/>
               <div width="100%">
-                <input onchange="actualiser_decor()" type="range" min="1" max="3" step="1" value="2" class="slider" id="num_theme" name="theme" >
+                <input oninput="actualiser_decor()" onchange="actualiser_decor()" type="range" min="1" max="3" step="1" value="2" class="slider" id="num_theme" name="theme" >
               </div>
               <br/>
               <ul id="theme" class="range-labels-theme">
