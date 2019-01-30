@@ -35,10 +35,9 @@ function changer_radio(xPos){
     //document.getElementById('conteneurRadio').style.marginTop= "6%";
     //document.getElementById('conteneurRadio').style.marginBottom= "5%";
 
-    document.getElementById('sliderBackground').src="img/qvve.png";
-
-    document.getElementById('conteneurLigne').style.width= "50%";
-    document.getElementById('conteneurLigne').style.margin= "auto";
+    $('.haut h2').text("Todo list");
+    document.getElementById('sliderBackground').style.display="none";
+    document.getElementById('sliderBackground2').style.display="inline-block";
     //document.getElementById('imgBackground').marginRight="5px";
     $('#draggable').draggable({
       axis: "x",
