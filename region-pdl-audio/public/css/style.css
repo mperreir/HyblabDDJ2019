@@ -30,9 +30,9 @@ h1 {
 	margin: 0;
 }
 
-.section {
+/*.section {
 	text-align: center;
-}
+}*/
 
 .fp-slidesNav.bottom {
 	bottom: 25px;
@@ -47,9 +47,9 @@ h1 {
 }
 
 #fp-nav {
-	background-color: #3E201B;
+	background-color: #512C51;
 	height: 100vh;
-	width: 54px;
+	width: 2.8vw;
 }
 
 #fp-nav.fp-right {
@@ -173,7 +173,7 @@ body.fp-viewing-2ndPage #fp-nav {
 	margin-left: 8vw;
 	text-align: left;
 	height: 2vw;
-	width: 22vw;
+	width: 30vw;
 	color: #512C51;
 	font-family: Ubuntu;
 	font-size: 1.5vw;
@@ -256,4 +256,83 @@ body.fp-viewing-2ndPage #fp-nav {
 	height: 85vh;
 	/*margin-left: 8vw;
 	margin-top: 8vh;*/
+}
+
+#enregistrement {
+	background-image: url('../img/fond_cassette.svg');
+}
+
+#enregistrement_intro {
+	width: 45vw;
+	display: inline-block;
+}
+
+#title_zoom_archive {
+	margin-left: 8vw;
+	margin-top: 7vh;
+	font-family: "Zilla Slab";
+	font-weight: 700;
+	font-size: 3vw;
+	height: 7vh;
+	width: 45vw;
+	letter-spacing: 0.19px;
+	line-height: 7vh;
+}
+
+.zoom {
+	display: inline-block;
+	color: #512C51;
+}
+
+#title_zoom_archive .archive {
+	display: inline-block;
+	color: #B94A5B;
+}
+
+#intro {
+	margin-left: 8vw;
+	margin-top: 3vh;
+	font-family: "Ubuntu";
+	font-weight: 400;
+	font-size: 1.3vw;
+	color: #B94A5B;
+}
+
+ #enregistrement_intro .separator {
+	margin-left: 5vw;
+	box-sizing: border-box;
+	height: 2px;
+	width: 11vw;
+	border: 0.33vh solid #512C51;
+}
+
+#click_k7 {
+	margin-left: 8vw;
+	height: 2.2vh;
+	width: 41.8vw;
+	color: #512C51;
+	font-family: "Ubuntu";
+	font-weight: 400;
+	font-size: 1.3vw;
+	font-weight: 500;
+	letter-spacing: 0.11px;
+	line-height: 3.7vh;
+}
+
+#enregistrement_info {
+	display: inline-block;
+	margin-top: 8vh;
+	margin-left: 12.4vw;
+	height: 21.3vh;
+	width: 26.9vw;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+}
+
+#graph_k7 {
+	background-color: silver;
+	margin-left: 8vw;
+	margin-top: 3vh;
+	height: 40vh;
+	width: 85vw;
 }
