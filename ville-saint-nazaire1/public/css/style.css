@@ -1,3 +1,8 @@
+body{
+  background-color:#4e687f;
+  margin:0px;
+}
+
 #container{
   height:100vh;
   width:auto;
@@ -6,30 +11,23 @@
   text-align:center;
 }
 
-/* just a sample  css rule to show that everything works */
-footer p
-{
-  font-size: small;
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-}
+.bouton{
+  z-index:3;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  border-color: #ec1c24;
+  cursor: pointer;
 
-body{
-  background-color:#4e687f;
-  margin:0px;
-}
+  color: #FFFFFF;
+  font-family: 'Lato';
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 22px;
+  position: absolute;
 
-header{
-  text-align: center;
+  background-color: #EC1C24;
+  box-shadow: 0 2px 7px 0 rgba(0,0,0,0.5);
 }
-
-header img{
-  max-width: 100%;
-  height: auto;
-}
-
 
 
 /* Page Accueil */
@@ -52,82 +50,13 @@ header img{
 }
 
 #bouton_accueil{
-  position: absolute;
   top : 92%;
   left: 80%;
-  z-index:3;
-  transform: translate(-50%, -50%);
-  border-radius: 8px;
-  border-color: #ec1c24;
-  cursor: pointer;
-
-  color: #FFFFFF;
-  font-family: 'Lato';
-  font-size: 18px;
-  font-weight: 900;
-  line-height: 22px;
-
   height: 55px;
   width: 209px;
-  background-color: #EC1C24;
-  box-shadow: 0 2px 7px 0 rgba(0,0,0,0.5);
 }
 
-
-/*
-#accueil #velo_accueil{
-  left :0%;
-  width: 30%;
-  bottom:0%;
-  height: auto;
-  z-index:2;
-  position: absolute;
-  display:none;
-}
-
-
-#accueil #dial_accueil{
-  left :25%;
-  width:20%;
-  bottom:30%;
-  height: auto;
-  z-index:2;
-  position: absolute;
-  background-color: white;
-  border: black solid 2px;
-  border-radius:5px;
-  padding:6px 10px;
-  border-color:#4e687f;
-  display:none;
-}
-
-#accueil #dial_accueil:before{
-  content: ' ';
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: -20px;
-  right: auto;
-  top: -2px;
-  bottom: auto;
-  border: 10px solid;
-  border-color: #4e687f #4e687f transparent transparent;
-}
-#accueil #dial_accueil:after{
-  content: ' ';
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: -15px;
-  right: auto;
-  top: auto;
-  top: 0px;
-  border: 10px solid;
-  border-color: white white transparent transparent ;
-}
-*/
-
-/* Page Présentation 1 */
+/* Page Présentation */
 
 #presentation, #presentation2{
   height:100vh;
@@ -136,47 +65,17 @@ header img{
 }
 
 #bouton_presentation_1{
-  position: absolute;
   top : 60%;
   left: 65%;
-  z-index:3;
-  transform: translate(-50%, -50%);
-  border-radius: 8px;
-  border-color: #ec1c24;
-  cursor: pointer;
-
-  color: #FFFFFF;
-  font-family: 'Lato';
-  font-size: 18px;
-  font-weight: 900;
-  line-height: 22px;
-
   height: 55px;
   width: 155px;
-  background-color: #EC1C24;
-  box-shadow: 0 2px 7px 0 rgba(0,0,0,0.5);
 }
 
 #bouton_presentation_2{
-  position: absolute;
   top : 60%;
   left: 65%;
-  z-index:3;
-  transform: translate(-50%, -50%);
-  border-radius: 8px;
-  border-color: #ec1c24;
-  cursor: pointer;
-
-  color: #FFFFFF;
-  font-family: 'Lato';
-  font-size: 18px;
-  font-weight: 900;
-  line-height: 22px;
-
   height: 55px;
   width: 155px;
-  background-color: #EC1C24;
-  box-shadow: 0 2px 7px 0 rgba(0,0,0,0.5);
 }
 
 #img_fond_2, #img_fond_3{
@@ -186,101 +85,6 @@ header img{
   z-index:1;
 }
 
-
-
-/* Page Carte avant Personnalisation */
-
-/*
-#carte_generale{
-  height:100vh;
-  width:auto;
-  display:none;
-  position:relative;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-#carte_generale #img_carte_generale{
-  left :30%;
-  height:100%;
-  width:auto;
-  z-index:1;
-}
-
-#img_fond_2, #img_fond_3{
-  position:relative;
-  height:99vh;
-  width:auto;
-  z-index:1;
-}
-
-#carte_generale #velo_carte_generale{
-  left :0%;
-  width: 30%;
-  bottom:0%;
-  height: auto;
-  z-index:2;
-  position: absolute;
-  display:none;
-}
-
-#carte_generale #dial_carte_generale{
-  left :3%;
-  width:30%;
-  top:30%;
-  height: auto;
-  z-index:2;
-  position: absolute;
-  background-color: white;
-  border: black solid 2px;
-  border-radius:5px;
-  padding:6px 10px;
-  border-color:#4e687f;
-  display:none;
-}
-
-#carte_generale #dial_carte_generale:before{
-  content: ' ';
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: 50px;
-  right: auto;
-  bottom: -20px;
-  border: 10px solid;
-  border-color: #4e687f transparent transparent  #4e687f;
-}
-#carte_generale #dial_carte_generale:after{
-  content: ' ';
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: 52px;
-  right: auto;
-  top: auto;
-  bottom: -15px;
-  border: 10px solid;
-  border-color: white transparent transparent white ;
-}
-
-#carte_generale .bouton_personnaliser{
-  margin-top:15%;
-  padding: 6px 30px;
-  position: relative;
-  left: 50%;
-  z-index:3;
-  transform: translate(-50%, -50%);
-  border-radius: 8px;
-  font-size: 16px;
-  background-color: #4e687f;
-  border-color: #4e687f;
-  color: white;
-  cursor: pointer;
-  /* font-family:    ;  A completer;
-  font-weight:bold;
-}
-*/
 
 /* Page Personnalisation */
 #page_personnalisation{
@@ -294,11 +98,23 @@ header img{
   position:absolute;
 }
 
-#fond_curseurs{
-  position:relative;
-  height:99vh;
-  width:auto;
-  z-index:1;
+#personnalisation{
+  border-radius: 20px;
+  position:absolute;
+  text-align:center;
+  top:5%;
+  width:90%;
+  margin-left:5%;
+  height:85vh;
+  background-color: #ffffff;
+  color:#4e687f;
+  z-index:2;
+}
+
+/* Coté gauche : personnage */
+#div_personnage{
+  width:50%;
+  float:left;
 }
 
 #socle_curseurs{
@@ -328,25 +144,7 @@ header img{
   float:left;
 }
 
-
-#personnalisation{
-  border-radius: 20px;
-  position:absolute;
-  text-align:center;
-  top:5%;
-  width:90%;
-  margin-left:5%;
-  height:85vh;
-  background-color: #ffffff;
-  color:#4e687f;
-  z-index:2;
-}
-
-#div_personnage{
-  width:50%;
-  float:left;
-}
-
+/* Coté Droit : curseurs */
 #curseurs{
   background-color:#ffffff;
   z-index:2;
@@ -370,42 +168,7 @@ header img{
 }
 
 #curs_theme{
-  padding-top: 5px;
   margin-top:20%;
-  position: relative;
-  right:15%;
-  float:right;
-  width: 80%;
-  height: 5px;
-  padding-top:3%;
-}
-
-
-#curs_theme input, #curs_dist input{
-  width: 70%;
-  height:30px;
-  float:right;
-  position: relative;
-  top: 2px;
-}
-
-input[type=range]::-moz-range-track {
-  height:8px;
-  background-color: #D5D5d5;
-  border-radius: 3px;
-}
-
-input[type=range]::-moz-range-thumb {
-  height:20px;
-  width:20px;
-  background-color: #FFFFFF;
-  border-radius: 15px;
-}
-
-input[type=range]::-moz-range-progress {
-  height:8px;
-  background-color: #4E687F;
-border-radius: 3px;
 }
 
 #curs_theme label, #curs_dist label{
@@ -416,28 +179,46 @@ border-radius: 3px;
   top: 1px;
 }
 
-#bouton_personnalisation{
-  position: absolute;
-  top : 80%;
-  left: 80%;
-  z-index:3;
-  transform: translate(-50%, -50%);
-  border-radius: 8px;
-  border-color: #ec1c24;
-  cursor: pointer;
-
-  color: #FFFFFF;
-  font-family: 'Lato';
-  font-size: 18px;
-  font-weight: 900;
-  line-height: 22px;
-
-  height: 55px;
-  width: 155px;
-  background-color: #EC1C24;
-  box-shadow: 0 2px 7px 0 rgba(0,0,0,0.5);
+/* Style des slider */
+input[type="range"] {
+  display: block;
+  -webkit-appearance: none;
+  width: 300px;
+  height: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  outline: 0;
+  width: 70%;
+  height:30px;
+  float:right;
+  position: relative;
+  top: 2px;
 }
 
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height:20px;
+  width:20px;
+  background-color: #FFFFFF;
+  border: 2px solid #4E687F;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+input[type=range]::-moz-range-progress {
+  height:8px;
+  background-color: #4E687F;
+  border-radius: 3px;
+}
+
+input[type=range]::-moz-range-track {
+  height:8px;
+  background-color: #D5D5d5;
+  border-radius: 3px;
+}
+
+/* Style des labels */
 .range-labels-dist, .range-labels-theme {
   margin: 18px -41px 0;
   padding: 0;
@@ -468,42 +249,25 @@ border-radius: 3px;
 
 .active {
   color: #37adbf;
-}
-
-.selected::before {
-  background: #37adbf;
-}
-
-.active.selected::before {
-  display: none;
-}
-/* Style des curseurs */
-input[type="range"] {
-  display: block;
-  -webkit-appearance: none;
-  width: 300px;
-  height: 5px;
-  border-radius: 5px;
-  margin: 0 auto;
-  outline: 0;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  background-color: #e74c3c;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  border: 2px solid white;
+  position: relative;
+  float:right;
+  text-align: right;
+  font-size: 12px;
+  color: #4e687f;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: .3s ease-in-out;
-}​
-input[type="range"]::-webkit-slider-thumb:hover {
-  background-color: white;
-  border: 2px solid #e74c3c;
+  width:30%;
 }
-input[type="range"]::-webkit-slider-thumb:active {
-  transform: scale(1.6);
+
+.range-labels-dist li {right:6%;}
+.range-labels-theme li {right:-5%;}
+
+/* Bouton */
+#bouton_personnalisation{
+  top : 80%;
+  left: 80%;
+  height: 55px;
+  width: 155px;
 }
 
 

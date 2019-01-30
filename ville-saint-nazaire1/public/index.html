@@ -1,42 +1,32 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
+<html lang="fr">
 <head>
-  <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-  <meta charset="utf-8">
   <title>Hyblab 2019</title>
-  <!-- Basic viewport setting for mobile friendly page -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Déclaration de la feuille de style du document-->
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
-  <!-- Those polyfills are required so that old browsers support fetch mecanism -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-
-  <!-- Simple sample script that loads data from a dummy json file -->
   <script src="js/script.js" defer></script>
 </head>
 <body>
-  <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-  <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-  <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
   <div id="container">
     <!-- Page d'accueil -->
     <div id="accueil">
       <video id="video_accueil" autoplay muted preload="metadata" poster="img/fond_accueil.png">
         <source src="img/CARENE_1.mp4">
         </video>
-        <button id="bouton_accueil" onclick="en_avant_toute()" type="button"> EN AVANT TOUTE !</button>
+        <button id="bouton_accueil" class="bouton" onclick="en_avant_toute()" type="button"> EN AVANT TOUTE !</button>
       </div>
 
       <div id="presentation">
         <img id="img_fond_2" src="img/fond_ecran_2.jpg"  alt="fond_ecran"/>
-        <button id="bouton_presentation_1" onclick="d_accord()" type="button"> D'ACCORD !</button>
+        <button id="bouton_presentation_1" class="bouton" onclick="d_accord()" type="button"> D'ACCORD !</button>
       </div>
 
       <div id="presentation2">
         <img id="img_fond_3" src="img/fond_ecran_2.jpg"  alt="fond_ecran"/>
-        <button id="bouton_presentation_2" onclick="curseurs()" type="button"> C'EST PARTI !</button>
+        <button id="bouton_presentation_2" class="bouton" onclick="curseurs()" type="button"> C'EST PARTI !</button>
       </div>
 
       <div id="page_personnalisation">
@@ -52,7 +42,7 @@
               <label for="distance">Distance (Km) : <span id="val"></span></label>
               <br/><br/>
               <div width="100%">
-                <input onchange="actualiser_dist()" type="range" min="10" max="30" step="0.001" value="20" class="slider" id="distance" name="distance">
+                <input oninput="actualiser_dist()" onchange="actualiser_dist()" type="range" min="10" max="30" step="0.001" value="20" class="slider" id="distance" name="distance">
               </div><br/>
               <ul class="range-labels-dist">
                 <li onclick="click_curseur_dist('30')">30</li>
@@ -64,7 +54,7 @@
               <label for="distance">Theme :</label>
               <br/><br/>
               <div width="100%">
-                <input onchange="actualiser_decor()" type="range" min="1" max="3" step="1" value="2" class="slider" id="num_theme" name="theme" >
+                <input oninput="actualiser_decor()" onchange="actualiser_decor()" type="range" min="1" max="3" step="1" value="2" class="slider" id="num_theme" name="theme" >
               </div>
               <br/>
               <ul id="theme" class="range-labels-theme">
@@ -75,6 +65,7 @@
             </div>
           </div>
           <button id="bouton_personnalisation" onclick="c_est_parti()" type="button"> C'EST PARTI !</button>
+          <!-- <button id="bouton_personnalisation" class="bouton" onclick="c_est_parti()" type="button"> C'EST PARTI !</button> -->
         </div>
       </div>
 

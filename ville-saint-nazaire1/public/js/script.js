@@ -1,8 +1,5 @@
 'use strict';
 
-// No need for window.onload event here since we are using the def attribute
-// when loading our scripts
-
 // Map des circuits et des lieux
 var map_circuits = new Map();
 var map_lieux = new Map();
@@ -52,13 +49,10 @@ async function construire_map(map, folder, lien, indice) {
   });
 }
 
-
-
 async function en_avant_toute(){
   /* Création des maps contenant les données */
   await construire_map(map_circuits, 'data/trace-circuit-json/', 'nom-circuit', 'nom circuit');
   await construire_map(map_lieux, 'data/trace-lieux-json/', 'nom-lieux', 'nom lieu');
-
   /* Mise a jour de l'affichage */
   document.getElementById("accueil").style.display="none";
   document.getElementById("presentation").style.display="block";
@@ -67,22 +61,11 @@ async function en_avant_toute(){
 function d_accord(){
   document.getElementById("presentation").style.display="none";
   document.getElementById("presentation2").style.display="block";
-  /*
-  document.getElementById("personnalisation").style.display="block";
-  document.getElementById("velo_personnalisation").style.display="block";
-  document.getElementById("curseurs").style.display="block";
-
-  */
 }
 
 function curseurs(){
   document.getElementById("presentation2").style.display="none";
   document.getElementById("page_personnalisation").style.display="block";
-  /*
-  document.getElementById("carte_generale").style.display="block";
-  document.getElementById("velo_carte_generale").style.display="block";
-  document.getElementById("dial_carte_generale").style.display="block";
-  */
 }
 
 function click_curseur_theme(x) {
@@ -92,7 +75,7 @@ function click_curseur_theme(x) {
 
 function click_curseur_dist(x) {
   document.getElementById("distance").value = x ;
-  actualiser_decor();
+  actualiser_dist();
 }
 
 var nb = document.getElementById("distance").value;
@@ -105,11 +88,9 @@ function actualiser_dist() {
   actualiser_decor();
 }
 
-
 function actualiser_decor() {
   var dist = parseInt(document.getElementById("distance").value);
   var num_theme = parseInt(document.getElementById("num_theme").value);
-
   /* Mise a jour suivant la distance */
   if (dist < 16.6)
     document.getElementById("velo_curseurs").setAttribute("src", "img/velo_court.png");
@@ -117,7 +98,6 @@ function actualiser_decor() {
       document.getElementById("velo_curseurs").setAttribute("src", "img/velo_long.png");
   else
       document.getElementById("velo_curseurs").setAttribute("src", "img/velo_moyen.png");
-
   /* Mise a jour suivant le theme */
   if(num_theme == 1){
     document.getElementById("socle_curseurs").setAttribute("src", "img/socle_foret.png");
@@ -132,7 +112,6 @@ function actualiser_decor() {
     document.getElementById("page_personnalisation").style.backgroundImage = "url('img/fond_slider_mer.png')";
   }
 }
-
 
 async function c_est_parti(){
   document.getElementById("page_personnalisation").style.display="none";
@@ -152,7 +131,6 @@ async function c_est_parti(){
       })
     });
 }
-
 
 function selection_circuit(distance, theme){
   return liste_infos_circuit
