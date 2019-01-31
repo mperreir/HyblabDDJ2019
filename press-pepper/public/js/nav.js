@@ -141,6 +141,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	var score=0;
     var s = new ScrollPages(1,10,document.getElementById('all-pages'));
     s.init();
+	disc=document.getElementById("disc");
+	disc.onclick=function(){s.scrollDown();};
+	
 	
 	//Quizz 1 elem 1 -2 -3
 	i=document.getElementById("click");
@@ -183,23 +186,23 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	//quizz3 elem 1-2-3
 
-	/*iii=document.getElementById("click");
-	rrr=document.getElementById("clickT");
-	iii.onclick=function() {iii.style.borderRadius="50%";iii.style.border = "thick solid red";setTimeout(function() {s.scrollTo(4);}, 700);};
+	iii=document.getElementById("clickkk");
+	rrr=document.getElementById("clickkkT");
+	iii.onclick=function() {iii.style.borderRadius="50%";iii.style.border = "thick solid red";setTimeout(function() {s.scrollDown();}, 700);};
 	iii.onmouseover=function(){rrr.style.opacity="0.8";iii.style.width="19%";};
 	iii.onmouseout=function(){rrr.style.opacity="0.0";iii.style.width="18%";};
 	
-	iii1=document.getElementById("click2");
-	rrr2=document.getElementById("clickT2");
-	iii1.onclick=function(){score++;iii1.style.borderRadius="50%";iii1.style.border = "thick solid green";	setTimeout(function() {s.scrollTo(4);}, 700);};
+	iii1=document.getElementById("clickkk2");
+	rrr2=document.getElementById("clickkkT2");
+	iii1.onclick=function(){score++;iii1.style.borderRadius="50%";iii1.style.border = "thick solid green";	setTimeout(function() {s.scrollDown();}, 700);};
 	iii1.onmouseover=function(){rrr2.style.opacity="0.8";iii1.style.width="19%";};
 	iii1.onmouseout=function(){rrr2.style.opacity="0.0";iii1.style.width="18%";};
 	
-	rrr3=document.getElementById("clickT3");	
-	iii2=document.getElementById("click3");
-	iii2.onclick=function() {iii2.style.borderRadius="50%";iii2.style.border = "thick solid red";	setTimeout(function() {s.scrollTo(4);}, 700);};
+	rrr3=document.getElementById("clickkkT3");	
+	iii2=document.getElementById("clickkk3");
+	iii2.onclick=function() {iii2.style.borderRadius="50%";iii2.style.border = "thick solid red";	setTimeout(function() {s.scrollDown();}, 700);};
 	iii2.onmouseover=function(){rrr3.style.opacity="0.8";iii2.style.width="19%";};
-	iii2.onmouseout=function(){rrr3.style.opacity="0.0";iii2.style.width="18%";};*/
+	iii2.onmouseout=function(){rrr3.style.opacity="0.0";iii2.style.width="18%";};
 	
 	var delayInMilliseconds = 3000; 
 	setTimeout(function() {
