@@ -41,10 +41,6 @@ audio.addEventListener("play", function () {
     typewriter.unfreeze();
 })
 
-audio.addEventListener("abord", function () {
-    console.log('azeaze')
-})
-
 // play button event listenter
 pButton.addEventListener("click", play);
 

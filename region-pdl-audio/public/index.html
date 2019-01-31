@@ -10,10 +10,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Déclaration de la feuille de style du document-->
   <link rel="stylesheet" href="css/fullpage.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/scrollbox.css">
   <link rel="stylesheet" href="css/parallax.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/15af25ac7b.css">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,700|Zilla+Slab:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,700|Zilla+Slab:300,400,700">
+  <link rel="stylesheet" href="css/checkbox.css">
+  <link rel="stylesheet" href="css/style.css">
   <!-- Those polyfills are required so that old browsers support fetch mecanism -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
@@ -22,7 +27,9 @@
   <!-- Simple sample script that loads data from a dummy json file -->
   <script src="js/script.js" defer></script>
   <script src="js/audio_accueil.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script src="js/fullpage.js"></script>
+
 </head>
 
 <body>
@@ -83,9 +90,27 @@
             Cliquez sur une cassette pour écouter.
           </p>
         </div>
-        <div id="enregistrement_info"></div>
+        <div id="enregistrement_info">
+        </div>
       </div>
       <div id="graph_k7"></div>
+      <div id="filter_graph">
+        <div class="checkbox">
+          <label>
+            <input id="cb_audio" type="checkbox" onclick="graph_audio_reunion(this.id)" value="" checked>
+            <!--disabled-->
+            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+            Audio
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input id="cb_reunion" type="checkbox" onclick="graph_audio_reunion(this.id)" value="">
+            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+            Réunion
+          </label>
+        </div>
+      </div>
     </div>
     <div class="section" id="reunion">
       <h1>Objets des réunions</h1>

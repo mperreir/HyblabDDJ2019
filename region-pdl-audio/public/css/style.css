@@ -97,9 +97,10 @@ body.fp-viewing-2ndPage #fp-nav {
 .arrowUp, .arrowDown {
 	position: fixed;
 	z-index: 99;
-	cursor: pointer;
-	width: 0;
-	height: 0;
+	border: solid #B94A5B;
+	border-width: 0 4px 4px 0;
+	display: inline-block;
+	padding: 1vw;
 	border-style: solid;
 	margin-left: -38px;
 	left: 50%;
@@ -107,14 +108,12 @@ body.fp-viewing-2ndPage #fp-nav {
 
 .arrowDown {
 	bottom: 20px;
-	border-width: 38.5px 34px 0 38.5px;
-	border-color: #fff transparent transparent transparent;
+	transform: rotate(45deg);
 }
 
 .arrowUp {
 	top: 20px;
-	border-width: 0 38.5px 34px 38.5px;
-	border-color: transparent transparent #fff transparent;
+	transform: rotate(-135deg);
 }
 
 #accueil .accueil_block {
@@ -298,7 +297,7 @@ body.fp-viewing-2ndPage #fp-nav {
 	color: #B94A5B;
 }
 
- #enregistrement_intro .separator {
+#enregistrement_intro .separator {
 	margin-left: 5vw;
 	box-sizing: border-box;
 	height: 2px;
@@ -327,12 +326,59 @@ body.fp-viewing-2ndPage #fp-nav {
 	width: 26.9vw;
 	border-radius: 10px;
 	background-color: #FFFFFF;
+	vertical-align: top;
+	padding-left: 3vw;
+	padding-top: 1.5vh;
+}
+
+#enregistrement_info .enregistrement_title {
+	color: #512C51;
+	font-family: "Ubuntu";
+	font-weight: 700;
+	font-style: italic;
+	font-size: 1vw;
+}
+
+#enregistrement_info .enregistrement_data {
+	color: #512C51;
+	font-family: "Ubuntu";
+	font-weight: 400;
+	font-style: italic;
+	font-size: 1vw;
 }
 
 #graph_k7 {
-	background-color: silver;
-	margin-left: 8vw;
+	margin-left: 3vw;
 	margin-top: 3vh;
 	height: 40vh;
 	width: 85vw;
+	padding-left: 0.5vw;
+	padding-right: 0.4vw;
+}
+
+.slick-next:before {
+	content: "";
+	border: solid #B94A5B;
+	border-width: 0 4px 4px 0;
+	display: inline-block;
+	padding: 0.6vw;
+	transform: rotate(-45deg);
+}
+
+.slick-prev:before {
+	content: "";
+	border: solid #B94A5B;
+	border-width: 0 4px 4px 0;
+	display: inline-block;
+	padding: 0.6vw;
+	transform: rotate(135deg);
+}
+
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+	opacity: 0;
+}
+
+#filter_graph {
+	margin-left: 8vw;
+	margin-top: 7vh;
 }
