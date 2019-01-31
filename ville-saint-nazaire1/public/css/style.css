@@ -62,21 +62,63 @@ body{
   height:100vh;
   width:100vw;
   display:none;
+  z-index: 1;
+  position: relative;
 }
 
-#bouton_presentation_1{
-  top : 60%;
-  left: 65%;
-  height: 55px;
-  width: 155px;
+#dialogue{
+  height:100vh;
+  width:100vw;
+  bottom: 5vh;
+  left: 10vw;
+  z-index: 3;
+  position: absolute;
 }
 
-#bouton_presentation_2{
-  top : 60%;
-  left: 65%;
-  height: 55px;
-  width: 155px;
+#bulle_presentation{
+  height: 20vh;
+  width: 30vw;
+  top: 20vh;
+  left: 40vw;
+  position: absolute;
 }
+
+.oval{
+  height: 2vh;
+  width: 2vw;
+
+}
+
+#oval1{
+  top : 41vh;
+  left: 54vw;
+  position: absolute;
+}
+
+#oval2{
+  top : 41vh;
+  left: 56vw;
+  position: absolute;
+}
+
+#bouton_presentation{
+  height: 4vh;
+  width: 9vw;
+  top: 42vh;
+  left: 65vw;
+}
+
+
+#leon_mov{
+  height:100vh;
+  width:100vw;
+  margin-left: auto;
+  margin-right: auto;
+
+  position:relative;
+  z-index:1;
+}
+
 
 #img_fond_2, #img_fond_3{
   position:relative;
@@ -112,9 +154,14 @@ body{
 }
 
 /* Coté gauche : personnage */
-#div_personnage{
-  width:50%;
-  float:left;
+
+#objet_curseurs{
+  position:absolute;
+  height: 10%;
+  width:auto;
+  right: 0%;
+  bottom: 0%;
+  z-index: 10;
 }
 
 #socle_curseurs{
@@ -131,7 +178,7 @@ body{
   height: auto;
   z-index:2;
   position: absolute;
-  float:left;20
+  float:left;
 }
 
 #personnage{
@@ -270,7 +317,6 @@ input[type=range]::-moz-range-track {
   width: 155px;
 }
 
-
 /* Page de la carte */
 
 #page_carte{
@@ -333,12 +379,22 @@ fieldset {
   border: 2px solid blue;
 }
 
-#leon_leon{
-  z-index:5;
-  height:15%;
-  width:auto;
+#leon_carte{
+  width:20%;
+  height:auto;
+  left:2%;
+  top:50%;
+  display: block;
   position:absolute;
-  left:0%;
+  z-index:6;
+}
+
+#socle_carte{
+  width:20%;
+  height:auto;
+  left:2%;
   top:75%;
   display: block;
+  position:absolute;
+  z-index:5;
 }
