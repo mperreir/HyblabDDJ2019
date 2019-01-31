@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	ii=document.getElementById("clickk");
 	rr=document.getElementById("clickkT");
-	ii.onclick=function() {ii.style.borderRadius="50%";ii.style.border = "thick solid red";setTimeout(function() {s.scrollTo(6);}, 700);};
+	ii.onclick=function() {ii.style.borderRadius="50%";ii.style.border = "thick solid red";setTimeout(function() {s.scrollTo(6	);}, 700);};
 	ii.onmouseover=function(){rr.style.opacity="0.8";ii.style.width="19%";};
 	ii.onmouseout=function(){rr.style.opacity="0.0";ii.style.width="18%";};
 	
