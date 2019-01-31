@@ -31,6 +31,14 @@ const helper = {
         }
     }
 }
+
+
+class SwitchQuestion{
+	
+	
+	
+	
+}
 class ScrollPages {
     constructor(currentPageNumber, totalPageNumber, pages){
         this.currentPageNumber = currentPageNumber;
@@ -131,8 +139,11 @@ class ScrollPages {
 document.addEventListener('DOMContentLoaded', function() {
     var s = new ScrollPages(1,4,document.getElementById('all-pages'));
     s.init();
+		
+	i=document.getElementById("click");
+	i.onclick=function() { s.scrollTo(4); };
 	
-	var delayInMilliseconds = 2000; 
+	var delayInMilliseconds = 3000; 
 	setTimeout(function() {
 		s.scrollTo(2);
 	}, delayInMilliseconds);
