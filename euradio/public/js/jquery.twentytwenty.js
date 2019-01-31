@@ -153,3 +153,7 @@
 $(window).load(function() {
       $('#before_after_images').twentytwenty();
   });
+
+$(window).load(function(){
+      $(".twentytwenty-container").twentytwenty({default_offset_pct: 0});
+  });
