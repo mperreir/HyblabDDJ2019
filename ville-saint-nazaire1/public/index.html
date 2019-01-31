@@ -14,29 +14,35 @@
 	<div id="container">
 		<!-- Page d'accueil -->
 		<div id="accueil">
-			<video id="video_accueil" autoplay muted preload="metadata" poster="img/fond_accueil.png">
-				<source src="img/CARENE_1.mp4">
+			<!-- poster="img/fond_accueil.png" -->
+			<video id="video_accueil" autoplay loop muted preload="metadata">
+				<source src="img/VIDEO_ACCUEIL.mp4">
 			</video>
 			<button id="bouton_accueil" class="bouton" onclick="en_avant_toute()" type="button"> EN AVANT TOUTE !</button>
 		</div>
 
+		<!-- Ecran 2 -->
 		<div id="presentation">
-			<img id="img_fond_2" src="img/fond_ecran_2.jpg"  alt="fond_ecran"/>
-			<button id="bouton_presentation_1" class="bouton" onclick="d_accord()" type="button"> D'ACCORD !</button>
+			<!-- <img id="img_fond_2" src="img/fond_image.svg"  alt="fond_ecran"/> -->
+			<video id="leon_mov" autoplay loop muted preload="metadata">
+				<source src="img/ARRIVEE_RAPHAEL.mp4">
+			</video>
+			<div id=dialogue>
+				<img id="bulle_presentation" src="img/bulle_1.png"  alt="bulle"/>
+				<img id="oval1" class="oval" src="img/oval_actif.svg"  alt="oval1"/>
+				<img id="oval2" class="oval" src="img/oval_non_actif.svg"  alt="oval2"/>
+				<button id="bouton_presentation" class="bouton" onclick="d_accord()" type="button"> D'ACCORD !</button>
+
+			</div>
 		</div>
 
-		<div id="presentation2">
-			<img id="img_fond_3" src="img/fond_ecran_2.jpg"  alt="fond_ecran"/>
-			<button id="bouton_presentation_2" class="bouton" onclick="curseurs()" type="button"> C'EST PARTI !</button>
-		</div>
-
+		<!-- Ecran 3 -->
 		<div id="page_personnalisation">
 			<div id="personnalisation">
 				<h2> Alors, qu'avez vous envie de faire aujourd'hui ? </h2>
 				<div id="div_personnage">
 					<img id="socle_curseurs" src="img/socle_musee.png"  alt="socle"/>
-					<img id="velo_curseurs" src="img/velo_moyen.png"  alt="velo"/>
-					<img id="personnage" src="img/leon.png"  alt="personnage"/>
+					<img id="velo_curseurs" src="img/leon_velo_moyen.png"  alt="velo"/>					
 				</div>
 				<div id="curseurs">
 					<div id="curs_dist">
@@ -67,8 +73,10 @@
 				</div>
 				<button id="bouton_personnalisation" class="bouton" onclick="c_est_parti()" type="button"> C'EST PARTI !</button>
 			</div>
+			<img id="objet_curseurs" src="img/objet_musee.png"  alt="objet"/>
 		</div>
 
+		<!-- Ecran 3 -->
 		<div id="page_carte">
 			<img id="carte_generale" src="img/background_map_petite.png"  alt="carte des pistes Carene"/>
 
@@ -87,36 +95,34 @@
 			<img class="lieu" id="culturels" src="img/points-culturels.png" alt="culturels"/>
 			<img class="lieu" id="toilettes" src="img/toilettes.png" alt="toilettes"/>
 
-			<form id="choix_lieu">
-				<fieldset>
-					<legend> Quelles informations souhaitez-vous faire apparaitre sur la carte ? </legend>
-					<div class="checkbox_lieu">
-						<input type="checkbox" id="hotspot-checkbox" name="hotspot" value="checkbox" onchange="modif_checkbox()">
-						<label for="hotspot"> Wi-fi </label>
-					</div>
+			<fieldset id="choix_lieu">
+				<legend> Quelles informations souhaitez-vous faire apparaitre sur la carte ? </legend>
+				<div class="checkbox_lieu">
+					<input type="checkbox" id="hotspot-checkbox" name="hotspot" value="checkbox" onchange="modif_checkbox()">
+					<label for="hotspot"> Wi-fi </label>
+				</div>
 
-					<div class="checkbox_lieu">
-						<input type="checkbox" id="office-checkbox" name="office" value="checkbox" onchange="modif_checkbox()">
-						<label for="office"> Office de tourisme </label>
-					</div>
+				<div class="checkbox_lieu">
+					<input type="checkbox" id="office-checkbox" name="office" value="checkbox" onchange="modif_checkbox()">
+					<label for="office"> Office de tourisme </label>
+				</div>
 
-					<div class="checkbox_lieu">
-						<input type="checkbox" id="culturels-checkbox" name="culturels" value="checkbox" onchange="modif_checkbox()">
-						<label for="culturels"> Points culturels </label>
-					</div>
+				<div class="checkbox_lieu">
+					<input type="checkbox" id="culturels-checkbox" name="culturels" value="checkbox" onchange="modif_checkbox()">
+					<label for="culturels"> Points culturels </label>
+				</div>
 
-					<div class="checkbox_lieu">
-						<input type="checkbox" id="toilettes-checkbox" name="toilettes" value="checkbox" onchange="modif_checkbox()">
-						<label for="toilettes"> Toilettes </label>
-					</div>
-				</fieldset>
-			</form>
+				<div class="checkbox_lieu">
+					<input type="checkbox" id="toilettes-checkbox" name="toilettes" value="checkbox" onchange="modif_checkbox()">
+					<label for="toilettes"> Toilettes </label>
+				</div>
+				</br>
+				<span id="texte_leon_circuit"></span>
+				<p> Cliquez sur l'un d'eux pour en savoir plus. </p>
+			</fieldset>
 
-			<img src="img/leon_velo_court.png" id="leon_leon" alt="leon le cameleon"/>
-			<div id="dial_carte_generale">
-				<p> Ce texte AAAAAAA AAAAAAA AAAAAAA AAAAAAA AAAAAAAAA AAAAAAA AAAAA AAAAA AAAAA AAAAA AAAAA </p>
-				<button class="bouton_personnaliser" onclick="personnaliser()" type="button"> MON PARCOURS </button>
-			</div>
+			<img id="leon_carte" src="img/leon_velo_moyen.png" alt="leon le cameleon"/>
+			<img id="socle_carte" src="img/socle_musee.png"  alt="socle carte"/>
 
 		</div>
 		

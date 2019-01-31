@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="223px" height="69px" viewBox="0 0 223 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>BOUTON EN AVANT TOUTE !</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M8,0.000461751908 L201,0.000461751908 L201,0.000461751908 C205.418278,0.000461751908 209,3.58218375 209,8.00046175 L209,47 L209,47 C209,51.418278 205.418278,55 201,55 L178.037037,55 L8,55 L8,55 C3.581722,55 5.41083001e-16,51.418278 0,47 L0,8.00046175 L0,8.00046175 C-5.41083001e-16,3.58218375 3.581722,0.000461751908 8,0.000461751908 Z" id="path-1"></path>
+        <filter x="-5.5%" y="-17.3%" width="111.0%" height="141.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Ecran-1" transform="translate(-1009.000000, -985.000000)">
+            <g id="BOUTON-EN-AVANT-TOUTE-!" transform="translate(1016.000000, 990.000000)">
+                <g id="Rectangle-7-Copy">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#EC1C24" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <text id="EN-AVANT-TOUTE-!" font-family="Lato-Black, Lato" font-size="18" font-weight="700" fill="#FFFFFF">
+                    <tspan x="24" y="35">EN AVANT TOUTE !</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

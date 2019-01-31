@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="605px" height="193px" viewBox="0 0 605 193" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Bulle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Ecran-2" transform="translate(-921.000000, -342.000000)">
+            <g id="Bulle" transform="translate(921.000000, 342.000000)">
+                <path d="M23.4146341,138.47133 C23.4146341,139.531228 23.5414634,162.940749 23.5414634,162.940749 C23.5414634,175.784938 13.8985366,186.83663 0,191.974 C18.1521951,191.712466 35.084878,187.564641 49.5180488,180.547596 C61.1356098,187.714525 75.777561,192 91.7073171,192 C129.42439,192 160,168.033765 160,138.469801 C160,108.905837 129.42439,88 91.7073171,88 C53.9902439,88 23.4146341,108.907366 23.4146341,138.47133 Z" fill="#54778B"></path>
+                <rect id="Rectangle-arrondi" fill="#54778B" x="24" y="0" width="581" height="193" rx="17"></rect>
+                <text id="Bonjour-et-bienvenue" font-family="Lato-Bold, Lato" font-size="24" font-weight="bold" line-spacing="22" fill="#FFFFFF">
+                    <tspan x="123.468" y="48.6119385">Bonjour et bienvenue en Carène !</tspan>
+                    <tspan x="316.5" y="77"></tspan>
+                    <tspan x="53.328" y="99" font-size="16">Je suis Raphaël, votre guide dans la découvertre du territoire de la Carène.</tspan>
+                    <tspan x="79.02" y="121" font-size="16">Je vous propose de composer votre propre parcours, parmi les plus </tspan>
+                    <tspan x="107.432" y="143" font-size="16">de 220 km de piste cyclable qui traversent l’agglomération. </tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
