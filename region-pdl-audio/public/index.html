@@ -15,8 +15,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,700|Zilla+Slab:300,400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,700|Zilla+Slab:300,400,500,700">
   <link rel="stylesheet" href="css/checkbox.css">
+  <link rel="stylesheet" href="css/dropdown.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- Those polyfills are required so that old browsers support fetch mecanism -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer></script>
@@ -27,21 +28,28 @@
   <script src="js/script.js" defer></script>
   <script src="js/audio_accueil.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script src="js/fullpage.js"></script>
 
 </head>
 
 <body>
   <div id="fullpage">
-
     <div class="section" id="accueil">
       <div id="accueil_left" class="accueil_block">
         <img id="pdl_logo" src="img/pdl_logo.svg" alt="Logo de la région des Pays de la Loire" />
         <h1 id="title_au_coeur"><span class="au_coeur">Au c&oelig;ur des</span> <span class="archives_sonores">archives
-            sonores</span></h1>
-        <h2 id="title_notre_patrimoine">Notre patrimoine est aussi le vôtre</h2>
+            sonores</span> <span class="pays_de_la_loire">des Pays de la Loire</span></h1>
+        <h2 id="title_notre_patrimoine">
+          Rembobinez le temps</br>
+          notre patrimoine est aussi le vôtre.
+        </h2>
+        <div id="tips_audio">
+          <p>
+            Activez le son pour une meilleur expérience
+          </p>
+        </div>
         <audio id="audio_accueil" preload="true" data-autoplay>
-          <!-- data-autoplay -->
           <source src="./data/audio_accueil.mp3">
         </audio>
         <div id="audioplayer">
@@ -55,32 +63,91 @@
         <p id="discours"></p>
       </div>
       <div id="accueil_right" class="accueil_block">
-        <img id="magneto" src="img/magneto.png" alt="Gif d'un magnéto" />
+        <img id="magneto" src="img/magneto.gif" alt="Gif d'un magnéto" />
       </div>
     </div>
     <div class="section" id="welcome">
-      <h1>Welcome</h1>
-      <p>
-        Trouvez ici la page de bienvenue.
-      </p>
+      <div id="welcome_left" class="welcome_block">
+        <img id="hemicycle_img" src="img/hemicycle.jpg" alt="Hémicycle" />
+        <p id="description_conseil_regional">
+          Le conseil régional a vu le jour dès 1974, et est devenu une collectivité territoriale après la
+          décentralisation des pouvoirs en 1982.
+          Les archives sonores des Pays de la Loire rassemblent les enregistrements des réunions des conseils régionaux
+          entre <span id="date_min"></span> et <span id="date_max"></span>.
+          En 20 ans, <span id="nb_reunion"></span> réunions ont été organisées.
+        </p>
+      </div>
+      <div id="welcome_right" class="welcome_block">
+        <img id="dictaphone" src="img/dictaphone.svg" alt="Dictaphone" />
+        <div id="description_archive_duree">
+          <span id="duree_audio"></span> minutes
+        </div>
+        <div id="description_archive_nb_audio">
+          <span id="nb_fichier_audio"></span> bandes magnétiques
+        </div>
+      </div>
     </div>
     <div class="section" id="president">
-      <h1>Présidents</h1>
-      <p>
-        Trouvez ici les informations sur les présidents.
-      </p>
-    </div>
-    <div class="section" id="elu">
-      <h1>Élus</h1>
-      <p>
-        Trouvez ici les informations sur les élus.
-      </p>
+      <div id="president_entete">
+        <div id="president_intro">
+          <h1>Qui êtes-vous, monsieur le</span> <span class="h1_highlight">Président</span> ?</h1>
+          <p class="intro">
+            De 1974 à 1994, le conseil régional est représenté par deux présidents.
+          </p>
+          <div class="separator"></div>
+          <p id="survoler_bobine">
+            Survolez les bobines pour en connaître davantage et cliquez pour écouter un enregistrement.
+          </p>
+        </div>
+        <div id="bobine_graph">
+          <div id="bobine_vincent" onclick="start_pres_audio(this.id)">
+            <img id="bobine_vincent_img" src="img/bobine_photo_vincent_ansquer.png" alt="Vincent Ansquer" />
+            <span class="info_pres">
+              <p class="president_name">Vincent Ansquer</p>
+              <p class="president_date">Président du conseil de janvier à octobre 1974</p>
+              <p class="president_partie">Son parti politique : Union des démocrates pour la République (UDR)</p>
+              <p class="tips_click_bobine">Écoutez un de ses enregistrements en cliquant sur sa bobine.</p>
+              <p class="president_audio_info">
+                Durée : 2 min.</br>
+                Réf de l’enregistrement.</br>
+                Date : 05/01/1974
+              </p>
+              <img class="ordre_du_jour" src="img/pdl_logo.svg" alt="Ordre du jour" />
+            </span>
+            <audio id="audio_vincent" preload="true">
+              <source src="./data/extrait_vincent.mp3">
+            </audio>
+            <img id="play_vincent" src="img/play_white.svg" alt="Bouton play" />
+            <p id="name_vincent">Vincent Ansquer</p>
+          </div>
+          <div id="bobine_olivier" onclick="start_pres_audio(this.id)">
+            <img id="bobine_olivier_img" src="img/bobine_photo_olivier_guichard.png" alt="Olivier Guichard" />
+            <span class="info_pres">
+              <p class="president_name">Olivier Guichard</p>
+              <p class="president_date">Président du conseil régional d’octobre 1974 à mars 1996</p>
+              <p class="president_partie">Son parti politique : Rassemblement pour la république (RPR)</p>
+              <p class="tips_click_bobine">Écoutez un de ses enregistrements en cliquant sur sa bobine.</p>
+              <p class="president_audio_info">
+                Durée : 2 min.</br>
+                Réf de l’enregistrement.</br>
+                Date : JJ/MM/AAAA
+              </p>
+              <img class="ordre_du_jour" src="img/pdl_logo.svg" alt="Ordre du jour" />
+            </span>
+            <audio id="audio_olivier" preload="true">
+                <source src="./data/extrait_olivier.mp3">
+              </audio>
+            <img id="play_olivier" src="img/play_white.svg" alt="Bouton play" />
+            <p id="name_olivier">Olivier Guichard</p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="section" id="enregistrement">
       <div id="enregistrement_entete">
         <div id="enregistrement_intro">
-          <h1 id="title_zoom_archive"><span class="zoom">Zoom sur les</span> <span class="archive">archives sonores</span></h1>
-          <p id="intro">
+          <h1>Zoom sur les <span class="h1_highlight">archives sonores</span></h1>
+          <p class="intro">
             Pendant 20 ans, le conseil régional a fait <span id="nb_reunion"></span> réunions,</br>
             dont <span id="nb_fichier_audio"></span> enregistrements audio.
           </p>
@@ -89,9 +156,12 @@
             Cliquez sur une cassette pour écouter.
           </p>
         </div>
-        <div id="enregistrement_info">
-        </div>
+        <div id="enregistrement_info"></div>
       </div>
+      <audio id="audio_k7">
+        <source src="">
+      </audio>
+      <button id="info_audio_button" class="play"></button>
       <div id="graph_k7"></div>
       <div id="filter_graph">
         <div class="checkbox">
@@ -108,6 +178,35 @@
             <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
             Réunion
           </label>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+            aria-expanded="true">
+            Période
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation" id="periode_1" onclick="graph_audio_reunion_filter(this.id)"><a role="menuitem"
+                tabindex="-1" href="#5thPage">
+                <div class="periode_1"></div> 1/ 1974 - 1986
+              </a></li>
+            <li role="presentation" id="periode_2" onclick="graph_audio_reunion_filter(this.id)"><a role="menuitem"
+                tabindex="-1" href="#5thPage">
+                <div class="periode_2"></div> 2/ 1986 - 1992
+              </a></li>
+            <li role="presentation" id="periode_3" onclick="graph_audio_reunion_filter(this.id)"><a role="menuitem"
+                tabindex="-1" href="#5thPage">
+                <div class="periode_3"></div> 3/ 1992 - 1994
+              </a></li>
+            <li role="presentation" id="periode_nr" onclick="graph_audio_reunion_filter(this.id)"><a role="menuitem"
+                tabindex="-1" href="#5thPage">
+                <div class="periode_nr"></div> Non référencé
+              </a></li>
+            <li role="presentation" id="periode_all" onclick="graph_audio_reunion_filter(this.id)"><a role="menuitem"
+                tabindex="-1" href="#5thPage">
+                <div class="periode_all"></div> Tout
+              </a></li>
+          </ul>
         </div>
       </div>
     </div>

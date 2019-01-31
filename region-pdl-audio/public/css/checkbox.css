@@ -3,24 +3,23 @@
 }
 
 .checkbox label {
-	font-family: "Zilla Slab";
-	font-weight: 400;
+    font-family: "Ubuntu";
+    color: #512C51;
+    font-weight: 400;
     font-size: 1.4vw;
     text-align: top;
 }
 
-.checkbox label:after, 
-.radio label:after {
+.checkbox label:after, .radio label:after {
     content: '';
     display: table;
     clear: both;
 }
 
-.checkbox .cr,
-.radio .cr {
+.checkbox .cr, .radio .cr {
     position: relative;
     display: inline-block;
-    border: 1px solid #512C51;
+    background-color: #FFFFFF;
     border-radius: .25em;
     width: 1.9vw;
     height: 3.3vh;
@@ -32,8 +31,7 @@
     border-radius: 50%;
 }
 
-.checkbox .cr .cr-icon,
-.radio .cr .cr-icon {
+.checkbox .cr .cr-icon, .radio .cr .cr-icon {
     position: absolute;
     font-size: .8em;
     line-height: 0;
@@ -45,27 +43,24 @@
     margin-left: 0.04em;
 }
 
-.checkbox label input[type="checkbox"],
-.radio label input[type="radio"] {
+.checkbox label input[type="checkbox"], .radio label input[type="radio"] {
     display: none;
 }
 
-.checkbox label input[type="checkbox"] + .cr > .cr-icon,
-.radio label input[type="radio"] + .cr > .cr-icon {
+.checkbox label input[type="checkbox"]+.cr>.cr-icon, .radio label input[type="radio"]+.cr>.cr-icon {
     transform: scale(5) rotateZ(-20deg);
     opacity: 0;
     transition: all .3s ease-in;
 }
 
-.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
-.radio label input[type="radio"]:checked + .cr > .cr-icon {
-    transform: scale(2) rotateZ(0deg);
+.checkbox label input[type="checkbox"]:checked+.cr>.cr-icon, .radio label input[type="radio"]:checked+.cr>.cr-icon {
+    transform: scale(1) rotateZ(0deg);
     opacity: 1;
     color: #512C51;
 }
 
-.checkbox label input[type="checkbox"]:disabled + .cr,
-.radio label input[type="radio"]:disabled + .cr {
+.checkbox label input[type="checkbox"]:disabled+.cr, .radio label input[type="radio"]:disabled+.cr {
     opacity: .5;
     color: #512C51;
 }
+
