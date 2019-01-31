@@ -39,7 +39,7 @@ audio.addEventListener("play", function () {
     pButton.className = "";
     pButton.className = "pause";
     typewriter.unfreeze();
-})
+});
 
 // play button event listenter
 pButton.addEventListener("click", play);

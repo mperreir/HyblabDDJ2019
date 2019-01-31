@@ -30,10 +30,6 @@ h1 {
 	margin: 0;
 }
 
-/*.section {
-	text-align: center;
-}*/
-
 .fp-slidesNav.bottom {
 	bottom: 25px;
 }
@@ -42,26 +38,22 @@ h1 {
 	color: #fff;
 }
 
-#section2 h1 {
-	color: #333;
-}
-
 #fp-nav {
-	background-color: #512C51;
+	background-color: #512c51;
 	height: 100vh;
 	width: 2.8vw;
 }
 
 #fp-nav.fp-right {
-	right: 3px;
+	right: 38px;
 }
 
 #fp-nav ul {
-	margin: 26.5vh 0 0 15px;
+	margin: 26.5vh 0 0 0.7vw;
 }
 
 #fp-nav ul li {
-	margin: 5vh 0 0 6px;
+	margin: 5vh 0 0 0.3vw;
 }
 
 #fp-nav ul li a span {
@@ -97,7 +89,7 @@ body.fp-viewing-2ndPage #fp-nav {
 .arrowUp, .arrowDown {
 	position: fixed;
 	z-index: 99;
-	border: solid #B94A5B;
+	border: solid #512C51;
 	border-width: 0 4px 4px 0;
 	display: inline-block;
 	padding: 1vw;
@@ -108,6 +100,7 @@ body.fp-viewing-2ndPage #fp-nav {
 
 .arrowDown {
 	bottom: 20px;
+	margin-bottom: 38px;
 	transform: rotate(45deg);
 }
 
@@ -124,7 +117,7 @@ body.fp-viewing-2ndPage #fp-nav {
 	float: left;
 	height: 100vh;
 	width: 43vw;
-	background-color: #EEE7D3;
+	background-color: #F2F2E3;
 	margin: 0 auto;
 }
 
@@ -137,21 +130,20 @@ body.fp-viewing-2ndPage #fp-nav {
 }
 
 #pdl_logo {
-	display: block;
-	width: 13vw;
+	width: 14.4vw;
 	height: 7.5vh;
-	margin-left: 8vw;
-	margin-top: 8vh;
+	margin-left: 7vw;
+	margin-top: 8.3vh;
 }
 
 #title_au_coeur {
 	margin-top: 5vh;
-	margin-left: 8vw;
+	margin-left: 7vw;
 	text-align: left;
-	height: 7vw;
-	width: 30vw;
+	height: 22.5vh;
+	width: 36.9vw;
 	font-size: 4vw;
-	line-height: 0.8;
+	line-height: 7.5vh;
 }
 
 .au_coeur {
@@ -168,21 +160,51 @@ body.fp-viewing-2ndPage #fp-nav {
 	font-weight: 700;
 }
 
+.pays_de_la_loire {
+	display: inline-block;
+	color: #512C51;
+	font-family: "Zilla Slab";
+	font-weight: 400;
+}
+
 #title_notre_patrimoine {
-	margin-left: 8vw;
+	margin-top: 2.7vh;
+	margin-left: 7vw;
 	text-align: left;
-	height: 2vw;
+	height: 6.7vh;
 	width: 30vw;
 	color: #512C51;
 	font-family: Ubuntu;
 	font-size: 1.5vw;
 	font-style: italic;
 	font-weight: 400;
-	line-height: 0.7;
+	line-height: 3.3vh;
+}
+
+#tips_audio {
+	text-align: center;
+	display: table;
+	margin-top: 5.2vh;
+	margin-left: 7vw;
+	height: 4.2vh;
+	width: 26vw;
+	border-radius: 100px;
+	background-color: #B94A5B;
+}
+
+#tips_audio p {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	color: #FFFFFF;
+	font-family: "Ubuntu";
+	font-weight: 400;
+	font-size: 1.1vw;
 }
 
 #audioplayer {
-	margin-left: 8vw;
+	margin-top: 4.2vh;
+	margin-left: 7vw;
 	width: 26vw;
 	height: 6vw;
 }
@@ -235,26 +257,270 @@ body.fp-viewing-2ndPage #fp-nav {
 }
 
 #discours {
-	margin-top: 4vh;
-	margin-left: 8vw;
+	margin-top: 3.5vh;
+	margin-left: 7vw;
 	text-align: left;
 	height: 6.5vw;
 	width: 34.5vw;
 	color: #512C51;
 	font-family: "Zilla Slab Light";
 	font-weight: 300;
-	font-size: 1vw;
-	line-height: 1;
+	font-size: 1.5vw;
+	line-height: 4vh;
 }
 
 #magneto {
 	position: absolute;
 	right: 0;
 	bottom: 0;
+	height: 91.7vh;
 	width: 50vw;
-	height: 85vh;
-	/*margin-left: 8vw;
-	margin-top: 8vh;*/
+	margin-right: 1.2vw;
+}
+
+#welcome .welcome_block {
+	display: inline-block;
+}
+
+#welcome #welcome_left {
+	float: left;
+	height: 100vh;
+	width: 35.8vw;
+	background-color: transparent;
+	margin: 0 auto;
+}
+
+#welcome #welcome_right {
+	position: relative;
+	float: right;
+	height: 100vh;
+	width: 52.1vw;
+	background-color: transparent;
+}
+
+#hemicycle_img {
+	margin-top: 15.2vh;
+	margin-left: 8.2vw;
+	height: 31.8vh;
+	width: 27.64vw;
+}
+
+#description_conseil_regional {
+	margin-top: 5.8vh;
+	margin-left: 8.2vw;
+	height: 32vh;
+	width: 27.64vw;
+	color: #FFFFFF;
+	font-family: 'Ubuntu';
+	font-weight: 400;
+	font-size: 1.4vw;
+	line-height: 4vh;
+	text-align: justify;
+}
+
+#dictaphone {
+	position: absolute;
+	right: 0;
+	margin-top: 15.2vh;
+	margin-right: 12.8vw;
+	height: 72.85vh;
+	width: 44.27vw;
+}
+
+#description_archive_duree {
+	position: absolute;
+	top: 20vh;
+	right: 22vw;
+	width: 18.55vw;
+	height: 6vh;
+	color: #FFFFFF;
+	font-family: "Zilla Slab";
+	font-weight: 400;
+	font-size: 2.7vw;
+	line-height: 6vh;
+	text-align: justify;
+}
+
+#description_archive_nb_audio {
+	position: absolute;
+	bottom: 29vh;
+	right: 10vw;
+	width: 19.9vw;
+	height: 15.7vh;
+	color: #FFFFFF;
+	font-family: "Zilla Slab";
+	font-weight: 400;
+	font-size: 3.5vw;
+	line-height: 7.8vh;
+	text-align: left;
+}
+
+#description_archive_duree span, #description_archive_nb_audio span {
+	font-family: "Zilla Slab";
+	font-weight: 700;
+}
+
+#president {
+	background-image: url('../img/fond_president.svg');
+}
+
+#survoler_bobine {
+	margin-left: 8vw;
+	margin-top: 1vh;
+	height: 2.2vh;
+	width: 64.3vw;
+	color: #512C51;
+	font-family: "Ubuntu";
+	font-weight: 400;
+	font-size: 1.3vw;
+	font-weight: 500;
+	letter-spacing: 0.11px;
+	line-height: 3.7vh;
+}
+
+#bobine_graph {
+	margin-left: 8vw;
+}
+
+#bobine_olivier, #bobine_vincent {
+	display: inline-block;
+	margin-left: 4vw;
+	margin-right: 4vw;
+	width: 33vw;
+	height: 86.5vh;
+}
+
+#bobine_olivier_img, #bobine_vincent_img {
+	width: 33vw;
+	height: 86.5vh;
+}
+
+div#bobine_vincent span.info_pres {
+	display: none;
+	position: absolute;
+	bottom: 15%;
+	right: 13%;
+	width: 32.7vw;
+	height: 52.7vh;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	padding: 2.1vw;
+}
+
+div#bobine_vincent:hover span.info_pres {
+	display: block;
+	cursor: pointer;
+}
+
+div#bobine_olivier span.info_pres {
+	display: none;
+	position: absolute;
+	bottom: 15%;
+	left: 12%;
+	width: 32.7vw;
+	height: 52.7vh;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	padding: 2.1vw;
+}
+
+div#bobine_olivier:hover span.info_pres {
+	display: block;
+}
+
+div#bobine_vincent:hover, div#bobine_olivier:hover {
+	cursor: pointer;
+}
+
+.president_name {
+	color: #502C51;
+	font-family: "Zilla Slab";
+	font-size: 3.2vw;
+	font-weight: 700;
+	text-align: center;
+}
+
+.president_date, .president_partie {
+	color: #502C51;
+	font-family: "Ubuntu";
+	font-size: 1.2vw;
+	font-weight: 400;
+	text-align: left;
+}
+
+.tips_click_bobine {
+	color: #502C51;
+	font-family: "Ubuntu";
+	font-size: 1.2vw;
+	font-weight: 700;
+	text-align: left;
+}
+
+.president_audio_info {
+	position: absolute;
+	top: 74%;
+	color: #502C51;
+	font-family: "Ubuntu";
+	font-size: 1.2vw;
+	font-weight: 400;
+	font-style: italic;
+	text-align: left;
+}
+
+.ordre_du_jour {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	height: 40.8vh;
+	width: 16.2vw;
+}
+
+div#bobine_vincent #play_vincent {
+	display: none;
+	position: absolute;
+	left: 28%;
+	bottom: 38%;
+	width: 2.8vw;
+	height: 5.9vh;
+}
+
+div#bobine_vincent:hover #play_vincent {
+	display: block;
+}
+
+div#bobine_olivier #play_olivier {
+	display: none;
+	position: absolute;
+	right: 28%;
+	bottom: 38%;
+	width: 2.8vw;
+	height: 5.9vh;
+}
+
+div#bobine_olivier:hover #play_olivier {
+	display: block;
+}
+
+#name_vincent {
+	position: absolute;
+	left: 21.5%;
+	bottom: 5%;
+	color: #502C51;
+	font-family: "Zilla Slab";
+	font-size: 2.1vw;
+	font-weight: 500;
+	text-decoration: underline;
+}
+
+#name_olivier {
+	position: absolute;
+	right: 21.5%;
+	bottom: 5%;
+	color: #502C51;
+	font-family: "Zilla Slab";
+	font-size: 2.1vw;
+	font-weight: 500;
+	text-decoration: underline;
 }
 
 #enregistrement {
@@ -266,47 +532,45 @@ body.fp-viewing-2ndPage #fp-nav {
 	display: inline-block;
 }
 
-#title_zoom_archive {
+h1 {
+	display: inline-block;
 	margin-left: 8vw;
 	margin-top: 7vh;
 	font-family: "Zilla Slab";
+	color: #FFFFFF;
 	font-weight: 700;
 	font-size: 3vw;
 	height: 7vh;
-	width: 45vw;
+	width: 55vw;
 	letter-spacing: 0.19px;
 	line-height: 7vh;
 }
 
-.zoom {
-	display: inline-block;
+h1 .h1_highlight {
 	color: #512C51;
 }
 
-#title_zoom_archive .archive {
-	display: inline-block;
-	color: #B94A5B;
-}
-
-#intro {
+.intro {
 	margin-left: 8vw;
 	margin-top: 3vh;
 	font-family: "Ubuntu";
 	font-weight: 400;
 	font-size: 1.3vw;
-	color: #B94A5B;
+	color: #512C51;
 }
 
-#enregistrement_intro .separator {
+.separator {
 	margin-left: 5vw;
 	box-sizing: border-box;
 	height: 2px;
 	width: 11vw;
-	border: 0.33vh solid #512C51;
+	border: 0.20vh solid #FFFFFF;
+	border-radius: 10px;
 }
 
 #click_k7 {
 	margin-left: 8vw;
+	margin-top: 1vh;
 	height: 2.2vh;
 	width: 41.8vw;
 	color: #512C51;
@@ -329,6 +593,14 @@ body.fp-viewing-2ndPage #fp-nav {
 	vertical-align: top;
 	padding-left: 3vw;
 	padding-top: 1.5vh;
+	line-height: 2.8vh;
+}
+
+#enregistrement_info p {
+	width: 22vw;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 #enregistrement_info .enregistrement_title {
@@ -380,5 +652,35 @@ body.fp-viewing-2ndPage #fp-nav {
 
 #filter_graph {
 	margin-left: 8vw;
-	margin-top: 7vh;
+	margin-top: 4vh;
+}
+
+.k7_hover:hover {
+	transform: scale(2);
+	cursor: pointer;
+	transition: all .3s linear;
+}
+
+.slick-slide {
+	padding-top: 2vh;
+}
+
+.micro_hover:hover {
+	transform: scale(1.5);
+	cursor: pointer;
+	transition: all .3s linear;
+}
+
+#info_audio_button {
+	position: absolute;
+	top: 14vh;
+	right: 18vw;
+	height: 10vh;
+	width: 5.5vw;
+	border: none;
+	background-size: 50% 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+	outline: none;
+	visibility: hidden;
 }

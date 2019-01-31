@@ -18,6 +18,8 @@ app.get('/stats_audio', function (request, response) {
     var duree_totale = 0;
     var taille_totale = 0;
     var nb_reunion = 0;
+    var date_min = 9999;
+    var date_max = 0;
     json.forEach(element => {
         if (element['Durée réelle du fichier (hh:mn:ss)'].split(':') !== undefined) {
             var duree = element['Durée réelle du fichier (hh:mn:ss)'].split(':');
@@ -29,6 +31,13 @@ app.get('/stats_audio', function (request, response) {
         }
         if (element["Numéro d'ordre du fichier dans la série des fichiers de la réunion"] == 1) {
             nb_reunion += 1;
+        }
+
+        if (date_min > element['Année'] && element['Année'] != 'inconnue'){
+            date_min = element['Année']
+        }
+        if (date_max< element['Année'] && element['Année'] != 'inconnue'){
+            date_max = element['Année']
         }
     });
 
@@ -42,7 +51,9 @@ app.get('/stats_audio', function (request, response) {
         'minutes': minutes,
         'secondes': secondes,
         'taille_totale': taille_totale,
-        'nb_reunion': nb_reunion
+        'nb_reunion': nb_reunion,
+        'date_min': date_min,
+        'date_max': date_max
     }
 
     response.send(JSON.stringify(data));
@@ -51,7 +62,6 @@ app.get('/stats_audio', function (request, response) {
 app.get('/audios', function (request, response) {
     var nb_fichier_audio = json.length;
     var audios = [];
-    //var mot_cles = { '1974-1986': {}, '1987-1992': {}, '1993-1994': {} };
     json.forEach(element => {
         var info = {};
         info['president'] = element['Président du Conseil régional à la date de la réunion'];
@@ -124,8 +134,73 @@ app.get('/audios', function (request, response) {
             info['date_general'] = date;
         }
 
+
+        date = element["Date(s) de l'enregistrement portée(s) sur le support d'enregistrement initial"];
+        if (date.includes(',')) {
+            date = date.split(',');
+            if (date.length == 2) {
+                var date_1 = date[0].split('/');
+                if (date_1.length == 3) {
+                    if (date_1[0].length == 1) {
+                        date_1[0] = '0' + date_1[0];
+                    }
+                    if (date_1[1].length == 1) {
+                        date_1[1] = '0' + date_1[1];
+                    }
+                    if (date_1[2].length == 3) {
+                        date_1[2] = '19' + date_1[2];
+                    }
+                    date[0] = date_1[0] + '/' + date_1[1] + '/' + date_1[2];
+                }
+                else {
+                    date[0] = 'Non renseigné';
+                }
+                var date_2 = date[1].split('/');
+                if (date_2.length == 3) {
+                    if (date_2[0].length == 1) {
+                        date_2[0] = '0' + date_2[0];
+                    }
+                    if (date_2[1].length == 1) {
+                        date_2[1] = '0' + date_2[1];
+                    }
+                    if (date_2[2].length == 2) {
+                        date_2[2] = '19' + date_2[2];
+                    }
+                    date[1] = date_2[0] + '/' + date_2[1] + '/' + date_2[2];
+                }
+                else {
+                    date[1] = 'Non renseigné';
+                }
+                info['date_enregistrement'] = date[0] + ',' + date[1];
+            }
+            else {
+                info['date_enregistrement'] = 'Non renseigné';
+            }
+        }
+        else if (!(date.includes('-'))) {
+            date = date.split('/');
+            if (date.length == 3) {
+                if (date[0].length == 1) {
+                    date[0] = '0' + date[0];
+                }
+                if (date[1].length == 1) {
+                    date[1] = '0' + date[1];
+                }
+                if (date[2].length == 2) {
+                    date[2] = '19' + date[2];
+                }
+                info['date_enregistrement'] = date[0] + '/' + date[1] + '/' + date[2];
+            }
+            else {
+                info['date_enregistrement'] = 'Non renseigné';
+            }
+        }
+        else {
+            info['date_enregistrement'] = date;
+        }
+
         info['objet'] = element['Objet général de la séance / réunion'];
-        info['date_enregistrement'] = element["Date(s) de l'enregistrement portée(s) sur le support d'enregistrement initial"];
+
         info['numero_ordre'] = element["Numéro d'ordre du fichier dans la série des fichiers de la réunion"];
         info['reference'] = element['Référence du support sonore initial '];
         info['identifiant'] = element['Identifiant fichier son'];
@@ -140,34 +215,15 @@ app.get('/audios', function (request, response) {
         var mot_cle = [];
         if (element['mots-clés associés à la réunion '] !== undefined) {
             mot_cle = element['mots-clés associés à la réunion '].split(' ; ')
-            //console.log(mot_cle)
         }
-        /*mot_cle.forEach(element => {
-            var annee = '1974-1986';
+        else {
+            mot_cle = ['Non renseigné'];
+        }
 
-            if (info['annee'] > 1986 && info['annee'] <= 1992) {
-                annee = '1987-1992';
-            }
-            else if (info['annee'] > 1992 && info['annee'] <= 1994) {
-                annee = '1993-1994';
-            }
-
-            
-            if (mot_cles[annee][element] === undefined) {
-                mot_cles[annee][element] = 1;
-            }
-            else {
-                if (info['numero_ordre'] == 1) {
-                    mot_cles[annee][element] += 1;
-                }
-            }
-
-        });*/
         info['mot_cle'] = mot_cle;
 
         audios.push(info);
     });
-    //console.log(mot_cles);
     var data = {
         'nb_fichier_audio': nb_fichier_audio,
         'audios': audios
@@ -177,130 +233,119 @@ app.get('/audios', function (request, response) {
 });
 
 app.get('/reunions', function (request, response) {
-    var nb_fichier_audio = json.length;
-    var audios = [];
-    //var mot_cles = { '1974-1986': {}, '1987-1992': {}, '1993-1994': {} };
+    var nb_reunion = 0;
+    var reunions = [];
+    var nb_audio = 0;
+    var duree = { 'heure': 0, 'minute': 0, 'seconde': 0 };
+    var info = {};
     json.forEach(element => {
-        var info = {};
-        info['president'] = element['Président du Conseil régional à la date de la réunion'];
-        if (info['president'].includes('inconnu')) {
-            info['president'] = 'Non renseigné';
-        }
-        info['annee'] = element['Année'];
-        info['intitule'] = element['Intitulé de la réunion'];
-        var date = element['Dates (générales) de la séance / réunion'];
-        if (date.includes(',')) {
-            date = date.split('-');
-            if (date.length == 2) {
-                var date_1 = date[0].split('/');
-                if (date_1.length == 3) {
-                    if (date_1[0].length == 1) {
-                        date_1[0] = '0' + date_1[0];
+        if (element["Numéro d'ordre du fichier dans la série des fichiers de la réunion"] == 1) {
+            if (nb_reunion > 0) {
+                info['nb_audio'] = nb_audio;
+                info['duree'] = duree;
+                nb_audio = 0;
+                duree = { 'heure': 0, 'minute': 0, 'seconde': 0 };
+                reunions.push(info);
+                info = {};
+            }
+            info['president'] = element['Président du Conseil régional à la date de la réunion'];
+            if (info['president'].includes('inconnu')) {
+                info['president'] = 'Non renseigné';
+            }
+
+            info['annee'] = element['Année'];
+            var duree_enregistrement = element['Durée réelle du fichier (hh:mn:ss)'].split(':');
+            duree['heure'] += parseInt(duree_enregistrement[0]);
+            duree['minute'] += parseInt(duree_enregistrement[1]);
+            duree['seconde'] += parseInt(duree_enregistrement[2]);
+
+            var date = element['Dates (générales) de la séance / réunion'];
+            if (date.includes(',')) {
+                date = date.split(',');
+                if (date.length == 2) {
+                    var date_1 = date[0].split('/');
+                    if (date_1.length == 3) {
+                        if (date_1[0].length == 1) {
+                            date_1[0] = '0' + date_1[0];
+                        }
+                        if (date_1[1].length == 1) {
+                            date_1[1] = '0' + date_1[1];
+                        }
+                        if (date_1[2].length == 3) {
+                            date_1[2] = '19' + date_1[2];
+                        }
+                        date[0] = date_1[0] + '/' + date_1[1] + '/' + date_1[2];
                     }
-                    if (date_1[1].length == 1) {
-                        date_1[1] = '0' + date_1[1];
+                    else {
+                        date[0] = 'Non renseigné';
                     }
-                    if (date_1[2].length == 3) {
-                        date_1[2] = '19' + date_1[2];
+                    var date_2 = date[1].split('/');
+                    if (date_2.length == 3) {
+                        if (date_2[0].length == 1) {
+                            date_2[0] = '0' + date_2[0];
+                        }
+                        if (date_2[1].length == 1) {
+                            date_2[1] = '0' + date_2[1];
+                        }
+                        if (date_2[2].length == 2) {
+                            date_2[2] = '19' + date_2[2];
+                        }
+                        date[1] = date_2[0] + '/' + date_2[1] + '/' + date_2[2];
                     }
-                    date[0] = date_1[0] + '/' + date_1[1] + '/' + date_1[2];
+                    else {
+                        date[1] = 'Non renseigné';
+                    }
+                    info['date'] = date[0] + ',' + date[1];
                 }
                 else {
-                    date[0] = 'Non renseigné';
+                    info['date'] = 'Non renseigné';
                 }
-                var date_2 = date[1].split('/');
-                if (date_2.length == 3) {
-                    if (date_2[0].length == 1) {
-                        date_2[0] = '0' + date_2[0];
+            }
+            else if (!(date.includes('-'))) {
+                date = date.split('/');
+                if (date.length == 3) {
+                    if (date[0].length == 1) {
+                        date[0] = '0' + date[0];
                     }
-                    if (date_2[1].length == 1) {
-                        date_2[1] = '0' + date_2[1];
+                    if (date[1].length == 1) {
+                        date[1] = '0' + date[1];
                     }
-                    if (date_2[2].length == 2) {
-                        date_2[2] = '19' + date_2[2];
+                    if (date[2].length == 2) {
+                        date[2] = '19' + date[2];
                     }
-                    date[1] = date_2[0] + '/' + date_2[1] + '/' + date_2[2];
+                    info['date'] = date[0] + '/' + date[1] + '/' + date[2];
                 }
                 else {
-                    date[1] = 'Non renseigné';
+                    info['date'] = 'Non renseigné';
                 }
-                info['date_general'] = date[0] + ',' + date[1];
             }
             else {
-                info['date_general'] = 'Non renseigné';
+                info['date'] = date;
             }
-        }
-        else if (!(date.includes('-'))) {
-            date = date.split('/');
-            if (date.length == 3) {
-                if (date[0].length == 1) {
-                    date[0] = '0' + date[0];
-                }
-                if (date[1].length == 1) {
-                    date[1] = '0' + date[1];
-                }
-                if (date[2].length == 2) {
-                    date[2] = '19' + date[2];
-                }
-                info['date_general'] = date[0] + '/' + date[1] + '/' + date[2];
+
+            if (element['mots-clés associés à la réunion '] !== undefined) {
+                info['mot_cle'] = element['mots-clés associés à la réunion '].split(' ; ')
             }
             else {
-                info['date_general'] = 'Non renseigné';
-            }
-        }
-        else {
-            info['date_general'] = date;
-        }
-
-        info['objet'] = element['Objet général de la séance / réunion'];
-        info['date_enregistrement'] = element["Date(s) de l'enregistrement portée(s) sur le support d'enregistrement initial"];
-        info['numero_ordre'] = element["Numéro d'ordre du fichier dans la série des fichiers de la réunion"];
-        info['reference'] = element['Référence du support sonore initial '];
-        info['identifiant'] = element['Identifiant fichier son'];
-        var duree = element['Durée réelle du fichier (hh:mn:ss)'].split(':');
-        info['duree'] = {
-            'heure': duree[0],
-            'minute': duree[1],
-            'seconde': duree[2]
-        };
-        info['poids'] = element['Poids du fichier \r\n(octets)'];
-        info['qualite'] = element['Evaluation qualité sonore du fichier (note de 1 à 10)'];
-        var mot_cle = [];
-        if (element['mots-clés associés à la réunion '] !== undefined) {
-            mot_cle = element['mots-clés associés à la réunion '].split(' ; ')
-            //console.log(mot_cle)
-        }
-        /*mot_cle.forEach(element => {
-            var annee = '1974-1986';
-
-            if (info['annee'] > 1986 && info['annee'] <= 1992) {
-                annee = '1987-1992';
-            }
-            else if (info['annee'] > 1992 && info['annee'] <= 1994) {
-                annee = '1993-1994';
+                info['mot_cle'] = ['Non renseigné'];
             }
 
-            
-            if (mot_cles[annee][element] === undefined) {
-                mot_cles[annee][element] = 1;
+            if (element['Objet général de la séance / réunion'] === undefined) {
+                info['objet_general'] = 'Non renseigné';
             }
             else {
-                if (info['numero_ordre'] == 1) {
-                    mot_cles[annee][element] += 1;
-                }
+                info['objet_general'] = element['Objet général de la séance / réunion'];
             }
 
-        });*/
-        info['mot_cle'] = mot_cle;
-
-        audios.push(info);
+            nb_reunion += 1;
+        }
+        nb_audio += 1;
     });
-    //console.log(mot_cles);
-    var data = {
-        'nb_fichier_audio': nb_fichier_audio,
-        'audios': audios
-    }
 
+    var data = {
+        'nb_reunion': nb_reunion,
+        'reunions': reunions
+    }
     response.send(JSON.stringify(data));
 });
 
