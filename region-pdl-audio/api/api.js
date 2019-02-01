@@ -32,10 +32,10 @@ app.get('/stats_audio', function (request, response) {
             nb_reunion += 1;
         }
 
-        if (date_min > element['Année'] && element['Année'] != 'inconnue'){
+        if (date_min > element['Année'] && element['Année'] != 'inconnue') {
             date_min = element['Année']
         }
-        if (date_max< element['Année'] && element['Année'] != 'inconnue'){
+        if (date_max < element['Année'] && element['Année'] != 'inconnue') {
             date_max = element['Année']
         }
     });
@@ -344,6 +344,76 @@ app.get('/reunions', function (request, response) {
     var data = {
         'nb_reunion': nb_reunion,
         'reunions': reunions
+    }
+    response.send(JSON.stringify(data));
+});
+
+app.get('/type_reunions', function (request, response) {
+    var nb_reunion_periode_1 = 0;
+    var nb_reunion_periode_2 = 0;
+    var nb_reunion_periode_3 = 0;
+    var periode_1 = {};
+    var periode_2 = {};
+    var periode_3 = {};
+    json.forEach(element => {
+        if (element["Numéro d'ordre du fichier dans la série des fichiers de la réunion"] == 1) {
+            var annee = element['Année'];
+            var objet = element['Objet général de la séance / réunion'];
+
+            if (objet === undefined) {
+                objet = 'Non référencé';
+            }
+            
+            if (objet[objet.length-1] == ' '){
+                objet = objet.substr(0, objet.length-1);
+            }
+
+            if (objet.includes('Décision modificative')) {
+                objet = 'Décision modificative';
+            }
+
+            if (objet.includes('Séance extraordinaire')) {
+                objet = 'Séance extraordinaire';
+            }
+
+            if (annee >= 1974 && annee < 1986) {
+                nb_reunion_periode_1 += 1;
+                if (periode_1[objet] === undefined) {
+                    periode_1[objet] = 0;
+                }
+                periode_1[objet] += 1;
+            }
+            else if (annee >= 1986 && annee < 1992) {
+                nb_reunion_periode_2 += 1;
+                if (periode_2[objet] === undefined) {
+                    periode_2[objet] = 0;
+                }
+                periode_2[objet] += 1;
+            }
+            else if (annee >= 1992 && annee <= 1994) {
+                nb_reunion_periode_3 += 1;
+                if (periode_3[objet] === undefined) {
+                    periode_3[objet] = 0;
+                }
+                periode_3[objet] += 1;
+            }
+        }
+
+    });
+
+    var data = {
+        'periode_1': {
+            'nb_reunion': nb_reunion_periode_1,
+            'objet': periode_1
+        },
+        'periode_2': {
+            'nb_reunion': nb_reunion_periode_2,
+            'objet': periode_2
+        },
+        'periode_3': {
+            'nb_reunion': nb_reunion_periode_3,
+            'objet': periode_3
+        }
     }
     response.send(JSON.stringify(data));
 });
