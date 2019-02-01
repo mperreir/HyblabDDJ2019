@@ -335,4 +335,93 @@ section {
     opacity: 1;
     transform: translate3d(-200px,-300px,0px) scale(2.0);
 }
+#r{
+    background:url(../img/rural_j.png) no-repeat center;
+    background-size: contain;
+    height:100%;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+#in{
+    background:url(../img/urban_j.png) no-repeat center;
+    background-size:contain;
+    height:100%;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+#tr{
+    background:url(../img/traffic_j.png) no-repeat center;
+    background-size:contain;
+    height:100%;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+#myR,#myR2,#myR3{
+    margin-top: 90px;
+    margin-left: 250px;
+    height: 80px;
+}
+#myRange,#myRange2,#myRange3{
+    alignment: top;
+}
+#value,#value2,#value3{
+    margin-top: 100px;
+    margin-left: 1000px;
+    color: #0c0524;
+}
+
+.container {
+    margin-top: 300px;
+    padding-top: 20px;
+}
+.progress {
+    width: 30%;
+    height: 34px;
+    position: relative;
+    margin-left: 800px;
+    background-color: rgba(255,255,255,0);
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+}
+.progress-bar {
+    width: 90%;
+    display: block;
+    overflow: hidden;
+    height: 30px;
+    margin:0 auto;
+    line-height: 12px;
+    background: #fafafa;
+    border-radius: 4px;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent 60%);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.6);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.6);
+    position: relative;
+}
+
+.progress-in {
+    display: block;
+    min-width: 8px;
+    height: 30px;
+    background: #c54050;
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, #dadc38, #ac125b);
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -moz-linear-gradient(left, #dadc38, #ac125b);
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -o-linear-gradient(left, #dadc38, #ac125b);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), linear-gradient(to right, #dadc38, #ac125b);
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
 
