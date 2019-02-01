@@ -102,7 +102,7 @@
     <div class="section" id="president">
       <div id="president_entete">
         <div id="president_intro">
-          <h1>Qui êtes-vous, monsieur le</span> <span class="h1_highlight">Président</span> ?</h1>
+          <h1>Qui êtes-vous, Monsieur le</span> <span class="h1_highlight">Président</span> ?</h1>
           <p class="intro">
             De 1974 à 1994, le conseil régional est représenté par deux présidents.
           </p>
@@ -112,46 +112,52 @@
           </p>
         </div>
         <div id="bobine_graph">
-          <div id="bobine_vincent" onclick="start_pres_audio(this.id)">
+          <div id="bobine_vincent" onmouseenter="info_president_display(this.id)" onmouseleave="info_president_undisplay(this.id)"
+            onclick="start_pres_audio(this.id)">
             <img id="bobine_vincent_img" src="img/bobine_photo_vincent_ansquer.png" alt="Vincent Ansquer" />
-            <span class="info_pres">
-              <p class="president_name">Vincent Ansquer</p>
-              <p class="president_date">Président du conseil de janvier à octobre 1974</p>
-              <p class="president_partie">Son parti politique : Union des démocrates pour la République (UDR)</p>
-              <p class="tips_click_bobine">Écoutez un de ses enregistrements en cliquant sur sa bobine.</p>
-              <p class="president_audio_info">
-                Durée : 2 min.</br>
-                Réf de l’enregistrement.</br>
-                Date : 05/01/1974
-              </p>
-              <img class="ordre_du_jour" src="img/pdl_logo.svg" alt="Ordre du jour" />
-            </span>
+            <img id="play_vincent" src="img/play_white.svg" alt="Bouton play" />
             <audio id="audio_vincent" preload="true">
               <source src="./data/extrait_vincent.mp3">
             </audio>
-            <img id="play_vincent" src="img/play_white.svg" alt="Bouton play" />
-            <p id="name_vincent">Vincent Ansquer</p>
           </div>
-          <div id="bobine_olivier" onclick="start_pres_audio(this.id)">
+          <div id="bobine_olivier" onmouseenter="info_president_display(this.id)" onmouseleave="info_president_undisplay(this.id)"
+            onclick="start_pres_audio(this.id)">
             <img id="bobine_olivier_img" src="img/bobine_photo_olivier_guichard.png" alt="Olivier Guichard" />
-            <span class="info_pres">
-              <p class="president_name">Olivier Guichard</p>
-              <p class="president_date">Président du conseil régional d’octobre 1974 à mars 1996</p>
-              <p class="president_partie">Son parti politique : Rassemblement pour la république (RPR)</p>
-              <p class="tips_click_bobine">Écoutez un de ses enregistrements en cliquant sur sa bobine.</p>
-              <p class="president_audio_info">
-                Durée : 2 min.</br>
-                Réf de l’enregistrement.</br>
-                Date : JJ/MM/AAAA
-              </p>
-              <img class="ordre_du_jour" src="img/pdl_logo.svg" alt="Ordre du jour" />
-            </span>
+            <img id="play_olivier" src="img/play_white.svg" alt="Bouton play" />
             <audio id="audio_olivier" preload="true">
               <source src="./data/extrait_olivier.mp3">
             </audio>
-            <img id="play_olivier" src="img/play_white.svg" alt="Bouton play" />
-            <p id="name_olivier">Olivier Guichard</p>
           </div>
+
+          <div id="zone_info_pres">
+            <span id="info_vincent" class="info_pres">
+              <p class="president_name">Vincent Ansquer</p>
+              <p class="president_date">Président du conseil de <b>janvier à octobre 1974</b></p>
+              <div class="separator_2"></div>
+              <p class="president_partie">Son parti politique : Union des démocrates pour la République (UDR)</p>
+              <div class="separator_2"></div>
+              <p class="president_audio_info">
+                Durée : 7 min.</br>
+                FRAR52_396PR11_1_BM_2</br>
+                Date : 30/01/1974
+              </p>
+            </span>
+
+            <span id="info_olivier" class="info_pres">
+              <p class="president_name">Olivier Guichard</p>
+              <p class="president_date">Président du conseil <b>d’octobre 1974 à mars 1996</b></p>
+              <div class="separator_2"></div>
+              <p class="president_partie">Son parti politique : Rassemblement pour la république (RPR)</p>
+              <div class="separator_2"></div>
+              <p class="president_audio_info">
+                Durée : 2 min.</br>
+                Réf. : FRAR52_396PR15_1_BM_1</br>
+                Date : 21/03/1986
+              </p>
+            </span>
+          </div>
+          <p id="name_vincent">Vincent Ansquer</p>
+          <p id="name_olivier">Olivier Guichard</p>
         </div>
       </div>
     </div>
@@ -168,58 +174,39 @@
             Cliquez sur une cassette pour écouter.
           </p>
         </div>
-        <div id="enregistrement_info"></div>
+        <div id="enregistrement_info">
+          
+        </div>
       </div>
       <audio id="audio_k7">
-        <source src="">
+        <source src=" ">
       </audio>
       <button id="info_audio_button" class="play"></button>
-      <div id="graph_k7"></div>
       <div id="filter_graph">
-        <div class="checkbox">
-          <label>
-            <input id="cb_audio" type="checkbox" onclick="graph_audio_reunion(this.id)" value="" checked>
-            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-            Audio
-          </label>
+          <form>
+            <fieldset class="section_cb">
+              <input type="radio" class="checkbox" id="cb_audio" onclick="graph_audio_reunion(this.id)" name="filtre_type" checked>
+              <label class="label_cb" for="cb_audio">Enregistrements audio</label>
+              <input type="radio" class="checkbox" id="cb_reunion" onclick="graph_audio_reunion(this.id)" name="filtre_type">
+              <label class="label_cb" for="cb_reunion">Réunions</label>
+            </fieldset>
+          </form>
+          <form>
+            <fieldset class="section_cb">
+              <input type="radio" class="checkbox" id="periode_all" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode" checked>
+              <label class="label_cb" for="periode_all">Afficher tout</label>
+              <input type="radio" class="checkbox" id="periode_1" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode">
+              <label class="label_cb" for="periode_1">1/ 1974 - 1986</label>
+              <input type="radio" class="checkbox" id="periode_2" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode">
+              <label class="label_cb" for="periode_2">2/ 1986 - 1992</label>
+              <input type="radio" class="checkbox" id="periode_3" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode">
+              <label class="label_cb" for="periode_3">3/ 1992 - 1994</label>
+              <input type="radio" class="checkbox" id="periode_nr" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode">
+              <label class="label_cb" for="periode_nr">Non renseigné</label>
+            </fieldset>
+          </form>
         </div>
-        <div class="checkbox">
-          <label>
-            <input id="cb_reunion" type="checkbox" onclick="graph_audio_reunion(this.id)" value="">
-            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-            Réunion
-          </label>
-        </div>
-        <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-            aria-expanded="true">
-            Période
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
-            <li role="presentation" id="periode_1" onclick="graph_audio_reunion_filter(this.id)"><a role="menuitem"
-                tabindex="-1" href="#4thPage">
-                <div class="periode_1"></div> 1/ 1974 - 1986
-              </a></li>
-            <li role="presentation" id="periode_2" onclick="graph_audio_reunion_filter(this.id)"><a role="menuitem"
-                tabindex="-1" href="#4thPage">
-                <div class="periode_2"></div> 2/ 1986 - 1992
-              </a></li>
-            <li role="presentation" id="periode_3" onclick="graph_audio_reunion_filter(this.id)"><a role="menuitem"
-                tabindex="-1" href="#4thPage">
-                <div class="periode_3"></div> 3/ 1992 - 1994
-              </a></li>
-            <li role="presentation" id="periode_nr" onclick="graph_audio_reunion_filter(this.id)"><a role="menuitem"
-                tabindex="-1" href="#4thPage">
-                <div class="periode_nr"></div> Non référencé
-              </a></li>
-            <li role="presentation" id="periode_all" onclick="graph_audio_reunion_filter(this.id)"><a role="menuitem"
-                tabindex="-1" href="#4thPage">
-                <div class="periode_all"></div> Tout
-              </a></li>
-          </ul>
-        </div>
-      </div>
+      <div id="graph_k7"></div>
     </div>
     <div class="section" id="reunion">
       <div id="reunion_intro">
@@ -275,7 +262,7 @@
       <h1>La scéance est lévée</h1>
     </div>
   </div>
-  <div class="arrowDown"></div>
+  <div class="arrowDown bounce"></div>
 </body>
 
 </html>
