@@ -100,7 +100,7 @@ function ran2(){
     oDiv2.style.width =100*myu[aa2]/100 + "%";
 
     if(aa2>19||aa2<8){
-        $("#in").css({
+        $("#ur").css({
             "background": "url(./img/urban_n.png) no-repeat center",
             "height": "100%",
             "background-size": "contain"
@@ -119,7 +119,7 @@ function ran2(){
         });
     }
     if(aa2>8&&aa2<19){
-        $("#in").css({
+        $("#ur").css({
             "background": "url(./img/urban_j.png) no-repeat center",
             "height": "100%",
             "background-size": "contain"

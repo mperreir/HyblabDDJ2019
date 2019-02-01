@@ -1,4 +1,5 @@
 $(function() {
+    $('.svg-container').hide();
     $('#perso2').hide();
     $('.reponses').hide();
     $('.remarques').hide();
