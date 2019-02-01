@@ -135,8 +135,8 @@
               <img class="ordre_du_jour" src="img/pdl_logo.svg" alt="Ordre du jour" />
             </span>
             <audio id="audio_olivier" preload="true">
-                <source src="./data/extrait_olivier.mp3">
-              </audio>
+              <source src="./data/extrait_olivier.mp3">
+            </audio>
             <img id="play_olivier" src="img/play_white.svg" alt="Bouton play" />
             <p id="name_olivier">Olivier Guichard</p>
           </div>
@@ -167,7 +167,6 @@
         <div class="checkbox">
           <label>
             <input id="cb_audio" type="checkbox" onclick="graph_audio_reunion(this.id)" value="" checked>
-            <!--disabled-->
             <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
             Audio
           </label>
@@ -211,10 +210,18 @@
       </div>
     </div>
     <div class="section" id="reunion">
-      <h1>Objets des réunions</h1>
-      <p>
-        Trouvez ici les informations sur les réunions.
-      </p>
+      <div id="reunion_intro">
+        <h1>Quels sont <span class="h1_highlight"> les types de réunion ?</span></h1>
+        <p class="intro">
+          Chaque réunion aborde un objet. Sans surprise, le budget représente</br>
+          la majeure partie des réunions.
+        </p>
+        <div class="separator"></div>
+        <p id="select_button">
+          Sélectionnez les périodes qui vous intéressent en cliquant</br>
+          sur les boutons du micro.
+        </p>
+      </div>
     </div>
     <div class="section" id="mot_cle">
       <h1>Mots clés</h1>

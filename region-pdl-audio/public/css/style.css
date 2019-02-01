@@ -684,3 +684,21 @@ h1 .h1_highlight {
 	outline: none;
 	visibility: hidden;
 }
+
+#reunion {
+	background-image: url('../img/fond_reunion.svg');
+}
+
+#select_button {
+	margin-left: 8vw;
+	margin-top: 1vh;
+	height: 2.2vh;
+	width: 64.3vw;
+	color: #512C51;
+	font-family: "Ubuntu";
+	font-weight: 400;
+	font-size: 1.3vw;
+	font-weight: 500;
+	letter-spacing: 0.11px;
+	line-height: 3.7vh;
+}
