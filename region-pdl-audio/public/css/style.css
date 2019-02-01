@@ -1,9 +1,5 @@
 /* just a sample css rule to show that everything works */
 
-/*html, body {
-	font-family: 'Zilla Slab', serif;
-}*/
-
 footer p {
 	font-size: small;
 	text-align: center;
@@ -81,28 +77,75 @@ body.fp-viewing-2ndPage #fp-nav {
 	transition: 1s top linear;
 }
 
-.arrowUp, .arrowDown {
-	position: fixed;
-	z-index: 99;
-	border: solid #512C51;
-	border-width: 0 4px 4px 0;
-	display: inline-block;
-	padding: 1vw;
-	border-style: solid;
-	margin-left: -38px;
-	left: 50%;
-	cursor: pointer;
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-moz-transform: translateY(-30px);
+		transform: translateY(-30px);
+	}
+	60% {
+		-moz-transform: translateY(-15px);
+		transform: translateY(-15px);
+	}
+}
+
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-30px);
+		transform: translateY(-30px);
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		transform: translateY(-15px);
+	}
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-moz-transform: translateY(-30px);
+		-ms-transform: translateY(-30px);
+		-webkit-transform: translateY(-30px);
+		transform: translateY(-30px);
+	}
+	60% {
+		-moz-transform: translateY(-15px);
+		-ms-transform: translateY(-15px);
+		-webkit-transform: translateY(-15px);
+		transform: translateY(-15px);
+	}
+}
+
+.bounce {
+	-moz-animation: bounce 4s infinite;
+	-webkit-animation: bounce 4s infinite;
+	animation: bounce 4s infinite;
 }
 
 .arrowDown {
-	bottom: 20px;
-	margin-bottom: 38px;
-	transform: rotate(45deg);
-}
-
-.arrowUp {
-	top: 20px;
-	transform: rotate(-135deg);
+	position: fixed;
+	bottom: 1%;
+	left: 50%;
+	margin-left: -20px;
+	width: 70px;
+	height: 70px;
+	background-image: url('../img/fleche_down.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	z-index: 99;
 }
 
 #accueil .accueil_block {
@@ -297,7 +340,7 @@ body.fp-viewing-2ndPage #fp-nav {
 #conseil_regional_title {
 	position: absolute;
 	top: 5.8%;
-	left: 5.8%;
+	left: 11.8%;
 	color: #FFFFFF;
 	font-family: 'Ubuntu';
 	font-weight: 400;
@@ -308,7 +351,7 @@ body.fp-viewing-2ndPage #fp-nav {
 #description_conseil_regional_partie_1 {
 	position: absolute;
 	top: 12%;
-	left: 8%;
+	left: 14%;
 	height: 32vh;
 	width: 27.64vw;
 	color: #FFFFFF;
@@ -322,7 +365,7 @@ body.fp-viewing-2ndPage #fp-nav {
 #hemicycle_img {
 	position: absolute;
 	top: 30%;
-	left: 10.5%;
+	left: 16.5%;
 	height: 28vh;
 	width: 24vw;
 }
@@ -330,7 +373,7 @@ body.fp-viewing-2ndPage #fp-nav {
 #legende_img_hemicycle {
 	position: absolute;
 	bottom: 9%;
-	left: 10.5%;
+	left: 16.5%;
 	height: 32vh;
 	width: 27.64vw;
 	color: #FFFFFF;
@@ -345,7 +388,7 @@ body.fp-viewing-2ndPage #fp-nav {
 #description_conseil_regional_partie_2 {
 	position: absolute;
 	bottom: 2%;
-	left: 8%;
+	left: 14%;
 	height: 32vh;
 	width: 27.64vw;
 	color: #FFFFFF;
@@ -358,7 +401,7 @@ body.fp-viewing-2ndPage #fp-nav {
 
 #dictaphone {
 	position: absolute;
-	right: 15%;
+	right: 30%;
 	top: 14%;
 	height: 55vh;
 	width: 30vw;
@@ -367,7 +410,7 @@ body.fp-viewing-2ndPage #fp-nav {
 #description_archive_duree {
 	position: absolute;
 	top: 18%;
-	right: 19%;
+	right: 35%;
 	width: 18.55vw;
 	height: 6vh;
 	color: #FFFFFF;
@@ -381,7 +424,7 @@ body.fp-viewing-2ndPage #fp-nav {
 #description_archive_nb_audio {
 	position: absolute;
 	bottom: 20%;
-	right: 15%;
+	right: 30%;
 	color: #FFFFFF;
 	font-family: "Zilla Slab";
 	font-weight: 400;
@@ -420,50 +463,36 @@ body.fp-viewing-2ndPage #fp-nav {
 	margin-left: 8vw;
 }
 
-#bobine_olivier, #bobine_vincent {
-	display: inline-block;
-	margin-left: 4vw;
-	margin-right: 4vw;
-	width: 33vw;
-	height: 86.5vh;
+#bobine_olivier {
+	position: absolute;
+	right: 5%;
+	bottom: -15%;
+}
+
+#bobine_vincent {
+	position: absolute;
+	left: 5%;
+	bottom: -15%;
 }
 
 #bobine_olivier_img, #bobine_vincent_img {
 	width: 33vw;
-	height: 86.5vh;
+	height: 90vh;
 }
 
-div#bobine_vincent span.info_pres {
-	display: none;
+.info_pres {
 	position: absolute;
-	bottom: 15%;
-	right: 13%;
-	width: 32.7vw;
-	height: 52.7vh;
+	bottom: 20%;
+	left: 38%;
+	width: 22.1vw;
+	height: 45vh;
 	border-radius: 10px;
-	background-color: #FFFFFF;
-	padding: 2.1vw;
+	background-color: rgba(255, 255, 255, 0.3);
+	padding: 1.5vw;
 }
 
-div#bobine_vincent:hover span.info_pres {
-	display: block;
-	cursor: pointer;
-}
-
-div#bobine_olivier span.info_pres {
+#info_vincent, #info_olivier {
 	display: none;
-	position: absolute;
-	bottom: 15%;
-	left: 12%;
-	width: 32.7vw;
-	height: 52.7vh;
-	border-radius: 10px;
-	background-color: #FFFFFF;
-	padding: 2.1vw;
-}
-
-div#bobine_olivier:hover span.info_pres {
-	display: block;
 }
 
 div#bobine_vincent:hover, div#bobine_olivier:hover {
@@ -471,15 +500,15 @@ div#bobine_vincent:hover, div#bobine_olivier:hover {
 }
 
 .president_name {
-	color: #502C51;
+	color: #512C51;
 	font-family: "Zilla Slab";
-	font-size: 3.2vw;
+	font-size: 2.4vw;
 	font-weight: 700;
 	text-align: center;
 }
 
 .president_date, .president_partie {
-	color: #502C51;
+	color: #512C51;
 	font-family: "Ubuntu";
 	font-size: 1.2vw;
 	font-weight: 400;
@@ -487,7 +516,7 @@ div#bobine_vincent:hover, div#bobine_olivier:hover {
 }
 
 .tips_click_bobine {
-	color: #502C51;
+	color: #512C51;
 	font-family: "Ubuntu";
 	font-size: 1.2vw;
 	font-weight: 700;
@@ -495,9 +524,7 @@ div#bobine_vincent:hover, div#bobine_olivier:hover {
 }
 
 .president_audio_info {
-	position: absolute;
-	top: 74%;
-	color: #502C51;
+	color: #512C51;
 	font-family: "Ubuntu";
 	font-size: 1.2vw;
 	font-weight: 400;
@@ -506,9 +533,6 @@ div#bobine_vincent:hover, div#bobine_olivier:hover {
 }
 
 .ordre_du_jour {
-	position: absolute;
-	top: 45%;
-	left: 50%;
 	height: 40.8vh;
 	width: 16.2vw;
 }
@@ -516,10 +540,14 @@ div#bobine_vincent:hover, div#bobine_olivier:hover {
 div#bobine_vincent #play_vincent {
 	display: none;
 	position: absolute;
-	left: 28%;
-	bottom: 38%;
-	width: 2.8vw;
-	height: 5.9vh;
+	left: 46%;
+	bottom: 58%;
+	width: 4vw;
+	height: 7vh;
+}
+
+div#bobine_vincent:hover {
+	transform: scale(1.05);
 }
 
 div#bobine_vincent:hover #play_vincent {
@@ -529,10 +557,14 @@ div#bobine_vincent:hover #play_vincent {
 div#bobine_olivier #play_olivier {
 	display: none;
 	position: absolute;
-	right: 28%;
-	bottom: 38%;
-	width: 2.8vw;
-	height: 5.9vh;
+	right: 41%;
+	bottom: 58%;
+	width: 4vw;
+	height: 7vh;
+}
+
+div#bobine_olivier:hover {
+	transform: scale(1.05);
 }
 
 div#bobine_olivier:hover #play_olivier {
@@ -541,24 +573,22 @@ div#bobine_olivier:hover #play_olivier {
 
 #name_vincent {
 	position: absolute;
-	left: 21.5%;
+	left: 15%;
 	bottom: 5%;
-	color: #502C51;
+	color: #512C51;
 	font-family: "Zilla Slab";
 	font-size: 2.1vw;
 	font-weight: 500;
-	text-decoration: underline;
 }
 
 #name_olivier {
 	position: absolute;
-	right: 21.5%;
+	right: 13%;
 	bottom: 5%;
-	color: #502C51;
+	color: #512C51;
 	font-family: "Zilla Slab";
 	font-size: 2.1vw;
 	font-weight: 500;
-	text-decoration: underline;
 }
 
 #enregistrement {
@@ -603,6 +633,27 @@ h1 .h1_highlight {
 	height: 2px;
 	width: 11vw;
 	border: 0.20vh solid #FFFFFF;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+}
+
+.separator_2 {
+	box-sizing: border-box;
+	height: 2px;
+	width: auto;
+	border: 0.20vh solid #512C51;
+	background-color: #512C51;
+	border-radius: 10px;
+	margin-top: 0.5vh;
+	margin-bottom: 0.5vh;
+}
+
+.separator_3 {
+	box-sizing: border-box;
+	height: 0.5px;
+	width: auto;
+	border: 0.20vh solid #512C51;
+	background-color: #512C51;
 	border-radius: 10px;
 }
 
@@ -615,7 +666,7 @@ h1 .h1_highlight {
 	font-family: "Ubuntu";
 	font-weight: 400;
 	font-size: 1.3vw;
-	font-weight: 500;
+	font-style: italic;
 	letter-spacing: 0.11px;
 	line-height: 3.7vh;
 }
@@ -629,13 +680,14 @@ h1 .h1_highlight {
 	border-radius: 10px;
 	background-color: #FFFFFF;
 	vertical-align: top;
-	padding-left: 3vw;
-	padding-top: 1.5vh;
+	padding-left: 2vw;
+	padding-top: 1.8vh;
 	line-height: 2.8vh;
 }
 
 #enregistrement_info p {
 	width: 22vw;
+	margin: 0 0 0 0;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -705,7 +757,6 @@ h1 .h1_highlight {
 
 .micro_hover:hover {
 	transform: scale(1.5);
-	cursor: pointer;
 	transition: all .3s linear;
 }
 
@@ -749,7 +800,7 @@ h1 .h1_highlight {
 #micro_reunion {
 	position: absolute;
 	left: 10%;
-	bottom: 14%;
+	bottom: 18%;
 	height: 44.5vh;
 	width: 20.1vw;
 }
@@ -757,7 +808,7 @@ h1 .h1_highlight {
 #micro_reunion_bouton_periode_1 {
 	position: absolute;
 	left: 13%;
-	bottom: 16%;
+	bottom: 20%;
 	height: 4.8vh;
 	width: 4.1vw;
 	cursor: pointer;
@@ -766,7 +817,7 @@ h1 .h1_highlight {
 #micro_reunion_bouton_periode_2 {
 	position: absolute;
 	left: 17.9%;
-	bottom: 15%;
+	bottom: 19%;
 	height: 4.8vh;
 	width: 4.1vw;
 	cursor: pointer;
@@ -775,7 +826,7 @@ h1 .h1_highlight {
 #micro_reunion_bouton_periode_3 {
 	position: absolute;
 	left: 23%;
-	bottom: 16%;
+	bottom: 20%;
 	height: 4.8vh;
 	width: 4.1vw;
 	cursor: pointer;
@@ -784,7 +835,7 @@ h1 .h1_highlight {
 #micro_reunion_periode_1 {
 	position: absolute;
 	left: 13.5%;
-	bottom: 7%;
+	bottom: 11%;
 	height: 4.8vh;
 	width: 4.1vw;
 }
@@ -792,7 +843,7 @@ h1 .h1_highlight {
 #micro_reunion_periode_2 {
 	position: absolute;
 	left: 18.5%;
-	bottom: 7%;
+	bottom: 11%;
 	height: 4.8vh;
 	width: 4.1vw;
 }
@@ -800,7 +851,7 @@ h1 .h1_highlight {
 #micro_reunion_periode_3 {
 	position: absolute;
 	left: 23.5%;
-	bottom: 7%;
+	bottom: 11%;
 	height: 4.8vh;
 	width: 4.1vw;
 }
@@ -827,13 +878,13 @@ h1 .h1_highlight {
 #separator_v1 {
 	position: absolute;
 	left: 12%;
-	bottom: 2%;
+	bottom: 6%;
 }
 
 #separator_v2 {
 	position: absolute;
 	left: 17%;
-	bottom: 2%;
+	bottom: 6%;
 }
 
 .separator_vertical {

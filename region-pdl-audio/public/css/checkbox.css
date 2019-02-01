@@ -1,66 +1,73 @@
 .checkbox {
-    display: inline-block;
-}
-
-.checkbox label {
-    font-family: "Ubuntu";
-    color: #512C51;
-    font-weight: 400;
-    font-size: 1.4vw;
-    text-align: top;
-}
-
-.checkbox label:after, .radio label:after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-.checkbox .cr, .radio .cr {
-    position: relative;
-    display: inline-block;
-    background-color: #FFFFFF;
-    border-radius: .25em;
-    width: 1.9vw;
-    height: 3.3vh;
-    float: left;
-    margin-right: .5em;
-}
-
-.radio .cr {
-    border-radius: 50%;
-}
-
-.checkbox .cr .cr-icon, .radio .cr .cr-icon {
-    position: absolute;
-    font-size: .8em;
-    line-height: 0;
-    top: 50%;
-    left: 20%;
-}
-
-.radio .cr .cr-icon {
-    margin-left: 0.04em;
-}
-
-.checkbox label input[type="checkbox"], .radio label input[type="radio"] {
     display: none;
 }
 
-.checkbox label input[type="checkbox"]+.cr>.cr-icon, .radio label input[type="radio"]+.cr>.cr-icon {
-    transform: scale(5) rotateZ(-20deg);
-    opacity: 0;
-    transition: all .3s ease-in;
-}
-
-.checkbox label input[type="checkbox"]:checked+.cr>.cr-icon, .radio label input[type="radio"]:checked+.cr>.cr-icon {
-    transform: scale(1) rotateZ(0deg);
-    opacity: 1;
+.checkbox+.label_cb {
+    float: left;
+    font-family: "Ubuntu";
+    font-weight: 400;
+    font-size: 1.2vw;
+    position: relative;
+    cursor: pointer;
     color: #512C51;
+    line-height: 30px;
+    padding-top: 3px;
+    user-select: none;
 }
 
-.checkbox label input[type="checkbox"]:disabled+.cr, .radio label input[type="radio"]:disabled+.cr {
-    opacity: .5;
-    color: #512C51;
+.checkbox+.label_cb:hover, .checkbox:checked+.label_cb {
+    color: rgba(81, 44, 81, 0.699);
 }
 
+.checkbox+.label_cb:before {
+    content: "";
+    display: inline-block;
+    width: 1.6vw;
+    height: 3vh;
+    background: #fff;
+    border-color: #512C51;
+    border-style: solid;
+    box-sizing: border-box;
+    vertical-align: middle;
+    margin: -4px 10px 0;
+    transition: all .5s ease;
+}
+
+#periode_1+.label_cb:before {
+    background: #BA4A5C;
+}
+
+#periode_2+.label_cb:before {
+    background: #F4B483;
+}
+
+#periode_3+.label_cb:before {
+    background: #5DB77B;
+}
+
+#periode_nr+.label_cb:before {
+    background: #627075;
+}
+
+.checkbox[type='radio']+.label_cb:before {
+    border-radius: 100%;
+}
+
+.checkbox+.label_cb:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0.41vw;
+    bottom: 0.78vh;
+    width: 0vw;
+    height: 0vh;
+    background: #512C51;
+    box-sizing: border-box;
+    border-radius: 100%;
+    margin: -4px 10px 0;
+}
+
+.checkbox:checked+.label_cb:after {
+    width: 0.8vw;
+    height: 1.6vh;
+}

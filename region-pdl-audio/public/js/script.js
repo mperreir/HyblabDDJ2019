@@ -4,6 +4,7 @@
 // when loading our scripts
 var selected_period_reunion = 0;
 var selected_period_type_reunion = [false, false, false];
+var k7_audio_played = [-1, -1, -1];
 
 $('#fullpage').fullpage({
     scrollingSpeed: 500,
@@ -80,11 +81,12 @@ function graph_update_audio() {
         .then(function (json) {
             var graph = document.querySelector('#graph_k7');
             var k7_div = document.createElement('div');
-            var largeur_k7 = 2;
-            var hauteur_k7 = 4.5;
+            var largeur_k7 = 2.6;
+            var hauteur_k7 = 3.3;
             var number_per_col = Math.trunc(graph.offsetHeight / Math.trunc(window.innerHeight * (hauteur_k7 / 100)));
             var number_of_col = Math.trunc(graph.offsetWidth / Math.trunc(window.innerWidth * (largeur_k7 / 100)));
             var count = 0;
+            var id_k7 = 0;
 
             function sliderInit() {
                 $('#graph_k7').slick({
@@ -96,10 +98,13 @@ function graph_update_audio() {
 
             json.audios.forEach(element => {
                 count++;
+                id_k7++;
                 var k7_img = document.createElement('img');
                 var usabled = true;
+                var periode = 0;
 
                 if (element['annee'] >= 1974 && element['annee'] < 1986) {
+                    periode = 0;
                     k7_img.setAttribute('src', 'img/k7_periode_1.svg');
                     if (!(selected_period_reunion == 0 || selected_period_reunion == 1)) {
                         k7_img.style.opacity = 0.3;
@@ -107,6 +112,7 @@ function graph_update_audio() {
                     }
                 }
                 else if (element['annee'] >= 1986 && element['annee'] < 1992) {
+                    periode = 1;
                     k7_img.setAttribute('src', 'img/k7_periode_2.svg');
                     if (!(selected_period_reunion == 0 || selected_period_reunion == 2)) {
                         k7_img.style.opacity = 0.3;
@@ -114,6 +120,7 @@ function graph_update_audio() {
                     }
                 }
                 else if (element['annee'] >= 1992 && element['annee'] <= 1994) {
+                    periode = 2;
                     k7_img.setAttribute('src', 'img/k7_periode_3.svg');
                     if (!(selected_period_reunion == 0 || selected_period_reunion == 3)) {
                         k7_img.style.opacity = 0.3;
@@ -121,6 +128,7 @@ function graph_update_audio() {
                     }
                 }
                 else if (element['annee'] == 'inconnue') {
+                    periode = 3;
                     k7_img.setAttribute('src', 'img/k7_periode_nr.svg');
                     if (!(selected_period_reunion == 0 || selected_period_reunion == 4)) {
                         k7_img.style.opacity = 0.3;
@@ -128,12 +136,95 @@ function graph_update_audio() {
                     }
                 }
 
-
                 k7_img.style.width = largeur_k7 + 'vw';
                 k7_img.style.height = hauteur_k7 + 'vh';
                 if (usabled) {
-                    k7_img.className = "k7_hover";
-                    k7_img.onclick = function () {
+                    k7_img.className = 'k7_hover';
+                    k7_img.id = 'k7_num_' + id_k7;
+                    k7_img.onmouseenter = function () {
+                        this.timer = setInterval(function () {
+                            if (k7_audio_played[1] != k7_img.id) {
+
+                                if (periode == 0) {
+                                    k7_img.setAttribute('src', 'img/k7_periode_1_play.svg');
+                                }
+                                else if (periode == 1) {
+                                    k7_img.setAttribute('src', 'img/k7_periode_2_play.svg');
+                                }
+                                else if (periode == 2) {
+                                    k7_img.setAttribute('src', 'img/k7_periode_3_play.svg');
+                                }
+                                else if (periode == 3) {
+                                    k7_img.setAttribute('src', 'img/k7_periode_nr_play.svg');
+                                }
+                            }
+
+                            k7_img.onclick = function () {
+                                if (k7_audio_played[1] != -1 && k7_audio_played[1] != k7_img.id) {
+                                    k7_audio_played[0].setAttribute('src', k7_audio_played[2]);
+                                }
+                                var new_one = !(k7_audio_played[1] == k7_img.id);
+                                k7_audio_played[0] = k7_img;
+                                k7_audio_played[1] = k7_img.id;
+                                if (periode == 0) {
+                                    k7_audio_played[2] = 'img/k7_periode_1.svg';
+                                }
+                                else if (periode == 1) {
+                                    k7_audio_played[2] = 'img/k7_periode_2.svg';
+                                }
+                                else if (periode == 2) {
+                                    k7_audio_played[2] = 'img/k7_periode_3.svg';
+                                }
+                                else if (periode == 3) {
+                                    k7_audio_played[2] = 'img/k7_periode_nr.svg';
+                                }
+
+                                var audio = document.querySelector('#audio_k7');
+                                var audio_src = document.querySelector('#audio_k7 source');
+
+                                if (new_one) {
+                                    audio_src.src = './data/' + element['reference'] + '/' + element['identifiant'];
+                                    audio.load();
+
+                                    audio_src.onerror = function () {
+                                        audio.pause();
+                                    };
+
+                                    audio.play();
+
+                                    if (periode == 0) {
+                                        k7_img.setAttribute('src', 'img/k7_periode_1_pause.svg');
+                                    }
+                                    else if (periode == 1) {
+                                        k7_img.setAttribute('src', 'img/k7_periode_2_pause.svg');
+                                    }
+                                    else if (periode == 2) {
+                                        k7_img.setAttribute('src', 'img/k7_periode_3_pause.svg');
+                                    }
+                                    else if (periode == 3) {
+                                        k7_img.setAttribute('src', 'img/k7_periode_nr_pause.svg');
+                                    }
+                                }
+                                else {
+                                    audio.pause();
+                                    k7_audio_played = [-1, -1, -1];
+                                    if (periode == 0) {
+                                        k7_img.setAttribute('src', 'img/k7_periode_1_play.svg');
+                                    }
+                                    else if (periode == 1) {
+                                        k7_img.setAttribute('src', 'img/k7_periode_2_play.svg');
+                                    }
+                                    else if (periode == 2) {
+                                        k7_img.setAttribute('src', 'img/k7_periode_3_play.svg');
+                                    }
+                                    else if (periode == 3) {
+                                        k7_img.setAttribute('src', 'img/k7_periode_nr_play.svg');
+                                    }
+                                }
+                            };
+
+                        }, 500);
+
                         var zone_info = document.querySelector('#enregistrement_info');
                         while (zone_info.firstChild) {
                             zone_info.removeChild(zone_info.firstChild);
@@ -142,91 +233,116 @@ function graph_update_audio() {
                         var parag_president = document.createElement('p');
                         var president_title = document.createElement('span');
                         var president_data = document.createElement('span');
+                        var president_separator = document.createElement('div');
                         president_title.innerHTML = 'Président : ';
                         president_title.className = 'enregistrement_title';
                         president_data.innerHTML = element['president'];
                         president_data.className = 'enregistrement_data';
+                        president_separator.className = 'separator_3';
                         parag_president.appendChild(president_title);
                         parag_president.appendChild(president_data);
+                        parag_president.appendChild(president_separator);
 
                         var parag_date = document.createElement('p');
                         var date_title = document.createElement('span');
                         var date_data = document.createElement('span');
-                        date_title.innerHTML = 'Date : ';
+                        var date_separator = document.createElement('div');
+                        date_title.innerHTML = 'Séance du : ';
                         date_title.className = 'enregistrement_title';
                         date_data.innerHTML = element['date_enregistrement'];
                         date_data.className = 'enregistrement_data';
+                        date_separator.className = 'separator_3';
                         parag_date.appendChild(date_title);
                         parag_date.appendChild(date_data);
+                        parag_date.appendChild(date_separator);
 
                         var parag_duree = document.createElement('p');
                         var duree_title = document.createElement('span');
                         var duree_data = document.createElement('span');
+                        var duree_separator = document.createElement('div');
                         duree_title.innerHTML = 'Durée : ';
                         duree_title.className = 'enregistrement_title';
                         duree_data.innerHTML = element['duree']['heure'] + ':' + element['duree']['minute'] + ':' + element['duree']['seconde'];
                         duree_data.className = 'enregistrement_data';
+                        duree_separator.className = 'separator_3';
                         parag_duree.appendChild(duree_title);
                         parag_duree.appendChild(duree_data);
+                        parag_duree.appendChild(duree_separator);
 
                         var parag_ref = document.createElement('p');
                         var ref_title = document.createElement('span');
                         var ref_data = document.createElement('span');
+                        var ref_separator = document.createElement('div');
                         ref_title.innerHTML = 'Référence : ';
                         ref_title.className = 'enregistrement_title';
                         ref_data.innerHTML = element['reference'];
                         ref_data.className = 'enregistrement_data';
+                        ref_separator.className = 'separator_3';
                         parag_ref.appendChild(ref_title);
                         parag_ref.appendChild(ref_data);
+                        parag_ref.appendChild(ref_separator);
 
                         var parag_qualite = document.createElement('p');
                         var qualite_title = document.createElement('span');
                         var qualite_data = document.createElement('span');
+                        var qualite_separator = document.createElement('div');
                         qualite_title.innerHTML = 'Qualité : ';
                         qualite_title.className = 'enregistrement_title';
                         qualite_data.innerHTML = element['qualite'] + '/10';
                         qualite_data.className = 'enregistrement_data';
+                        qualite_separator.className = 'separator_3';
                         parag_qualite.appendChild(qualite_title);
                         parag_qualite.appendChild(qualite_data);
+                        parag_qualite.appendChild(qualite_separator);
 
-                        zone_info.appendChild(parag_president);
                         zone_info.appendChild(parag_date);
+                        zone_info.appendChild(parag_president);
                         zone_info.appendChild(parag_duree);
                         zone_info.appendChild(parag_ref);
                         zone_info.appendChild(parag_qualite);
-
-                        var button_audio = document.querySelector('#info_audio_button');
-                        button_audio.style.visibility = 'visible';
+                    };
+                    k7_img.onmouseleave = function () {
+                        var zone_info = document.querySelector('#enregistrement_info');
+                        while (zone_info.firstChild) {
+                            zone_info.removeChild(zone_info.firstChild);
+                        }
+                        this.timer && clearInterval(this.timer);
 
                         var audio = document.querySelector('#audio_k7');
-                        var audio_src = document.querySelector('#audio_k7 source');
-                        audio_src.src = './data/' + element['reference'] + '/' + element['identifiant'];
-                        audio.load();
-
-                        audio.addEventListener("pause", function () {
-                            button_audio.className = "";
-                            button_audio.className = "play";
-                        });
-
-                        audio.addEventListener("play", function () {
-                            button_audio.className = "";
-                            button_audio.className = "pause";
-                        });
-
-                        audio_src.onerror = function () {
-                            audio.pause();
-                            button_audio.style.visibility = 'hidden';
-                        };
-
-                        button_audio.onclick = function () {
-                            if (audio.paused) {
-                                audio.play();
-                            } else {
-                                audio.pause();
+                        if (audio.paused) {
+                            if (periode == 0) {
+                                k7_img.setAttribute('src', 'img/k7_periode_1.svg');
                             }
-                        };
-                        audio.play();
+                            else if (periode == 1) {
+                                k7_img.setAttribute('src', 'img/k7_periode_2.svg');
+                            }
+                            else if (periode == 2) {
+                                k7_img.setAttribute('src', 'img/k7_periode_3.svg');
+                            }
+                            else if (periode == 3) {
+                                k7_img.setAttribute('src', 'img/k7_periode_nr.svg');
+                            }
+                        }
+                        else {
+                            if (k7_audio_played[1] != k7_img.id) {
+
+                                if (periode == 0) {
+                                    k7_img.setAttribute('src', 'img/k7_periode_1.svg');
+                                }
+                                else if (periode == 1) {
+                                    k7_img.setAttribute('src', 'img/k7_periode_2.svg');
+                                }
+                                else if (periode == 2) {
+                                    k7_img.setAttribute('src', 'img/k7_periode_3.svg');
+                                }
+                                else if (periode == 3) {
+                                    k7_img.setAttribute('src', 'img/k7_periode_nr.svg');
+                                }
+                            }
+                        }
                     };
+
+
                 }
 
                 k7_div.appendChild(k7_img);
@@ -251,7 +367,6 @@ function graph_update_reunion() {
             console.log(error);
         })
         .then(function (json) {
-            console.log(json);
             var graph = document.querySelector('#graph_k7');
             var micro_div = document.createElement('div');
             var largeur_micro = 4;
@@ -308,7 +423,7 @@ function graph_update_reunion() {
                 micro_img.style.marginBottom = margin_bottom + 'vh';
                 if (usabled) {
                     micro_img.className = "micro_hover";
-                    micro_img.onclick = function () {
+                    micro_img.onmouseenter = function () {
                         var zone_info = document.querySelector('#enregistrement_info');
                         while (zone_info.firstChild) {
                             zone_info.removeChild(zone_info.firstChild);
@@ -317,59 +432,80 @@ function graph_update_reunion() {
                         var parag_president = document.createElement('p');
                         var president_title = document.createElement('span');
                         var president_data = document.createElement('span');
+                        var president_separator = document.createElement('div');
                         president_title.innerHTML = 'Président : ';
                         president_title.className = 'enregistrement_title';
                         president_data.innerHTML = element['president'];
                         president_data.className = 'enregistrement_data';
+                        president_separator.className = 'separator_3';
                         parag_president.appendChild(president_title);
                         parag_president.appendChild(president_data);
+                        parag_president.appendChild(president_separator);
 
                         var parag_date = document.createElement('p');
                         var date_title = document.createElement('span');
                         var date_data = document.createElement('span');
-                        date_title.innerHTML = 'Date : ';
+                        var date_separator = document.createElement('div');
+                        date_title.innerHTML = 'Séance : ';
                         date_title.className = 'enregistrement_title';
                         date_data.innerHTML = element['date'];
                         date_data.className = 'enregistrement_data';
+                        date_separator.className = 'separator_3';
                         parag_date.appendChild(date_title);
                         parag_date.appendChild(date_data);
+                        parag_date.appendChild(date_separator);
 
                         var parag_objet = document.createElement('p');
                         var objet_title = document.createElement('span');
                         var objet_data = document.createElement('span');
+                        var objet_separator = document.createElement('div');
                         objet_title.innerHTML = 'Objet : ';
                         objet_title.className = 'enregistrement_title';
                         objet_data.innerHTML = element['objet_general'];
                         objet_data.className = 'enregistrement_data';
+                        objet_separator.className = 'separator_3';
                         parag_objet.appendChild(objet_title);
                         parag_objet.appendChild(objet_data);
+                        parag_objet.appendChild(objet_separator);
 
                         var parag_nb_audio = document.createElement('p');
                         var nb_audio_title = document.createElement('span');
                         var nb_audio_data = document.createElement('span');
+                        var nb_audio_separator = document.createElement('div');
                         nb_audio_title.innerHTML = "Nombre d'audios : ";
                         nb_audio_title.className = 'enregistrement_title';
                         nb_audio_data.innerHTML = element['nb_audio'];
                         nb_audio_data.className = 'enregistrement_data';
+                        nb_audio_separator.className = 'separator_3';
                         parag_nb_audio.appendChild(nb_audio_title);
                         parag_nb_audio.appendChild(nb_audio_data);
+                        parag_nb_audio.appendChild(nb_audio_separator);
 
                         var parag_duree = document.createElement('p');
                         var duree_title = document.createElement('span');
                         var duree_data = document.createElement('span');
+                        var duree_separator = document.createElement('div');
                         duree_title.innerHTML = 'Durée : ';
                         duree_title.className = 'enregistrement_title';
                         duree_data.innerHTML = element['duree']['heure'] + ':' + element['duree']['minute'].toString().padStart(2, '0') + ':' + element['duree']['seconde'].toString().padStart(2, '0');
                         duree_data.className = 'enregistrement_data';
+                        duree_separator.className = 'separator_3';
                         parag_duree.appendChild(duree_title);
                         parag_duree.appendChild(duree_data);
+                        parag_duree.appendChild(duree_separator);
 
-                        zone_info.appendChild(parag_president);
                         zone_info.appendChild(parag_date);
+                        zone_info.appendChild(parag_president);
                         zone_info.appendChild(parag_objet);
                         zone_info.appendChild(parag_nb_audio);
                         zone_info.appendChild(parag_duree);
                     };
+                    micro_img.onmouseleave = function () {
+                        var zone_info = document.querySelector('#enregistrement_info');
+                        while (zone_info.firstChild) {
+                            zone_info.removeChild(zone_info.firstChild);
+                        }
+                    }
                 }
                 micro_div.appendChild(micro_img);
                 if (count == number_per_col) {
@@ -404,7 +540,7 @@ function graph_audio_reunion(id) {
     audio_src.src = '';
 
 
-    var cb_audio = document.querySelector('#cb_audio');
+    /*var cb_audio = document.querySelector('#cb_audio');
     var cb_reunion = document.querySelector('#cb_reunion');
     if (cb_audio.checked == true && id == "cb_audio") {
         cb_reunion.checked = false;
@@ -412,7 +548,7 @@ function graph_audio_reunion(id) {
 
     if (cb_reunion.checked == true && id == "cb_reunion") {
         cb_audio.checked = false;
-    }
+    }*/
 
     if (cb_audio.checked == true) {
         graph_update_audio();
@@ -524,7 +660,7 @@ function generateBarGraph(wrapper) {
         var number = this.querySelector('.number');
         number.style.left = percent + '%';
     });
-    
+
 }
 
 // Récupération des infos sur les réunions
@@ -537,7 +673,6 @@ function graph_update_type_reunion() {
             console.log(error);
         })
         .then(function (json) {
-            console.log(json);
             var data = {};
             var nb_type = 0;
             if (selected_period_type_reunion[0]) {
@@ -643,6 +778,27 @@ function graph_type_reunion_filter(id) {
         image.src = 'img/bouton_micro_off.svg';
     }
     graph_update_type_reunion();
+}
+
+function info_president_display(id) {
+    var element = '';
+    if (id == 'bobine_olivier') {
+        element = document.querySelector('#info_olivier');
+    }
+    else if (id == 'bobine_vincent') {
+        element = document.querySelector('#info_vincent');
+    }
+    element.style.display = 'block';
+}
+function info_president_undisplay(id) {
+    var element = '';
+    if (id == 'bobine_olivier') {
+        element = document.querySelector('#info_olivier');
+    }
+    else if (id == 'bobine_vincent') {
+        element = document.querySelector('#info_vincent');
+    }
+    element.style.display = 'none';
 }
 
 graph_update_audio();
