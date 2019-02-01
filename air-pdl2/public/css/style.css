@@ -28,16 +28,34 @@ section {
     height: 100%;
 }
 
-#item1{
+.item12{
     background: url(../img/bg.png) no-repeat center;
     background-size:cover;
     height:100%;
 }
 
-#item2{
-    background: url(../img/bg.png) no-repeat center;
+.itemq{
+    background: url(../img/bg_questions.png) no-repeat center;
     background-size:cover;
-    height:100%;
+    heigth:100%;
+}
+
+#choix-endroit{
+    background: url(../img/choix_endroit.png) no-repeat center;
+    background-size:cover;
+    heigth:100%;
+}
+
+#conseils{
+    background: url(../img/conseils.png) no-repeat center;
+    background-size:cover;
+    heigth:100%;
+}
+
+#equipe{
+    background: url(../img/equipe.png) no-repeat center;
+    background-size:cover;
+    heigth:100%;
 }
 
 .carousel {
@@ -80,51 +98,188 @@ section {
     float:right;
 }
 
-.questions {
+#arbre-vert-rond{
     position: absolute;
-    width:20%;
-    height: 6%;
-    right: 5%;
-    top:30%;
+    top:67%;
+    left:54.2%;
+    height:22%;
 }
 
-.boutonOui a{
+#arbre-vert-droit{
     position: absolute;
-    right:20%;
-    top:50%;
-    overflow: hidden;
+    top:35%;
+    left: 48%;
+    height:52.5%;
 }
 
-.boutonNon a{
+#arbre-rose{
     position: absolute;
-    right:5%;
-    top:50%;
-    overflow: hidden;
+    top:52.3%;
+    left:54.7%;
+    height:40%;
+}
+
+#q1{
+    position: relative;
+    left:35%;
+}
+
+#q2{
+    position: relative;
+    left:35%;
+}
+
+#q3{
+    position: relative;
+    left:35%;
+}
+
+#imageQ3{
+    width:75%;
+}
+
+.boutons{
+    position:relative;
+    top:50px;
+}
+
+.choixQ2{
+    height:48px;
+    width:210px;
+}
+
+.choixQ3{
+    height:48px;
+    max-width:500px;
+}
+
+.remarques{
+    position:relative;
+    top:50px;
+    color: #AC0759;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 2.27px;
+    line-height: 27px;
+}
+
+.reponses {
+    position: relative;
+    top: 100px;
+}
+
+.nextQ {
+    position: absolute;
+    bottom:5%;
+    right: 0;
+}
+
+.icon {
+    font: normal normal normal 16px/1 FontAwesome;
+    font-size: 50px;
+    text-rendering: auto;
+    color: #AC0759;
+    float: right;
+}
+.icon:before {
+    content: "\f0a9";
+}
+
+#espace-questions{
+    position: absolute;
+    right:10%;
+    top:40%;
+    left:60%;
+    bottom:10%;
+}
+
+.calque{
+    position:absolute;
+    bottom:-100%;
+    width:100%;
+}
+
+#boutonOui a{
+    position: relative;
+    top: 10%;
+    left:10%;
+    float: left;
+}
+
+#boutonNon a{
+    position: relative;
+    top: 10%;
+    left:20%;
+}
+
+#chauffage a{
+    position: relative;
+    float: left;
+}
+
+#electricite a{
+    position:relative;
+    left:5%;
+}
+
+#vehicules a{
+    position:relative;
+    top:10px;
+    float: left;
+}
+
+#les-trois a{
+    position:relative;
+    top:10px;
+    left:5%;
+}
+
+#environnement a{
+    position:relative;
+    top:10px;
+}
+
+#les-deux a{
+    position:relative;
+    top:20px;
 }
 
 #rural{
-    position: absolute;
-    left: 25%;
-    top: 36%;
+    position: relative;
+    left: 18%;
+    top: 38%;
+}
+
+#image-rural{
+    height:300px;
 }
 
 #ville{
-    position: absolute;
-    left:44.5%;
-    top:35%;
+    position: relative;
+    left:30%;
+    top: 38%;
 }
 
 #trafic{
-    position: absolute;
-    right: 25%;
-    top:38%;
+    position: relative;
+    left:42%;
+    top: 38%;
 }
 
 #perso {
     position: absolute;
     bottom: 5%;
     left: 10.4%;
-    height: 15%;
+    height: 25%;
+    width: auto;
+}
+
+#perso2 {
+    position: absolute;
+    bottom: 5%;
+    left: 10.4%;
+    height: 25%;
     width: auto;
 }
 
@@ -132,7 +287,7 @@ section {
     position: absolute;
     bottom: 5%;
     right: 20%;
-    height: 15%;
+    height: 20%;
     width: auto;
 }
 

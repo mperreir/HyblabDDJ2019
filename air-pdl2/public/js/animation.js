@@ -1,8 +1,8 @@
 
-
 var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
 var currentIndex = $('div.active').index() + 1;
+
 $('#carousel-example-generic').on('slid.bs.carousel', function() {
     currentIndex = $('div.active').index() + 1;
 
@@ -17,6 +17,8 @@ $('#carousel-example-generic').on('slid.bs.carousel', function() {
             function(){
             $('#voiture').addClass('animated bounce').one(animationend,
                 function(){
+                    $('#perso').hide();
+                    $('#perso2').show();
                     $(this).addClass('animated bounceOutRight');
                     $('#nuage').addClass('animated zoomIn').one(animationend,
                         function(){
@@ -29,6 +31,16 @@ $('#carousel-example-generic').on('slid.bs.carousel', function() {
 
     if(currentIndex===3) {
         $('#nuage').addClass('translate2');
+        $('#voiture').hide();
+    }
+
+    if(currentIndex===4){
+        $('#voiture').hide();
+    }
+
+    if(currentIndex===5){
+        $('#perso').hide();
+        $('#voiture').hide();
     }
 });
 
