@@ -159,18 +159,23 @@ width: 100%;
 }
 
 #Pictos{
-  /*display: inline-block;*/
+
+  position: absolute;
+  width: 100%;
+  margin-left: 7%;
 }
 
 .picto{
-  display: inline-block;
   width: 4%;
   margin-left: 2%;
   margin-right: 2%;
-  margin-top: 1%;
   cursor: pointer;
+  display: block;
+  margin-bottom: 2%;
 }
-
+#maison{
+  margin-top: -6%;
+}
 /* DIAPO 3*/
 canvas{
   margin: auto;
@@ -183,52 +188,76 @@ canvas{
 .affichageGraphique{
   width: 48%;
   display: inline-block;
-
+  position: relative;
 }
 #section3{
   background-color: #60BEEC;
 }
-#bleu{
-  z-index: 100;
-  position: relative;
-  /*top: -9%;*/
-  /*left:47%;*/
-  cursor: move;
-  /*width: 6%;*/
-}
+
 .containerButtonPays{
   position: absolute;
-  top:-20%;
+  top:-5%;
   display: inline-block;
   width: 100%;
 }
 #partieGauche{
   position: relative;
   display: inline-block;
-  width: 48%;
-  padding-left: 9%;
+  width: 60%;
+  margin-left: 17%;
+
 }
 #partieDroite{
+  /*position: absolute;*/
+  top:100%;
   display: inline-block;
-  width: 48%;
-  margin-left: -2%;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 6%;
 }
 #jaune{
   z-index: 100;
-  position: relative;
+  position: absolute;
   /*top: -9%;*/
   /*left:70%;*/
   cursor: move;
-  /*width: 6%*/
+  width: 5%;
+  top: 100%;
+  left: 21.5%;
 }
-
+#rouge{
+  z-index: 100;
+  position: relative;
+  /*top: -9%;*/
+  /*left:47%;*/
+  cursor: move;
+  width: 9%;
+  left: 30%;
+}
 .containerSliderPays{
   width: 600px;
   position: relative;
   margin: auto;
-  margin-top: 15%;
+  margin-top: 5%;
 }
-
+#sliderPays{
+  width: 70%;
+  margin:auto;
+  display: block;
+}
+.contenuCentre{
+  position: absolute;
+  z-index: 100;
+  text-align: center;
+  /*top: 40%;
+  left: 50%;*/
+}
+#valeurRouge{
+  position: relative;
+}
+h4{
+  text-align: center;
+}
 /* DIAPO 4*/
 
 #section4{
