@@ -27,32 +27,7 @@ function charger_donnees(lien){
       });
     }
 
-//Fonction pour remplir les maps avec les infos des fichiers récupérés
-async function construire_map(map, folder, lien, indice) {
-  let liste_interne = await charger_donnees(lien);
-  liste_interne.forEach(function(element) {
-    fetch(folder + element[indice] + '.json')
-    .then(function (response) {
-      if( response.ok )
-        return response.json();
-      else
-        return {data: "JSON file not found"};
-    })
-    .then( function (json) {
-      map.set(element[indice], json);
-        // Ajouter de l'affichage ici
-      })
-    .catch( function (error) {
-      return {data: "Invalid JSON"};
-    })
-  });
-}
-
 async function en_avant_toute(){
-  /* Création des maps contenant les données */
-  await construire_map(map_circuits, 'data/trace-circuit-json/', 'nom-circuit', 'nom circuit');
-  await construire_map(map_lieux, 'data/trace-lieux-json/', 'nom-lieux', 'nom lieu');
-  /* Mise a jour de l'affichage */
   document.getElementById("accueil").style.display="none";
   document.getElementById("presentation").style.display="block";
   document.getElementById("leon_mov").currentTime = 0;
@@ -79,18 +54,6 @@ function click_curseur_dist(x) {
   document.getElementById("distance").value = x ;
   actualiser_dist();
 }
-
-document.getElementById("distance").value=20;
-document.getElementById("num_theme").value=2;
-var nb = document.getElementById("distance").value;
-document.getElementById("val").innerHTML = Math.round(nb*10) /10;
-actualiser_decor();
-document.getElementById("hotspot-checkbox").checked=false;
-document.getElementById("culturels-checkbox").checked=false;
-document.getElementById("toilettes-checkbox").checked=false;
-document.getElementById("office-checkbox").checked=false;
-document.getElementById("bars-checkbox").checked=false;
-document.getElementById("restaurants-checkbox").checked=false;
 
 function actualiser_dist() {
   var nb = document.getElementById("distance").value;
@@ -199,3 +162,15 @@ function modif_checkbox(element){
   else
     document.getElementById(element).style.zIndex="1";
 }
+
+
+document.getElementById("distance").value=20;
+document.getElementById("num_theme").value=2;
+document.getElementById("val").innerHTML = 20;
+document.getElementById("hotspot-checkbox").checked=false;
+document.getElementById("culturels-checkbox").checked=false;
+document.getElementById("toilettes-checkbox").checked=false;
+document.getElementById("office-checkbox").checked=false;
+document.getElementById("bars-checkbox").checked=false;
+document.getElementById("restaurants-checkbox").checked=false;
+actualiser_decor();
