@@ -1,5 +1,17 @@
 'use strict';
 
+var mySVGsToInject = document.querySelectorAll('.circuit');
+console.log(mySVGsToInject);
+
+// Trigger the injection
+SVGInjector(mySVGsToInject, null, function(){
+  console.log("addEvent");
+  document.querySelector("#Itineraire_2").addEventListener("click", function(){ console.log("hover"); });
+});
+
+
+
+
 // Map des circuits et des lieux
 var map_circuits = new Map();
 var map_lieux = new Map();
@@ -103,7 +115,7 @@ function c_est_parti(){
   .then(function(value){
     value.forEach(function(element){
       var numero = element["numero"];
-      document.getElementById("circuit-0" + numero).style.display="block";
+      document.getElementById("Itineraire_" + numero).style.display="block";
       nb_circuit = nb_circuit + 1;
     })
 
@@ -147,10 +159,19 @@ function selection_circuit(distance, theme){
     distance = parseInt(distance);
     var liste_circuit_selection_interne = [];
     value.forEach(function(element){
+      document.getElementById("Itineraire_" + element["numero"]).style.display="none";
       if (element["distance_en_km"] <= distance && element["theme"].includes(theme)){
         liste_circuit_selection_interne.push(element);
       }
     });
+    document.getElementById("Wifi").style.display="none";
+    document.getElementById("Musees").style.display="none";
+    document.getElementById("Toilettes").style.display="none";
+    document.getElementById("Offices_du_tourisme").style.display="none";
+    document.getElementById("Bars").style.display="none";
+    document.getElementById("Restaurants").style.display="none";
+    document.getElementById("Decors").style.display="none";
+    document.getElementById("circuits").style.display="block";
     return liste_circuit_selection_interne
   });
 }
@@ -162,7 +183,6 @@ function modif_checkbox(element){
   else
     document.getElementById(element).style.zIndex="1";
 }
-
 
 document.getElementById("distance").value=20;
 document.getElementById("num_theme").value=2;
