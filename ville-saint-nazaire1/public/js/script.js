@@ -55,6 +55,7 @@ async function en_avant_toute(){
   /* Mise a jour de l'affichage */
   document.getElementById("accueil").style.display="none";
   document.getElementById("presentation").style.display="block";
+  document.getElementById("leon_mov").currentTime = 0;
 }
 
 function d_accord(){
@@ -82,6 +83,10 @@ function click_curseur_dist(x) {
 var nb = document.getElementById("distance").value;
 document.getElementById("val").innerHTML = Math.round(nb*10) /10;
 actualiser_decor();
+document.getElementById("hotspot-checkbox").checked=false;
+document.getElementById("culturels-checkbox").checked=false;
+document.getElementById("toilettes-checkbox").checked=false;
+document.getElementById("office-checkbox").checked=false;
 
 function actualiser_dist() {
   var nb = document.getElementById("distance").value;
@@ -122,8 +127,9 @@ function c_est_parti(){
   var dist = document.getElementById("distance").value;
   var num_theme = document.getElementById("num_theme").value;
   var theme = document.getElementById("theme").getElementsByTagName("li")[3-num_theme].innerHTML;
-  
+
   document.getElementById("page_carte").style.display="block";
+  document.getElementById("carte_generale").style.display="block";
   //console.log(theme);
   var nb_circuit = 0;
   selection_circuit(dist, theme)
@@ -168,25 +174,10 @@ function selection_circuit(distance, theme){
   });
 }
 
-function modif_checkbox(){
-  var form = document.getElementById("choix_lieu");
-  if (form.hotspot.checked)
-    document.getElementById("hotspot").style.display="block";
+function modif_checkbox(element){
+  var checkbox = document.getElementById(element+"-checkbox");
+  if (checkbox.checked)
+    document.getElementById(element).style.zIndex="4";
   else
-    document.getElementById("hotspot").style.display="none";
-
-  if (form.office.checked)
-    document.getElementById("office").style.display="block";
-  else
-    document.getElementById("office").style.display="none";
-
-  if (form.culturels.checked)
-    document.getElementById("culturels").style.display="block";
-  else
-    document.getElementById("culturels").style.display="none";
-
-  if (form.toilettes.checked)
-    document.getElementById("toilettes").style.display="block";
-  else
-    document.getElementById("toilettes").style.display="none";
+    document.getElementById(element).style.zIndex="1";
 }

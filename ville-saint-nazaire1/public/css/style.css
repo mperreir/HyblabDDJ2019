@@ -50,7 +50,7 @@ body{
 }
 
 #bouton_accueil{
-  top : 92%;
+  top : 88%;
   left: 80%;
   height: 55px;
   width: 209px;
@@ -241,6 +241,7 @@ input[type="range"] {
   position: relative;
   top: 2px;
 }
+/* A faire pour les autres navigateurs */
 
 input[type=range]::-moz-range-thumb {
   -webkit-appearance: none;
@@ -333,11 +334,12 @@ input[type=range]::-moz-range-track {
   width:auto;
   left:0%;
   position:absolute;
-  z-index: 1;
+  z-index: 2;
+  display:none;
 }
 
 .circuit{
-  z-index:2;
+  z-index:3;
   height:100vh;
   width:auto;
   position:absolute;
@@ -346,12 +348,12 @@ input[type=range]::-moz-range-track {
 }
 
 .lieu{
-  z-index:3;
+  z-index:1;
   height:100vh;
   width:auto;
   position:absolute;
   left:0%;
-  display:none;
+  /* display:none; */
 }
 
 #choix_lieu{
@@ -367,7 +369,7 @@ input[type=range]::-moz-range-track {
 .checkbox_lieu{
   left:0%;
   margin-left: 0%;
-  text-align: left; 
+  text-align: left;
 }
 
 legend{
