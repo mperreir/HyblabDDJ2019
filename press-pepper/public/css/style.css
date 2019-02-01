@@ -17,8 +17,16 @@ header img{
 	padding-top : 25px;
 	height: 550px;
 	width: 800px;
+	margin-right:2%;
+    float: left;
  }
- 
+ #filtres {
+ 	padding-top : 25px;
+ 	max-width : 200px;
+ }
+ #filtres a{
+ 	display: block;
+ }
  
  .logo .hover
  {
