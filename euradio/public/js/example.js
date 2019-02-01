@@ -124,32 +124,38 @@ fetch('data/dummy.json')
         voiture =voiture2;
         reseau =reseau2;
         if (maison) {
-          document.getElementById('maison').src="img/Picto/Picto maison - blanc.png"
+          document.getElementById('maison').src="img/Picto/Picto maison - blanc.png";
+          document.getElementById('critere').innerHTML="TAUX D’ÉQUIPEMENT EN RÉCEPTEURS DAB/DAB+";
         }else{
           document.getElementById('maison').src="img/Picto/Picto maison - bleu.png"
         }
         if (radio) {
-          document.getElementById('radio').src="img/Picto/Picto radio - blanc.png"
+          document.getElementById('radio').src="img/Picto/Picto radio - blanc.png";
+          document.getElementById('critere').innerHTML="DAB/DAB+ : COUVERTURE ROUTIÈRE";
         }else{
           document.getElementById('radio').src="img/Picto/Picto radio - bleu.png"
         }
         if (recepteur) {
-          document.getElementById('recepteur').src="img/Picto/Picto recepteur - blanc.png"
+          document.getElementById('recepteur').src="img/Picto/Picto recepteur - blanc.png";
+          document.getElementById('critere').innerHTML="NOMBRE DE STATIONS NATIONALES DIFFUSANT EN DAB/DAB+ ET EN FM";
         }else{
           document.getElementById('recepteur').src="img/Picto/Picto recepteur - bleu.png"
         }
         if (route) {
-          document.getElementById('route').src="img/Picto/Picto route - blanc.png"
+          document.getElementById('route').src="img/Picto/Picto route - blanc.png";
+          document.getElementById('critere').innerHTML="DAB/DAB+ : COUVERTURE ROUTIÈRE";
         }else{
           document.getElementById('route').src="img/Picto/Picto route - bleu.png"
         }
         if (voiture) {
           document.getElementById('voiture').src="img/Picto/Picto voiture - blanc.png"
+          document.getElementById('critere').innerHTML="NOUVEAUX VÉHICULES INTÉGRANTS LE DAB+";
         }else{
           document.getElementById('voiture').src="img/Picto/Picto voiture - bleu.png"
         }
         if (reseau) {
           document.getElementById('reseau').src="img/Picto/Picto couverture-reseaux-blanc.png"
+          document.getElementById('critere').innerHTML="ÉTENDUE DE LA COUVERTURE DU RÉSEAU DAB/DAB+";
         }else{
           document.getElementById('reseau').src="img/Picto/Picto couverture-reseaux-bleu.png"
         }
@@ -221,7 +227,7 @@ function affichageGraphique(data,val1,val2){
         data: [data[valJaune]["valeur"],100-data[valJaune]["valeur"]],
         backgroundColor: ['rgba(252, 233, 55, 1)','rgba(252, 233, 55, 0)'], // green
         borderColor:['rgba(252, 233, 55, 1)','rgba(252, 233, 55, 1)'],
-        borderWidth:2
+        borderWidth:5
 
       }],
 
@@ -262,7 +268,7 @@ function affichageGraphique(data,val1,val2){
         data: [data[valJaune]["valeur"],100-data[valJaune]["valeur"]],
         backgroundColor: ['rgba(230, 55, 75, 1)','rgba(230, 55, 75, 0)'], // green
         borderColor:['rgba(230, 55, 75, 1)','rgba(230, 55, 75, 1)'],
-        borderWidth:2
+        borderWidth:5
 
       }],
 
