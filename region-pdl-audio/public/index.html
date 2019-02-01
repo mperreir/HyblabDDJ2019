@@ -15,9 +15,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,700|Zilla+Slab:300,400,500,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,700|Zilla+Slab:300,400,500,600,700">
   <link rel="stylesheet" href="css/checkbox.css">
   <link rel="stylesheet" href="css/dropdown.css">
+  <link rel="stylesheet" href="css/barchart.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- Those polyfills are required so that old browsers support fetch mecanism -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer></script>
@@ -68,13 +69,23 @@
     </div>
     <div class="section" id="welcome">
       <div id="welcome_left" class="welcome_block">
-        <img id="hemicycle_img" src="img/hemicycle.jpg" alt="Hémicycle" />
-        <p id="description_conseil_regional">
-          Le conseil régional a vu le jour dès 1974, et est devenu une collectivité territoriale après la
+        <p id="conseil_regional_title">Le conseil régional</p>
+        <p id="description_conseil_regional_partie_1">
+          a vu le jour dès <b>1974</b>, et est devenu une collectivité territoriale après la
           décentralisation des pouvoirs en 1982.
           Les archives sonores des Pays de la Loire rassemblent les enregistrements des réunions des conseils régionaux
           entre <span id="date_min"></span> et <span id="date_max"></span>.
-          En 20 ans, <span id="nb_reunion"></span> réunions ont été organisées.
+        </p>
+        <img id="hemicycle_img" src="img/hemicycle.jpg" alt="Hémicycle" />
+        <p id="legende_img_hemicycle">
+          Photo de l’hémicycle - Archives régionales des Pays de la Loire
+        </p>
+        <p id="description_conseil_regional_partie_2">
+          Les archives sonores se découpent en <b>trois périodes</b> :
+          l’époque où la région n’était pas encore considérée comme une collectivité territoriale (1974-1986),
+          suivi par le premier mandat après la prise en fonction effective de la loi sur la décentralisation de 1986 à
+          1992,
+          puis le second mandat en 1992 après l’élection d’une nouvelle assemblée.
         </p>
       </div>
       <div id="welcome_right" class="welcome_block">
@@ -83,7 +94,8 @@
           <span id="duree_audio"></span> minutes
         </div>
         <div id="description_archive_nb_audio">
-          <span id="nb_fichier_audio"></span> bandes magnétiques
+          <img id="bande_magnetique" src="img/bande_magnetique.svg" alt="Bande magnétique" />
+          <span class="nb_fichier_audio"></span> bandes magnétiques
         </div>
       </div>
     </div>
@@ -149,7 +161,7 @@
           <h1>Zoom sur les <span class="h1_highlight">archives sonores</span></h1>
           <p class="intro">
             Pendant 20 ans, le conseil régional a fait <span id="nb_reunion"></span> réunions,</br>
-            dont <span id="nb_fichier_audio"></span> enregistrements audio.
+            dont <span class="nb_fichier_audio"></span> enregistrements audio.
           </p>
           <div class="separator"></div>
           <p id="click_k7">
@@ -221,6 +233,36 @@
           Sélectionnez les périodes qui vous intéressent en cliquant</br>
           sur les boutons du micro.
         </p>
+      </div>
+      <img id="micro_reunion" src="img/micro.svg" alt="Micro" />
+      <img id="micro_reunion_bouton_periode_1" onclick="graph_type_reunion_filter(this.id)" src="img/bouton_micro_off.svg"
+        alt="Bouton micro période 1" />
+      <img id="micro_reunion_bouton_periode_2" onclick="graph_type_reunion_filter(this.id)" src="img/bouton_micro_off.svg"
+        alt="Bouton micro période 2" />
+      <img id="micro_reunion_bouton_periode_3" onclick="graph_type_reunion_filter(this.id)" src="img/bouton_micro_off.svg"
+        alt="Bouton micro période 3" />
+      <div id="micro_reunion_periode_1">
+        <div class="micro_reunion_periode_numero">1</div>
+        <div class="micro_reunion_periode_date">1974</div>
+        <div class="micro_reunion_periode_date">1986</div>
+      </div>
+      <div id="separator_v1" class="separator_vertical"></div>
+      <div id="micro_reunion_periode_2">
+        <div class="micro_reunion_periode_numero">2</div>
+        <div class="micro_reunion_periode_date">1986</div>
+        <div class="micro_reunion_periode_date">1992</div>
+      </div>
+      <div id="separator_v2" class="separator_vertical"></div>
+      <div id="micro_reunion_periode_3">
+        <div class="micro_reunion_periode_numero">3</div>
+        <div class="micro_reunion_periode_date">1992</div>
+        <div class="micro_reunion_periode_date">1994</div>
+      </div>
+
+      <div id="reunion_graph">
+        <div class="chart-wrap">
+          <div id="dashboard-stats" class="chart bars-horizontal brand-primary"></div>
+        </div>
       </div>
     </div>
     <div class="section" id="mot_cle">

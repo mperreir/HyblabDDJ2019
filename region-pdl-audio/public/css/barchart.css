@@ -1,0 +1,151 @@
+/* Bar Delays Animation Function */
+
+/* Chart Styles */
+
+.chart-wrap {
+    max-width: 46vw;
+    margin: 0 auto;
+    padding: 10px;
+    /*border: 1px solid #eeeeee;*/
+}
+
+.chart-wrap .chart-title {
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.chart-wrap .row {
+    position: relative;
+    height: 4vh;
+    margin-bottom: 6vh;
+}
+
+.chart-wrap .bar-wrap {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+.chart-wrap .bar-wrap .bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 5px;
+    transition: all 1s;
+    visibility: hidden;
+}
+
+.chart-wrap .bar-wrap .bar.in {
+    visibility: visible;
+}
+
+.chart-wrap .row:nth-of-type(1) .bar {
+    transition: 1s 400ms;
+}
+
+.chart-wrap .row:nth-of-type(2) .bar {
+    transition: 1s 600ms;
+}
+
+.chart-wrap .row:nth-of-type(3) .bar {
+    transition: 1s 800ms;
+}
+
+.chart-wrap .row:nth-of-type(4) .bar {
+    transition: 1s 1000ms;
+}
+
+.chart-wrap .row:nth-of-type(5) .bar {
+    transition: 1s 1200ms;
+}
+
+.chart-wrap .row:nth-of-type(6) .bar {
+    transition: 1s 1400ms;
+}
+
+.chart-wrap .row:nth-of-type(7) .bar {
+    transition: 1s 1600ms;
+}
+
+.chart-wrap .label {
+    position: absolute;
+    top: -80%;
+    left: 18%;
+    color: #512C51;
+    font-family: 'Ubuntu';
+    text-align: left;
+    font-size: 2.5vh;
+    font-weight: 400;
+    z-index: 10;
+}
+
+.chart-wrap .number {
+    position: absolute;
+    height: 100%;
+    width: 5vw;
+    margin-left: 0.5vw;
+    font-family: 'Zilla Slab';
+    font-weight: 600;
+    font-size: 3vh;
+    line-height: 3.7vh;
+    text-align: right;
+    z-index: 10;
+}
+
+.chart-wrap .bar_char_installation {
+    background: #EEE7D3;
+}
+
+.chart-wrap .number_installation {
+    color: #EEE7D3;
+}
+
+.chart-wrap .bar_char_nr {
+    background: #9FADB6;
+}
+
+.chart-wrap .number_nr {
+    color: #9FADB6;
+}
+
+.chart-wrap .bar_char_decision {
+    background: #4E8FAF;
+}
+
+.chart-wrap .number_decision {
+    color: #4E8FAF;
+}
+
+.chart-wrap .bar_char_budget {
+    background: #512C51;
+}
+
+.chart-wrap .number_budget {
+    color: #512C51;
+}
+
+.chart-wrap .bar_char_seance {
+    background: #FFFFFF;
+}
+
+.chart-wrap .number_seance {
+    color: #FFFFFF;
+}
+
+@media screen and (min-width: 800px) {
+    .chart-wrap .row {
+        padding: 0 40px 0 160px;
+    }
+    .chart-wrap .label {
+        text-align: right;
+        padding-left: 0;
+    }
+    .chart-wrap .number {
+        text-align: left;
+        padding-right: 0;
+    }
+}

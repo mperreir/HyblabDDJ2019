@@ -2,10 +2,11 @@
 
 // No need for window.onload event here since we are using the def attribute
 // when loading our scripts
-var selected_period = 0;
+var selected_period_reunion = 0;
+var selected_period_type_reunion = [false, false, false];
 
 $('#fullpage').fullpage({
-    scrollingSpeed: 750,
+    scrollingSpeed: 500,
     anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage'],
     sectionsColor: ['#FFFFFF', '#DA705B', '#FFFFFF', '#FFFFFF', '#FFFFFFF', '#495368', '#135786'],
     verticalCentered: false,
@@ -55,7 +56,7 @@ fetch('data/stats_audio')
         console.log(error);
     })
     .then(function (json) {
-        document.querySelector('#nb_fichier_audio')
+        document.querySelector('.nb_fichier_audio')
             .textContent = json.nb_fichier_audio;
         document.querySelector('#nb_reunion')
             .textContent = json.nb_reunion;
@@ -100,28 +101,28 @@ function graph_update_audio() {
 
                 if (element['annee'] >= 1974 && element['annee'] < 1986) {
                     k7_img.setAttribute('src', 'img/k7_periode_1.svg');
-                    if (!(selected_period == 0 || selected_period == 1)) {
+                    if (!(selected_period_reunion == 0 || selected_period_reunion == 1)) {
                         k7_img.style.opacity = 0.3;
                         usabled = false;
                     }
                 }
                 else if (element['annee'] >= 1986 && element['annee'] < 1992) {
                     k7_img.setAttribute('src', 'img/k7_periode_2.svg');
-                    if (!(selected_period == 0 || selected_period == 2)) {
+                    if (!(selected_period_reunion == 0 || selected_period_reunion == 2)) {
                         k7_img.style.opacity = 0.3;
                         usabled = false;
                     }
                 }
                 else if (element['annee'] >= 1992 && element['annee'] <= 1994) {
                     k7_img.setAttribute('src', 'img/k7_periode_3.svg');
-                    if (!(selected_period == 0 || selected_period == 3)) {
+                    if (!(selected_period_reunion == 0 || selected_period_reunion == 3)) {
                         k7_img.style.opacity = 0.3;
                         usabled = false;
                     }
                 }
                 else if (element['annee'] == 'inconnue') {
                     k7_img.setAttribute('src', 'img/k7_periode_nr.svg');
-                    if (!(selected_period == 0 || selected_period == 4)) {
+                    if (!(selected_period_reunion == 0 || selected_period_reunion == 4)) {
                         k7_img.style.opacity = 0.3;
                         usabled = false;
                     }
@@ -224,9 +225,7 @@ function graph_update_audio() {
                                 audio.pause();
                             }
                         };
-
                         audio.play();
-
                     };
                 }
 
@@ -241,9 +240,6 @@ function graph_update_audio() {
             sliderInit();
         });
 }
-
-
-
 
 // Récupération des infos sur les réunions
 function graph_update_reunion() {
@@ -280,28 +276,28 @@ function graph_update_reunion() {
 
                 if (element['annee'] >= 1974 && element['annee'] < 1986) {
                     micro_img.setAttribute('src', 'img/micro_periode_1.svg');
-                    if (!(selected_period == 0 || selected_period == 1)) {
+                    if (!(selected_period_reunion == 0 || selected_period_reunion == 1)) {
                         micro_img.style.opacity = 0.3;
                         usabled = false;
                     }
                 }
                 else if (element['annee'] >= 1986 && element['annee'] < 1992) {
                     micro_img.setAttribute('src', 'img/micro_periode_2.svg');
-                    if (!(selected_period == 0 || selected_period == 2)) {
+                    if (!(selected_period_reunion == 0 || selected_period_reunion == 2)) {
                         micro_img.style.opacity = 0.3;
                         usabled = false;
                     }
                 }
                 else if (element['annee'] >= 1992 && element['annee'] <= 1994) {
                     micro_img.setAttribute('src', 'img/micro_periode_3.svg');
-                    if (!(selected_period == 0 || selected_period == 3)) {
+                    if (!(selected_period_reunion == 0 || selected_period_reunion == 3)) {
                         micro_img.style.opacity = 0.3;
                         usabled = false;
                     }
                 }
                 else if (element['annee'] == 'inconnue') {
                     micro_img.setAttribute('src', 'img/micro_periode_nr.svg');
-                    if (!(selected_period == 0 || selected_period == 4)) {
+                    if (!(selected_period_reunion == 0 || selected_period_reunion == 4)) {
                         micro_img.style.opacity = 0.3;
                         usabled = false;
                     }
@@ -435,19 +431,19 @@ function graph_audio_reunion_filter(id) {
     graph_k7.className = "";
 
     if (id == 'periode_1') {
-        selected_period = 1;
+        selected_period_reunion = 1;
     }
     else if (id == 'periode_2') {
-        selected_period = 2;
+        selected_period_reunion = 2;
     }
     else if (id == 'periode_3') {
-        selected_period = 3;
+        selected_period_reunion = 3;
     }
     else if (id == 'periode_nr') {
-        selected_period = 4;
+        selected_period_reunion = 4;
     }
     else if (id == 'periode_all') {
-        selected_period = 0;
+        selected_period_reunion = 0;
     }
 
     if (cb_audio.checked == true) {
@@ -471,7 +467,7 @@ function start_pres_audio(id) {
         });
 
         audio_olivier.addEventListener("play", function () {
-            button_audio.src = 'img/pause.svg'
+            button_audio.src = 'img/pause_white.svg'
         });
 
         if (audio_olivier.paused) {
@@ -489,7 +485,7 @@ function start_pres_audio(id) {
         });
 
         audio_vincent.addEventListener("play", function () {
-            button_audio.src = 'img/pause.svg'
+            button_audio.src = 'img/pause_white.svg'
         });
 
         if (audio_vincent.paused) {
@@ -501,5 +497,152 @@ function start_pres_audio(id) {
     }
 }
 
+
+function generateBarGraph(wrapper) {
+    // Set Up Values Array
+    var values = [];
+
+    // Get Values and save to Array
+    $(wrapper + ' .bar').each(function (index, el) {
+        values.push($(this).data('value'));
+    });
+
+    // Get Max Value From Array
+    var max_value = Math.max.apply(Math, values);
+
+    // Set width of bar to percent of max value
+    $(wrapper + ' .row').each(function (index, el) {
+
+        var bar = this.querySelector('.bar'),
+            value = bar.getAttribute('data-value'),
+            percent = Math.ceil((value / max_value) * 100);
+
+        // Set Width & Add Class
+        bar.style.width = (percent + '%');
+        bar.className += ' in';
+
+        var number = this.querySelector('.number');
+        number.style.left = percent + '%';
+    });
+    
+}
+
+// Récupération des infos sur les réunions
+function graph_update_type_reunion() {
+    fetch('data/type_reunions')
+        .then(function (response) {
+            return response.json();
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+        .then(function (json) {
+            console.log(json);
+            var data = {};
+            var nb_type = 0;
+            if (selected_period_type_reunion[0]) {
+                nb_type += json.periode_1['nb_reunion'];
+                for (var key in json.periode_1['objet']) {
+                    if (data[key] === undefined) {
+                        data[key] = 0;
+                    }
+                    data[key] += json.periode_1['objet'][key];
+                }
+            }
+            if (selected_period_type_reunion[1]) {
+                nb_type += json.periode_2['nb_reunion'];
+                for (var key in json.periode_2['objet']) {
+                    if (data[key] === undefined) {
+                        data[key] = 0;
+                    }
+                    data[key] += json.periode_2['objet'][key];
+                }
+            }
+            if (selected_period_type_reunion[2]) {
+                nb_type += json.periode_3['nb_reunion'];
+                for (var key in json.periode_3['objet']) {
+                    if (data[key] === undefined) {
+                        data[key] = 0;
+                    }
+                    data[key] += json.periode_3['objet'][key];
+                }
+            }
+
+            var parent = document.querySelector('#dashboard-stats');
+            while (parent.firstChild) {
+                parent.removeChild(parent.firstChild);
+            }
+
+            for (var key in data) {
+                var div_row = document.createElement('div');
+                var span_label = document.createElement('span');
+                var div_bar_wrap = document.createElement('div');
+                var div_bar = document.createElement('div');
+                var span_number = document.createElement('span');
+
+                div_row.className = 'row';
+                span_label.className = 'label';
+                span_label.innerHTML = key;
+                div_bar_wrap.className = 'bar-wrap';
+                div_bar.className = "bar";
+                div_bar.setAttribute('data-value', data[key]);
+                span_number.className = 'number';
+                span_number.innerHTML = Math.trunc(data[key] / nb_type * 100) + ' %';
+
+                if (key.toLowerCase().includes('installation')) {
+                    div_bar.className += " bar_char_installation";
+                    span_number.className += " number_installation";
+                }
+                else if (key.toLowerCase().includes('budget')) {
+                    div_bar.className += " bar_char_budget";
+                    span_number.className += " number_budget";
+                }
+                else if (key.toLowerCase().includes('séance')) {
+                    div_bar.className += " bar_char_seance";
+                    span_number.className += " number_seance";
+                }
+                else if (key.toLowerCase().includes('décision')) {
+                    div_bar.className += " bar_char_decision";
+                    span_number.className += " number_decision";
+                }
+                else {
+                    div_bar.className += " bar_char_nr";
+                    span_number.className += " number_nr";
+                }
+
+                div_bar_wrap.appendChild(span_number);
+                div_bar_wrap.appendChild(div_bar);
+                div_row.appendChild(div_bar_wrap);
+                div_row.appendChild(span_label);
+                parent.appendChild(div_row);
+                generateBarGraph('#dashboard-stats');
+            }
+        });
+}
+
+function graph_type_reunion_filter(id) {
+    var index = -1;
+    if (id == 'micro_reunion_bouton_periode_1') {
+        selected_period_type_reunion[0] = !selected_period_type_reunion[0];
+        index = 0;
+    }
+    else if (id == 'micro_reunion_bouton_periode_2') {
+        selected_period_type_reunion[1] = !selected_period_type_reunion[1];
+        index = 1;
+    }
+    else if (id == 'micro_reunion_bouton_periode_3') {
+        selected_period_type_reunion[2] = !selected_period_type_reunion[2];
+        index = 2;
+    }
+
+    var image = document.querySelector('#' + id);
+    if (selected_period_type_reunion[index]) {
+        image.src = 'img/bouton_micro_on.svg';
+    }
+    else {
+        image.src = 'img/bouton_micro_off.svg';
+    }
+    graph_update_type_reunion();
+}
 
 graph_update_audio();
