@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/jquery.range.css">
     <link rel="stylesheet" href="../libraries/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/carousel-fade-tarnsition.css">
+    <link rel="stylesheet" href="css/histogram.css">
 
 </head>
 <body>
@@ -29,6 +30,9 @@
             <li data-target="#carousel-example-generic" data-slide-to="3"></li>
             <li data-target="#carousel-example-generic" data-slide-to="4"></li>
             <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="8"></li>
         </ol>
 
         <div class="carousel-inner" role="listbox">
@@ -191,71 +195,86 @@
                     </a>
                 </div>
             </div>
+            <div class="item" id="r">
+                <a class="button" href="#choix">Button</a>
+                <div class="bar-contain">
+                    <div id="value">  <h1>Value:<span id="demo"></span></h1>
+                        <h1>Heur:<span id="demo2"></span></h1>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar">
+                            <span class="progress-in" id="bar" style="width:0%"></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="myR">
+                    <input type="hidden"id="myRange" class="single-slider" onchange="ran()"value="12" />
+                </div>
+                <div class="svga1Button">
+                    <a href="#">
+                        <span class="icon fa-arrow-circle-right"></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="item" id="ur">
+                <a class="button" href="#choix">Button</a>
+                <div class="bar-contain">
+                    <div id="value2">  <h1>Value:<span id="demo21"></span></h1>
+                        <h1>Heur:<span id="demo22"></span></h1>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar">
+                            <span class="progress-in" id="bar2" style="width:0%"></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="myR2">
+                    <input type="hidden"id="myRange2" class="single-slider" onchange="ran2()"value="12" />
+                </div>
+                <div class="svga1Button">
+                    <a href="#">
+                        <span class="icon fa-arrow-circle-right"></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="item" id="tr">
+                <a class="button" href="#choix">Button</a>
+                <div class="bar-contain">
+                    <div id="value3">  <h1>Value:<span id="demo31"></span></h1>
+                        <h1>Heur:<span id="demo32"></span></h1>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar">
+                            <span class="progress-in" id="bar3" style="width:0%"></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="myR3">
+                    <input type="hidden"id="myRange3" class="single-slider" onchange="ran3()" value="12" />
+                </div>
+                <div class="svga1Button">
+                    <a href="#">
+                        <span class="icon fa-arrow-circle-right"></span>
+                    </a>
+                </div>
+            </div>
             <div class="item" id="conseils">
             </div>
             <div class="item" id="equipe">
             </div>
         </div>
-//pour rural
-        <div id="r">
-            <a class="button" href="#choix">Button</a>
-            <div class="container" id="my">
-                <div class="progress">
-                    <div class="progress-bar">
-                        <span class="progress-in" id="bar" style="width:0%"></span>
-                    </div>
-                </div>
-                <div id="value">  <h1>Value:<span id="demo"></span></h1>
-                                 <h1>Heur:<span id="demo2"></span></h1>
-                </div>
-            </div>
-            <div id="myR">
-                <input type="hidden"id="myRange" class="single-slider" onchange="ran()"value="12" />
-            </div>
-        </div>
-//pour urban
-        <div id="in">
-            <a class="button" href="#choix">Button</a>
-            <div class="container" id="my2">
-                <div class="progress">
-                    <div class="progress-bar">
-                        <span class="progress-in" id="bar2" style="width:0%"></span>
-                    </div>
-                </div>
-                <div id="value2">  <h1>Value:<span id="demo21"></span></h1>
-                    <h1>Heur:<span id="demo22"></span></h1>
-                </div>
-            </div>
 
-            <div id="myR2">
-                <input type="hidden"id="myRange2" class="single-slider" onchange="ran2()"value="12" />
-            </div>
-        </div>
-//pour traffic
-        <div id="tr">
-            <a class="button" href="#choix">Button</a>
-            <div class="container" id="my3">
-                <div class="progress">
-                    <div class="progress-bar">
-                        <span class="progress-in" id="bar3" style="width:0%"></span>
-                    </div>
-                </div>
-                <div id="value3">  <h1>Value:<span id="demo31"></span></h1>
-                    <h1>Heur:<span id="demo32"></span></h1>
-                </div>
-            </div>
-
-            <div id="myR3">
-                <input type="hidden"id="myRange3" class="single-slider" onchange="ran3()"value="12" />
-            </div>
-        </div>
-
+    </div>
+    <div id="svga1" class="svg-container">
     </div>
 
     <img  id="perso" src="img/GIF_PERSONNAGE.gif" alt="perso"/>
     <img id="perso2" src="img/MARCHE_ET_PENSE_X1_2.gif" alt="atchoum"/>
     <img id="voiture" src="img/voiture1.png" alt="car"/>
     <img id="nuage" src="img/nuage1.png" alt="nuage"/>
+
 
 
 </div>
@@ -268,9 +287,12 @@
 <script src="js/jquery.range.js"></script>
 
 <script src="../libraries/bootstrap/js/bootstrap.min.js"></script>
+<script src="../libraries/d3/dist/package.js"></script>
+<script src="../libraries/d3/dist/d3.min.js"></script>
 <script src="js/animation.js"></script>
 <script src="./js/Myrange.js"></script>
 <script src="js/questionnaire.js"></script>
+<script src="js/histogram.js"></script>
 
 </body>
 

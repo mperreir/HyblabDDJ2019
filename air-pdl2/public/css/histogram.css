@@ -1,0 +1,28 @@
+.svg-container {
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.launch {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 100px;
+}
+
+.reset {
+    position: absolute;
+    margin-top: 45px;
+    margin-left: 5px;
+    width: 100px;
+}
+
+.bar {
+    fill: steelblue;
+}
+
+#svga1{
+    position: absolute;
+    bottom:0;
+    height: 400px;
+}
