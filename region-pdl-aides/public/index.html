@@ -20,6 +20,7 @@
         <script src="./js/jquery.vmap.js"></script>
         <script src="./js/jquery.vmap.france.js"></script>
         <script src="./js/jquery.vmap.colorsFrance.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/LoadGo/2.2/loadgo.min.js"></script>
     </head>
     <body>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->    
@@ -68,14 +69,21 @@
             </div>
         </div>
         <div class="section" id="section4">
-            <h2>Section 4</h2>
-            <p>
-                ‘He scents thy footsteps in the snow
-                Wheresoever thou dost go,
-                Thro’ the wintry hail and rain.
-                When wilt thou return again?
+            <div id="left">
+                <h2>Les aides</h2>
+                <div class="n">Entre 2017 et 2018 les Pays de la Loire ont lancé le dispositif "Industries du Futur pour donner un coup de pouce aux petites et moyennes entreprises de la régior. Elle... subventionne des audits pour accompagner les entreprises dans la modernisation.
+                    .. accompagne les phases de test et d'intégration de nouvelles techniques pour favoriser l'innovation. .peut aussi soutenir le déploiement des ces innovations à plus grande échelle.
+                </div>
+                <div class="cloud" id="count">21 millions d'euros ont été investi
+                    dans l'industrie locale à travers ce programme</div>
 
-            </p>
+            </div>
+            <div id="right">
+                <div class=imgcontainer>
+                    <img id="logo" src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/51161417_376449609810390_3048358746347536384_n.png?_nc_cat=111&_nc_ht=scontent-cdt1-1.xx&oh=a6b6fdee1f500473d47688f218af6924&oe=5CF6F88D">
+                </div>
+            </div>
+
         </div>
         <div class="section" id="section5">
             <h2>Section 5</h2>
@@ -199,4 +207,40 @@
           $(".container").addClass("load");
         });
   </script>
+  <script>
+      $(document).ready(function() {
+          $("a").click(function () {
+              var index = $(this).index('nav a') + 1;
+              console.log(index);
+              if (index == 4) {
+                  $('#logo').loadgo({
+                      'direction': 'bt'
+                  });
+                  mainDemo();
+              }
+          });
+      });
+
+      var factoryInterval;
+      function mainDemo () {
+          var p = 0;
+          $('#logo').loadgo('resetprogress');   // reset progress to start again
+          factoryInterval = window.setInterval(function (){
+              if ($('#logo').loadgo('getprogress') == 100) {
+                  // When progress completes, we have to clear the interval
+                  window.clearInterval(factoryInterval);
+              }
+              else {
+                  var prog = p*10;
+                  //var prog = 100;
+                  result = prog * 0.21;
+
+                  $("#count").html(Math.floor(result));
+                  $('#logo').loadgo('setprogress', prog);
+                  p++;
+              }
+          }, 150);
+      };
+  </script>
+
 </html>
