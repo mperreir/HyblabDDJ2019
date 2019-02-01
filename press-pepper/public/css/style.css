@@ -54,6 +54,9 @@ header img{
 	background: #3074a4;
 }
 
+#depeche {
+	visibility:hidden;
+}
 .logo .hover
 {
 	transition: .5s ease;
