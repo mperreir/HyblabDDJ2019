@@ -64,6 +64,7 @@ body{
   display:none;
   z-index: 1;
   position: relative;
+  overflow:hidden;
 }
 
 #dialogue{
@@ -130,7 +131,7 @@ body{
 
 /* Page Personnalisation */
 #page_personnalisation{
-  background-image:url('img/fond_slider_musee.png');
+  background-image:url('img/slider/fond_slider_musee.png');
   background-repeat:no-repeat;
   background-size: cover;
   display: none;
@@ -325,6 +326,9 @@ input[type=range]::-moz-range-track {
 
 #page_carte{
   display:none;
+  background-image: url('../img/carte/fond_carte.png');
+  background-repeat:no-repeat;
+  background-size: cover;
   height:100vh;
   width:100vw;
   left:0%;
@@ -335,7 +339,7 @@ input[type=range]::-moz-range-track {
 #carte_generale{
   height:100vh;
   width:auto;
-  left:0%;
+  right:0%;
   position:absolute;
   z-index: 2;
   display:none;
@@ -346,7 +350,7 @@ input[type=range]::-moz-range-track {
   height:100vh;
   width:auto;
   position:absolute;
-  left:0%;
+  right:0%;
   display: none;
 }
 
@@ -355,7 +359,7 @@ input[type=range]::-moz-range-track {
   height:100vh;
   width:auto;
   position:absolute;
-  left:0%;
+  right:0%;
   /* display:none; */
 }
 
