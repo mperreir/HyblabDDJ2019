@@ -7,7 +7,7 @@ var selected_period = 0;
 $('#fullpage').fullpage({
     scrollingSpeed: 750,
     anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage'],
-    sectionsColor: ['#FFFFFF', '#DA705B', '#FFFFFF', '#FFFFFF', '#892236', '#495368', '#135786'],
+    sectionsColor: ['#FFFFFF', '#DA705B', '#FFFFFF', '#FFFFFF', '#FFFFFFF', '#495368', '#135786'],
     verticalCentered: false,
     navigation: true,
     navigationPosition: 'right',
