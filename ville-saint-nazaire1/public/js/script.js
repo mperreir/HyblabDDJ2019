@@ -108,17 +108,17 @@ function actualiser_decor() {
   if(num_theme == 1){
     document.getElementById("socle_curseurs").setAttribute("src", "img/socle_foret.png");
     document.getElementById("page_personnalisation").style.backgroundImage = "url('img/fond_slider_foret.png')";
-    document.getElementById("objet_curseurs").setAttribute("src", "img/objet_foret.png");
+    document.getElementById("objet_curseurs").setAttribute("src", "img/objet_foret.svg");
   }
   else if(num_theme == 2){
     document.getElementById("socle_curseurs").setAttribute("src", "img/socle_musee.png");
     document.getElementById("page_personnalisation").style.backgroundImage = "url('img/fond_slider_musee.png')";
-    document.getElementById("objet_curseurs").setAttribute("src", "img/objet_musee.png");
+    document.getElementById("objet_curseurs").setAttribute("src", "img/objet_musee.svg");
   }
   else {
     document.getElementById("socle_curseurs").setAttribute("src", "img/socle_mer.png");
     document.getElementById("page_personnalisation").style.backgroundImage = "url('img/fond_slider_mer.png')";
-    document.getElementById("objet_curseurs").setAttribute("src", "img/objet_mer.png");
+    document.getElementById("objet_curseurs").setAttribute("src", "img/objet_mer.svg");
   }
 }
 

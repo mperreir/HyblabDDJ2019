@@ -138,6 +138,7 @@ body{
   width:100vw;
   left:0%;
   position:absolute;
+  z-index: 1;
 }
 
 #personnalisation{
@@ -153,22 +154,34 @@ body{
   z-index:2;
 }
 
-/* Coté gauche : personnage */
-
 #objet_curseurs{
   position:absolute;
-  height: 10%;
+  height: 85vh;
   width:auto;
   right: 0%;
   bottom: 0%;
-  z-index: 10;
+  z-index: 3;
 }
+
+#personnalisation2{
+  position:absolute;
+  text-align:center;
+  top:5%;
+  width:90%;
+  margin-left:5%;
+  height:85vh;
+  color:#4e687f;
+  z-index:4;
+}
+
+/* Coté gauche : personnage */
 
 #socle_curseurs{
   width:40%;
   position:absolute;
   left:5%;
   bottom:0%;
+  z-index: 4;
 }
 
 #velo_curseurs{
@@ -176,17 +189,7 @@ body{
   width: 40%;
   bottom:10%;
   height: auto;
-  z-index:2;
-  position: absolute;
-  float:left;
-}
-
-#personnage{
-  left :5%;
-  width: 40%;
-  bottom:17%;
-  height: auto;
-  z-index:2;
+  z-index: 4;
   position: absolute;
   float:left;
 }
@@ -194,13 +197,13 @@ body{
 /* Coté Droit : curseurs */
 #curseurs{
   background-color:#ffffff;
-  z-index:2;
   position: relative;
   width:50%;
   float:right;
   font-size:16px;
   margin-top:5%;
   margin-right:10%;
+  z-index: 4;
 }
 
 #curs_dist, #curs_theme{
