@@ -166,7 +166,7 @@ function selection_circuit(distance, theme){
     distance = parseInt(distance);
     var liste_circuit_selection_interne = [];
     value.forEach(function(element){
-      if ((element["theme"] == theme) && (element["distance_en_km"] <= distance)){
+      if (element["distance_en_km"] <= distance && element["theme"].includes(theme)){
         liste_circuit_selection_interne.push(element);
       }
     });

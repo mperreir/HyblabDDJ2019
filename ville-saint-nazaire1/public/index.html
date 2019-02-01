@@ -92,31 +92,44 @@
 			<img class="circuit" id="circuit-09" src="img/circuits-09.svg" alt="circuits-09"/>
 
 			<img class="lieu" id="hotspot" src="img/hotspot.png" alt="hotspot"/>
-			<img class="lieu" id="office" src="img/office-tourisme.png" alt="office"/>
+			<img class="lieu" id="office" src="img/office-tourisme.svg" alt="office"/>
 			<img class="lieu" id="culturels" src="img/points-culturels.png" alt="culturels"/>
 			<img class="lieu" id="toilettes" src="img/toilettes.png" alt="toilettes"/>
+			<img class="lieu" id="bars" src="img/bars.png" alt="bars"/>
+			<img class="lieu" id="restaurants" src="img/restaurants.svg" alt="restaurants"/>
 
 			<fieldset id="choix_lieu">
 				<h3> Quelles informations souhaitez-vous faire apparaitre sur la carte ? </h3>
 				<div class="checkbox_lieu">
 					<input type="checkbox" id="hotspot-checkbox" name="hotspot" value="checkbox" onchange="modif_checkbox('hotspot')">
-					<label for="hotspot"> Wi-fi </label>
+					<label for="hotspot-checkbox"> Wi-fi </label>
 				</div>
 
 				<div class="checkbox_lieu">
-					<input type="checkbox" id="office-checkbox" name="office" value="checkbox" onchange="modif_checkbox('office')">
-					<label for="office"> Office de tourisme </label>
+					<input type="checkbox" id="bars-checkbox" name="bars" value="checkbox" onchange="modif_checkbox('bars')">
+					<label for="bars-checkbox"> Bars / Cafés </label>
 				</div>
 
 				<div class="checkbox_lieu">
 					<input type="checkbox" id="culturels-checkbox" name="culturels" value="checkbox" onchange="modif_checkbox('culturels')">
-					<label for="culturels"> Points culturels </label>
+					<label for="culturels-checkbox"> Points culturels </label>
 				</div>
 
 				<div class="checkbox_lieu">
 					<input type="checkbox" id="toilettes-checkbox" name="toilettes" value="checkbox" onchange="modif_checkbox('toilettes')">
-					<label for="toilettes"> Toilettes </label>
+					<label for="toilettes-checkbox"> Toilettes </label>
 				</div>
+
+				<div class="checkbox_lieu">
+					<input type="checkbox" id="office-checkbox" name="office" value="checkbox" onchange="modif_checkbox('office')">
+					<label for="office-checkbox"> Office de tourisme </label>
+				</div>
+
+				<div class="checkbox_lieu">
+					<input type="checkbox" id="restaurants-checkbox" name="restaurants" value="checkbox" onchange="modif_checkbox('restaurants')">
+					<label for="restaurants-checkbox"> Restaurants </label>
+				</div>
+
 				</br>
 				<span id="texte_leon_circuit"></span>
 				<p> Cliquez sur l'un d'eux pour en savoir plus. </p>
