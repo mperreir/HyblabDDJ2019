@@ -98,7 +98,17 @@
 			<img class="lieu" id="bars" src="img/lieux/bars.png" alt="bars"/>
 			<img class="lieu" id="restaurants" src="img/lieux/restaurants.png" alt="restaurants"/>
 
+
 			<fieldset id="choix_lieu">
+
+				</br>
+				<span id="texte_leon_circuit" class="texte_leon_classe"></span></br>
+				<span id="texte_leon_circuit2" class="texte_leon_classe" ></span>
+
+				<div id = "liste_parcours">
+					
+				</div>
+
 				<h3> Quelles informations souhaitez-vous faire apparaitre sur la carte ? </h3>
 				<div class="checkbox_lieu">
 					<input type="checkbox" id="hotspot-checkbox" name="hotspot" value="checkbox" onchange="modif_checkbox('hotspot')">
@@ -117,7 +127,7 @@
 
 				<div class="checkbox_lieu">
 					<input type="checkbox" id="toilettes-checkbox" name="toilettes" value="checkbox" onchange="modif_checkbox('toilettes')">
-					<label for="toilettes-checkbox"> Toilettes </label>
+					<label for="toilettes-checkbox"> Toilettes publiques </label>
 				</div>
 
 				<div class="checkbox_lieu">
@@ -133,10 +143,17 @@
 				<img id="leon_carte" src="img/slider/leon_velo_moyen.png" alt="leon le cameleon"/>
 				<img id="socle_carte" src="img/slider/socle_musee.png"  alt="socle carte"/>
 
-				</br>
-				<span id="texte_leon_circuit"></span></br>
-				<span id="texte_leon_circuit2"></span>
 			</fieldset>
+
+			<button id="bouton_retour" class="bouton" onclick="retour()" type="button"> RETOUR </button>
+
+			<fieldset id="choix_parcours">
+				<div id="nom_circuit"> </div>
+				<div id="kilometre_temps"> </div>
+				<div id="description"> </div>
+			</fieldset>
+
+
 		</div>
 	</div>
 </body>

@@ -1,8 +1,5 @@
 'use strict';
 
-// Map des circuits et des lieux
-var map_circuits = new Map();
-var map_lieux = new Map();
 // infos sur les circuits
 var liste_infos_circuit = charger_donnees('nom-circuit-info');
 
@@ -57,7 +54,7 @@ function click_curseur_dist(x) {
 
 function actualiser_dist() {
   var nb = document.getElementById("distance").value;
-  document.getElementById("val").innerHTML = Math.round(nb*10) /10;
+  document.getElementById("val").innerHTML = nb;
   actualiser_decor();
 }
 
@@ -102,9 +99,9 @@ function c_est_parti(){
   selection_circuit(dist, theme)
   .then(function(value){
     value.forEach(function(element){
-      var numero = element["numero"];
-      document.getElementById("circuit-0" + numero).style.display="block";
+      document.getElementById("circuit-0" + element["numero"]).style.display="block";
       nb_circuit = nb_circuit + 1;
+      document.getElementById("liste_parcours").innerHTML += '<input class="parcours_disponible" type="radio" name="parcours_disponible" onclick="modif_radio()" value=' + element["numero"] + '>' + element["nom"] + '<br>';
     })
 
     switch (nb_circuit) {
@@ -163,14 +160,50 @@ function modif_checkbox(element){
     document.getElementById(element).style.zIndex="1";
 }
 
+function retour() {
+  document.getElementById("page_personnalisation").style.display="block";
+  document.getElementById("page_carte").style.display="none";
+  document.getElementById("carte_generale").style.display="none";
+  for (var i = 1; i < 10; i++)
+    document.getElementById("circuit-0" + i).style.display="none";
+  var collection_lieu = document.getElementsByClassName("lieu");
+  for (var i = 0; i < collection_lieu.length; i++) {
+    collection_lieu[i].style.zIndex="1";
+  }
+  reset_value_default();
+}
 
-document.getElementById("distance").value=20;
-document.getElementById("num_theme").value=2;
-document.getElementById("val").innerHTML = 20;
-document.getElementById("hotspot-checkbox").checked=false;
-document.getElementById("culturels-checkbox").checked=false;
-document.getElementById("toilettes-checkbox").checked=false;
-document.getElementById("office-checkbox").checked=false;
-document.getElementById("bars-checkbox").checked=false;
-document.getElementById("restaurants-checkbox").checked=false;
-actualiser_decor();
+function reset_value_default(){
+  document.getElementById("distance").value=20;
+  document.getElementById("num_theme").value=2;
+  document.getElementById("val").innerHTML = 20;
+  document.getElementById("hotspot-checkbox").checked=false;
+  document.getElementById("culturels-checkbox").checked=false;
+  document.getElementById("toilettes-checkbox").checked=false;
+  document.getElementById("office-checkbox").checked=false;
+  document.getElementById("bars-checkbox").checked=false;
+  document.getElementById("restaurants-checkbox").checked=false;
+  actualiser_decor();
+  document.getElementById("liste_parcours").innerHTML = '';
+  document.getElementById("choix_parcours").style.display = "none";
+}
+
+function modif_radio(){
+  document.getElementById("choix_parcours").style.display = "block";
+  var collection_radio = document.getElementsByClassName("parcours_disponible");
+  for (var i = 0; i < collection_radio.length; i++) {
+    if (collection_radio[i].checked){
+      var numero = collection_radio[i].value -1
+      liste_infos_circuit
+      .then(function(value){
+        document.getElementById("nom_circuit").innerHTML = value[numero]["nom"];
+        document.getElementById("kilometre_temps").innerHTML = value[numero]["distance_en_km"] + " et " + value[numero]["temps_en_min"];
+        document.getElementById("description").innerHTML = value[numero]["description"];
+      })
+    }
+  }
+}
+
+
+
+reset_value_default();
