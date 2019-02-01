@@ -1,16 +1,16 @@
 /* just a sample css rule to show that everything works */
 footer p
 {
-  font-size: small;
-  text-align: center;
+	font-size: small;
+	text-align: center;
 }
 
 header{
-  text-align: center;
+	text-align: center;
 }
 
 header img{
-  max-width: 100%;
+	max-width: 100%;
 	height: auto;
 }
 #map { 
@@ -18,24 +18,49 @@ header img{
 	height: 550px;
 	width: 800px;
 	margin-right:2%;
-    float: left;
- }
- #filtres {
- 	padding-top : 25px;
- 	max-width : 200px;
- }
- #filtres a{
- 	display: block;
- }
- 
- .logo .hover
- {
+	float: left;
+}
+#filtres {
+	padding-top : 25px;
+	max-width : 200px;
+}
+#filtres a {
+	font-size: 13px;
+	color: #404040;
+	display: block;
+	margin: 0;
+	padding: 0;
+	padding: 10px;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	text-align: center;
+}
+
+#filtres a:last-child {
+	border: none;
+}
+
+#filtres a:hover {
+	background-color: #f8f8f8;
+	color: #404040;
+}
+
+#filtres a.active {
+	background-color: #3887be;
+	color: #ffffff;
+}
+
+#filtres a.active:hover {
+	background: #3074a4;
+}
+
+.logo .hover
+{
 	transition: .5s ease;
 	height:20%;
 	width:20%;
- }
- .mapboxgl-ctrl-logo
- {
- 	visibility:hidden;
- }
- 
+}
+.mapboxgl-ctrl-logo
+{
+	visibility:hidden;
+}
