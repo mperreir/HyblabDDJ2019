@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5de35e87-49da-40d0-84a4-175fd177a7cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/air-pdl2/public/js/questionnaire.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/libraries/fontawesome/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/libraries/fontawesome/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/Calque_11.svg" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/img/Calque_11.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/RURAL.png" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/img/RURAL.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/TRAFIC.png" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/img/TRAFIC.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/VILLE.png" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/img/VILLE.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/choix_endroit.png" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/img/choix_endroit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/conseils.png" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/img/conseils.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/air-pdl2/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/public/js/animation.js" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/js/animation.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/air-pdl2/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="168" column="26" lean-forward="true" selection-start-line="168" selection-start-column="26" selection-end-line="168" selection-end-column="26" />
+            <state relative-caret-position="227">
+              <caret line="14" column="67" lean-forward="true" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -39,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/air-pdl2/public/js/questionnaire.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1445">
+            <state relative-caret-position="841">
               <caret line="121" selection-start-line="121" selection-end-line="121" />
             </state>
           </provider>
@@ -48,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/air-pdl2/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="254" column="14" selection-start-line="254" selection-start-column="11" selection-end-line="254" selection-end-column="14" />
+            <state relative-caret-position="618">
+              <caret line="56" column="26" lean-forward="true" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -94,7 +84,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="489" />
     <option name="y" value="68" />
     <option name="width" value="974" />
@@ -106,7 +96,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,6 +138,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -190,14 +180,17 @@
       <workItem from="1548856750544" duration="2767000" />
       <workItem from="1548876272004" duration="13229000" />
       <workItem from="1548940508401" duration="10505000" />
+      <workItem from="1549009534485" duration="612000" />
+      <workItem from="1549010820657" duration="495000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135741000" />
+    <option name="totallyTimeSpent" value="136848000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1264489" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -389,24 +382,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/air-pdl2/public/css/style.css">
+    <entry file="file://$PROJECT_DIR$/air-pdl2/public/js/questionnaire.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="254" column="14" selection-start-line="254" selection-start-column="11" selection-end-line="254" selection-end-column="14" />
+        <state relative-caret-position="841">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/air-pdl2/public/js/questionnaire.js">
+    <entry file="file://$PROJECT_DIR$/air-pdl2/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        <state relative-caret-position="618">
+          <caret line="56" column="26" lean-forward="true" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/air-pdl2/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="168" column="26" lean-forward="true" selection-start-line="168" selection-start-column="26" selection-end-line="168" selection-end-column="26" />
+        <state relative-caret-position="227">
+          <caret line="14" column="67" lean-forward="true" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
         </state>
       </provider>
     </entry>
