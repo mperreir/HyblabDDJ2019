@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\air-pdl2",
-    "\\air-pdl2\\public",
-    "\\air-pdl2\\public\\js"
+    "\\air-pdl2\\public"
   ],
-  "SelectedNode": "\\air-pdl2\\public\\index.html",
+  "SelectedNode": "\\air-pdl2",
   "PreviewInSolutionExplorer": false
 }
