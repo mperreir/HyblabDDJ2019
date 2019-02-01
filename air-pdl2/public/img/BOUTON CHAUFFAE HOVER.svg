@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="145px" height="32px" viewBox="0 0 145 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>BOUTON CHAUFFAE HOVER</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ECRAN-5-REP-1-CHAUFFAGE" transform="translate(-682.000000, -258.000000)">
+            <g id="BOUTON-CHAUFFAE-HOVER" transform="translate(682.000000, 258.000000)">
+                <rect id="Rectangle-2" fill="#AC0759" x="0" y="0" width="144.629121" height="31.625" rx="15.8125"></rect>
+                <text id="DU-CHAUFFAGE" font-family="Sarabun-SemiBold, Sarabun SemiBold" font-size="14" font-weight="500" letter-spacing="1" fill="#FFFFFF">
+                    <tspan x="17.4826997" y="21">DU CHAUFFAG</tspan>
+                    <tspan x="117.5647" y="21" letter-spacing="1.67172158">E</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

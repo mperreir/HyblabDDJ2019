@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="202px" height="203px" viewBox="0 0 202 203" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="62460%" y1="3898%" x2="62551%" y2="24357%" id="linearGradient-1">
+            <stop stop-color="#B9E0E1" offset="27%"></stop>
+            <stop stop-color="#D5EBEC" offset="83%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ECRAN-8" transform="translate(-707.000000, -265.000000)" fill-rule="nonzero" fill="url(#linearGradient-1)">
+            <g id="differente_typos_ecrann" transform="translate(183.000000, 224.000000)">
+                <g id="TRAFIC" transform="translate(524.000000, 39.000000)">
+                    <circle id="Oval" cx="101.06" cy="103.53" r="100.83"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

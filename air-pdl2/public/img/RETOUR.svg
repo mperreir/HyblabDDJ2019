@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>RETOUR</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ELEMENTS-AUTRE" transform="translate(-260.000000, -144.000000)">
+            <g id="RETOUR" transform="translate(282.000000, 166.000000) scale(-1, 1) translate(-282.000000, -166.000000) translate(260.000000, 144.000000)">
+                <circle id="Oval-4" fill="#F5EFC1" cx="22" cy="22" r="22"></circle>
+                <g id="FLECHE-RETOUR" transform="translate(8.000000, 14.000000)" stroke="#001C26" stroke-linecap="round">
+                    <path d="M0.5,8 L25.8179778,8" id="Line" stroke-width="4"></path>
+                    <polyline id="Line-2" stroke-width="3" points="19 16 28 8.09060314 19 2.84217094e-14"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
