@@ -239,3 +239,79 @@ body{
     top:5%;
     left:32%;
 }
+
+div#francemap {
+	width: 500px;
+	height: 300px;
+	margin-top: 20px;
+}
+
+div#section2 {
+	display: inline-block;
+}
+
+.sec2Text1 {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.sec2Text2 {
+	text-align: center;
+}
+
+#bubble{
+	z-index: 1000;
+	position: relative;
+	right:-30px;
+	background-color:white;
+	text-align:center;
+	width:500px;
+	height:100px;
+	border:2px solid #555555;
+	border-top-right-radius:80px;
+	border-top-left-radius:80px;
+	border-bottom-right-radius:80px;
+	border-bottom-left-radius:80px;
+	/* implémentation Firefox */
+	-moz-border-radius-topright:80px 40px;
+	-moz-border-radius-topleft:80px 40px;
+	-moz-border-radius-bottomright:80px 40px;
+	-moz-border-radius-bottomleft:80px 40px;
+	/* implémentation Chrome, Safari, ... */
+	-webkit-border-top-right-radius:20px 20px;
+	-webkit-border-top-left-radius:20px 20px;
+	-webkit-border-bottom-right-radius:20px 20px;
+	-webkit-border-bottom-left-radius:20px 20px;
+
+}
+
+#arrow_border{
+	width:0;
+	height:0;
+	line-height:0;
+	border-bottom:30px solid transparent;
+	border-left:30px solid transparent;
+	border-right:30px solid #555555; /* couleur de la bordure de la bulle */
+	position:absolute;
+	bottom:-30px;
+	right:65px;
+}
+#arrow_inner{
+	width:0;
+	height:0;
+	line-height:0;
+	border-bottom:30px solid transparent;
+	border-left:30px solid transparent;
+	border-right:30px solid white; /* couleur du fond de la bulle */
+	position:absolute;
+	bottom:-25px;
+	right:67px;
+}
+
+#text{
+	font-weight:bold;
+	font-size:15px;
+
+	position:relative;
+	top:10px;
+}
