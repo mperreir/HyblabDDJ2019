@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="206px" height="230px" viewBox="0 0 206 230" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-    <title>B23837A0-6C14-4CB9-B811-C6FAE4E22E78@2x</title>
-    <desc>Created with sketchtool.</desc>
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>RURAL@2x</title>
+    <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="49.7718933%" y1="-1.34880492%" x2="50.218189%" y2="100.104136%" id="linearGradient-1">
             <stop stop-color="#B9E0E1" offset="27%"></stop>
@@ -10,46 +10,60 @@
         </linearGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop-Copy-8" transform="translate(-183.000000, -238.000000)">
+        <g id="ECRAN-8" transform="translate(-183.000000, -238.000000)">
             <g id="differente_typos_ecrann" transform="translate(183.000000, 224.000000)">
                 <g id="RURAL" transform="translate(0.000000, 14.000000)">
                     <circle id="Oval" fill="url(#linearGradient-1)" fill-rule="nonzero" cx="104.71" cy="128.81" r="100.83"></circle>
                     <polygon id="Shape" fill="#0C9E92" fill-rule="nonzero" points="159.87 87.46 85.42 87.46 86.53 144.36"></polygon>
                     <polygon id="Shape" fill="#0C9E92" fill-rule="nonzero" points="183.88 115 168.14 87.46 159.15 87.46 158.01 88.35 183.88 133.61"></polygon>
-                    <path d="M184.99,189.68 L184.99,134.38 L159.13,89.17 L86.53,145.63 L86.53,228.16 C92.5370434,229.100818 98.6097968,229.55895 104.69,229.53 C136.221022,229.557915 165.942949,214.807992 184.99,189.68 L184.99,189.68 Z" id="Shape" fill="#126969" fill-rule="nonzero"></path>
-                    <polygon id="Shape" fill="#0C9E92" fill-rule="nonzero" points="183.88 87.46 168.14 87.46 183.88 115"></polygon>
-                    <path d="M92,154.85 L71.82,154.85 L71.82,224.56 C78.3827761,226.670323 85.1449079,228.101161 92,228.83 L92,154.85 Z" id="Shape" fill="#0C9E92" fill-rule="nonzero"></path>
-                    <path d="M71.82,154.85 L51.63,154.85 L51.63,215.23 C57.9587147,219.143582 64.7380608,222.276386 71.82,224.56 L71.82,154.85 Z" id="Shape" fill="#0D6F73" fill-rule="nonzero"></path>
-                    <path d="M144.3,109.42 C143.811432,104.287438 139.500763,100.367615 134.345,100.367615 C129.189237,100.367615 124.878568,104.287438 124.39,109.42 L124.39,147.32 L144.3,147.32 L144.3,109.42 Z" id="Shape" stroke="#F5EFC1" stroke-width="1.5" fill="#B9E0E1" fill-rule="nonzero"></path>
-                    <path d="M134.35,99.47 L134.35,147.32" id="Shape" stroke="#F5EFC1" stroke-width="1.5"></path>
-                    <path d="M124.4,111.09 L144.3,111.09" id="Shape" stroke="#F5EFC1" stroke-width="1.5"></path>
-                    <path d="M124.4,122.12 L144.3,122.12" id="Shape" stroke="#F5EFC1" stroke-width="1.5"></path>
-                    <path d="M124.4,133.14 L144.3,133.14" id="Shape" stroke="#F5EFC1" stroke-width="1.5"></path>
-                    <rect id="Rectangle-path" stroke="#F5EFC1" stroke-width="1.5" fill="#B9E0E1" fill-rule="nonzero" x="70.27" y="165.96" width="3.11" height="13.52"></rect>
-                    <rect id="Rectangle-path" stroke="#F5EFC1" stroke-width="1.5" fill="#B9E0E1" fill-rule="nonzero" x="70.27" y="188.67" width="3.11" height="13.52"></rect>
-                    <path d="M159.15,91.56 L159.15,91.56 L128.81,144.64 L129.18,144.64 L129.18,226.53 C139.823787,223.866866 149.958435,219.475185 159.18,213.53 L159.15,91.56 Z" id="Shape" fill="#0D6F73" fill-rule="nonzero"></path>
-                    <path d="M189.48,183.29 L189.48,143.42 L159.15,90.34 L159.15,213.57 C171.300362,205.750971 181.640935,195.427445 189.48,183.29 Z" id="Shape" fill="#0C9E92" fill-rule="nonzero"></path>
-                    <polyline id="Shape" stroke="#AD115B" stroke-width="3.32" points="189.49 143.42 159.15 90.34 129.18 143.42"></polyline>
-                    <circle id="Oval" fill="#B9E0E1" fill-rule="nonzero" cx="159.15" cy="122.32" r="8.77"></circle>
-                    <path d="M167.91,159.61 C167.75036,154.884414 163.873281,151.1361 159.145,151.1361 C154.416719,151.1361 150.53964,154.884414 150.38,159.61 L150.38,192.99 L167.91,192.99 L167.91,159.61 Z" id="Shape" stroke="#F5EFC1" stroke-width="1.5" fill="#B9E0E1" fill-rule="nonzero"></path>
-                    <path d="M159.15,150.85 L159.15,192.99" id="Shape" stroke="#F5EFC1" stroke-width="1.5"></path>
-                    <path d="M150.38,161.09 L167.92,161.09" id="Shape" stroke="#F5EFC1" stroke-width="1.5"></path>
-                    <path d="M150.38,170.79 L167.92,170.79" id="Shape" stroke="#F5EFC1" stroke-width="1.5"></path>
-                    <path d="M150.38,180.5 L167.92,180.5" id="Shape" stroke="#F5EFC1" stroke-width="1.5"></path>
+                    <path d="M184.99,134.38 L159.13,87.6095149 L134.928003,106.504946 L86.53,144.291132 L86.53,228.16 C92.5370434,229.100818 98.6097968,229.55895 104.69,229.53 C136.221022,229.557915 165.942949,214.807992 184.99,189.68 L184.99,134.38 Z" id="Shape" fill="#126969" fill-rule="nonzero"></path>
+                    <polygon id="Shape" fill="#0C9E92" fill-rule="nonzero" points="183.88 87.46 167.568468 87.46 183.88 116"></polygon>
+                    <g id="fenetre-eglise" transform="translate(124.000000, 100.000000)" stroke="#F5EFC1" stroke-width="1.5">
+                        <path d="M20.3,9.42 C19.8114319,4.2874377 15.5007632,0.367615428 10.345,0.367615428 C5.18923676,0.367615428 0.878568079,4.2874377 0.39,9.42 L0.39,47.32 L20.3,47.32 L20.3,9.42 Z" id="Shape" fill="#B9E0E1" fill-rule="nonzero"></path>
+                        <path d="M10.35,0.5 L10.35,47.32" id="Shape"></path>
+                        <path d="M0.4,11.09 L20.3,11.09" id="Shape"></path>
+                        <path d="M0.4,22.12 L20.3,22.12" id="Shape"></path>
+                        <path d="M0.4,33.14 L20.3,33.14" id="Shape"></path>
+                    </g>
+                    <g id="Tour" transform="translate(127.000000, 89.000000)">
+                        <path d="M32.15,2.56 L32.15,2.56 L1.81,55.64 L2.18,55.64 L2.18,137.53 C12.8237869,134.866866 22.9584351,130.475185 32.18,124.53 L32.15,2.56 Z" id="Shape" fill="#0D6F73" fill-rule="nonzero"></path>
+                        <path d="M62.48,94.29 L62.48,54.42 L32.15,1.34 L32.15,124.57 C44.300362,116.750971 54.6409347,106.427445 62.48,94.29 Z" id="Shape" fill="#0C9E92" fill-rule="nonzero"></path>
+                        <polyline id="Shape" stroke="#AD115B" stroke-width="3.32" points="63.6826055 55.4696352 32.1426834 0.290364782 0.987394499 55.4696352"></polyline>
+                        <circle id="Oval" fill="#B9E0E1" fill-rule="nonzero" cx="32.15" cy="33.32" r="8.77"></circle>
+                    </g>
+                    <g id="fenetre-tour-" transform="translate(150.000000, 150.000000)" stroke="#F5EFC1" stroke-width="1.5">
+                        <path d="M17.91,9.61 C17.75036,4.88441424 13.8732815,1.13609965 9.145,1.13609965 C4.41671853,1.13609965 0.539639962,4.88441424 0.38,9.61 L0.38,42.99 L17.91,42.99 L17.91,9.61 Z" id="Shape" fill="#B9E0E1" fill-rule="nonzero"></path>
+                        <path d="M9.15,0.85 L9.15,42.99" id="Shape"></path>
+                        <path d="M0.38,11.09 L17.92,11.09" id="Shape"></path>
+                        <path d="M0.38,20.79 L17.92,20.79" id="Shape"></path>
+                        <path d="M0.38,30.5 L17.92,30.5" id="Shape"></path>
+                    </g>
                     <polygon id="Shape" fill="#AD115B" fill-rule="nonzero" points="168.47 87.46 184.21 87.46 134.68 0.79 85.15 87.46 140.94 87.46"></polygon>
-                    <path d="M66.2,54.54 L66.08,54.66 L66.08,144 L66.32,144 C145.58,144 66.2,54.54 66.2,54.54 Z" id="Shape" fill="#DADC38" fill-rule="nonzero"></path>
-                    <path d="M55.69,143.32 C59.1571671,143.742495 62.6471991,143.949559 66.14,143.94 L66.08,54.66 C51.3,74.94 38.81,94.42 44.08,104.25 C49.08,113.71 62.31,124.65 55.69,143.32 Z" id="Shape" fill="#DADC38" fill-rule="nonzero"></path>
-                    <path d="M55.57,143.32 C62.24,124.65 49.08,113.71 44.01,104.25 C38.81,94.42 51.3,74.94 66.01,54.66 C62.92,58.17 -3.91,135.47 55.57,143.32 Z" id="Shape" fill="#9BB81F" fill-rule="nonzero"></path>
-                    <path d="M66.33,175.47 L66.33,54.67" id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round"></path>
-                    <polygon id="Shape" fill="#AD115B" fill-rule="nonzero" points="71.7 119.31 51.39 154.85 92.01 154.85"></polygon>
-                    <path d="M27.27,184.89 C26.47,166.09 21.54,165.89 15.4,151.68 C9.4,137.88 16.17,126.3 26.4,116.68 C11.75,117.68 0.04,139.38 0.04,154.16 C-1.17961196e-16,168.73 25.38,169.66 27.27,184.89 Z" id="Shape" fill="#9BB81F" fill-rule="nonzero"></path>
-                    <path d="M27.27,184.89 C27.3427175,185.497297 27.3794484,186.108365 27.38,186.72 C27.38,169.72 54.76,169.3 54.76,154.17 C54.76,139.04 42.5,116.65 27.38,116.65 C27.04,116.65 26.7,116.65 26.38,116.65 C16.19,126.26 9.45,137.84 15.38,151.65 C21.54,165.85 26.47,166.09 27.27,184.89 Z" id="Shape" fill="#DADC38" fill-rule="nonzero"></path>
-                    <polyline id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round" points="27.38 192.8 27.38 165.52 27.38 132.24"></polyline>
-                    <path d="M27.38,157.06 L14.01,143.69" id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round"></path>
-                    <path d="M51.02,150.25 L27.38,169.68" id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round"></path>
-                    <path d="M39.92,179.53 C36.24,179.53 44.74,192.28 41.54,192.28 C38.34,192.28 47.76,204.39 47.76,204.39 C47.76,183.64 39.56,183.26 42.27,180.1 C44.98,176.94 39.96,170.1 42.27,168.26 C44.58,166.42 41.84,154.4 43.86,153.67 C45.88,152.94 43.86,144 47.76,141.06 C38.33,141.06 46.03,152.34 41.23,152.33 C36.43,152.32 43.35,167.51 39.44,167.51 C35.53,167.51 43.6,179.53 39.92,179.53 Z" id="Shape" fill="#511123" fill-rule="nonzero"></path>
-                    <path d="M42.27,180.1 C39.56,183.26 47.76,183.64 47.76,204.39 C47.76,204.39 57.19,192.28 53.99,192.28 C50.79,192.28 59.28,179.53 55.6,179.53 C51.92,179.53 59.99,167.53 56.08,167.53 C52.17,167.53 59.08,152.34 54.29,152.35 C49.5,152.36 57.19,141.08 47.76,141.08 C43.86,144.02 45.88,152.97 43.86,153.69 C41.84,154.41 44.58,166.4 42.27,168.28 C39.96,170.16 44.98,176.93 42.27,180.1 Z" id="Shape" fill="#AD115B" fill-rule="nonzero"></path>
-                    <path d="M47.77,211.92 L47.77,141.06" id="Shape" stroke="#F5EFC1" stroke-width="1.27" stroke-linecap="round"></path>
+                    <g id="Arbre-1" transform="translate(31.000000, 54.000000)">
+                        <path d="M35.2,0.54 L35.08,0.66 L35.08,90 L35.32,90 C114.58,90 35.2,0.54 35.2,0.54 Z" id="Shape" fill="#DADC38" fill-rule="nonzero"></path>
+                        <path d="M24.69,89.32 C28.1571671,89.7424949 31.6471991,89.949559 35.14,89.94 L35.08,0.66 C20.3,20.94 7.81,40.42 13.08,50.25 C18.08,59.71 31.31,70.65 24.69,89.32 Z" id="Shape" fill="#DADC38" fill-rule="nonzero"></path>
+                        <path d="M24.57,89.32 C31.24,70.65 18.08,59.71 13.01,50.25 C7.81,40.42 20.3,20.94 35.01,0.66 C31.92,4.17 -34.91,81.47 24.57,89.32 Z" id="Shape" fill="#9BB81F" fill-rule="nonzero"></path>
+                        <path d="M35.33,121.47 L35.33,0.67" id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round"></path>
+                    </g>
+                    <g id="Tour-2" transform="translate(51.000000, 119.000000)" fill-rule="nonzero">
+                        <path d="M41,35.85 L20.82,35.85 L20.82,105.56 C27.3827761,107.670323 34.1449079,109.101161 41,109.83 L41,35.85 Z" id="Shape" fill="#0C9E92"></path>
+                        <path d="M20.82,35.85 L0.63,35.85 L0.63,96.23 C6.95871468,100.143582 13.7380608,103.276386 20.82,105.56 L20.82,35.85 Z" id="Shape" fill="#0D6F73"></path>
+                        <rect id="Rectangle-path" stroke="#F5EFC1" stroke-width="1.5" fill="#B9E0E1" x="19.27" y="46.96" width="3.11" height="13.52"></rect>
+                        <rect id="Rectangle-path" stroke="#F5EFC1" stroke-width="1.5" fill="#B9E0E1" x="19.27" y="69.67" width="3.11" height="13.52"></rect>
+                        <polygon id="Shape" fill="#AD115B" points="20.7 0.31 0.39 35.85 41.01 35.85"></polygon>
+                    </g>
+                    <g id="Arbre-2" transform="translate(0.000000, 116.000000)">
+                        <path d="M27.27,68.89 C26.47,50.09 21.54,49.89 15.4,35.68 C9.4,21.88 16.17,10.3 26.4,0.68 C11.75,1.68 0.04,23.38 0.04,38.16 C-1.17961196e-16,52.73 25.38,53.66 27.27,68.89 Z" id="Shape" fill="#9BB81F" fill-rule="nonzero"></path>
+                        <path d="M27.27,68.89 C27.3427175,69.4972975 27.3794484,70.1083647 27.38,70.72 C27.38,53.72 54.76,53.3 54.76,38.17 C54.76,23.04 42.5,0.65 27.38,0.65 C27.04,0.65 26.7,0.65 26.38,0.65 C16.19,10.26 9.45,21.84 15.38,35.65 C21.54,49.85 26.47,50.09 27.27,68.89 Z" id="Shape" fill="#DADC38" fill-rule="nonzero"></path>
+                        <polyline id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round" points="27.38 76.8 27.38 49.52 27.38 16.24"></polyline>
+                        <path d="M27.38,41.06 L14.01,27.69" id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M51.02,34.25 L27.38,53.68" id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round"></path>
+                    </g>
+                    <g id="Arbre-rose" transform="translate(38.000000, 141.000000)">
+                        <path d="M1.92,38.53 C-1.76,38.53 6.74,51.28 3.54,51.28 C0.34,51.28 9.76,63.39 9.76,63.39 C9.76,42.64 1.56,42.26 4.27,39.1 C6.98,35.94 1.96,29.1 4.27,27.26 C6.58,25.42 3.84,13.4 5.86,12.67 C7.88,11.94 5.86,3 9.76,0.06 C0.33,0.06 8.03,11.34 3.23,11.33 C-1.57,11.32 5.35,26.51 1.44,26.51 C-2.47,26.51 5.6,38.53 1.92,38.53 Z" id="Shape" fill="#511123" fill-rule="nonzero"></path>
+                        <path d="M4.27,39.1 C1.56,42.26 9.76,42.64 9.76,63.39 C9.76,63.39 19.19,51.28 15.99,51.28 C12.79,51.28 21.28,38.53 17.6,38.53 C13.92,38.53 21.99,26.53 18.08,26.53 C14.17,26.53 21.08,11.34 16.29,11.35 C11.5,11.36 19.19,0.08 9.76,0.08 C5.86,3.02 7.88,11.97 5.86,12.69 C3.84,13.41 6.58,25.4 4.27,27.28 C1.96,29.16 6.98,35.93 4.27,39.1 Z" id="Shape" fill="#AD115B" fill-rule="nonzero"></path>
+                        <path d="M9.77,70.92 L9.77,0.06" id="Shape" stroke="#F5EFC1" stroke-width="1.27" stroke-linecap="round"></path>
+                    </g>
                 </g>
             </g>
         </g>

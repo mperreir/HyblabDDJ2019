@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="171px" height="41px" viewBox="0 0 171 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Info_perso_horaire</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ELEMENTS-AUTRE" transform="translate(-30.000000, -78.000000)">
+            <g id="Info_perso_horaire" transform="translate(30.000000, 78.000000)">
+                <path d="M8,1.31847116e-14 L162.507763,2.76716042e-14 L162.507763,2.84217094e-14 C166.926041,2.76100757e-14 170.507763,3.581722 170.507763,8 L170.507763,25.1117633 L170.507763,25.1117633 C170.507763,29.5300413 166.926041,33.1117633 162.507763,33.1117633 L6.27855041,33.1117633 L0,40.7126649 L0,33.1117633 L0,8 L-8.8817842e-16,8 C-1.42926142e-15,3.581722 3.581722,1.50224885e-14 8,1.42108547e-14 Z" id="Rectangle" fill="#F5EFC1"></path>
+                <text id="Utilisez-votre-souri" font-family="Sarabun-Bold, Sarabun" font-size="8" font-weight="bold" letter-spacing="1" fill="#14343A">
+                    <tspan x="9" y="12">Utilisez votre souris ou votre pad </tspan>
+                    <tspan x="9" y="23">pour changer l’heure !</tspan>
+                </text>
+                <text id="Utilisez-votre-souri" font-family="Sarabun-Bold, Sarabun" font-size="8" font-weight="bold" letter-spacing="1" fill="#14343A">
+                    <tspan x="9" y="12">Utilisez votre souris ou votre pad </tspan>
+                    <tspan x="9" y="23">pour changer l’heure !</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

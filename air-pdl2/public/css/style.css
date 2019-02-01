@@ -119,6 +119,16 @@ section {
     height:40%;
 }
 
+#parti{
+    position: absolute;
+    top:30%;
+    left:5%;
+}
+
+#image-parti{
+    width:50%;
+}
+
 #q1{
     position: relative;
     left:35%;

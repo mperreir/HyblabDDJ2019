@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1100px" height="700px" viewBox="0 0 1100 700" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>ECRAN QUESTION GOOD GOOD</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="47.4777697%" y1="-3.47821429%" x2="50.9155903%" y2="69.4130571%" id="linearGradient-1">
+            <stop stop-color="#B3F2EC" offset="0%"></stop>
+            <stop stop-color="#B6F2ED" offset="29.15%"></stop>
+            <stop stop-color="#BFF4EF" offset="50.13%"></stop>
+            <stop stop-color="#CFF7F3" offset="68.56%"></stop>
+            <stop stop-color="#E5FBF9" offset="85.41%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ECRAN-3-Copy">
+            <g id="ECRAN_QUESTION_SKETCH" transform="translate(-1.000000, 0.000000)">
+                <g id="fond_1_" transform="translate(1.000000, 0.000000)" fill-rule="nonzero" fill="url(#linearGradient-1)">
+                    <g id="fond">
+                        <g id="Arrière-plan_9_">
+                            <rect id="Rectangle-path" x="0" y="0" width="1099.4" height="700"></rect>
+                        </g>
+                    </g>
+                </g>
+                <g id="nuages_2_" transform="translate(1.000000, 0.000000)" fill-rule="nonzero" fill="#D2F9F4">
+                    <g id="nuages_1_">
+                        <g id="nuages">
+                            <path d="M103.9,276.4 C86.6,275.2 66.6,276.3 55.4,263.1 C44.7,250.5 48.3,231 55.9,216.3 C63.5,201.6 74.6,188.3 78.1,172.1 C83,149.7 72.3,127 59.4,108.1 C46.3,89 28.6,70.4 22.5,47.5 C19.2,35.3 24.7,13.8 19.8,0 L0,0 L0,369.8 C1.6,371.4 3.3,373 5.1,374.4 C26.3,390.8 56.4,385.8 83,382.4 C150.5,374 219,381.8 282.8,405.4 C235.8,345.9 179.6,281.4 103.9,276.4 Z" id="Shape"></path>
+                            <path d="M640.5,0 L619.4,0 C620.9,8 624.1,17.9 626.6,25 C631.1,37.8 648.1,59.3 654.3,72 C662.4,88.7 668.3,107 665.4,125.7 C660.1,159.7 628,182.9 596.2,196 C569,207.2 537,216.5 524,242.8 C516.3,258.4 517.2,276.9 510.8,293.1 C496.5,329.4 451.2,343.6 430.8,376.9 C417.9,397.9 416.6,424 406.8,446.6 C391.8,481.2 355.6,505.4 317.9,506.1 C374.3,514.1 427,538.8 469.2,576.9 C483.1,589.5 500.1,604.7 518,598.9 C530.6,594.8 537.7,581.6 541.9,569.1 C556.6,525.6 552.5,478.1 559.9,432.8 C569.7,373.6 598.9,319.4 642.9,278.6 C662,260.9 683.7,246.1 702.2,227.8 C720.8,209.5 736.5,186.7 739.5,160.9 C744.2,119.5 716,82 687.7,51.3 C680.4,43.6 657.7,16.7 640.5,0 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+                <g id="vallée" transform="translate(1.000000, 329.000000)" fill-rule="nonzero" fill="#173D42">
+                    <g id="vallé_derrière">
+                        <g id="sol">
+                            <path d="M1099.4,317.5 C1072.3,307.2 930.7,255.9 756.8,239.3 C564.8,221 297.3,4.3 0,0.5 L0,371 L1099.4,371 L1099.4,317.5 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+                <g id="arbre_1_2_" transform="translate(603.000000, 436.000000)">
+                    <g id="arbre_1_1_">
+                        <g id="arbre_6">
+                            <path d="M44.5,0.9 C20.2,2.5 0.8,37.3 0.8,61 C0.8,84.3 42.8,85.8 46,110.2 C44.7,80.1 36.5,79.7 26.4,57 C16.5,34.8 27.7,16.3 44.5,0.9 Z" id="Shape" fill="#510F22" fill-rule="nonzero"></path>
+                            <path d="M46.2,0.8 C45.6,0.8 45.1,0.8 44.5,0.9 C27.6,16.3 16.5,34.9 26.3,57 C36.5,79.7 44.6,80.1 45.9,110.2 C46,111.2 46.1,112.1 46.1,113.1 C46.1,85.9 91.4,85.2 91.4,61 C91.4,36.8 71.3,0.8 46.2,0.8 Z" id="Shape" fill="#AC0759" fill-rule="nonzero"></path>
+                            <polyline id="Shape" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" points="46.2 169.2 46.2 79.1 46.2 25.8"></polyline>
+                            <path d="M46.2,65.6 L24.1,44.1" id="Shape" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path>
+                            <path d="M85.4,54.6 L46.2,85.8" id="Shape" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path>
+                            <polyline id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round" points="46.2 216 46.2 79.1 46.2 25.8"></polyline>
+                            <path d="M46.2,65.6 L24.1,44.1" id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round"></path>
+                            <path d="M85.4,54.6 L46.2,85.8" id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round"></path>
+                        </g>
+                    </g>
+                </g>
+                <g id="arbre_2_2_" transform="translate(462.000000, 449.000000)">
+                    <g id="arbre_2_4_">
+                        <g id="arbre_4_4_">
+                            <g id="Arbre_3_forme_2_1_">
+                                <path d="M26,0 C26,0.1 26,0.1 25.9,0.2 L25.9,137.9 L26.1,137.9 C83.1,137.9 26,0 26,0 Z" id="Shape" fill="#089E92" fill-rule="nonzero"></path>
+                                <path d="M11,55.7 C18.9,24.5 23.6,14.3 25.2,1.9 C18.6,18.4 -26.9,137.6 25.9,137.9 C25.9,115.2 0.9,95.6 11,55.7 Z" id="Shape" fill="#0D6E72" fill-rule="nonzero"></path>
+                                <path d="M11,55.7 C1,95.5 25.9,115.2 25.9,137.9 L25.9,0.2 C25.8,0.5 25.5,1.1 25.2,1.9 C23.5,14.3 18.8,24.5 11,55.7 Z" id="Shape" fill="#089E92" fill-rule="nonzero"></path>
+                                <path d="M26.1,160.5 L26.1,0" id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="arbre_3_2_" transform="translate(529.000000, 340.000000)">
+                    <g id="arbre_3_1_">
+                        <g id="arbre_3">
+                            <g id="Arbre_2_forme_2">
+                                <path d="M46.1,0.5 C46.1,0.6 46,0.8 45.9,0.9 L45.9,248.9 L46.2,248.9 C149,248.9 46.1,0.5 46.1,0.5 Z" id="Shape" fill="#E1F131" fill-rule="nonzero"></path>
+                                <path d="M46,0.9 C26.9,57.1 10.7,111.2 17.5,138.5 C24,164.8 41.1,195.1 32.5,247.1 C36.9,248.3 41.5,248.9 46,248.9 L46,0.9 Z" id="Shape" fill="#E1F131" fill-rule="nonzero"></path>
+                                <path d="M17.4,138.5 C10.6,111.2 26.8,57.1 45.9,0.9 C41.9,10.7 -44.7,225.3 32.4,247.2 C41,195.1 23.9,164.8 17.4,138.5 Z" id="Shape" fill="#9AB81D" fill-rule="nonzero"></path>
+                                <path d="M46.3,289.7 L46.3,0.5" id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="arbre_4_2_" transform="translate(598.000000, 519.000000)">
+                    <g id="arbre_4_3_">
+                        <g id="arbre_2_3_">
+                            <g id="Arbre_1_forme1_1_">
+                                <path d="M51.4,56.3 C53,54 53.8,51.2 53.8,48.5 C53.8,43.4 51.1,38.7 46.6,36.2 C52.1,31.7 52.9,23.7 48.5,18.2 C46.4,15.6 43.2,13.9 39.9,13.5 C40,13 40,12.4 40,11.9 C40,11.1 39.9,10.4 39.8,9.6 C37.9,6.6 34.6,4.7 31.1,4.7 L31,4.7 C25.3,4.7 20.6,9.3 20.6,15.1 C20.6,16.6 20.9,18 21.5,19.4 C15.1,20.1 10.5,25.9 11.2,32.3 C11.5,35.5 13.2,38.4 15.7,40.3 C9.4,43.7 7.1,51.6 10.4,57.9 C10.7,58.4 11,58.9 11.4,59.4 C7.2,62.3 4.7,67 4.7,72.1 C4.7,84.7 12.6,88.6 18,88.6 C20.9,88.8 23.8,88.4 26.7,87.6 C28.3,86.4 29.7,85 30.8,83.4 L31,83 C38,89 48.6,88.2 54.7,81.2 C60.7,74.2 59.9,63.6 52.9,57.5 C52.3,57 51.8,56.6 51.4,56.3 Z" id="Shape" fill="#E1F131" fill-rule="nonzero"></path>
+                                <path d="M30.1,68.5 L37.9,27.7" id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path d="M30.3,75.8 L19.4,51.2" id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round"></path>
+                                <polyline id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round" points="30.5 117.2 30.5 82.7 28.5 11.8"></polyline>
+                                <path d="M8.1,73.5 C6.9,67.2 7.2,62 11.3,59.2 C7.1,53.4 8.4,45.3 14.2,41.1 C14.6,40.8 15.1,40.5 15.6,40.2 C10.5,36.3 9.5,28.9 13.5,23.8 C15.4,21.3 18.3,19.7 21.5,19.3 C19.2,14.1 21.5,7.9 26.8,5.6 C28.1,5 29.6,4.7 31.1,4.7 L31.2,4.7 C34.8,4.7 38,6.6 39.9,9.6 C38.8,4.3 34.3,0.5 28.9,0.4 L28.8,0.4 C22.5,0.4 17.4,5.5 17.4,11.7 C17.4,13.3 17.7,14.9 18.4,16.4 C11.4,17.3 6.4,23.7 7.3,30.7 C7.7,34 9.4,37.1 12.1,39.2 C5.2,42.9 2.7,51.5 6.4,58.4 L6.4,58.4 C6.7,58.9 7,59.4 7.4,59.9 C-0.3,65.1 -2.3,75.5 2.9,83.2 C8.1,90.9 18.5,92.9 26.2,87.7 L26.2,87.7 L26.8,87.2 C24,88.3 10.5,84.3 8.1,73.5 Z" id="Shape" fill="#9AB81D" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="arbre_5_1_" transform="translate(143.000000, 373.000000)">
+                    <g id="arbre_5">
+                        <g id="arbre_1">
+                            <g id="Arbre_2_forme_2-2">
+                                <path d="M32.1,0.9 C32.1,1 32,1.1 32,1.1 L32,172.5 L32.2,172.5 C103.2,172.6 32.1,0.9 32.1,0.9 Z" id="Shape" fill="#E1F131" fill-rule="nonzero"></path>
+                                <path d="M32,1.2 C18.8,40.1 7.6,77.4 12.3,96.3 C16.8,114.5 28.6,135.4 22.7,171.3 C25.7,172.1 28.9,172.5 32.1,172.5 L32,1.2 L32,1.2 Z" id="Shape" fill="#E1F131" fill-rule="nonzero"></path>
+                                <path d="M12.3,96.3 C7.6,77.4 18.8,40.1 32,1.2 C29.2,8 -30.6,156.3 22.7,171.4 C28.6,135.4 16.8,114.5 12.3,96.3 Z" id="Shape" fill="#9AB81D" fill-rule="nonzero"></path>
+                                <path d="M32.2,200.8 L32.2,0.9" id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="Calque_11" transform="translate(0.000000, 539.000000)" fill-rule="nonzero" fill="#1C4649">
+                    <g id="vallée_1_">
+                        <g id="vallée_devant">
+                            <g id="sol_2">
+                                <path d="M846.8,142.5 C589.5,142.2 643.874267,56.7804604 238.574267,38.6804604 C110.274267,32.9804604 54.8476128,-1.52801177 1,1.13039961 L0.9,175 L1100.3,175 L1100.4,46.9 C1075.6,64.2 957.5,142.5 846.8,142.5 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
