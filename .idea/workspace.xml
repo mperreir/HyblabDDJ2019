@@ -2,22 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5de35e87-49da-40d0-84a4-175fd177a7cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/air-pdl2/public/css/carousel-fade-tarnsition.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/air-pdl2/public/js/questionnaire.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/libraries/bootstrap/css/bootstrap-theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/libraries/bootstrap/css/bootstrap-theme.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/libraries/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/libraries/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/libraries/js/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/libraries/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/libraries/js/jquery.smint.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/air-pdl2/libraries/fontawesome/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/air-pdl2/libraries/fontawesome/font-awesome.min.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/air-pdl2/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/bg1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/bg2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/images.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/logo_hyblab (2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/logo_hyblab.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/my.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/Calque_11.svg" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/img/Calque_11.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/RURAL.png" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/img/RURAL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/TRAFIC.png" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/img/TRAFIC.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/VILLE.png" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/img/VILLE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/choix_endroit.png" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/img/choix_endroit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/air-pdl2/public/img/conseils.png" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/img/conseils.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/air-pdl2/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/air-pdl2/public/js/animation.js" beforeDir="false" afterPath="$PROJECT_DIR$/air-pdl2/public/js/animation.js" afterDir="false" />
     </list>
@@ -32,11 +27,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/air-pdl2/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+            <state relative-caret-position="391">
+              <caret line="168" column="26" lean-forward="true" selection-start-line="168" selection-start-column="26" selection-end-line="168" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/air-pdl2/public/js/questionnaire.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1445">
+              <caret line="121" selection-start-line="121" selection-end-line="121" />
             </state>
           </provider>
         </entry>
@@ -44,17 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/air-pdl2/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/air-pdl2/public/css/jquery.range.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            <state relative-caret-position="430">
+              <caret line="254" column="14" selection-start-line="254" selection-start-column="11" selection-end-line="254" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -62,17 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/air-pdl2/public/js/animation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/air-pdl2/public/css/carousel-fade-tarnsition.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+            <state relative-caret-position="612">
+              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -88,6 +74,7 @@
       <find>active</find>
       <find>row</find>
       <find>webkit</find>
+      <find>visibility</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -99,14 +86,15 @@
         <option value="$PROJECT_DIR$/air-pdl2/public/Hyblab/tes.html" />
         <option value="$PROJECT_DIR$/air-pdl2/server.js" />
         <option value="$PROJECT_DIR$/air-pdl2/libraries/bootstrap/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/air-pdl2/public/js/animation.js" />
         <option value="$PROJECT_DIR$/air-pdl2/public/css/carousel-fade-tarnsition.css" />
-        <option value="$PROJECT_DIR$/air-pdl2/public/index.html" />
+        <option value="$PROJECT_DIR$/air-pdl2/public/js/questionnaire.js" />
+        <option value="$PROJECT_DIR$/air-pdl2/public/js/animation.js" />
         <option value="$PROJECT_DIR$/air-pdl2/public/css/style.css" />
+        <option value="$PROJECT_DIR$/air-pdl2/public/index.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="489" />
     <option name="y" value="68" />
     <option name="width" value="974" />
@@ -118,6 +106,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,29 +136,7 @@
               <item name="HyblabDDJ2019" type="b2602c69:ProjectViewProjectNode" />
               <item name="HyblabDDJ2019" type="462c0819:PsiDirectoryNode" />
               <item name="air-pdl2" type="462c0819:PsiDirectoryNode" />
-              <item name="libraries" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HyblabDDJ2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HyblabDDJ2019" type="462c0819:PsiDirectoryNode" />
-              <item name="air-pdl2" type="462c0819:PsiDirectoryNode" />
-              <item name="libraries" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HyblabDDJ2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HyblabDDJ2019" type="462c0819:PsiDirectoryNode" />
-              <item name="air-pdl2" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HyblabDDJ2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HyblabDDJ2019" type="462c0819:PsiDirectoryNode" />
-              <item name="air-pdl2" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HyblabDDJ2019" type="b2602c69:ProjectViewProjectNode" />
@@ -182,7 +149,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -220,16 +186,18 @@
       <workItem from="1548420140317" duration="8973000" />
       <workItem from="1548517905448" duration="17236000" />
       <workItem from="1548622400058" duration="10909000" />
-      <workItem from="1548750573193" duration="1225000" />
+      <workItem from="1548750573193" duration="23806000" />
+      <workItem from="1548856750544" duration="2767000" />
+      <workItem from="1548876272004" duration="13229000" />
+      <workItem from="1548940508401" duration="10505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86659000" />
+    <option name="totallyTimeSpent" value="135741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1264489" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -360,9 +328,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/air-pdl2/public/js/example.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/air-pdl2/public/js/jquery.range.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4386">
@@ -399,38 +364,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/air-pdl2/public/js/animation.js">
+    <entry file="file://$PROJECT_DIR$/air-pdl2/public/css/jquery.range.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+        <state relative-caret-position="289">
+          <caret line="80" column="30" lean-forward="true" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/air-pdl2/public/js/example.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/air-pdl2/public/css/carousel-fade-tarnsition.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
+        <state relative-caret-position="289">
           <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/air-pdl2/public/index.html">
+    <entry file="file://$PROJECT_DIR$/air-pdl2/public/js/intro.js" />
+    <entry file="file://$PROJECT_DIR$/air-pdl2/public/js/animation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        <state relative-caret-position="612">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/air-pdl2/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        <state relative-caret-position="430">
+          <caret line="254" column="14" selection-start-line="254" selection-start-column="11" selection-end-line="254" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/air-pdl2/public/css/jquery.range.css">
+    <entry file="file://$PROJECT_DIR$/air-pdl2/public/js/questionnaire.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state relative-caret-position="1445">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/air-pdl2/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="168" column="26" lean-forward="true" selection-start-line="168" selection-start-column="26" selection-end-line="168" selection-end-column="26" />
         </state>
       </provider>
     </entry>
