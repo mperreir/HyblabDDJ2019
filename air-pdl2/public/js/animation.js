@@ -41,7 +41,25 @@ $('#carousel-example-generic').on('slid.bs.carousel', function() {
     if(currentIndex===5){
         $('#perso').hide();
         $('#voiture').hide();
+        $('.svg-container').show();
     }
+
+    if(currentIndex===6){
+        $('.svg-container').show();
+    }
+
+    if(currentIndex===7){
+        $('.svg-container').show();
+    }
+
+    if(currentIndex===8){
+        $('.svg-container').hide();
+    }
+
+    if(currentIndex===9){
+        $('.svg-container').hide();
+    }
+
 });
 
 $('#carousel-example-generic').bind('wheel', function(e){

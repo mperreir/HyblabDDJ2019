@@ -10,12 +10,12 @@ for (var i =    0; i <= 24; ++i) {
     mytr.push({"name": "data_" + i, "value":myt[i]});
 }
 var xBar = d3.scaleBand()
-    .range([0, 400])
+    .range([0, 800])
     .padding(0.1);
 var yBar = d3.scaleLinear()
     .range([200, 0]);
 var svg = d3.select("#svga1" ).append("svg")
-    .attr("width", 400)
+    .attr("width", 800)
     .attr("height", 200)
     .attr("class", "svg-transition");
 var data=myru;
