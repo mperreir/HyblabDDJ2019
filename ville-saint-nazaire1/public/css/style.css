@@ -243,12 +243,30 @@ input[type="range"] {
   height:30px;
   float:right;
   position: relative;
-  top: 2px;
 }
 /* A faire pour les autres navigateurs */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height:20px;
+  width:20px;
+  background-color: #FFFFFF;
+  border: 2px solid #4E687F;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  margin-top: -6px;
+}
 
 input[type=range]::-moz-range-thumb {
-  -webkit-appearance: none;
+  height:20px;
+  width:20px;
+  background-color: #FFFFFF;
+  border: 2px solid #4E687F;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+input[type=range]::-ms-thumb {
   height:20px;
   width:20px;
   background-color: #FFFFFF;
@@ -258,9 +276,9 @@ input[type=range]::-moz-range-thumb {
   transition: .3s ease-in-out;
 }
 
-input[type=range]::-moz-range-progress {
+input[type=range]::-webkit-slider-runnable-track {
   height:8px;
-  background-color: #4E687F;
+  background-color: #D5D5d5;
   border-radius: 3px;
 }
 
@@ -269,6 +287,34 @@ input[type=range]::-moz-range-track {
   background-color: #D5D5d5;
   border-radius: 3px;
 }
+
+input[type=range]::-ms-fill-upper {
+  height:8px;
+  background-color: #D5D5d5;
+  border-radius: 3px;
+}
+
+input[type=range]::-moz-range-progress {
+  height:8px;
+  background-color: #4E687F;
+  border-radius: 3px;
+}
+
+input[type=range]::-ms-fill-lower {
+  height:8px;
+  background-color: #4E687F;
+  border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Style des labels */
 .range-labels-dist, .range-labels-theme {
