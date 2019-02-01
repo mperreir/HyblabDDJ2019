@@ -1,15 +1,7 @@
-/* just a sample css rule to show that everything works */
-footer p
-{
-  font-size: small;
+section {
+  font-size: 35px;
   text-align: center;
-}
-
-header{
-  text-align: center;
-}
-
-header img{
-  max-width: 100%;
-	height: auto;
+  color: white;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
 }
