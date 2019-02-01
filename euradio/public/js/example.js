@@ -40,6 +40,7 @@ fetch('data/dummy.json')
       var recepteur = false;
       var route = false;
       var voiture = false;
+      var reseau = false;
 
       $('#maison').on({
         mouseenter: function () {
@@ -101,14 +102,27 @@ fetch('data/dummy.json')
           }
         },
       });
+      $('#reseau').on({
+        mouseenter: function () {
+          if(!reseau){
+            document.getElementById('reseau').src="img/Picto/Picto couverture-reseaux-blanc.png"
+          }
+        },
+        mouseleave: function () {
+          if(!reseau){
+            document.getElementById('reseau').src="img/Picto/Picto couverture-reseaux-bleu.png"
+          }
+        },
+      });
 
 
-      function pictoChanging(maison2,radio2,recepteur2,route2,voiture2) {
+      function pictoChanging(maison2,radio2,recepteur2,route2,voiture2,reseau2) {
         maison = maison2;
         radio = radio2;
         recepteur =recepteur2;
         route = route2;
         voiture =voiture2;
+        reseau =reseau2;
         if (maison) {
           document.getElementById('maison').src="img/Picto/Picto maison - blanc.png"
         }else{
@@ -134,8 +148,13 @@ fetch('data/dummy.json')
         }else{
           document.getElementById('voiture').src="img/Picto/Picto voiture - bleu.png"
         }
+        if (reseau) {
+          document.getElementById('reseau').src="img/Picto/Picto couverture-reseaux-blanc.png"
+        }else{
+          document.getElementById('reseau').src="img/Picto/Picto couverture-reseaux-bleu.png"
+        }
       }
-      var xPosBleu ;
+      /*var xPosBleu ;
       var xPosJaune ;
       var valBleu;
       var valJaune;
@@ -176,7 +195,145 @@ fetch('data/dummy.json')
           console.log((10*(valBleu+1)-2)+"%");
         },
         containment: "parent"
-      });
-      d3.csv("csv/vehicule.csv").then(function(data) {
+      });*/
+var pays =["Norvège","Pays-Bas","Danemark","Belgique","Allemagne","Suisse","France","Italie","Russie"];
+      var ourData;
+       d3.csv("csv/vehicule.csv").then(function(data) {
           console.log(data); // [{"Hello": "world"}, …]
+          //console.log(data[10])
+          ourData=data;
+          affichageGraphique(data);
       });
+var ctx;
+function affichageGraphique(data,val1,val2){
+  var xPosRouge ;
+  var xPosJaune ;
+  var valRouge=2;
+  var valJaune=0;
+  var myLineChart;
+  var otherLineChart;
+  var chartData2 = {
+      labels: ['% de Véhicules en France'], // responsible for how many bars are gonna show on the chart
+      // create 12 datasets, since we have 12 items
+      // data[0] = labels[0] (data for first bar - 'Standing costs') | data[1] = labels[1] (data for second bar - 'Running costs')
+      // put 0, if there is no data for the particular bar
+      datasets: [{
+        data: [data[valJaune]["valeur"],100-data[valJaune]["valeur"]],
+        backgroundColor: ['rgba(252, 233, 55, 1)','rgba(252, 233, 55, 0)'], // green
+        borderColor:['rgba(252, 233, 55, 1)','rgba(252, 233, 55, 1)'],
+        borderWidth:2
+
+      }],
+
+
+  };
+
+  var opt2 = {
+    responsive: false,
+    legend: {
+          display: false
+      },
+    scales: {
+       xAxes: [{
+          /*stacked: true,*/ // this should be set to make the bars stacked
+          display:false
+       }],
+       yAxes: [{
+          /*stacked: true,*/ // this also..
+          display:false
+       }]
+    },
+    cutoutPercentage: 70,
+    segmentShowStroke: false
+  };
+   var ctx2 = document.getElementById("ctx2"),
+       otherLineChart = new Chart(ctx2, {
+          type: 'doughnut',
+          data: chartData2,
+          options: opt2,
+
+       });
+  var chartData = {
+      labels: ['% de Véhicules en Norvège'], // responsible for how many bars are gonna show on the chart
+      // create 12 datasets, since we have 12 items
+      // data[0] = labels[0] (data for first bar - 'Standing costs') | data[1] = labels[1] (data for second bar - 'Running costs')
+      // put 0, if there is no data for the particular bar
+      datasets: [{
+        data: [data[valJaune]["valeur"],100-data[valJaune]["valeur"]],
+        backgroundColor: ['rgba(230, 55, 75, 1)','rgba(230, 55, 75, 0)'], // green
+        borderColor:['rgba(230, 55, 75, 1)','rgba(230, 55, 75, 1)'],
+        borderWidth:2
+
+      }],
+
+
+  };
+
+  var opt = {
+    responsive: false,
+    legend: {
+          display: false
+      },
+    scales: {
+       xAxes: [{
+          /*stacked: true,*/ // this should be set to make the bars stacked
+          display:false
+       }],
+       yAxes: [{
+          /*stacked: true,*/ // this also..
+          display:false
+       }]
+    },
+    cutoutPercentage: 70,
+    segmentShowStroke: false
+  };
+  ctx = document.getElementById("ctx"),
+       myLineChart = new Chart(ctx, {
+          type: 'doughnut',
+          data: chartData,
+          options: opt,
+
+       });
+document.getElementById('paysJaune').innerHTML=data[valJaune]["nomPays"];
+document.getElementById('paysRouge').innerHTML=data[valRouge]["nomPays"];
+document.getElementById('valeurJaune').innerHTML=data[valJaune]["valeur"];
+document.getElementById('valeurRouge').innerHTML=data[valRouge]["valeur"];
+//fin Graphiques
+$('#rouge').draggable({
+  axis: "x",
+  grid: [ 40, 10 ],
+  drag: function( event, ui ) {
+    var offset = $(this).offset(); // Avoir les coordonnées du slider
+    var xPos = offset.left; //
+    valRouge = parseInt((xPos - xPosRouge)/40)+2;
+    //console.log(valRouge);
+    myLineChart.data.datasets[0].data = [data[valRouge]["valeur"],100-data[valRouge]["valeur"]];
+    myLineChart.update();
+    document.getElementById('valeurRouge').innerHTML=data[valRouge]["valeur"];
+    document.getElementById('paysRouge').innerHTML=data[valRouge]["nomPays"];
+  },
+  create: function(event,ui){
+    xPosRouge = $(this).offset().left;
+  },
+  containment: "parent"
+});
+$('#jaune').draggable({
+  axis: "x",
+  grid: [ 40, 10 ],
+  drag: function( event, ui ) {
+    var offset = $(this).offset(); // Avoir les coordonnées du slider
+    var xPos = offset.left; //
+    valJaune = parseInt((xPos - xPosJaune)/40);
+    //var chartData2 =
+    otherLineChart.data.datasets[0].data = [data[valJaune]["valeur"],100-data[valJaune]["valeur"]];
+    otherLineChart.update();
+    document.getElementById('valeurJaune').innerHTML=data[valJaune]["valeur"];
+    document.getElementById('paysJaune').innerHTML=data[valJaune]["nomPays"];
+    document.getElementById('paysRouge').innerHTML=data[valRouge]["nomPays"];
+  },
+  create: function(event,ui){
+    xPosJaune = $(this).offset().left;
+  },
+  containment: "parent"
+});
+};
