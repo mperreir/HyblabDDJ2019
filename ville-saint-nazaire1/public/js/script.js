@@ -80,6 +80,8 @@ function click_curseur_dist(x) {
   actualiser_dist();
 }
 
+document.getElementById("distance").value=20;
+document.getElementById("num_theme").value=2;
 var nb = document.getElementById("distance").value;
 document.getElementById("val").innerHTML = Math.round(nb*10) /10;
 actualiser_decor();
@@ -87,6 +89,8 @@ document.getElementById("hotspot-checkbox").checked=false;
 document.getElementById("culturels-checkbox").checked=false;
 document.getElementById("toilettes-checkbox").checked=false;
 document.getElementById("office-checkbox").checked=false;
+document.getElementById("bars-checkbox").checked=false;
+document.getElementById("restaurants-checkbox").checked=false;
 
 function actualiser_dist() {
   var nb = document.getElementById("distance").value;
