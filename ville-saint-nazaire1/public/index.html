@@ -8,6 +8,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+	<script src="js/svg-injector.min.js" sdefer></script>
 	<script src="js/script.js" defer></script>
 </head>
 <body>
@@ -51,7 +52,7 @@
 						<label for="distance">Distance (Km) : <span id="val"></span></label>
 						<br/><br/>
 						<div width="100%">
-							<input oninput="actualiser_dist()" onchange="actualiser_dist()" type="range" min="10" max="30" step="0.001" value="20" class="slider" id="distance" name="distance">
+							<input oninput="actualiser_dist()" onchange="actualiser_dist()" type="range" min="10" max="30" step="1" value="20" class="slider" id="distance" name="distance">
 						</div><br/>
 						<ul class="range-labels-dist">
 							<li onclick="click_curseur_dist('30')">30</li>
@@ -81,23 +82,7 @@
 		<div id="page_carte">
 			<img id="carte_generale" src="img/carte/carte_carenne.png"  alt="carte des pistes Carene"/>
 
-			<img class="circuit" id="circuit-01" src="img/circuits/circuits-01.svg"  alt="circuit"/>
-			<img class="circuit" id="circuit-02" src="img/circuits/circuits-02.svg"  alt="circuit"/>
-			<img class="circuit" id="circuit-03" src="img/circuits/circuits-03.svg"  alt="circuit"/>
-			<img class="circuit" id="circuit-04" src="img/circuits/circuits-04.svg"  alt="circuit"/>
-			<img class="circuit" id="circuit-05" src="img/circuits/circuits-05.svg"  alt="circuit"/>
-			<img class="circuit" id="circuit-06" src="img/circuits/circuits-06.svg"  alt="circuit"/>
-			<img class="circuit" id="circuit-07" src="img/circuits/circuits-07.svg"  alt="circuit"/>
-			<img class="circuit" id="circuit-08" src="img/circuits/circuits-08.svg"  alt="circuit"/>
-			<img class="circuit" id="circuit-09" src="img/circuits/circuits-09.svg"  alt="circuit"/>
-
-			<img class="lieu" id="hotspot" src="img/lieux/hotspot.png" alt="hotspot"/>
-			<img class="lieu" id="office" src="img/lieux/office-tourisme.png" alt="office"/>
-			<img class="lieu" id="culturels" src="img/lieux/points-culturels.png" alt="culturels"/>
-			<img class="lieu" id="toilettes" src="img/lieux/toilettes.png" alt="toilettes"/>
-			<img class="lieu" id="bars" src="img/lieux/bars.png" alt="bars"/>
-			<img class="lieu" id="restaurants" src="img/lieux/restaurants.png" alt="restaurants"/>
-
+			<img class="circuit" id="circuits" src="img/circuits/map_circuit.svg">
 
 			<fieldset id="choix_lieu">
 

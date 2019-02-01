@@ -1,5 +1,10 @@
 'use strict';
 
+var mySVGsToInject = document.querySelectorAll('.circuit');
+
+// Trigger the injection
+SVGInjector(mySVGsToInject);
+
 // infos sur les circuits
 var liste_infos_circuit = charger_donnees('nom-circuit-info');
 
@@ -99,7 +104,8 @@ function c_est_parti(){
   selection_circuit(dist, theme)
   .then(function(value){
     value.forEach(function(element){
-      document.getElementById("circuit-0" + element["numero"]).style.display="block";
+      var numero = element["numero"];
+      document.getElementById("Itineraire_" + numero).style.display="block";
       nb_circuit = nb_circuit + 1;
       document.getElementById("liste_parcours").innerHTML += '<input class="parcours_disponible" type="radio" name="parcours_disponible" onclick="modif_radio()" value=' + element["numero"] + '>' + element["nom"] + '<br>';
     })
@@ -144,10 +150,19 @@ function selection_circuit(distance, theme){
     distance = parseInt(distance);
     var liste_circuit_selection_interne = [];
     value.forEach(function(element){
+      document.getElementById("Itineraire_" + element["numero"]).style.display="none";
       if (element["distance_en_km"] <= distance && element["theme"].includes(theme)){
         liste_circuit_selection_interne.push(element);
       }
     });
+    document.getElementById("Wifi").style.display="none";
+    document.getElementById("Musees").style.display="none";
+    document.getElementById("Toilettes").style.display="none";
+    document.getElementById("Offices_du_tourisme").style.display="none";
+    document.getElementById("Bars").style.display="none";
+    document.getElementById("Restaurants").style.display="none";
+    document.getElementById("Decors").style.display="none";
+    document.getElementById("circuits").style.display="block";
     return liste_circuit_selection_interne
   });
 }
@@ -164,8 +179,6 @@ function retour() {
   document.getElementById("page_personnalisation").style.display="block";
   document.getElementById("page_carte").style.display="none";
   document.getElementById("carte_generale").style.display="none";
-  for (var i = 1; i < 10; i++)
-    document.getElementById("circuit-0" + i).style.display="none";
   var collection_lieu = document.getElementsByClassName("lieu");
   for (var i = 0; i < collection_lieu.length; i++) {
     collection_lieu[i].style.zIndex="1";
