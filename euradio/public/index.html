@@ -18,14 +18,20 @@
     <!--<link rel="stylesheet" href="css/juxtapose.css">-->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="jquery-ui-1.12.1/jquery-ui.js" defer></script>
+    <!--graphique en stack -->
+    <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
     <script src="js/fullpage.js" defer></script>
     <!--<script src="js/juxtapose.js" defer></script>-->
     <script src="js/example.js" defer></script>
     <script src="js/slider.js" defer></script>
     <script src="js/imageslider.js" defer></script>
+    <script src="js/stacked.js" defer></script>
 		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
     <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
          rel = "stylesheet">
     <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -41,9 +47,8 @@
 
     <div class="section" id="section1"> <!-- Page 1 -->
         <div class="haut">
-    			<h2>DÉCOUVREZ LA RADIO DU FUTUR...</h2>
-          <h3>DÉPLACEZ LE CURSEUR POUR CHANGER LES FRÉQUENCES<br>
-            ET PASSER À LA RADIO NUMÉRIQUE</h3>
+    			<h2 id="titre11">Branchez-vous sur la fréquence de demain...</h2>
+          <h3 id="titre12">En jouant avec le curseur</h3>
 
             </div>
             <div class="imagesPage1">
@@ -87,10 +92,41 @@
       <div class="haut">
       <div class="arrow up"></div>
         <h2>DÉPLOIEMENT DU DAB+ EN EUROPE</h2>
-        <h3>COMPARE LES DIFFÉRENTS DEVELOPPEMENTS DU DAB+ EN EUROPE</h3>
+        <h3>Sélectionner le critère de votre choix pour voir la RNT au niveau européen</h3>
+
+        <div id="Pictos">
+          <img class="picto" id="maison" onclick="pictoChanging(true,false,false,false,false)" src="img/Picto/Picto maison - blanc.png">
+          <img class="picto" id="radio" onclick="pictoChanging(false,true,false,false,false)" src="img/Picto/Picto radio - bleu.png">
+          <img class="picto" id="recepteur" onclick="pictoChanging(false,false,true,false,false)" src="img/Picto/Picto recepteur - bleu.png">
+          <img class="picto" id="route" onclick="pictoChanging(false,false,false,true,false)" src="img/Picto/Picto route - bleu.png">
+          <img class="picto" id="voiture" onclick="pictoChanging(false,false,false,false,true)" src="img/Picto/Picto voiture - bleu.png">
+        </div>
+
       </div>
       <div class="imagesPage1">
-        <img src="img/group.png">
+
+        <div class="affichageGraphiques">
+          <div class="affichageGraphique">
+            <canvas id="ctx" width="375" height="220"></canvas>
+          </div>
+          <div class="affichageGraphique">
+            <canvas id="ctx2" width="375" height="220"></canvas>
+          </div>-
+        </div>
+
+        <div class="containerSliderPays">
+          <div class="containerButtonPays">
+            <div id="partieGauche">
+              <img id="bleu"src="img/BTN slider.png"/>
+            </div>
+            <div id="partieDroite">
+              <img id="jaune"src="img/BTN slider.png"/>
+            </div>
+          </div>
+          <img id="sliderPays"src="img/barre-pays.png"/>
+        </div>
+
+        <!--<img src="img/group.png"/>-->
       </div>
       <div class="arrow down"></div>
     </div>

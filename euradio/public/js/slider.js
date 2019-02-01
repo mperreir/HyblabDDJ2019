@@ -5,7 +5,7 @@ var radios = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipisci
 
 $('#draggable').draggable({
   axis: "x",
-  grid: [ 27, 20 ],
+  grid: [ 27, 10 ],
   drag: function( event, ui ) {
     var offset = $(this).offset(); // Avoir les coordonnées du slider
     var xPos = offset.left; //
@@ -35,20 +35,14 @@ function changer_radio(xPos){
     //document.getElementById('conteneurRadio').style.marginTop= "6%";
     //document.getElementById('conteneurRadio').style.marginBottom= "5%";
 
-    $('.haut h2').text("Todo list");
+    $('#titre11').text("…La radio numérique terrestre");
+    $('#titre12').text("aussi appelé DAB+");
     document.getElementById('sliderBackground').style.display="none";
     document.getElementById('sliderBackground2').style.display="inline-block";
     //document.getElementById('imgBackground').marginRight="5px";
-    $('#draggable').draggable({
-      axis: "x",
-      grid: [ 23, 20 ],
-      drag: function( event, ui ) {
-        var offset = $(this).offset(); // Avoir les coordonnées du slider
-        var xPos = offset.left; //
-        offset.left=changer_radio(xPos);
-      },
-      containment: "parent"
-    });
+    $('#conteneurLigne').append('<p class="phraseTransition">Et pour vous, ça change quoi ?</p>')
+
+
     //document.getElementById('nomRadio').style.top="65%";
     //document.getElementById('nomRadio').style.left="50%";
   }
