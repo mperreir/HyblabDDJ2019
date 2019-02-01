@@ -49,7 +49,17 @@
         <div class="haut">
     			<h2 id="titre11">Branchez-vous sur la fréquence de demain...</h2>
           <h3 id="titre12">En jouant avec le curseur</h3>
+          <!--<audio src="Musiques/hyblablfm_1.wav">
+          </audio>-->
 
+          <!--<embed src=“Musiques/hyblablfm_1.wav”>-->
+            </div>
+            <div id="triche">
+              <audio id="musique" controls="controls">
+                <source id="audioSource" src="Musiques/hyblablfm_1.wav"></source>
+                Your browser does not support the audio format.
+              </audio>
+              <!--<embed id="musique"src="Musiques/hyblablfm_1.wav" width="0" height="0" loop="false" autostart="true" hidden="true" />-->
             </div>
             <div class="imagesPage1">
               <p id="nomRadio">Euradio</p>
@@ -92,12 +102,12 @@
       <div class="haut">
       <div class="arrow up"></div>
         <h2>DÉPLOIEMENT DU DAB+ EN EUROPE</h2>
-        <h3>Sélectionnez le critère de votre choix pour voir la RNT au niveau européen</h3>
+
 
         <div id="Pictos">
-          <img class="picto" id="maison" onclick="pictoChanging(true,false,false,false,false,false)" src="img/Picto/Picto maison - blanc.png">
-          <img class="picto" id="radio" onclick="pictoChanging(false,true,false,false,false,false)" src="img/Picto/Picto radio - bleu.png">
+
           <img class="picto" id="recepteur" onclick="pictoChanging(false,false,true,false,false,false)" src="img/Picto/Picto recepteur - bleu.png">
+          <img class="picto" id="maison" onclick="pictoChanging(true,false,false,false,false,false)" src="img/Picto/Picto maison - blanc.png">
           <img class="picto" id="route" onclick="pictoChanging(false,false,false,true,false,false)" src="img/Picto/Picto route - bleu.png">
           <img class="picto" id="voiture" onclick="pictoChanging(false,false,false,false,true,false)" src="img/Picto/Picto voiture - bleu.png">
           <img class="picto" id="reseau" onclick="pictoChanging(false,false,false,false,false,true)" src="img/Picto/Picto couverture-reseaux-bleu.png">
@@ -110,20 +120,16 @@
 
           <div class="affichageGraphique">
             <h4 id="paysRouge"></h4>
-            <div class ="contenuCentre">
-              <p id="valeurRouge" >Coucou</p>
-            </div>
+              <p id="valeurRouge" class ="contenuCentre">Coucou</p>
             <canvas id="ctx" width="375" height="200"></canvas>
           </div>
           <div class="affichageGraphique">
             <h4 id="paysJaune"></h4>
-            <div class ="contenuCentre">
-              <p id="valeurJaune" >Coucou</p>
-            </div>
+              <p id="valeurJaune" class ="contenuCentre">Coucou</p>
             <canvas id="ctx2" width="375" height="200"></canvas>
           </div>-
         </div>
-
+        <h3 id="critere">Sélectionnez le critère de votre choix pour voir la RNT au niveau européen</h3>
         <div class="containerSliderPays">
           <div class="containerButtonPays">
             <div id="partieGauche">

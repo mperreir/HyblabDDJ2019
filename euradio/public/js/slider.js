@@ -1,7 +1,10 @@
 var valeurRadio;
+var valeurMusique;
 var hasChanged = false;
 var radios = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing', 'elit', 'sed','Al', 'eiusmod','Euradio', 'tempor', 'incididunt', 'ut', 'labore', 'et', 'dolore', 'magna', 'aliqua','Ut','Coucou','On','Continu','jusqu'];
-
+var x = document.getElementById("musique");
+x.load();
+x.play();
 
 $('#draggable').draggable({
   axis: "x",
@@ -21,10 +24,19 @@ function changer_radio(xPos){
   console.log((valeur));
   if(!hasChanged){
     valeurRadio = valeur%10+1;
+    valeurMusique = valeur%3+1;
     document.getElementById('imgBackground').src="img/RadioFm/Radiofm_fréquence_"+valeurRadio+".png";
+    document.getElementById('musique').src="Musiques/hyblablfm_"+valeurMusique+".wav";
+    //document.getElementById('musique').load();
+    x.load();
+    x.play();
   }else{
     valeurRadio = valeur%7+1;
+    valeurMusique = valeur%3+1;
     document.getElementById('imgBackground').src="img/RadioRnt/Radiornt_img_"+valeurRadio+".png";
+    document.getElementById('musique').src="Musiques/hyblablfm_"+valeurMusique+".wav";
+    x.load();
+    x.play();
   }
 
   if( !hasChanged &&valeur >18){

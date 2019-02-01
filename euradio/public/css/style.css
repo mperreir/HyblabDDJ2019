@@ -1,5 +1,10 @@
 /* Basic */
-
+#triche{
+  position: absolute;
+    top: -50px;
+    left: -50px;
+    overflow: hidden;
+}
 footer p
 {
   font-size: small;
@@ -32,6 +37,16 @@ h3 {
 	color: #312783;
 	font-family: Roboto;
 	font-size: 18.22px;
+	font-style: italic;
+	font-weight: bold;
+	line-height: 21px;
+	text-align: center;
+  text-transform: uppercase;
+}
+h4 {
+	color: #312783;
+	font-family: Roboto;
+	font-size: 15px;
 	font-style: italic;
 	font-weight: bold;
 	line-height: 21px;
@@ -173,12 +188,12 @@ width: 100%;
   display: block;
   margin-bottom: 2%;
 }
-#maison{
-  margin-top: -6%;
+#recepteur{
+  /*margin-top: -6%;*/
 }
 /* DIAPO 3*/
 canvas{
-  margin: auto;
+  margin-left: -5px;
 }
 .affichageGraphiques{
   height: 30%;
@@ -186,8 +201,8 @@ canvas{
   width: 100%;
 }
 .affichageGraphique{
-  width: 48%;
-  display: inline-block;
+  width: 50%;
+  float: left;
   position: relative;
 }
 #section3{
@@ -246,15 +261,20 @@ canvas{
   display: block;
 }
 .contenuCentre{
-  position: absolute;
-  z-index: 100;
+  width: 100%;
   text-align: center;
+  position: absolute;
   /*top: 40%;
   left: 50%;*/
+  top: 49%;
+  color: #312783;
+	font-family: Roboto;
+	font-size: 160%;
+	font-style: italic;
+	font-weight: 300;
+  text-transform: uppercase;
 }
-#valeurRouge{
-  position: relative;
-}
+
 h4{
   text-align: center;
 }
