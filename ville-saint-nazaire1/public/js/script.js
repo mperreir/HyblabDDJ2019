@@ -143,16 +143,30 @@ function c_est_parti(){
       document.getElementById("circuit-0" + numero).style.display="block";
       nb_circuit = nb_circuit + 1;
     })
-    document.getElementById("texte_leon_circuit").innerHTML = "J'ai trouvé " + nb_circuit + " parcours qui pourraient vous plaire !";
+
+    switch (nb_circuit) {
+      case 0:
+        document.getElementById("texte_leon_circuit").innerHTML = "Je n'ai malheureusement pas trouvé de parcours avec ces données..";
+        document.getElementById("texte_leon_circuit2").innerHTML = "Essayez avec d'autres paramètres";
+      break;
+      case 1:
+        document.getElementById("texte_leon_circuit").innerHTML = "J'ai trouvé un parcours qui pourrait vous plaire !";
+        document.getElementById("texte_leon_circuit2").innerHTML = "Cliquez dessus pour en savoir plus.";
+      break;
+      default:
+        document.getElementById("texte_leon_circuit").innerHTML = "J'ai trouvé " + nb_circuit + " parcours qui pourraient vous plaire !";
+        document.getElementById("texte_leon_circuit2").innerHTML = "Cliquez sur l'un d'eux pour en savoir plus.";
+    }
+
     switch (theme) {
-    case 'Forêt / Nature':
-      document.getElementById("socle_carte").setAttribute("src", "img/slider/socle_foret.png");
-    break;
-    case 'Plage / Bord de Mer':
-      document.getElementById("socle_carte").setAttribute("src", "img/slider/socle_mer.png");
-    break;
-    default:
-      document.getElementById("socle_carte").setAttribute("src", "img/slider/socle_musee.png");
+      case 'Forêt / Nature':
+        document.getElementById("socle_carte").setAttribute("src", "img/slider/socle_foret.png");
+      break;
+      case 'Plage / Bord de Mer':
+        document.getElementById("socle_carte").setAttribute("src", "img/slider/socle_mer.png");
+      break;
+      default:
+        document.getElementById("socle_carte").setAttribute("src", "img/slider/socle_musee.png");
     }
     if (dist < 16.6)
       document.getElementById("leon_carte").setAttribute("src", "img/slider/leon_velo_court.png");

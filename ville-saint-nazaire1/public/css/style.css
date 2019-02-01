@@ -364,13 +364,17 @@ input[type=range]::-moz-range-track {
 }
 
 #choix_lieu{
-  z-index:5;
-  height:auto;
-  width:auto;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color:#4e687f;
+
+  width:22vw;
+  top:30px;
+  bottom:30px;
+  left:30px;
   position:absolute;
-  left:0%;
-  top:0%;
   display: block;
+  z-index:5;
 }
 
 .checkbox_lieu{
@@ -379,31 +383,24 @@ input[type=range]::-moz-range-track {
   text-align: left;
 }
 
-legend{
-  color: black;
-}
 
-fieldset {
-  background: #d8d8d8;
-  border: 2px solid blue;
-}
 
 #leon_carte{
-  width:20%;
+  width:60%;
   height:auto;
-  left:2%;
-  top:50%;
-  display: block;
+  left: 18%;
+  bottom:5%;
+  display:block;
   position:absolute;
-  z-index:6;
+  z-index:7;
 }
 
 #socle_carte{
-  width:20%;
+  width:60%;
   height:auto;
-  left:2%;
-  top:75%;
-  display: block;
+  left: 18%;
+  bottom:2%;
+  display:block;
   position:absolute;
-  z-index:5;
+  z-index:6;
 }
