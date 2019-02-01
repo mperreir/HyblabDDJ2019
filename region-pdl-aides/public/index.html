@@ -123,7 +123,13 @@
             $("a").click(function() {
                 $("a").removeClass('active');
                 var index = $(this).index('nav a') + 1;
+                console.log(index);
                 $("nav a:nth-child(-n+"+index+")").addClass('active');
+                index-=1;
+                $("nav a:nth-child(-n+"+index+")").onclick = function(){
+                    return false;
+                };
+                $("nav a:nth-child(-n+"+index+")").removeClass('active');
             });
             
         });

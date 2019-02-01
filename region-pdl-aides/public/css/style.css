@@ -1,17 +1,18 @@
-/* just a sample css rule to show that everything works */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
 footer p
 {
-  font-size: small;
-  text-align: center;
+    font-size: small;
+    text-align: center;
 }
 
 header{
-  text-align: center;
+    text-align: center;
 }
 
 header img{
-  max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 *{
@@ -19,10 +20,9 @@ header img{
     padding:0;
 }
 body{
-    font-family:Georgia;
-    background-color: #0794B4;
+    font-family:Ubuntu;
+    background-color: background: #f7f7f7;
     font-size: 34px;
-    font-style: italic;
     letter-spacing:-1px;
     width:12800px;
     position:absolute;
@@ -48,7 +48,7 @@ body{
 }
 .black{
     color:#fff;
-   
+
     background:#000 url(../images/black.jpg) no-repeat top right;
 }
 .white{
@@ -91,147 +91,151 @@ body{
 
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .container {
-  min-height: 100vh;
-  font-family: sans-serif;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    margin:0 auto;
+    justify-content: center;
 }
 .container nav {
-  position: fixed;
-  bottom: 60px;
-  left: 25%;
-  width: 600px;
-  margin: 0 auto auto;
-  display: flex;
-  justify-content: space-between;
+    position: fixed;
+    bottom: 60px;
+    width: 600px;
+    margin: 0 auto auto;
+    display: flex;
+    justify-content: space-between;
 }
 .container nav a {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: #fff;
-  text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
 }
 .container nav a i {
-  display: block;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  margin-bottom: 20px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity .3s ease-out, bottom .5s ease;
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-bottom: 20px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity .3s ease-out, bottom .5s ease;
 }
 .container nav a:hover > i {
-  opacity: 1;
-  bottom: 100%;
+    opacity: 1;
+    bottom: 100%;
 }
 .container nav a.active > i {
-  color: #0288D1;
-  opacity: 1;
-  bottom: 100%;
+    color: #0288D1;
+    opacity: 1;
+    bottom: 100%;
 }
 .container nav a span {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  width: 80px;
-  margin-top: 20px;
-  opacity: 0;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-  transition: opacity .3s ease-out, bottom .5s ease;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 80px;
+    margin-top: 20px;
+    opacity: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    transition: opacity .3s ease-out, bottom .5s ease;
 }
 .container nav a:hover > span {
-  opacity: 1;
-  top: 100%;
+    opacity: 1;
+    top: 100%;
 }
 .container nav a.active > span {
-  color: #000000;
-  opacity: 1;
-  top: 100%;
+    color: #000000;
+    opacity: 1;
+    top: 100%;
 }
 .container nav a:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80px;
-  height: 60px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 60px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 .container nav a:before {
-  content: '';
-  z-index: 99;
-  display: block;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  margin: auto;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 4px #000000;
-  background: #ffffff;
-  transition: box-shadow 0.3s cubic-bezier(0.75, 0, 0.24, 1);
+    content: '';
+    z-index: 99;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 1px #000;
+    background: #000;
+    transition: box-shadow 0.3s cubic-bezier(0.75, 0, 0.24, 1);
 }
 .container nav a:not(.active):hover:before {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 5px #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 5px #000000;
 }
 .container nav a.active:before {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 10px #000000;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 0 4px #f7ce08;
+    background: #fff;
 }
 .container nav a:first-child.active ~ .line {
-  width: 0;
+    width: 0;
 }
 .container nav a:nth-child(2).active ~ .line {
-  width: 14%;
+    width: 14%;
 }
 .container nav a:nth-child(3).active ~ .line {
-  width: 28%;
+    width: 28%;
 }
 .container nav a:nth-child(4).active ~ .line {
-  width: 42%;
+    width: 42%;
 }
 .container nav a:nth-child(5).active ~ .line {
-  width: 56%;
+    width: 56%;
 }
 .container nav a:nth-child(6).active ~ .line {
-  width: 70%;
+    width: 70%;
 }
 .container nav a:nth-child(7).active ~ .line {
-  width: 84%;
+    width: 84%;
 }
 .container nav a:nth-child(8).active ~ .line {
-  width: 100%;
+    width: 100%;
 }
 .container nav .line {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  z-index: -1;
-  width: 0;
-  height: 2px;
-  background: #000000;
-  transition: width 0.5s cubic-bezier(1, 0, 0.5, 1.01);
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: -1;
+    width: 0;
+    height: 0px;
+    background: #000000;
+    transition: width 0.5s cubic-bezier(1, 0, 0.5, 1.01);
 }
 
 .text-center {
-	position:relative;
-	top:8%;
-	left:25%;
+    position:relative;
+    top:8%;
+    left:25%;
 }
 
 .text-center-under {
-	position:relative;
-	top:5%;
-	left:32%;
+    position:relative;
+    top:5%;
+    left:32%;
 }
