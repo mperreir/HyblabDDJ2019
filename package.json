@@ -7,13 +7,15 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "d3": "^4.12.2",
     "animate.css": "^3.5.2",
+    "chart.js": "^2.7.3",
+    "d3": "^4.12.2",
+    "ejs": "^2.5.7",
     "express": "^4.16.2",
     "node-fetch": "^1.7.3",
+    "nodejs-latest": "^1.1.0",
     "popmotion": "^8.1.9",
     "request": "^2.83.0",
-    "ejs": "^2.5.7",
     "xlsx": "^0.11.18"
   },
   "author": "MPDS",
