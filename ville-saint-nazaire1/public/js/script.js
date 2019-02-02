@@ -98,7 +98,22 @@ function c_est_parti(){
   var theme = document.getElementById("theme").getElementsByTagName("li")[3-num_theme].innerHTML;
 
   document.getElementById("page_carte").style.display="block";
-  document.getElementById("carte_generale").style.display="block";
+  document.getElementById("circuits").style.display="block";
+
+  // Certains elements de la carte bug, on les enleve
+  document.getElementsByClassName("cls-5112")[0].style.display="none";
+  document.getElementsByClassName("cls-5101")[0].style.display="none";
+  document.getElementsByClassName("cls-5103")[0].style.display="none";
+  document.getElementsByClassName("cls-5104")[0].style.display="none";
+  document.getElementsByClassName("cls-5115")[0].style.display="none";
+  document.getElementsByClassName("cls-5116")[0].style.display="none";
+  document.getElementsByClassName("cls-5117")[0].style.display="none";
+  document.getElementsByClassName("cls-5117")[0].style.display="none";
+  var x = document.getElementsByClassName("cls-5089");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+
   //console.log(theme);
   var nb_circuit = 0;
   selection_circuit(dist, theme)
@@ -107,8 +122,8 @@ function c_est_parti(){
       var numero = element["numero"];
       document.getElementById("Itineraire_" + numero).style.display="block";
       nb_circuit = nb_circuit + 1;
-      document.getElementById("liste_parcours").innerHTML += '<input class="parcours_disponible" type="radio" name="parcours_disponible" onclick="modif_radio()" value=' + element["numero"] + '>' + element["nom"] + '<br>';
-    })
+      document.getElementById("liste_parcours").innerHTML += '<input onclick="modif_radio()" onmouseover="enlever_circuits('+numero+')" onmouseout="afficher_circuit()" class="parcours_disponible" id="checkbox_circuit_'+numero+'" type="radio" name="parcours_disponible"  value=' +numero + '><label onmouseover="enlever_circuits('+numero+')" onmouseout="afficher_circuit()" id="label_checkbox_circuit_'+numero+'" for="checkbox_circuit_'+numero+'">' + element["nom"] + '</label><br>';
+    });
 
     switch (nb_circuit) {
       case 0:
@@ -140,7 +155,35 @@ function c_est_parti(){
       document.getElementById("leon_carte").setAttribute("src", "img/slider/leon_velo_long.png");
     else
       document.getElementById("leon_carte").setAttribute("src", "img/slider/leon_velo_moyen.png");
+    maj_filtres();
   });
+
+}
+
+function afficher_circuit(){
+  var dist = document.getElementById("distance").value;
+  var num_theme = document.getElementById("num_theme").value;
+  var theme = document.getElementById("theme").getElementsByTagName("li")[3-num_theme].innerHTML;
+  selection_circuit(dist, theme)
+  .then(function(v){
+    v.forEach(function(e){
+      var n = e["numero"];
+      document.getElementById("Itineraire_" + n).style.display="block";
+    })
+  })
+}
+
+function enlever_circuits(e){
+  liste_infos_circuit
+  .then(function(value){
+    for (var x = 1; x < value.length+1; x++){
+      if (x != e){
+        var nom = "Itineraire_" + x.toString();
+        var iti = document.getElementById(nom);
+        iti.style.display="none";
+      }
+    }
+  })
 }
 
 function selection_circuit(distance, theme){
@@ -148,37 +191,55 @@ function selection_circuit(distance, theme){
   .then(function(value){
     theme = theme.toLowerCase();
     distance = parseInt(distance);
+
     var liste_circuit_selection_interne = [];
     value.forEach(function(element){
       document.getElementById("Itineraire_" + element["numero"]).style.display="none";
       if (element["distance_en_km"] <= distance && element["theme"].includes(theme)){
+        document.getElementById("Itineraire_" + element["numero"]).style.display="block";
         liste_circuit_selection_interne.push(element);
       }
     });
-    document.getElementById("Wifi").style.display="none";
-    document.getElementById("Musees").style.display="none";
-    document.getElementById("Toilettes").style.display="none";
-    document.getElementById("Offices_du_tourisme").style.display="none";
-    document.getElementById("Bars").style.display="none";
-    document.getElementById("Restaurants").style.display="none";
-    document.getElementById("Decors").style.display="none";
-    document.getElementById("circuits").style.display="block";
     return liste_circuit_selection_interne
   });
 }
 
 function modif_checkbox(element){
-  var checkbox = document.getElementById(element+"-checkbox");
-  if (checkbox.checked)
-    document.getElementById(element).style.zIndex="4";
-  else
-    document.getElementById(element).style.zIndex="1";
+  var dist = document.getElementById("distance").value;
+  var num_theme = document.getElementById("num_theme").value;
+  var theme = document.getElementById("theme").getElementsByTagName("li")[3-num_theme].innerHTML;
+  selection_circuit(dist, theme)
+  .then(function(v){
+    v.forEach(function(e){
+      var n = e["numero"];
+      if(document.getElementById(element + "" +n)){
+        var checkbox = document.getElementById(element+"-checkbox");
+        if (checkbox.checked)
+          document.getElementById(element + "" + n).style.display="block";
+        else
+          document.getElementById(element + "" + n).style.display="none";
+        var exist = true;
+        var cpt = 2;
+        while(exist){
+          if (document.getElementById(element + "" +n + "-" + cpt)){
+            if (checkbox.checked)
+              document.getElementById(element + "" +n + "-" + cpt).style.display="block";
+            else
+              document.getElementById(element + "" +n + "-" + cpt).style.display="none";
+            cpt++;
+          }
+          else{
+            exist = false;
+          }
+        }
+      }
+    })
+  })
 }
 
 function retour() {
   document.getElementById("page_personnalisation").style.display="block";
   document.getElementById("page_carte").style.display="none";
-  document.getElementById("carte_generale").style.display="none";
   var collection_lieu = document.getElementsByClassName("lieu");
   for (var i = 0; i < collection_lieu.length; i++) {
     collection_lieu[i].style.zIndex="1";
@@ -186,18 +247,27 @@ function retour() {
   reset_value_default();
 }
 
+function maj_filtres(){
+  modif_checkbox("Wifi");
+  modif_checkbox("Point_dinteret");
+  modif_checkbox("Toilettes");
+  modif_checkbox("Monument");
+  modif_checkbox("Bar");
+  modif_checkbox("Restau");
+}
+
 function reset_value_default(){
   document.getElementById("distance").value=20;
   document.getElementById("num_theme").value=2;
   document.getElementById("val").innerHTML = 20;
-  document.getElementById("hotspot-checkbox").checked=false;
-  document.getElementById("culturels-checkbox").checked=false;
-  document.getElementById("toilettes-checkbox").checked=false;
-  document.getElementById("office-checkbox").checked=false;
-  document.getElementById("bars-checkbox").checked=false;
-  document.getElementById("restaurants-checkbox").checked=false;
+  document.getElementById("Wifi-checkbox").checked=false;
+  document.getElementById("Point_dinteret-checkbox").checked=false;
+  document.getElementById("Toilettes-checkbox").checked=false;
+  document.getElementById("Monument-checkbox").checked=false;
+  document.getElementById("Bar-checkbox").checked=false;
+  document.getElementById("Restau-checkbox").checked=false;
   actualiser_decor();
-  document.getElementById("liste_parcours").innerHTML = '';
+  document.getElementById("liste_parcours").innerHTML = " ";
   document.getElementById("choix_parcours").style.display = "none";
 }
 

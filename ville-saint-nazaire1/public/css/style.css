@@ -50,8 +50,8 @@ body{
 }
 
 #bouton_accueil{
-  top : 87%;
-  left: 80%;
+  top : 70%;
+  left: 50%;
   height: 55px;
   width: 209px;
 }
@@ -131,7 +131,6 @@ body{
 
 /* Page Personnalisation */
 #page_personnalisation{
-  background-image:url('img/slider/fond_slider_musee.png');
   background-repeat:no-repeat;
   background-size: cover;
   display: none;
@@ -140,19 +139,29 @@ body{
   left:0%;
   position:absolute;
   z-index: 1;
+  color: #4E687F;
+  font-family: 'Lato';
 }
 
 #personnalisation{
   border-radius: 20px;
   position:absolute;
-  text-align:center;
   top:5%;
   width:90%;
   margin-left:5%;
   height:85vh;
   background-color: #ffffff;
-  color:#4e687f;
   z-index:2;
+}
+
+#text_personnalisation{
+  top:5vh;
+	height: 44px;
+  width: 770px;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 44px;
+  position:relative;
 }
 
 #objet_curseurs{
@@ -166,12 +175,10 @@ body{
 
 #personnalisation2{
   position:absolute;
-  text-align:center;
   top:5%;
   width:90%;
   margin-left:5%;
   height:85vh;
-  color:#4e687f;
   z-index:4;
 }
 
@@ -208,7 +215,6 @@ body{
 }
 
 #curs_dist, #curs_theme{
-  padding-top: 5px;
   margin-top:2%;
   position: relative;
   right:15%;
@@ -228,20 +234,21 @@ body{
   float:right;
   position: relative;
   top: 1px;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 /* Style des slider */
 input[type="range"] {
   display: block;
   -webkit-appearance: none;
-  width: 300px;
-  height: 5px;
   border-radius: 5px;
   margin: 0 auto;
   outline: 0;
   width: 70%;
   height:30px;
   float:right;
+  right:0%;
   position: relative;
 }
 /* A faire pour les autres navigateurs */
@@ -310,7 +317,7 @@ input[type=range]::-ms-fill-lower {
 
 /* Style des labels */
 .range-labels-dist, .range-labels-theme {
-  margin: 18px -41px 0;
+  right: 6%;
   padding: 0;
   list-style: none;
 }
@@ -318,43 +325,19 @@ input[type=range]::-ms-fill-lower {
 .range-labels-dist li, .range-labels-theme li {
     position: relative;
     float:right;
-    text-align: right;
     font-size: 12px;
-    color: #4e687f;
     text-transform: uppercase;
-}
-
-.range-labels-dist li {
-    width:auto;
-    min-width:30%;
-    right:6%;
+    font-family: "Source Sans Pro";
+    line-height: 12px;
     cursor: pointer;
 }
 
-.range-labels-theme li {
-    width:30%;
-    cursor: pointer;
-    right:-5%;
-}
-
-.active {
-  color: #37adbf;
-  position: relative;
-  float:right;
-  text-align: right;
-  font-size: 12px;
-  color: #4e687f;
-  text-transform: uppercase;
-  cursor: pointer;
-  width:30%;
-}
-
-.range-labels-dist li {right:6%;}
-.range-labels-theme li {right:-5%;}
+.range-labels-dist li {width:22%; left:8.5%;}
+.range-labels-theme li {width:33%; left:15%;}
 
 /* Bouton */
 #bouton_personnalisation{
-  top : 80%;
+  top : 70%;
   left: 80%;
   height: 55px;
   width: 155px;
@@ -447,19 +430,41 @@ input[type=range]::-ms-fill-lower {
 #bouton_retour{
   top:85px;
   left:27vw;
-  
+
   height: 50px;
   width: 120px;
-  
+
   position: fixed;
   font-size: 16px;
-  z-index: 7;  
+  z-index: 7;
 }
 
 .texte_leon_classe{
-  font-size: 18px;
+  color: #4e687f;
+  font-family: 'Lato';
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
 }
 
+#texte_parcours{
+	color: #0EA5C7;
+  font-family: 'Lato';
+  font-size: 18px;
+}
+#liste_parcours{
+  color: #051039;
+  font-family: 'Lato';
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.parcours_disponible{
+  	color: #051039;
+    font-family: 'Lato';
+    font-size: 20px;
+    font-weight: 300;
+}
 #choix_parcours{
   border-radius: 20px;
   background-color: #ffffff;

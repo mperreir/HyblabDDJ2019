@@ -17,7 +17,7 @@
 		<div id="accueil">
 			<!-- poster="img/fond_accueil.png" -->
 			<video id="video_accueil" autoplay loop muted preload="metadata">
-				<source src="img/VIDEO_FINALE.mp4">
+				<source src="img/VIDEO_ACCUEIL.mp4">
 			</video>
 			<button id="bouton_accueil" class="bouton" onclick="en_avant_toute()" type="button"> EN AVANT TOUTE !</button>
 		</div>
@@ -42,7 +42,7 @@
 			<img id="objet_curseurs" src="img/slider/objet_musee.svg"  alt="objet"/>
 			<div id="personnalisation"></div>
 			<div id="personnalisation2">
-				<h2> Alors, qu'avez vous envie de faire aujourd'hui ? </h2>
+				<span id="text_personnalisation"> Alors, qu'avez vous envie de faire aujourd'hui ? </span>
 				<div id="div_personnage">
 					<img id="socle_curseurs" src="img/slider/socle_musee.png"  alt="socle"/>
 					<img id="velo_curseurs" src="img/slider/leon_velo_moyen.png"  alt="velo"/>
@@ -56,8 +56,9 @@
 						</div><br/>
 						<ul class="range-labels-dist">
 							<li onclick="click_curseur_dist('30')">30</li>
-							<li onclick="click_curseur_dist('20')" class="active selected">20</li>
-							<li onclick="click_curseur_dist('10')" >10</li>
+							<li onclick="click_curseur_dist('23')">23</li>
+							<li onclick="click_curseur_dist('16')">16</li>
+							<li onclick="click_curseur_dist('10')">10</li>
 						</ul>
 					</div>
 					<div id="curs_theme">
@@ -68,9 +69,9 @@
 						</div>
 						<br/>
 						<ul id="theme" class="range-labels-theme">
-							<li onclick="click_curseur_theme('3')">Plage / Bord de Mer</li>
-							<li onclick="click_curseur_theme('2')" class="active selected">Musée / Culturel</li>
-							<li onclick="click_curseur_theme('1')" >Forêt / Nature</li>
+							<li style="color:#11c1ea" onclick="click_curseur_theme('3')">Plage / Bord de Mer</li>
+							<li style="color:#7d3549" onclick="click_curseur_theme('2')">Musée / Culturel</li>
+							<li style="color:#004600" onclick="click_curseur_theme('1')">Forêt / Nature</li>
 						</ul>
 					</div>
 				</div>
@@ -80,9 +81,8 @@
 
 		<!-- Ecran 3 -->
 		<div id="page_carte">
-			<img id="carte_generale" src="img/carte/carte_carenne.png"  alt="carte des pistes Carene"/>
 
-			<img class="circuit" id="circuits" src="img/circuits/map_circuit.svg">
+			<img class="circuit" id="circuits" src="img/circuits/map_circuits.svg">
 
 			<fieldset id="choix_lieu">
 
@@ -91,38 +91,38 @@
 				<span id="texte_leon_circuit2" class="texte_leon_classe" ></span>
 
 				<div id = "liste_parcours">
-					
-				</div>
 
-				<h3> Quelles informations souhaitez-vous faire apparaitre sur la carte ? </h3>
-				<div class="checkbox_lieu">
-					<input type="checkbox" id="hotspot-checkbox" name="hotspot" value="checkbox" onchange="modif_checkbox('hotspot')">
-					<label for="hotspot-checkbox"> Wi-fi </label>
 				</div>
-
+				<br/>
+				<span id="texte_parcours"> Quelles informations souhaitez-vous faire apparaitre sur la carte ? </span>
 				<div class="checkbox_lieu">
-					<input type="checkbox" id="bars-checkbox" name="bars" value="checkbox" onchange="modif_checkbox('bars')">
-					<label for="bars-checkbox"> Bars / Cafés </label>
+					<input type="checkbox" id="Wifi-checkbox" name="hotspot" value="checkbox" onchange="modif_checkbox('Wifi')">
+					<label for="Wifi-checkbox"> Wi-fi </label>
 				</div>
 
 				<div class="checkbox_lieu">
-					<input type="checkbox" id="culturels-checkbox" name="culturels" value="checkbox" onchange="modif_checkbox('culturels')">
-					<label for="culturels-checkbox"> Points culturels </label>
+					<input type="checkbox" id="Bar-checkbox" name="bars" value="checkbox" onchange="modif_checkbox('Bar')">
+					<label for="Bar-checkbox"> Bars / Cafés </label>
 				</div>
 
 				<div class="checkbox_lieu">
-					<input type="checkbox" id="toilettes-checkbox" name="toilettes" value="checkbox" onchange="modif_checkbox('toilettes')">
-					<label for="toilettes-checkbox"> Toilettes publiques </label>
+					<input type="checkbox" id="Point_dinteret-checkbox" name="culturels" value="checkbox" onchange="modif_checkbox('Point_dinteret')">
+					<label for="Point_dinteret-checkbox"> Points culturels </label>
 				</div>
 
 				<div class="checkbox_lieu">
-					<input type="checkbox" id="office-checkbox" name="office" value="checkbox" onchange="modif_checkbox('office')">
-					<label for="office-checkbox"> Office de tourisme </label>
+					<input type="checkbox" id="Toilettes-checkbox" name="toilettes" value="checkbox" onchange="modif_checkbox('Toilettes')">
+					<label for="Toilettes-checkbox"> Toilettes publiques </label>
 				</div>
 
 				<div class="checkbox_lieu">
-					<input type="checkbox" id="restaurants-checkbox" name="restaurants" value="checkbox" onchange="modif_checkbox('restaurants')">
-					<label for="restaurants-checkbox"> Restaurants </label>
+					<input type="checkbox" id="Monument-checkbox" name="office" value="checkbox" onchange="modif_checkbox('Monument')">
+					<label for="Monument-checkbox"> Monuments </label>
+				</div>
+
+				<div class="checkbox_lieu">
+					<input type="checkbox" id="Restau-checkbox" name="restaurants" value="checkbox" onchange="modif_checkbox('Restau')">
+					<label for="Restau-checkbox"> Restaurants </label>
 				</div>
 
 				<img id="leon_carte" src="img/slider/leon_velo_moyen.png" alt="leon le cameleon"/>
