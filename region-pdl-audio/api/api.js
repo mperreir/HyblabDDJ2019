@@ -253,10 +253,6 @@ app.get('/reunions', function (request, response) {
             }
 
             info['annee'] = element['Année'];
-            var duree_enregistrement = element['Durée réelle du fichier (hh:mn:ss)'].split(':');
-            duree['heure'] += parseInt(duree_enregistrement[0]);
-            duree['minute'] += parseInt(duree_enregistrement[1]);
-            duree['seconde'] += parseInt(duree_enregistrement[2]);
 
             var date = element['Dates (générales) de la séance / réunion'];
             if (date.includes(',')) {
@@ -338,6 +334,22 @@ app.get('/reunions', function (request, response) {
 
             nb_reunion += 1;
         }
+        var duree_enregistrement = element['Durée réelle du fichier (hh:mn:ss)'].split(':');
+
+        duree['heure'] += parseInt(duree_enregistrement[0]);
+        duree['minute'] += parseInt(duree_enregistrement[1]);
+        duree['seconde'] += parseInt(duree_enregistrement[2]);
+
+        if (duree['seconde'] >= 60) {
+            duree['seconde'] -= 60;
+            duree['minute'] += 1;
+        }
+        if (duree['minute'] >= 60) {
+            duree['minute'] -= 60;
+            duree['heure'] += 1;
+        }
+
+
         nb_audio += 1;
     });
 
@@ -363,9 +375,9 @@ app.get('/type_reunions', function (request, response) {
             if (objet === undefined) {
                 objet = 'Non référencé';
             }
-            
-            if (objet[objet.length-1] == ' '){
-                objet = objet.substr(0, objet.length-1);
+
+            if (objet[objet.length - 1] == ' ') {
+                objet = objet.substr(0, objet.length - 1);
             }
 
             if (objet.includes('Décision modificative')) {
@@ -413,6 +425,222 @@ app.get('/type_reunions', function (request, response) {
         'periode_3': {
             'nb_reunion': nb_reunion_periode_3,
             'objet': periode_3
+        }
+    }
+    response.send(JSON.stringify(data));
+});
+
+app.get('/themes', function (request, response) {
+    var nb_theme_periode_1 = 0;
+    var nb_theme_periode_2 = 0;
+    var nb_theme_periode_3 = 0;
+    var periode_1 = {
+        'action_culturelle': 0,
+        'agriculture': 0,
+        'amenagement_eau': 0,
+        'conchyculture': 0,
+        'enseignement': 0,
+        'environnement': 0,
+        'formation_professionnelle': 0,
+        'logement': 0,
+        'tourisme': 0,
+        'transport': 0,
+        'nr': 0
+    };
+    var periode_2 = {
+        'action_culturelle': 0,
+        'agriculture': 0,
+        'amenagement_eau': 0,
+        'conchyculture': 0,
+        'enseignement': 0,
+        'environnement': 0,
+        'formation_professionnelle': 0,
+        'logement': 0,
+        'tourisme': 0,
+        'transport': 0,
+        'nr': 0
+    };
+    var periode_3 = {
+        'action_culturelle': 0,
+        'agriculture': 0,
+        'amenagement_eau': 0,
+        'conchyculture': 0,
+        'enseignement': 0,
+        'environnement': 0,
+        'formation_professionnelle': 0,
+        'logement': 0,
+        'tourisme': 0,
+        'transport': 0,
+        'nr': 0
+    };
+    json.forEach(element => {
+        if (element["Numéro d'ordre du fichier dans la série des fichiers de la réunion"] == 1) {
+            var annee = element['Année'];
+            var themes = element['mots-clés associés à la réunion '];
+
+            if (annee >= 1974 && annee < 1986) {
+                if (themes === undefined) {
+                    periode_1['nr'] += 1;
+                    nb_theme_periode_1 += 1;
+                }
+                else {
+                    themes = themes.split(' ; ');
+                    if ((themes.indexOf('action culturelle') > -1)) {
+                        periode_1['action_culturelle'] += 1;
+                        nb_theme_periode_1 += 1;
+                    }
+                    if ((themes.indexOf('agriculture') > -1)) {
+                        periode_1['agriculture'] += 1;
+                        nb_theme_periode_1 += 1;
+                    }
+                    if ((themes.indexOf('aménagement des eaux') > -1)) {
+                        periode_1['amenagement_eau'] += 1;
+                        nb_theme_periode_1 += 1;
+                    }
+                    if ((themes.indexOf('conchylliculture') > -1)) {
+                        periode_1['conchyculture'] += 1;
+                        nb_theme_periode_1 += 1;
+                    }
+                    if ((themes.indexOf('enseignement') > -1)) {
+                        periode_1['enseignement'] += 1;
+                        nb_theme_periode_1 += 1;
+                    }
+                    if ((themes.indexOf('environnement') > -1)) {
+                        periode_1['environnement'] += 1;
+                        nb_theme_periode_1 += 1;
+                    }
+                    if ((themes.indexOf('formation professionnelle') > -1)) {
+                        periode_1['formation_professionnelle'] += 1;
+                        nb_theme_periode_1 += 1;
+                    }
+                    if ((themes.indexOf('logement') > -1)) {
+                        periode_1['logement'] += 1;
+                        nb_theme_periode_1 += 1;
+                    }
+                    if ((themes.indexOf('tourisme') > -1)) {
+                        periode_1['tourisme'] += 1;
+                        nb_theme_periode_1 += 1;
+                    }
+                    if ((themes.indexOf('transports') > -1)) {
+                        periode_1['transport'] += 1;
+                        nb_theme_periode_1 += 1;
+                    }
+                }
+            }
+            else if (annee >= 1986 && annee < 1992) {
+                if (themes === undefined) {
+                    periode_2['nr'] += 1;
+                    nb_theme_periode_2 += 1;
+                }
+                else {
+                    themes = themes.split(' ; ');
+                    if ((themes.indexOf('action culturelle') > -1)) {
+                        periode_2['action_culturelle'] += 1;
+                        nb_theme_periode_2 += 1;
+                    }
+                    if ((themes.indexOf('agriculture') > -1)) {
+                        periode_2['agriculture'] += 1;
+                        nb_theme_periode_2 += 1;
+                    }
+                    if ((themes.indexOf('aménagement des eaux') > -1)) {
+                        periode_2['amenagement_eau'] += 1;
+                        nb_theme_periode_2 += 1;
+                    }
+                    if ((themes.indexOf('conchylliculture') > -1)) {
+                        periode_2['conchyculture'] += 1;
+                        nb_theme_periode_2 += 1;
+                    }
+                    if ((themes.indexOf('enseignement') > -1)) {
+                        periode_2['enseignement'] += 1;
+                        nb_theme_periode_2 += 1;
+                    }
+                    if ((themes.indexOf('environnement') > -1)) {
+                        periode_2['environnement'] += 1;
+                        nb_theme_periode_2 += 1;
+                    }
+                    if ((themes.indexOf('formation professionnelle') > -1)) {
+                        periode_2['formation_professionnelle'] += 1;
+                        nb_theme_periode_2 += 1;
+                    }
+                    if ((themes.indexOf('logement') > -1)) {
+                        periode_2['logement'] += 1;
+                        nb_theme_periode_2 += 1;
+                    }
+                    if ((themes.indexOf('tourisme') > -1)) {
+                        periode_2['tourisme'] += 1;
+                        nb_theme_periode_2 += 1;
+                    }
+                    if ((themes.indexOf('transports') > -1)) {
+                        periode_2['transport'] += 1;
+                        nb_theme_periode_2 += 1;
+                    }
+                }
+            }
+            else if (annee >= 1992 && annee <= 1994) {
+                if (themes === undefined) {
+                    periode_3['nr'] += 1;
+                    nb_theme_periode_3 += 1;
+                }
+                else {
+                    themes = themes.split(' ; ');
+                    if ((themes.indexOf('action culturelle') > -1)){
+                        periode_3['action_culturelle'] += 1;
+                        nb_theme_periode_3 += 1;
+                    }
+                    if ((themes.indexOf('agriculture') > -1)){
+                        periode_3['agriculture'] += 1;
+                        nb_theme_periode_3 += 1;
+                    }
+                    if ((themes.indexOf('aménagement des eaux') > -1)){
+                        periode_3['amenagement_eau'] += 1;
+                        nb_theme_periode_3 += 1;
+                    }
+                    if ((themes.indexOf('conchylliculture') > -1)){
+                        periode_3['conchyculture'] += 1;
+                        nb_theme_periode_3 += 1;
+                    }
+                    if ((themes.indexOf('enseignement') > -1)){
+                        periode_3['enseignement'] += 1;
+                        nb_theme_periode_3 += 1;
+                    }
+                    if ((themes.indexOf('environnement') > -1)){
+                        periode_3['environnement'] += 1;
+                        nb_theme_periode_3 += 1;
+                    }
+                    if ((themes.indexOf('formation professionnelle') > -1)) {
+                        periode_3['formation_professionnelle'] += 1;
+                        nb_theme_periode_3 += 1;
+                    }
+                    if ((themes.indexOf('logement') > -1)){
+                        periode_3['logement'] += 1;
+                        nb_theme_periode_3 += 1;
+                    }
+                    if ((themes.indexOf('tourisme') > -1)){
+                        periode_3['tourisme'] += 1;
+                        nb_theme_periode_3 += 1;
+                    }
+                    if ((themes.indexOf('transports') > -1)){
+                        periode_3['transport'] += 1;
+                        nb_theme_periode_3 += 1;
+                    }
+                }
+            }
+        }
+
+    });
+
+    var data = {
+        'periode_1': {
+            'nb_theme': nb_theme_periode_1,
+            'theme': periode_1
+        },
+        'periode_2': {
+            'nb_theme': nb_theme_periode_2,
+            'theme': periode_2
+        },
+        'periode_3': {
+            'nb_theme': nb_theme_periode_3,
+            'theme': periode_3
         }
     }
     response.send(JSON.stringify(data));

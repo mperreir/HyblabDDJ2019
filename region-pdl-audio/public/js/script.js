@@ -5,11 +5,12 @@
 var selected_period_reunion = 0;
 var selected_period_type_reunion = [false, false, false];
 var k7_audio_played = [-1, -1, -1];
+var selected_period_theme_reunion = [true, false, false];
 
 $('#fullpage').fullpage({
-    scrollingSpeed: 500,
+    scrollingSpeed: 1000,
     anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage'],
-    sectionsColor: ['#FFFFFF', '#DA705B', '#FFFFFF', '#FFFFFF', '#FFFFFFF', '#495368', '#135786'],
+    sectionsColor: ['#FFFFFF', '#DA705B', '#FFFFFF', '#FFFFFF', '#FFFFFFF', '#FFFFFF', '#135786'],
     verticalCentered: false,
     navigation: true,
     navigationPosition: 'right',
@@ -36,7 +37,16 @@ $('#fullpage').fullpage({
             $("#fullpage .section:nth-child(" + nextInd + ")").next().addClass("next down");
             $("#fullpage .section:nth-child(" + ind + ")").addClass("prev down");
         }
-    },
+
+        if (nextInd == 7) {
+            var arrowDown = document.querySelector('.arrowDown');
+            arrowDown.style.visibility = 'hidden';
+        }
+        if (ind == 7) {
+            var arrowDown = document.querySelector('.arrowDown');
+            arrowDown.style.visibility = 'visible';
+        }
+    }
 });
 
 
@@ -57,19 +67,19 @@ fetch('data/stats_audio')
         console.log(error);
     })
     .then(function (json) {
-        document.querySelectorAll('.nb_fichier_audio').forEach(element =>{
+        document.querySelectorAll('.nb_fichier_audio').forEach(element => {
             element.textContent = json.nb_fichier_audio;
         });
-        document.querySelectorAll('.nb_reunion').forEach(element =>{
+        document.querySelectorAll('.nb_reunion').forEach(element => {
             element.textContent = json.nb_reunion;
         });
-        document.querySelectorAll('.date_min').forEach(element =>{
+        document.querySelectorAll('.date_min').forEach(element => {
             element.textContent = json.date_min;
         });
-        document.querySelectorAll('.date_max').forEach(element =>{
+        document.querySelectorAll('.date_max').forEach(element => {
             element.textContent = json.date_max;
         });
-        document.querySelectorAll('.duree_audio').forEach(element =>{
+        document.querySelectorAll('.duree_audio').forEach(element => {
             element.textContent = json.heures * 60 + json.minutes;
         });
     });
@@ -795,6 +805,7 @@ function info_president_display(id) {
     }
     element.style.display = 'block';
 }
+
 function info_president_undisplay(id) {
     var element = '';
     if (id == 'bobine_olivier') {
@@ -806,4 +817,352 @@ function info_president_undisplay(id) {
     element.style.display = 'none';
 }
 
+function graph_update_theme() {
+    fetch('data/themes')
+        .then(function (response) {
+            return response.json();
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+        .then(function (json) {
+            console.log(json);
+            var theme = [
+                'action_culturelle',
+                'agriculture',
+                'amenagement_eau',
+                'conchyculture',
+                'enseignement',
+                'environnement',
+                'formation_professionnelle',
+                'logement',
+                'tourisme',
+                'transport',
+                'nr'
+            ];
+
+            var theme_name = {
+                'action_culturelle': 'Action culturelle',
+                'agriculture': 'Agriculture',
+                'amenagement_eau': 'Aménagement des eaux',
+                'conchyculture': 'Conchyculture',
+                'enseignement': 'Enseignement',
+                'environnement': 'Environnement',
+                'formation_professionnelle': 'Formation professionnelle',
+                'logement': 'Logement',
+                'tourisme': 'Tourisme',
+                'transport': 'Transport',
+                'nr': 'Non renseigné'
+            }
+            var parent = document.querySelector('#graph_theme');
+            while (parent.firstChild) {
+                parent.removeChild(parent.firstChild);
+            }
+
+            var figure = document.createElement('figure');
+            var img_periode_1 = document.createElement('img');
+            var img_periode_2 = document.createElement('img');
+            var img_periode_3 = document.createElement('img');
+
+            img_periode_1.id = 'bobine_theme_periode_1';
+            img_periode_1.src = 'img/bobine_theme_periode_1.svg';
+            img_periode_1.alt = 'Bobine';
+            img_periode_1.onclick = function () {
+                selected_period_theme_reunion[0] = !selected_period_theme_reunion[0];
+                graph_update_theme_show(0);
+            };
+
+            img_periode_2.id = 'bobine_theme_periode_2';
+            img_periode_2.src = 'img/bobine_theme_periode_2.svg';
+            img_periode_2.alt = 'Bobine';
+            img_periode_2.onclick = function () {
+                selected_period_theme_reunion[1] = !selected_period_theme_reunion[1];
+                graph_update_theme_show(1);
+            };
+
+            img_periode_3.id = 'bobine_theme_periode_3';
+            img_periode_3.src = 'img/bobine_theme_periode_3.svg';
+            img_periode_3.alt = 'Bobine';
+            img_periode_3.onclick = function () {
+                selected_period_theme_reunion[2] = !selected_period_theme_reunion[2];
+                graph_update_theme_show(2);
+            };
+
+            var ul_legend = document.createElement('ul');
+            ul_legend.id = 'legend_cumulative';
+            theme.forEach(element => {
+                var li = document.createElement('li')
+                li.innerHTML = theme_name[element];
+                ul_legend.appendChild(li);
+            });
+
+            if (selected_period_theme_reunion[0] || selected_period_theme_reunion[1] || selected_period_theme_reunion[2]) {
+                var div_graphic = document.createElement('div');
+                div_graphic.className = 'graphic_cumulative';
+
+                var div_row = document.createElement('div');
+                var div_chart = document.createElement('div');
+                var pourcentage_total = 0;
+                theme.forEach(element => {
+                    pourcentage_total += Math.round((json.periode_1.theme[element] / json.periode_1.nb_theme) * 100);
+                });
+                theme.forEach(element => {
+                    var span_block = document.createElement('span');
+                    var span_value = document.createElement('span');
+
+                    span_value.className = 'value_cumulative';
+                    span_value.innerHTML = (Math.round(json.periode_1.theme[element] / json.periode_1.nb_theme * 100) / pourcentage_total * 100) + '%';
+                    span_block.className = 'block_cumulative';
+                    span_block.setAttribute('title', json.periode_1.theme[element] + ' réunions');
+                    div_chart.className = 'chart_cumulative';
+                    div_chart.id = 'chart_cumulative_num_0';
+                    div_row.className = 'row_cumulative';
+
+                    span_block.appendChild(span_value);
+                    div_chart.appendChild(span_block);
+
+                });
+                div_row.appendChild(div_chart);
+                div_graphic.appendChild(div_row);
+
+                var div_row = document.createElement('div');
+                var div_chart = document.createElement('div');
+                var pourcentage_total = 0;
+                theme.forEach(element => {
+                    pourcentage_total += Math.round((json.periode_2.theme[element] / json.periode_2.nb_theme) * 100);
+                });
+                theme.forEach(element => {
+
+                    var span_block = document.createElement('span');
+                    var span_value = document.createElement('span');
+
+                    span_value.className = 'value_cumulative';
+                    span_value.innerHTML = (Math.round(json.periode_2.theme[element] / json.periode_2.nb_theme * 100) / pourcentage_total * 100) + '%';
+                    span_block.className = 'block_cumulative';
+                    span_block.setAttribute('title', json.periode_2.theme[element] + ' réunions');
+                    div_chart.className = 'chart_cumulative';
+                    div_chart.id = 'chart_cumulative_num_1';
+                    div_row.className = 'row_cumulative';
+
+                    span_block.appendChild(span_value);
+                    div_chart.appendChild(span_block);
+
+                });
+                div_row.appendChild(div_chart);
+                div_graphic.appendChild(div_row);
+
+                var div_row = document.createElement('div');
+                var div_chart = document.createElement('div');
+                var pourcentage_total = 0;
+                theme.forEach(element => {
+                    pourcentage_total += Math.round((json.periode_3.theme[element] / json.periode_3.nb_theme) * 100);
+                });
+                theme.forEach(element => {
+
+                    var span_block = document.createElement('span');
+                    var span_value = document.createElement('span');
+
+                    span_value.className = 'value_cumulative';
+                    span_value.innerHTML = (Math.round(json.periode_3.theme[element] / json.periode_3.nb_theme * 100) / pourcentage_total * 100) + '%';
+                    span_block.className = 'block_cumulative';
+                    span_block.setAttribute('title', json.periode_3.theme[element] + ' réunions');
+                    div_chart.className = 'chart_cumulative';
+                    div_chart.id = 'chart_cumulative_num_2';
+                    div_row.className = 'row_cumulative';
+
+                    span_block.appendChild(span_value);
+                    div_chart.appendChild(span_block);
+
+                });
+                div_row.appendChild(div_chart);
+                div_graphic.appendChild(div_row);
+                figure.appendChild(div_graphic);
+            }
+            parent.appendChild(img_periode_1);
+            parent.appendChild(img_periode_2);
+            parent.appendChild(img_periode_3);
+            parent.appendChild(figure);
+            parent.appendChild(ul_legend);
+
+            $('.value_cumulative').each(function () {
+                var text = $(this).text();
+                $(this).parent().css('width', text);
+            });
+
+            $('.block_cumulative').tooltip({
+                position: {
+                    my: "center bottom",
+                    at: "center top"
+                }
+            });
+            graph_update_theme_show(0);
+            graph_update_theme_show(1);
+            graph_update_theme_show(2);
+
+        });
+}
+
+function graph_update_theme_show(id) {
+    if (selected_period_theme_reunion[id]) {
+        $('#chart_cumulative_num_' + id).css('-webkit-animation', 'expand 1.5s ease forwards');
+    }
+    else {
+        if ($('#chart_cumulative_num_' + id).width() != 0) {
+            $('#chart_cumulative_num_' + id).css('-webkit-animation', 'contract 1.5s ease forwards');
+        }
+    }
+}
+
+function gestion_audio_debut() {
+    var audio_begin = document.getElementById('audio_accueil'); // id for audio element
+    var duration_begin = audio_begin.duration; // Duration of audio clip, calculated here for embedding purposes
+    var pButton_begin = document.getElementById('pButton'); // play button
+    var playhead_begin = document.getElementById('playhead'); // playhead
+    var timeline_begin = document.getElementById('timeline'); // timeline
+    var currentTime_begin = document.getElementById('current-time'); // currentime
+    var totalTime_begin = document.getElementById('total-time');
+
+    var typewriter = new TypeIt('#discours', {
+        speed: 65,
+        startDelay: 1300
+    })
+        .type("« Est-ce que vous seriez assez aimables")
+        .break()
+        .type("de bien vouloir vous asseoir ?")
+        .break()
+        .pause(1000)
+        .type('.')
+        .pause(1000)
+        .type('.')
+        .pause(1000)
+        .type('.')
+        .pause(800)
+        .type(" La séance est ouverte »");
+
+    audio_begin.addEventListener("pause", function () {
+        // remove pause, add play
+        pButton_begin.className = "";
+        pButton_begin.className = "play";
+        typewriter.freeze();
+    });
+
+    audio_begin.addEventListener("play", function () {
+        // remove play, add pause
+        if (audio_begin.currentTime == 0) {
+            typewriter.reset();
+            typewriter.go();
+        }
+        pButton_begin.className = "";
+        pButton_begin.className = "pause";
+        typewriter.unfreeze();
+    });
+
+    // play button event listenter
+    pButton_begin.addEventListener("click", play);
+
+    // timeupdate event listener
+    audio_begin.addEventListener("timeupdate", timeUpdate, false);
+    // timeUpdate
+    // Synchronizes playhead position with current point in audio
+    function timeUpdate() {
+        // timeline width adjusted for playhead
+        var timelineWidth = timeline_begin.offsetWidth - playhead_begin.offsetWidth;
+        var playPercent = timelineWidth * (audio_begin.currentTime / duration_begin);
+        playhead_begin.style.marginLeft = playPercent + "px";
+        if (audio_begin.currentTime == duration_begin) {
+            pButton_begin.className = "";
+            pButton_begin.className = "play";
+        }
+        currentTime_begin.textContent = formatTime(audio_begin.currentTime);
+    }
+
+    function formatTime(time) {
+        var min = Math.floor(time / 60);
+        var sec = Math.floor(time % 60);
+        return min + ':' + ((sec < 10) ? ('0' + sec) : sec);
+    }
+
+    //Play and Pause
+    function play() {
+        // start audio
+        if (audio_begin.paused) {
+            audio_begin.play();
+        } else { // pause audio
+            audio_begin.pause();
+        }
+    }
+
+    // Gets audio file duration
+    audio_begin.addEventListener("canplaythrough", function () {
+        duration_begin = audio_begin.duration;
+        currentTime_begin.textContent = formatTime(audio_begin.currentTime);
+        totalTime_begin.textContent = formatTime(duration_begin);
+    }, false);
+}
+
+function gestion_audio_fin() {
+    var audio_end = document.getElementById('audio_fin'); // id for audio element
+    var duration_end = audio_end.duration; // Duration of audio clip, calculated here for embedding purposes
+    var pButton_end = document.getElementById('pButton_end'); // play button
+    var playhead_end = document.getElementById('playhead_end'); // playhead
+    var timeline_end = document.getElementById('timeline_end'); // timeline
+    var currentTime_end = document.getElementById('current-time_end'); // currentime
+    var totalTime_end = document.getElementById('total-time_end');
+
+    audio_end.addEventListener("pause", function () {
+        // remove pause, add play
+        pButton_end.className = "";
+        pButton_end.className = "play";
+    });
+
+    audio_end.addEventListener("play", function () {
+        pButton_end.className = "";
+        pButton_end.className = "pause";
+    });
+
+    // play button event listenter
+    pButton_end.addEventListener("click", play);
+
+    // timeupdate event listener
+    audio_end.addEventListener("timeupdate", timeUpdate, false);
+
+    function timeUpdate() {
+        // timeline width adjusted for playhead
+        var timelineWidth = timeline_end.offsetWidth - playhead_end.offsetWidth;
+        var playPercent = timelineWidth * (audio_end.currentTime / duration_end);
+        playhead_end.style.marginLeft = playPercent + "px";
+        if (audio_end.currentTime == duration_end) {
+            pButton_end.className = "";
+            pButton_end.className = "play";
+        }
+        currentTime_end.textContent = formatTime(audio_end.currentTime);
+    }
+
+    function formatTime(time) {
+        var min = Math.floor(time / 60);
+        var sec = Math.floor(time % 60);
+        return min + ':' + ((sec < 10) ? ('0' + sec) : sec);
+    }
+
+    //Play and Pause
+    function play() {
+        // start audio
+        if (audio_end.paused) {
+            audio_end.play();
+        } else { // pause audio
+            audio_end.pause();
+        }
+    }
+
+    // Gets audio file duration
+    audio_end.addEventListener("canplaythrough", function () {
+        duration_end = audio_end.duration;
+        currentTime_end.textContent = formatTime(audio_end.currentTime);
+        totalTime_end.textContent = formatTime(duration_end);
+    }, false);
+}
+
+gestion_audio_debut();
+gestion_audio_fin();
+graph_update_theme();
 graph_update_audio();
