@@ -6,6 +6,7 @@
   <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
   <meta charset="utf-8">
   <title>Archi-Sons</title>
+  <link rel="icon" type="image/svg" href="img/k7_bleu.svg" />
   <!-- Basic viewport setting for mobile friendly page -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Déclaration de la feuille de style du document-->
@@ -15,19 +16,21 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,700|Zilla+Slab:300,400,500,600,700">
   <link rel="stylesheet" href="css/checkbox.css">
   <link rel="stylesheet" href="css/dropdown.css">
   <link rel="stylesheet" href="css/barchart.css">
+  <link rel="stylesheet" href="css/barchart_cumulative.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- Those polyfills are required so that old browsers support fetch mecanism -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js' defer></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
   <script src="https://cdn.jsdelivr.net/npm/typeit@6.0.2/dist/typeit.min.js"></script>
   <!-- Simple sample script that loads data from a dummy json file -->
   <script src="js/script.js" defer></script>
-  <script src="js/audio_accueil.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script src="js/fullpage.js"></script>
@@ -107,7 +110,7 @@
             De 1974 à 1994, le conseil régional est représenté par deux présidents.
           </p>
           <div class="separator"></div>
-          <p id="survoler_bobine">
+          <p class="tips">
             Survolez les bobines pour en connaître davantage.
           </p>
         </div>
@@ -128,7 +131,6 @@
               <source src="./data/extrait_olivier.mp3">
             </audio>
           </div>
-
           <div id="zone_info_pres">
             <span id="info_vincent" class="info_pres">
               <p class="president_name">Vincent Ansquer</p>
@@ -142,7 +144,6 @@
                 Date : 30/01/1974
               </p>
             </span>
-
             <span id="info_olivier" class="info_pres">
               <p class="president_name">Olivier Guichard</p>
               <p class="president_date">Président du conseil <b>d’octobre 1974 à mars 1996</b></p>
@@ -170,12 +171,12 @@
             et tient <span class="nb_reunion"></span> réunions.
           </p>
           <div class="separator"></div>
-          <p id="click_k7">
+          <p class="tips">
             Cliquez sur une cassette pour écouter.
           </p>
         </div>
         <div id="enregistrement_info">
-          
+
         </div>
       </div>
       <audio id="audio_k7">
@@ -183,29 +184,31 @@
       </audio>
       <button id="info_audio_button" class="play"></button>
       <div id="filter_graph">
-          <form>
-            <fieldset class="section_cb">
-              <input type="radio" class="checkbox" id="cb_audio" onclick="graph_audio_reunion(this.id)" name="filtre_type" checked>
-              <label class="label_cb" for="cb_audio">Enregistrements audio</label>
-              <input type="radio" class="checkbox" id="cb_reunion" onclick="graph_audio_reunion(this.id)" name="filtre_type">
-              <label class="label_cb" for="cb_reunion">Réunions</label>
-            </fieldset>
-          </form>
-          <form>
-            <fieldset class="section_cb">
-              <input type="radio" class="checkbox" id="periode_all" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode" checked>
-              <label class="label_cb" for="periode_all">Afficher tout</label>
-              <input type="radio" class="checkbox" id="periode_1" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode">
-              <label class="label_cb" for="periode_1">1/ 1974 - 1986</label>
-              <input type="radio" class="checkbox" id="periode_2" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode">
-              <label class="label_cb" for="periode_2">2/ 1986 - 1992</label>
-              <input type="radio" class="checkbox" id="periode_3" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode">
-              <label class="label_cb" for="periode_3">3/ 1992 - 1994</label>
-              <input type="radio" class="checkbox" id="periode_nr" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode">
-              <label class="label_cb" for="periode_nr">Non renseigné</label>
-            </fieldset>
-          </form>
-        </div>
+        <form>
+          <fieldset class="section_cb">
+            <input type="radio" class="checkbox" id="cb_audio" onclick="graph_audio_reunion(this.id)" name="filtre_type"
+              checked>
+            <label class="label_cb" for="cb_audio">Enregistrements audio</label>
+            <input type="radio" class="checkbox" id="cb_reunion" onclick="graph_audio_reunion(this.id)" name="filtre_type">
+            <label class="label_cb" for="cb_reunion">Réunions</label>
+          </fieldset>
+        </form>
+        <form>
+          <fieldset class="section_cb">
+            <input type="radio" class="checkbox" id="periode_all" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode"
+              checked>
+            <label class="label_cb" for="periode_all">Afficher tout</label>
+            <input type="radio" class="checkbox" id="periode_1" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode">
+            <label class="label_cb" for="periode_1">1/ 1974 - 1986</label>
+            <input type="radio" class="checkbox" id="periode_2" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode">
+            <label class="label_cb" for="periode_2">2/ 1986 - 1992</label>
+            <input type="radio" class="checkbox" id="periode_3" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode">
+            <label class="label_cb" for="periode_3">3/ 1992 - 1994</label>
+            <input type="radio" class="checkbox" id="periode_nr" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode">
+            <label class="label_cb" for="periode_nr">Non renseigné</label>
+          </fieldset>
+        </form>
+      </div>
       <div id="graph_k7"></div>
     </div>
     <div class="section" id="reunion">
@@ -215,7 +218,7 @@
           Les questions budgétaires occupent la majeure partie des ordres du jour.
         </p>
         <div class="separator"></div>
-        <p id="select_button">
+        <p class="tips">
           Sélectionnez les périodes qui vous intéressent en cliquant sur les boutons du micro.
         </p>
       </div>
@@ -251,36 +254,102 @@
       </div>
     </div>
     <div class="section" id="mot_cle">
-      <h1>Mots clés</h1>
-      <p>
-        Trouvez ici informations sur les mots clés.
-      </p>
+      <div id="mot_cle_intro">
+        <h1>Quels <span class="h1_highlight"> thèmes</span> sont évoqués ?</h1>
+        <p class="intro">
+          De l'agriculture, à l'éducation en passant par l'environnement, de nombreux thèmes
+          sont abordés lors des réuinons du conseil régional.
+        </p>
+        <div class="separator"></div>
+        <p class="tips">
+          Cliquez sur les bobines et survolez les bandes pour découvrir combien de réunions ont abordé ces thèmes.
+        </p>
+      </div>
+
+      <div id="graph_theme">
+        <img id="bobine_theme_periode_1" src="img/bobine_theme.svg" alt="Bobine" />
+        <img id="bobine_theme_periode_2" src="img/bobine_theme.svg" alt="Bobine" />
+        <img id="bobine_theme_periode_3" src="img/bobine_theme.svg" alt="Bobine" />
+      </div>
     </div>
     <div class="section" id="bye">
-      <h1>La scéance est lévée</h1>
+      <div id="bye_left" class="bye_bloc">
+        <h1 id="end_field"><span class="la_seance">La séance</span> <span class="est_levee">est levée</span></h1>
+        <h2 id="contribution">
+          Vous venez de découvrir les archives sonores, sachez que vous pourrez bientôt,
+          vous aussi, contribuer à l’ajout des données non-renseignées.
+          Les archives de la région Pays de la Loire sont aussi les vôtres.
+        </h2>
+        <audio id="audio_fin" preload="true" data-autoplay>
+          <source src="./data/audio_fin.mp3">
+        </audio>
+        <div id="audioplayer_end">
+          <button id="pButton_end" class="play"></button>
+          <div id="timeline_end">
+            <div id="playhead_end"></div>
+            <span id="current-time_end">--:--</span>
+            <span id="total-time_end">--:--</span>
+          </div>
+          <div id="recueil_info">
+            <a href="http://www.paysdelaloire.fr/no_cache/pages-speciales/menu-bas/contacts/"><img id="picto_mail" src="img/picto_mail.svg"
+                alt="Picto du mail" /> </a>
+            <p id="mail_field">
+              Pour être informé en premier</br>
+              du lancement de cette</br>
+              fonctionnalité, dites-le nous :
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="bye_right" class="bye_bloc">
+        <img id="marto" src="img/marteau.gif" alt="Gif d'un marto" />
+        <div id="bloc_ecoles">
+          <p id="AGR_ecole">AGR, l’école de l’image</p>
+          <p id="AGR_profession">Design graphique</p>
+          <p id="Polytech_ecole">Polytech'</p>
+          <p id="Polytech_profession">Intégration</p>
+          <p id="scom_ecole">Sciences Com</p>
+          <p id="scom_prof">Rédaction des contenus</p>
+        </div>
+        <div id="bloc_noms">
+          <img id="picto_agr" src="img/picto_agr.svg" alt="Picto de l'ecole AGR" />
+          <img id="picto_polytech" src="img/picto_polytech.svg" alt="Picto de l'ecole POLYTECH" />
+          <img id="picto_com" src="img/picto_sciences_com.svg" alt="Picto de l'ecole SCIENCES COM" />
+          <p id="AGR_field">
+            Ambre Lemaître</br>
+            Astrid Ogereau-Legay</br>
+            Pauline Rouziou
+          </p>
+          <p id="Polytech_field">
+            Julien Guitton</br>
+            Ibrahim Souleymane
+          </p>
+          <p id="com_field">
+            Gwendoline Barbu</br>
+            Delphine Lossec
+          </p>
+        </div>
+        <p id="partenaires">Partenaires:</p>
+        <div id="bandeau">
+          <ul>
+            <li><a href="http://www.hyblab.fr/"><img src="img/logo_hyblab.png" alt="Hyblab DataSport"></a></li>
+            <li><a href="http://www.ouestmedialab.fr/"><img src="img/logo_oml.png" alt="Ouest Médialab"></a></li>
+            <li><a href="http://www.agrnantes.fr"><img src="img/logo_agr.png" alt="AGR école de l'image"></a></li>
+            <li><a href="http://www.univ-nantes.fr/"><img src="img/logo_universitenantes.jpg" alt="Université de Nantes"></a></li>
+            <li><a href="http://www.polytech.univ-nantes.fr/"><img src="img/logo_polytech.png" alt="Polytech Nantes"></a></li>
+            <li><a href="http://sciencescom.audencia.com/"><img src="img/logo_sciencescom.jpg" alt="SciencesCom"></a></li>
+          </ul>
+          <ul>
+            <li><a href="http://www.paysdelaloire.fr/"><img src="img/pdl_logo.png" alt="Pays de La Loire"></a></li>
+            <li><a href="http://www.nantesmetropole.fr/"><img src="img/logo_nantesmetropole.png" alt="Nantes Métropole"></a></li>
+            <li>
+            <li><img id="cc" src="img/logo_cc.png" alt="Creative commons"></li>
+            <li><img id="opensource" src="img/logo_opensource.png" alt="Open source"></li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="arrowDown bounce"></div>
+    <div class="arrowDown bounce"></div>
 </body>
 
 </html>
-
-<!--
-  <!DOCTYPE html>
-<span id="mySpan" style="font-size: 30px;"></span>
- 
-<script type="text/javascript">
-function extraire() {
-     character = message.substring(I, I=I+1) ;
-     if ( character == "-" &&  message.substr(I, 5) == "stop-" ) {              
-          character = "<br>" ;
-          I = I + 5;
-          }
-     mySpan.innerHTML += character;
-     if ( I < message.length ) setTimeout(extraire, 100);
-     }
-I = 0 ;
-message = "-stop- Ceci est le texte à afficher !... -stop- Fin de message ./";
-extraire();
-</script>
--->

@@ -155,7 +155,7 @@ body.fp-viewing-2ndPage #fp-nav {
 #accueil #accueil_left {
 	float: left;
 	height: 100vh;
-	width: 43vw;
+	width: 41vw;
 	background-color: #F2F2E3;
 	margin: 0 auto;
 }
@@ -171,13 +171,13 @@ body.fp-viewing-2ndPage #fp-nav {
 #pdl_logo {
 	width: 14.4vw;
 	height: 7.5vh;
-	margin-left: 7vw;
+	margin-left: 6vw;
 	margin-top: 8.3vh;
 }
 
 #title_au_coeur {
 	margin-top: 5vh;
-	margin-left: 7vw;
+	margin-left: 6vw;
 	text-align: left;
 	height: 22.5vh;
 	width: 36.9vw;
@@ -208,7 +208,7 @@ body.fp-viewing-2ndPage #fp-nav {
 
 #title_notre_patrimoine {
 	margin-top: 2.7vh;
-	margin-left: 7vw;
+	margin-left: 6vw;
 	text-align: left;
 	height: 6.7vh;
 	width: 30vw;
@@ -224,7 +224,7 @@ body.fp-viewing-2ndPage #fp-nav {
 	text-align: center;
 	display: table;
 	margin-top: 5.2vh;
-	margin-left: 7vw;
+	margin-left: 6vw;
 	height: 4.2vh;
 	width: 26vw;
 	border-radius: 100px;
@@ -243,7 +243,7 @@ body.fp-viewing-2ndPage #fp-nav {
 
 #audioplayer {
 	margin-top: 4.2vh;
-	margin-left: 7vw;
+	margin-left: 6vw;
 	width: 26vw;
 	height: 6vw;
 }
@@ -297,7 +297,7 @@ body.fp-viewing-2ndPage #fp-nav {
 
 #discours {
 	margin-top: 3.5vh;
-	margin-left: 7vw;
+	margin-left: 6vw;
 	text-align: left;
 	height: 6.5vw;
 	width: 34.5vw;
@@ -333,7 +333,7 @@ body.fp-viewing-2ndPage #fp-nav {
 	position: relative;
 	float: right;
 	height: 100vh;
-	width: 52.1vw;
+	width: 53vw;
 	background-color: transparent;
 }
 
@@ -445,28 +445,13 @@ body.fp-viewing-2ndPage #fp-nav {
 	background-image: url('../img/fond_president.svg');
 }
 
-#survoler_bobine {
-	margin-left: 8vw;
-	margin-top: 1vh;
-	height: 2.2vh;
-	width: 64.3vw;
-	color: #512C51;
-	font-family: "Ubuntu";
-	font-weight: 400;
-	font-size: 1.3vw;
-	font-weight: 400;
-	font-style: italic;
-	letter-spacing: 0.11px;
-	line-height: 3.7vh;
-}
-
 #bobine_graph {
 	margin-left: 8vw;
 }
 
 #bobine_olivier {
 	position: absolute;
-	right: 5%;
+	right: 7%;
 	bottom: -15%;
 }
 
@@ -584,7 +569,7 @@ div#bobine_olivier:hover #play_olivier {
 
 #name_olivier {
 	position: absolute;
-	right: 13%;
+	right: 15%;
 	bottom: 5%;
 	color: #512C51;
 	font-family: "Zilla Slab";
@@ -622,6 +607,7 @@ h1 .h1_highlight {
 .intro {
 	margin-left: 8vw;
 	margin-top: 3vh;
+	width: 46vw;
 	font-family: "Ubuntu";
 	font-weight: 400;
 	font-size: 1.3vw;
@@ -636,6 +622,21 @@ h1 .h1_highlight {
 	border: 0.20vh solid #FFFFFF;
 	background-color: #FFFFFF;
 	border-radius: 10px;
+}
+
+.tips {
+	margin-left: 8vw;
+	margin-top: 1vh;
+	height: 2.2vh;
+	width: 64.3vw;
+	color: #512C51;
+	font-family: "Ubuntu";
+	font-weight: 400;
+	font-size: 1.3vw;
+	font-weight: 400;
+	font-style: italic;
+	letter-spacing: 0.11px;
+	line-height: 3.7vh;
 }
 
 .separator_2 {
@@ -656,20 +657,6 @@ h1 .h1_highlight {
 	border: 0.20vh solid #512C51;
 	background-color: #512C51;
 	border-radius: 10px;
-}
-
-#click_k7 {
-	margin-left: 8vw;
-	margin-top: 1vh;
-	height: 2.2vh;
-	width: 41.8vw;
-	color: #512C51;
-	font-family: "Ubuntu";
-	font-weight: 400;
-	font-size: 1.3vw;
-	font-style: italic;
-	letter-spacing: 0.11px;
-	line-height: 3.7vh;
 }
 
 #enregistrement_info {
@@ -779,21 +766,6 @@ h1 .h1_highlight {
 	background-image: url('../img/fond_reunion.svg');
 }
 
-#select_button {
-	margin-left: 8vw;
-	margin-top: 1vh;
-	height: 2.2vh;
-	width: 64.3vw;
-	color: #512C51;
-	font-family: "Ubuntu";
-	font-weight: 400;
-	font-size: 1.3vw;
-	font-weight: 400;
-	font-style: italic;
-	letter-spacing: 0.11px;
-	line-height: 3.7vh;
-}
-
 #reunion_graph {
 	margin-left: 8vw;
 	margin-top: 12vh;
@@ -896,4 +868,338 @@ h1 .h1_highlight {
 	width: 2px;
 	border: 0.20vh solid #502C50;
 	border-radius: 10px;
+}
+
+#mot_cle {
+	background-image: url('../img/fond_mot_cle.svg');
+}
+
+#bobine_theme_periode_1 {
+	position: absolute;
+	left: -6%;
+	bottom: 65%;
+	height: 18.3vh;
+	width: 10vw;
+	z-index: 10;
+}
+
+#bobine_theme_periode_1:hover {
+	transform: scale(1.10);
+	transition: all .2s linear;
+	cursor: pointer;
+}
+
+#bobine_theme_periode_2 {
+	position: absolute;
+	left: -6%;
+	bottom: 34%;
+	height: 18.3vh;
+	width: 10vw;
+	z-index: 10;
+}
+
+#bobine_theme_periode_2:hover {
+	transform: scale(1.10);
+	transition: all .2s linear;
+	cursor: pointer;
+}
+
+#bobine_theme_periode_3 {
+	position: absolute;
+	left: -6%;
+	bottom: 3%;
+	height: 18.3vh;
+	width: 10vw;
+	z-index: 10;
+}
+
+#bobine_theme_periode_3:hover {
+	transform: scale(1.10);
+	transition: all .2s linear;
+	cursor: pointer;
+}
+
+#graph_theme {
+	position: absolute;
+	left: 10%;
+	bottom: 8%;
+	height: 62.5vh;
+	width: 60vw;
+}
+
+#bye .bye_block {
+	display: inline-block;
+}
+
+#bye #bye_left {
+	float: left;
+	height: 100vh;
+	width: 41vw;
+	background-color: #F2F2E3;
+	margin: 0 auto;
+}
+
+#end_field {
+	margin-top: 16vh;
+	margin-left: 7vw;
+	text-align: left;
+	height: 16.7vh;
+	width: 20vw;
+	font-size: 4vw;
+	line-height: 7.5vh;
+}
+
+.la_seance {
+	display: inline-block;
+	color: #512C51;
+	font-family: "Zilla Slab";
+	font-weight: 700;
+}
+
+.est_levee {
+	display: inline-block;
+	color: #B94A5B;
+	font-family: "Zilla Slab";
+	font-weight: 400;
+}
+
+#contribution {
+	margin-left: 7vw;
+	margin-top: 2vh;
+	height: 15vh;
+	width: 28vw;
+	color: #512C51;
+	font-family: 'Ubuntu';
+	font-weight: 400;
+	font-size: 1.4vw;
+}
+
+#audioplayer_end {
+	margin-top: 4.2vh;
+	margin-left: 7vw;
+	width: 26vw;
+	height: 6vw;
+}
+
+#pButton_end {
+	display: block;
+	height: 10vh;
+	width: 5.5vw;
+	border: none;
+	background-size: 50% 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-left: auto;
+	margin-right: auto;
+	outline: none;
+}
+
+#timeline_end {
+	width: 26vw;
+	height: 4px;
+	float: left;
+	border-radius: 15px;
+	background: #B94A5B;
+}
+
+#playhead_end {
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	margin-top: -7px;
+	background: rgba(0, 0, 0, 1);
+}
+
+#timeline_end #current-time_end {
+	float: left;
+}
+
+#timeline_end #total-time_end {
+	float: right;
+}
+
+#mail_field {
+	margin-top: 12vh;
+	text-align: left;
+	height: 11vh;
+	width: 20.8vw;
+	color: #512C51;
+	font-family: 'Ubuntu';
+	font-size: 1.2vw;
+	font-weight: 700;
+}
+
+#picto_mail {
+	position: absolute;
+	bottom: 13%;
+	left: 26.5%;
+	height: 11.8vh;
+	width: 6.45vw;
+}
+
+#bye #bye_right {
+	position: relative;
+	float: right;
+	height: 100vh;
+	width: 59vw;
+	background-color: #FFFFFF;
+}
+
+#marto {
+	position: absolute;
+	right: 18%;
+	top: 0;
+	height: 47.1vh;
+	width: 39vw;
+}
+
+#AGR_ecole {
+	position: absolute;
+	bottom: 41.5%;
+	right: 68%;
+	color: #512C51;
+	font-family: 'Ubuntu';
+	font-size: 1.3vw;
+	font-weight: 700;
+}
+
+#AGR_profession {
+	position: absolute;
+	bottom: 38%;
+	right: 75%;
+	color: #512C51;
+	font-family: 'Ubuntu';
+	font-size: 1.3vw;
+	font-weight: 400;
+	font-style: italic;
+}
+
+#Polytech_ecole {
+	position: absolute;
+	bottom: 41.5%;
+	right: 55%;
+	color: #512C51;
+	font-family: 'Ubuntu';
+	font-size: 1.3vw;
+	font-weight: 700;
+}
+
+#Polytech_profession {
+	position: absolute;
+	bottom: 38%;
+	right: 53.5%;
+	color: #512C51;
+	font-family: 'Ubuntu';
+	font-size: 1.3vw;
+	font-weight: 400;
+	font-style: italic;
+}
+
+#scom_ecole {
+	position: absolute;
+	bottom: 41.5%;
+	right: 28%;
+	color: #512C51;
+	font-family: 'Ubuntu';
+	font-size: 1.3vw;
+	font-weight: 700;
+}
+
+#scom_prof {
+	position: absolute;
+	bottom: 38%;
+	right: 19.5%;
+	color: #512C51;
+	font-family: 'Ubuntu';
+	font-size: 1.3vw;
+	font-weight: 400;
+	font-style: italic;
+}
+
+#picto_agr {
+	position: absolute;
+	bottom: 28%;
+	left: 7%;
+	height: 12vh;
+	width: 6vw;
+}
+
+#AGR_field {
+	position: absolute;
+	bottom: 29.5%;
+	left: 18%;
+	color: #512C51;
+	font-family: 'Ubuntu';
+	font-weight: 400;
+	font-size: .8vw;
+}
+
+#picto_polytech {
+	position: absolute;
+	bottom: 29%;
+	left: 34%;
+	height: 10vh;
+	width: 6.8vw;
+}
+
+#Polytech_field {
+	position: absolute;
+	bottom: 31%;
+	left: 44%;
+	color: #512C51;
+	font-family: 'Ubuntu';
+	font-weight: 400;
+	font-size: .8vw;
+}
+
+#picto_com {
+	position: absolute;
+	bottom: 27%;
+	left: 56%;
+	height: 14.4vh;
+	width: 6.3vw;
+}
+
+#com_field {
+	position: absolute;
+	bottom: 31%;
+	left: 65%;
+	color: #512C51;
+	font-family: 'Ubuntu';
+	font-weight: 400;
+	font-size: .8vw;
+}
+
+#partenaires {
+	position: absolute;
+	bottom: 20%;
+	left: 7.5%;
+	color: #512C51;
+	font-family: 'Ubuntu';
+	font-size: 1.5vw;
+	font-weight: 700;
+}
+
+#bandeau {
+	position: absolute;
+	bottom: 8%;
+	left: 5%;
+	padding: 8px;
+}
+
+#bandeau li {
+	list-style-type: none;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 12px;
+}
+
+#bandeau img {
+	height: 4.2vh;
+	width: auto;
+}
+
+#bandeau ul {
+	text-align: center;
+	padding: 0 0;
 }
