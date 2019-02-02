@@ -3,20 +3,20 @@
 	background-color: #EB4834; 
 }
 .parag{
-	margin-top: 10%;
-	
-	position: absolute;
+	margin-top: 6%;
+  margin-left: 7%;
+  position: absolute;
 }
 .frise_trajet2{
-	margin-left: 30%;
-	margin-top: 20%;
+	margin-left: 26.4%;
+  margin-top: 20%;
 }
 .titre_slide1{
 	color: #FAFAFA;
 	font-size: 70px;
 	margin-left: 20%;
 	text-align: left;
-	font-family: Montserrat;
+	font-family: Rubik;
 	font-weight: bold;
 }
 .redcontainer{
@@ -45,24 +45,22 @@
 }
 
 .frise_trajet{
-	top:0;
- 	position: absolute;
- 	margin-left: 71%;
- 	margin-top:10px;
- 	height: 350px;
- 	width: 550px;
+	top: 0;
+  position: absolute;
+  margin-left: 42%;
+  margin-top: -12%;
 }
 
 .slidecontainer {
-  width: 80%;
-  margin-left: 10%;
-  margin-top:50px;
+  width: 68%;
+  margin-left: 16%;
+  margin-top: 4rem;
 }
 
 .slider {
   -webkit-appearance: none;
-  width: 40px;
-  height: 5px;
+  width: 10rem;
+  height: 1rem;
   border-radius: 5px;
   background: #FFFFFF;
   outline: none;
