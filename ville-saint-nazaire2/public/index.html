@@ -6,8 +6,9 @@
   <title>One-page Scrolling with animations</title>
   <title>One page scroll</title>
   <meta name="description" content="one page scrolling for websites">
-<link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
   
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css'>
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
@@ -26,7 +27,34 @@
       <div class="wow fadeInLeft"> Slide 1</div>
     </section>
     <section>
-      <div class="wow fadeInRight">Slide 2</div>
+      
+      <div class="wow  fadeInRight redcontainer">
+        <p class="titrepage">Glisser le curseur et choisissez la distance correspondant à votre trajet:</p>
+        
+        <img src="img/frise_trajet.png" class="frise_trajet">
+        <div class="slidecontainer">
+          <input type="range" min="1" max="50" value="25" class="slider" id="myRange">
+          <p class="km_text"><span id="demo"></span>Km</p>
+        </div>
+        <script>
+          var slider = document.getElementById("myRange");
+          var output = document.getElementById("demo");
+          output.innerHTML = slider.value;
+
+          slider.oninput = function() {
+            output.innerHTML = this.value;
+          }
+        </script>
+        <script src="js/calcul.js"></script>
+        <div class="My_chart"></div>
+        <script src="js/chart.js"></script>
+        
+        
+        <!-- c'est la ou on doit mettre les trucs qui arrivent de la droite comme le svg par exemple -->
+      </div>
+
+
+      
     </section>
     <section>
       <div class="wow fadeInLeft">Slide 3</div>

@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   $('section').each(function(){
     int++
-    $(this).addClass('grid-item-' + int).css('background-color', color_array[int]);
+    //$(this).addClass('grid-item-' + int).css('background-color', color_array[int]);
   });
   
 });

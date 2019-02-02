@@ -1,7 +1,94 @@
-section {
-  font-size: 35px;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  font-family: 'Raleway', sans-serif;
+.redcontainer{
+  	/*text-align: center;*/
+  	background-color: #EB4834;
+  	height: 250px;
+  	width: 100%;
+ 	top:0;
+ 	position: absolute;
+
+}
+.titrepage{
+	margin-top: 3%;
+	
+	font-size: 30px;
+  	text-align: center;
+  	color: #FFFFFF;
+  	font-family: Rubik;
+  	font-weight: bold;
+  	line-height: 27px;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url(font/Rubik-Medium.ttf);
+}
+
+.frise_trajet{
+	top:0;
+ 	position: absolute;
+ 	margin-left: 71%;
+ 	margin-top:10px;
+ 	height: 350px;
+ 	width: 550px;
+}
+
+.slidecontainer {
+  width: 80%;
+  margin-left: 10%;
+  margin-top:50px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.km_text{
+	color: #FFFFFF;
+	margin-left: 45%;
+	margin-top:2%;
+	font-family: Rubik;
+  	font-weight: bold;
+  	font-size: 30px;
+
+}
+
+.My_chart{
+	margin-top:10%;
+	margin-left: 30%;
+}
+
+text{
+	
+	display: block;
+	font-weight: bold;
 }
