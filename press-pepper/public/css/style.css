@@ -46,16 +46,24 @@ header img{
 }
 
 #filtres a.active {
-	background-color: #3887be;
+	background-color: #17a2b8;
 	color: #ffffff;
 }
 
 #filtres a.active:hover {
-	background: #3074a4;
+	background: #138496;
 }
 
 #depeche {
 	visibility:hidden;
+	background-color: white;
+	position:absolute;
+	width : 95%;
+	height : 95%;
+	z-index: 1000;
+}
+#hideButton{
+	margin-left:45%;
 }
 .logo .hover
 {
@@ -66,8 +74,4 @@ header img{
 .mapboxgl-ctrl-logo
 {
 	visibility:hidden;
-}
-.popups
-{
-	
 }
