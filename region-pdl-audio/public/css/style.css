@@ -410,15 +410,13 @@ body.fp-viewing-2ndPage #fp-nav {
 #description_archive_duree {
 	position: absolute;
 	top: 18%;
-	right: 35%;
+	right: 37%;
 	width: 18.55vw;
 	height: 6vh;
 	color: #FFFFFF;
 	font-family: "Zilla Slab";
 	font-weight: 400;
-	font-size: 1.8vw;
-	line-height: 6vh;
-	text-align: justify;
+	font-size: 2.3vw;
 }
 
 #description_archive_nb_audio {
@@ -428,7 +426,7 @@ body.fp-viewing-2ndPage #fp-nav {
 	color: #FFFFFF;
 	font-family: "Zilla Slab";
 	font-weight: 400;
-	font-size: 2.4vw;
+	font-size: 2.3vw;
 }
 
 #description_archive_nb_audio #bande_magnetique {
@@ -1050,7 +1048,7 @@ h1 .h1_highlight {
 	right: 18%;
 	top: 0;
 	height: 47.1vh;
-	width: 39vw;
+	width: auto;
 }
 
 #AGR_ecole {
