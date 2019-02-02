@@ -23,7 +23,7 @@ let data = [];
                 .rangeRound([0, width]);
 
             var color = d3.scale.ordinal()
-                .range(["#ABDA3E","#E1EFC1"]);
+                .range(["#E1EFC1","#ABDA3E"]);
 
             var yAxis = d3.svg.axis()
                 .scale(y)
