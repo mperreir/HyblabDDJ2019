@@ -23,7 +23,7 @@
     content: "";
     display: inline-block;
     width: 1.6vw;
-    height: 3vh;
+    height: 1.6vw;
     background: #fff;
     border-color: #512C51;
     border-style: solid;
@@ -56,9 +56,9 @@
 .checkbox+.label_cb:after {
     content: "";
     display: block;
-    position: relative;
-    left: 0.41vw;
-    bottom: 1.9vh;
+    position: absolute;
+    top: 14px;
+    left: 8px;
     width: 0vw;
     height: 0vh;
     background: #512C51;
@@ -69,5 +69,5 @@
 
 .checkbox:checked+.label_cb:after {
     width: 0.8vw;
-    height: 1.6vh;
+    height: 0.8vw;
 }
