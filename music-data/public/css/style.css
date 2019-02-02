@@ -1,4 +1,5 @@
 /* just a sample css rule to show that everything works */
+
 footer p
 {
   font-size: small;
@@ -6,18 +7,66 @@ footer p
 }
 
 body {
-  background-color: #151515;
-  color: white;
-}
-
-header{
+  /* background-color: #151515; */
+  background-color: #ffffff;
+  color: black;
   text-align: center;
 }
+
+/*---------- Section Introduction 1 -----------*/
+header {
+  text-align: center;
+  /* height: 52px; */
+  /* width: 688.91px; */
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 52px;
+  text-align: center;
+}
+
+#introduction1 {
+  text-align: center;
+}
+
+#wave {
+	height: 34px;
+  width: 112px;
+}
+
+#goutte {
+    height: 89px;
+    width: 56px;
+}
+
+.title {
+  /* height: 52px; */
+  /* width: 688.91px; */
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 52px;
+  text-align: center;
+}
+
+.text-intro {
+  color: #FFFFFF;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 29px;
+  text-align: center;
+}
+
+/* -------- Section introduction 2 ----------- */
 
 header img{
   max-width: 100%;
 	height: auto;
 }
+
 .buttonmenu {
   position: absolute;
 

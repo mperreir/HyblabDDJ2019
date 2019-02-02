@@ -14,7 +14,8 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
 		<!-- Simple sample script that loads data from a dummy json file -->
-		<script  type="module" src="js/example.js" defer></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+		<script  type="module" src="js/example2.js" defer></script>
 
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 
@@ -29,66 +30,72 @@
 
     <script type="text/javascript" src="js/jquery.fullPage.js"></script>
   </head>
+
+
   <body>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
     <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
     <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
     <div id="fullpage">
-
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <div class="section" id="introduction1">
-      <header>
-        <img src="img/logo_hyblab.png" alt="logo hyblab"/>
-        <h1>Hyblab Datajournalism 2019</h1>
-      </header>
-
-      <h1>Introduction : section 1</h1>
-    </div>
-
-    <div class="section" id="introduction2">
-      <h1>Introduction : section 2</h1>
-    </div>
-
-    <div class="section" id="introduction3">
-      <h1>Introduction : section 3</h1>
-    </div>
-
-    <div class="section genres" id="genres">
-      <h1>Liste des genres avec nb blogs, nb followers etc ...</h1>
-      <div id="geresmusicales">
-
+      <!-- l'entête de la page: titre, barre de recherche -->
+      <div class="section" id="introduction1">
+          <object type="image/svg+xml" data="wave.svg" id="wave">Your browser does not support SVG</object>
+          <div class="title">Bienvenue sur Music-Explorer</div>
+          <div class="text-intro">Notre plateforme vous permet de suivre l’actualité musicale de blogs indépendants et internationaux.</div>
       </div>
-      <div class="slide"> Genre 1 </div>
-      <div class="slide"> Genre 2 </div>
-      <div class="slide"> Genre 3 </div>
-      <div class="slide"> Genre 4 </div>
-      <div class="slide"> Genre 5 </div>
-      <div class="slide"> Genre 6 </div>
-    </div>
 
-    <!-- PLATEFORME MUSIC DATA -->
-    <div class="section" id="blogs_stats">
-
-      <div id="menu">
-
+      <div class="section" id="introduction2">
+        <h1>Introduction : section 2</h1>
       </div>
+
+      <div class="section" id="introduction3">
+        <h1>Introduction : section 3</h1>
+      </div>
+
+
+      <!-- PLATEFORME MUSIC DATA -->
+      <div class="section" id="blogs_stats">
+
+        <!-- Ce qui permet d'afficher la liste des genres musicales avec leur nb de blogs -->
+        <div id="geresmusicales">
+        </div>
+
+        <div id="menu">
+        </div>
+
+        <div id="bloginformations">
+        </div>
+
+        <div class="slidecontainer">
+        </div>
+
         <div id="trackspourungenre">
-
         </div>
+
         <div id="followerspourungenre">
-
         </div>
+
         <div id="artistespourungenre">
-
         </div>
-
       </div><!-- end of section stats -->
 
+      <div class="section genres" id="genres">
+        <h1>Liste des genres avec nb blogs, nb followers etc ...</h1>
+          <div class="slide"> Genre 1</div>
+          <div class="slide"> Genre 2 </div>
+          <div class="slide"> Genre 3 </div>
+          <div class="slide"> Genre 4 </div>
+          <div class="slide"> Genre 5 </div>
+          <div class="slide"> Genre 6 </div>
+      </div>
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2019</p>
-    </footer>
+        <!-- Notre pied de page -->
+        <footer>
+          <p>Copyright Hyblab team 2019</p>
+        </footer>
     </div>
+    <script>
+
+    </script>
   </body>
 </html>

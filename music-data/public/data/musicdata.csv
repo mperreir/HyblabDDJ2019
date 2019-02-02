@@ -1,8 +1,414 @@
-Origin,Name,Country,Tracks,Followers,ArtistRecentlyposted,Genre
-HM,Cultural Bulletin,UK,16,0," selling, Raime",Electronic
-HM,One Stop Record Shop,UK,11,0, Fly Felix,IndieRock
-HM,Did Not Chart,UK,25,0, Fascinations Grand Chorus,IndieRock
-HM,MedellinStyle,Colombia,20,0," SNTS, DJ Bone, The 7th Plain",Techno
-HM,Weighty Things,Australia,16,1," J Beatz, Steve Spacek",Electronic
-HM,Innate,UK,5,1, Datassette,Electronic
-HM,Monument,Worldwide,12,1, BNJMN,Electronic
+id,Origin,Name,Country,Tracks,Followers,ArtistRecentlyposted,Genre
+1,HM,Cultural Bulletin,UK,16,0," selling, Raime",Electronic
+2,HM,One Stop Record Shop,UK,11,0, Fly Felix,IndieRock
+3,HM,Did Not Chart,UK,25,0, Fascinations Grand Chorus,IndieRock
+4,HM,MedellinStyle,Colombia,20,0," SNTS, DJ Bone, The 7th Plain",Techno
+5,HM,Weighty Things,Australia,16,1," J Beatz, Steve Spacek",Electronic
+6,HM,Innate,UK,5,1, Datassette,Electronic
+7,HM,Monument,Worldwide,12,1, BNJMN,Electronic
+8,MD,indielovesongs,France,7,1,,IndieRock
+9,HM,Shepherd Express,USA,25,1, Telethon,Punk
+10,HM,if it be your will,Canada,55,2, A Modest Proposal,Electronic
+11,HM,Grotesqualizer,USA,70,2," Moths, Heartsnatcher, Ellah a. Thaun",Electronic
+12,HM,Cassette Blog,Mexico,50,2, Julio y Agosto,Folk
+13,HM,Orb Mag,Worldwide,51,2, SJ Tequilla,House
+14,HM,FILTER México,Mexico,16,2, DREAM WIFE,IndieRock
+15,HM,The Five Ws Of,UK,10,2, bdrmm,IndieRock
+16,HM,Records I Like,UK,74,2," The Seams, Primitive Lips",IndieRock
+17,HM,Smashin' Transistors,USA,79,2, Terrestrials,IndieRock
+18,HM,The Rocking Magpie,UK,22,2, Melanie Dekker,Pop
+19,HM,Terminal 313,Estonia,20,3, Clouds,Electronic
+20,HM,SOMETHINGGOOD,USA,42,3, Frog,House
+21,HM,Doubtful Sounds,Australia,23,3," Hinkley, The Goon Sax",IndieRock
+22,MD,La Régalerie,France,23,3,,IndieRock
+23,HM,CT Scramble,USA,65,3," Emperor X, Ports Of spain, Callitarson",IndieRock
+24,HM,Americana UK,USA,93,3," Michael Nau, Kramies, William The Conqueror",IndieRock
+25,HM,MūzikasSirds,Latvija (Lituanie),23,3, LYZZA,Rap
+26,HM,Electronic Beats,Germany,22,4," Colin Self, Rabit",Electronic
+27,HM,Tabs Out,USA,116,4," Grant Evans, la plimbare, Shells",Electronic
+28,HM,I Heart Noise,USA,60,4," Planet B, Ricardo Dias Gomes",Experimental
+29,HM,Swine Daily,Slovak republik,30,4, SELF,IndieRock
+30,HM,Girl Gang Music,USA,14,4, Sage Charmaine,Pop
+31,HM,YACK! Magazine,UK,54,4, GURU,Rap
+32,HM,janglepophub,South Africa,64,5," EggS, Useless Youth",IndieRock
+33,HM,Música Cuántica,Spain,26,5, Adrianne Lenker,IndieRock
+34,HM,Funky Jeff,Canada,8,6, Beat Pharmacy feat. Paul St Hilaire,Electronic
+35,HM,Tanzgemesinchaft,Germany,39,6, TAPE,Electronic
+36,HM,cool music and things,UK,35,6, Boat To Row,Folk
+37,HM,Hard Of Hearing Music,UK,17,6, GURU,HipHop
+38,HM,Post-Punk.com,Germany,41,7," Zanias, Sólveig Matthildur",Electronic
+39,HM,Earthly Pleasures,UK,91,7, Sasha,Electronic
+40,HM,The Slow Music Movement Blog,Portugal,110,7," Bartosz Kruczyński, Prins Emanuel, Yoshinori Hayashi",House
+41,MD,Wise Sound,France,19,7,,IndieRock
+42,HM,Collective Zine,UK,119,7," Weakened Friends, Jouska",IndieRock
+43,HM,ohestee,Canada,69,8,Frog,House
+44,HM,Adafruit,UK,109,8," Pip Hall, Malcolm Middleton, Art Brut",IndieRock
+45,HM,Pequenos Classicos Perdidos,Brazil,44,9, TETO PRETO,Electronic
+46,HM,Instrumental Daydreams,Sweden,44,9," Frak, Fjäder",Techno
+47,HM,Recorder,Hungary,228,10," Trillion,  Route 8, Savages y Suefo",HipHop
+48,HM,Savage Thrills,France,105,10," Silverbacks, Blasko",IndieRock
+49,HM,Keep Walking Music,Spain,142,11, Mad Meg,Punk
+50,HM,The Alternative,USA,307,11, Open Mike Eagle,Rap
+51,HM,KALTBLUT Magazine,Germany,98,12," Kllo, Exhibitionist",Electronic
+52,HM,Zone Nights,Argentina,349,12," The Room in the Wood, Wovoka Gentle, Simon Lynge",Folk
+53,HM,Grimy Goods,USA,76,13," Rituals of Mine, Ian Wayne",Electronic
+54,HM,Monolith Cocktail,Scotland,147,13," Alias & Doseone, Lee Reed",HipHop
+55,HM,Sync Music Blog,UK,85,13," Lupa J, Men I Trust, Gabrielle Aplin",IndieRock
+56,HM,Indie Buddie,UK,92,13," Earhart, Kidsmoke",IndieRock
+57,HM,Sounds Good,UK,113,13," LENN, LUCIA, The Pale White",Pop
+58,HM,PAROLE LIQUIDE,Italy,186,14, DJ ZID,Electronic
+59,MD,Le Foie de Loutre,France,27 ,14,,IndieRock
+60,HM,Aural Delights,UK,109,14, Flea,IndieRock
+61,HM,The Letter,UK,116,15," Rhian Sheehan, Reto A Ichi, Synkro",Electronic
+62,HM,Vortex Music Magazine,USA,174,15," Louis The Child, Crown The Empire",Electronic
+63,HM,The Girls at the Rock Show,USA,244,15," TEN FÉ, White Room",IndieRock
+64,HM,Ride The Tempo,Canada,432,15," Ollie, Koriass",Rap
+65,HM,AAA Backstage,Australia,83,16, COLOURED CLOCKS,IndieRock
+66,HM,BeatRoute Magazine,Canada,131,17," Jazz Cartier, Zeds Dead, Justin Martin",Electronic
+67,HM,Tokyo Native,Japan,36,18," SwuM, THEY.",HipHop
+68,HM,No Dough Music,UK,53,18, Together,House
+69,HM,The Vinyl Factory,UK,133,20," Laurie Spiegel, Foodman, Mutant Beat Dance",Electronic
+70,HM,Fuzzy Sun,USA,251,20," The Dunes, COCAINE PISS, Workin' Man Noise Unit",IndieRock
+71,HM,In The Void,Türkije,311,21," Bewitched As Dark, Strider",Electronic
+72,HM,Digital High,USA,225,21, Le Youth,Electronic
+73,HM,Anti-algorithm music,Sweden,93,21, Black Starr,HipHop
+74,HM,Christmas a Go Go,USA,192,23, The Lost Brothers,House
+75,MD,Iggy Magazine,France,119,23,,IndieRock
+76,HM,Adobe and Teardrops,USA,315,24, Frog,House
+77,HM,This Not A Drill,USA,177,24, Skinny Girl Diet,IndieRock
+78,HM,Imperfect Fifth,USA,297,24, Mythical Motors,IndieRock
+79,HM,My Blog Cliche,Esp,478,25," Zanias, Dopplereffekt",Electronic
+80,HM,Velvety,Spain,246,25," TIMI TEMPLE, Melby",IndieRock
+81,HM,Christmas Underground,UK,135,25," Denison Witmer, Tom Rosenthal, Phoebe Bridgers",IndieRock
+82,HM,The Seventh Hex,undefined,248,26," The Field, ZOLA JESUS, Crooked Man",Electronic
+83,HM,VibeGods,Germany,64,26, Flamingosis,HipHop
+84,HM,PopMatters,Worldwide,551,26, Japan Blues,House
+85,HM,XS Noize,Ireland,269,26," River Fury, Editors",IndieRock
+86,HM,bodyspace,Portugal,306,26," Nosso Querido Figueiredo, Will Samson",IndieRock
+87,HM,SkullNBones,USA,212,26, Demifiend,Metal
+88,HM,Teases and Dares,UK,281,27," Kids At Midnight, Futurecop!, Lupa J",Electronic
+89,HM,Pop Tones,USA,113,27," Tyler, The Creator",HipHop
+90,HM,Invisible Oranges,USA,832,27, Stardust,Metal
+91,HM,GIG GOER,UK,221,29,Guru,Electronic
+92,HM,Aupium,Worldwide,358,29," Sasha, TEN FÉ, LeyeT",Electronic
+93,HM,TIU,Esp,437,30," Kaitlyn Aurelia Smith, Anthony Naples",Electronic
+94,HM,Insert,UK,138,31," Kamixlo, Amnesia Scanner, Beauty Brain",Electronic
+95,HM,ear tapas,undefined,117,31," Grynpyret, Jor-El, Louis The Child",Electronic
+96,HM,Synths of Eden,Netherlands,300,32," Mokhov, lukka",Electronic
+97,HM,DOMINIONATED,Canada,299,33, Daniel Romano,Folk
+98,HM,Popmuzik,Sweden,542,35," Du Tonc, Joe Wood",Electronic
+99,HM,Cereal + Sounds,USA,189,36, Frog,House
+100,HM,Brutal Resonance,Germany,645,37," dreDDup, Avith Ortega, Clovvder",Experimental
+101,HM,Weirdo Wasteland,Australia,156,38, Palm Springs,Electronic
+102,HM,Chip Bit Sid,UK,311,38, bleeds,House
+103,HM,Ovrld,USA,673,39, Abhi The Nomad,HipHop
+104,HM,Decibel Magazine,USA,1024,43, DAGGRA,Metal
+105,HM,Toute Ouie,France,63,45, Psychedelic Porn Crumpets,IndieRock
+106,HM,Ball of Wax Audio Quarterly,New Zealand,522,46, electric bird noise,Electronic
+107,HM,I heard a whisper,Australia,105,46, The Public Opinion Afro Orchestra,HipHop
+108,HM,Wickedd Childd,Australia,323,47," Dahlia Sleeps, Leisure Suite",Electronic
+109,HM,Digger,Mexique,283,49, SANTII,HipHop
+110,HM,Can this even be called Music?,UK,608,53," Talweg, He Was Eaten By Owls, Sunless Dawn",Experimental
+111,HM,Spectral Nights,UK,306,54, Jan Jelinek,Electronic
+112,HM,EUCALYPT,Australia,402,54, Your Mum,Punk
+113,HM,Fuzz Magazine,Belgium,431,54, Bjarki,Techno
+114,HM,Too Much Love Magazine,USA,360,55," Automaton, Kazyak",Experimental
+115,HM,Blue Bardot,Russia,603,56," SAN MEI, Trentemøller",Electronic
+116,HM,fourculture,Worldwide,277,59, Dahlia Sleeps,Electronic
+117,HM,nitestylez,Germany,309,59, fxbip,Experimental
+118,HM,"Stitch By Stitch, Ltd. Ed.",Germany,342,60, Boca45,HipHop
+119,HM,Post-Trash,USA,680,62, Pill,Rap
+120,HM,Kollektiv Individualismus,Germany,85,63, DJ Koze,Electronic
+121,HM,L.A. RECORD,USA,347,63," A3, Harriet Brown",Electronic
+122,HM,Chordblossom,UK,655,63," Joshua Burnside, Jealous of the Birds, VerseChorusVerse",Folk
+123,HM,Lie In The Sound,Germany,291,64," Whyte Horses, Say Sue Me, Taken By Trees",IndieRock
+124,HM,RAPPAMELO,Italy,586,66," Souleance, Deantoni Parks, Kaidi Tatham",Electronic
+125,HM,No Clean Singing,USA,3185,66, Spearhead,Metal
+126,HM,Rap Wave,Canada,688,67," Studio,  A BOOGIE WIT DA HOODIE, JABO, CZARFACE",Electronic
+127,HM,OTPT,UK,219,67," johnny utah, DAVE B, Smino",HipHop
+128,HM,Bolting Bits,Canada,407,68," Urulu, Channel Tres, Subjoi",House
+129,HM,Ambiance Jeune,France,516,69, Ralph Carney,Experimental
+130,HM,Podcart,UK,389,70, White Room,Electronic
+131,HM,The Music Court,UK,288,74,"Max Lee, Midwest Soul Xchange",IndieRock
+132,HM,For The Rabbits,UK,618,76, Frog,House
+133,HM,A Strangely Isolated Place,USA,84,77, Khotin,Electronic
+134,HM,Faeton Music Blog,Ukraine,439,79, Hanz,House
+135,HM,Routinebiteshard,UK,307,80, Otha,Electronic
+136,HM,Make Believe Melodies,Japan,113,82," zzz, PARKGOLF, Pa's Lam System",Electronic
+137,HM,Sawdust and Gin,USA,1019,84," Rituals of Mine, Ian Wayne, Steady Holiday",Electronic
+138,HM,Hyperbolium,USA,544,89," The Persian Leaps, Blue Yonder",IndieRock
+139,HM,Swell Tone,USA,227,91, Queen of Jeans,IndieRock
+140,HM,Dansende Beren,Belgium,1009,92, GURU,Rap
+141,HM,Purple Sneakers,Australia,739,96," Milan Ring, Lupa J, Planète",Electronic
+142,HM,YabYum West,USA,1183,96," Playboy Manbaby, Why?",HipHop
+143,HM,SHREM'S CAROUSEL OF ÜBER NERDINESS,Ireland,222,98, ONUKA,Electronic
+144,HM,One Chord to Another,Finland,838,98," Grand Salvo, VanWyck, Anna Tivel",Folk
+145,HM,Undertheradar,New Zealand,111,101, Hybrid Rose,Electronic
+146,HM,Heavy Blog Is Heavy,USA,2041,102," Wanderlust, Respire, NAG",Punk
+147,HM,Headphone Commute,UK,277,104," Andrew Heath, Richard Devine, Ebauche",Electronic
+148,HM,We Close Tonight,UK,869,105, Famous,HipHop
+149,MD,Wall Of Sound,France,90,106,,IndieRock
+150,HM,hyponik,UK,489,108," DJ Earl, Shelley Parker, Clouds",Electronic
+151,HM,self-titled magazine,USA,359,109," Alias, Scuba, Mala, Alias & Doseone, Mophono",Electronic
+152,HM,beehype,Worldwide,619,109, Nicola Cruz,Electronic
+153,HM,Pan od Muzyki,Poland,459,110, Hermitude,HipHop
+154,HM,Support Your Local Ghetto,Germany,138,114," Alias, Jlin",Electronic
+155,HM,When The Horn Blows,UK,1286,114," DOV, HOCKEYSMITH, FTK",Electronic
+156,HM,Gobsmag,Netherlands,641,115," Delsbo Beach Club, SHIELDS",IndieRock
+157,MD,Indeflagration,France,166,116,,IndieRock
+158,HM,Le Visiteur,UK,578,118," Du Tonc, Intr0beatz, CRi",Electronic
+159,HM,Underground Tel Aviv,Israël,182,118, Ken Hayakawa,House
+160,HM,The Last Mixed Tape,Ireland,743,119, Subplots,IndieRock
+161,HM,WE LOVE THAT,Germany,1059,122, GURU,Rap
+162,HM,Vehlinggo,USA,628,123, Carpenter Brut,Electronic
+163,HM,HIP DOZER,France,154,123," Handbook, Johnny Utah, Konteks",HipHop
+164,HM,The Owl Mag,Worldwide,302,123, Rituals of Mine,HipHop
+165,HM,All Around Sound,USA,245,124," Tiny Ruins, Jessica Pratt",Folk
+166,HM,3am Revelations,Canada,209,125, HIGHS,Pop
+167,MD,Heure Bleue,France,274,129,,IndieRock
+168,HM,Abouttoblow,UK,329,131, Pupils of the Clock,HipHop
+169,HM,Concrete Opinions,UK,468,131," Earl Sweatshirt, JID, Vince Staples",HipHop
+170,HM,Speak Into My Good Eye,USA,918,132, Violet Sands,Electronic
+171,HM,AnalogueTrash,UK,630,135," SUMif, Otha",Electronic
+172,HM,I Oh You,Australia,210,137, Golden Vessel,Electronic
+173,HM,Brighton Music Blog,UK,617,138, GURU,HipHop
+174,HM,Groovilant,Denmark,296,144," Break Science, Late Night Radio",Electronic
+175,HM,HOLY SOUL,UK,109,144," Curtis Mayfield, Johnny 'Guitar' Watson",Experimental
+176,HM,Nicorola,Germany,697,144, GURU,HipHop
+177,HM,Destroy//Exist,USA,1192,146, Ollie Wride,Electronic
+178,HM,Inverted Audio,UK,880,147," Xosar, Overmono, SAM KIDEL",Electronic
+179,HM,mapambulo,Germany,1378,147, haze,HipHop
+180,HM,Muros de Absenta,Portugal,473,150, Greta Van Fleet,IndieRock
+181,HM,Echoes and Dust,UK,129,150," Flea, WORKIN' MAN NOISE UNIT, ACID MOTHERS TEMPLE",IndieRock
+182,HM,Bitter Sweet Symphonies,UK,786,153," Gabrielle Aplin, Sea Legs",IndieRock
+183,HM,The Listening Post Blog,USA,685,154," Mr. Airplane Man, Grinderman",IndieRock
+184,HM,50thirdand3rd,Worldwide,2351,158," Iron Chic, Satan's Satyrs",Punk
+185,HM,Nordic Spotlight,USA,451,159," Pre-Echo, The Entrepreneurs",IndieRock
+186,HM,Louder Than War,UK,1227,161," The Ocean Party, FERAL FIVE, Ed Prosek",IndieRock
+187,HM,I Die: You Die,Canada,1925,163," Zanias, Test Dept, Radioaktivists",Electronic
+188,HM,At Cost Magazine,USA,1122,163," Sasha, Kllo, TEN FÉ",Electronic
+189,MD,Le Soundrivin,France,226,164,,IndieRock
+190,HM,House of Plates,USA,130,167," Toro y Moi, Zimmer",Electronic
+191,HM,Dan Digs,USA,384,168," Shadowgraphs, OSO LEONE",IndieRock
+192,HM,Reselect,USA,188,180, Sly And The Family Stone,Funk
+193,HM,SoulBounce,USA,4407,189, brandon*,HipHop
+194,HM,Girl Underground Music,UK,731,190, Rosie Carney,Folk
+195,HM,the loop,USA,204,191, Brothertiger,Electronic
+196,HM,12XU,Germany,4556,194,Pill,Rap
+197,HM,Spincoaster,Japan,737,196," Say Sue Me, NANCY",IndieRock
+198,HM,Passive/Aggressive,Danemark,488,197, Forest Drive West,Electronic
+199,HM,music islands,Japan,650,200," Sevdaliza, Billie Eilish, Men I Trust",Electronic
+200,HM,Dummy,UK,685,201," Strict Face, Mike Gervais",House
+201,HM,The Grey Estates,UK,947,203, Versing,IndieRock
+202,HM,EarToTheGround,USA,2648,203," Joy Downer, runabay, COTE",Pop
+203,HM,Substance is meaningless,Austria,844,204, Cosmo Sheldrake,Electronic
+204,HM,Reviler,USA,864,208, Charlie Parr,Folk
+205,HM,Sherlock Ohms's Blog,UK,338,211, JFB,Electronic
+206,HM,Groove Magazine,Germany,761,212," Laksa, Shelley Parker, Dave Aju",Electronic
+207,HM,Alt Citizen,USA,340,212, THICK,IndieRock
+208,HM,I Left Without My Hat,France,685,217, AGORIA,Electronic
+209,HM,glamglare,USA,1857,222," Lusts, Softer Still, Earhart",IndieRock
+210,HM,Across The Kitchen Table,Scotland,953,226," Frightened Rabbit, Shack, Coldplay",IndieRock
+211,HM,Getintothis,UK,1262,230, Gum Takes Tooth,Experimental
+212,HM,Black Plastic,UK,456,236," Sasha, SUMif",Electronic
+213,HM,Miojo Indie,Brazil,755,237, Medialunas,IndieRock
+214,HM,Overblown Webzine,UK,2341,238, Bob Mould,IndieRock
+215,HM,Popped Music,UK,843,241, GURU,HipHop
+216,HM,The Ransom Note,UK,2082,243, Indifferent Dance Centre,IndieRock
+217,HM,Too Many Blogs,UK,987,247," pizzagirl, bdrmm, The Orielles",IndieRock
+218,HM,Loud and Quiet,UK,671,251," WOOZE, EYEDRESS",Pop
+219,HM,Disquiet,USA,1213,254, Kaitlyn Aurelia Smith,Electronic
+220,HM,The Find,Netherlands,463,255," Melodiesinfonie, Souleance, Homeboy Sandman & Edan",HipHop
+221,HM,WEUNDERGROUND,South Africa,235,261," Jonwayne, Thundercat, Christoph El Truento",Electronic
+222,HM,Happy Days Are Here Again,Italy,1165,264," Monarch Mtn, Michael Chapman, Stripmall Ballads",Folk
+223,HM,nyctaper,USA,1055,271, Dirty Projectors,IndieRock
+224,HM,Hullabaloo,USA,528,272," Faye Webster, Lydia Képinski, The Beaches",IndieRock
+225,HM,Twistedsoul,UK,1557,277," Foodman, Steve Spacek, Souleance, Open Mike Eagle",Electronic
+226,HM,Deep House Amsterdam,Netherlands,578,278," Marlon Hoffstadt, Bufi, Davis",Electronic
+227,HM,Twangville,USA,886,281, The Bottle Rockets,IndieRock
+228,HM,Dusted & Social,USA,245,284," Graham Dunning, Bisk",Electronic
+229,HM,WeWant2Wigoler,France,1056,285, Tahiti 80,IndieRock
+230,HM,Le Limonadier,France,845,288, DJ Steaw,House
+231,HM,MetalSucks,USA,1402,295, The Melvins,Metal
+232,HM,XXL,USA,1508,298," Derez De'Shon, Z Money, Chance The Rapper",HipHop
+233,HM,Cause=Time,USA,6624,301," ODESZA, TEN FÉ, Vince Staples, Childish Gambino, Pusha T",Electronic
+234,HM,Emerging Indie Bands,UK,3513,301," 45, Nomadic Massive",HipHop
+235,HM,Flea Market Funk,USA,556,302," Boca45, Basement Freaks, The Public Opinion Afro Orchestra",HipHop
+236,HM,Chase The Compass,UK,568,304, 6th Borough Project,Electronic
+237,HM,Cast the Dice,UK,952,314," Gum Takes Tooth, Machinefabriek, Thundercat",Electronic
+238,HM,swede + sour,Sweden,714,318," Bearson, Benz",Electronic
+239,HM,The Songs We Love,Spain,350,326, Foxwarren,Folk
+240,HM,The Autumn Roses,UK,3299,336," Sasha, Same Waves, MONOGEM",Electronic
+241,HM,Lend Me Your Ears,UK,1733,345, loscil,Electronic
+242,HM,Here comes the flood,Netherlands,2389,349," GURU, LOGOUT",Rap
+243,HM,The VPME,UK,1592,354, PALE RIDER,Rap
+244,HM,Resident Advisor,Worldwide,1328,355," Nazar, Laksa, Raime",Electronic
+245,HM,a closer listen,Worldwide,1324,358," Somni, Faint, Capac",Electronic
+246,HM,When You Motor Away,USA,4126,359, Errant Boy,Rap
+247,HM,Bandcamp Daily,USA,8239,364," La Loca De Hojalata, Balún, COLOR TV,  Strut, Jubilee, Gaika",Electronic
+248,HM,Crying All The Way To The Chip Shop,UK,828,379," Manfred Mann, XTC, The Mo-dettes",Pop
+249,HM,Various Small Flames,UK,1828,381,Frog,House
+250,HM,AFROPUNK,USA,979,385, Big Joanie,Punk
+251,HM,a little bit of sol,USA,4018,394, okay(K),Rap
+252,HM,Fluid Radio,UK,1455,395," Erik Griswold, FOUDRE!, Lubomyr Melnyk",Experimental
+253,HM,LOCAL SUICIDE,Germany,1035,399," Fairmont, Spencer Parker, Thundercat (feat. BADBADNOTGOOD & Flying Lotus)",Electronic
+254,HM,27 Leggies,UK,3485,408," The Four Seasons, Frankie Valli, King Mensah",Pop
+255,HM,The House of Coxhead,UK,875,411," Xinobi, FKJ, Harvey Sutherland",Electronic
+256,HM,COMO LAS GRECAS,Spain,6134,411," Photonz, Thomass Jackson",House
+257,HM,La Musique Sismique,France,704,412," Jordan Max, Poppy, SUMif",Pop
+258,HM,Still in Rock,USA,2147,416, Boss,Rap
+259,HM,Molars,UK,857,419, Art Brut,IndieRock
+260,HM,Silver Soundz,Ireland,1493,423," HTRK, Objekt",Electronic
+261,HM,monkeyboxing,UK,2478,424," Boogie, B, Wu Tang Vs Jimi Hendrix",HipHop
+262,HM,Escafandrista Musical,Esp,1609,435," Crooked Colours, NANCY, Hyena",Electronic
+263,HM,Escafandrista Musical,Spain,1609,435," Crooked Colours, NANCY, Lauran Hibberd",IndieRock
+264,HM,electric sound of joy,UK,2839,444," Margot, Emanative, HOCKEYSMITH, Noname, YOUNG FATHERS",Electronic
+265,HM,barrygruff,Ireland,2906,456," TEN FÉ, BILK",Electronic
+266,HM,Sodwee,France,172,456," Dominique, Joy Downer",Pop
+267,HM,HEY,Germany,878,467," LAUNDER, Still Parade, Homeshake",IndieRock
+268,HM,Niche Music,Japan,4345,468," Famous, GURU",Rap
+269,HM,Recommended Listen,USA,1475,476, WICCA PHASE SPRINGS ETERNAL,Rap
+270,HM,Do You Like That Song?,France,616,480, Vhyce,House
+271,HM,1833 FM,USA,1808,483, Kai Whiston,Electronic
+272,HM,Fuzzy Logic,USA,1853,491, LUMP,Electronic
+273,HM,Fake Shore Drive,USA,3555,502, LUCKI,Pop
+274,HM,Plain Or Pan?,Scotland,1224,506, Passengers,Pop
+275,HM,Burl Veneer's Music Tumblr,USA,4614,512," Mark Barrott, Rocky Marsiano, Benedikt Frey",Electronic
+276,HM,Doklands,UK,2922,523," Buddy Knox, Paavoharju, Circuit des Yeux",Folk
+277,HM,The Record Stache,USA,1914,536, Maggie Szabo,Pop
+278,HM,GIMME TINNITUS,USA,2381,537," Lia Mice,  hotline, Al Lover, Armand Hammer",Electronic
+279,HM,Sonofmarketing,Italy,6167,543," William Ryan Fritch, Styrofoam, Deru",Electronic
+280,HM,Tiny Mix Tapes,Worldwide,436,551," Angel-Ho, Test Dept, Sven K",Electronic
+281,HM,poule d'or,Germany,1048,557, Moscow Youth Cult,Electronic
+282,HM,Impose,USA,4042,557," Pupils of the Clock, Karim",HipHop
+283,HM,17 seconds,UK,863,565, The Raptors,IndieRock
+284,HM,Data Transmission,UK,2694,566," Reblok, Ruben Mandolini",Electronic
+285,HM,El Tino,Canada,2103,567," Men I Trust, DOV, Ghostly Kisses",Electronic
+286,HM,Highclouds,Belgium,3596,575," Angel-Ho, Monad, Kllo",Electronic
+287,HM,UNCANNY,Japan,2141,575," Yaeji, Machine Woman, Foodman",Electronic
+288,HM,The Deli Magazine,USA,6829,577," JUICE, hotline, pronoun",Rap
+289,HM,No Country For New Nashville,USA,2655,591, Peachy,Pop
+290,HM,Coast Is Clear,Germany,1544,593," Malcolm Middleton, Twin Oaks, Lowpines",IndieRock
+291,HM,mp3hugger,Ireland,23,598," Whyte Horses, RACKETS, Lauran Hibberd",IndieRock
+292,HM,polaroid,UK,2407,605," Beastie Boys, P.",HipHop
+293,HM,Star Maker Machine,UK,2617,606, Rick Robbins,Folk
+294,HM,Nordic by Nature,Germany,930,611, Sgrow,Electronic
+295,HM,Clash Magazine,UK,413,625," Xinobi, Sasha, Kai Whiston",Electronic
+296,HM,SPIN,USA,885,634," CZARFACE, Travis Scott, JPEGMAFIA",HipHop
+297,HM,Anotherwhiskyformisterbukowski,France,1466,640," Khruangbin, Louis Futon, ALT 236",Electronic
+298,HM,Indie is not a genre,Germany,930,650, TEN FÉ,Electronic
+299,HM,GRANDGOOD,USA,4822,662," DJ Nu-Mark, Chance The Rapper, LISAAN'DRO",HipHop
+300,HM,bear toons,UK,871,666, Professor Rhythm,House
+301,HM,The Guardian,UK,266,668, Art Brut,IndieRock
+302,HM,Phonographe Corp,France,587,678, Objekt,Electronic
+303,HM,HearYa,USA,1487,687, Silverbacks,IndieRock
+304,HM,Mixmag,Worldwide,1996,691," Travis Scott, Kai Whiston",HipHop
+305,HM,The Quietus,UK,2105,699," The Gasman, Planningtorock",Electronic
+306,HM,Abduction Radiation,USA,25,714," Golden Vessel, AMTRAC, infinite bisous,  SwuM, Flamingosis",Electronic
+307,HM,Indie30,Australia,1802,731," Kælan Mikla, We Float",Punk
+308,HM,Los Angeles Leakers,USA,761,746," Blueface, Casey Veggies, Benny, Mike Zombie",Electronic
+309,HM,Portals,USA,1817,754, Many Voices Speak,Electronic
+310,HM,Exclaim!,Canada,3477,759," CZARFACE, milk, clammyclams",HipHop
+311,HM,Planeta Pop,Esp,2292,775, CLAVVS,Electronic
+312,HM,TRUANTS,UK,1591,783," Mix Mup, Charlotte Bendiks",Electronic
+313,HM,For The Sake Of The Song,Spain,3226,785, Amy Helm,House
+314,HM,The Lost Turntable,UK,4021,791, Magic Marmalade,House
+315,HM,The Panic Manual,Canada,1718,799, Matt Berry,Folk
+316,HM,Nothing but hope and passion,Germany,2538,806, Elliot,Electronic
+317,HM,raven sings the blues,USA,239,819," The Other Years, Michael Hurley, State Champion",Folk
+318,HM,Swan Fungus,USA,3672,820, Melody's Echo Chamber,IndieRock
+319,HM,The Revue,Canada,1035,831," Toro y Moi, Sasha, Dahlia Sleeps",Electronic
+320,HM,Indie For Bunnies,Italy,2781,835," Say Sue Me, The Beths, Wyatt Blair",IndieRock
+321,HM,When We Dip,Germany,2836,837," Art Department, Fur Coat, Brian Cid",Electronic
+322,HM,The Devil Has The Best Tuna,UK,8038,843," The Van T's, bentcousin, Foreign Owl",IndieRock
+323,HM,XLR8R,USA,4073,847," Angel-Ho, Shelley Parker, Objekt,  Kratos Himself, Pixelord, Paper Tiger",Electronic
+324,HM,Cruel Rhythm,UK,773,856," neek, Serious Klein, Thutmose",HipHop
+325,HM,The French Shuffle,USA,1281,857," Boston Bun, GUTS, Robotaki",Electronic
+326,HM,Little Indie Blogs,UK,5461,858," PRETTY, GURU",Rap
+327,HM,Audio Aquarium,undefined,727,896, Tycho,Electronic
+328,HM,Gold Flake Paint,UK,2588,899, Kiran Leonard,Electronic
+329,HM,Darmstadt,Denmark,1553,903," Objekt, Schacke",Techno
+330,HM,Folk Radio UK,UK,3517,913," Colm Keane, The Unthanks",Folk
+331,HM,buffaBLOG,USA,4837,914," The Tins, Drens",IndieRock
+332,HM,stereogum,USA,13502,924," Jonwayne, CZARFACE, Chance The Rapper",HipHop
+333,HM,Noisey,USA,1886,963," MALIKA, Rose Droll",IndieRock
+334,HM,Regnsky,Danemark,1469,973," DJ Different, Ciel, Deena Abdelwahed",Electronic
+335,HM,Stamp The Wax,UK,2268,979," Ben Hauke, Jazxing",House
+336,HM,yvynyl,USA,1334,982, Sir Charles,Electronic
+337,HM,SERIALGK,Greece,3993,992," Marie Davidson, Leon Vynehall, RΠЯ",Electronic
+338,HM,The Bay Bridged,USA,3504,998, PERHAPSY,IndieRock
+339,HM,Going Solo,Italy,548,1011," Benji Lewis, SANTII",HipHop
+340,HM,Frequenze Indipendenti,Italy,191,1023, Steve Monite,Funk
+341,HM,Faded Glamour,UK,2667,1025," Sasha, Jóhann Jóhannsson",Electronic
+342,HM,csgmblog,Poland,789,1044, Kllo,Electronic
+343,HM,Indietronica,UK,177,1061," Sasha, Lincoln Jesser, TEN FÉ",Electronic
+344,HM,Berkeley Place,USA,5244,1078," J-LIVE, Open Mike Eagle, Mick Jenkins",HipHop
+345,HM,Austin Town Hall,USA,7965,1105, GURU,Rap
+346,HM,CLOUDBERRY MORNINGS,Latvia (Lettonie),349,1108," Paperwhite, Slum Sociable",Electronic
+347,HM,The Morning After,Canada,1775,1181, Next,HipHop
+348,HM,Indie Obsessive,USA,2579,1195," Matthew Dear, Royce",IndieRock
+349,HM,Pause Musicale,France,3604,1211," Toro y Moi,",Electronic
+350,HM,NNM,Chily,1853,1254, FYI Chris,House
+351,HM,FACT,UK,4215,1268," Jay Glass Dubs, Angel-Ho, Swing Ting",Electronic
+352,MD,Electrocorp,France,2041,1273,,IndieRock
+353,HM,Scientists of Sound,UK,2078,1283," Margot, Emmit Fenn",Electronic
+354,HM,DIY,UK,4487,1335," Leif Erikson, Hatchie",Pop
+355,HM,Breaking More Waves,UK,2285,1366," Lauran Hibberd, Salt Ashes",Pop
+356,HM,Word Is Bond,Worldwide,5854,1368," Abhi The Nomad, Allie Baby, OCTAVIO",HipHop
+357,HM,Okayplayer,USA,2367,1369," CZARFACE, MosEL, Live Percenters",HipHop
+358,HM,Dots & Dashes,UK,3441,1404," Grimes, Otha, talker",Electronic
+359,HM,The Mad Mackerel,UK,10156,1413, Frog,House
+360,HM,ACIDTED,UK,537,1463, Nctrnm,Electronic
+361,HM,House of Lords,Canada,3572,1468," Toro y Moi, Ruff Stuff",Electronic
+362,HM,The Vinyl District,Worldwide,65,1478," Daniel Steinbock, Ciaran Lavery, All The Luck In The World",Folk
+363,HM,THE VINYL VILLAIN,UK,7897,1577, Paul Haig,IndieRock
+364,HM,Obscure Sound,USA,5699,1619, BAD,Metal
+365,HM,Buzzbands.LA,USA,5425,1659," AKUA, MONOGEM, TheFaint",Electronic
+366,HM,Side One Track One,USA,4815,1728," Superchunk, Conor Oberst",IndieRock
+367,HM,Orange Peel,Switzerland,1937,1901," Vessel,  Goss, JPEGMAFIA",Electronic
+368,HM,nialler9,Ireland,5549,2012, Melly,Pop
+369,HM,Stereofox,Germany,5641,2049," Flitz&Suppe, Benji Lewis, Handbook",HipHop
+370,HM,umstrum||music,France,2158,2165," Zimmer, Gundelach",Electronic
+371,HM,The Passion of the Weiss,USA,5373,2229," Homeboy Sandman & Edan, Curly Castro, JPEGMAFIA",HipHop
+372,HM,Music You Wanna Listen To,Danemark,2416,2233," Night Tales, axwell, Haywyre",Electronic
+373,HM,Beautiful Buzzz,USA,2369,2239," Break Science, Exmag, Big Wild",Electronic
+374,HM,Cover Me,USA,5447,2284, Music,Electronic
+375,HM,Turntable Kitchen,USA,3346,2345, TheUndercoverDreamLovers,IndieRock
+376,HM,The Line Of Best Fit,UK,7451,2838," CZARFACE, A$AP Rocky, YOUNG FATHERS",HipHop
+377,HM,An Aquarium Drunkard,USA,3808,2946," Hazel Dickens & Alice Gerrard, Kevin Morby, Michael Hurley",Folk
+378,HM,We All Want Someone To Shout For,USA,6611,3149," Toro y Moi, TEN FÉ, Massage",Electronic
+379,HM,The 405,UK,14151,3221," Ultra, Tee Grizzley, Solo Lucci",HipHop
+380,HM,Silence Nogood,USA,27,3528," Falcons, Smino, Deltron 3030,  Vince Staples, Hieroglyphics,",Electronic
+381,HM,The Fader,Worldwide,6533,3808," Xiu Xiu, HOCKEYSMITH, Moon Racer,  Mista Cain, Wiley, Kemba",Electronic
+382,HM,acid stag,Australia,11477,3828," Kraak & Smaak, Haywyre, Kllo",Electronic
+383,HM,The New LoFi,UK,323,3908," Handbook, BROCKHAMPTON, Waajeed",HipHop
+384,HM,Consequence of Sound,USA,8905,4004, CZARFACE,HipHop
+385,HM,surviving the golden age,USA,11576,4093," Antarctigo Vespucci, Smoking Popes",IndieRock
+386,HM,Discobelle,Sweden,5423,4583," tali, Sharam Jey, ZES",Electronic
+387,HM,Delicieuse Musique,France,3277,4658, Ciel,Electronic
+388,HM,BrooklynVegan,USA,11985,5003, Dipset,Rap
+389,HM,Sunset in the Rearview,USA,4871,6271, Deidre & the Dark,IndieRock
+390,HM,blahblahblahscience,USA,7389,6937, Vhyce,House
+391,HM,Pitchfork,USA,326,6937, Ari Lennox,Pop
+392,HM,The Burning Ear,USA,6962,7398,"  Kanye West, Approachable Members of Your Local Community, KYSON",Electronic
+393,HM,Gorilla Vs. Bear,USA,3088,9243," Yaeji, Otha, BEA1991",Electronic
+394,HM,Indie Shuffle,UK,22246,26256," Art Of Tones, Video Age, CRi",Electronic
+395,MD,The Back Packerz,France,1,1,,HipHop
+396,MD,Gonzai,France,1,1,,IndieRock
+397,MD,Mowno,France,1,1,,IndieRock
+398,,International Tapes,UK,1,1,,IndieRock
+399,MD,Under The Radar,US,1,1,,IndieRock
+400,MD,Gorilla VS Bear,USA,1,1,,IndieRock
+401,MD,Goute Mes Disques,France,1,1,,Pop
+402,MD,Hartzine,France,1,1,,Pop
+403,MD,indiepoprock,France,1,1,,Pop
+404,MD,Indierockmag,France,1,1,,Pop
+405,MD,Le Drone,France,1,1,,Pop
+406,MD,Les Inrocks,France,1,1,,Pop
+407,MD,Magic RPM,France,1,1,,Pop
+408,MD,New Noise Mag,France,1,1,,Pop
+409,MD,Novorama,France,1,1,,Pop
+410,MD,Sourdoreille,France,1,1,,Pop
+411,MD,Telerama,France,1,1,,Pop
+412,MD,W-Fenec,France,1,1,,Pop
+413,,Fact Mag,UK,1,1,,Pop
