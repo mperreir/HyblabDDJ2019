@@ -183,31 +183,38 @@
         <source src=" ">
       </audio>
       <button id="info_audio_button" class="play"></button>
-      <div id="filter_graph">
-        <form>
-          <fieldset class="section_cb">
-            <input type="radio" class="checkbox" id="cb_audio" onclick="graph_audio_reunion(this.id)" name="filtre_type"
-              checked>
-            <label class="label_cb" for="cb_audio">Enregistrements audio</label>
-            <input type="radio" class="checkbox" id="cb_reunion" onclick="graph_audio_reunion(this.id)" name="filtre_type">
-            <label class="label_cb" for="cb_reunion">Réunions</label>
-          </fieldset>
-        </form>
-        <form>
-          <fieldset class="section_cb">
-            <input type="radio" class="checkbox" id="periode_all" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode"
-              checked>
-            <label class="label_cb" for="periode_all">Afficher tout</label>
-            <input type="radio" class="checkbox" id="periode_1" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode">
-            <label class="label_cb" for="periode_1">1/ 1974 - 1986</label>
-            <input type="radio" class="checkbox" id="periode_2" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode">
-            <label class="label_cb" for="periode_2">2/ 1986 - 1992</label>
-            <input type="radio" class="checkbox" id="periode_3" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode">
-            <label class="label_cb" for="periode_3">3/ 1992 - 1994</label>
-            <input type="radio" class="checkbox" id="periode_nr" onclick="graph_audio_reunion_filter(this.id)" name="filtre_periode">
-            <label class="label_cb" for="periode_nr">Non renseigné</label>
-          </fieldset>
-        </form>
+      <div id="filter_graph_1">
+        <label class="cb_container">Enregistrements audio
+          <input type="radio" checked="checked" name="filtre_type" id="cb_audio" onclick="graph_audio_reunion(this.id)">
+          <span class="checkmark"></span>
+        </label>
+        <label class="cb_container">Réunions
+          <input type="radio" name="filtre_type" id="cb_reunion" onclick="graph_audio_reunion(this.id)">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+
+      <div id="filter_graph_2">
+        <label class="cb_container">Afficher tout
+          <input type="radio" checked="checked" name="filtre_periode" id="periode_all" onclick="graph_audio_reunion_filter(this.id)">
+          <span class="checkmark"></span>
+        </label>
+        <label class="cb_container">1/ 1974 - 1986
+          <input type="radio" name="filtre_periode" id="periode_1" onclick="graph_audio_reunion_filter(this.id)">
+          <span class="checkmark"></span>
+        </label>
+        <label class="cb_container">2/ 1986 - 1992
+          <input type="radio" name="filtre_periode" id="periode_2" onclick="graph_audio_reunion_filter(this.id)">
+          <span class="checkmark"></span>
+        </label>
+        <label class="cb_container">3/ 1992 - 1994
+          <input type="radio" name="filtre_periode" id="periode_3" onclick="graph_audio_reunion_filter(this.id)">
+          <span class="checkmark"></span>
+        </label>
+        <label class="cb_container">Non renseigné
+          <input type="radio" name="filtre_periode" id="periode_nr" onclick="graph_audio_reunion_filter(this.id)">
+          <span class="checkmark"></span>
+        </label>
       </div>
       <div id="graph_k7"></div>
     </div>
