@@ -14,7 +14,7 @@ $('#fullpage').fullpage({
     verticalCentered: false,
     navigation: true,
     navigationPosition: 'right',
-    navigationTooltips: ['First page', 'Second page', 'Third page', 'Fourth page', 'Fifth page', 'Sixth page', 'Seventh page'],
+    /*navigationTooltips: ['First page', 'Second page', 'Third page', 'Fourth page', 'Fifth page', 'Sixth page', 'Seventh page'],*/
     onLeave: function (index, nextIndex, direction) {
         var ind = index.index + 1;
         var nextInd = nextIndex.index + 1;
