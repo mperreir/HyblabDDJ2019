@@ -7,11 +7,9 @@ var http = require('http');
 var app = express();
 let fs = require('fs');
 let fastcsv = require('fast-csv');
-<<<<<<< HEAD
+
 let readableStreamInput = fs.createReadStream('./public/data/musicdata.csv');
-=======
-let readableStreamInput = fs.createReadStream('./music-data/public/data/musicdata.csv');
->>>>>>> e8fba5fd84779b4db7b1359d74e1027cfeed9e40
+//let readableStreamInput = fs.createReadStream('./music-data/public/data/musicdata.csv');
 let csvData = [];
 let genremusicales=[];
 let k=0;
@@ -40,8 +38,8 @@ fastcsv.fromStream(readableStreamInput, {headers: true,strictColumnHandling: tru
        csvData.push(rowData);
 
         }).on('end', () => {
-         console.log("récupération");
-          console.log(csvData);
+         //console.log("récupération");
+          //console.log(csvData);
 
           k=1;
 
@@ -51,7 +49,7 @@ app.get('/data', function(req,resp){
 if(k==1){
 
   resp.send(JSON.stringify(csvData));
-  console.log(csvData);
+  //console.log(csvData);
 }
 
 
@@ -96,7 +94,7 @@ if(k==1){
             genremusicales.push(csvData[i].Genre);
           }
           else{
-            console.log("element existant");
+            //console.log("element existant");
           }
         }
         //console.log(genremusicales);
@@ -106,39 +104,50 @@ if(k==1){
 });
 app.get('/tracks/:genre', function(req,resp){
   //il faut enlever les espaces de tous les genre qui contient des espaces, sinon ça donne pas un résultat
-  var p1 = req.params.genre;
-  console.log(p1);
+  var p = escape(req.params.genre);
+  var p1=p.replace("%20"," ");
+
+  //console.log("p1",p1);
   let tracksgenre=[];
   let rowData = {};
     if(k==1){
 
       for(var i=0;i<csvData.length;i++)
       {
-
+      //console.log(csvData[i].Genre);
             if(csvData[i].Genre == p1)
             {
-
-              rowData["NomdeBlog"] = csvData[i].Name;
-              rowData["NombredeTracks"] = csvData[i].Tracks;
+              rowData["id"]=csvData[i].id;
+              rowData["x1"] = csvData[i].Name;
+              rowData["y1"] = csvData[i].Tracks;
               tracksgenre.push(rowData);
               rowData={};
 
             }
             else{
-              console.log("false");
+              //console.log("false");
             }
 
       }
+      //tracksgenre.sort(sortByy1);
 
-
+console.log(tracksgenre);
       resp.send(JSON.stringify(tracksgenre));
   }
 
 });
+function sortByy1(key1, key2){
+  console.log("y1",key1.y1);
+  console.log("y2",key2.y1);
+   return key1.y1 > key2.y1;
+}
 app.get('/followers/:genre', function(req,resp){
   //il faut enlever les espaces de tous les genre qui contient des espaces, sinon ça donne pas un résultat
-  var p1 = req.params.genre;
-  console.log(p1);
+;
+  var p = escape(req.params.genre);
+  var p1=p.replace("%20"," ");
+
+  console.log("p1",p1);
   let followersgenre=[];
   let rowData = {};
     if(k==1){
@@ -147,9 +156,9 @@ app.get('/followers/:genre', function(req,resp){
       {
             if(csvData[i].Genre == p1)
             {
-
-              rowData["NomdeBlog"] = csvData[i].Name;
-              rowData["NombredeFollowers"] = csvData[i].Followers;
+              rowData["id"]=csvData[i].id;
+              rowData["x1"] = csvData[i].Name;
+              rowData["y1"] = csvData[i].Followers;
               followersgenre.push(rowData);
               rowData={};
 
@@ -157,14 +166,18 @@ app.get('/followers/:genre', function(req,resp){
 
 
       }
+      followersgenre.sort(sortByy1);
+      console.log(followersgenre);
   resp.send(JSON.stringify(followersgenre));
   }
 
 });
 app.get('/artistes/:genre', function(req,resp){
   //il faut enlever les espaces de tous les genre qui contient des espaces, sinon ça donne pas un résultat
-  var p1 = req.params.genre;
-  console.log(p1);
+  var p = escape(req.params.genre);
+  var p1=p.replace("%20"," ");
+
+
   let followersgenre=[];
   let rowData = {};
     if(k==1){
@@ -187,7 +200,43 @@ app.get('/artistes/:genre', function(req,resp){
   }
 
 });
+app.get('/blogs/:id', function(req,resp){
 
+  var p1=req.params.id;
+
+  //console.log("p1",p1);
+  let blog=[];
+  let rowData = {};
+    if(k==1){
+
+      for(var i=0;i<csvData.length;i++)
+      {
+            //console.log(csvData[i].id);
+            if(csvData[i].id == p1)
+            {
+
+
+              //rowData={};
+              Object.keys(csvData[i]).forEach(current_key => {
+
+              if(csvData[i][current_key] != "")
+                { rowData[current_key] = csvData[i][current_key];}
+
+
+
+              });
+              blog.push(rowData);
+              break;
+
+            }
+
+      }
+
+
+      resp.send(JSON.stringify(blog));
+  }
+
+});
 module.exports = app;
 /*
 
