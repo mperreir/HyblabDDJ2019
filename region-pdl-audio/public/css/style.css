@@ -454,7 +454,8 @@ body.fp-viewing-2ndPage #fp-nav {
 	font-family: "Ubuntu";
 	font-weight: 400;
 	font-size: 1.3vw;
-	font-weight: 500;
+	font-weight: 400;
+	font-style: italic;
 	letter-spacing: 0.11px;
 	line-height: 3.7vh;
 }
@@ -596,7 +597,7 @@ div#bobine_olivier:hover #play_olivier {
 }
 
 #enregistrement_intro {
-	width: 45vw;
+	width: 49vw;
 	display: inline-block;
 }
 
@@ -787,7 +788,8 @@ h1 .h1_highlight {
 	font-family: "Ubuntu";
 	font-weight: 400;
 	font-size: 1.3vw;
-	font-weight: 500;
+	font-weight: 400;
+	font-style: italic;
 	letter-spacing: 0.11px;
 	line-height: 3.7vh;
 }
@@ -800,7 +802,7 @@ h1 .h1_highlight {
 #micro_reunion {
 	position: absolute;
 	left: 10%;
-	bottom: 18%;
+	bottom: 21%;
 	height: 44.5vh;
 	width: 20.1vw;
 }
@@ -808,7 +810,7 @@ h1 .h1_highlight {
 #micro_reunion_bouton_periode_1 {
 	position: absolute;
 	left: 13%;
-	bottom: 20%;
+	bottom: 23%;
 	height: 4.8vh;
 	width: 4.1vw;
 	cursor: pointer;
@@ -817,7 +819,7 @@ h1 .h1_highlight {
 #micro_reunion_bouton_periode_2 {
 	position: absolute;
 	left: 17.9%;
-	bottom: 19%;
+	bottom: 22%;
 	height: 4.8vh;
 	width: 4.1vw;
 	cursor: pointer;
@@ -826,7 +828,7 @@ h1 .h1_highlight {
 #micro_reunion_bouton_periode_3 {
 	position: absolute;
 	left: 23%;
-	bottom: 20%;
+	bottom: 23%;
 	height: 4.8vh;
 	width: 4.1vw;
 	cursor: pointer;
@@ -835,7 +837,7 @@ h1 .h1_highlight {
 #micro_reunion_periode_1 {
 	position: absolute;
 	left: 13.5%;
-	bottom: 11%;
+	bottom: 14%;
 	height: 4.8vh;
 	width: 4.1vw;
 }
@@ -843,7 +845,7 @@ h1 .h1_highlight {
 #micro_reunion_periode_2 {
 	position: absolute;
 	left: 18.5%;
-	bottom: 11%;
+	bottom: 14%;
 	height: 4.8vh;
 	width: 4.1vw;
 }
@@ -851,7 +853,7 @@ h1 .h1_highlight {
 #micro_reunion_periode_3 {
 	position: absolute;
 	left: 23.5%;
-	bottom: 11%;
+	bottom: 14%;
 	height: 4.8vh;
 	width: 4.1vw;
 }
@@ -878,13 +880,13 @@ h1 .h1_highlight {
 #separator_v1 {
 	position: absolute;
 	left: 12%;
-	bottom: 6%;
+	bottom: 9%;
 }
 
 #separator_v2 {
 	position: absolute;
 	left: 17%;
-	bottom: 6%;
+	bottom: 9%;
 }
 
 .separator_vertical {

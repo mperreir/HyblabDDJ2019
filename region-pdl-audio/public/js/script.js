@@ -57,16 +57,21 @@ fetch('data/stats_audio')
         console.log(error);
     })
     .then(function (json) {
-        document.querySelector('.nb_fichier_audio')
-            .textContent = json.nb_fichier_audio;
-        document.querySelector('#nb_reunion')
-            .textContent = json.nb_reunion;
-        document.querySelector('#date_min')
-            .textContent = json.date_min;
-        document.querySelector('#date_max')
-            .textContent = json.date_max;
-        document.querySelector('#duree_audio')
-            .textContent = json.heures * 60 + json.minutes;
+        document.querySelectorAll('.nb_fichier_audio').forEach(element =>{
+            element.textContent = json.nb_fichier_audio;
+        });
+        document.querySelectorAll('.nb_reunion').forEach(element =>{
+            element.textContent = json.nb_reunion;
+        });
+        document.querySelectorAll('.date_min').forEach(element =>{
+            element.textContent = json.date_min;
+        });
+        document.querySelectorAll('.date_max').forEach(element =>{
+            element.textContent = json.date_max;
+        });
+        document.querySelectorAll('.duree_audio').forEach(element =>{
+            element.textContent = json.heures * 60 + json.minutes;
+        });
     });
 
 // Récupération des infos sur les audios
