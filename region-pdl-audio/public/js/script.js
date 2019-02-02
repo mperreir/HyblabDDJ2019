@@ -555,9 +555,9 @@ function graph_audio_reunion(id) {
     audio_src.src = '';
 
 
-    /*var cb_audio = document.querySelector('#cb_audio');
+    var cb_audio = document.querySelector('#cb_audio');
     var cb_reunion = document.querySelector('#cb_reunion');
-    if (cb_audio.checked == true && id == "cb_audio") {
+    /*if (cb_audio.checked == true && id == "cb_audio") {
         cb_reunion.checked = false;
     }
 
@@ -826,7 +826,6 @@ function graph_update_theme() {
             console.log(error);
         })
         .then(function (json) {
-            console.log(json);
             var theme = [
                 'action_culturelle',
                 'agriculture',

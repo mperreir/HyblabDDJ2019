@@ -696,8 +696,9 @@ h1 .h1_highlight {
 }
 
 #graph_k7 {
-	margin-left: 3vw;
-	margin-top: 3vh;
+	position: absolute;
+	left: 2%;
+	bottom: 18%;
 	height: 40vh;
 	width: 85vw;
 	padding-left: 0.5vw;
@@ -726,9 +727,16 @@ h1 .h1_highlight {
 	opacity: 0;
 }
 
-#filter_graph {
-	margin-left: 8vw;
-	margin-top: 4vh;
+#filter_graph_1 {
+	position: absolute;
+	top: 32%;
+	left: 8%;
+}
+
+#filter_graph_2 {
+	position: absolute;
+	top: 36%;
+	left: 8%;
 }
 
 .k7_hover:hover {
