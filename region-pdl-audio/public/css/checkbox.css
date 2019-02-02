@@ -56,9 +56,9 @@
 .checkbox+.label_cb:after {
     content: "";
     display: block;
-    position: absolute;
+    position: relative;
     left: 0.41vw;
-    bottom: 0.78vh;
+    bottom: 1.9vh;
     width: 0vw;
     height: 0vh;
     background: #512C51;
