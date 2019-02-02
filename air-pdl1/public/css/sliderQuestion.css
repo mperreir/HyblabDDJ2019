@@ -1,0 +1,114 @@
+.questionMark{
+    padding: 50px;
+    width: 250px;
+}
+
+#wrap{
+	display: flex;
+	width: 90%;
+}
+
+#dq1{
+    visibility: hidden;
+}
+
+#dq2{
+    visibility: hidden;
+}
+#dq3{
+    visibility: hidden;
+}
+#dq4{
+    visibility: hidden;
+}
+#tq1{
+    visibility: hidden;
+}
+
+#tq2{
+    visibility: hidden;
+}
+#tq3{
+    visibility: hidden;
+}
+#tq4{
+    visibility: hidden;
+}
+
+
+.comme-evoque-precede {
+    margin-left: 300px;
+    margin-right: 300px;
+	color: #FFFFFF;
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 18px;
+	text-align: center;
+}
+
+.responseText {
+    padding: 40px;
+	color: #FFFFFF;
+	font-family: Roboto;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 18px;
+	text-align: center;
+}
+
+.responseTitle {
+
+	color: #FF9DB0;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 900;
+	letter-spacing: 4px;
+	line-height: 16px;
+	text-align: center;
+}
+
+.questionButton{
+	
+	height: 57px;	
+	width: 57px;	
+	background: linear-gradient(180deg, #00C5B4 0%, #009CBC 100%);
+	border-radius: 50%;
+	margin-top: 100px;
+}
+.textPlus{
+	height: 42px;
+	width: 61px;
+	color: #FFFFFF;
+	font-family: Roboto;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 18px;
+	text-align: center;
+}
+.text-question{
+	margin-top: 15px;
+	color: #FFFFFF;
+	font-family: Roboto;
+	font-size: 50px;
+	font-weight: bold;
+	line-height: 18px;
+	text-align: center;
+}
+
+.modal{
+	position: relative;
+	margin-top: -500px;
+}
+
+.modal-backdrop{z-index:0;}
+
+.text-modal {
+	
+	color: #14114A;
+	font-family: Roboto;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 21px;
+	text-align: center;
+}
