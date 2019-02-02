@@ -39,5 +39,4 @@ d3.select(".svga1Button")
             .duration(2000)
             .attr("y", function(d) { return yBar(d.value); })
             .attr("height", function(d) { return 200 - yBar(d.value); });
-        $('#carousel-example-generic').carousel('next');
     });
