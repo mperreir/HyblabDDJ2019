@@ -35,27 +35,27 @@ section {
 }
 
 .itemq{
-    background: url(../img/bg_questions.png) no-repeat center;
+    background: url(../img/ECRAN_QUESTION_GOOD_GOOD@2x.png) no-repeat center;
     background-size:cover;
-    heigth:100%;
+    height:100%;
 }
 
-#choix-endroit{
+#choix{
     background: url(../img/choix_endroit.png) no-repeat center;
-    background-size:cover;
-    heigth:100%;
+    background-size:contain;
+    height:100%;
 }
 
 #conseils{
     background: url(../img/conseils.png) no-repeat center;
-    background-size:cover;
-    heigth:100%;
+    background-size:contain;
+    height:100%;
 }
 
 #equipe{
     background: url(../img/equipe.png) no-repeat center;
-    background-size:cover;
-    heigth:100%;
+    background-size:contain;
+    height:100%;
 }
 
 .carousel {
@@ -66,10 +66,6 @@ section {
     background-color: #176261;
     height: 100%;
     width:100%;
-}
-
-.carousel-inner>.item>.fond{
-    height:100%;
 }
 
 .carousel-caption{
@@ -92,91 +88,90 @@ section {
     height:100%;
 }
 
-.fond{
-    position: relative;
-    height: 100%;
-    float:right;
-}
-
-#arbre-vert-rond{
-    position: absolute;
-    top:67%;
-    left:54.2%;
-    height:22%;
-}
-
-#arbre-vert-droit{
-    position: absolute;
-    top:35%;
-    left: 48%;
-    height:52.5%;
-}
-
-#arbre-rose{
-    position: absolute;
-    top:52.3%;
-    left:54.7%;
-    height:40%;
-}
-
 #parti{
     position: absolute;
-    top:30%;
-    left:5%;
+    top:60%;
+    left:7%;
 }
 
 #image-parti{
-    width:50%;
+    width:70%;
 }
 
-#q1{
-    position: relative;
-    left:35%;
+#logo{
+    position:absolute;
+    top:75%;
+    left:10%;
+    width: 10%;
 }
 
-#q2{
-    position: relative;
-    left:35%;
+#envie{
+    position: absolute;
+    left:5%;
+    top:30%;
+    width: 25%;
 }
 
-#q3{
+#experience{
+    position: absolute;
+    left:7%;
+    top:40%;
+    width:20%;
+}
+
+#next{
+    position: absolute;
+    left:90%;
+    top:50%;
+    width:15%;
+}
+
+#espace-questions{
+    position: absolute;
+    right:5%;
+    top:30%;
+    left:69%;
+    bottom:10%;
+}
+
+.questions{
     position: relative;
-    left:35%;
+}
+
+#imageQ1{
+    width:60%;
+}
+
+#imageQ2{
+    width:65%;
 }
 
 #imageQ3{
-    width:75%;
-}
-
-.boutons{
-    position:relative;
-    top:50px;
-}
-
-.choixQ2{
-    height:48px;
-    width:210px;
-}
-
-.choixQ3{
-    height:48px;
-    max-width:500px;
+    width:80%;
 }
 
 .remarques{
-    position:relative;
-    top:50px;
+    position: relative;
+    top: 80px;
     color: #AC0759;
-    font-family: "Roboto Slab", sans-serif;
-    font-size: 19px;
+    font-family: "Sarabun SemiBold", sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
     font-weight: bold;
-    letter-spacing: 2.27px;
-    line-height: 27px;
+    line-height: 28px;
 }
 
 .reponses {
     position: relative;
     top: 100px;
+}
+
+.image-r2{
+    height:150px;
+}
+
+.image-r3{
+    height:200px;
 }
 
 .nextQ {
@@ -196,63 +191,144 @@ section {
     content: "\f0a9";
 }
 
-#espace-questions{
+.fond{
     position: absolute;
-    right:10%;
-    top:40%;
-    left:60%;
-    bottom:10%;
+    width:73%;
+    right:0;
+    height:auto;
+}
+
+#arbre-vert-rond{
+    position: absolute;
+    top:80%;
+    left:54.2%;
+    height:22%;
+}
+
+#arbre-vert-droit{
+    position: absolute;
+    top:48%;
+    left: 48%;
+    height:52.5%;
+}
+
+#arbre-rose{
+    position: absolute;
+    top:65%;
+    left:54.7%;
+    height:40%;
 }
 
 .calque{
     position:absolute;
-    bottom:-100%;
+    bottom:-13%;
     width:100%;
 }
 
-#boutonOui a{
-    position: relative;
-    top: 10%;
-    left:10%;
-    float: left;
-}
-
-#boutonNon a{
-    position: relative;
-    top: 10%;
-    left:20%;
+.boutons{
+    position:relative;
 }
 
 #chauffage a{
-    position: relative;
-    float: left;
+    position:relative;
+    top:110px;
+    display:block;
+    height:40px;
+    background: url(../img/bouton_chauffage.png) no-repeat left;
+    background-size:contain;
+}
+
+#chauffage a:hover{
+    background: url(../img/bouton_chauffage_hover.png) no-repeat left;
+    background-size:contain;
 }
 
 #electricite a{
     position:relative;
-    left:5%;
+    top:130px;
+    display:block;
+    width:auto;
+    height:40px;
+    background: url(../img/bouton_electricite.png) no-repeat left;
+    background-size:contain;
+}
+
+#electricite a:hover{
+    background: url(../img/bouton_electricite_hover.png) no-repeat left;
+    background-size:contain;
 }
 
 #vehicules a{
     position:relative;
-    top:10px;
-    float: left;
+    top:150px;
+    display:block;
+    width:auto;
+    height:40px;
+    background: url(../img/bouton_vehicules.png) no-repeat left;
+    background-size:contain;
+}
+
+#vehicules a:hover{
+    background: url(../img/bouton_vehicules_hover.png) no-repeat left;
+    background-size:contain;
 }
 
 #les-trois a{
     position:relative;
-    top:10px;
-    left:5%;
+    top:170px;
+    display:block;
+    width:auto;
+    height:40px;
+    background: url(../img/bouton_trois.png) no-repeat left;
+    background-size:contain;
 }
 
+#les-trois a:hover{
+    background: url(../img/bouton_trois_hover.png) no-repeat left;
+    background-size:contain;
+}
+
+#sante a{
+    position:relative;
+    top:110px;
+    display:block;
+    height:40px;
+    background: url(../img/bouton_sante.png) no-repeat left;
+    background-size:contain;
+}
+
+#sante a:hover{
+    background: url(../img/bouton_sante_hover.png) no-repeat left;
+    background-size:contain;
+}
 #environnement a{
     position:relative;
-    top:10px;
+    top:130px;
+    display:block;
+    width:auto;
+    height:40px;
+    background: url(../img/bouton_environnement.png) no-repeat left;
+    background-size:contain;
+}
+
+#environnement a:hover{
+    background: url(../img/bouton_environnement_hover.png) no-repeat left;
+    background-size:contain;
 }
 
 #les-deux a{
     position:relative;
-    top:20px;
+    top:150px;
+    display:block;
+    width:auto;
+    height:40px;
+    background: url(../img/bouton_deux.png) no-repeat left;
+    background-size:contain;
+}
+
+#les-deux a:hover{
+    background: url(../img/bouton_deux_hover.png) no-repeat left;
+    background-size:contain;
 }
 
 #rural{
@@ -280,7 +356,15 @@ section {
 #perso {
     position: absolute;
     bottom: 5%;
-    left: 10.4%;
+    left: 20%;
+    height: 25%;
+    width: auto;
+}
+
+#perso3 {
+    position: absolute;
+    bottom: 5%;
+    left: -8%;
     height: 25%;
     width: auto;
 }
@@ -296,27 +380,23 @@ section {
 #voiture{
     position: absolute;
     bottom: 5%;
-    right: 20%;
-    height: 20%;
+    right: 30%;
+    height: 18%;
+    width: auto;
+}
+
+#voiture-gif{
+    position: absolute;
+    bottom: 0;
+    right: -12%;
+    height: 90%;
     width: auto;
 }
 
 #nuage{
     position: absolute;
-    bottom: 100px;
-    right: 700px;
-    height: 150px;
-    width: auto;
-    opacity: 0;
-}
-
-.fadein{
-    animation: fadein 2s 1 normal forwards;
-}
-
-@keyframes fadein {
-    0% { opacity: 0;}
-    100% { opacity: 1; transform: translate3d(-200px,-300px,0px) scale(2.0);}
+    left:-8%;
+    top:20%;
 }
 
 #cache1{
@@ -326,6 +406,7 @@ section {
 
 #cache2{
     height:100%;
+    margin-left:-2%;
 }
 
 .translate{
@@ -334,17 +415,79 @@ section {
 
 @keyframes translate {
     0% {
-        transform: translateX(0px);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(800px);
+        transform: translateX(330%);
     }
 }
 
 .translate2{
-    opacity: 1;
-    transform: translate3d(-200px,-300px,0px) scale(2.0);
+    animation: translate2 2s linear forwards;
 }
+
+@keyframes translate2 {
+    0% {
+        transform: translate(330%,0%);
+    }
+    10%{
+        transform: translate(350%,-20%);
+    }
+    15%{
+        transform: translate(360%,7%);
+    }
+    100% {
+        transform: translate(750%,0%);
+    }
+}
+
+.translate2d{
+    animation: translate2d 8s linear forwards;
+}
+
+@keyframes translate2d {
+    0% {
+        transform: translate(0%,0%);
+    }
+    100% {
+        transform: translate(130%,-180%);
+    }
+}
+
+.translateNO2{
+    animation: translateNO2 7.5s linear forwards;
+}
+
+@keyframes translateNO2 {
+    0% {
+        transform: translate(0%,0%);
+    }
+    55%{
+        opacity:1;
+    }
+    65%{
+        opacity:0;
+    }
+    100% {
+        transform: translate(550%,-80%);
+        opacity: 0;
+    }
+}
+
+.translate3{
+    animation: translate3 4s ease-out forwards;
+}
+
+@keyframes translate3 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(250%);
+    }
+}
+
+
 #r{
     background:url(../img/rural_j.png) no-repeat center;
     background-size: contain;
