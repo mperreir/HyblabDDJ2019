@@ -5,6 +5,7 @@
 	<title>Hyblab 2019</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style_checkbox.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
@@ -25,7 +26,7 @@
 		<!-- Ecran 2 -->
 		<div id="presentation">
 			<!-- <img id="img_fond_2" src="img/fond_image.svg"  alt="fond_ecran"/> -->
-			<video id="leon_mov" autoplay muted preload="metadata">
+			<video id="leon_mov" muted preload="metadata">
 				<source src="img/ecran2/ARRIVEE_RAPHAEL.mp4">
 			</video>
 			<div id=dialogue>
@@ -62,7 +63,7 @@
 						</ul>
 					</div>
 					<div id="curs_theme">
-						<label for="distance">Theme :</label>
+						<label for="distance">Thème :</label>
 						<br/><br/>
 						<div width="100%">
 							<input oninput="actualiser_decor()" onchange="actualiser_decor()" type="range" min="1" max="3" step="1" value="2" class="slider" id="num_theme" name="theme" >
@@ -89,41 +90,45 @@
 				</br>
 				<span id="texte_leon_circuit" class="texte_leon_classe"></span></br>
 				<span id="texte_leon_circuit2" class="texte_leon_classe" ></span>
+				<br/>
 
 				<div id = "liste_parcours">
 
 				</div>
 				<br/>
-				<span id="texte_parcours"> Quelles informations souhaitez-vous faire apparaitre sur la carte ? </span>
+				<span id="texte_parcours"> Quelles informations souhaitez-vous faire apparaitre sur la carte ? </span><br/>
+				<div id="lieux" >
 				<div class="checkbox_lieu">
-					<input type="checkbox" id="Wifi-checkbox" name="hotspot" value="checkbox" onchange="modif_checkbox('Wifi')">
-					<label for="Wifi-checkbox"> Wi-fi </label>
+					<input class="css-checkbox lrg" type="checkbox" id="Wifi-checkbox" name="hotspot" value="checkbox" onchange="modif_checkbox('Wifi')">
+					<label class="css-label vlad lrg" for="Wifi-checkbox"> Wi-fi </label>
 				</div>
 
 				<div class="checkbox_lieu">
-					<input type="checkbox" id="Bar-checkbox" name="bars" value="checkbox" onchange="modif_checkbox('Bar')">
-					<label for="Bar-checkbox"> Bars / Cafés </label>
+					<input class="css-checkbox lrg" type="checkbox" id="Bar-checkbox" name="bars" value="checkbox" onchange="modif_checkbox('Bar')">
+					<label class="css-label vlad lrg" for="Bar-checkbox"> Bars / Cafés </label>
 				</div>
 
 				<div class="checkbox_lieu">
-					<input type="checkbox" id="Point_dinteret-checkbox" name="culturels" value="checkbox" onchange="modif_checkbox('Point_dinteret')">
-					<label for="Point_dinteret-checkbox"> Points culturels </label>
+					<input class="css-checkbox lrg" type="checkbox" id="Point_dinteret-checkbox" name="culturels" value="checkbox" onchange="modif_checkbox('Point_dinteret')">
+					<label class="css-label vlad lrg" for="Point_dinteret-checkbox"> Points culturels </label>
 				</div>
 
 				<div class="checkbox_lieu">
-					<input type="checkbox" id="Toilettes-checkbox" name="toilettes" value="checkbox" onchange="modif_checkbox('Toilettes')">
-					<label for="Toilettes-checkbox"> Toilettes publiques </label>
+					<input class="css-checkbox lrg" type="checkbox" id="Toilettes-checkbox" name="toilettes" value="checkbox" onchange="modif_checkbox('Toilettes')">
+					<label class="css-label vlad lrg" for="Toilettes-checkbox"> Toilettes publiques </label>
 				</div>
 
 				<div class="checkbox_lieu">
-					<input type="checkbox" id="Monument-checkbox" name="office" value="checkbox" onchange="modif_checkbox('Monument')">
-					<label for="Monument-checkbox"> Monuments </label>
+					<input class="css-checkbox lrg" type="checkbox" id="Monument-checkbox" name="office" value="checkbox" onchange="modif_checkbox('Monument')">
+					<label class="css-label vlad lrg" for="Monument-checkbox"> Monuments </label>
 				</div>
 
 				<div class="checkbox_lieu">
-					<input type="checkbox" id="Restau-checkbox" name="restaurants" value="checkbox" onchange="modif_checkbox('Restau')">
-					<label for="Restau-checkbox"> Restaurants </label>
+					<input class="css-checkbox lrg" type="checkbox" id="Restau-checkbox" name="restaurants" value="checkbox" onchange="modif_checkbox('Restau')">
+					<label class="css-label vlad lrg" for="Restau-checkbox"> Restaurants </label>
 				</div>
+
+			</div>
 
 				<img id="leon_carte" src="img/slider/leon_velo_moyen.png" alt="leon le cameleon"/>
 				<img id="socle_carte" src="img/slider/socle_musee.png"  alt="socle carte"/>
@@ -133,9 +138,11 @@
 			<button id="bouton_retour" class="bouton" onclick="retour()" type="button"> RETOUR </button>
 
 			<fieldset id="choix_parcours">
-				<div id="nom_circuit"> </div>
-				<div id="kilometre_temps"> </div>
-				<div id="description"> </div>
+				<div id="nom_circuit"> </div><br/>
+				<div id="kilometre_temps"> </div><br/>
+				<div id="description"> </div><br/>
+				<div id="text_avant_pdf"> </div><br/>
+				<div id="lien_pdf"> </div><br/>
 			</fieldset>
 
 

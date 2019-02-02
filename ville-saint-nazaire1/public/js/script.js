@@ -1,8 +1,7 @@
 'use strict';
 
-var mySVGsToInject = document.querySelectorAll('.circuit');
 
-// Trigger the injection
+var mySVGsToInject = document.querySelectorAll('.circuit');
 SVGInjector(mySVGsToInject);
 
 // infos sur les circuits
@@ -11,19 +10,15 @@ var liste_infos_circuit = charger_donnees('nom-circuit-info');
 // Fonction pour charger la liste des noms de fichier à récupérer
 function charger_donnees(lien){
   return fetch('data/' + lien + '.json')
-    // this promise will be fulfilled when the json fill will be
     .then(function (response){
-      // if we could load the resource, parse it
       if( response.ok )
         return response.json();
-      else // if not, send some error message as JSON data
+      else
         return {data: "JSON file not found"};
     })
-      // in case of invalid JSON (parse error) send some error message as JSON data
       .catch( function (error){
         return {data: "Invalid JSON"};
       })
-      // this promise will be fulfilled when the json will be parsed
       .then(function (data) {
         return data;
       });
@@ -33,6 +28,8 @@ async function en_avant_toute(){
   document.getElementById("accueil").style.display="none";
   document.getElementById("presentation").style.display="block";
   document.getElementById("leon_mov").currentTime = 0;
+  document.getElementById("leon_mov").play();
+
 }
 
 function d_accord(){
@@ -114,15 +111,19 @@ function c_est_parti(){
     x[i].style.display = "none";
   }
 
-  //console.log(theme);
   var nb_circuit = 0;
   selection_circuit(dist, theme)
   .then(function(value){
     value.forEach(function(element){
       var numero = element["numero"];
       document.getElementById("Itineraire_" + numero).style.display="block";
+
       nb_circuit = nb_circuit + 1;
       document.getElementById("liste_parcours").innerHTML += '<input onclick="modif_radio()" onmouseover="enlever_circuits('+numero+')" onmouseout="afficher_circuit()" class="parcours_disponible" id="checkbox_circuit_'+numero+'" type="radio" name="parcours_disponible"  value=' +numero + '><label onmouseover="enlever_circuits('+numero+')" onmouseout="afficher_circuit()" id="label_checkbox_circuit_'+numero+'" for="checkbox_circuit_'+numero+'">' + element["nom"] + '</label><br>';
+      document.getElementById("Itineraire_" + numero).addEventListener("click", function(){
+        document.getElementById("checkbox_circuit_"+numero).checked=true;
+        modif_radio();
+      })
     });
 
     switch (nb_circuit) {
@@ -279,9 +280,13 @@ function modif_radio(){
       var numero = collection_radio[i].value -1
       liste_infos_circuit
       .then(function(value){
+        var minutes = value[numero]["temps_en_min"] % 60;
+        var heures = Math.trunc(value[numero]["temps_en_min"] / 60);
         document.getElementById("nom_circuit").innerHTML = value[numero]["nom"];
-        document.getElementById("kilometre_temps").innerHTML = value[numero]["distance_en_km"] + " et " + value[numero]["temps_en_min"];
+        document.getElementById("kilometre_temps").innerHTML = value[numero]["distance_en_km"] + "km  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + heures + "H" + minutes;
         document.getElementById("description").innerHTML = value[numero]["description"];
+        document.getElementById("text_avant_pdf").innerHTML = "Ce parcours vous plaît ? Vous pouvez télécharger sa feuille de route :";
+
       })
     }
   }
