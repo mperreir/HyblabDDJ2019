@@ -1,15 +1,76 @@
-/* just a sample css rule to show that everything works */
-footer p
-{
-  font-size: small;
+h2 {
+  color:white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
   text-align: center;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+h3 {
+  color:white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+.white-text{
+  color:white;
+}
+.image{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  display: block;
+  width:400px;
+
+}
+canvas{
+  /*
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
+  padding: 2px;
+  */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  display: block;
+  width:400px;
+  height: 275px;
+}
+#canvasVille{
+  background:url('../img/ville.svg');
+  background-repeat: no-repeat;
+}
+#canvasCampagne{
+  background:url('../img/campagne.svg');
+  background-repeat: no-repeat;
+}
+#slider2{
+  position: relative;
+}
+#video1 {
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
-header{
-  text-align: center;
+#video2 {
+  position:absolute;
+  visibility: visible;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
-header img{
-  max-width: 100%;
-	height: auto;
+#video3 {
+  position: absolute;
+  visibility: hidden;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
