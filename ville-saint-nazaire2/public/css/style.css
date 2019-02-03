@@ -10,10 +10,13 @@
 .frise_trajet2{
 	margin-left: 26.4%;
   margin-top: 20%;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 .titre_slide1{
 	color: #FAFAFA;
-	font-size: 70px;
+	font-size: 4vw;
 	margin-left: 20%;
 	text-align: left;
 	font-family: Rubik;
@@ -31,7 +34,7 @@
 .titrepage{
 	margin-top: 3%;
 	
-	font-size: 30px;
+	font-size: 1.5vw;
   	text-align: center;
   	color: #FFFFFF;
   	font-family: Rubik;
@@ -45,16 +48,21 @@
 }
 
 .frise_trajet{
-	top: 0;
-  position: absolute;
+	
+  
   margin-left: 42%;
-  margin-top: -12%;
+  margin-top: -15%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+
 }
 
 .slidecontainer {
+  position: absolute;
   width: 68%;
   margin-left: 16%;
-  margin-top: 4rem;
+  margin-top: 5rem;
 }
 
 .slider {
@@ -102,8 +110,9 @@
 }
 
 .My_chart{
-	margin-top:10%;
-	margin-left: 30%;
+	margin-top: 20%;
+  margin-left: 15%;
+  position: absolute;
 }
 
 text{
@@ -112,26 +121,7 @@ text{
 	font-weight: bold;
 }
 
-.Picto_calories{
-  position: absolute;
-  height: 40%;
-  top: 52rem;
-  left: 53rem;
 
-}
-.Picto_co2{
-  position: absolute;
-  height: 40%;
-  top: 41rem;
-  left: 53rem;
-}
-
-.Picto_km{
-  position: absolute;
-  height: 40%;
-  top: 63rem;
-  left: 53rem;
-}
 
 .redcontainer2{
     /*text-align: center;*/

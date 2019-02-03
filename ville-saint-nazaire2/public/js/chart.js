@@ -13,14 +13,14 @@ let data = [];
             
             data.sort(function(a, b) { return b.total - a.total; });
              var margin = {top: 20, right: 20, bottom: 30, left: 70},
-              width = 700 - margin.left - margin.right,
-              height = 400 - margin.top - margin.bottom;
+              width = window.innerWidth/2 - margin.left - margin.right,
+              height = window.innerWidth/5 - margin.top - margin.bottom;
 
             var y = d3.scale.ordinal()
                 .rangeRoundBands([height, 0], .1);
 
             var x = d3.scale.linear()
-                .rangeRound([0, width]);
+                .rangeRound([0, width*1.8]);
 
             var color = d3.scale.ordinal()
                 .range(["#E1EFC1","#ABDA3E"]);
@@ -43,6 +43,7 @@ let data = [];
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 
+
             
 
             y.domain(data.map(function(d) { return d.State; }));
@@ -62,9 +63,9 @@ let data = [];
                 .data(function(d) { return d.ages; })
                 .remove()
                 .enter().append("rect")
-                .attr("height", y.rangeBand()/1.4)
+                .attr("height", y.rangeBand())
                 .attr("x", function(d) { return x(d.y0); })
-                .attr("width", function(d) { return x(d.y1) - x(d.y0); })
+                .attr("width", function(d) { return (x(d.y1) - x(d.y0)); })
                 .style("fill", function(d) { return color(d.name); })
                 .on("mouseover", function() { tooltip.style("display", "inline"); })
                 .on("mouseout", function() { tooltip.style("display", "none"); })
@@ -103,9 +104,35 @@ let data = [];
               svg.append("rect")
               .attr("height", 330)
               .attr("x", 0)
-              .attr("width", 6)
+              .attr("width", 3)
               .attr("y",0)
               .style("fill","#ABDA3E");
+
+
+              svg.append("g")
+              .append("svg:image")
+              .attr("xlink:href", "img/Picto_co2.png")
+              .attr("x", -y.rangeBand()/1.15)
+              .attr("y", y.rangeBand()/4)
+              .attr("width", y.rangeBand())
+              .attr("height", y.rangeBand());
+
+              svg.append("g")
+              .append("svg:image")
+              .attr("xlink:href", "img/Picto_km.png")
+              .attr("x", -y.rangeBand()/1.15)
+              .attr("y", 2.3*y.rangeBand())
+              .attr("width", y.rangeBand())
+              .attr("height", y.rangeBand());
+
+              svg.append("g")
+              .append("svg:image")
+              .attr("xlink:href", "img/Picto_calories.png")
+              .attr("x", -y.rangeBand()/1.15)
+              .attr("y", 1.3*y.rangeBand())
+              .attr("width", y.rangeBand())
+              .attr("height", y.rangeBand());
+
                 //.attr("class", "y axis")
 
                 //.attr("class","axisRed")

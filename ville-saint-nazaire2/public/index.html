@@ -25,25 +25,25 @@
   <container id="fullpage">
     <section class="slide1"> 
       
-      <div class="wow fadeInLeft ">
-        <div class="parag">
+      <div class="wow fadeInLeft container-fluid">
+        <div class="parag row">
           <p class="titre_slide1">Et vous,</p>
           <p class="titre_slide1">quelles économies feriez-vous</p>
           <p class="titre_slide1">en optant pour le vélo?</p>
         </div>
-        <img src="img/frise_trajet5.png" class="frise_trajet2">
+        <img src="img/frise_trajet5.png" class="frise_trajet2 row pull-right">
 
       </div>
 
     </section>
     <section>
       
-      <div class="wow  fadeInRight redcontainer">
-        <p class="titrepage">Glisser le curseur et choisissez la distance correspondant à votre trajet:</p>
+      <div class="wow  fadeInRight redcontainer container-fluid">
+        <p class="titrepage row">Glisser le curseur et choisissez la distance correspondant à votre trajet:</p>
         
-        <img src="img/frise_trajet.png" class="frise_trajet">
-        <div class="slidecontainer">
-          <input type="range" min="1" max="50" value="25" class="slider" id="myRange">
+        <img src="img/frise_trajet.png " class="frise_trajet row pull-right">
+        <div class="slidecontainer row">
+          <input type="range" min="1" max="30" value="15" class="slider" id="myRange">
           <p class="km_text"><span id="demo"></span>Km</p>
         </div>
         <script>
@@ -56,13 +56,11 @@
           }
         </script>
         <script src="js/calcul.js"></script>
-        <div class="My_chart"></div>
+        <div class="My_chart row"></div>
         <script src="js/chart.js"></script>
 
 
-        <img src="img/Picto_calories.png" class="Picto_calories">
-        <img src="img/Picto_co2.png" class="Picto_co2">
-        <img src="img/Picto_km.png" class="Picto_km">
+
         
         
         <!-- c'est la ou on doit mettre les trucs qui arrivent de la droite comme le svg par exemple -->
