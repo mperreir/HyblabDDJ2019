@@ -62,6 +62,13 @@ header img{
 	height : 95%;
 	z-index: 1000;
 }
+#titre_depeche{
+	max-width : 70%;
+}
+#corps_depeche{
+	max-width : 60%;
+
+}
 #hideButton{
 	margin-left:45%;
 }
