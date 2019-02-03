@@ -84,28 +84,27 @@ body{
   position: absolute;
 }
 
-#bulle_presentation{top: 18vh;}
+#bulle_presentation{top: 10vh;}
 
 #bulle_presentation2{
-  top: 45vh;
+  top: 37vh;
   display:none;
 }
 
 .reponse{
   height: 5vh;
   position: absolute;
-
 }
 
 #reponse1{
-  top: 39vh;
+  top: 31vh;
   left: 59vw;
   width: 9vw;
   cursor:pointer;
 }
 
 #reponse2{
-  top: 66vh;
+  top: 58vh;
   left: 59vw;
   width: 9vw;
   display:none;
