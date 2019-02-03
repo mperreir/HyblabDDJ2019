@@ -1,140 +1,254 @@
 <!DOCTYPE html>
 <html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>One-page Scrolling with animations</title>
+    <title>One page scroll</title>
+    <meta name="description" content="one page scrolling for websites">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>One-page Scrolling with animations</title>
-  <title>One page scroll</title>
-  <meta name="description" content="one page scrolling for websites">
-  <link href='https://fonts.googleapis.com/css?family=Rubik:100,200,400,600' rel='stylesheet' type='text/css'>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
-  
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css'>
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+  <body>
+    <container id="fullpage">
+      <section class="sectionPersona fadeInLeft">
+        <video autoplay muted loop id="mavideo">
+          </video>
+        <div class="wow fadeIn">
+          <h1 class="high-title"> Choissisez votre personnage </br> et suivez son aventure </h1>
+          <div class=choixPerso>
+            <div class=choixPersoImg>
+              <img onmouseover="jeanne()" onmouseout="jeanneOut()" class="jeanne" id="jeanne" src="imgChoixPersona/jeanne.png" />
+              <img onmousemove="camille()" onmouseout="camilleOut()" class="camille" id="camille" src="imgChoixPersona/camille.png" />
+              <img onmousemove="jerome()" onmouseout="jeromeOut()" class="jerome" id="jerome" src="imgChoixPersona/jerome.png" />
+            </div>
+            <div id="descriptionPersona" class="descriptionPersona">
+              <h1 class="titlePersona" id="titlePersona">
+                Jerome
+              </h1>
+              <p class="contentPersona" id="contentPersona">
 
-      <link rel="stylesheet" href="css/style.css">
-
-  
-</head>
-
-<body>
-
-  <container id="fullpage">
-    <section class="slide1"> 
-      
-      <div class="wow fadeInLeft container-fluid">
-        <div class="parag row">
-          <p class="titre_slide1">Et vous,</p>
-          <p class="titre_slide1">quelles économies feriez-vous</p>
-          <p class="titre_slide1">en optant pour le vélo?</p>
+              </p>
+              <button class="choisir" onClick=scrollToSection()><a id="goPersona">Choisir</a></button>
+            </div>
+          </div>
         </div>
-        <div  class=" row">
-        <img src="img/frise_trajet5.png" class="col frise_trajet2 pull-right">
+      </section>
+
+
+      <section class="jeux" id="JeuJeanne" >
+        <div class="wow jeuxPersona fadeInLeft">
+          <div class="button">
+            <button onclick=goPageCamille() class="buttonImgPersona1">
+              <img height="100%" src="imgJeux/camille.png" /></button>
+            <button onclick=goPageJerome() class="buttonImgPersona2">
+              <img height="100%" src="imgJeux/jerome.png" /></button>
+            </button>
+            <button class="buttonNext" onClick=next()>Next Step</button>
+          </div>
+          <div class="persona">
+            <div class="personaBulle">
+              <img class="imgPersona" src="imgJeux/JeanneHigh.png" />
+              <img class="bulle" src="imgJeux/bulle.png" />
+            </div>
+            <h2 class="graphic-title"> Comparons les gains </br> et économies réalisées à vélo </h2>
+            <img class="imgGraph" id="imgGraph" src="imgJeux/barChart.png" />
+          </div>
+
+        <div class="progress">
+            <div class="progress-track"></div>
+            <div id="step1" class="progress-step">
+              <img class="imgStep" src="imgJeux/jeanneE1.png" /> 
+            </div>
+            <div id="step2" class="progress-step">
+              <img class="imgStep" src="imgJeux/jeanneE2.png" />  
+            </div>
+            <div id="step3" class="progress-step">
+              <img class="imgStep" src="imgJeux/jeanneE3.png" /> 
+            </div>
+            <div id="step4" class="progress-step">
+              <img class="imgStep" src="imgJeux/jeanneE4.png" /> 
+            </div>
         </div>
-      </div>
-
-    </section>
-    <section>
-      
-      <div class="wow  fadeInRight redcontainer container-fluid">
-        <p class="titrepage row">Glisser le curseur et choisissez la distance correspondant à votre trajet:</p>
-        <div class="slidecontainer row">
-          <input type="range" min="1" max="30" value="15" class="slider" id="myRange">
-          <p class="km_text"><span id="demo"></span>Km</p>
+        <img class="frise" src="imgJeux/frise.png" />
+        <img id="bikeMoove" src="imgJeux/JeanneSmall.png" />
+        <div class="bubble">
+            <div class="bubble-text">
+            <p id="bubble-text">
+              <div id="etape1">
+                8h : J’installe mes sacoches sur mon porte bagage et j’enfourche mon vélo électrique pour me rendre au marché comme chaque mardi. J’aime y être assez tôt pour avoir le choix et les produits les plus frais possible.
+              </div>
+              <div id="etape2">
+                8h04 : Sur le trajet, je m'arrête à la banque pour retirer quelques billets.
+              </div>
+              <div id="etape3">
+                8h10 : J’arrive à l’abri-vélo à côté du marché. Super ! Je ne payerai pas le stationnement. Il ne faut pas que j’oublie de passer au stand du boucher.
+              </div>
+              <div id="etape4">
+                 9h10 : Après 1h de courses, je fais un petit détour par le fleuriste pour acheter un nouveau rosier et je rentre à la maison. Il est temps de se mettre en cuisine !
+              </div>
+            </p>
         </div>
-        
+        <h2 class="name"> Jeanne </h2>
+      </div>
+      </br>
+      </br>
+      </br>
+      <button class=nextStep onClick=next()>Next Step</button>
+      </div>
+      </section>
 
-        <div class="row">
-          <div class="col-md-6"></div>
-          <img src="img/frise_trajet.png " class="frise_trajet col-md-7">
+
+
+      <section class="jeux" id="JeuJerome">
+        <div class="wow container-fluid jeuxPersona fadeInLeft">
+          <div class="button">
+            <button onclick=goPageCamille() class="buttonImgPersona1">
+              <img height="100%" src="imgJeux/camille.png" /></button>
+            <button onclick=goPageJerome() class="buttonImgPersona2">
+              <img height="100%" src="imgJeux/jerome.png" /></button>
+              <button class="buttonNext" onClick=nextJ()>Next Step</button>
+          </button>
+          </div>
+          <div class="persona">
+            <div class="personaBulle">
+              <img class="imgPersona" src="imgJeux/JeanneHigh.png" />
+              <img class="bulle" src="imgJeux/bulle.png" />
+            </div>
+            <h2 class="graphic-title"> Comparons les gains </br> et économies réalisées à vélo </h2>
+            <img class="imgGraph" id="imgGraph2" src="imgJeux/barChart.png" />
+          </div>
+
+        <div class="progress">
+            <div class="progress-track"></div>
+            <div id="step1J" class="progress-step">
+              <img class="imgStep" src="imgJeux/jeanneE1.png" /> 
+            </div>
+            <div id="step2J" class="progress-step">
+              <img class="imgStep" src="imgJeux/jeanneE2.png" />  
+            </div>
+            <div id="step3J" class="progress-step">
+              <img class="imgStep" src="imgJeux/jeanneE3.png" /> 
+            </div>
+            <div id="step4J" class="progress-step">
+              <img class="imgStep" src="imgJeux/jeanneE4.png" /> 
+            </div>
         </div>
-        <script>
-          var slider = document.getElementById("myRange");
-          var output = document.getElementById("demo");
-          output.innerHTML = slider.value;
-
-          slider.oninput = function() {
-            output.innerHTML = this.value;
-          }
-        </script>
-        <script src="js/calcul.js"></script>
-        <div class="My_chart row"></div>
-        <script src="js/chart.js"></script>
-
-
-
-        
-        
-        <!-- c'est la ou on doit mettre les trucs qui arrivent de la droite comme le svg par exemple -->
+        <img pull-right class="frise" src="imgJeux/frise.png" />
+        <img id="bikeMoove2" src="imgJeux/JeanneSmall.png" />
+        <div class="bubble">
+            <div class="bubble-text">
+            <p id="bubble-text">
+              <div id="etape1J">
+                E1 jerome
+              </div>
+              <div id="etape2J">
+                E2 jerome
+              </div>
+              <div id="etape3J">
+                E3
+              </div>
+              <div id="etape4J">
+                 E4
+              </div>
+            </p>
+        </div>
+        <h2 class="name"> Jerome </h2>
       </div>
+      </br>
+      </br>
+      </br>
+      <button class=nextStep onClick=nextJ()>Next Step</button>
+      </div>
+      </section>
 
 
-      
-    </section>
-    <section>
-      <div class="wow fadeInLeft redcontainer2 container-fluid">
-      <div class="row">
-             <p class="text_final projet_com col">Un projet commandé par la ville de</p>
-      </div>
 
-      <div class="row">
-             <img src="img/logo_saint_nazaire.png" class="logo_saint_nazaire col-md-2 col-md-offset-5">
-      </div>
+      <section class="jeux" id="JeuCamille">
+        <div class="wow jeuxPersona fadeInLeft">
+          <div class="button">
+            <button onclick=goPageCamille() class="buttonImgPersona1">
+              <img height="100%" src="imgJeux/camille.png" /></button>
+            <button onclick=goPageJerome() class="buttonImgPersona2">
+              <img height="100%" src="imgJeux/jerome.png" /></button>
+              <button class="buttonNext" onClick=nextC()>Next Step</button>
+          </button>
+          <div class="persona">
+            <div class="personaBulle">
+              <img class="imgPersona" src="imgJeux/JeanneHigh.png" />
+              <img class="bulle" src="imgJeux/bulle.png" />
+            </div>
+            <h2 class="graphic-title"> Comparons les gains </br> et économies réalisées à vélo </h2>
+            <img class="imgGraph" id="imgGraph3" src="imgJeux/barChart.png" />
+          </div>
 
-      <div class="row">
-              <p class="text_final port_par col">Porté par les étudiants</p>
+        <div class="progress">
+            <div class="progress-track"></div>
+            <div id="step1C" class="progress-step">
+              <img class="imgStep" src="imgJeux/jeanneE1.png" /> 
+            </div>
+            <div id="step2C" class="progress-step">
+              <img class="imgStep" src="imgJeux/jeanneE2.png" />  
+            </div>
+            <div id="step3C" class="progress-step">
+              <img class="imgStep" src="imgJeux/jeanneE3.png" /> 
+            </div>
+            <div id="step4C" class="progress-step">
+              <img class="imgStep" src="imgJeux/jeanneE4.png" /> 
+            </div>
+        </div>
+        <img class="frise" src="imgJeux/frise.png" />
+        <img id="bikeMoove3" src="imgJeux/JeanneSmall.png" />
+        <div class="bubble">
+            <div class="bubble-text">
+            <p id="bubble-text">
+              <div id="etape1C">
+                E1 camille
+              </div>
+              <div id="etape2C">
+                E2 jerome
+              </div>
+              <div id="etape3C">
+                E3
+              </div>
+              <div id="etape4C">
+                 E4
+              </div>
+            </p>
+        </div>
+        <h2 class="name"> Camille </h2>
       </div>
-      <div class="row">
-        <img src="img/agr_team.png" class="agr_team col-md-3 col-md-offset-1">
-        <img src="img/polytech_team.png" class="polytech_team col-md-3 col-md-offset-1">
-        <img src="img/science_com_team.png" class="science_com_team col-md-3 col-md-offset-1">
+      </br>
+      </br>
+      </br>
+      <button class=nextStep onClick=nextC()>Next Step</button>
       </div>
+      </section>
 
-      <div class="row">
-      <p class="titre_ecole col-md-3 col-md-offset-1">AGR Nantes</p>
-      <p class="titre_ecole col-md-4 ">Polytech Nantes</p>
-      <p class="titre_ecole col-md-3">Audencia SciencesCom</p>
-      </div>
-      <div class="row">
-        <p class="nom_teams col-md-2 col-md-offset-2">Antoine Brizais<br>Carole Guihard<br>Kévin Laclautre</p>
-        <p class="nom_teams col-md-2 col-md-offset-1">Gwenaelle Gouriten<br>Hichami Salma<br>Houmair Othman</p>
-        <p class="nom_teams col-md-3 col-md-offset-2">Alexandra Chauvin<br>Salomé Darracq<br>Gabrielle Bouyer</p>
-      </div>
 
-      <div class="row top_mar">
-      <p class="partenaire col">Partenaires</p>
-      <img src="img/logo_agr.png " class="logo_agr col-md-2">
-      <img src="img/logo_polytech.png" class="logo_polytech col-md-2">
-      <img src="img/logo_sciencescom.png" class="logo_sciencescom col-md-2">
-      <img src="img/logo_univ_nantes.png" class="logo_univ_nantes col-md-2">
-      <img src="img/logo_pdl.png" class="logo_pdl col-md-2">
-      <img src="img/logo_hyblab.png" class="logo_hyblab col-md-2">
-      <img src="img/logo_medialab.png" class="logo_medialab col-md-2">
-      <img src="img/logo_open_source.png" class="logo_open_source col-md-2">
-      <img src="img/logo_cc.png" class="logo_cc col-md-2">
-      </div>
-      </div>
-      </div>
-    </section>
-    <section>
-      <div class="wow fadeInRight">Slide 4</div>
-    </section>
-</container>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'></script>
 
-  
 
+
+
+     
+
+
+
+
+      <section id="last">
+        <div class="wow fadeInRight">Slide 4</div>
+      </section>
+    </container>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'></script>
     <script  src="js/index.js"></script>
-
-
-
-
-</body>
-
+  </body>
 </html>
