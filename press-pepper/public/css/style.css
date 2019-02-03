@@ -15,14 +15,14 @@ header img{
 }
 #map { 
 	padding-top : 25px;
-	height: 550px;
-	width: 800px;
+	height: 500px;
+	width: 900px;
 	margin-right:2%;
 	float: left;
 }
 #filtres {
 	padding-top : 25px;
-	max-width : 200px;
+	max-width : 27%;
 }
 #filtres a {
 	font-size: 13px;
