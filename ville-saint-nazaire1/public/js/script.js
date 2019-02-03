@@ -3,13 +3,12 @@
 
 var mySVGsToInject = document.querySelectorAll('.circuit');
 var mySVGsToInject2 = document.querySelectorAll('#reseaux');
-/*
+
 SVGInjector(mySVGsToInject, null, function(){
   $("#bouton_accueil").fadeIn();
 });
-*/
-
 SVGInjector(mySVGsToInject2);
+
 // infos sur les circuits
 var liste_infos_circuit = charger_donnees('nom-circuit-info');
 
@@ -305,11 +304,6 @@ function modif_radio(){
 }
 
 function credits(){
-
-  // A supprimer
-  document.getElementById("accueil").style.display = "none";
-
-
   document.getElementById("page_carte").style.display = "none";
   document.getElementById("video_coucou").play();
   document.getElementById("page_credits").style.display = "block";

@@ -705,11 +705,3 @@ input[type=range]::-ms-fill-lower {
   height:83%;
   z-index:1;
 }
-
-/* A supprimer */
-#bouton_backdoor{
-  position: absolute;
-  left:20%;
-  top:20%;
-  z-index: 40;
-}
