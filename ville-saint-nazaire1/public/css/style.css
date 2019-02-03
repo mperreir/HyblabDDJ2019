@@ -54,6 +54,7 @@ body{
   left: 50%;
   height: 55px;
   width: 209px;
+  display:none;
 }
 
 /* Page Présentation */
