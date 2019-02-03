@@ -8,6 +8,7 @@ $('#carousel-example-generic').on('slid.bs.carousel', function() {
 
     if(currentIndex===1) {
         $('#perso').removeClass('translate');
+        $('#svga1').hide();
     }
 
     if(currentIndex===2) {
@@ -39,15 +40,19 @@ $('#carousel-example-generic').on('slid.bs.carousel', function() {
         },7000); //7000
 
         $('.boutons').addClass('animated fadeIn');
-
+        $('#svga1').hide();
     }
 
     if(currentIndex===3){
         $('#perso').hide();
         $('#voiture').hide();
+        $('#svga1').hide();
     }
 
     if(currentIndex===4){
+        $('#perso').hide();
+        $('#perso3').hide();
+        $('#voiture').hide();
         $('.svg-container').show();
     }
 
