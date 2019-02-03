@@ -1,37 +1,26 @@
 $(function() {
     $('.svg-container').hide();
+    $('#voiture-gif').hide();
+    $('#nuage').hide();
+    $('.fond').hide();
+    $('#next').hide();
     $('#perso2').hide();
+    $('#perso3').hide();
+    $('.questions').hide();
     $('.reponses').hide();
     $('.remarques').hide();
     $('.nextQ').hide();
     $('#q2').hide();
     $('#q3').hide();
+    $('#r2').hide();
+    $('#r3').hide();
 
-
-    $('#boutonOui').on('click',
-        function() {
-            $('.boutons').hide();
-            $('.reponses').show();
-            $('.remarques').show();
-            $('#remarque2-q1').hide();
-            $('.nextQ').show();
-        },
-    );
-
-    $('#boutonNon').on('click',
-        function() {
-            $('.boutons').hide();
-            $('.reponses').show();
-            $('.remarques').show();
-            $('#remarque1-q1').hide();
-            $('.nextQ').show();
-        },
-    );
 
     $('#chauffage').on('click',
         function() {
             $('.boutons').hide();
             $('.reponses').show();
+            $('#r1-q2').hide();
             $('.remarques').show();
             $('#remarque1-q2').hide();
             $('.nextQ').show();
@@ -42,6 +31,7 @@ $(function() {
         function() {
             $('.boutons').hide();
             $('.reponses').show();
+            $('#r1-q2').hide();
             $('.remarques').show();
             $('#remarque1-q2').hide();
             $('.nextQ').show();
@@ -52,6 +42,7 @@ $(function() {
         function() {
             $('.boutons').hide();
             $('.reponses').show();
+            $('#r1-q2').hide();
             $('.remarques').show();
             $('#remarque1-q2').hide();
             $('.nextQ').show();
@@ -62,6 +53,7 @@ $(function() {
         function() {
             $('.boutons').hide();
             $('.reponses').show();
+            $('#r2-q2').hide();
             $('.remarques').show();
             $('#remarque2-q2').hide();
             $('.nextQ').show();
@@ -121,4 +113,8 @@ $(function() {
             $('.boutons').show();
         });
 
+    $('#next').on('click',
+        function () {
+            $('#carousel-example-generic').carousel('next');
+        });
 });
