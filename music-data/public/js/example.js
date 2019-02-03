@@ -402,7 +402,7 @@ function AfficherCursseur(zone,data)
   var dataactuelle;
 let rowData = {};
 $('#selectcontry').append('<select id="cars" size="2" multiple>');
-for(var i=0;i<tabGenresmusicaux.length;i++)
+/*for(var i=0;i<tabGenresmusicaux.length;i++)
 {
   if(i < (tabGenresmusicaux.length-1))
   {
@@ -416,7 +416,8 @@ for(var i=0;i<tabGenresmusicaux.length;i++)
 
 
   }
-  }
+
+}*/
 
 
 
