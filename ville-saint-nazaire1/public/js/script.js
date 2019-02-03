@@ -285,10 +285,15 @@ function modif_radio(){
       .then(function(value){
         var minutes = value[numero]["temps_en_min"] % 60;
         var heures = Math.trunc(value[numero]["temps_en_min"] / 60);
+        var pdf = value[numero]["pdf"];
         document.getElementById("nom_circuit").innerHTML = value[numero]["nom"];
         document.getElementById("kilometre_temps").innerHTML = value[numero]["distance_en_km"] + "km  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + heures + "H" + minutes;
         document.getElementById("description").innerHTML = value[numero]["description"];
         document.getElementById("text_avant_pdf").innerHTML = "Ce parcours vous plaît ? Vous pouvez télécharger sa feuille de route :";
+        document.getElementById("lien_pdf").innerHTML = '<img id="bouton_pdf" src="img/circuits/Bouton_telecharger.png"  alt="lien vers pdf"/>';
+        document.getElementById("bouton_pdf").addEventListener("click", function(){
+          window.open(pdf);
+        })
 
       })
     }

@@ -93,43 +93,41 @@
 				<span id="texte_leon_circuit2" class="texte_leon_classe" ></span>
 				<br/>
 
-				<div id = "liste_parcours">
-
-				</div>
+				<div id = "liste_parcours"></div>
+				
 				<br/>
 				<span id="texte_parcours"> Quelles informations souhaitez-vous faire apparaitre sur la carte ? </span><br/>
 				<div id="lieux" >
-				<div class="checkbox_lieu">
-					<input class="css-checkbox lrg" type="checkbox" id="Wifi-checkbox" name="hotspot" value="checkbox" onchange="modif_checkbox('Wifi')">
-					<label class="css-label vlad lrg" for="Wifi-checkbox"> Wi-fi </label>
-				</div>
+					<div class="checkbox_lieu">
+						<input class="css-checkbox lrg" type="checkbox" id="Wifi-checkbox" name="hotspot" value="checkbox" onchange="modif_checkbox('Wifi')">
+						<label class="css-label vlad lrg" for="Wifi-checkbox"> Wi-fi </label>
+					</div>
 
-				<div class="checkbox_lieu">
-					<input class="css-checkbox lrg" type="checkbox" id="Bar-checkbox" name="bars" value="checkbox" onchange="modif_checkbox('Bar')">
-					<label class="css-label vlad lrg" for="Bar-checkbox"> Bars / Cafés </label>
-				</div>
+					<div class="checkbox_lieu">
+						<input class="css-checkbox lrg" type="checkbox" id="Bar-checkbox" name="bars" value="checkbox" onchange="modif_checkbox('Bar')">
+						<label class="css-label vlad lrg" for="Bar-checkbox"> Bars / Cafés </label>
+					</div>
 
-				<div class="checkbox_lieu">
-					<input class="css-checkbox lrg" type="checkbox" id="Point_dinteret-checkbox" name="culturels" value="checkbox" onchange="modif_checkbox('Point_dinteret')">
-					<label class="css-label vlad lrg" for="Point_dinteret-checkbox"> Points culturels </label>
-				</div>
+					<div class="checkbox_lieu">
+						<input class="css-checkbox lrg" type="checkbox" id="Point_dinteret-checkbox" name="culturels" value="checkbox" onchange="modif_checkbox('Point_dinteret')">
+						<label class="css-label vlad lrg" for="Point_dinteret-checkbox"> Points culturels </label>
+					</div>
 
-				<div class="checkbox_lieu">
-					<input class="css-checkbox lrg" type="checkbox" id="Toilettes-checkbox" name="toilettes" value="checkbox" onchange="modif_checkbox('Toilettes')">
-					<label class="css-label vlad lrg" for="Toilettes-checkbox"> Toilettes publiques </label>
-				</div>
+					<div class="checkbox_lieu">
+						<input class="css-checkbox lrg" type="checkbox" id="Toilettes-checkbox" name="toilettes" value="checkbox" onchange="modif_checkbox('Toilettes')">
+						<label class="css-label vlad lrg" for="Toilettes-checkbox"> Toilettes publiques </label>
+					</div>
 
-				<div class="checkbox_lieu">
-					<input class="css-checkbox lrg" type="checkbox" id="Monument-checkbox" name="office" value="checkbox" onchange="modif_checkbox('Monument')">
-					<label class="css-label vlad lrg" for="Monument-checkbox"> Monuments </label>
-				</div>
+					<div class="checkbox_lieu">
+						<input class="css-checkbox lrg" type="checkbox" id="Monument-checkbox" name="office" value="checkbox" onchange="modif_checkbox('Monument')">
+						<label class="css-label vlad lrg" for="Monument-checkbox"> Monuments </label>
+					</div>
 
-				<div class="checkbox_lieu">
-					<input class="css-checkbox lrg" type="checkbox" id="Restau-checkbox" name="restaurants" value="checkbox" onchange="modif_checkbox('Restau')">
-					<label class="css-label vlad lrg" for="Restau-checkbox"> Restaurants </label>
+					<div class="checkbox_lieu">
+						<input class="css-checkbox lrg" type="checkbox" id="Restau-checkbox" name="restaurants" value="checkbox" onchange="modif_checkbox('Restau')">
+						<label class="css-label vlad lrg" for="Restau-checkbox"> Restaurants </label>
+					</div>
 				</div>
-
-			</div>
 
 				<img id="leon_carte" src="img/slider/leon_velo_moyen.png" alt="leon le cameleon"/>
 				<img id="socle_carte" src="img/slider/socle_musee.png"  alt="socle carte"/>
@@ -145,6 +143,9 @@
 				<div id="text_avant_pdf"> </div><br/>
 				<div id="lien_pdf"> </div><br/>
 			</fieldset>
+
+			<button id="bouton_credits" class="bouton" onclick="credits()" type="button"> SUIVANT </button>
+
 		</div>
 
 		<!-- Ecran 4 -->
@@ -152,8 +153,7 @@
 			<img id="fond_image" src="img/fond_image.png">
 
 		</div>
-
-
+		
 	</div>
 </body>
 </meta>

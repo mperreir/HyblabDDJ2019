@@ -5,6 +5,7 @@
     "temps_en_min": 210,
     "description": "Du site de la Belle Fontaine, le circuit pénètre directement dans ce milieu sauvage si caractéristique du marais briéron par sa vaste étendue de canaux, de mares et de roseaux.",
     "theme": ["forêt / nature"],
+    "pdf":"https://www.labaule-guerande.com/download?t=prestataire&id=1572729&ext=.pdf",
     "numero": 1
   },
   {
@@ -13,6 +14,7 @@
     "temps_en_min": 80,
     "description": "Du port de Tréhiguier, haut-lieu de la mytiliculture, accroché à l’estuaire de la Vilaine, vousdécouvrirez ensuite les dunes de Ménard, îlots de sable sauvage où règne une grande tranquillité.",
     "theme": ["forêt / nature"],
+    "pdf":"https://www.labaule-guerande.com/download?t=prestataire&id=1572729&ext=.pdf",
     "numero": 2
   },
   {
@@ -21,6 +23,7 @@
     "temps_en_min": 75,
     "description": "Territoire d’eaux, la Presqu’île de Guérande vous offre ici une balade insolite, vous menant des marais de Brière aux marais salants, ouvrant sur l’océan Atlantique.",
     "theme": ["plage / bord de mer", "forêt / nature"],
+    "pdf":"https://www.labaule-guerande.com/download?t=prestataire&id=1572729&ext=.pdf",
     "numero": 3
   },
   {
@@ -29,6 +32,7 @@
     "temps_en_min": 50,
     "description": "Avant de quitter Guérande, êtes-vous sûr d’avoir découvert toutes ses facettes ? Ses petites rues médiévales invitent à la balade, profitez-en !",
     "theme": ["plage / bord de mer", "forêt / nature"],
+    "pdf":"https://www.labaule-guerande.com/download?t=prestataire&id=1572729&ext=.pdf",
     "numero": 4
   },
   {
@@ -46,6 +50,7 @@
     "temps_en_min": 270,
     "description": "Ce circuit reflète les atouts de Pornichet : une ville bleue avec l’océan et une ville verte avec la nature. La diversité du circuit permet aux randonneurs d’apprécier les différents paysages mais aussi de s’imprégner de leur ambiance.",
     "theme": ["plage / bord de mer", "forêt / nature"],
+    "pdf":"https://www.labaule-guerande.com/download?t=prestataire&id=1572729&ext=.pdf",
     "numero": 6
   },
   {
@@ -54,6 +59,7 @@
     "temps_en_min": 88,
     "description": "De Berné jusqu'à St Nazaire, en passant par l’impressionnante raffinerie de Donges, découvrez les chantiers naval et pour terminer dans le centre de St Nazaire et sa magnifique église.",
     "theme": ["plage / bord de mer", "musée / culturel"],
+    "pdf":"https://www.labaule-guerande.com/download?t=prestataire&id=1572729&ext=.pdf",
     "numero": 7
   },
   {
@@ -62,6 +68,7 @@
     "temps_en_min": 80,
     "description": "Parcourez les bords de mer de St Nazaire, et découvrez son patrimoine. Vous y trouverez de nombreux théâtres et salles de spectacle ainsi que des cafés culturels.",
     "theme": ["plage / bord de mer", "musée / culturel"],
+    "pdf":"https://www.labaule-guerande.com/download?t=prestataire&id=1572729&ext=.pdf",
     "numero": 8
   },
   {
@@ -70,6 +77,7 @@
     "temps_en_min":100,
     "description": "Visitez le centre de St Nazaire et voyagez à travers le temps au milieu des blockhaus, phares et des musées sur l’histoire maritime.",
     "theme": ["plage / bord de mer", "musée / culturel"],
+    "pdf":"https://www.labaule-guerande.com/download?t=prestataire&id=1572729&ext=.pdf",
     "numero": 9
   }
 ]
