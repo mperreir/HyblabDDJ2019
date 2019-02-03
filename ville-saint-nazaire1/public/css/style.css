@@ -77,30 +77,35 @@ body{
   position: absolute;
 }
 
-#bulle_presentation{
+.bulle{
   height: 20vh;
   width: 30vw;
-  top: 20vh;
-  left: 40vw;
+  left: 38vw;
   position: absolute;
 }
 
-.oval{
-  height: 2vh;
-  width: 2vw;
+#bulle_presentation{top: 18vh;}
 
+#bulle_presentation2{
+  top: 45vh;
+  display:none;
 }
 
-#oval1{
-  top : 41vh;
-  left: 54vw;
+.reponse{
+  height: 5vh;
+  width: 10vw;
   position: absolute;
 }
 
-#oval2{
-  top : 41vh;
-  left: 56vw;
-  position: absolute;
+#reponse1{
+  top: 39vh;
+  left: 59vw;
+}
+
+#reponse2{
+  top: 66vh;
+  left: 59vw;
+  display:none;
 }
 
 #bouton_presentation{
@@ -328,9 +333,10 @@ input[type=range]::-ms-fill-lower {
     float:right;
     font-size: 12px;
     text-transform: uppercase;
-    font-family: "Source Sans Pro";
+    font-family: 'Lato';
     line-height: 12px;
     cursor: pointer;
+    font-weight: 300;
 }
 
 .range-labels-dist li {width:22%; left:8.5%;}

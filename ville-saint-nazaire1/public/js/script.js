@@ -33,12 +33,9 @@ async function en_avant_toute(){
   document.getElementById("leon_mov").play();
 
 }
-
 function d_accord(){
-  document.getElementById("oval1").setAttribute("src", "img/ecran2/oval_non_actif.svg");
-  document.getElementById("oval2").setAttribute("src", "img/ecran2/oval_actif.svg");
-  document.getElementById("bulle_presentation").setAttribute("src", "img/ecran2/bulle_2.png");
-  document.getElementById("bouton_presentation").setAttribute("onclick", "curseurs()");
+  document.getElementById("bulle_presentation2").style.display="block";
+  document.getElementById("reponse2").style.display="block";
 }
 
 function curseurs(){
@@ -102,6 +99,7 @@ function c_est_parti(){
   // Certains elements de la carte bug, on les enleve
   document.getElementsByClassName("cls-5112")[0].style.display="none";
   document.getElementsByClassName("cls-5101")[0].style.display="none";
+  document.getElementsByClassName("cls-5097")[0].style.display="none";
   document.getElementsByClassName("cls-5103")[0].style.display="none";
   document.getElementsByClassName("cls-5104")[0].style.display="none";
   document.getElementsByClassName("cls-5115")[0].style.display="none";
