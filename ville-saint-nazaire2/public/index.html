@@ -31,8 +31,9 @@
           <p class="titre_slide1">quelles économies feriez-vous</p>
           <p class="titre_slide1">en optant pour le vélo?</p>
         </div>
-        <img src="img/frise_trajet5.png" class="frise_trajet2 row pull-right">
-
+        <div  class=" row">
+        <img src="img/frise_trajet5.png" class="col frise_trajet2 pull-right">
+        </div>
       </div>
 
     </section>
@@ -40,11 +41,15 @@
       
       <div class="wow  fadeInRight redcontainer container-fluid">
         <p class="titrepage row">Glisser le curseur et choisissez la distance correspondant à votre trajet:</p>
-        
-        <img src="img/frise_trajet.png " class="frise_trajet row pull-right">
+
+
         <div class="slidecontainer row">
           <input type="range" min="1" max="30" value="15" class="slider" id="myRange">
           <p class="km_text"><span id="demo"></span>Km</p>
+        </div>
+        <div class="row">
+          <div class="col-md-6"></div>
+          <img src="img/frise_trajet.png " class="frise_trajet col-md-7">
         </div>
         <script>
           var slider = document.getElementById("myRange");
