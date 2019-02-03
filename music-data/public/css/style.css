@@ -189,7 +189,7 @@ header {
   margin-right: 10px;
 
 	border-radius: 13.51px;
-	background-color: grey;
+	background-color: #374240;;
   color: white;
 }
 .rectangle-path2 {
@@ -200,7 +200,7 @@ header {
   margin-right: 10px;
 
 	border-radius: 13.51px;
-	background-color: grey;
+	background-color: #374240;;
   color: white;
 }
 .rectangle-path3 {
@@ -211,9 +211,21 @@ header {
   margin-right: 10px;
 
 	border-radius: 13.51px;
-	background-color: grey;
+	background-color: #374240;
   color: white;
 }
+.rectangle-path4 {
+  display: inline-block;
+	height: 51.74px;
+	width: 165px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+	border-radius: 13.51px;
+	background-color:151515 ;
+  color: white;
+}
+
 .slidecontainer{
 
 }
@@ -238,7 +250,11 @@ header {
     margin-inline-start: 2px;
     margin-inline-end: 2px;
 }
-#selectcontry {
+.selectcontry {
+  display: inline-block;
+
+}
+.slidecontainer{
   display: inline-block;
 
 }
@@ -249,6 +265,17 @@ select{
   margin-right: 10px;
 
   border-radius: 13.51px;
-  background-color: grey;
+  background-color: #374240;;
   color: white;
 }
+#menu{
+  margin-top: 10px;
+  margin-bottom: 15px;
+
+}
+#bloginformations{
+  	box-sizing: border-box;
+  	height: 80px;
+    width: 200.21px;
+    border: 2.21px solid #2AF194;
+    border-radius: 17.66px;
