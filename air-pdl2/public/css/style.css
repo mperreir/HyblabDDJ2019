@@ -331,27 +331,36 @@ section {
     background-size:contain;
 }
 
+
 #rural{
     position: relative;
-    left: 18%;
-    top: 38%;
+    background-color: rgba(108, 255, 108, 0);
+    left: 24.5%;
+    top: 36%;
+    width: 15%;
+    height: 34%;
 }
 
-#image-rural{
-    height:300px;
-}
 
 #ville{
-    position: relative;
-    left:30%;
-    top: 38%;
+    position: absolute;
+    background-color: rgba(111, 255, 111, 0);
+    left: 43%;
+    top: 34%;
+    width: 15%;
+    height: 34%;
 }
 
 #trafic{
-    position: relative;
-    left:42%;
+    position: absolute;
+    background-color: rgba(109, 255, 109, 0);
+    left: 61.5%;
     top: 38%;
+    width: 15%;
+    height: 34%;
 }
+
+
 
 #perso {
     position: absolute;
@@ -487,10 +496,13 @@ section {
     }
 }
 
-
+#retu,#retu2,#retu3{
+    float: left;
+}
 #r{
-    background:url(../img/rural_j.png) no-repeat center;
-    background-size: contain;
+    background:url(../img/RuralJour31janvier@2x.png) no-repeat center;
+    height:100%;
+    background-size: cover;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -ms-transition: all .5s;
@@ -498,8 +510,9 @@ section {
     transition: all .5s;
 }
 #ur{
-    background:url(../img/urban_j.png) no-repeat center;
-    background-size:contain;
+    background:url(../img/urban_jb.png) no-repeat center;
+    height:100%;
+    background-size:cover;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -ms-transition: all .5s;
@@ -507,8 +520,8 @@ section {
     transition: all .5s;
 }
 #tr{
-    background:url(../img/traffic_j.png) no-repeat center;
-    background-size:contain;
+    background:url(../img/TraficJour29janvier@2x.png) no-repeat center;
+    background-size:cover;
     height:100%;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -516,19 +529,19 @@ section {
     -o-transition: all .5s;
     transition: all .5s;
 }
-
 #myR,#myR2,#myR3{
     position: relative;
-    left:25%;
-    top:16%;
+    left:15%;
+    top:27%;
+    z-index: 4;
 }
 #myRange,#myRange2,#myRange3{
     alignment: top;
 }
 #value,#value2,#value3{
     position: relative;
-    color: #0c0524;
-    top:40%;
+    color: #f9f00e;
+    top:45%;
     float:right;
 }
 
@@ -536,31 +549,32 @@ section {
     position:relative;
     left:60%;
     height:60%;
-    width:20%;
+    width:30%;
 }
 
 .progress {
     width: 90%;
-    height:5%;
+    height:10%;
     top:40%;
     position: relative;
     background-color: rgba(255,255,255,0);
-    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(+90deg); /* Chrome, Safari, Opera */
+    transform: rotate(+90deg);
 }
+
 .progress-bar {
     width: 100%;
     display: block;
     overflow: hidden;
     height: 30px;
     margin:0 auto;
+    border: rgba(253,255,251,0);
     line-height: 12px;
     background: #fafafa;
-    border-radius: 4px;
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
-    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
-    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent 60%);
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, #ac125b, #dadc38);
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -moz-linear-gradient(left, #ac125b, #dadc38);
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -o-linear-gradient(left, #ac125b, #dadc38);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), linear-gradient(to right, #ac125b, #dadc38);
     -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.6);
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.6);
     position: relative;
@@ -570,18 +584,25 @@ section {
     display: block;
     min-width: 8px;
     height: 30px;
-    background: #c54050;
-    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, #dadc38, #ac125b);
-    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -moz-linear-gradient(left, #dadc38, #ac125b);
-    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -o-linear-gradient(left, #dadc38, #ac125b);
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), linear-gradient(to right, #dadc38, #ac125b);
-    border-radius: 10px;
+    background: #fafafa;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent 60%);
     -webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 1px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
-
 .svga1Button{
     position: absolute;
     right:0;
-    top:50%;
+    top:30%;
+}
+#attention{
+    position:absolute;
+    top:95%;
+    width:30px;
+    height:30px;
+    left: 96%;
+    background: url(../img/BOUTON_INFO_SOURCE_JOUR@2x.png) no-repeat left;
+    background-size:contain;
 }

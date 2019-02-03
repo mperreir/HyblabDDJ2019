@@ -9,7 +9,7 @@
     <style>
         .svg-container {
             border-radius: 4px;
-            background-color: #fff;
+            background-color: #ff1a0e;
         }
 
         .launch {
@@ -35,7 +35,12 @@
     <div id="svga1" class="svg-container">
         <button id="svga1Button"  type="button">Exécuter</button>
     </div>
-
+    <a onmouseover="javascript:showImg('a1')"; onmouseout="javascript:hideImg('a1')";></a>
+<a id="m" onmouseover="showImg('')"; onmouseout="hideImg()"
+    <script type="text/javascript">
+        function showImg(imgid){ document.getElementById(imgid).style.display = "block"; }
+        function hideImg(imgid){ document.getElementById(imgid).style.display = "none"; }
+    </script>
     <script type="text/javascript">
         var initi=[];
         var myru=[];

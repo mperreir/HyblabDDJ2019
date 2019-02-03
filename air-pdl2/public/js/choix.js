@@ -5,7 +5,7 @@ var passageTraffic = false;
 $('#rural').on('click',
     function () {
         passageRural = true;
-        $('#carousel-example-generic').carousel('next');
+        $('#carousel-example-generic').carousel(3);
     });
 
 $('#ville').on('click',
@@ -22,7 +22,7 @@ $('#trafic').on('click',
 
 $('.button').on('click',
     function () {
-            $('#carousel-example-generic').carousel(2);
+        $('#carousel-example-generic').carousel(2);
     });
 
 $('.svga1Button').on('click',
