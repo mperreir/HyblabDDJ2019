@@ -548,6 +548,8 @@ input[type=range]::-ms-fill-lower {
 /* Page des crédits */
 
 #page_credits{
+  height:100vh;
+  width:100vw;
   position: absolute;
   display: none;
   width:100vw;
@@ -563,42 +565,95 @@ input[type=range]::-ms-fill-lower {
   z-index:1;
 }
 
-#rect_gauche{
-  position:absolute;
+.credits_rectangle{
   border-radius: 20px;
   background-color: #ffffff;
+  border:2px solid black;
   color:#4e687f;
-
+ 
   top:4vh;
   bottom:4vh;
+  height: 91vh;
+  position:absolute;
+}
 
+#rect_gauche{
   left:8vw;
   width:61vw;
-  height:91vh;
-  z-index:3;
-
-  border-radius: 50px;
-  border:3px solid black;
+  z-index:2;
 }
 
 #rect_droite{
-  position:absolute;
-  border-radius: 20px;
-  background-color: #ffffff;
-  color:#4e687f;
-  text-align: center;
-  float:right;
-  top:4vh;
-  bottom:4vh;
-
+  right: 8vw;
   width:21vw;
-  right:8vw;
-  height:91vh;
   z-index:2;
-
-  border-radius: 50px;
-  border:3px solid black;
 }
+
+/* Dans le rectangle de droite */
+
+#logo{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.credits_logo{
+  position: relative;
+  height: auto;
+  max-width: 80%;
+  height: 10%;
+}
+
+#logo_hyblab{
+  top:2%;
+  width: 80%;
+  height: auto;
+  z-index: 3;
+}
+#logo_audencia{
+  top:3%;
+  width: 90%;
+  height: auto;
+  z-index: 2;
+}
+
+#logo_polytech{
+  top:3%;
+  width: 90%;
+  height: auto;
+}
+
+#logo_agr{
+  top: 3%;
+  width: 50%;
+  height: auto;
+}
+
+#credits_noms{
+  margin-right: auto;
+  margin-left: auto;
+  top: 58%;
+  left:5%;
+  right:5%;
+  position: absolute;
+  color:red;
+}
+
+#credits_sources{
+  margin-right: auto;
+  margin-left: auto;
+  top:68%;
+  left:5%;
+  right:5%;
+  position: absolute;
+}
+
+ul{
+  list-style-type: none;
+}
+
+/* Dans le rectangle de gauche */
 
 #bouton_retour2{
   top:10vh;
@@ -624,6 +679,7 @@ input[type=range]::-ms-fill-lower {
   width:17vw;
   z-index:2;
 }
+
 #logo_st_naz{
   height:13vh;
   width:17vw;
@@ -646,7 +702,6 @@ input[type=range]::-ms-fill-lower {
   float:right;
 }
 
-
 #bas_gauche{
   position:absolute;
   width:90%;
@@ -667,7 +722,6 @@ input[type=range]::-ms-fill-lower {
   top:30%;
   width:60%;
   float:right;
-
 }
 
 #reseaux{
