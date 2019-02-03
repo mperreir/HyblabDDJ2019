@@ -3,7 +3,14 @@ function finVideo1(){
   console.log("fin video 1");
   showButton();
 }
-
+function valider_curseur(){
+  console.log('leeeelo');
+  $('#curseurCampagne').prop("disabled",true);
+  $('#curseurCampagne').val(16).change();
+  $('#curseurCampagne').rangeslider('update');
+  var legende = document.getElementById('reponse_ville');
+  legende.style.visibility = 'visible';
+}
 function dessinerParticule(canvas, nombre){
   var canvas = document.getElementById(canvas);
   var contexte = canvas.getContext('2d');
@@ -132,12 +139,12 @@ function mouvementCurseur(p,v){
         polyfill: false,
 
         onInit: function(){
-          $('#concentrationCampagne').html('0 µg/mol');
+          $('#concentrationCampagne').html('0 µmol/m3');
         },
         // Callback function
         onSlide: function(position, value) {
           console.log('position : ', position);
-          $('#concentrationCampagne').html(value + ' µg/mol');
+          $('#concentrationCampagne').html(value + ' µmol/m3');
           dessinerParticule('canvasCampagne',value);
         },
         // Callback function
