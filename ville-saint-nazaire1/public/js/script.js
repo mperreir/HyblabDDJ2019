@@ -1,6 +1,5 @@
 'use strict';
 
-
 var mySVGsToInject = document.querySelectorAll('.circuit');
 var mySVGsToInject2 = document.querySelectorAll('#reseaux');
 
@@ -8,6 +7,7 @@ SVGInjector(mySVGsToInject, null, function(){
   $("#bouton_accueil").fadeIn();
 });
 SVGInjector(mySVGsToInject2);
+
 
 // infos sur les circuits
 var liste_infos_circuit = charger_donnees('nom-circuit-info');
