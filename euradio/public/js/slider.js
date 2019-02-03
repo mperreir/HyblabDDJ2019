@@ -33,8 +33,9 @@ function changer_radio(xPos){
 
 
   if(!hasChanged){
-    var valeur = parseInt(((xPos - xPosOrigin)/31))+7; //Valeur réelle
+    var valeur = parseInt(((xPos - xPosOrigin)/31))+9; //Valeur réelle
     $( "#nomRadio" ).text(radios[valeur]);
+    console.log((valeur));
     valeurRadio = valeur%10+1;
     valeurMusique = valeur%16+1;
     document.getElementById('imgBackground').src="img/RadioFm/Radiofm_fréquence_"+valeurRadio+".png";
@@ -43,8 +44,8 @@ function changer_radio(xPos){
     x.load();
     x.play();
   }else{
-    var valeur = parseInt(((xPos - xPosOrigin)/31))+12; //Valeur réelle
-    console.log((valeur));
+    var valeur = parseInt(((xPos - xPosOrigin)/42))+12; //Valeur réelle
+    //console.log((valeur));
     $( "#nomRadio" ).text(dab[valeur]);
     valeurRadio = valeur%7+1;
     valeurMusique = valeur%5+1;
@@ -54,9 +55,12 @@ function changer_radio(xPos){
     x.play();
   }
 
-  if( !hasChanged &&valeur >13){
+  if( !hasChanged &&valeur >17){
     hasChanged =true;
     document.getElementById("souffle").src = "";
+    $( "#draggable" ).draggable({
+      grid: [ 44, 20 ]
+    });
     //document.getElementById('imgBackground').src="img/rntradioRNT.png";
 
     //document.getElementById('conteneurRadio').style.width= "40%";
@@ -67,13 +71,19 @@ function changer_radio(xPos){
     $('#titre12').text("aussi appelé DAB+");
     document.getElementById('sliderBackground').style.display="none";
     document.getElementById('sliderBackground2').style.display="inline-block";
-    document.getElementById('partie').style.marginLeft="11%";
-    document.getElementById('partie').style.width="100%";
+    document.getElementById('partie').style.marginLeft="8%";
+    document.getElementById('partie').style.width="107%";
     document.getElementById('draggable').style.width="5%";
     document.getElementById('partie').style.marginTop="1.7%";
     //document.getElementById('imgBackground').marginRight="5px";
     $('#conteneurLigne').append('<p class="phraseTransition">Et pour vous, ça change quoi ?</p>')
-
+    var valeur = parseInt(((xPos - xPosOrigin)/42))+12; //Valeur réelle
+    //console.log((valeur));
+    $( "#nomRadio" ).text(dab[valeur]);
+    valeurRadio = valeur%7+1;
+    valeurMusique = valeur%5+1;
+    document.getElementById('imgBackground').src="img/RadioRnt/Radiornt_img_"+valeurRadio+".png";
+    document.getElementById('musique').src="musiques/hyblablfm_"+valeurMusique+".wav";
 
     //document.getElementById('nomRadio').style.top="65%";
     //document.getElementById('nomRadio').style.left="50%";
