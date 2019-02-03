@@ -129,15 +129,6 @@ body{
   z-index:1;
 }
 
-
-#img_fond_2, #img_fond_3{
-  position:relative;
-  height:99vh;
-  width:auto;
-  z-index:1;
-}
-
-
 /* Page Personnalisation */
 #page_personnalisation{
   background-repeat:no-repeat;
@@ -519,7 +510,7 @@ input[type=range]::-ms-fill-lower {
 
 #kilometre_temps{
   margin-left:1.5vw;
-	color: #02A7AC;
+  color: #02A7AC;
   font-family: 'Lato';
   font-size: 24px;
   font-weight: bold;
@@ -534,43 +525,6 @@ input[type=range]::-ms-fill-lower {
   text-align: left;
 }
 
-<<<<<<< HEAD
-#fond_image{
-  top: 0%;
-  left: auto;
-  height: 100vh;
-  width: auto;
-}
-
-#rect_gauche{
-  border-radius: 20px;
-  background-color: #ffffff;
-  color:#4e687f;
-
-  top:30px;
-  bottom:30px;
-
-  left:2%;
-  width:70%;
-  position:relative;
-
-}
-
-#rect_droite{
-  border-radius: 20px;
-  background-color: #ffffff;
-  color:#4e687f;
-  text-align: center;
-
-  top:30px;
-  bottom:30px;
-  
-  width:24%;
-  right: 2%;
-  position:relative;
-
-}
-=======
 #bouton_pdf{
   margin-left:1.5vw;
   width:80%;
@@ -590,4 +544,55 @@ input[type=range]::-ms-fill-lower {
   width: 110px;
   font-size: 16px;
 }
->>>>>>> f185b3273b5b91525032ef269f9eee7532c4b616
+
+
+/* Page des crédits */
+
+#page_credits{
+  position: absolute;
+  display: none;
+}
+
+#fond_image{
+  position:relative;
+  height:99vh;
+  width:auto;
+  z-index:1;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#rect_gauche{
+  border-radius: 20px;
+  background-color: #ffffff;
+  color:#4e687f;
+
+  top:30px;
+  bottom:30px;
+
+  left:2%;
+  width:70%;
+  position:relative;
+}
+
+#rect_droite{
+  border-radius: 20px;
+  background-color: #ffffff;
+  color:#4e687f;
+  text-align: center;
+
+  top:30px;
+  bottom:30px;
+  
+  width:24%;
+  right: 2%;
+  position:relative;
+}
+
+/* A supprimer */
+#bouton_backdoor{
+  position: absolute;
+  left:20%;
+  top:20%;
+  z-index: 40;
+}
