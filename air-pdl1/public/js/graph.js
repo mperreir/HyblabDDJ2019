@@ -23,8 +23,8 @@ function Graph(id,width,height)
      }
     
      function drawChart(data) {
-        var svgWidth = 800, svgHeight = 450;
-        var margin = { top: 150, right: 70, bottom: 80, left: 100 };
+        var svgWidth = 800, svgHeight = 550;
+        var margin = { top: 150, right: 70, bottom: 120, left: 100 };
         var width = svgWidth - margin.left - margin.right;
         var height = svgHeight - margin.top - margin.bottom;
         var svg = d3.select('svg')
@@ -110,16 +110,22 @@ function Graph(id,width,height)
                         .attr('height',200 )
                         .attr("x",100)
                         .attr("y",-20)
-                        g.append("g")
-                        .attr("class","value-text")
-                        .append("text")
-                        .attr("fill", "#FFF")
-                        .attr("x", 400)
-                        .attr("y", height+50)
-                        .attr("dy", "0.71em")
-                        .attr("text-anchor", "end")
-                        .text("Lorsque le froid s'installe, l'utilisation du chauffage au bois est démultiplié.La période de l'hiver est donc sujette à produire un taux de particules fines plus élevé que la moyenne.");
-
+                        
+                        var text = svg.append("text")
+						.attr("x",0)
+						.attr("y",height+200)
+						.attr("font-size",20)
+                        .attr("font-family","simsun");
+                        strs = ["   Lorsque le froid s'installe, l'utilisation du chauffage au bois est démultiplié."," La période de l'hiver est donc sujette à produire un taux departicules fines ","    plus élevé que la moyenne."];
+                        text.selectAll("tspan")
+                        .data(strs)
+                        .enter()
+                        .append("tspan")
+                        .attr("x",text.attr("x"))
+                        .attr("dy","1em")
+                        .text(function(d){
+                            return d;
+                        });
                         }else if(i==3){
                             svg.append('image')
                             .attr("class","chart-img")
@@ -128,29 +134,41 @@ function Graph(id,width,height)
                             .attr('y', -30)
                             .attr('width', 200 )
                             .attr('height',200 )
-
-                            g.append("g")
-                            .attr("class","value-text")
-                            .append("text")
-                            .attr("fill", "#FFF")
-                            .attr("x", 0)
-                            .attr("y", height+50)
-                            .attr("dy", "0.71em")
-                            .text("L'arrivée du printemps annonce la saison des épandages pour lès agriculteurs, ce qui participe également à l'augmentation des particules fines.")
-                            .text("ddd");
-                            }
+                            
+                            var text = svg.append("text")
+                            .attr("x",0)
+                            .attr("y",height+200)
+                            .attr("font-size",20)
+                            .attr("font-family","simsun");
+                            strs = ["L'arrivée du printemps annonce la saison des épandages pour lès agriculteurs,"," ce qui participe également à l'augmentation des particules fines."];
+                            text.selectAll("tspan")
+                            .data(strs)
+                            .enter()
+                            .append("tspan")
+                            .attr("x",text.attr("x"))
+                            .attr("dy","1em")
+                            .text(function(d){
+                                return d;
+                            });
+                        }
                             else if(i==8){
-                                g.append("g")
-                            .attr("class","value-text")
-                            .append("text")
-                            .attr("fill", "#FFF")
-                            .attr("x", 400)
-                            .attr("y", height+50)
-                            .attr("dy", "0.71em")
-                            .attr("text-anchor", "end")
-                            .text("Les particules fines sont présentes de manière chronique, c'est à dire tout au long de l'année dans notre quotidien et pas uniquement lors des pics de pollution.");
+                            var text = svg.append("text")
+                            .attr("x",0)
+                            .attr("y",height+200)
+                            .attr("font-size",20)
+                            .attr("font-family","simsun");
+                            strs = ["Les particules fines sont présentes de manière chronique, c'est à dire tout au ","long de l'année dans notre quotidien et pas uniquement lors des pics de"," pollution."];
+                            text.selectAll("tspan")
+                            .data(strs)
+                            .enter()
+                            .append("tspan")
+                            .attr("x",text.attr("x"))
+                            .attr("dy","1em")
+                            .text(function(d){
+                                return d;
+                            });
                             }
-
+                            
                         
                             
                         
@@ -163,6 +181,7 @@ function Graph(id,width,height)
 
                         g.selectAll(".value-text").remove();
                         svg.selectAll(".chart-img").remove();
+                        svg.selectAll("tspan").remove();
                     });
              
         }
