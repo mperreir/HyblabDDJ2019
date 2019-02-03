@@ -45,6 +45,11 @@
   */
 
   .swiper-slide {
+    background: #14114A;
+  }
+
+  
+  #slider5, #slider4 {
     text-align: center;
     font-size: 18px;
     background: #14114A;
@@ -64,6 +69,4 @@
     align-items: center;
   }
 
-  
-  
 
