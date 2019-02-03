@@ -14,47 +14,73 @@ body {
 }
 
 /*---------- Section Introduction 1 -----------*/
-header {
-  text-align: center;
-  /* height: 52px; */
-  /* width: 688.91px; */
-  color: #ffffff;
-  font-family: Montserrat;
-  font-size: 42px;
-  font-weight: 900;
-  line-height: 52px;
-  text-align: center;
+
+.intro-1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
-#introduction1 {
-  /* text-align: center; */
+.intro-1 .illu {
+	height: 65.76%;
+	width: 85.64%;
 }
 
-#wave {
-	height: 34px;
+.bienvenue-sur-music {
+	height: 52px;
+	width: 688.91px;
+	color: #ffffff;
+	font-family: Montserrat;
+	font-size: 42px;
+	font-weight: 900;
+	line-height: 52px;
+	text-align: center;
+  position: absolute;
+  top: 293px;
+  left: 206px;
+}
+
+.notre-plateforme-te {
+	height: 87px;
+	width: 452px;
+	color: #FFFFFF;
+	font-family: Montserrat;
+	font-size: 24px;
+	font-weight: 200;
+	line-height: 29px;
+	text-align: center;
+  position: absolute;
+  top: 385.28px;
+  left: 324.25px;
+  border-top: solid #151515 40.28px;
+}
+
+.shape {
+	box-sizing: border-box;
+	height: 21px;
+	width: 21px;
+	border: 2px solid #00FFFF;
+}
+
+.platine {
+	height: 150px;
+	width: 129px;
+  position: absolute;
+  top: 73.83%;
+  left: 76.91%;
+}
+
+.vague {
+  height: 34px;
   width: 112px;
   position: absolute;
-  top: 191px;
-  left: 179px;
-}
+  top: 24.87%;
+  left: 16.27%;
+};
 
 #goutte {
     height: 89px;
     width: 56px;
-}
-
-.title {
-  height: 52px;
-  width: 688.91px;
-  color: #ffffff;
-  font-family: Montserrat;
-  font-size: 42px;
-  font-weight: 900;
-  line-height: 52px;
-  text-align: center;
-  position: absolute;
-  top: 293px;
-  left: 206px;
 }
 
 .text-intro {
@@ -73,7 +99,7 @@ header {
 
 /* -------- Section introduction 2 ----------- */
 .intro-2 {	height: 100%;	width: 100%; position: "absolute";}
-.illu {	height: 59.77%;	width: 80.55%; position: "absolute"; left: 11.09%; top: 29.17%;}
+.intro-2 .illu {	height: 59.77%;	width: 80.55%; position: "absolute"; left: 11.09%; top: 29.17%;}
 /* -----  images ----- */
 .basse {
 	height: 12.89%;
@@ -146,7 +172,38 @@ header {
   left: 17.44%;
 }
 
-/* Affichage des genres */
+.tu-es-un-profession {
+	height: 7.55%;
+	width: 39.18%;
+	color: #ffffff;
+	font-family: Montserrat;
+	font-size: 39px;
+	font-weight: 900;
+	line-height: 35px;
+	text-align: center;
+  position: absolute;
+  left: 30.36%;
+  top: 35.81%;
+}
+
+.explore-chaque-genre {
+	height: 11.33%;
+	width: 36.02%;
+	font-family: Montserrat;
+	font-size: 24px;
+	font-weight: 200;
+	line-height: 29px;
+	text-align: center;
+  position: absolute;
+  left: 32%;
+  top: 49.48%;
+}
+
+.explore-chaque-genre span {
+  	color: #FF7BAC;
+}
+
+/* Section 3 - Affichage des genres */
 .onde-electronic {
   box-sizing: border-box;
   height: 15.52%;
