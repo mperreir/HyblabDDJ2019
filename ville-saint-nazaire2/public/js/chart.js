@@ -111,7 +111,7 @@ let data = [];
 
               svg.append("g")
               .append("svg:image")
-              .attr("xlink:href", "img/Picto_co2.png")
+              .attr("xlink:href", "img/picto_co2.png")
               .attr("x", -y.rangeBand()/1.15)
               .attr("y", y.rangeBand()/4)
               .attr("width", y.rangeBand())
@@ -127,7 +127,7 @@ let data = [];
 
               svg.append("g")
               .append("svg:image")
-              .attr("xlink:href", "img/picto_calories.png")
+              .attr("xlink:href", "img/Picto_calories.png")
               .attr("x", -y.rangeBand()/1.15)
               .attr("y", 1.3*y.rangeBand())
               .attr("width", y.rangeBand())
