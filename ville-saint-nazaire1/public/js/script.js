@@ -1,10 +1,13 @@
 'use strict';
 
+var mySVGsToInject = document.querySelectorAll('.circuit');
+var mySVGsToInject2 = document.querySelectorAll('#reseaux');
 
-// var mySVGsToInject = document.querySelectorAll('.circuit');
-// SVGInjector(mySVGsToInject, null, function(){
-//   $("#bouton_accueil").fadeIn();
-// });
+SVGInjector(mySVGsToInject, null, function(){
+  $("#bouton_accueil").fadeIn();
+});
+SVGInjector(mySVGsToInject2);
+
 
 // infos sur les circuits
 var liste_infos_circuit = charger_donnees('nom-circuit-info');
@@ -301,13 +304,35 @@ function modif_radio(){
 }
 
 function credits(){
-
-  // A supprimer
-  document.getElementById("accueil").style.display = "none";
-  
-
   document.getElementById("page_carte").style.display = "none";
+  document.getElementById("video_coucou").play();
   document.getElementById("page_credits").style.display = "block";
+
+  document.getElementById("FACEBOOK").addEventListener("click", function(){
+    window.open("https://www.facebook.com/saintnazaire.officiel/");
+  });
+  document.getElementById("FACEBOOK").style.cursor="pointer";
+
+  document.getElementById("TWITTER").addEventListener("click", function(){
+    window.open("https://twitter.com/villestnazaire");
+  });
+  document.getElementById("TWITTER").style.cursor="pointer";
+
+  document.getElementById("INSTAGRAM").addEventListener("click", function(){
+    window.open("https://www.instagram.com/saintnazaireagglo/");
+  })
+  document.getElementById("INSTAGRAM").style.cursor="pointer";
+
+  document.getElementById("louer").addEventListener("click", function(){
+    window.open("https://www.labaule-guerande.com/location-de-velo-bretagne-plein-sud.html");
+  })
+
+
 }
 
+function retour_2(){
+
+  document.getElementById("page_carte").style.display = "block";
+  document.getElementById("page_credits").style.display = "none";
+}
 reset_value_default();
