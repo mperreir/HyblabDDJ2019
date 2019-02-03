@@ -18,7 +18,14 @@
     <link rel="stylesheet" href="css/rangeslider.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sliderQuestion.css">
-
+     <!-- add d3.js -->
+     <script type="text/javascript" src="js/d3.min.js" charset="utf-8"></script>
+     <script type="text/javascript" src="js/d3.js" charset="utf-8"></script>
+    <!-- Simple sample script that loads data from a dummy json file -->
+    
+    <script src="js/example.js" defer></script>
+    <script src="js/slider.js"></script>
+    <script src="js/graph.js"></script>
     <!-- Initialize Swiper -->
 
 		<!-- Those polyfills are required so that old browsers support fetch mecanism
@@ -164,7 +171,7 @@
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           </div>
           <div class="modal-body">
-            <img src="img/modal.svg" width="30%" height="40%">
+            <img src="img/modal.svg" width="300px" height="400px">
             <p class="text-modal">
                 Les particules fines sont également d’origines naturelles : éruptions volcaniques, l’érosion, éolienne naturelle, l’avancée des déserts, les incendies et feux de végétation.
 
@@ -178,9 +185,14 @@
 <!-- ############################################################################# -->
 <!-- ###############################   SLIDER 5   ################################ -->
 <!-- ############################################################################# -->
-      <div id="slider5" class="swiper-slide">
-        <h2>Partie Jiaho</h2>
-      </div>
+<div id="slider5"class="swiper-slide">
+  <div>
+  <p class="comme-evoque-precede" style="font-size: 30px;">Quelle est la quantité de particules fines récoltés au cours des saison?</p>
+  <p style="color: #FF9DB0">(Placer la souris sur les éléments clignotant)</p>
+  <div><svg></svg></div>
+  </div>
+  <p></p>
+</div>
 
 <!-- ############################################################################# -->
 <!-- ###############################   SLIDER 6   ################################ -->
@@ -278,7 +290,11 @@
   <script src="js/swiper.min.js"></script>
   <script src="js/rangeslider.min.js"></script>
   <script src="js/air-pdl1.js"></script>
-
+  <script>
+    Slider();
+    var values=[14,9,10,11.5,0,12.5,16,8.5,3.5,8,12,14.5,1.5,13,14,13,2,8,13.5,8.5,12,8,3.5,11,8,14,15,8,12,10,11,6,13,1,8.5,10.5,13,9,8,14,11,1.5,12,2.5,9,6,10.5,16,9.5,12.5,8,2,20,5.5];
+var test=new Graph('graph',300,100);
+  </script>
 
   </body>
 </html>

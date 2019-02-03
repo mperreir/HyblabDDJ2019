@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr"> <!-- Notre page est en français -->
+  <head>
+    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
+    <meta charset="utf-8">
+    <title>Hyblab 2016</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+		<!-- Basic viewport setting for mobile friendly page -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Déclaration de la feuille de style du document-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/sliderQuestion.css">
+    <!-- add d3.js -->
+    <script type="text/javascript" src="js/d3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/d3.js" charset="utf-8"></script>
+    <!-- Initialize Swiper -->
+    <script src="js/swiper.min.js"></script>
+		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+    <!-- Simple sample script that loads data from a dummy json file -->
+    
+    <script src="js/example.js" defer></script>
+    <script src="js/slider.js"></script>
+    <script src="js/graph.js"></script>
+    <!-- add Bootstrap -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+  
+
+  </head>
+  <body>
+    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
+    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
+    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
+    <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div id="slider1"class="swiper-slide">
+        
+        
+              <video class="slider-video" width="100%" preload="auto" onended="showButton()"  style="visibility: visible; width: 100%;" >
+                <!-- autoplay="" -->
+                <source src="video/un c.mp4" type="video/mp4">
+                  
+              </video>
+              <!-- END VIDEO -->
+        
+        </div>
+        <div id="slider2"class="swiper-slide">
+          <div>
+            <p class="comme-evoque-precede" >Comme évoqué précédemment, les particules fines sont générée par un phénomène de combustion. Outre celles d’origine naturelle (volcans, érosion éolienne, incendie ou feux de végétation), l’émission de PM10 découle aussi de combustions d’origine humaine. 
+                Découvrez les quatres principaux secteurs sources d’émission de PM10 :</p>
+            <div id="wrap">
+            <div>
+            <img id="q1" class="questionMark" src="img/bouton__.svg" onclick="showAnswer(1)">
+            <div id="tq1" class="responseTitle"><p>TRANSPORTS</p></div>
+            <div id="dq1" class="responseText"><p>Comprend les combustibles des véhicules automobiles diesel et essence, mais aussi l’usure des routes, des carrières et chantiers.
+              </p></div>
+            </div>
+            <div>
+            <img id="q2" class="questionMark" src="img/bouton__.svg" onclick="showAnswer(2)">
+            <div id="tq2" class="responseTitle"><p>AGRICULTURE</p></div>
+            <div id="dq2" class="responseText"><p>Pendant les épandages agricoles, les engrais azotés et la présence d'ammoniac pour la fertilisation et l’alimentation animale.
+              </p></div>
+            </div>
+            <div>
+            <img id="q3" class="questionMark" src="img/bouton__.svg" onclick="showAnswer(3)">
+            <div id="tq3" class="responseTitle"><p>RÉSIDENTIEL</p></div>
+            <div id="dq3" class="responseText"><p>Fait référence au chauffage dans les habitations (notamment au bois).
+              </p></div>
+          </div>
+          <div>
+              <img id="q4" class="questionMark" src="img/bouton__.svg" onclick="showAnswer(4)">
+              <div id="tq4" class="responseTitle"><p>INDUSTRIES</p>
+              </div>
+              <div id="dq4" class="responseText"><p>Sont pris en compte, les centrales thermiques, et tout type d’activité industrielle.  (secteur sidérurgique, chaînes d’agglomération de minerai)
+                </p></div>
+            </div>
+            <div>
+              <button class="questionButton" data-toggle="modal" data-target="#myModal"><p class="text-question">?</p></button>
+              
+                <div class="textPlus">Les autres sources
+                </div>
+              </div>
+          </div>
+          <!-- 模态框（Modal） -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+              <div class="modal-body">
+              <img src="img/modal.svg" width="300px" height="400px">
+              <p class="text-modal">
+                  Les particules fines sont également d’origines naturelles : éruptions volcaniques, l’érosion, éolienne naturelle, l’avancée des déserts, les incendies et feux de végétation.
+
+              </p>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+  </div>
+          </div>
+        </div>
+        <div id="slider3"class="swiper-slide">
+          3
+        </div>
+        <div id="slider4"class="swiper-slide">
+          <div>
+          <p class="comme-evoque-precede" style="font-size: 30px;">Quelle est la quantité de particules fines récoltés au cours des saison?</p>
+          <p style="color: #FF9DB0">(Placer la souris sur les éléments clignotant)</p>
+          <div><svg></svg></div>
+          </div>
+          <p></p>
+        </div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Arrows -->
+  <div id="down" class="swiper-button-next"></div>
+  <div id="up"class="swiper-button-prev"></div>
+</div>
+     
+  <script>
+    Slider();
+    var values=[14,9,10,11.5,0,12.5,16,8.5,3.5,8,12,14.5,1.5,13,14,13,2,8,13.5,8.5,12,8,3.5,11,8,14,15,8,12,10,11,6,13,1,8.5,10.5,13,9,8,14,11,1.5,12,2.5,9,6,10.5,16,9.5,12.5,8,2,20,5.5];
+var test=new Graph('graph',300,100);
+  </script>
+  </body>
+</html>

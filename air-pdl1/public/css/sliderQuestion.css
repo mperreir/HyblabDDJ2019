@@ -1,3 +1,4 @@
+
 .questionMark{
     padding: 50px;
     width: 250px;
@@ -111,4 +112,22 @@
 	font-weight: bold;
 	line-height: 21px;
 	text-align: center;
+}
+
+#data{
+	color:#FFFFFF;
+	
+}
+
+svg{
+	stroke: #FFFFFF;
+	color: #0093be;
+	stroke-width: 1.5;
+	
+	font: 30px;
+}
+
+.circle {
+    fill: #FF9DB0;
+    stroke: #fff;
 }
