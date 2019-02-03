@@ -36,6 +36,9 @@ async function en_avant_toute(){
 function d_accord(){
   document.getElementById("bulle_presentation2").style.display="block";
   document.getElementById("reponse2").style.display="block";
+  document.getElementById("reponse1").setAttribute("src", "img/ecran2//Bulle_D_accord.png");
+  document.getElementById("reponse1").style.width="10vw";
+
 }
 
 function curseurs(){
