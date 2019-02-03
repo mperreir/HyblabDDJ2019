@@ -568,9 +568,9 @@ input[type=range]::-ms-fill-lower {
 .credits_rectangle{
   border-radius: 20px;
   background-color: #ffffff;
-  border:2px solid black;
+  border:1px solid grey;
   color:#4e687f;
-
+  box-shadow: 4px 4px 6px #555;
   top:4vh;
   bottom:4vh;
   height: 91vh;
