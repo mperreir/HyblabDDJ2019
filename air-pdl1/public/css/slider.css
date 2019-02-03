@@ -1,6 +1,4 @@
-
-  /*css of slider
-  */
+  /*css of slider*/
   html, body {
     position: relative;
     height: 100%;
@@ -12,10 +10,6 @@
     color:#FFFFFF;
     margin: 0;
     padding: 0;
-  }
-  #realise_par{
-    margin-top: 5%;
-    margin-bottom: 5%;
   }
   .swiper-container {
     width: 100%;
@@ -48,8 +42,8 @@
     background: #14114A;
   }
 
-  
-  #slider5, #slider4 {
+
+  #slider4, #slider5 {
     text-align: center;
     font-size: 18px;
     background: #14114A;
@@ -68,5 +62,10 @@
     -webkit-align-items: center;
     align-items: center;
   }
-
-
+#slider4 h2, #slider5 h2{
+  margin-top:2%;
+}
+#slider4 h4, #slider5 h4{
+  margin-top:0%;
+  margin-bottom: 0%;
+}

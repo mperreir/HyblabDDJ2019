@@ -3,13 +3,11 @@
   <head>
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
     <meta charset="utf-8">
-    <title>Hyblab Alex</title>
+    <title>Air-pdl1</title>
     <!-- Link Swiper's CSS -->
 
 		<!-- Basic viewport setting for mobile friendly page -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
     <!-- Déclaration de la feuille de style du document-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -18,13 +16,8 @@
     <link rel="stylesheet" href="css/rangeslider.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sliderQuestion.css">
-     <!-- add d3.js -->
-     <script type="text/javascript" src="js/d3.min.js" charset="utf-8"></script>
-     <script type="text/javascript" src="js/d3.js" charset="utf-8"></script>
     <!-- Simple sample script that loads data from a dummy json file -->
-    
-    <script src="js/example.js" defer></script>
-    <script src="js/slider.js"></script>
+
     <script src="js/graph.js"></script>
     <!-- Initialize Swiper -->
 
@@ -37,7 +30,7 @@
   </head>
   <body>
       <swiper class="swiper swiper-no-swiping" :options="swiperOption" ref="mySwiper">
-        
+
     <div class="swiper-container">
     <div class="swiper-wrapper">
 <!-- ############################################################################# -->
@@ -189,8 +182,8 @@
 <!-- ############################################################################# -->
 <div id="slider5"class="swiper-slide">
   <div>
-  <p class="comme-evoque-precede" style="font-size: 30px;">Quelle est la quantité de particules fines récoltés au cours des saison?</p>
-  <p style="color: #FF9DB0">(Placer la souris sur les éléments clignotant)</p>
+  <h2>Quelle est la quantité de particules fines récoltés au cours des saison?</h2>
+  <h4 class = 'salmon-text'>Placer la souris sur les pics et les creux pour obtenir des informations</h4>
   <div><svg></svg></div>
   </div>
   <p></p>
@@ -200,7 +193,17 @@
 <!-- ###############################   SLIDER 6   ################################ -->
 <!-- ############################################################################# -->
       <div id="slider6" class="swiper-slide">
-        <h2>Partie Jiaho</h2>
+        <h2>Maladies</h2>
+      </div>
+<!-- ############################################################################# -->
+<!-- ###############################   SLIDER 7   ################################ -->
+<!-- ############################################################################# -->
+      <div id="slider7" class="swiper-slide">
+        <h2>Effectivement, des solutions existent, et tout le monde peut agir à petite échelle.
+
+          Par exemple, opter pour un moyen de transport plutôt qu’un autre permettrait d’avoir des effets à grande échelle sur la réduction des émissions.
+        </h2>
+        <h2 class = "salmon-text">Mais alors, quels transports sont à préconiser ?</h2>
       </div>
 <!-- ############################################################################# -->
 <!-- ###############################   SLIDER FIN   ############################## -->
@@ -208,21 +211,21 @@
       <div id="sliderfin" class="swiper-slide">
         <h2>Alors, comment vous déplacerez-vous demain ?</h2>
 
-        <h3 id = "realise_par">Un projet réalisé par</h3>
+        <h3 id = "realise_par" class = "salmon-text">Un projet réalisé par</h3>
         <div class="modal-body">
 <!-- ############################## ligne logo ################################ -->
           <div class = "row white-background">
             <div class="col-md-1"></div>
             <div class="col-md-3">
-              <img id = "Logo_Audencia" class = "logo" src="img/kiri.jpg" alt="Logo Audencia">
+              <img id = "Logo_Audencia" class = "logo" src="img/logo/audencia.svg" alt="Logo Audencia">
             </div>
             <div class="col-md-1"></div>
             <div class="col-md-3">
-              <img id = "Logo_AGR" class = "logo" src="img/kiri.jpg" alt="Logo AGR">
+              <img id = "Logo_AGR" class = "logo" src="img/logo/agr.png" alt="Logo AGR">
             </div>
             <div class="col-md-1"></div>
             <div class="col-md-2">
-              <img id = "Logo_Polytech" class = "logo" src="img/kiri.jpg" alt="Logo Polytech">
+              <img id = "Logo_Polytech" class = "logo" src="img/logo/polytech.png" alt="Logo Polytech">
             </div>
           </div>
 <!-- ############################ Ligne personnages #################################### -->
@@ -260,7 +263,7 @@
               </a>
             <div class="col-md-1"></div>
             <div class="col-md-1">
-              <a href = "https://www.ecosia.org/" target ="_blank">
+              <a href = "https://www.linkedin.com/in/%E5%AE%B6%E6%98%8A-%E5%90%B4-663083171/" target ="_blank">
                 <img id = "Jiahao" class = "persofin" src="img/perso/jiahao.svg" alt="Jiaho">
               </a>
             </div>
@@ -270,6 +273,10 @@
               </a>
             </div>
         </div>
+<!-- ############################ Bandeau logos #################################### -->
+      <div id = "derniereligne" class = "row">
+        <img id = "bandeau" src="img/logo/bandeau.svg">
+      </div>
       </div>
 <!-- ############################################################################# -->
 <!-- #########################  FIN DES SLIDERS   ################################ -->
@@ -284,8 +291,16 @@
 </div>
 
 
-  <!-- ajout des frameworks jquery cloudflare swiper tangeslider, Bootstrap -->
+  <!-- ajout des frameworks :
+  * d3
+  * jquery
+  * cloudflare
+  *  Bootstrap
+  * swiper
+  * rangeslider,
+  -->
 
+  <script type="text/javascript" src="js/d3.min.js" charset="utf-8"></script>
   <script src="js/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -293,7 +308,6 @@
   <script src="js/rangeslider.min.js"></script>
   <script src="js/air-pdl1.js"></script>
   <script>
-    Slider();
     var values=[14,9,10,11.5,0,12.5,16,8.5,3.5,8,12,14.5,1.5,13,14,13,2,8,13.5,8.5,12,8,3.5,11,8,14,15,8,12,10,11,6,13,1,8.5,10.5,13,9,8,14,11,1.5,12,2.5,9,6,10.5,16,9.5,12.5,8,2,20,5.5];
 var test=new Graph('graph',300,100);
   </script>

@@ -34,6 +34,20 @@ h4 {
   margin-left: 2%;
 }
 
+canvas{
+  /*
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
+  padding: 2px;
+  */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  display: block;
+  width:400px;
+  height: 275px;
+}
 
 .bouton{
   border-width: 2px;
@@ -42,10 +56,11 @@ h4 {
   padding: 2px;
 }
 .left{
-  margin-left: -10px;
+  margin-left: -8%;
+  text-align: left;
 }
 .right{
-  margin-right:-4%
+  margin-right:-8%;
   text-align:right;
 }
 
@@ -73,7 +88,7 @@ h4 {
 
 .logo{
   width:66%;
-  vertical-align: middle;
+  vertical-align: bottom;
   margin-left: 17%;
   margin-right: 17%;
   margin-bottom: 5%;
@@ -86,19 +101,10 @@ h4 {
   vertical-align: middle;
   margin-bottom: 5%;
 }
-canvas{
-  /*
-  border-width: 2px;
-  border-color: white;
-  border-style: solid;
-  padding: 2px;
-  */
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%;
-  display: block;
-  width:400px;
-  height: 275px;
+
+#realise_par{
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
 #canvasVille{
   background:url('../img/ville.svg');
@@ -139,21 +145,9 @@ canvas{
   visibility: hidden;
 }
 
-/* just a sample css rule to show that everything works */
-footer p
-{
-  font-size: small;
-  text-align: center;
+#bandeau{
+  width: 100%;
 }
-
-header{
-  text-align: center;
+#derniereligne{
+  margin-bottom: 0%;
 }
-
-header img{
-  max-width: 100%;
-	height: auto;
-}
-
-
-
