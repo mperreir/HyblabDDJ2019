@@ -139,43 +139,34 @@ text{
 
 }
 .projet_com{
-  top: 9%;
-  position: absolute;
-  left: 64rem;
-  font-size: 4rem;
+  font-size: 2vw;
 }
 
 .logo_saint_nazaire{
-  height: 15%;
-  position: absolute;
-  top: 15rem;
-  left: 81rem;
+max-width: 18%;
+  height: auto;
+  display: block;
+    
 }
 
 .port_par{
-  top: 40%;
-  position: absolute;
-  left: 80rem;
-  font-size: 3rem;
+top: 30%;
+    /* position: absolute; */
+    left: 70rem;
+    font-size: 2vw;
 }
 .agr_team{
-  position: absolute;
-  height: 20%;
-  top: 37rem;
-  left: 49rem;
+    max-width: 23%;
+    height: auto;
 }
 .polytech_team{
-  position: absolute;
-  height: 20%;
-  top: 37rem;
-  left: 88rem
+    max-width: 20%;
+    height: auto;
 
 }
 .science_com_team{
-  position: absolute;
-  height: 20%;
-  top: 37rem;
-  right: 47rem;
+  max-width: 22%;
+  height: auto;
 }
 
 .titre_ecole{
@@ -183,7 +174,7 @@ text{
   color: #FFFFFF;
   font-family: Rubik;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2vw;
 }
 .titre_agr{
   position: absolute;
@@ -200,98 +191,68 @@ text{
   bottom: 16rem;
   right: 44rem;
 }
-.nom_agr{
-  text-align: center;
+.nom_teams{
   color: #FFFFFF;
   font-family: Rubik;
   font-weight: bold;
-  font-size: 1.5rem;
-  position: absolute;
-  bottom: 8rem;
-  left: 54rem;
+  font-size: 1vw;
+
 }
-.nom_popo{
-  text-align: center;
-  color: #FFFFFF;
-  font-family: Rubik;
-  font-weight: bold;
-  font-size: 1.5rem;
-  position: absolute;
-  bottom: 8rem;
-  left: 91rem;
-}
-.nom_scom{
-  text-align: center;
-  color: #FFFFFF;
-  font-family: Rubik;
-  font-weight: bold;
-  font-size: 1.5rem;
-  position: absolute;
-  bottom: 8rem;
-  right: 51rem;
-}
+
 
 .partenaire{
   color: #EB4834;
   font-family: Rubik;
   font-weight: bold;
-  font-size: 3.5rem;
-  position: absolute;
-  bottom: -6rem;
-  left: 5rem;
+  font-size: 2vw;
 }
 
 .logo_agr{
-  height: 10%;
-    bottom: -14rem;
-    left: 9rem;
-    position: absolute;
+max-width: 6%;
+  height: auto;
+  display: block;
 }
 .logo_polytech{
-  height: 10%;
-    bottom: -14rem;
-    left: 23rem;
-    position: absolute;
+max-width: 14%;
+  height: auto;
+  display: block;
 }
 .logo_sciencescom{
-height: 10%;
-    bottom: -14rem;
-    left: 51rem;
-    position: absolute;
+max-width: 14%;
+  height: auto;
+  display: block;
 }
 .logo_univ_nantes{
-    height: 10%;
-    bottom: -14rem;
-    left: 76rem;
-    position: absolute;
+ max-width: 9%;
+  height: auto;
+  display: block;
 }
 .logo_pdl{
-     height: 10%;
-    bottom: -14rem;
-    right: 72rem;
-    position: absolute;
+max-width: 12%;
+  height: auto;
+  display: block;
 }
 .logo_hyblab{
-      height: 7%;
-    bottom: -7rem;
-    right: 41rem;
-    position: absolute;
+ max-width: 11%;
+  height: auto;
+  display: block;
 }
 .logo_medialab{
-    height: 8%;
-    bottom: -16rem;
-    right: 46rem;
-    position: absolute;
+ max-width: 16%;
+  height: auto;
+  display: block;
 }
 .logo_open_source{
-    height: 10%;
-    bottom: -14rem;
-    right: 27rem;
-    position: absolute;
+ max-width: 5%;
+  height: auto;
+  display: block;
 }
 .logo_cc{
-    height: 10%;
-    bottom: -14rem;
-    right: 11rem;
-    position: absolute;
+ max-width: 5%;
+  height: auto;
+  display: block;
+}
+
+.top_mar{
+  margin-top: 4vw;
 }
