@@ -8,102 +8,83 @@ $('#carousel-example-generic').on('slid.bs.carousel', function() {
 
     if(currentIndex===1) {
         $('#perso').removeClass('translate');
+        $('#voiture').removeClass('animated bounce bounceOutRight');
+        $('#nuage').removeClass('fadein');
+        $('#svga1').hide();
     }
 
     if(currentIndex===2) {
-        $('#voiture').hide();
-        $('#nuage').show();
-        $('#nuage').addClass('translateNO2');
-        $('#perso').hide();
-        $('#perso3').show();
-        $('#perso3').attr("src", $("#perso2").attr("src"));
-        $('#perso3').addClass('translate3');
-        setTimeout(function () {
-            $('.fond').show();
-            $('.fond').addClass('animated slideInRight');
-        },4000); //4000
-
-        setTimeout(function () {
-            $('.questions').show();
-            $('.questions').addClass('animated fadeIn');
-        },5000); //5000
-
-        setTimeout(function () {
-            $('.reponses').show();
-            $('.reponses').addClass('animated fadeIn');
-        },7000); //7000
-
-        setTimeout(function () {
-            $('.nextQ').show();
-            $('.nextQ').addClass('animated fadeIn');
-        },7000); //7000
-
-        $('.boutons').addClass('animated fadeIn');
-
+        $('#perso').toggleClass('translate').one(animationend,
+            function(){
+            $('#voiture').addClass('animated bounce').one(animationend,
+                function(){
+                    $('#perso').hide();
+                    $('#perso2').show();
+                    $(this).addClass('animated bounceOutRight');
+                    $('#nuage').addClass('animated zoomIn').one(animationend,
+                        function(){
+                            $(this).removeClass('animated zoomIn');
+                            $(this).addClass('fadein');
+                        });
+                });
+        });
+        $('#svga1').hide();
     }
 
-    if(currentIndex===3){
+    if(currentIndex===3) {
+        $('#nuage').addClass('translate2');
         $('#voiture').hide();
+        $('#svga1').hide();
     }
 
     if(currentIndex===4){
-        $('#perso').hide();
         $('#voiture').hide();
-        $('.svg-container').show();
+        $('#svga1').hide();
     }
 
     if(currentIndex===5){
-        $('.svg-container').show();
+        $('#perso').hide();
+        $('#voiture').hide();
+        $('#svga1').show();
     }
-
     if(currentIndex===6){
-        $('.svg-container').show();
+        $('#perso').hide();
+        $('#voiture').hide();
+        $('#svga1').show();
     }
-
     if(currentIndex===7){
-        $('.svg-container').hide();
+        $('#perso').hide();
+        $('#voiture').hide();
+        $('#svga1').show();
     }
-
     if(currentIndex===8){
-        $('.svg-container').hide();
+        $('#perso').hide();
+        $('#voiture').hide();
+        $('#svga1').hide();
     }
-
 });
 
+$('#carousel-example-generic').bind('wheel', function(e){
+    if(e.originalEvent.wheelDelta > 0) {
+        $(this).carousel('next');
+    }
+    else{
+        $(this).carousel('prev');
+    }
 
-$('#parti').on('click', function () {
-        $('#perso').addClass('translate');
-        setTimeout(function(){
-            $('#cache1').addClass('animated slideOutUp');
-            $('#cache2').addClass('animated slideOutLeft');
-            $('#envie').addClass('animated fadeOutLeft');
-            $('#experience').addClass('animated fadeOutLeft');
-            $('#parti').addClass('animated fadeOutLeft');
-            $('#logo').addClass('animated fadeOutLeft');
+    if(currentIndex===1){
+        $('#cache1').addClass('animated slideOutUp').one(animationend,
+            function(){
+                $(this).removeClass('animated slideOutUp');
+            });
+        $('#cache2').addClass('animated slideOutLeft').one(animationend,
+            function(){
+                $(this).removeClass('animated slideOutLeft');
+            });
+    }
 
-        },800);
+    if(currentIndex===2){
+        $('#nuage').removeClass('fadein');
+    }
 
-    setTimeout(function (){
-        $('#perso').attr("src", $("#perso2").attr("src"));
-    },0);
-
-    setTimeout(function(){
-        $('#voiture').hide();
-        $('#voiture-gif').show();
-        $('#voiture-gif').attr("src", $("#voiture-gif").attr("src"));
-    },2000);
-
-    setTimeout(function(){
-        $('#voiture-gif').toggleClass('translate2d');
-    },6000);
-
-    setTimeout(function(){
-        $('#perso').attr("src", $("#perso3").attr("src"));
-        $('#perso').addClass('translate2');
-    },9000);
-
-    setTimeout(function(){
-        $('#next').show();
-        $('#next').addClass('animated bounce infinite');
-    },10500);
 });

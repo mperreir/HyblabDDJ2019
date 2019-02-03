@@ -35,27 +35,27 @@ section {
 }
 
 .itemq{
-    background: url(../img/ECRAN_QUESTION_GOOD_GOOD@2x.png) no-repeat center;
+    background: url(../img/bg_questions.png) no-repeat center;
     background-size:cover;
-    height:100%;
+    heigth:100%;
 }
 
-#choix{
+#choix-endroit{
     background: url(../img/choix_endroit.png) no-repeat center;
-    background-size:contain;
-    height:100%;
+    background-size:cover;
+    heigth:100%;
 }
 
 #conseils{
     background: url(../img/conseils.png) no-repeat center;
-    background-size:contain;
-    height:100%;
+    background-size:cover;
+    heigth:100%;
 }
 
 #equipe{
     background: url(../img/equipe.png) no-repeat center;
-    background-size:contain;
-    height:100%;
+    background-size:cover;
+    heigth:100%;
 }
 
 .carousel {
@@ -66,6 +66,10 @@ section {
     background-color: #176261;
     height: 100%;
     width:100%;
+}
+
+.carousel-inner>.item>.fond{
+    height:100%;
 }
 
 .carousel-caption{
@@ -88,90 +92,81 @@ section {
     height:100%;
 }
 
-#parti{
-    position: absolute;
-    top:60%;
-    left:7%;
-}
-
-#image-parti{
-    width:70%;
-}
-
-#logo{
-    position:absolute;
-    top:75%;
-    left:10%;
-    width: 10%;
-}
-
-#envie{
-    position: absolute;
-    left:5%;
-    top:30%;
-    width: 25%;
-}
-
-#experience{
-    position: absolute;
-    left:7%;
-    top:40%;
-    width:20%;
-}
-
-#next{
-    position: absolute;
-    left:90%;
-    top:50%;
-    width:15%;
-}
-
-#espace-questions{
-    position: absolute;
-    right:5%;
-    top:30%;
-    left:69%;
-    bottom:10%;
-}
-
-.questions{
+.fond{
     position: relative;
+    height: 100%;
+    float:right;
 }
 
-#imageQ1{
-    width:60%;
+#arbre-vert-rond{
+    position: absolute;
+    top:67%;
+    left:54.2%;
+    height:22%;
 }
 
-#imageQ2{
-    width:65%;
+#arbre-vert-droit{
+    position: absolute;
+    top:35%;
+    left: 48%;
+    height:52.5%;
+}
+
+#arbre-rose{
+    position: absolute;
+    top:52.3%;
+    left:54.7%;
+    height:40%;
+}
+
+#q1{
+    position: relative;
+    left:35%;
+}
+
+#q2{
+    position: relative;
+    left:35%;
+}
+
+#q3{
+    position: relative;
+    left:35%;
 }
 
 #imageQ3{
-    width:80%;
+    width:75%;
+}
+
+.boutons{
+    position:relative;
+    top:50px;
+}
+
+.choixQ2{
+    height:48px;
+    width:210px;
+}
+
+.choixQ3{
+    height:48px;
+    max-width:500px;
 }
 
 .remarques{
-    position: relative;
-    top: 80px;
+    position:relative;
+    top:50px;
     color: #AC0759;
-    font-family: "Sarabun SemiBold", sans-serif;
-    font-size: 22px;
-    letter-spacing: 1px;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 19px;
     font-weight: bold;
-    line-height: 28px;
+    letter-spacing: 2.27px;
+    line-height: 27px;
 }
 
 .reponses {
     position: relative;
     top: 100px;
-}
-
-.image-r2{
-    height:150px;
-}
-
-.image-r3{
-    height:200px;
 }
 
 .nextQ {
@@ -191,180 +186,102 @@ section {
     content: "\f0a9";
 }
 
-.fond{
+#espace-questions{
     position: absolute;
-    width:73%;
-    right:0;
-    height:auto;
-}
-
-#arbre-vert-rond{
-    position: absolute;
-    top:80%;
-    left:54.2%;
-    height:22%;
-}
-
-#arbre-vert-droit{
-    position: absolute;
-    top:48%;
-    left: 48%;
-    height:52.5%;
-}
-
-#arbre-rose{
-    position: absolute;
-    top:65%;
-    left:54.7%;
-    height:40%;
+    right:10%;
+    top:40%;
+    left:60%;
+    bottom:10%;
 }
 
 .calque{
     position:absolute;
-    bottom:-13%;
+    bottom:-100%;
     width:100%;
 }
 
-.boutons{
-    position:relative;
+#boutonOui a{
+    position: relative;
+    top: 10%;
+    left:10%;
+    float: left;
+}
+
+#boutonNon a{
+    position: relative;
+    top: 10%;
+    left:20%;
 }
 
 #chauffage a{
-    position:relative;
-    top:110px;
-    display:block;
-    height:40px;
-    background: url(../img/bouton_chauffage.png) no-repeat left;
-    background-size:contain;
-}
-
-#chauffage a:hover{
-    background: url(../img/bouton_chauffage_hover.png) no-repeat left;
-    background-size:contain;
+    position: relative;
+    float: left;
 }
 
 #electricite a{
     position:relative;
-    top:130px;
-    display:block;
-    width:auto;
-    height:40px;
-    background: url(../img/bouton_electricite.png) no-repeat left;
-    background-size:contain;
-}
-
-#electricite a:hover{
-    background: url(../img/bouton_electricite_hover.png) no-repeat left;
-    background-size:contain;
+    left:5%;
 }
 
 #vehicules a{
     position:relative;
-    top:150px;
-    display:block;
-    width:auto;
-    height:40px;
-    background: url(../img/bouton_vehicules.png) no-repeat left;
-    background-size:contain;
-}
-
-#vehicules a:hover{
-    background: url(../img/bouton_vehicules_hover.png) no-repeat left;
-    background-size:contain;
+    top:10px;
+    float: left;
 }
 
 #les-trois a{
     position:relative;
-    top:170px;
-    display:block;
-    width:auto;
-    height:40px;
-    background: url(../img/bouton_trois.png) no-repeat left;
-    background-size:contain;
+    top:10px;
+    left:5%;
 }
 
-#les-trois a:hover{
-    background: url(../img/bouton_trois_hover.png) no-repeat left;
-    background-size:contain;
-}
-
-#sante a{
-    position:relative;
-    top:110px;
-    display:block;
-    height:40px;
-    background: url(../img/bouton_sante.png) no-repeat left;
-    background-size:contain;
-}
-
-#sante a:hover{
-    background: url(../img/bouton_sante_hover.png) no-repeat left;
-    background-size:contain;
-}
 #environnement a{
     position:relative;
-    top:130px;
-    display:block;
-    width:auto;
-    height:40px;
-    background: url(../img/bouton_environnement.png) no-repeat left;
-    background-size:contain;
-}
-
-#environnement a:hover{
-    background: url(../img/bouton_environnement_hover.png) no-repeat left;
-    background-size:contain;
+    top:10px;
 }
 
 #les-deux a{
     position:relative;
-    top:150px;
-    display:block;
-    width:auto;
-    height:40px;
-    background: url(../img/bouton_deux.png) no-repeat left;
-    background-size:contain;
+    top:20px;
 }
-
-#les-deux a:hover{
-    background: url(../img/bouton_deux_hover.png) no-repeat left;
+#choix{
+    background: url(../img/342340577.png) no-repeat center;
     background-size:contain;
+    heigth:100%;
 }
 
 #rural{
     position: relative;
-    left: 18%;
-    top: 38%;
+    background-color: rgba(108, 255, 108, 0);
+    left: 21.25%;
+    top: 33%;
+    width: 15%;
+    height: 34%;
 }
 
-#image-rural{
-    height:300px;
-}
 
 #ville{
-    position: relative;
-    left:30%;
-    top: 38%;
+    position: absolute;
+    background-color: rgba(111, 255, 111, 0);
+    left: 43.5%;
+    top: 32%;
+    width: 15%;
+    height: 34%;
 }
 
 #trafic{
-    position: relative;
-    left:42%;
-    top: 38%;
+    position: absolute;
+    background-color: rgba(109, 255, 109, 0);
+    left: 65.5%;
+    top: 36.5%;
+    width: 15%;
+    height: 34%;
 }
 
 #perso {
     position: absolute;
     bottom: 5%;
-    left: 20%;
-    height: 25%;
-    width: auto;
-}
-
-#perso3 {
-    position: absolute;
-    bottom: 5%;
-    left: -8%;
+    left: 10.4%;
     height: 25%;
     width: auto;
 }
@@ -380,23 +297,27 @@ section {
 #voiture{
     position: absolute;
     bottom: 5%;
-    right: 30%;
-    height: 18%;
-    width: auto;
-}
-
-#voiture-gif{
-    position: absolute;
-    bottom: 0;
-    right: -12%;
-    height: 90%;
+    right: 20%;
+    height: 20%;
     width: auto;
 }
 
 #nuage{
     position: absolute;
-    left:-8%;
-    top:20%;
+    bottom: 100px;
+    right: 700px;
+    height: 150px;
+    width: auto;
+    opacity: 0;
+}
+
+.fadein{
+    animation: fadein 2s 1 normal forwards;
+}
+
+@keyframes fadein {
+    0% { opacity: 0;}
+    100% { opacity: 1; transform: translate3d(-200px,-300px,0px) scale(2.0);}
 }
 
 #cache1{
@@ -406,7 +327,6 @@ section {
 
 #cache2{
     height:100%;
-    margin-left:-2%;
 }
 
 .translate{
@@ -415,82 +335,23 @@ section {
 
 @keyframes translate {
     0% {
-        transform: translateX(0);
+        transform: translateX(0px);
     }
     100% {
-        transform: translateX(330%);
+        transform: translateX(800px);
     }
 }
 
 .translate2{
-    animation: translate2 2s linear forwards;
+    opacity: 1;
+    transform: translate3d(-200px,-300px,0px) scale(2.0);
 }
-
-@keyframes translate2 {
-    0% {
-        transform: translate(330%,0%);
-    }
-    10%{
-        transform: translate(350%,-20%);
-    }
-    15%{
-        transform: translate(360%,7%);
-    }
-    100% {
-        transform: translate(750%,0%);
-    }
+#retu,#retu2,#retu3{
+    float: left;
 }
-
-.translate2d{
-    animation: translate2d 8s linear forwards;
-}
-
-@keyframes translate2d {
-    0% {
-        transform: translate(0%,0%);
-    }
-    100% {
-        transform: translate(130%,-180%);
-    }
-}
-
-.translateNO2{
-    animation: translateNO2 7.5s linear forwards;
-}
-
-@keyframes translateNO2 {
-    0% {
-        transform: translate(0%,0%);
-    }
-    55%{
-        opacity:1;
-    }
-    65%{
-        opacity:0;
-    }
-    100% {
-        transform: translate(550%,-80%);
-        opacity: 0;
-    }
-}
-
-.translate3{
-    animation: translate3 4s ease-out forwards;
-}
-
-@keyframes translate3 {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(250%);
-    }
-}
-
-
 #r{
-    background:url(../img/rural_j.png) no-repeat center;
-    background-size: contain;
+    background:url(../img/RuralJour31janvier@2x.png) no-repeat center;
+    background-size: cover;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -ms-transition: all .5s;
@@ -498,8 +359,8 @@ section {
     transition: all .5s;
 }
 #ur{
-    background:url(../img/urban_j.png) no-repeat center;
-    background-size:contain;
+    background:url(../img/urban_jb.png) no-repeat center;
+    background-size:cover;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -ms-transition: all .5s;
@@ -507,8 +368,8 @@ section {
     transition: all .5s;
 }
 #tr{
-    background:url(../img/traffic_j.png) no-repeat center;
-    background-size:contain;
+    background:url(../img/TraficJour29janvier@2x.png) no-repeat center;
+    background-size:cover;
     height:100%;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -519,16 +380,17 @@ section {
 
 #myR,#myR2,#myR3{
     position: relative;
-    left:25%;
-    top:16%;
+    left:15%;
+    top:27%;
+    z-index: 4;
 }
 #myRange,#myRange2,#myRange3{
     alignment: top;
 }
 #value,#value2,#value3{
     position: relative;
-    color: #0c0524;
-    top:40%;
+    color: #f9f00e;
+    top:45%;
     float:right;
 }
 
@@ -536,31 +398,32 @@ section {
     position:relative;
     left:60%;
     height:60%;
-    width:20%;
+    width:30%;
 }
 
 .progress {
     width: 90%;
-    height:5%;
+    height:10%;
     top:40%;
     position: relative;
     background-color: rgba(255,255,255,0);
-    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(+90deg); /* Chrome, Safari, Opera */
+    transform: rotate(+90deg);
 }
+
 .progress-bar {
     width: 100%;
     display: block;
     overflow: hidden;
     height: 30px;
     margin:0 auto;
+    border: rgba(253,255,251,0);
     line-height: 12px;
     background: #fafafa;
-    border-radius: 4px;
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
-    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
-    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent 60%);
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, #ac125b, #dadc38);
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -moz-linear-gradient(left, #ac125b, #dadc38);
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -o-linear-gradient(left, #ac125b, #dadc38);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), linear-gradient(to right, #ac125b, #dadc38);
     -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.6);
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.6);
     position: relative;
@@ -570,18 +433,27 @@ section {
     display: block;
     min-width: 8px;
     height: 30px;
-    background: #c54050;
-    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, #dadc38, #ac125b);
-    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -moz-linear-gradient(left, #dadc38, #ac125b);
-    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -o-linear-gradient(left, #dadc38, #ac125b);
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), linear-gradient(to right, #dadc38, #ac125b);
-    border-radius: 10px;
+    background: #fafafa;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent 60%);
     -webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 1px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
-
 .svga1Button{
     position: absolute;
     right:0;
-    top:50%;
+    top:30%;
 }
+#attention{
+    position:absolute;
+    top:95%;
+    width:30px;
+    height:30px;
+    left: 96%;
+    background: url(../img/BOUTON_INFO_SOURCE_JOUR@2x.png) no-repeat left;
+    background-size:contain;
+}
+
+
