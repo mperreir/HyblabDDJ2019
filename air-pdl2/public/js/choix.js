@@ -5,24 +5,24 @@ var passageTraffic = false;
 $('#rural').on('click',
     function () {
         passageRural = true;
-        $('#carousel-example-generic').carousel('next');
+        $('#carousel-example-generic').carousel(3);
     });
 
 $('#ville').on('click',
     function () {
         passageVille = true;
-        $('#carousel-example-generic').carousel(5);
+        $('#carousel-example-generic').carousel(4);
     });
 
 $('#trafic').on('click',
     function () {
         passageTraffic = true;
-        $('#carousel-example-generic').carousel(6);
+        $('#carousel-example-generic').carousel(5);
     });
 
 $('.button').on('click',
     function () {
-        $('#carousel-example-generic').carousel(3);
+        $('#carousel-example-generic').carousel(2);
     });
 
 $('.svga1Button').on('click',

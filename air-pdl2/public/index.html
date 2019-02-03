@@ -7,11 +7,11 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>view</title>
     <!-- Bootstrap -->
-    <link href="../libraries/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="libraries/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css" media="screen">
-    <link rel="stylesheet" href="../libraries/animate/animate.min.css">
+    <link rel="stylesheet" href="libraries/animate/animate.min.css">
     <link rel="stylesheet" href="css/jquery.range.css">
-    <link rel="stylesheet" href="../libraries/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libraries/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/carousel-fade-tarnsition.css">
     <link rel="stylesheet" href="css/histogram.css">
 
@@ -21,7 +21,7 @@
 <!--定义导航栏-->
 <div class="container-fluid">
 
-    <div id="carousel-example-generic" class="carousel slide carousel-fade" data-interval="false" data-wrap="false" data-keyboard="true">
+    <div id="carousel-example-generic" class="carousel slide" data-interval="false" data-wrap="false" data-keyboard="true">
 
         <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -32,131 +32,104 @@
             <li data-target="#carousel-example-generic" data-slide-to="5"></li>
             <li data-target="#carousel-example-generic" data-slide-to="6"></li>
             <li data-target="#carousel-example-generic" data-slide-to="7"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="8"></li>
         </ol>
 
         <div class="carousel-inner" role="listbox">
 
             <div class="item active item12" id="item1">
-                <img id="cache1" src="img/cache%201.svg" alt="cache1"/>
-                <img id="cache2" src="img/cache%202.svg" alt="cache2"/>
-            </div>
-
-            <div class="item item12" id="item2">
+                <img id="envie" src="img/Envie de prendre l’a@2x.png"/>
+                <img id="experience" src="img/Une expérience autou@2x.png"/>
+                <img id="cache1" src="img/cache_droit.svg" alt="cache1"/>
+                <img id="cache2" src="img/cache_gauche.svg" alt="cache2"/>
+                <div id="parti">
+                    <a href="#">
+                        <img id="image-parti" src="img/BOUTON%20PARTI@2x.png"/>
+                    </a>
+                </div>
+                <img id="logo" src="img/logo_airpl@1x.png"/>
+                <div id="next">
+                    <a href="#">
+                        <img id="image-next" src="img/AVANT@2x.png"/>
+                    </a>
+                </div>
             </div>
 
             <div class="item itemq" id="item3">
-                <img id="arbre-vert-droit" src="img/arbre_3_2_.svg" alt="avd"/>
                 <img class="fond" src="img/cache_1_.svg" alt="fond"/>
+                <img id="arbre-vert-droit" src="img/arbre_3_2_.svg" alt="avd"/>
                 <img id="arbre-rose" src="img/arbre_1_2_.svg" alt="ar"/>
                 <img id="arbre-vert-rond" src="img/arbre_4_2_.svg" alt="avr"/>
                 <img class="calque" src="img/Calque_11.svg" alt="q2"/>
 
                 <div id="espace-questions">
                     <div id="q1">
-                        <div>
-                            <img src="img/question1.png" alt="q1"/>
-                        </div>
-
-                        <div class="boutons">
-                            <span id="boutonOui">
-                                <a href="#">
-                                    <img src="img/boutonOui.png"/>
-                                </a>
-                            </span>
-                            <span id="boutonNon">
-                                <a href="#">
-                                    <img src="img/boutonNon.png"/>
-                                </a>
-                            </span>
-                        </div>
-                        <div class="remarques">
-                            <div id="remarque1-q1">
-                                <p>
-                                    Très bien, voyons cela ! Saviez-vous que...
-                                </p>
-                            </div>
-                            <div id="remarque2-q1">
-                                <p>
-                                    Vous êtes atteris au bon endroit pour le savoir !
-                                </p>
-                            </div>
+                        <div class="questions">
+                            <img id="imageQ1" src="img/Connaissez-vous%20le%20d@2x.png" alt="q1"/>
                         </div>
                         <div class="reponses" id="r1">
-                            <img src="img/reponse1.png"/>
+                            <img src="img/Ce%20gaz%20toxique%20est%20l@2x.png"/>
                         </div>
                     </div>
 
                     <div id="q2">
-                        <div>
-                            <img src="img/question2.png" alt="q2"/>
+                        <div class="questions">
+                            <img id="imageQ2" src="img/Selon%20vous,%20d’où%20pro@2x.png" alt="q2"/>
                         </div>
 
                         <div class="boutons">
-                            <span id="chauffage">
-                                <a href="#">
-                                    <img class="choixQ2" src="img/chauffage.png"/>
-                                </a>
-                            </span>
-                            <span id="electricite">
-                                <a href="#">
-                                    <img class="choixQ2" src="img/electricite.png"/>
-                                </a>
-                            </span>
-                            <span id="vehicules">
-                                <a href="#">
-                                    <img class="choixQ2" src="img/vehicules.png"/>
-                                </a>
-                            </span>
-                            <span id="les-trois">
-                                <a href="#">
-                                    <img class="choixQ2" src="img/les-trois.png"/>
-                                </a>
-                            </span>
-                        </div>
-                        <div class="remarques">
-                            <div id="remarque1-q2">
-                                <p>
-                                    Bonne réponse ! En effet...
-                                </p>
+                            <div id="chauffage">
+                                <a href="#"></a>
                             </div>
-                            <div id="remarque2-q2">
-                                <p>
-                                    Oui, mais pas seulement !
-                                </p>
+                            <div id="electricite">
+                                <a href="#"></a>
+                            </div>
+                            <div id="vehicules">
+                                <a href="#"></a>
+                            </div>
+                            <div id="les-trois">
+                                <a href="#"></a>
                             </div>
                         </div>
-                        <div class="reponses" id="r2">
-                            <img src="img/reponse1.png"/>
+                        <div class="remarques" id="remarque1-q2">
+                            <p>
+                                Bravo !
+                            </p>
+                        </div>
+                        <div class="remarques" id="remarque2-q2">
+                            <p>
+                                Oui, mais pas seulement !
+                            </p>
+                        </div>
+                        <div class="reponses" id="r1-q2">
+                            <img class="image-reponses" src="img/En%20effet,%20le%20NO2%20pro@2x.png"/>
+                        </div>
+                        <div class="reponses" id="r2-q2">
+                            <img class="image-r2" src="img/Le%20NO2%20provient%20de%20l@2x.png"/>
                         </div>
                     </div>
 
                     <div id="q3">
-                        <div>
-                            <img id="imageQ3" src="img/question3.png" alt="q3"/>
+                        <div class="questions">
+                            <img id="imageQ3" src="img/Et%20à%20votre%20avis,%20que@2x.png" alt="q3"/>
                         </div>
 
                         <div class="boutons">
-                            <span id="sante">
+                            <div id="sante">
+                                <a href="#"></a>
+                            </div>
+                            <div id="environnement">
                                 <a href="#">
-                                    <img class="choixQ3" src="img/environnement.png"/>
                                 </a>
-                            </span>
-                            <span id="environnement">
+                            </div>
+                            <div id="les-deux">
                                 <a href="#">
-                                    <img class="choixQ3" src="img/environnement.png"/>
                                 </a>
-                            </span>
-                            <span id="les-deux">
-                                <a href="#">
-                                    <img class="choixQ3" src="img/les-deux.png"/>
-                                </a>
-                            </span>
+                            </div>
                         </div>
                         <div class="remarques">
                             <div id="remarque1-q3">
                                 <p>
-                                    Bonne réponse ! En effet...
+                                    Bravo !
                                 </p>
                             </div>
                             <div id="remarque2-q3">
@@ -166,7 +139,7 @@
                             </div>
                         </div>
                         <div class="reponses" id="r3">
-                            <img src="img/reponse3.png"/>
+                            <img class="image-r3" src="img/Reponse3.png"/>
                         </div>
                     </div>
 
@@ -178,20 +151,20 @@
                 </div>
             </div>
 
-            <div class="item"id="choix">
+            <div class="item" id="choix">
                 <div id="rural">
-                    <a href="#r">
-                        <img src="img/RURAL@2x.svg"/>
+                    <a href="#">
+                        <img src="img/RURAL@2x.svg" alt="rural">
                     </a>
                 </div>
                 <div id="ville">
-                    <a href="#ur">
-                        <img src="img/VILLE.png"/>
+                    <a href="#">
+                        <img src="img/VILLE.png" alt="ville"/>
                     </a>
                 </div>
                 <div id="trafic">
-                    <a href="#tr">
-                        <img src="img/TRAFIC.png"/>
+                    <a href="#">
+                        <img src="img/TRAFIC.png" alt="trafic"/>
                     </a>
                 </div>
             </div>
@@ -219,9 +192,7 @@
                         <span class="icon fa-arrow-circle-right"></span>
                     </a>
                 </div>
-                <div id="attention">
-                    <img id="rj" src="img/infos_ruralj.png" style="display: none" height="148" width="406"/>
-                </div>
+
             </div>
 
             <div class="item" id="ur">
@@ -278,12 +249,15 @@
         </div>
 
     </div>
+
+
     <div id="svga1" class="svg-container">
     </div>
-
     <img  id="perso" src="img/GIF_PERSONNAGE.gif" alt="perso"/>
     <img id="perso2" src="img/MARCHE_ET_PENSE_X1_2.gif" alt="atchoum"/>
+    <img id="perso3" src="img/GIF_PERSONNAGE.gif" alt="perso3"/>
     <img id="voiture" src="img/voiture1.png" alt="car"/>
+    <img id="voiture-gif" src="img/VOITURE_OK_OK_2.gif"/>
     <img id="nuage" src="img/nuage1.png" alt="nuage"/>
 
 
@@ -292,14 +266,14 @@
 
 <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
 
-<script src="../libraries/jquery/jquery.js"></script>
+<script src="libraries/jquery/jquery.js"></script>
 
 <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 <script src="js/jquery.range.js"></script>
 
-<script src="../libraries/bootstrap/js/bootstrap.min.js"></script>
-<script src="../libraries/d3/dist/package.js"></script>
-<script src="../libraries/d3/dist/d3.min.js"></script>
+<script src="libraries/bootstrap/js/bootstrap.min.js"></script>
+<script src="libraries/d3/dist/package.js"></script>
+<script src="libraries/d3/dist/d3.min.js"></script>
 <script src="js/animation.js"></script>
 <script src="./js/Myrange.js"></script>
 <script src="js/questionnaire.js"></script>
