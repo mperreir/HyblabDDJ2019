@@ -295,6 +295,9 @@ function modif_radio(){
   }
 }
 
-
+function credits(){
+  document.getElementById("page_carte").style.display = "none";
+  document.getElementById("fond_image").style.display = "block";
+}
 
 reset_value_default();
