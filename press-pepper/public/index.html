@@ -138,18 +138,22 @@
 <section class="page">
   <div class="container">
     <div class="row justify-content-left">
-      <div class="col-md">
+      <div class="col-lg-8">
         <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
         <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
         <div id='map'></div>
       </div>
-      <div class = "col-md">
+      <div class = "col-lg-3">
+        <h3 id = "disclaimer"> Filtrer les dépêches :</h3>
         <div id = 'filtres'></div>
       </div>
       <div id='depeche'>
         <h1 id = 'titre_depeche'></h1>
-        <span id = 'date_depeche'></span>
+        <span id = 'date_depeche'></span> <br>
         <span id = 'corps_depeche'></span>
+        <br>
+        <br>
+        <br>
         <button id = 'hideButton' type="button" class="btn btn-info" onclick="depeche_cache()">Retour</button>
       </div> <!--à afficher et remplir si clic sur titre de depeche -->
     </div>

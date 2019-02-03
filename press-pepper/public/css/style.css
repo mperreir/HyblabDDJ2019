@@ -15,14 +15,20 @@ header img{
 }
 #map { 
 	padding-top : 25px;
-	height: 500px;
-	width: 900px;
+	height: 550px;
+	width: 800px;
 	margin-right:2%;
 	float: left;
 }
 #filtres {
+	padding-top : 2px;
+	max-width : 200px;
+	padding-left : 50px;
+}
+#disclaimer {
+	padding-left : 50px;
 	padding-top : 25px;
-	max-width : 27%;
+	font-family: "Verdana";
 }
 #filtres a {
 	font-size: 13px;
@@ -58,15 +64,17 @@ header img{
 	visibility:hidden;
 	background-color: white;
 	position:absolute;
-	width : 95%;
+	width : 85%;
 	height : 95%;
 	z-index: 1000;
 }
 #titre_depeche{
 	max-width : 70%;
+	font-family:"Times New Roman";
 }
 #corps_depeche{
 	max-width : 60%;
+	font-family:"Times New Roman";
 
 }
 #hideButton{
