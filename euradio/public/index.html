@@ -49,33 +49,46 @@
         <div class="haut">
     			<h2 id="titre11">Branchez-vous sur la fréquence de demain...</h2>
           <h3 id="titre12">En jouant avec le curseur</h3>
-          <!--<audio src="Musiques/hyblablfm_1.wav">
+          <!--<audio src="musiques/hyblablfm_1.wav">
           </audio>-->
 
-          <!--<embed src=“Musiques/hyblablfm_1.wav”>-->
+          <!--<embed src=“musiques/hyblablfm_1.wav”>-->
             </div>
             <div id="triche">
               <audio id="musique" controls="controls">
-                <source id="audioSource" src="Musiques/hyblablfm_1.wav"></source>
+                <source id="audioSource" src="musiques/hyblablfm_1.wav"></source>
                 Your browser does not support the audio format.
               </audio>
-              <!--<embed id="musique"src="Musiques/hyblablfm_1.wav" width="0" height="0" loop="false" autostart="true" hidden="true" />-->
+              <audio id="souffle" controls="controls">
+                <source id="fondSource" src="musiques/souffle.wav"></source>
+                Your browser does not support the audio format.
+              </audio>
+              <!--<embed id="musique"src="musiques/hyblablfm_1.wav" width="0" height="0" loop="false" autostart="true" hidden="true" />-->
             </div>
             <div class="imagesPage1">
-              <p id="nomRadio">Euradio</p>
+
               <!--<img src="img/Ecran 1 Copy.png" id="imgBackground" class="images_petit"/>-->
               <!--<img src="img/image.png" class="images_petit2"/>-->
               <div id="conteneurRadio">
                 <img src="img/RadioFm/Radiofm_fréquence_1.png" id="imgBackground" class="images_petit"/>
               </div>
-
+              <p id="nomRadio">91.4 : Virgin Radio</p>
 
         </div>
-        <div id="conteneurLigne">
+        <div class="containerSliderRadio">
+          <div class="containerButtonRadio">
+            <div id="partie">
+              <img src="img/BTN slider.png" id="draggable" />
+            </div>
+          </div>
+          <img src="img/Slider FM.png" id="sliderBackground" class="slider_petit"/>
+          <img src="img/sliderrnt.png" id="sliderBackground2" class="slider_petit"/>
+        </div>
+        <!--<div id="conteneurLigne">
           <img src="img/Slider FM.png" id="sliderBackground" class="slider_petit"/>
           <img src="img/sliderrnt.png" id="sliderBackground2" class="slider_petit"/>
           <img src="img/BTN slider.png" id="draggable" width="30px"/>
-        </div>
+        </div>-->
         <div class="arrow down"></div>
     </div>
 
@@ -106,30 +119,33 @@
 
         <div id="Pictos">
 
-          <img class="picto" id="recepteur" onclick="pictoChanging(false,false,true,false,false,false)" src="img/Picto/Picto recepteur - bleu.png">
-          <img class="picto" id="maison" onclick="pictoChanging(true,false,false,false,false,false)" src="img/Picto/Picto maison - blanc.png">
-          <img class="picto" id="route" onclick="pictoChanging(false,false,false,true,false,false)" src="img/Picto/Picto route - bleu.png">
-          <img class="picto" id="voiture" onclick="pictoChanging(false,false,false,false,true,false)" src="img/Picto/Picto voiture - bleu.png">
-          <img class="picto" id="reseau" onclick="pictoChanging(false,false,false,false,false,true)" src="img/Picto/Picto couverture-reseaux-bleu.png">
+          <img class="picto" id="recepteur"  src="img/Picto/Picto recepteur-bleu.png">
+          <img class="picto" id="maison"  src="img/Picto/Picto maison-blanc.png">
+          <img class="picto" id="route" src="img/Picto/Picto route-bleu.png">
+          <img class="picto" id="voiture"  src="img/Picto/Picto voiture-bleu.png">
+          <img class="picto" id="reseau"  src="img/Picto/Picto couverture réseaux-bleu.png">
         </div>
 
       </div>
-      <div class="imagesPage1">
+      <div class="imagesPage3">
 
         <div class="affichageGraphiques">
-
+          <div class="conteneurPictoCentrale">
+            <img class="picto" id="pictoCentrale"  src="img/Picto/Picto maison-bleu.png">
+          </div>
           <div class="affichageGraphique">
             <h4 id="paysRouge"></h4>
               <p id="valeurRouge" class ="contenuCentre">Coucou</p>
-            <canvas id="ctx" width="375" height="200"></canvas>
+            <canvas id="ctx" width="375" height="300"></canvas>
           </div>
+
           <div class="affichageGraphique">
             <h4 id="paysJaune"></h4>
               <p id="valeurJaune" class ="contenuCentre">Coucou</p>
-            <canvas id="ctx2" width="375" height="200"></canvas>
+            <canvas id="ctx2" width="375" height="300"></canvas>
           </div>-
         </div>
-        <h3 id="critere">Sélectionnez le critère de votre choix pour voir la RNT au niveau européen</h3>
+        <h3 id="critere">Sélectionnez le pictogramme de votre choix, pour comparer l’évolution de l’implantation de la RNT au niveau européen</h3>
         <div class="containerSliderPays">
           <div class="containerButtonPays">
             <div id="partieGauche">
