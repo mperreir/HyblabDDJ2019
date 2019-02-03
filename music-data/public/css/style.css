@@ -7,10 +7,9 @@ footer p
 }
 
 body {
-  /* background-color: #151515; */
-  background-color: #151515;
-  color: white;
-  /* text-align: center; */
+   background-color: #151515;
+   color:white;
+  text-align: center;
 }
 
 /*---------- Section Introduction 1 -----------*/
@@ -212,4 +211,101 @@ body {
   top: 34.12%;
   left: 18.36%;
   /*border: 1px solid #FFFFFF;*/
+}
+.bar{
+
+
+  fill : white;
+
+  font-size: 16.71px;
+  font-weight: 200;
+
+
+}
+.bar1{
+  fill : #FFFFFF;
+  font-size: 16.71px;
+  font-weight: 200;
+
+
+}
+#trackspourungenreReflet {
+  opacity: 0.8;
+}
+#followerspourungenreReflet {
+  opacity: 0.8;
+}
+#geresmusicales{
+
+}
+.rectangle-path {
+  display: inline-block;
+	height: 51.74px;
+	width: 165px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+	border-radius: 13.51px;
+	background-color: grey;
+  color: white;
+}
+.rectangle-path2 {
+  display: inline-block;
+	height: 51.74px;
+	width: 165px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+	border-radius: 13.51px;
+	background-color: grey;
+  color: white;
+}
+.rectangle-path3 {
+  display: inline-block;
+	height: 51.74px;
+	width: 165px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+	border-radius: 13.51px;
+	background-color: grey;
+  color: white;
+}
+.slidecontainer{
+
+}
+#valeurdeslider1 {
+    display: block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+}
+#valeurdeslider2 {
+    display: block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+}
+#valeurdeslider3 {
+    display: block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+}
+#selectcontry {
+  display: inline-block;
+
+}
+select{
+  height: 51.74px;
+  width: 165px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  border-radius: 13.51px;
+  background-color: grey;
+  color: white;
 }
