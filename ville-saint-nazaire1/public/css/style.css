@@ -549,6 +549,8 @@ input[type=range]::-ms-fill-lower {
 /* Page des crédits */
 
 #page_credits{
+  height:100vh;
+  width:100vw;
   position: absolute;
   display: none;
 }
@@ -558,35 +560,105 @@ input[type=range]::-ms-fill-lower {
   height:99vh;
   width:auto;
   z-index:1;
-  margin-left:auto;
-  margin-right:auto;
 }
 
-#rect_gauche{
+.credits_rectangle{
   border-radius: 20px;
   background-color: #ffffff;
+  border:2px solid black;
   color:#4e687f;
 
   top:30px;
   bottom:30px;
 
-  left:2%;
-  width:70%;
-  position:relative;
-}
+  position:absolute;
+  z-index: 2;
+} 
+
 
 #rect_droite{
-  border-radius: 20px;
-  background-color: #ffffff;
-  color:#4e687f;
+  right: 8vw;
+  
+  width:21vw;
+  height: 91vh;
+
+  max-width: 90%;
+  position: absolute;
   text-align: center;
 
-  top:30px;
-  bottom:30px;
-  
-  width:24%;
-  right: 2%;
-  position:relative;
+}
+
+/* Dans le rectangle de droite */
+
+#logo{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.credits_logo{
+  position: relative;
+  height: auto;
+  max-width: 80%;
+  height: 10%;
+}
+
+#logo_hyblab{
+  top:2%;
+  width: 80%;
+  height: auto;
+  z-index: 3;
+}
+#logo_audencia{
+  top:3%;
+  width: 90%;
+  height: auto;
+  z-index: 2;
+}
+
+#logo_polytech{
+  top:3%;
+  width: 90%;
+  height: auto;
+}
+
+#logo_agr{
+  top: 3%;
+  width: 50%;
+  height: auto;
+}
+
+
+#credits_noms{
+  margin-right: auto;
+  margin-left: auto;
+  top: 58%;
+  left:5%;
+  right:5%;
+  position: absolute;
+  color:red;
+}
+
+#credits_sources{
+  margin-right: auto;
+  margin-left: auto;
+  top:68%;
+  left:5%;
+  right:5%;
+  position: absolute;
+}
+
+ul{
+  list-style-type: none;
+}
+
+
+#rect_gauche{
+  left:8vw;
+
+  width:61vw;
+  height: 91vh;
 }
 
 /* A supprimer */

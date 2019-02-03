@@ -1,10 +1,10 @@
 'use strict';
 
 
-var mySVGsToInject = document.querySelectorAll('.circuit');
-SVGInjector(mySVGsToInject, null, function(){
-  $("#bouton_accueil").fadeIn();
-});
+// var mySVGsToInject = document.querySelectorAll('.circuit');
+// SVGInjector(mySVGsToInject, null, function(){
+//   $("#bouton_accueil").fadeIn();
+// });
 
 // infos sur les circuits
 var liste_infos_circuit = charger_donnees('nom-circuit-info');
