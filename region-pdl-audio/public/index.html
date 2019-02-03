@@ -71,6 +71,13 @@
       </div>
     </div>
     <div class="section" id="welcome">
+      <audio id="audio_brouhaha" preload="true" loop="true" data-autoplay>
+        <source src="./data/brouhaha.mp3">
+      </audio>
+      <script>
+        var audio_brouhaha = document.getElementById('audio_brouhaha');
+        audio_brouhaha.volume = 0.3;
+      </script>
       <div id="welcome_left" class="welcome_block">
         <p id="conseil_regional_title">Le conseil régional</p>
         <p id="description_conseil_regional_partie_1">
@@ -167,7 +174,8 @@
         <div id="enregistrement_intro">
           <h1>Zoom sur les <span class="h1_highlight">archives sonores</span></h1>
           <p class="intro">
-            Pendant 20 ans, le conseil régional enregistre un total de <span class="nb_fichier_audio"></span> enregistrements audios,
+            Pendant 20 ans, le conseil régional enregistre un total de <span class="nb_fichier_audio"></span>
+            enregistrements audios,
             et tient <span class="nb_reunion"></span> réunions.
           </p>
           <div class="separator"></div>
@@ -298,8 +306,8 @@
             <span id="total-time_end">--:--</span>
           </div>
           <div id="recueil_info">
-            <a href="http://www.paysdelaloire.fr/no_cache/pages-speciales/menu-bas/contacts/" target="_blank"><img id="picto_mail" src="img/picto_mail.svg"
-                alt="Picto du mail" /> </a>
+            <a href="http://www.paysdelaloire.fr/no_cache/pages-speciales/menu-bas/contacts/" target="_blank"><img id="picto_mail"
+                src="img/picto_mail.svg" alt="Picto du mail" /> </a>
             <p id="mail_field">
               Pour être informé en premier</br>
               du lancement de cette</br>
