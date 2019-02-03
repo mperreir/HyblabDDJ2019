@@ -93,20 +93,19 @@ body{
 
 .reponse{
   height: 5vh;
+  width:auto;
   position: absolute;
 }
 
 #reponse1{
   top: 31vh;
   left: 59vw;
-  width: 9vw;
   cursor:pointer;
 }
 
 #reponse2{
   top: 58vh;
   left: 59vw;
-  width: 9vw;
   display:none;
   cursor:pointer;
 }
