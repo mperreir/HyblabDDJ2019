@@ -7,23 +7,11 @@ var http = require('http');
 var app = express();
 let fs = require('fs');
 let fastcsv = require('fast-csv');
-
-let readableStreamInput = fs.createReadStream('./public/data/musicdata.csv');
-//let readableStreamInput = fs.createReadStream('./music-data/public/data/musicdata.csv');
+let readableStreamInput = fs.createReadStream('public/data/musicdata.csv');
 let csvData = [];
 let genremusicales=[];
 let k=0;
-
 app.use(express.static(path.join(__dirname, 'public')));
-/*http.createServer(function(req, res){
-    if (req.url === '/') {
-        res.writeHead(200, {'Content-Type': 'text/html'});
-        fs.createReadStream('public/index.html').pipe(res);
-    } else if (req.url === '/tracks') {
-      res.writeHead(200, {'Content-Type': 'text/html'});
-      fs.createReadStream('public/tracks.html').pipe(res);
-}
-}).listen(3000);*/
 app.listen(3000, function(req, res) {
   console.log('en ecoute sur le port 3000');
 });
@@ -82,6 +70,7 @@ if(k==1){
     app.get('/Genres', function(req,resp){
 
     let genremusicales=[];
+    let row={};
 
       if(k==1){
 
@@ -90,6 +79,7 @@ if(k==1){
 
           if(! genremusicales.includes(csvData[i].Genre))
           {
+              //row["Genre"]=csvData[i].Genre;
 
             genremusicales.push(csvData[i].Genre);
           }
@@ -120,6 +110,7 @@ app.get('/tracks/:genre', function(req,resp){
               rowData["id"]=csvData[i].id;
               rowData["x1"] = csvData[i].Name;
               rowData["y1"] = csvData[i].Tracks;
+              rowData["z1"] = csvData[i].Followers;
               tracksgenre.push(rowData);
               rowData={};
 
@@ -159,6 +150,7 @@ app.get('/followers/:genre', function(req,resp){
               rowData["id"]=csvData[i].id;
               rowData["x1"] = csvData[i].Name;
               rowData["y1"] = csvData[i].Followers;
+              rowData["z1"] = csvData[i].Tracks;
               followersgenre.push(rowData);
               rowData={};
 
@@ -237,6 +229,7 @@ app.get('/blogs/:id', function(req,resp){
   }
 
 });
+
 module.exports = app;
 /*
 
@@ -325,3 +318,4 @@ let genrefollowers=[];
 
 
 */
+// function que
