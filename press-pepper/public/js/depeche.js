@@ -10979,7 +10979,6 @@ function depeche_cache(){
 	//il faut effacer le contenu et mettre en hidden (facile)
 	document.getElementById('titre_depeche').removeChild(document.getElementById('titre_depeche').childNodes[0]);
 	document.getElementById('corps_depeche').removeChild(document.getElementById('corps_depeche').childNodes[0]);
-	document.getElementById('corps_depeche').removeChild(document.getElementById('date_depeche').childNodes[0]);
-
+	document.getElementById('date_depeche').removeChild(document.getElementById('date_depeche').childNodes[0]);
 	document.getElementById("depeche").style.visibility="hidden";
 }
