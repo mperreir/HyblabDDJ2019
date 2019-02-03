@@ -1,0 +1,8 @@
+Dans le dossier air pdl1
+lancer le server avec :
+$ npm install
+puis :
+$ pm2 start server.js --name MonApp
+
+site avec idées : 
+https://codepen.io/#

@@ -1,3 +1,4 @@
+
 h1 {
   color:white;
   font-family: 'Roboto', sans-serif;
@@ -137,3 +138,22 @@ canvas{
 #reponse_ville{
   visibility: hidden;
 }
+
+/* just a sample css rule to show that everything works */
+footer p
+{
+  font-size: small;
+  text-align: center;
+}
+
+header{
+  text-align: center;
+}
+
+header img{
+  max-width: 100%;
+	height: auto;
+}
+
+
+
