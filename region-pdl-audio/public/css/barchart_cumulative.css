@@ -83,7 +83,6 @@ figure {
     opacity: 1;
     transition: opacity, .3s ease;
     cursor: pointer;
-    border-radius: 0 5px 5px 0;
 }
 
 .block_cumulative:nth-of-type(1), #legend_cumulative li:nth-of-type(1):before {
@@ -130,8 +129,12 @@ figure {
     background-color: #9FADB7;
 }
 
+.block_cumulative:nth-of-type(11) {
+    border-radius: 0 5px 5px 0;
+}
+
 .block_cumulative:hover {
-    opacity: .65;
+    opacity: .5;
 }
 
 .value_cumulative {
@@ -168,6 +171,7 @@ figure {
     width: 1.8vw;
     height: 3.3vh;
     background-color: #334D5C;
+    border-radius: 5px 5px 5px 5px;
 }
 
 @media screen and (min-width: 768px) {
@@ -189,7 +193,6 @@ figure {
     font-size: 1.3vw;
 }
 
-.ui-widget.ui-widget-content{
+.ui-widget.ui-widget-content {
     border: none;
 }
-

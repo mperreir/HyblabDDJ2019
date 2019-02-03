@@ -6,6 +6,7 @@ var selected_period_reunion = 0;
 var selected_period_type_reunion = [false, false, false];
 var k7_audio_played = [-1, -1, -1];
 var selected_period_theme_reunion = [true, false, false];
+var count_end = [true, true, true, true, true, true, true];
 
 $('#fullpage').fullpage({
     scrollingSpeed: 1000,
@@ -46,6 +47,25 @@ $('#fullpage').fullpage({
             var arrowDown = document.querySelector('.arrowDown');
             arrowDown.style.visibility = 'visible';
         }
+
+        $('.count_' + nextInd).each(function () {
+            if (count_end[nextInd - 1]) {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).attr('value')
+                }, {
+                        duration: 4000,
+                        easing: 'swing',
+                        step: function (now) {                            
+                            $(this).text(Math.ceil(now));
+                        },
+                        done: function () {
+                            count_end[nextInd - 1] = true;
+                        }
+                    });
+            }
+        });
+        
+        count_end[nextInd - 1] = false;
     }
 });
 
@@ -69,18 +89,23 @@ fetch('data/stats_audio')
     .then(function (json) {
         document.querySelectorAll('.nb_fichier_audio').forEach(element => {
             element.textContent = json.nb_fichier_audio;
+            element.setAttribute('value', json.nb_fichier_audio);
         });
         document.querySelectorAll('.nb_reunion').forEach(element => {
             element.textContent = json.nb_reunion;
+            element.setAttribute('value', json.nb_reunion);
         });
         document.querySelectorAll('.date_min').forEach(element => {
             element.textContent = json.date_min;
+            element.setAttribute('value', json.date_min);
         });
         document.querySelectorAll('.date_max').forEach(element => {
             element.textContent = json.date_max;
+            element.setAttribute('value', json.date_max);
         });
         document.querySelectorAll('.duree_audio').forEach(element => {
             element.textContent = json.heures * 60 + json.minutes;
+            element.setAttribute('value', json.heures * 60 + json.minutes);
         });
     });
 
@@ -723,7 +748,13 @@ function graph_update_type_reunion() {
                 parent.removeChild(parent.firstChild);
             }
 
-            for (var key in data) {
+            var cle = Object.keys(data);
+            if ((cle.indexOf('Non référencé') > -1)) {
+                cle.splice(cle.indexOf('Non référencé'), 1);
+                cle.push('Non référencé')
+            }
+            for (var i in cle) {
+                var key = cle[i];
                 var div_row = document.createElement('div');
                 var span_label = document.createElement('span');
                 var div_bar_wrap = document.createElement('div');
@@ -991,7 +1022,7 @@ function graph_update_theme() {
             $('.block_cumulative').tooltip({
                 position: {
                     my: "center bottom",
-                    at: "center top"
+                    at: "right top"
                 }
             });
             graph_update_theme_show(0);
@@ -1003,11 +1034,11 @@ function graph_update_theme() {
 
 function graph_update_theme_show(id) {
     if (selected_period_theme_reunion[id]) {
-        $('#chart_cumulative_num_' + id).css('-webkit-animation', 'expand 1.5s ease forwards');
+        $('#chart_cumulative_num_' + id).css('-webkit-animation', 'expand 1s ease forwards');
     }
     else {
         if ($('#chart_cumulative_num_' + id).width() != 0) {
-            $('#chart_cumulative_num_' + id).css('-webkit-animation', 'contract 1.5s ease forwards');
+            $('#chart_cumulative_num_' + id).css('-webkit-animation', 'contract 1s ease forwards');
         }
     }
 }
