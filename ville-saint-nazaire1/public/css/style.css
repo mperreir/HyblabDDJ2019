@@ -440,10 +440,8 @@ input[type=range]::-ms-fill-lower {
 #bouton_retour{
   top:85px;
   left:35vw;
-
   height: 50px;
   width: 120px;
-
   position: fixed;
   font-size: 16px;
   z-index: 7;
@@ -536,6 +534,7 @@ input[type=range]::-ms-fill-lower {
   text-align: left;
 }
 
+<<<<<<< HEAD
 #fond_image{
   top: 0%;
   left: auto;
@@ -571,3 +570,24 @@ input[type=range]::-ms-fill-lower {
   position:relative;
 
 }
+=======
+#bouton_pdf{
+  margin-left:1.5vw;
+  width:80%;
+  float:left;
+  position: relative;
+  z-index: 7;
+  cursor:pointer;
+}
+
+#bouton_credits{
+  right:1vh;
+  bottom:1vh;
+  position: absolute;
+  z-index: 7;
+  cursor:pointer;
+  height: 50px;
+  width: 110px;
+  font-size: 16px;
+}
+>>>>>>> f185b3273b5b91525032ef269f9eee7532c4b616
