@@ -342,7 +342,7 @@ body.fp-viewing-2ndPage #fp-nav {
 	top: 5.8%;
 	left: 11.8%;
 	color: #FFFFFF;
-	font-family: 'Ubuntu';
+	font-family: 'Zilla Slab';
 	font-weight: 400;
 	font-size: 2.4vw;
 	text-align: justify;
@@ -410,13 +410,13 @@ body.fp-viewing-2ndPage #fp-nav {
 #description_archive_duree {
 	position: absolute;
 	top: 18%;
-	right: 37%;
+	right: 35.5%;
 	width: 18.55vw;
 	height: 6vh;
 	color: #FFFFFF;
 	font-family: "Zilla Slab";
 	font-weight: 400;
-	font-size: 2.3vw;
+	font-size: 2.1vw;
 }
 
 #description_archive_nb_audio {
@@ -426,12 +426,12 @@ body.fp-viewing-2ndPage #fp-nav {
 	color: #FFFFFF;
 	font-family: "Zilla Slab";
 	font-weight: 400;
-	font-size: 2.3vw;
+	font-size: 2.1vw;
 }
 
 #description_archive_nb_audio #bande_magnetique {
 	width: 6.1vw;
-	height: 12vh;
+	height: 10vh;
 }
 
 #description_archive_duree span, #description_archive_nb_audio span {
@@ -652,7 +652,7 @@ h1 .h1_highlight {
 	box-sizing: border-box;
 	height: 0.5px;
 	width: auto;
-	border: 0.20vh solid #512C51;
+	border: 1px solid #512C51;
 	background-color: #512C51;
 	border-radius: 10px;
 }
@@ -882,10 +882,10 @@ h1 .h1_highlight {
 
 #bobine_theme_periode_1 {
 	position: absolute;
-	left: -6%;
+	left: -7%;
 	bottom: 65%;
 	height: 18.3vh;
-	width: 10vw;
+	width: 9vw;
 	z-index: 10;
 }
 
@@ -897,10 +897,10 @@ h1 .h1_highlight {
 
 #bobine_theme_periode_2 {
 	position: absolute;
-	left: -6%;
+	left: -7%;
 	bottom: 34%;
 	height: 18.3vh;
-	width: 10vw;
+	width: 9vw;
 	z-index: 10;
 }
 
@@ -912,10 +912,10 @@ h1 .h1_highlight {
 
 #bobine_theme_periode_3 {
 	position: absolute;
-	left: -6%;
+	left: -7%;
 	bottom: 3%;
 	height: 18.3vh;
-	width: 10vw;
+	width: 9vw;
 	z-index: 10;
 }
 
@@ -1054,8 +1054,8 @@ h1 .h1_highlight {
 #marto {
 	position: absolute;
 	right: 18%;
-	top: 0;
-	height: 47.1vh;
+	top: 5%;
+	height: 40vh;
 	width: auto;
 }
 
@@ -1188,7 +1188,7 @@ h1 .h1_highlight {
 
 #bandeau {
 	position: absolute;
-	bottom: 8%;
+	bottom: 0%;
 	left: 5%;
 	padding: 8px;
 }
@@ -1201,11 +1201,21 @@ h1 .h1_highlight {
 }
 
 #bandeau img {
-	height: 4.2vh;
+	height: 5vh;
 	width: auto;
 }
 
 #bandeau ul {
 	text-align: center;
 	padding: 0 0;
+	margin-bottom: 50px;
+}
+
+#bloc_noms a {
+	text-decoration: none;
+	color: #512C51;
+}
+
+#bloc_noms a:hover {
+	font-weight: 700;
 }
