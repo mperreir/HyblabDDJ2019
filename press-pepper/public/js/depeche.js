@@ -10937,7 +10937,7 @@ retour = retour+'</div>'
 return(retour);
 }
 function populate_html_all(ville){
-var retour = '<div id="Popo" style="overflow-y:scroll;max-height:300px;"><strong>'+ville+'   Selectionnez un article pour en lire plus</strong><br>';
+var retour = '<div id="Popo" style="overflow-y:scroll;max-height:300px;"><strong>'+ville+'</strong><br><p>Selectionnez un article pour en lire plus</p>';
 	// afficher le nom de la ville, le nom du contentieux (balises strong?)
 	//get tous les id associés à ces critères
 	//supprimer doublons
