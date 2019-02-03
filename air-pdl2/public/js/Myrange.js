@@ -48,14 +48,14 @@ function ran(){
 
 //changer le up and down of the progress
     var oDiv = document.getElementById("bar");
-    oDiv.style.width =100*myr[aa]/100 + "%";
+    oDiv.style.width =100*(1-myr[aa]/100) + "%";
 
 //changer la nuit et le journee
     if(aa>19||aa<8){
         $("#r").css({
-            "background": "url(./img/rural_n.png) no-repeat center",
+            "background": "url(./img/RuralNuit31janvier@2x.png) no-repeat center",
             "height": "100%",
-            "background-size": "contain"
+            "background-size": "cover"
         });
 
         $(".theme-blue .back-bar ").css({
@@ -72,9 +72,9 @@ function ran(){
     }
     if(aa>8&&aa<19){
         $("#r").css({
-            "background": "url(./img/rural_j.png) no-repeat center",
+            "background": "url(./img/RuralJour31janvier@2x.png) no-repeat center",
             "height": "100%",
-            "background-size": "contain"
+            "background-size": "cover"
         });
         $(".theme-blue .back-bar ").css({
             "height": "15px",//改变高度
@@ -97,13 +97,13 @@ function ran2(){
 
 //changer le up and down of the progress
     var oDiv2 = document.getElementById("bar2");
-    oDiv2.style.width =100*myu[aa2]/100 + "%";
+    oDiv2.style.width =100*(1-myu[aa2]/100) + "%";
 
     if(aa2>19||aa2<8){
         $("#ur").css({
-            "background": "url(./img/urban_n.png) no-repeat center",
+            "background": "url(./img/UrbainNuit29janvier@2x.png) no-repeat center",
             "height": "100%",
-            "background-size": "contain"
+            "background-size": "cover"
         });
 
         $(".theme-blue .back-bar ").css({
@@ -120,9 +120,9 @@ function ran2(){
     }
     if(aa2>8&&aa2<19){
         $("#ur").css({
-            "background": "url(./img/urban_j.png) no-repeat center",
+            "background": "url(./img/urban_jb.png) no-repeat center",
             "height": "100%",
-            "background-size": "contain"
+            "background-size": "cover"
         });
         $(".theme-blue .back-bar ").css({
             "height": "15px",//改变高度
@@ -145,13 +145,13 @@ function ran3(){
 
 //changer le up and down of the progress
     var oDiv3 = document.getElementById("bar3");
-    oDiv3.style.width =100*myt[aa3]/100 + "%";
+    oDiv3.style.width =100*(1-myt[aa3]/100) + "%";
 
     if(aa3>19||aa3<8){
         $("#tr").css({
-            "background": "url(./img/traffic_n.png) no-repeat center",
+            "background": "url(./img/TraficNuit29janvier@2x.png) no-repeat center",
             "height": "100%",
-            "background-size": "contain"
+            "background-size": "cover"
         });
 
         $(".theme-blue .back-bar ").css({
@@ -168,9 +168,9 @@ function ran3(){
     }
     if(aa3>8&&aa3<19){
         $("#tr").css({
-            "background": "url(./img/traffic_j.png) no-repeat center",
+            "background": "url(./img/TraficJour29janvier@2x.png) no-repeat center",
             "height": "100%",
-            "background-size": "contain"
+            "background-size": "cover"
         });
         $(".theme-blue .back-bar ").css({
             "height": "15px",//改变高度

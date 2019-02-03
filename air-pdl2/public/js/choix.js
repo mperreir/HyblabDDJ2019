@@ -11,18 +11,18 @@ $('#rural').on('click',
 $('#ville').on('click',
     function () {
         passageVille = true;
-        $('#carousel-example-generic').carousel(4);
+        $('#carousel-example-generic').carousel(5);
     });
 
 $('#trafic').on('click',
     function () {
         passageTraffic = true;
-        $('#carousel-example-generic').carousel(5);
+        $('#carousel-example-generic').carousel(6);
     });
 
 $('.button').on('click',
     function () {
-            $('#carousel-example-generic').carousel(2);
+        $('#carousel-example-generic').carousel(3);
     });
 
 $('.svga1Button').on('click',
