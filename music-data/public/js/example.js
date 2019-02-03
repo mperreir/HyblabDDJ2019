@@ -1,7 +1,11 @@
 'use strict';
 let datafollowers=[];
 let datatracks=[];
-let tabGenresmusicaux=[];
+let Tabpays=[];
+let arr=[];
+$("#selectcontry").hide();
+$('#bloginformations').hide();
+
 // fonction de trie des elements
 function sortByy1(key1, key2){
   var x= parseInt(key1.y1);
@@ -51,13 +55,16 @@ function GetAllData()
           .then(function (json) {
 
                 datatracks=json;
-               $('#menu').append("<button id='followers' class='buttonmenu' value="+key+"> Followers/Blogs/"+ key + "</button><br>");
-               $('#menu').append("<button id='artistes' class='buttonmenu' value="+key+"> Artistes/Blogs/"+ key + "</button><br>");
+                $('#menu').append('<div class="rectangle-path4"></div>');
+                $('#menu').append('<button class="rectangle-path" > Nombre de bars</button>');
+               $('#menu').append('<button  class="rectangle-path"> Tracks</button>');
+               $('#menu').append('<button class="rectangle-path2" id="followers"  value='+key+'>Followers</button>');
+
                AfficherCursseur("#trackspourungenre",datatracks);
                creehistogram("#trackspourungenre",json,20);
-               //"reflettrackspourungenre",
+
                creehistogramReflet("#trackspourungenreReflet",json,20);
-               $('#menu').append("<button id='retour' class='buttonmenu'> Retour à l'ensemble des Genres </button>");
+
                $(document).on("click", "#retour", function(){
                   $('.slidecontainer').empty();
                 $('#geresmusicales').show();
@@ -66,6 +73,8 @@ function GetAllData()
                 $('#artistespourungenre').empty();
                 $("#menu").empty();
                 $("#bloginformations").empty();
+                $("#bloginformations").hide();
+                $("#selectcontry").hide();
 
 
 
@@ -103,9 +112,12 @@ function GetAllData()
                       AfficherCursseur("#followerspourungenre",datafollowers);
                       creehistogram("#followerspourungenre",data,20);
                       creehistogramReflet("#followerspourungenreReflet",data,20);
-                      $('#menu').append("<button id='tracks' class='buttonmenu' value="+key+"> Tracks/Blogs/"+ key + "</button><br>");
-                      $('#menu').append("<button id='artistes' class='buttonmenu' value="+key+"> Artistes/Blogs/"+ key + "</button><br>");
-                      $('#menu').append("<button id='retour' class='buttonmenu'> Retour à l'ensemble des Genres </button>");
+                     $('#menu').append('<div class="rectangle-path4"></div>');
+                     $('#menu').append('<button class="rectangle-path3">Nombre de Bars</button>');
+                     $('#menu').append('<button id="tracks" class="rectangle-path" value='+key+'> Tracks</button>');
+                     $('#menu').append('<button class="rectangle-path">Followers</button>');
+
+                      //$('#menu').append("<button id='retour' class='buttonmenu'> Retour à l'ensemble des Genres </button>");
 
                       $(document).on("click", "#retour", function(){
                        $('.slidecontainer').empty();
@@ -115,6 +127,8 @@ function GetAllData()
                        $('#artistespourungenre').empty();
                        $("#menu").empty();
                        $("#bloginformations").empty();
+                       $("#bloginformations").hide();
+                       $("#selectcontry").hide();
 
 
                     });
@@ -165,6 +179,7 @@ function GetAllData()
                               $("#followerspourungenre").empty();
                               $("#trackspourungenre").empty();
                               $("#menu").empty();
+                              $("#selectcontry").hide();
 
 
                            });
@@ -174,6 +189,7 @@ function GetAllData()
     // les genres  accompagnés par leurs nombre de blogs
     function GetGenres()
     {
+      $("#selectcontry").hide();
       fetch('/BlogParGenre/')
           .then(function (response){
               if( response.ok )
@@ -192,7 +208,9 @@ function GetAllData()
                //$('.slidecontainer').hide();
                $.each( json, function( key, val ) {
                  // ici je vais affcher l'ensemble des genre accompagnés chacun par le nombre de blog qui le contient
+                 //key ==> le id de genre
                  $('#geresmusicales').append("<button id= "+ escape(key)+ ">"+key+"</button>");
+                 //le nombre de blog pour ce genre
                  $('#geresmusicales').append(" le nombre de blogs est " + val +  "<br>");
 
                  //var k="#" + key;
@@ -230,6 +248,14 @@ function GetAllData()
              .then(function (json) {
                   console.log(json);
                   var cles = Object.keys(json[0]);
+                  $('#bloginformations').show();
+                  $('#bloginformations').append('Name : '+json[0]["Name"]+'<br>');
+                  $('#bloginformations').append('Followers : '+json[0]["Followers"]+'<br>');
+                  $('#bloginformations').append('Tracks : '+json[0]["Tracks"]+'<br>');
+                  $('#bloginformations').append('Contry : '+json[0]["Contry"]+'<br>');
+
+                  //la je ferai ce que je veux
+                  /*
                   $('#bloginformations').append('<table>' );
                   $('#bloginformations').append('<tr>' );
                   for(var i=0;i<cles.length;i++){
@@ -242,7 +268,8 @@ function GetAllData()
                 $('#bloginformations').append( '<td>' +  json[0][v]+ '</td>' );
                 }
                 $('#bloginformations').append('</tr>' );
-                $('#bloginformations').append(  '</table>' );
+                $('#bloginformations').append(  '</table>' );*/
+
                 });
                        }
 
@@ -253,11 +280,13 @@ function GetAllData()
         var x = $(this).attr("value");
         console.log("x",x);
           $('.slidecontainer').empty();
+          $("#bloginformations").hide();
           $("#bloginformations").empty();
           $('#trackspourungenre').empty();
           $('#artistespourungenre').empty();
-            $("#trackspourungenreReflet").empty();
+          $("#trackspourungenreReflet").empty();
           $("#menu").empty();
+          //$("#selectcontry").show();
           followersdesblog(x);
 
 
@@ -268,10 +297,11 @@ function GetAllData()
       console.log("x",x);
       $('.slidecontainer').empty();
       $("#bloginformations").empty();
+      $("#bloginformations").hide();
       $('#followerspourungenre').empty();
       $('#artistespourungenre').empty();
-        $("#followerspourungenreReflet").empty();
-      $("#menu").empty();
+        $('#followerspourungenreReflet').empty();
+      $('#menu').empty();
       tracksdesblog(x);
 
 
@@ -279,7 +309,7 @@ function GetAllData()
 $(document).on("click", "#artistes", function(){
     var x = $(this).attr("value");
     console.log("x",x);
-
+      $("#bloginformations").hide();
       $("#bloginformations").empty();
     $('#followerspourungenre').empty();
     $('#trackspourungenre').empty();
@@ -384,7 +414,7 @@ function creehistogram(id,data1,val)
           function() {
             $("#bloginformations").empty();
             var x = $(this).attr("id");
-            console.log("x",x);
+            console.log("blog info",x);
             bloginformations(x);
       }, function() {
       console.log("rien");
@@ -401,23 +431,9 @@ function AfficherCursseur(zone,data)
 {
   var dataactuelle;
 let rowData = {};
-$('#selectcontry').append('<select id="cars" size="2" multiple>');
-/*for(var i=0;i<tabGenresmusicaux.length;i++)
-{
-  if(i < (tabGenresmusicaux.length-1))
-  {
-    $('#selectcontry').append('<option value='+tabGenresmusicaux[i]+'>'+tabGenresmusicaux[i]+'</option>');
-    console.log("pas encore");
-  }
 
+$("#selectcontry").show();
 
-  else{
-    $('#selectcontry').append('<option value='+tabGenresmusicaux[i]+'>'+tabGenresmusicaux[i]+'</option></select>');
-
-
-  }
-
-}*/
 
 
 
@@ -425,8 +441,7 @@ $('#selectcontry').append('<select id="cars" size="2" multiple>');
   $('.slidecontainer').append('<div class="rectangle-path2"><p id="valeurdeslider2">0</p><input type="range" id="slider2" class="slider" min="0" max="23000" value="0"></div>');
 
   $('.slidecontainer').append('<div class="rectangle-path3"><p id="valeurdeslider3">0</p><input type="range" id="slider3" class="slider" min="0" max="10000" value="0"></div>');
-$('#slider2').on('click', function () {
-
+  $('#slider2').on('click', function () {
   $('#valeurdeslider2').empty();
     $('#valeurdeslider2').append($(this).val());
 });
@@ -436,19 +451,18 @@ $('#slider3').on('click', function () {
     $('#valeurdeslider3').append($(this).val());
 });
   $('#slider').on('click', function () {
+    console.log("arr",arr);
     $('#valeurdeslider1').empty();
       $('#valeurdeslider1').append($(this).val());
     var newval=$(this).val();
     var mintracks=parseInt($('#slider2').val());
     var minfollowers=parseInt($('#slider3').val());
-    console.log("min tracks",mintracks);
-    console.log("min followers",minfollowers);
-    //alert(newval);
+
     $(zone).empty();
     var reflet=zone + "Reflet";
-    console.log("reflet",reflet);
+
     $(reflet).empty();
-    console.log(zone,data);
+
 
     //pareil on travail sur une copie des donnéelse
 var copiedata=JSON.parse(JSON.stringify(data));
@@ -459,42 +473,83 @@ var copiedata=JSON.parse(JSON.stringify(data));
       let row={};
       Object.keys(copiedata[i]).forEach(current_key => {
       rowData[current_key] = copiedata[i][current_key];
-      console.log(current_key,copiedata[i][current_key]);
+
 
       });
-      if(zone == "#trackspourungenre")
-      {
-        if(rowData["y1"]>= mintracks && rowData["z1"] >= minfollowers)
-      {
-        //console.log();
-        donnee.push(rowData);
-      }
+      //console.log("pays", rowData["pays"]);
+      console.log("arr444", arr);
+if(arr.includes("All"))
+{
+  if(zone == "#trackspourungenre")
+  {
+    if(rowData["y1"]>= mintracks && rowData["z1"] >= minfollowers)
+  {
+    //console.log();
+    donnee.push(rowData);
+  }
+}
+  else{
+    if(rowData["z1"]>= mintracks && rowData["y1"] >= minfollowers)
+  {
+    //console.log();
+    donnee.push(rowData);
+  }
+  }
+}
+    else{
+      if(arr.includes(rowData["pays"]))
+        {
+          console.log("pays inclue");
+          if(zone == "#trackspourungenre")
+          {
+            if(rowData["y1"]>= mintracks && rowData["z1"] >= minfollowers)
+          {
+            //console.log();
+            donnee.push(rowData);
+          }
+        }
+          else{
+            if(rowData["z1"]>= mintracks && rowData["y1"] >= minfollowers)
+          {
+            //console.log();
+            donnee.push(rowData);
+          }
+          }
+        }
     }
-      else{
-        if(rowData["z1"]>= mintracks && rowData["y1"] >= minfollowers)
-      {
-        //console.log();
-        donnee.push(rowData);
-      }
-      }
+
     }
-    console.log("donnee à traitée sur l histo", donnee);
-    //je traite les données
 
 
+if(donnee.length == 0)
+{
+  alert("il n'a aucune donnée avec ces choix");
+  $('#bloginformations').empty();
+}
+else{
+  creehistogram(zone,donnee,parseInt(newval));
+  //creehistogramReflet
 
-    creehistogram(zone,donnee,parseInt(newval));
-    //creehistogramReflet
 
+  creehistogramReflet(reflet,donnee,parseInt(newval));
+}
 
-    creehistogramReflet(reflet,donnee,parseInt(newval));
     donnee=[];
 
 });
-$('#cars').change(function(){
-  var arr = $(this).val();
-  console.log(arr)
+$('#selectcontry').change(function(){
+  arr=[];
+  console.log(arr);
+  $(this).val().forEach(function(element)
+  {
+  console.log("element",element);
+  arr.push(element);
+}
+);
+
+
 });
+
 
 }
 
@@ -570,9 +625,9 @@ function creehistogramReflet(id,data1,val)
         .attr("height", function(d) { if(y(d.y1)>0){return y(d.y1);} else{ return 0.75 ;} })
 
 }
-function Genresmusicaux()
+function Getpays()
 {
-  fetch('/Genres/')
+  fetch('/pays/')
       .then(function (response){
           if( response.ok )
           {
@@ -586,15 +641,21 @@ function Genresmusicaux()
           return {data: "Invalid JSON"};
       })
       .then(function (json) {
-           console.log(json);
-           console.log("genre musicaux",json.length);
+        $("#selectcontry").append('<option value="All">All</option>');
            for(var i=0;i<json.length;i++)
            {
 
-             tabGenresmusicaux[i]=json[i];
-              console.log("genre",tabGenresmusicaux[i]);
+             Tabpays.push(json[i]);
+             $("#selectcontry").append('<option value='+json[i]+'>'+json[i] + '</option>');
+            //  console.log("genre",Tabpays[i]);
            }
+
+
+           $("#selectcontry").hide();
+
+           console.log("pays tab",Tabpays);
       });
 
+
 }
-  Genresmusicaux();
+  Getpays();
