@@ -535,3 +535,39 @@ input[type=range]::-ms-fill-lower {
   font-size: 18px;
   text-align: left;
 }
+
+#fond_image{
+  top: 0%;
+  left: auto;
+  height: 100vh;
+  width: auto;
+}
+
+#rect_gauche{
+  border-radius: 20px;
+  background-color: #ffffff;
+  color:#4e687f;
+
+  top:30px;
+  bottom:30px;
+
+  left:2%;
+  width:70%;
+  position:relative;
+
+}
+
+#rect_droite{
+  border-radius: 20px;
+  background-color: #ffffff;
+  color:#4e687f;
+  text-align: center;
+
+  top:30px;
+  bottom:30px;
+  
+  width:24%;
+  right: 2%;
+  position:relative;
+
+}
