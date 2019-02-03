@@ -551,42 +551,159 @@ input[type=range]::-ms-fill-lower {
 #page_credits{
   position: absolute;
   display: none;
+  width:100vw;
+  height:100vh;
+  overflow: hidden;
 }
 
 #fond_image{
   position:relative;
-  height:99vh;
+  float:center;
+  height:100vh;
   width:auto;
   z-index:1;
-  margin-left:auto;
-  margin-right:auto;
 }
 
 #rect_gauche{
+  position:absolute;
   border-radius: 20px;
   background-color: #ffffff;
   color:#4e687f;
 
-  top:30px;
-  bottom:30px;
+  top:4vh;
+  bottom:4vh;
 
-  left:2%;
-  width:70%;
-  position:relative;
+  left:8vw;
+  width:61vw;
+  height:91vh;
+  z-index:3;
+
+  border-radius: 50px;
+  border:3px solid black;
 }
 
 #rect_droite{
+  position:absolute;
   border-radius: 20px;
   background-color: #ffffff;
   color:#4e687f;
   text-align: center;
+  float:right;
+  top:4vh;
+  bottom:4vh;
 
-  top:30px;
-  bottom:30px;
-  
-  width:24%;
-  right: 2%;
+  width:21vw;
+  right:8vw;
+  height:91vh;
+  z-index:2;
+
+  border-radius: 50px;
+  border:3px solid black;
+}
+
+#bouton_retour2{
+  top:10vh;
+  left:10vw;
+  height: 50px;
+  width: 120px;
+  position: fixed;
+  font-size: 16px;
+  z-index: 7;
+}
+
+#logos_gauche{
+  top:8%;
   position:relative;
+  width:100%;
+    height:13vh;
+    z-index:2;
+}
+
+#logo_carene{
+  float:left;
+  height:13vh;
+  width:17vw;
+  z-index:2;
+}
+#logo_st_naz{
+  height:13vh;
+  width:17vw;
+  z-index:2;
+}
+
+#logo_gauche_gauche{
+  text-align: right;
+  position:relative;
+  width:50%;
+  height:15vh;
+  float:left;
+}
+
+#logo_gauche_droite{
+  text-align: left;
+  position:relative;
+  width:50%;
+
+  float:right;
+}
+
+
+#bas_gauche{
+  position:absolute;
+  width:90%;
+  height:100%;
+  top:-38%;
+  left:3vw;
+
+}
+#bas{
+  top:20%;
+  position:absolute;
+  width:100%;
+  height:100%;
+}
+
+#bas_droite{
+  height:30%;
+  top:30%;
+  width:60%;
+  float:right;
+
+}
+
+#reseaux{
+  left:0%;
+  top:50%;
+  position:relative;
+  width:90%;
+  z-index:2;
+}
+
+#bas_louer{
+  position:relative;
+  right:3%;
+  bottom:0%;
+  width:20%;
+  z-index:2;
+}
+
+#louer{
+  width:20%;
+  bottom:5%;
+  right:5%;
+  position:absolute;
+  z-index:2;
+  cursor:pointer;
+}
+
+#video_coucou{
+  position:relative;
+  display:block;
+  bottom:0%;
+  left:1%;
+  width:90%;
+  height:83%;
+  z-index:1;
 }
 
 /* A supprimer */
