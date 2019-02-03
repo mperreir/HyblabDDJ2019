@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="89px" height="99px" viewBox="0 0 89 99" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>367AA175-028D-4216-8487-353758C3F09B@2x</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Intro-2" transform="translate(-122.000000, -271.000000)" stroke="#FF7BAC" stroke-width="2">
+            <g id="illu">
+                <g transform="translate(122.000000, 224.000000)">
+                    <g id="Basse" transform="translate(1.000000, 48.000000)">
+                        <polygon id="Shape" points="86.98 14.89 43.49 29.55 0 14.89 43.49 0.72"></polygon>
+                        <polyline id="Shape" points="86.98 81.94 43.49 96.6 0 81.94"></polyline>
+                        <path d="M43.49,29.55 L43.49,58.12" id="Shape"></path>
+                        <path d="M0,81.94 L0,25.16" id="Shape"></path>
+                        <path d="M7.44,27.41 L7.44,40.62" id="Shape"></path>
+                        <path d="M7.44,49.14 L7.44,55.02" id="Shape"></path>
+                        <ellipse id="Oval" transform="translate(66.244446, 53.536726) rotate(-80.140000) translate(-66.244446, -53.536726) " cx="66.2444461" cy="53.5367264" rx="15.87" ry="9.56"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

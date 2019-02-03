@@ -8,9 +8,9 @@ footer p
 
 body {
   /* background-color: #151515; */
-  background-color: #ffffff;
-  color: black;
-  text-align: center;
+  background-color: #151515;
+  color: white;
+  /* text-align: center; */
 }
 
 /*---------- Section Introduction 1 -----------*/
@@ -27,12 +27,15 @@ header {
 }
 
 #introduction1 {
-  text-align: center;
+  /* text-align: center; */
 }
 
 #wave {
 	height: 34px;
   width: 112px;
+  position: absolute;
+  top: 191px;
+  left: 179px;
 }
 
 #goutte {
@@ -41,36 +44,115 @@ header {
 }
 
 .title {
-  /* height: 52px; */
-  /* width: 688.91px; */
+  height: 52px;
+  width: 688.91px;
   color: #ffffff;
   font-family: Montserrat;
   font-size: 42px;
   font-weight: 900;
   line-height: 52px;
   text-align: center;
+  position: absolute;
+  top: 293px;
+  left: 206px;
 }
 
 .text-intro {
+  height: 87px;
+  width: 452px;
   color: #FFFFFF;
   font-family: Montserrat;
   font-size: 24px;
   font-weight: 200;
   line-height: 29px;
   text-align: center;
+  position: absolute;
+  left: 324.25px;
+  top: 385.28px;
 }
 
 /* -------- Section introduction 2 ----------- */
-
-header img{
-  max-width: 100%;
-	height: auto;
+.intro-2 {	height: 100%;	width: 100%; position: "absolute";}
+.illu {	height: 59.77%;	width: 80.55%; position: "absolute"; left: 11.09%; top: 29.17%;}
+/* -----  images ----- */
+.basse {
+	height: 12.89%;
+	width: 8.09%;
+  left: 11.09%;
+  top: 35.29%;
+  position: absolute;
 }
 
-.buttonmenu {
+.oval {
+	height: 4.43%;
+	width: 3.18%;
   position: absolute;
+  left: 84.09%;
+  top: 62.63%;
+}
 
-   right: 0px;"
-  color: #222222;
+.forme {
+	height: 1.56%;
+	width: 2.55%;
+  position: absolute;
+  top: 77.34%;
+  left: 74.09%;
+}
 
+.forme2 {
+	height: 1.3%;
+	width: 2.36%;
+  position: absolute;
+  top: 52.73%;
+  left: 12.18%;
+}
+
+.shape1-forme2 {
+	box-sizing: border-box;
+	height: 1.22%;
+	width: 0.85%;
+	border: 2px solid #FF7BAC;
+  position: absolute;
+  top: ;
+  left: ;
+}
+
+.micro {
+	height: 13.93%;
+	width: 4.45%;
+  position: absolute;
+  left: 79.64%;
+  top: 70.83%;
+}
+
+.oval2 {
+	box-sizing: border-box;
+	height: 2.31%;
+	width: 1.61%;
+	/*border: 2px solid #FF6A88;*/
+	opacity: 0.3;
+  position: absolute;
+  top: 61.05%;
+  left: 13.95%;
+}
+
+.oval3 {
+	box-sizing: border-box;
+	height: 4.36%;
+	width: 3.05%;
+	/*border: 2px solid #FF6A88;*/
+  position: absolute;
+  top: 58.22%;
+  left: 17.44%;
+}
+
+/* Affichage des genres */
+.onde-electronic {
+  box-sizing: border-box;
+  height: 15.52%;
+  width: 20.76%;
+  position: absolute;
+  top: 34.12%;
+  left: 18.36%;
+  /*border: 1px solid #FFFFFF;*/
 }
