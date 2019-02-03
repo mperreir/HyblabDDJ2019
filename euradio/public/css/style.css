@@ -133,8 +133,8 @@ h4 {
 #partie{
   position: relative;
   display: inline-block;
-  width: 73%;
-  margin-left: 32%;
+  width: 70%;
+  margin-left: 33%;
   margin-top: 1.5%;
 }
 #draggable{
@@ -245,15 +245,15 @@ canvas{
 #partieGauche{
   position: relative;
   display: inline-block;
-  width: 60%;
-  margin-left: 17%;
+  width: 55%;
+  margin-left: 21%;
 
 }
 #partieDroite{
   /*position: absolute;*/
   top:100%;
   display: inline-block;
-  width: 60%;
+  width: 55%;
   margin-left: 20%;
   margin-top: 5%;
 }
@@ -264,7 +264,7 @@ canvas{
   /*left:70%;*/
   cursor: move;
   width: 5%;
-  left: 21.5%;
+  left: 24%;
 }
 #rouge{
   z-index: 100;
@@ -273,7 +273,7 @@ canvas{
   /*left:47%;*/
   cursor: move;
   width: 9%;
-  left: 30%;
+  left: 28%;
 }
 .containerSliderPays{
   width: 80%;

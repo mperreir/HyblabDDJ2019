@@ -396,12 +396,12 @@ document.getElementById('valeurRouge').innerHTML=data[valRouge][donneeAffichee]+
 //fin Graphiques
 $('#rouge').draggable({
   axis: "x",
-  grid: [ 40, 10 ],
+  grid: [ 62, 10 ],
   drag: function( event, ui ) {
     var offset = $(this).offset(); // Avoir les coordonnées du slider
     var xPos = offset.left; //
-    valRouge = parseInt((xPos - xPosRouge)/40)+2;
-    //console.log(valRouge);
+    valRouge = parseInt((xPos - xPosRouge)/60)+2;
+    console.log(valRouge);
     refreshMyLine(myLineChart,data);
   },
   create: function(event,ui){
@@ -411,11 +411,11 @@ $('#rouge').draggable({
 });
 $('#jaune').draggable({
   axis: "x",
-  grid: [ 40, 10 ],
+  grid: [ 62, 10 ],
   drag: function( event, ui ) {
     var offset = $(this).offset(); // Avoir les coordonnées du slider
     var xPos = offset.left; //
-    valJaune = parseInt((xPos - xPosJaune)/40);
+    valJaune = parseInt((xPos - xPosJaune)/62);
     //var chartData2 =
     refreshOtherLine(otherLineChart,data);
 
@@ -445,7 +445,7 @@ function refreshMyLine(chart,data) {
     chart.data.datasets[0].data = [data[valRouge][donneeAffichee],data[valRouge]["recepteur2"]];
     document.getElementById('valeurRouge').innerHTML=data[valRouge][donneeAffichee]+" / "+data[valRouge]["recepteur2"];
   }else{
-    if (data[valRouge]["nomPays"]=="France" && donneeAffichee=="route"){
+    if (((data[valRouge]["nomPays"]=="Belgique"|data[valRouge]["nomPays"]=="Pays-Bas") && donneeAffichee=="maison")|(data[valRouge]["nomPays"]=="France"&donneeAffichee=="route")){
       document.getElementById('valeurRouge').innerHTML="ND";
     }else{
       document.getElementById('valeurRouge').innerHTML=data[valRouge][donneeAffichee]+"%";
@@ -463,7 +463,7 @@ function refreshOtherLine(chart,data) {
     chart.data = reseauJauneData;
     chart.data.datasets[0].data = [data[valJaune][donneeAffichee],100-data[valJaune][donneeAffichee]];
     chart.data.datasets[1].data = [data[valJaune]["reseau2"],100-data[valJaune]["reseau2"]];
-    if (data[valJaune]["nomPays"]=="Pays-Bas"){
+    if (((data[valJaune]["nomPays"]=="Belgique"|data[valJaune]["nomPays"]=="Pays-Bas") && donneeAffichee=="maison")|(data[valJaune]["nomPays"]=="France"&donneeAffichee=="route")){
       document.getElementById('valeurJaune').innerHTML="ND / "+data[valJaune][donneeAffichee]+"%";
     }else{
       document.getElementById('valeurJaune').innerHTML=data[valJaune]["reseau2"]+"% / "+data[valJaune][donneeAffichee]+"%";
@@ -474,7 +474,7 @@ function refreshOtherLine(chart,data) {
     chart.data.datasets[0].data = [data[valJaune][donneeAffichee],data[valJaune]["recepteur2"]];
     document.getElementById('valeurJaune').innerHTML=data[valJaune][donneeAffichee]+" / "+data[valJaune]["recepteur2"];
   }else{
-    if (data[valJaune]["nomPays"]=="France" && donneeAffichee=="route"){
+    if ((data[valJaune]["nomPays"]=="France"|data[valJaune]["nomPays"]=="Belgique"|data[valJaune]["nomPays"]=="Pays-Bas") && donneeAffichee=="maison"){
       document.getElementById('valeurJaune').innerHTML="ND";
     }else{
       document.getElementById('valeurJaune').innerHTML=data[valJaune][donneeAffichee]+"%";
