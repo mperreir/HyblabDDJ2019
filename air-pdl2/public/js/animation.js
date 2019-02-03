@@ -43,12 +43,11 @@ $('#carousel-example-generic').on('slid.bs.carousel', function() {
     }
 
     if(currentIndex===3){
+        $('#perso').hide();
         $('#voiture').hide();
     }
 
     if(currentIndex===4){
-        $('#perso').hide();
-        $('#voiture').hide();
         $('.svg-container').show();
     }
 
