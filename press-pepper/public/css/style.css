@@ -75,3 +75,6 @@ header img{
 {
 	visibility:hidden;
 }
+.mapboxgl-popup-content{
+	visibility:visible;
+}

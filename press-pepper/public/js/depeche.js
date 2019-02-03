@@ -3865,7 +3865,7 @@ var data = [
 {"id":"7218","title":" La justice en passe de confirmer l'annulation du Plan local d'urbanisme d'Yquelon","excerpt":"[COUR ADMINISTRATIVE D'APPEL] Le rapporteur public a suggéré mardi à la cour administrative d'appel de Nantes de confirmer l'annulation du Plan local d'urbanisme (PLU) d'Yquelon (Manche), tel qu'il avait été voté par le conseil municipal le 7 novembre 2016, comme l'avait décidé le tribunal administratif de Caen en décembre 2017. ","cities":["Yquelon"],"theme":["urbanisme"] }
 ];
 function populate_html(ville,theme){
-	var retour = '<div style="overflow-y:scroll;max-height:300px;"><strong>'+ville+'</strong><br><p>'+theme+'</p>';
+	var retour = '<div id = "Popo" style="overflow-y:scroll;max-height:300px;"><strong>'+ville+'</strong><br><p>'+theme+'</p>';
 	// afficher le nom de la ville, le nom du contentieux (balises strong?)
 	//get tous les id associés à ces critères
 	//supprimer doublons
@@ -3874,14 +3874,14 @@ function populate_html(ville,theme){
 	{
 		if (data[i].cities.includes(ville)&&data[i].theme.includes(theme))
 			{
-				retour= retour+'<a onclick="depeche_print('+data[i].title+','+data[i].excerpt+')" style="cursor: pointer;">'+data[i].title+'</a><br>';
+				retour= retour+'<a onclick="depeche_print('+i+')" style="cursor: pointer;">'+data[i].title+'</a><br><br>';
 			}
 	}
 retour = retour+'</div>'
 return(retour);
 }
 function populate_html_all(ville){
-var retour = '<div style="overflow-y:scroll;max-height:300px;"><strong>'+ville+'</strong><br>';
+var retour = '<div id="Popo" style="overflow-y:scroll;max-height:300px;"><strong>'+ville+'</strong><br>';
 	// afficher le nom de la ville, le nom du contentieux (balises strong?)
 	//get tous les id associés à ces critères
 	//supprimer doublons
@@ -3892,7 +3892,7 @@ var retour = '<div style="overflow-y:scroll;max-height:300px;"><strong>'+ville+'
 			{
 				var Titre = data[i].title;
 				var corps = data[i].excerpt;
-				retour= retour+'<a onclick="depeche_print('+i+')" style="cursor: pointer;">'+data[i].title+'</a><br>';
+				retour= retour+'<a onclick="depeche_print('+i+')" style="cursor: pointer;">'+data[i].title+'</a><br><br>';
 			}
 	}
 retour = retour+'</div>'
