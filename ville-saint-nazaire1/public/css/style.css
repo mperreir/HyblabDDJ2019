@@ -93,19 +93,23 @@ body{
 
 .reponse{
   height: 5vh;
-  width: 10vw;
   position: absolute;
+
 }
 
 #reponse1{
   top: 39vh;
   left: 59vw;
+  width: 9vw;
+  cursor:pointer;
 }
 
 #reponse2{
   top: 66vh;
   left: 59vw;
+  width: 9vw;
   display:none;
+  cursor:pointer;
 }
 
 #bouton_presentation{
@@ -332,7 +336,6 @@ input[type=range]::-ms-fill-lower {
     position: relative;
     float:right;
     font-size: 12px;
-    text-transform: uppercase;
     font-family: 'Lato';
     line-height: 12px;
     cursor: pointer;
@@ -437,7 +440,7 @@ input[type=range]::-ms-fill-lower {
 
 #bouton_retour{
   top:85px;
-  left:33vw;
+  left:35vw;
 
   height: 50px;
   width: 120px;
