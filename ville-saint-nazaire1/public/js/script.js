@@ -301,8 +301,13 @@ function modif_radio(){
 }
 
 function credits(){
+
+  // A supprimer
+  document.getElementById("accueil").style.display = "none";
+  
+
   document.getElementById("page_carte").style.display = "none";
-  document.getElementById("fond_image").style.display = "block";
+  document.getElementById("page_credits").style.display = "block";
 }
 
 reset_value_default();
