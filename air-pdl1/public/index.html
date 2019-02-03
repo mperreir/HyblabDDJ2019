@@ -29,16 +29,19 @@
 
   </head>
   <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
     <div class="swiper-container">
     <div class="swiper-wrapper">
+<!-- ############################################################################# -->
+<!-- ###############################   SLIDER 1   ################################ -->
+<!-- ############################################################################# -->
         <div id="slider1"class="swiper-slide">
             <video id = "video1" class="slider-video" width="100%" preload="auto" onended="finVideo1()" autoplay="" >
               <source src="vid/animation1.mp4" type="video/mp4">
             </video>
         </div>
+<!-- ############################################################################# -->
+<!-- ###############################   SLIDER 2   ################################ -->
+<!-- ############################################################################# -->
         <div id="slider2"class="swiper-slide">
           <video id = "video2" class="slider-video" width="100%" preload="auto" onclick="clickVideo2()" >
             <source src="vid/animation2.mp4" type="video/mp4">
@@ -48,9 +51,12 @@
             <source src="vid/animation3.mp4" type="video/mp4">
           </video>
         </div>
-
+<!-- ############################################################################# -->
+<!-- ###############################   SLIDER 3   ################################ -->
+<!-- ############################################################################# -->
       <div id="slider3" class="swiper-slide">
-        <h2>Est on epargné en campagne ?</h2>
+        <h2>A votre avis, qu’en est-il dans les zones rurales</h2>
+        <h4 class = 'salmon-text'>Donnez votre estimation en deplaçant le curseur campagne</h4>
 
         <div class="modal-body">
           <!-- Bootstrap divide pages in twelve columns,
@@ -68,31 +74,49 @@
 
           <div class = "row">
             <div class=col-md-1>
-              <p>0µg/mol</p>
+              <p class = "right">0µmol/m3</p>
             </div>
             <div class=col-md-4>
               <input id = "curseurVille" type="range" min="0" max="20" step="1" value="18"
               data-orientation="horizontal" class="form-control" data-rangeslider>
-              <h3 id="concentrationVille">18 µg/mol</h3>
+              <h3 id="concentrationVille" class = 'salmon-text'>18 µmol/m3</h3>
             </div>
             <div class=col-md-1>
-              <p>20µg/mol</p>
+              <p>20µmol/m3</p>
             </div>
             <div class=col-md-1>
-              <p>0µg/mol</p>
+              <p class = "right">0µmol/m3</p>
             </div>
             <div class=col-md-4>
               <input id = "curseurCampagne" type="range" min="0" max="20" step="1" value="0"
               data-orientation="horizontal" class="form-control" data-rangeslider>
-              <h3 id="concentrationCampagne"></h3>
+              <h3 id="concentrationCampagne" class = 'salmon-text'></h3>
             </div>
-            <div class=col-md-1>
-              <p>20µg/mol</p>
+            <div class = "flex" class=col-md-1>
+              <p class = "left">20µg/mol</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+              <h4> En ville la concentration de particules fines dans l’air s’élève à 18 sur 20</h4>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+              <h4 id = "reponse_ville">Aviez-vous la bonne réponse ? Contrairement à ce que l’on pourrait penser, nous sommes autant exposés aux particules fines quel que soit notre environnement, rural ou urbain. </h4>
+            </div>
+            <div class="col-md-1">
+              <img src="img/bouton_valider_tic.png" alt="Valider" class = "bouton" onclick="valider_curseur()" width="100px" >
+
             </div>
           </div>
 
           </div>
         </div>
+<!-- ############################################################################# -->
+<!-- ###############################   SLIDER 4   ################################ -->
+<!-- ############################################################################# -->
       <div id="slider4"class="swiper-slide">
         <div>
           <p class="comme-evoque-precede" >Comme évoqué précédemment, les particules fines sont générée par un phénomène de combustion. Outre celles d’origine naturelle (volcans, érosion éolienne, incendie ou feux de végétation), l’émission de PM10 découle aussi de combustions d’origine humaine.
@@ -151,9 +175,16 @@
 </div>
         </div>
       </div>
+<!-- ############################################################################# -->
+<!-- ###############################   SLIDER 5   ################################ -->
+<!-- ############################################################################# -->
+      <div id="slider5" class="swiper-slide"></div>
 
-        <img src="img/" alt="">
+  <!-- ############################################################################# -->
+  <!-- #########################  FIN DES SLIDERS   ################################ -->
+  <!-- ############################################################################# -->
   </div>
+
   <!-- Add Pagination -->
   <div class="swiper-pagination"></div>
   <!-- Add Arrows -->
@@ -162,7 +193,7 @@
 </div>
 
 
-  <!-- add Bootstrap -->
+  <!-- ajout des frameworks jquery cloudflare swiper tangeslider, Bootstrap -->
 
   <script src="js/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
