@@ -4,19 +4,19 @@ let personnage="oooo";
 let haveScroll = "faux";
 
 $(document).ready(function() {
-  
+
     //activate wow.js
      new WOW().init();
-  
+
     //activate fullpage.js
     $('#fullpage').fullpage({
       scrollBar: true,
       navigation: true,
-      navigationTooltips: ['Slide 1', 'Slide 2', 'Slide 3', 'Slide 4'],
+      navigationTooltips: [],
       loopBottom: true,
       sectionSelector: 'section'
     });
-  
+
   //apply color to each section from array
   int = -1;
   color_array = ['#1abc9c','#c0392b','#9b59b6','#3498db','#f1c40f','#16a085'];
@@ -24,10 +24,10 @@ $(document).ready(function() {
   $('section').each(function(){
     int++
     slide++
-    
+
     //$(this).addClass('grid-item-' + int).css('background-color', color_array[int]);
   });
-  
+
 });
 
 console.log(slide);
@@ -57,7 +57,7 @@ function next() {
     step = 'step2';
     //step1.classList.remove("is-active");
     step1.classList.add("is-complete");
-    document.getElementById("step1").style.opacity=0.5;  
+    document.getElementById("step1").style.opacity=0.5;
     step2.classList.add("is-active");
     document.getElementById("imgGraph").src="imgJeux/barChart.png";
     document.getElementById("bikeMoove").style.transform = "translate(340px, 0px)";
@@ -72,7 +72,7 @@ function next() {
     document.getElementById("etape3").style.display = 'block';
     document.getElementById("etape4").style.display = 'none';
     step = 'step3';
-    document.getElementById("step2").style.opacity=0.5; 
+    document.getElementById("step2").style.opacity=0.5;
     //step2.classList.remove("is-active");
     step2.classList.add("is-complete");
     step3.classList.add("is-active");
@@ -88,7 +88,7 @@ function next() {
     document.getElementById("etape3").style.display = 'none';
     document.getElementById("etape4").style.display = 'block';
     step = 'step4';
-    document.getElementById("step3").style.opacity=0.5; 
+    document.getElementById("step3").style.opacity=0.5;
     //step3.classList.remove("is-active");
     step3.classList.add("is-complete");
     step4.classList.add("is-active");
@@ -100,7 +100,7 @@ function next() {
   } else if (step === 'step4') {
     console.log("step4");
     step = 'complete';
-    document.getElementById("step4").style.opacity=0.5; 
+    document.getElementById("step4").style.opacity=0.5;
     //step4.classList.remove("is-active");
     step4.classList.add("is-complete");
     document.getElementById("imgGraph").src="imgJeux/barChart.png";
@@ -113,10 +113,10 @@ function next() {
     document.getElementById("etape2").style.display = 'none';
     document.getElementById("etape3").style.display = 'none';
     document.getElementById("etape4").style.display = 'none';
-    document.getElementById("step1").style.opacity=1; 
-    document.getElementById("step2").style.opacity=1; 
-    document.getElementById("step3").style.opacity=1; 
-    document.getElementById("step4").style.opacity=1; 
+    document.getElementById("step1").style.opacity=1;
+    document.getElementById("step2").style.opacity=1;
+    document.getElementById("step3").style.opacity=1;
+    document.getElementById("step4").style.opacity=1;
     step4.classList.remove("is-active");
     step3.classList.remove("is-active");
     step2.classList.remove("is-active");
@@ -152,7 +152,7 @@ function nextJ(){
     stepJ = 'step2';
     //step1.classList.remove("is-active");
     step1J.classList.add("is-complete");
-    document.getElementById("step1J").style.opacity=0.5;  
+    document.getElementById("step1J").style.opacity=0.5;
     step2J.classList.add("is-active");
     document.getElementById("imgGraph2").src="imgJeux/barChart.png";
     document.getElementById("bikeMoove2").style.transform = "translate(340px, 0px)";
@@ -167,7 +167,7 @@ function nextJ(){
     document.getElementById("etape3J").style.display = 'block';
     document.getElementById("etape4J").style.display = 'none';
     stepJ = 'step3';
-    document.getElementById("step2J").style.opacity=0.5; 
+    document.getElementById("step2J").style.opacity=0.5;
     //step2.classList.remove("is-active");
     step2J.classList.add("is-complete");
     step3J.classList.add("is-active");
@@ -183,7 +183,7 @@ function nextJ(){
     document.getElementById("etape3J").style.display = 'none';
     document.getElementById("etape4J").style.display = 'block';
     stepJ = 'step4';
-    document.getElementById("step3J").style.opacity=0.5; 
+    document.getElementById("step3J").style.opacity=0.5;
     //step3.classList.remove("is-active");
     step3J.classList.add("is-complete");
     step4J.classList.add("is-active");
@@ -195,7 +195,7 @@ function nextJ(){
   } else if (stepJ === 'step4') {
     console.log("step4");
     stepJ = 'complete';
-    document.getElementById("step4J").style.opacity=0.5; 
+    document.getElementById("step4J").style.opacity=0.5;
     //step4.classList.remove("is-active");
     step4J.classList.add("is-complete");
     document.getElementById("imgGraph2").src="imgJeux/barChart.png";
@@ -208,10 +208,10 @@ function nextJ(){
     document.getElementById("etape2J").style.display = 'none';
     document.getElementById("etape3J").style.display = 'none';
     document.getElementById("etape4J").style.display = 'none';
-    document.getElementById("step1J").style.opacity=1; 
-    document.getElementById("step2J").style.opacity=1; 
-    document.getElementById("step3J").style.opacity=1; 
-    document.getElementById("step4J").style.opacity=1; 
+    document.getElementById("step1J").style.opacity=1;
+    document.getElementById("step2J").style.opacity=1;
+    document.getElementById("step3J").style.opacity=1;
+    document.getElementById("step4J").style.opacity=1;
     step4J.classList.remove("is-active");
     step3J.classList.remove("is-active");
     step2J.classList.remove("is-active");
@@ -246,7 +246,7 @@ function nextC(){
     stepC = 'step2';
     //step1.classList.remove("is-active");
     step1C.classList.add("is-complete");
-    document.getElementById("step1C").style.opacity=0.5;  
+    document.getElementById("step1C").style.opacity=0.5;
     step2C.classList.add("is-active");
     document.getElementById("imgGraph3").src="imgJeux/barChart.png";
     document.getElementById("bikeMoove3").style.transform = "translate(340px, 0px)";
@@ -260,7 +260,7 @@ function nextC(){
     document.getElementById("etape3C").style.display = 'block';
     document.getElementById("etape4C").style.display = 'none';
     stepC = 'step3';
-    document.getElementById("step2C").style.opacity=0.5; 
+    document.getElementById("step2C").style.opacity=0.5;
     //step2.classList.remove("is-active");
     step2C.classList.add("is-complete");
     step3C.classList.add("is-active");
@@ -276,7 +276,7 @@ function nextC(){
     document.getElementById("etape3C").style.display = 'none';
     document.getElementById("etape4C").style.display = 'block';
     stepC = 'step4';
-    document.getElementById("step3C").style.opacity=0.5; 
+    document.getElementById("step3C").style.opacity=0.5;
     //step3.classList.remove("is-active");
     step3C.classList.add("is-complete");
     step4C.classList.add("is-active");
@@ -288,7 +288,7 @@ function nextC(){
   } else if (stepC === 'step4') {
     console.log("step4");
     stepC = 'complete';
-    document.getElementById("step4C").style.opacity=0.5; 
+    document.getElementById("step4C").style.opacity=0.5;
     //step4.classList.remove("is-active");
     step4C.classList.add("is-complete");
     document.getElementById("imgGraph3").src="imgJeux/barChart.png";
@@ -301,10 +301,10 @@ function nextC(){
     document.getElementById("etape2C").style.display = 'none';
     document.getElementById("etape3C").style.display = 'none';
     document.getElementById("etape4C").style.display = 'none';
-    document.getElementById("step1C").style.opacity=1; 
-    document.getElementById("step2C").style.opacity=1; 
-    document.getElementById("step3C").style.opacity=1; 
-    document.getElementById("step4C").style.opacity=1; 
+    document.getElementById("step1C").style.opacity=1;
+    document.getElementById("step2C").style.opacity=1;
+    document.getElementById("step3C").style.opacity=1;
+    document.getElementById("step4C").style.opacity=1;
     step4C.classList.remove("is-active");
     step3C.classList.remove("is-active");
     step2C.classList.remove("is-active");
@@ -323,16 +323,32 @@ function nextC(){
 
 
 
+
+let gifJeanne ="oui";
+let gifJerome ="oui";
+let gifCamille ="oui";
+
+
 function jeanne() {
     console.log(personnage);
     personnage = "jeanne";
     console.log(personnage);
+    if(gifJeanne==="oui"){
+      document.getElementById("jeanne").src="imgChoixPersona/jeanneA.gif"; //jjjjjjjjj
+    }
+    gifJerome="oui";
+    gifCamille="oui";
+    gifJeanne="non";
     document.getElementById("camille").style.opacity=0.5;  
     document.getElementById("jerome").style.opacity=0.5; 
     document.getElementById("jeanne").style.opacity=1;  
     document.getElementById("descriptionPersona").style.display = 'block';
     document.getElementById("titlePersona").innerHTML = "Jeanne";
     document.getElementById("contentPersona").innerHTML = "Jeanne, 63 ans, hyper active, vit sa retraite à vélo. Vivant près du Jardin des plantes, elle aime le calme et le grand air. Grand-mère de deux petits-enfants, elle les reçoit tous les mardis avec sa fille pour dîner. Jeanne adore cuisiner des produits frais. Elle se rend donc chaque semaine au marché des Halles de St Nazaire pour y faire ses emplettes.";
+}
+
+function jeanneOut(){
+  document.getElementById("jeanne").src="imgChoixPersona/jeanneR.gif"; //jjjjjjjjj
 }
 
 function camille() {
@@ -342,7 +358,12 @@ function camille() {
     document.getElementById("jeanne").style.opacity=0.5;  
     document.getElementById("jerome").style.opacity=0.5; 
     document.getElementById("camille").style.opacity=1; 
-    //document.getElementById("camille").src="imgChoixPersona/camille.gif";
+    if(gifCamille==="oui"){
+      document.getElementById("camille").src="imgChoixPersona/camilleA.gif"; //jjjjjjjjj
+    }
+    gifCamille="non";
+    gifJerome="oui";
+    gifJeanne="oui";
     //document.getElementById("camille").style.zIndex = "10";
     document.getElementById("descriptionPersona").style.display = 'block'; 
     document.getElementById("titlePersona").innerHTML = "Camille";
@@ -350,7 +371,7 @@ function camille() {
 }
 
 function camilleOut(){
-  document.getElementById("camille").style.zIndex = "0";
+  document.getElementById("camille").src="imgChoixPersona/camilleR.gif"; //jjjjjjjjj
 }
 
 function jerome() {
@@ -360,10 +381,21 @@ function jerome() {
     document.getElementById("jeanne").style.opacity=0.5;  
     document.getElementById("camille").style.opacity=0.5; 
     document.getElementById("jerome").style.opacity=1;  
+    if(gifJerome==="oui"){
+      document.getElementById("jerome").src="imgChoixPersona/jeromeA.gif"; //jjjjjjjjj
+    }
+    gifCamille="oui";
+    gifJerome="non";
+    gifJeanne="oui";
     document.getElementById("descriptionPersona").style.display = 'block';
     document.getElementById("titlePersona").innerHTML = "Jerome";
     document.getElementById("contentPersona").innerHTML = "Jérome, 38 ans, travaille aux Chantiers de l’Atlantique. Avec sa compagne et leur fille de 8 ans, ils se sont installés à la Bouletterie. Ingénieur en construction navale, il est conscient de l’impact des émissions de CO2 sur l’environnement. Il tente donc de compenser au mieux en se rendant chaque jour au boulot à vélo, tout en accompagnant sa fille à l’école.";
 }
+
+function jeromeOut(){
+  document.getElementById("jerome").src="imgChoixPersona/jeromeR.gif"; //jjjjjjjjj
+}
+
 
 function scrollToSection(){
   if(personnage==="camille"){
@@ -381,10 +413,10 @@ function scrollToSection(){
          scrollTop: $('#JeuJeanne').offset().top
     }, 500);
   }
-    setTimeout(function(){ 
+    setTimeout(function(){
       haveScroll="ok";
     }, 2000);
- 
+
 }
 
 $('document').ready(function() {
@@ -404,7 +436,7 @@ $(window).scroll(function(event){
    }
    else if(st == lastScrollTop)
    {
-     //do nothing 
+     //do nothing
      //In IE this is an important condition because there seems to be some instances where the last scrollTop is equal to the new one
    }
    else {
@@ -415,20 +447,20 @@ $(window).scroll(function(event){
 });});
 
 
-function yourfunction() { 
+function yourfunction() {
 
     var x = document.getElementById("txt");
-    setTimeout(function(){ 
+    setTimeout(function(){
       document.getElementById("mavideo").src = "video/intro.mov";
     }, 0);
-    setTimeout(function(){ 
+    setTimeout(function(){
       document.getElementById("mavideo").style.transform = "translate(0px, 1000px)";
       document.getElementById("mavideo").style.transition = "transform 1.5s";
     }, 4000);
-    setTimeout(function(){ 
+    setTimeout(function(){
       document.getElementById("mavideo").src = "video/intro.mov";
     }, 9000);
-    
+
 
 }
 
@@ -443,5 +475,11 @@ function goPageCamille(){
 function goPageJerome(){
   $('html, body').animate({
          scrollTop: $('#JeuJerome').offset().top
+    }, 500);
+}
+
+function goPageJeanne(){
+  $('html, body').animate({
+         scrollTop: $('#JeuJeanne').offset().top
     }, 500);
 }
