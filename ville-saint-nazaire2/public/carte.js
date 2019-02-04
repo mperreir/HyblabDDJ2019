@@ -13,7 +13,7 @@ function doalert(checkboxElem) {
     el.src ="https://www.google.com/maps/d/u/0/embed?mid=1PpxKVNw-d4pXheSPBruuWts5VtpZk6bE";//Services vélo + Abris vélos + Voies partagées
   }else if ((ch1.checked) && (ch2.checked) && !(ch3.checked) && (ch4.checked)){
     el.src ="https://www.google.com/maps/d/u/0/embed?mid=1bmVXCgC0IGc2YPoso6S3ZeqxZ5j9ctHr";//Services vélo + Abris vélos + Voies Vertes
-  }else if ((ch1.checked) && !(ch2.checked) && !(ch3.checked) && !(ch4.checked)){
+  }else if ((ch1.checked) && !(ch2.checked) && (ch3.checked) && (ch4.checked)){
     el.src = "https://www.google.com/maps/d/u/0/embed?mid=1jjUqhetr6DisCJulpbG3RRivmI62lYxp" ;
   }else if (!(ch1.checked) && (ch2.checked) && !(ch3.checked) && !(ch4.checked)){//ch2
     el.src ="https://www.google.com/maps/d/u/0/embed?mid=1bSkv8yCMLNnOh5YPenFCjEWQtzAwjfVA"; //Abris vélos
@@ -24,9 +24,9 @@ function doalert(checkboxElem) {
   }else if (!(ch1.checked) && (ch2.checked) && (ch3.checked) && (ch4.checked)){
     el.src ="https://www.google.com/maps/d/u/0/embed?mid=1tvJYN61h-Rmxu-iuR58UnREufZdGTD_I"; //Abris vélos + Voies partagées + voies vertes
   }else if (!(ch1.checked) && !(ch2.checked) && (ch3.checked) && !(ch4.checked)){ //ch3
-    el.src = src="https://www.google.com/maps/d/u/0/embed?mid=1AD5jakWXWFCV1f9Jvjneu02S-NKpI5Fu";//Voies Partagées
+    el.src = "https://www.google.com/maps/d/u/0/embed?mid=1AD5jakWXWFCV1f9Jvjneu02S-NKpI5Fu";//Voies Partagées
   }else if (!(ch1.checked) && !(ch2.checked) && (ch3.checked) && (ch4.checked)){
-    el.src = src="https://www.google.com/maps/d/u/0/embed?mid=1AD5jakWXWFCV1f9Jvjneu02S-NKpI5Fu";//Voies Partagées + Voies Vertes
+    el.src = "https://www.google.com/maps/d/u/0/embed?mid=1K7kLNTQIFpFUxFMB7M7vJpoZJ7WE_AF2" ;//Voies Partagées + Voies Vertes
   }else if (!(ch1.checked) && !(ch2.checked) && !(ch3.checked) && (ch4.checked)){ //ch4
     el.src ="https://www.google.com/maps/d/u/0/embed?mid=1Mua3nLCFTtRnzZiFs678H8Yb4EQcdyHz";//Voies Vertes
   }else if ((ch1.checked) && (ch2.checked) && (ch3.checked) && (ch4.checked)){

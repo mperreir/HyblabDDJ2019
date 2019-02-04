@@ -59,7 +59,7 @@ function next() {
     step1.classList.add("is-complete");
     document.getElementById("step1").style.opacity=0.5;
     step2.classList.add("is-active");
-    document.getElementById("imgGraph").src="imgJeux/barChart.png";
+    document.getElementById("imgGraph").src="imgJeux/barchartE2.png";
     document.getElementById("bikeMoove").style.transform = "translate(340px, 0px)";
     document.getElementById("bikeMoove").style.transition = "transform 1.2s";
     document.getElementById("bikeMoove").style.zIndex = "9999";
@@ -76,7 +76,7 @@ function next() {
     //step2.classList.remove("is-active");
     step2.classList.add("is-complete");
     step3.classList.add("is-active");
-    document.getElementById("imgGraph").src="imgJeux/barChart.png";
+    document.getElementById("imgGraph").src="imgJeux/barchartE3.png";
     document.getElementById("bikeMoove").style.transform = "translate(680px, 0px)";
     document.getElementById("bikeMoove").style.transition = "transform 1.2s";
     document.getElementById("bikeMoove").style.zIndex = "9999";
@@ -92,7 +92,7 @@ function next() {
     //step3.classList.remove("is-active");
     step3.classList.add("is-complete");
     step4.classList.add("is-active");
-    document.getElementById("imgGraph").src="imgJeux/barChart.png";
+    document.getElementById("imgGraph").src="imgJeux/barchartE4.png";
     document.getElementById("bikeMoove").style.transform = "translate(1005px, 0px)";
     document.getElementById("bikeMoove").style.transition = "transform 1.2s";
     document.getElementById("bikeMoove").style.zIndex = "9999";
@@ -103,7 +103,7 @@ function next() {
     document.getElementById("step4").style.opacity=0.5;
     //step4.classList.remove("is-active");
     step4.classList.add("is-complete");
-    document.getElementById("imgGraph").src="imgJeux/barChart.png";
+    document.getElementById("imgGraph").src="imgJeux/barchartE1.png";
     document.getElementById("bikeMoove").style.transform = "translate(1005px, 0px)";
     document.getElementById("bikeMoove").style.transition = "transform 1.2s";
     document.getElementById("bikeMoove").style.zIndex = "9999";
@@ -154,7 +154,7 @@ function nextJ(){
     step1J.classList.add("is-complete");
     document.getElementById("step1J").style.opacity=0.5;
     step2J.classList.add("is-active");
-    document.getElementById("imgGraph2").src="imgJeux/barChart.png";
+    document.getElementById("imgGraph2").src="imgJeux/jbarchartE2.png";
     document.getElementById("bikeMoove2").style.transform = "translate(340px, 0px)";
     document.getElementById("bikeMoove2").style.transition = "transform 1.2s";
     document.getElementById("bikeMoove2").style.zIndex = "9999";
@@ -171,7 +171,7 @@ function nextJ(){
     //step2.classList.remove("is-active");
     step2J.classList.add("is-complete");
     step3J.classList.add("is-active");
-    document.getElementById("imgGraph2").src="imgJeux/barChart.png";
+    document.getElementById("imgGraph2").src="imgJeux/jbarchartE3.png";
     document.getElementById("bikeMoove2").style.transform = "translate(680px, 0px)";
     document.getElementById("bikeMoove2").style.transition = "transform 1.2s";
     document.getElementById("bikeMoove2").style.zIndex = "9999";
@@ -187,7 +187,7 @@ function nextJ(){
     //step3.classList.remove("is-active");
     step3J.classList.add("is-complete");
     step4J.classList.add("is-active");
-    document.getElementById("imgGraph2").src="imgJeux/barChart.png";
+    document.getElementById("imgGraph2").src="imgJeux/jbarchartE4.png";
     document.getElementById("bikeMoove2").style.transform = "translate(1005px, 0px)";
     document.getElementById("bikeMoove2").style.transition = "transform 1.2s";
     document.getElementById("bikeMoove2").style.zIndex = "9999";
@@ -198,7 +198,7 @@ function nextJ(){
     document.getElementById("step4J").style.opacity=0.5;
     //step4.classList.remove("is-active");
     step4J.classList.add("is-complete");
-    document.getElementById("imgGraph2").src="imgJeux/barChart.png";
+    document.getElementById("imgGraph2").src="imgJeux/barchartE1.png";
     document.getElementById("bikeMoove2").style.transform = "translate(1005px, 0px)";
     document.getElementById("bikeMoove2").style.transition = "transform 1.2s";
     document.getElementById("bikeMoove2").style.zIndex = "9999";
@@ -248,7 +248,7 @@ function nextC(){
     step1C.classList.add("is-complete");
     document.getElementById("step1C").style.opacity=0.5;
     step2C.classList.add("is-active");
-    document.getElementById("imgGraph3").src="imgJeux/barChart.png";
+    document.getElementById("imgGraph3").src="imgJeux/cbarchartE2.png";
     document.getElementById("bikeMoove3").style.transform = "translate(340px, 0px)";
     document.getElementById("bikeMoove3").style.transition = "transform 1.2s";
     document.getElementById("bikeMoove3").style.zIndex = "9999";
@@ -264,7 +264,7 @@ function nextC(){
     //step2.classList.remove("is-active");
     step2C.classList.add("is-complete");
     step3C.classList.add("is-active");
-    document.getElementById("imgGraph3").src="imgJeux/barChart.png";
+    document.getElementById("imgGraph3").src="imgJeux/cbarchartE3.png";
     document.getElementById("bikeMoove3").style.transform = "translate(680px, 0px)";
     document.getElementById("bikeMoove3").style.transition = "transform 1.2s";
     document.getElementById("bikeMoove3").style.zIndex = "9999";
@@ -280,7 +280,7 @@ function nextC(){
     //step3.classList.remove("is-active");
     step3C.classList.add("is-complete");
     step4C.classList.add("is-active");
-    document.getElementById("imgGraph3").src="imgJeux/barChart.png";
+    document.getElementById("imgGraph3").src="imgJeux/cbarchartE4.png";
     document.getElementById("bikeMoove3").style.transform = "translate(1005px, 0px)";
     document.getElementById("bikeMoove3").style.transition = "transform 1.2s";
     document.getElementById("bikeMoove3").style.zIndex = "9999";
@@ -291,7 +291,7 @@ function nextC(){
     document.getElementById("step4C").style.opacity=0.5;
     //step4.classList.remove("is-active");
     step4C.classList.add("is-complete");
-    document.getElementById("imgGraph3").src="imgJeux/barChart.png";
+    document.getElementById("imgGraph3").src="imgJeux/barchartE1.png";
     document.getElementById("bikeMoove3").style.transform = "translate(1005px, 0px)";
     document.getElementById("bikeMoove3").style.transition = "transform 1.2s";
     document.getElementById("bikeMoove3").style.zIndex = "9999";
@@ -339,9 +339,9 @@ function jeanne() {
     gifJerome="oui";
     gifCamille="oui";
     gifJeanne="non";
-    document.getElementById("camille").style.opacity=0.5;  
-    document.getElementById("jerome").style.opacity=0.5; 
-    document.getElementById("jeanne").style.opacity=1;  
+    document.getElementById("camille").style.opacity=0.5;
+    document.getElementById("jerome").style.opacity=0.5;
+    document.getElementById("jeanne").style.opacity=1;
     document.getElementById("descriptionPersona").style.display = 'block';
     document.getElementById("titlePersona").innerHTML = "Jeanne";
     document.getElementById("contentPersona").innerHTML = "Jeanne, 63 ans, hyper active, vit sa retraite à vélo. Vivant près du Jardin des plantes, elle aime le calme et le grand air. Grand-mère de deux petits-enfants, elle les reçoit tous les mardis avec sa fille pour dîner. Jeanne adore cuisiner des produits frais. Elle se rend donc chaque semaine au marché des Halles de St Nazaire pour y faire ses emplettes.";
@@ -355,9 +355,9 @@ function camille() {
     console.log(personnage);
     personnage = "camille";
     console.log(personnage);
-    document.getElementById("jeanne").style.opacity=0.5;  
-    document.getElementById("jerome").style.opacity=0.5; 
-    document.getElementById("camille").style.opacity=1; 
+    document.getElementById("jeanne").style.opacity=0.5;
+    document.getElementById("jerome").style.opacity=0.5;
+    document.getElementById("camille").style.opacity=1;
     if(gifCamille==="oui"){
       document.getElementById("camille").src="imgChoixPersona/camilleA.gif"; //jjjjjjjjj
     }
@@ -365,7 +365,7 @@ function camille() {
     gifJerome="oui";
     gifJeanne="oui";
     //document.getElementById("camille").style.zIndex = "10";
-    document.getElementById("descriptionPersona").style.display = 'block'; 
+    document.getElementById("descriptionPersona").style.display = 'block';
     document.getElementById("titlePersona").innerHTML = "Camille";
     document.getElementById("contentPersona").innerHTML = "Camille, 19 ans, se met en selle tous les matins pour aller à l’IUT de Saint-Nazaire où elle étudie les relations internationales. Elle habite Pornichet et met environ 20 min pour rejoindre son école. Fille du bord de mer, Camille est sportive et aime vivre au grand air. Le vélo lui permet de bien commencer la journée et de faire des économies.";
 }
@@ -378,9 +378,9 @@ function jerome() {
     console.log(personnage);
     personnage = "jerome";
     console.log(personnage);
-    document.getElementById("jeanne").style.opacity=0.5;  
-    document.getElementById("camille").style.opacity=0.5; 
-    document.getElementById("jerome").style.opacity=1;  
+    document.getElementById("jeanne").style.opacity=0.5;
+    document.getElementById("camille").style.opacity=0.5;
+    document.getElementById("jerome").style.opacity=1;
     if(gifJerome==="oui"){
       document.getElementById("jerome").src="imgChoixPersona/jeromeA.gif"; //jjjjjjjjj
     }
@@ -447,24 +447,17 @@ $(window).scroll(function(event){
 });});
 
 
-function yourfunction() {
 
-    var x = document.getElementById("txt");
-    setTimeout(function(){
-      document.getElementById("mavideo").src = "video/intro.mov";
-    }, 0);
-    setTimeout(function(){
-      document.getElementById("mavideo").style.transform = "translate(0px, 1000px)";
-      document.getElementById("mavideo").style.transition = "transform 1.5s";
-    }, 4000);
-    setTimeout(function(){
-      document.getElementById("mavideo").src = "video/intro.mov";
-    }, 9000);
 
+
+function test(){
+$('html, body').animate({
+         scrollTop: $('#sectionPersona').offset().top
+    }, 500);
+document.getElementById('mavideo').style.display = 'none';
 
 }
 
-window.onload = yourfunction;
 
 function goPageCamille(){
   $('html, body').animate({
