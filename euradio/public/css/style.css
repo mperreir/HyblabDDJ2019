@@ -138,7 +138,7 @@ h6 {
   margin-left: 10%;
   display: none;
   width: 80%;
-  margin-top: -1%;
+  margin-top: -1%;  /*margin-bottom: 5%;*/
 }
 #partie{
   position: relative;
@@ -176,6 +176,8 @@ h6 {
   margin-top: 1.5%;
 
   position: relative;
+  /*margin-top: -15px;
+  margin-bottom: 2%;*/
 }
 .images_petit {
 height:40%;
@@ -222,7 +224,9 @@ width: 50%;
   display: block;
   margin-bottom: 2%;
 }
-
+#recepteur{
+  /*margin-top: -6%;*/
+}
 /* DIAPO 3*/
 canvas{
   margin-left: -5px;
@@ -256,6 +260,7 @@ canvas{
 
 }
 #partieDroite{
+  /*position: absolute;*/
   top:100%;
   display: inline-block;
   width: 55%;
@@ -265,6 +270,8 @@ canvas{
 #jaune{
   z-index: 100;
   position: absolute;
+  /*top: -9%;*/
+  /*left:70%;*/
   cursor: move;
   width: 5%;
   left: 25%;
@@ -272,6 +279,8 @@ canvas{
 #rouge{
   z-index: 100;
   position: relative;
+  /*top: -9%;*/
+  /*left:47%;*/
   cursor: move;
   width: 9%;
   left: 28%;
@@ -291,6 +300,8 @@ canvas{
   width: 100%;
   text-align: center;
   position: absolute;
+  /*top: 40%;
+  left: 50%;*/
   top: 49%;
   color: #312783;
 	font-family: Roboto;
@@ -433,7 +444,7 @@ h4{
 }
 
 #team li img{
-    width: 70px;
+    width: 50%;
 	display: block;
 	margin: 0 auto;
 }
@@ -453,26 +464,6 @@ h4{
     color:#fff;
 }
 
-#team a:hover{
-    color: #F2705B;
-}
-
-#bottompage2 {
-    height:30%;
-    padding:0 15%;
-}
-
-#partenaires, #partenaires2 {
-    height:50%;
-}
-
-#partenaires2 p {
-    font-family: Roboto;
-    font-style: italic;
-    font-size:1.4em;
-    color: #312783;
-}
-
 #credits {
-  margin-bottom: 100px;
+  margin-bottom: 65px;
 }
