@@ -10936,10 +10936,15 @@ function populate_html(ville,theme){
 				if(theme=='stupefiants'){
 					var theme2='stupéfiants';
 				}
-				else{var theme2=theme;}
+				else{
+					if(theme=='sante'){
+						var theme2='santé';
+					}
+					else{var theme2=theme;}
+				}
+				}
 			}
 		}
-	}
 		var retour = '<div id = "Popo" style=max-height:300px;"><strong>'+ville+'  /  '+theme2+'</strong><br>';
 	// afficher le nom de la ville, le nom du contentieux (balises strong?)
 	//get tous les id associés à ces critères

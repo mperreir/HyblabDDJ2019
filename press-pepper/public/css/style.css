@@ -34,12 +34,13 @@ header img{
 #disclaimer {
 	padding-left : 50px;
 	padding-top : 1%;
-	color:white;
-	font-family: "Verdana";
+	color:#E8D8BC;
+	font-family: "Roboto";
 }
 #filtres a {
 	font-size: 13px;
-	color: white;
+	color: #E8D8BC;
+	font-family: "Roboto";
 	display: block;
 	margin: 0;
 	padding: 0;
@@ -55,12 +56,12 @@ header img{
 
 #filtres a:hover {
 	background-color: #138496;
-	color: white;
+	color: #E8D8BC;
 }
 
 #filtres a.active {
 	background-color: #17a2b8;
-	color: #ffffff;
+	color: #E8D8BC;
 }
 
 #filtres a.active:hover {
@@ -77,16 +78,17 @@ header img{
 }
 #titre_depeche{
 	max-width : 70%;
-	font-family:"Times New Roman";
+	font-family:"Roboto";
 }
 #corps_depeche{
 	max-width : 60%;
-	font-family:"Times New Roman";
+	font-family:"Roboto";
 
 }
 #hideButton{
 	margin-left:45%;
 }
+#Popo{overflow-y: auto;}
 .logo .hover
 {
 	transition: .5s ease;
