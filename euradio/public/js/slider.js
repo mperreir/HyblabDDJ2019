@@ -49,10 +49,10 @@ function changer_radio(xPos){
     console.log((valeur));
     $( "#nomRadio" ).text(dab[valeur]);
     valeurRadio = valeur%7+1;
-    valeurMusique = valeur%5+1;
+    valeurMusique = valeur%16+1;
     x.pause();
     document.getElementById('imgBackground').src="img/RadioRnt/Radiornt_img_"+valeurRadio+".png";
-    document.getElementById('musique').src="musiques/hyblablfm_"+valeurMusique+".wav";
+    document.getElementById('musique').src="musiques/AUDIO HYBLAB/hyblablfm_"+valeurMusique+".wav";
     x.load();
     x.play();
   }
