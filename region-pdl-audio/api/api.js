@@ -373,7 +373,7 @@ app.get('/type_reunions', function (request, response) {
             var objet = element['Objet général de la séance / réunion'];
 
             if (objet === undefined) {
-                objet = 'Non référencé';
+                objet = 'Non renseigné';
             }
 
             if (objet[objet.length - 1] == ' ') {
