@@ -26,9 +26,16 @@
 <body>
 
       <container id="fullpage">
-      <section class="sectionPersona fadeIn">
-        <video autoplay muted loop id="mavideo">
+        <section>
+        <div class="wow fadeIn">
+          <video autoplay muted onended="test()" id="mavideo" >
+            <source src="video/intro.mov" type="video/mp4">
           </video>
+        </div>
+
+      </section>
+
+      <section id="sectionPersona" class="sectionPersona fadeIn">
         <div class="wow fadeIn">
           <h1 class="high-title"> Choisissez votre personnage </br> et suivez son aventure </h1>
           <div class=choixPerso>
@@ -52,7 +59,7 @@
 
 
       <section class="jeux" id="JeuJeanne" >
-        <div class="wow jeuxPersona fadeInLeft">
+        <div class="wow jeuxPersona fadeIn">
           <div class="button">
             <button onclick=goPageCamille() class="buttonImgPersona1">
               <img height="100%" src="imgJeux/camille.png" /></button>
@@ -67,7 +74,7 @@
               <img class="bulle" src="imgJeux/bulle.png" />
             </div>
             <h2 class="graphic-title"> Comparons les gains </br> et économies réalisés à vélo </h2>
-            <img class="imgGraph" id="imgGraph" src="imgJeux/barChart.png" />
+            <img class="imgGraph" id="imgGraph" src="imgJeux/barchartE1.png" />
           </div>
 
         <div class="progress">
@@ -109,14 +116,13 @@
       </br>
       </br>
       </br>
-      <button class=nextStep onClick=next()>Next Step</button>
       </div>
       </section>
 
 
 
       <section class="jeux" id="JeuJerome">
-        <div class="wow container-fluid jeuxPersona fadeInLeft">
+        <div class="wow container-fluid jeuxPersona fadeIn">
           <div class="button">
             <button onclick=goPageCamille() class="buttonImgPersona1">
               <img height="100%" src="imgJeux/camille.png" /></button>
@@ -128,13 +134,13 @@
           <div class="persona">
             <div class="personaBulle">
               <img class="imgPersona" src="imgJeux/JeromeHigh.png" />
-              <img class="bulle" src="imgJeux/bulle.png" />
+              <img class="bulle bullejerome" src="imgJeux/bulle.png" />
             </div>
             <h2 class="graphic-title"> Comparons les gains </br> et économies réalisés à vélo </h2>
-            <img class="imgGraph" id="imgGraph2" src="imgJeux/barChart.png" />
+            <img class="imgGraph" id="imgGraph2" src="imgJeux/barchartE1.png" />
           </div>
 
-        <div class="progress">
+        <div class="progress progressjerome">
             <div class="progress-track"></div>
             <div id="step1J" class="progress-step">
               <img class="imgStep" src="imgJeux/jeromeE1.png" />
@@ -149,7 +155,7 @@
               <img class="imgStep" src="imgJeux/jeromeE4.png" />
             </div>
         </div>
-        <img pull-right class="frise" src="imgJeux/frise.png" />
+        <img pull-right class="frise frisejerome" src="imgJeux/frise.png" />
         <img id="bikeMoove2" src="imgJeux/JeromeHigh.png" />
         <div class="bubble">
             <div class="bubble-text">
@@ -173,14 +179,13 @@
       </br>
       </br>
       </br>
-      <button class=nextStep onClick=nextJ()>Next Step</button>
       </div>
       </section>
 
 
 
       <section class="jeux" id="JeuCamille">
-        <div class="wow jeuxPersona fadeInLeft">
+        <div class="wow jeuxPersona fadeIn">
           <div class="button">
             <button onclick=goPageJeanne() class="buttonImgPersona1">
               <img height="100%" src="imgJeux/jeanne.png" /></button>
@@ -194,7 +199,7 @@
               <img class="bulle" src="imgJeux/bulle.png" />
             </div>
             <h2 class="graphic-title"> Comparons les gains </br> et économies réalisés à vélo </h2>
-            <img class="imgGraph" id="imgGraph3" src="imgJeux/barChart.png" />
+            <img class="imgGraph" id="imgGraph3" src="imgJeux/barchartE1.png" />
           </div>
 
         <div class="progress">
@@ -236,7 +241,6 @@
       </br>
       </br>
       </br>
-      <button class=nextStep onClick=nextC()>Next Step</button>
       </div>
       </section>
 
@@ -304,7 +308,7 @@
         
           <div class="topnav row">
             <h1 class="col-md-6 titre_map"> Saint-Nazaire, Trignac et Pornichet </h1>
-            <label class="col-md-1">
+            <label class="col-md-1 col-md-offset-2">
               <input id = "ch1" type="checkbox" onchange="doalert(this)"  class="col-md-1 box_check"><p class="col-md-2 col-md-offset-1 titre_check">Services Vélo</p>
               <span class="checkmark"></span>
             </label>
