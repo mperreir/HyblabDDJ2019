@@ -1196,7 +1196,7 @@ h1 .h1_highlight {
 	list-style-type: none;
 	display: inline-block;
 	vertical-align: middle;
-	margin: 0 12px;
+	margin: 0 0.6vw;
 }
 
 #bandeau img {
