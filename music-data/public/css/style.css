@@ -331,7 +331,7 @@ body {
 }
 /* Section 4 - Zoom sur un genre */
 
-/* Section 5 -  Affichage de l'histogramme dynamique *>
+/* Section 5 -  Affichage de l'histogramme dynamique */
 .bar{
 
 
@@ -339,15 +339,11 @@ body {
 
   font-size: 16.71px;
   font-weight: 200;
-
-
 }
 .bar1{
   fill : #FFFFFF;
   font-size: 16.71px;
   font-weight: 200;
-
-
 }
 #trackspourungenreReflet {
   opacity: 0.8;
