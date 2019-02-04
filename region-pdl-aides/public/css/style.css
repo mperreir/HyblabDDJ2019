@@ -24,7 +24,7 @@ body{
     background-color: background: #f7f7f7;
     font-size: 25px !important;
     letter-spacing:-1px;
-    width:12800px;
+    width:17280px;
     position:absolute;
     top:0px;
     left:0px;
@@ -34,10 +34,11 @@ body{
 .section{
     margin:0px;
     bottom:0px;
-    width:1600px;
+    width:1920px;
     float:left;
     height:100%;
     text-shadow:1px 1px 2px #f0f0f0;
+    background-color: #f7f7f7;
 }
 
 .section p{
@@ -242,6 +243,7 @@ div#francemap {
 	width: 500px;
 	height: 300px;
 	margin-top: 20px;
+	z-index: 1000;
 }
 
 div#section2 {
@@ -250,6 +252,7 @@ div#section2 {
 
 .sec2Text1 {
 	margin-top: 20px;
+	margin-left: 35px;
 	text-align: center;
 }
 
@@ -411,11 +414,11 @@ div#section2 {
 }
 
 #section1, #section4 {
-	background-image: url('./../img/01_Page1_Fond.gif');
+	background-image: url('./../img/page1.gif');
 	background-position: -300px;
 }
 
-#section2, #section3 {
+#section2, #section3, #section5, #section6 {
 	background-image: url('./../img/FondDroit.gif');
 }
 
@@ -426,4 +429,29 @@ div#section2 {
 
 #section4 {
 	background-image: url('./../img/FondGauche.gif');
+}
+
+#section8 {
+	background-image: url('./../img/CercleVertueux.gif');
+	background-repeat: no-repeat;
+	background-position: 300px;
+}
+
+#section9 {
+	background-image: url('./../img/Fichier 13.png');
+	background-repeat: no-repeat;
+	background-position: 300px;
+}
+
+#nav {
+	max-width: 1400px;
+}
+
+.bubble5 {
+	margin-top: 50px;
+	background-color: #f7f7f7;
+}
+
+#section5 h2 {
+	margin-top: 50px;
 }
