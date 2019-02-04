@@ -34,7 +34,7 @@
 <!-- ###############################   SLIDER 1   ################################ -->
 <!-- ############################################################################# -->
         <div id="slider1"class="swiper-slide">
-            <video id = "video1" class="slider-video" width="100%" preload="auto" onended="finVideo1()" autoplay="" >
+            <video id = "video1" class="slider-video" width="100%" preload="auto" onended="showButton()" autoplay="" >
               <source src="vid/animation1.mp4" type="video/mp4">
             </video>
         </div>
@@ -42,20 +42,52 @@
 <!-- ###############################   SLIDER 2   ################################ -->
 <!-- ############################################################################# -->
         <div id="slider2"class="swiper-slide">
-          <video id = "video2" class="slider-video" width="100%" preload="auto" onclick="clickVideo2()" >
+          <video id = "video2" class="slider-video" width="100%" preload="auto" onended="clignote()" >
             <source src="vid/animation2.mp4" type="video/mp4">
           </video>
-
+          <video id = "clignote" class="slider-video" preload="auto" onended="clignote()" onclick="clickVideo2()">
+            <source src="vid/clignote.mp4" type="video/mp4">
+          </video>
           <video id = "video3" class="slider-video" width="100%" preload="auto">
             <source src="vid/animation3.mp4" type="video/mp4">
           </video>
         </div>
+
 <!-- ############################################################################# -->
-<!-- ###############################   SLIDER 3   ################################ -->
+<!-- ###############################   SLIDER VILLE  ############################# -->
+<!-- ############################################################################# -->
+      <div id="sliderVille" class="swiper-slide">
+        <h2> Voici le taux de particule present en ville.</h2>
+
+        <div class="modal-body">
+          <!-- ligne image canvas -->
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <canvas id='canvasGrandeVille'></canvas>
+            </div>
+          </div>
+          <!-- ligne curseur -->
+          <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-1"><p class = "right">0µmol/m3</p></div>
+          <div class="col-md-4">
+            <input id = "curseurGrandeVille" type="range" min="0" max="20" step="1" value="18"
+            data-orientation="horizontal" class="form-control" data-rangeslider>
+            <h3 id="concentrationGrandeVille" class = 'salmon-text'>18 µmol/m3</h3>
+          </div>
+          <div class="col-md-1">
+            <p class = "left">20µmol/m3</p>
+          </div>
+          </div>
+        </div> <!-- fin balise modal-body -->
+      </div> <!-- fin balise slide -->
+<!-- ############################################################################# -->
+<!-- ######################   SLIDER VILLE VS CAMPAGNE ########################### -->
 <!-- ############################################################################# -->
       <div id="slider3" class="swiper-slide">
-        <h2>A votre avis, qu’en est-il dans les zones rurales</h2>
-        <h4 class = 'salmon-text'>Donnez votre estimation en deplaçant le curseur campagne</h4>
+        <h2>A votre avis, qu’en est-il dans les zones rurales ?</h2>
+        <h4 class = 'salmon-text'>Donnez votre estimation en déplaçant le curseur campagne</h4>
 
         <div class="modal-body">
           <!-- Bootstrap divide pages in twelve columns,

@@ -62,6 +62,9 @@
     -webkit-align-items: center;
     align-items: center;
   }
+#sliderVille h2{
+  margin-bottom: 5%;
+}
 #slider4 h2, #slider5 h2{
   margin-top:2%;
 }
