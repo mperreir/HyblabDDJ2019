@@ -23,17 +23,6 @@
 
     <div id="carousel-example-generic" class="carousel slide" data-interval="false" data-wrap="false" data-keyboard="true">
 
-        <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="5"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="6"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="7"></li>
-        </ol>
-
         <div class="carousel-inner" role="listbox">
 
             <div class="item active item12" id="item1">
@@ -90,21 +79,11 @@
                                 <a href="#"></a>
                             </div>
                         </div>
-                        <div class="remarques" id="remarque1-q2">
-                            <p>
-                                Bravo !
-                            </p>
-                        </div>
-                        <div class="remarques" id="remarque2-q2">
-                            <p>
-                                Oui, mais pas seulement !
-                            </p>
-                        </div>
                         <div class="reponses" id="r1-q2">
-                            <img class="image-reponses" src="img/En%20effet,%20le%20NO2%20pro@2x.png"/>
+                            <img class="image-r2" src="img/reponseQ2-bravo.png"/>
                         </div>
                         <div class="reponses" id="r2-q2">
-                            <img class="image-r2" src="img/Le%20NO2%20provient%20de%20l@2x.png"/>
+                            <img class="image-r2" src="img/reponseQ2-oui_mais.png"/>
                         </div>
                     </div>
 
@@ -126,20 +105,11 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="remarques">
-                            <div id="remarque1-q3">
-                                <p>
-                                    Bravo !
-                                </p>
-                            </div>
-                            <div id="remarque2-q3">
-                                <p>
-                                    Oui, mais pas seulement !
-                                </p>
-                            </div>
+                        <div class="reponses" id="r1-q3">
+                            <img class="image-r3" src="img/reponseQ3-bravo.png"/>
                         </div>
-                        <div class="reponses" id="r3">
-                            <img class="image-r3" src="img/Reponse3.png"/>
+                        <div class="reponses" id="r2-q3">
+                            <img class="image-r3" src="img/reponseQ3-oui_mais.png"/>
                         </div>
                     </div>
 
@@ -152,31 +122,49 @@
             </div>
 
             <div class="item" id="choix">
+                <div class="backArrow" id="retour-slide-2">
+                    <a href="#">
+                        <span class="icon fa-angle-double-left"></span>
+                    </a>
+                </div>
                 <div id="rural">
                     <a href="#">
-                        <img src="img/RURAL@2x.svg" alt="rural">
                     </a>
                 </div>
                 <div id="ville">
                     <a href="#">
-                        <img src="img/VILLE.png" alt="ville"/>
                     </a>
                 </div>
                 <div id="trafic">
                     <a href="#">
-                        <img src="img/TRAFIC.png" alt="trafic"/>
+                    </a>
+                </div>
+                <div id="nextArrow2">
+                    <a href="#">
+                        <span class="icon fa-angle-double-right"></span>
                     </a>
                 </div>
             </div>
+
             <div class="item" id="r">
-                <div class="button" id="retu">
-                    <a href="#choix">
-                        <span class="icon fa-arrow-circle-left"></span>
+                <div class="retour">
+                    <a href="#">
+                        <span class="icon fa-chevron-circle-left"></span>
                     </a>
                 </div>
+                <div class="titre">
+                    <h3 id="h3-r">
+                        Vous voilà en zone rurale en Pays-de-la-Loire...
+                    </h3>
+                </div>
                 <div class="bar-contain">
-                    <div id="value">  <h1>Value:<span id="demo"></span></h1>
-                        <h1>Heur:<span id="demo2"></span></h1>
+                    <div class="infos">
+                        <h1 class="h1-r">
+                            Concentration de NO2 dans l'air: <span id="demo"></span> µg/m3
+                        </h1>
+                        <h1 class="h1-r">
+                            Heure: <span id="demo2"></span> h
+                        </h1>
                     </div>
                     <div class="progress">
                         <div class="progress-bar">
@@ -187,24 +175,68 @@
                 <div id="myR">
                     <input type="hidden"id="myRange" class="single-slider" onchange="ran()"value="12" />
                 </div>
-                <div class="svga1Button">
+                <div class="nextArrow">
                     <a href="#">
-                        <span class="icon fa-arrow-circle-right"></span>
+                        <span class="icon fa-angle-double-right"></span>
                     </a>
                 </div>
-
+                <div class="info-i" id="info-i-ru">
+                    <img src="img/info_rural.png"/>
+                </div>
+                <div class="i">
+                    <img onmouseover="afficher('#info-i-ru')" onmouseout="cacher('#info-i-ru')" src="img/BOUTON_INFO_SOURCE_JOUR@2x.png"/>
+                </div>
+                <div class="sources">
+                    <h2 id="h2-r">
+                        Source des données utilisées : https://data.airpl.org
+                    </h2>
+                </div>
+                <div class="info-heure" id="7-8-r">
+                    <h4>
+                        Entre 7h et 8h, c’est l’heure de pointe. La concentration de NO2 est donc à son maximum.
+                    </h4>
+                </div>
+                <div class="info-heure" id="17-r">
+                    <h5>
+                        À 17h, c’est l’heure de pointe. La concentration de NO2 est donc à son maximum.
+                    </h5>
+                </div>
+                <div class="info-heure" id="autres-r-jour">
+                    <h5>
+                        À cette heure, la concentration de NO2 est au plus faible. Il y a peu de trafic.
+                    </h5>
+                </div>
+                <div class="info-heure" id="autres-r-nuit">
+                    <h4>
+                        À cette heure, la concentration de NO2 est au plus faible. Il y a peu de trafic.
+                    </h4>
+                </div>
             </div>
 
             <div class="item" id="ur">
-                <div class="button" id="retu2">
-                    <a href="#choix">
-                        <span class="icon fa-arrow-circle-left"></span>
+                <div class="retour">
+                    <a href="#">
+                        <span class="icon fa-chevron-circle-left"></span>
                     </a>
                 </div>
-
+                <div class="backArrow">
+                    <a href="#">
+                        <span class="icon fa-angle-double-left"></span>
+                    </a>
+                </div>
+                <div class="titre">
+                    <h3 id="h3-ur">
+                        Vous voilà dans le centre-ville de Nantes...
+                    </h3>
+                </div>
                 <div class="bar-contain">
-                    <div id="value2">  <h1>Value:<span id="demo21"></span></h1>
-                        <h1>Heur:<span id="demo22"></span></h1>
+                    <div class="infos">
+                        <h1 class="h1-ur">
+                            Concentration de NO2 dans l'air: <span id="demo21"></span> µg/m3
+                        </h1>
+                        <h1 class="h1-ur">
+                            Heure: <span id="demo22"></span> h
+                        </h1>
                     </div>
                     <div class="progress">
                         <div class="progress-bar">
@@ -215,22 +247,88 @@
                 <div id="myR2">
                     <input type="hidden"id="myRange2" class="single-slider" onchange="ran2()"value="12" />
                 </div>
-                <div class="svga2Button">
+                <div class="nextArrow">
                     <a href="#">
-                        <span class="icon fa-arrow-circle-right"></span>
+                        <span class="icon fa-angle-double-right"></span>
                     </a>
+                </div>
+                <div class="info-i" id="info-i-ur">
+                    <img src="img/info_centre_ville.png"/>
+                </div>
+                <div class="i">
+                    <img onmouseover="afficher('#info-i-ur')" onmouseout="cacher('#info-i-ur')" src="img/BOUTON_INFO_SOURCE_JOUR@2x.png"/>
+                </div>
+                <div class="sources">
+                    <h2 id="h2-ur">
+                        Source des données utilisées : https://data.airpl.org
+                    </h2>
+                </div>
+                <div class="info-heure" id="7-8-ur">
+                    <h4>
+                        Entre 7h et 8h, c’est l’heure de pointe. La concentration de NO2 est donc à son maximum.
+                    </h4>
+                </div>
+                <div class="info-heure" id="17-18-ur">
+                    <h5>
+                        Entre 17h et 18h, c’est l’heure de pointe. La concentration de NO2 est donc à son maximum.
+                    </h5>
+                </div>
+                <div class="info-heure" id="5-6-ur">
+                    <h4>
+                        De 5h à 6h, la concentration de NO2, liée au trafic, augmente.
+                    </h4>
+                </div>
+                <div class="info-heure" id="15-16-ur">
+                    <h5>
+                        De 15h à 16h, la concentration de NO2, liée au trafic, augmente.
+                    </h5>
+                </div>
+                <div class="info-heure" id="9-10-11-ur">
+                    <h5>
+                        De 9h à 11h, la concentration de NO2, liée au trafic, diminue.
+                    </h5>
+                </div>
+                <div class="info-heure" id="19-23-ur">
+                    <h4>
+                        De 19h à 23h, la concentration de NO2, liée au trafic, diminue.
+                    </h4>
+                </div>
+                <div class="info-heure" id="0-4-ur">
+                    <h4>
+                        À cette heure, la concentration de NO2 est au plus faible. Il y a peu de  trafic.
+                    </h4>
+                </div>
+                <div class="info-heure" id="12-14-ur">
+                    <h5>
+                        À cette heure, la concentration de NO2 est au plus faible. Il y a peu de  trafic.
+                    </h5>
                 </div>
             </div>
 
             <div class="item" id="tr">
-                <div class="button" id="retu3">
-                    <a href="#choix">
-                        <span class="icon fa-arrow-circle-left"></span>
+                <div class="retour">
+                    <a href="#">
+                        <span class="icon fa-chevron-circle-left"></span>
                     </a>
                 </div>
+                <div class="backArrow">
+                    <a href="#">
+                        <span class="icon fa-angle-double-left"></span>
+                    </a>
+                </div>
+                <div class="titre">
+                    <h3 id="h3-tr">
+                        Vous voilà à Nantes, aux abords d'un boulevard très fréquenté...
+                    </h3>
+                </div>
                 <div class="bar-contain">
-                    <div id="value3">  <h1>Value:<span id="demo31"></span></h1>
-                        <h1>Heur:<span id="demo32"></span></h1>
+                    <div class="infos">
+                        <h1 class="h1-tr">
+                            Concentration de NO2 dans l'air: <span id="demo31"></span> µg/m3
+                        </h1>
+                        <h1 class="h1-tr">
+                            Heure: <span id="demo32"></span> h
+                        </h1>
                     </div>
                     <div class="progress">
                         <div class="progress-bar">
@@ -241,18 +339,89 @@
                 <div id="myR3">
                     <input type="hidden" id="myRange3" class="single-slider" onchange="ran3()" value="12" />
                 </div>
+                <div class="info-i" id="info-i-tr">
+                    <img src="img/info-trafic.png"/>
+                </div>
+                <div class="i">
+                    <img onmouseover="afficher('#info-i-tr')" onmouseout="cacher('#info-i-tr')" src="img/BOUTON_INFO_SOURCE_JOUR@2x.png"/>
+                </div>
+                <div class="sources">
+                    <h2 id="h2-tr">
+                        Source des données utilisées : https://data.airpl.org
+                    </h2>
+                </div>
+                <div class="info-heure" id="8-tr">
+                    <h4>
+                        A 8h, c’est l’heure de pointe. La concentration de NO2 est donc à son maximum.
+                    </h4>
+                </div>
+                <div class="info-heure" id="17-18-tr">
+                    <h5>
+                        Entre 17h et 18h, c’est l’heure de pointe. La concentration de NO2 est donc à son maximum.
+                    </h5>
+                </div>
+                <div class="info-heure" id="4-7-tr">
+                    <h4>
+                        De 4h à 7h, la concentration de NO2, liée au trafic, augmente.
+                    </h4>
+                </div>
+                <div class="info-heure" id="13-16-tr">
+                    <h5>
+                        De 13h à 16h, la concentration de NO2, liée au trafic, augmente.
+                    </h5>
+                </div>
+                <div class="info-heure" id="9-12-tr">
+                    <h5>
+                        De 9h à 12h, la concentration de NO2, liée au trafic, diminue.
+                    </h5>
+                </div>
+                <div class="info-heure" id="19-23-tr">
+                    <h4>
+                        De 19h à 23h, la concentration de NO2, liée au trafic, diminue.
+                    </h4>
+                </div>
+                <div class="info-heure" id="0-1-2-3-tr">
+                    <h4>
+                        À cette heure, la concentration de NO2 est au plus faible. Il y a peu de  trafic.
+                    </h4>
+                </div>
+            </div>
+            <div class="item" id="pas-de-panique">
+                <div id="backArrow2">
+                    <a href="#">
+                        <span class="icon fa-angle-double-left"></span>
+                    </a>
+                </div>
+                <div id="recommandations">
+                    <a href="#">
+                    </a>
+                </div>
             </div>
             <div class="item" id="conseils">
+                <div class="backArrow">
+                    <a href="#">
+                        <span class="icon fa-angle-double-left"></span>
+                    </a>
+                </div>
+                <div class="nextArrow">
+                    <a href="#">
+                        <span class="icon fa-angle-double-right"></span>
+                    </a>
+                </div>
             </div>
             <div class="item" id="equipe">
+                <div class="backArrow">
+                    <a href="#">
+                        <span class="icon fa-angle-double-left"></span>
+                    </a>
+                </div>
             </div>
         </div>
 
     </div>
 
 
-    <div id="svga1" class="svg-container">
-    </div>
+    <div id="svg-container"></div>
     <img  id="perso" src="img/GIF_PERSONNAGE.gif" alt="perso"/>
     <img id="perso2" src="img/MARCHE_ET_PENSE_X1_2.gif" alt="atchoum"/>
     <img id="perso3" src="img/GIF_PERSONNAGE.gif" alt="perso3"/>
@@ -272,7 +441,7 @@
 <script src="js/jquery.range.js"></script>
 
 <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
-<script src="libraries/d3/dist/package.js"></script>
+<script src="libraries/d3/dist/ckage.js"></script>
 <script src="libraries/d3/dist/d3.min.js"></script>
 <script src="js/animation.js"></script>
 <script src="./js/Myrange.js"></script>
