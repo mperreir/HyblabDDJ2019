@@ -39,18 +39,20 @@ function changer_radio(xPos){
     valeurRadio = valeur%10+1;
     valeurMusique = valeur%16+1;
     document.getElementById('imgBackground').src="img/RadioFm/Radiofm_fréquence_"+valeurRadio+".png";
+    x.pause();
     document.getElementById('musique').src="musiques/AUDIO HYBLAB/hyblablfm_"+valeurMusique+".wav";
     //document.getElementById('musique').load();
     x.load();
     x.play();
   }else{
     var valeur = parseInt(((xPos - xPosOrigin)/42))+12; //Valeur réelle
-    //console.log((valeur));
+    console.log((valeur));
     $( "#nomRadio" ).text(dab[valeur]);
     valeurRadio = valeur%7+1;
-    valeurMusique = valeur%5+1;
+    valeurMusique = valeur%16+1;
+    x.pause();
     document.getElementById('imgBackground').src="img/RadioRnt/Radiornt_img_"+valeurRadio+".png";
-    document.getElementById('musique').src="musiques/hyblablfm_"+valeurMusique+".wav";
+    document.getElementById('musique').src="musiques/AUDIO HYBLAB/hyblablfm_"+valeurMusique+".wav";
     x.load();
     x.play();
   }
@@ -83,8 +85,10 @@ function changer_radio(xPos){
     valeurRadio = valeur%7+1;
     valeurMusique = valeur%5+1;
     document.getElementById('imgBackground').src="img/RadioRnt/Radiornt_img_"+valeurRadio+".png";
+    x.pause();
     document.getElementById('musique').src="musiques/hyblablfm_"+valeurMusique+".wav";
-
+    x.load();
+    x.play();
     //document.getElementById('nomRadio').style.top="65%";
     //document.getElementById('nomRadio').style.left="50%";
   }
