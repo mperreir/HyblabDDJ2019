@@ -396,11 +396,11 @@ document.getElementById('valeurRouge').innerHTML=data[valRouge][donneeAffichee]+
 //fin Graphiques
 $('#rouge').draggable({
   axis: "x",
-  grid: [ 62, 10 ],
+  grid: [ 64, 10 ],
   drag: function( event, ui ) {
     var offset = $(this).offset(); // Avoir les coordonnées du slider
     var xPos = offset.left; //
-    valRouge = parseInt((xPos - xPosRouge)/62)+2;
+    valRouge = parseInt((xPos - xPosRouge)/64)+2;
     console.log(valRouge);
     refreshMyLine(myLineChart,data);
   },
@@ -411,7 +411,7 @@ $('#rouge').draggable({
 });
 $('#jaune').draggable({
   axis: "x",
-  grid: [ 62, 10 ],
+  grid: [ 63, 10 ],
   drag: function( event, ui ) {
     var offset = $(this).offset(); // Avoir les coordonnées du slider
     var xPos = offset.left; //
