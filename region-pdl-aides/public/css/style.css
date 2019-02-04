@@ -397,18 +397,18 @@ div#section2 {
     opacity: 1 !important;
     background: transparent ! important;
     justify-content: center !important;
-    background-size: 562px 900px !important;
+    background-size: 500px 800px !important;
     background-image: url("https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/50875301_402700270297028_7810520494473478144_n.png?_nc_cat=103&_nc_ht=scontent-cdt1-1.xx&oh=f1eb6e5937f557b75b078aeb672236e3&oe=5CFD2572") !important;
 }
 
 .imgcontainer {
-    margin-top: 30px;
+    margin-top: 200px;
     margin-left: 450px;
 }
 
 #logo {
-    height: 900px;
-    width: 562px;
+    height: 800px;
+    width: 500px;
     vertical-align: middle;
     justify-content: center;
 }
@@ -484,9 +484,8 @@ div#section2 {
 }
 
 #section4 {
-    background-position: -200px;
-	background-image: url('./../img/gauche.gif');
-	background-repeat: no-repeat;
+    background-image: url('./../img/gauche.gif');
+    background-repeat: no-repeat;
 }
 
 #section8 {
