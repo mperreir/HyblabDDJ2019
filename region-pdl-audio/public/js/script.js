@@ -793,8 +793,8 @@ function graph_update_type_reunion() {
 
                 div_bar_wrap.appendChild(span_number);
                 div_bar_wrap.appendChild(div_bar);
-                div_row.appendChild(div_bar_wrap);
                 div_row.appendChild(span_label);
+                div_row.appendChild(div_bar_wrap);                
                 parent.appendChild(div_row);
                 generateBarGraph('#dashboard-stats');
             }
