@@ -48,7 +48,9 @@ canvas{
   width:400px;
   height: 275px;
 }
-
+.petit_text{
+  font-size: 12px;
+}
 
 .salmon-border{
   border-width: 1px;
