@@ -344,7 +344,7 @@ function affichageGraphique(data,val1,val2){
          reseau =reseau2;
          if (maison) {
            document.getElementById('maison').src="img/Picto/Picto maison-blanc.png";
-           document.getElementById('critere').innerHTML="TAUX D’ÉQUIPEMENT EN RÉCEPTEURS DAB/DAB+ ";
+           document.getElementById('critere').innerHTML="TAUX D’ÉQUIPEMENT EN RÉCEPTEURS DAB+ ";
            donneeAffichee ="maison";
          }else{
            document.getElementById('maison').src="img/Picto/Picto maison-bleu.png"
@@ -396,7 +396,7 @@ document.getElementById('valeurRouge').innerHTML=data[valRouge][donneeAffichee]+
 //fin Graphiques
 $('#rouge').draggable({
   axis: "x",
-  grid: [ 44, 10 ],
+  grid: [ 46, 10 ],
   drag: function( event, ui ) {
     var offset = $(this).offset(); // Avoir les coordonnées du slider
     var xPos = offset.left; //
@@ -411,7 +411,7 @@ $('#rouge').draggable({
 });
 $('#jaune').draggable({
   axis: "x",
-  grid: [ 44, 10 ],
+  grid: [ 46, 10 ],
   drag: function( event, ui ) {
     var offset = $(this).offset(); // Avoir les coordonnées du slider
     var xPos = offset.left; //
