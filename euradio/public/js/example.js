@@ -358,14 +358,14 @@ function affichageGraphique(data,val1,val2){
          }*/
          if (recepteur) {
            document.getElementById('recepteur').src="img/Picto/Picto recepteur-blanc.png";
-           document.getElementById('critere').innerHTML="NOMBRE DE STATIONS NATIONALES DIFFUSANT EN DAB/DAB+ / EN FM";
+           document.getElementById('critere').innerHTML="NOMBRE DE STATIONS NATIONALES EN DAB/DAB+ / EN FM";
            donneeAffichee ="recepteur";
          }else{
-           document.getElementById('recepteur').src="img/Picto/Picto recepteur-bleu.png"
+           document.getElementById('recepteur').src="img/Picto/Picto recepteur-bleu.png";
          }
          if (route) {
            document.getElementById('route').src="img/Picto/Picto route-blanc.png";
-           document.getElementById('critere').innerHTML="DAB/DAB+ : TAUX DE COUVERTURE ROUTIÈRE  du DAB+";
+           document.getElementById('critere').innerHTML="DAB/DAB+ : TAUX DE COUVERTURE ROUTIÈRE du DAB+";
            donneeAffichee ="route";
          }else{
            document.getElementById('route').src="img/Picto/Picto route-bleu.png"
@@ -379,7 +379,7 @@ function affichageGraphique(data,val1,val2){
          }
          if (reseau) {
            document.getElementById('reseau').src="img/Picto/Picto couverture réseaux-blanc.png"
-           document.getElementById('critere').innerHTML="ÉTENDUE DE LA COUVERTURE DU RÉSEAU DAB/DAB+ en 2013 / en 2018";
+           document.getElementById('critere').innerHTML="ÉTENDUE DE LA COUVERTURE DU RÉSEAU DAB+";
            donneeAffichee ="reseau";
          }else{
 
@@ -396,11 +396,11 @@ document.getElementById('valeurRouge').innerHTML=data[valRouge][donneeAffichee]+
 //fin Graphiques
 $('#rouge').draggable({
   axis: "x",
-  grid: [ 64, 10 ],
+  grid: [ 46, 10 ],
   drag: function( event, ui ) {
     var offset = $(this).offset(); // Avoir les coordonnées du slider
     var xPos = offset.left; //
-    valRouge = parseInt((xPos - xPosRouge)/60)+2;
+    valRouge = parseInt((xPos - xPosRouge)/42)+2;
     console.log(valRouge);
     refreshMyLine(myLineChart,data);
   },
@@ -411,11 +411,11 @@ $('#rouge').draggable({
 });
 $('#jaune').draggable({
   axis: "x",
-  grid: [ 62, 10 ],
+  grid: [ 46, 10 ],
   drag: function( event, ui ) {
     var offset = $(this).offset(); // Avoir les coordonnées du slider
     var xPos = offset.left; //
-    valJaune = parseInt((xPos - xPosJaune)/62);
+    valJaune = parseInt((xPos - xPosJaune)/42);
     //var chartData2 =
     refreshOtherLine(otherLineChart,data);
 
@@ -434,21 +434,24 @@ function refreshMyLine(chart,data) {
     chart.data = reseauRougeData;
     chart.data.datasets[0].data = [data[valRouge][donneeAffichee],100-data[valRouge][donneeAffichee]];
     chart.data.datasets[1].data = [data[valRouge]["reseau2"],100-data[valRouge]["reseau2"]];
+    document.getElementById('sousRouge').innerHTML= "(2013) / (2018)";
     if (data[valRouge]["nomPays"]=="Pays-Bas"){
       document.getElementById('valeurRouge').innerHTML="ND / "+data[valRouge][donneeAffichee]+"%";
     }else{
-      document.getElementById('valeurRouge').innerHTML=data[valRouge]["reseau2"]+"% / "+data[valRouge][donneeAffichee]+"%";
+      document.getElementById('valeurRouge').innerHTML=data[valRouge][donneeAffichee]+"% / "+data[valRouge]["reseau2"]+"%";
     }
 
   }else if(donneeAffichee=="recepteur"){
     chart.data = chartData;
     chart.data.datasets[0].data = [data[valRouge][donneeAffichee],data[valRouge]["recepteur2"]];
     document.getElementById('valeurRouge').innerHTML=data[valRouge][donneeAffichee]+" / "+data[valRouge]["recepteur2"];
+    document.getElementById('sousRouge').innerHTML= "DAB+ / FM";
   }else{
     if (((data[valRouge]["nomPays"]=="Belgique"|data[valRouge]["nomPays"]=="Pays-Bas"|data[valRouge]["nomPays"]=="Suisse") && donneeAffichee=="maison")|(data[valRouge]["nomPays"]=="France"&donneeAffichee=="route")){
       document.getElementById('valeurRouge').innerHTML="ND";
     }else{
       document.getElementById('valeurRouge').innerHTML=data[valRouge][donneeAffichee]+"%";
+      document.getElementById('sousRouge').innerHTML= "(2018)";
     }
     chart.data = chartData;
     chart.data.datasets[0].data = [data[valRouge][donneeAffichee],100-data[valRouge][donneeAffichee]];
@@ -463,23 +466,25 @@ function refreshOtherLine(chart,data) {
     chart.data = reseauJauneData;
     chart.data.datasets[0].data = [data[valJaune][donneeAffichee],100-data[valJaune][donneeAffichee]];
     chart.data.datasets[1].data = [data[valJaune]["reseau2"],100-data[valJaune]["reseau2"]];
+    document.getElementById('sousJaune').innerHTML= "(2013) / (2018)";
     if (((data[valJaune]["nomPays"]=="Belgique"|data[valJaune]["nomPays"]=="Pays-Bas"|data[valJaune]["nomPays"]=="Suisse") && donneeAffichee=="maison")|(data[valJaune]["nomPays"]=="France"&donneeAffichee=="route")){
       document.getElementById('valeurJaune').innerHTML="ND / "+data[valJaune][donneeAffichee]+"%";
     }else{
-      document.getElementById('valeurJaune').innerHTML=data[valJaune]["reseau2"]+"% / "+data[valJaune][donneeAffichee]+"%";
+      document.getElementById('valeurJaune').innerHTML=data[valJaune][donneeAffichee]+"% / "+data[valJaune]["reseau2"]+"%";
     }
 
   }else if(donneeAffichee=="recepteur"){
     chart.data = chartData2;
     chart.data.datasets[0].data = [data[valJaune][donneeAffichee],data[valJaune]["recepteur2"]];
     document.getElementById('valeurJaune').innerHTML=data[valJaune][donneeAffichee]+" / "+data[valJaune]["recepteur2"];
+    document.getElementById('sousJaune').innerHTML= "DAB+ / FM";
   }else{
     if ((data[valJaune]["nomPays"]=="France"|data[valJaune]["nomPays"]=="Belgique"|data[valJaune]["nomPays"]=="Pays-Bas") && donneeAffichee=="maison"){
       document.getElementById('valeurJaune').innerHTML="ND";
     }else{
       document.getElementById('valeurJaune').innerHTML=data[valJaune][donneeAffichee]+"%";
     }
-
+    document.getElementById('sousJaune').innerHTML= "(2018)";
     chart.data = chartData2;
     chart.data.datasets[0].data = [data[valJaune][donneeAffichee],100-data[valJaune][donneeAffichee]];
 

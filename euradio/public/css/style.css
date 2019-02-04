@@ -332,6 +332,14 @@ h4{
   margin: auto;
   width: 6%;
 }
+.sousTexte{
+  margin-top: 0%;
+  font-size: 18px;
+}
+.surTexte{
+  margin-bottom: 0%;
+
+}
 /* DIAPO 4*/
 
 #section4{
