@@ -53,7 +53,7 @@ function ran(){
 //changer la nuit et le journee
     if(aa>=19||aa<8){
         $("#r").css({
-            "background": "url(./img/RuralNuit31janvier@2x.png) no-repeat center",
+            "background": "url(./img/NuitRural4fevrier.png) no-repeat center",
             "height": "100%",
             "background-size": "cover"
         });
@@ -316,7 +316,7 @@ function ran3(){
 
     if(aa3>=19||aa3<8){
         $("#tr").css({
-            "background": "url(./img/TraficNuit29janvier@2x.png) no-repeat center",
+            "background": "url(./img/TraficNuit4fevrier.png) no-repeat center",
             "height": "100%",
             "background-size": "cover"
         });
