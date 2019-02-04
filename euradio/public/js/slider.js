@@ -64,7 +64,7 @@ function changer_radio(xPos){
     });
 
     $('#titre11').text("…La radio numérique terrestre");
-    $('#titre12').text("aussi appelé DAB+");
+    $('#titre12').text("aussi appelée DAB+");
     document.getElementById('sliderBackground').style.display="none";
     document.getElementById('sliderBackground2').style.display="inline-block";
     document.getElementById('partie').style.marginLeft="8%";

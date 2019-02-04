@@ -444,7 +444,7 @@ h4{
 }
 
 #team li img{
-    width: 50%;
+    width: 80%;
 	display: block;
 	margin: 0 auto;
 }
@@ -465,5 +465,5 @@ h4{
 }
 
 #credits {
-  margin-bottom: 65px;
+  margin-bottom: 110px;
 }
