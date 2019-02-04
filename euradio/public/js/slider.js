@@ -7,18 +7,19 @@ var dab = ["Ado FM","Beur FM","Collector Radio","Denis FM ","Euradio","France In
 ];
 var x;
 
+//Slider pour la première page
 $('#draggable').draggable({
   axis: "x",
-  grid: [ 32, 10 ],
+  grid: [ 32, 10 ], // Le premier nombre permet de gerer les "crans" de la radio
   drag: function( event, ui ) {
     var offset = $(this).offset(); // Avoir les coordonnées du slider
     var xPos = offset.left; //
-    x = document.getElementById("musique");
+    x = document.getElementById("musique"); // Element pour la musique de fond
     x.load();
     x.play();
     document.getElementById("souffle").load();
     document.getElementById("souffle").play();
-    document.getElementById("souffle").loop = true;
+    document.getElementById("souffle").loop = true; // Le souffle est en fond donc en loop
     changer_radio(xPos);
   },
   create: function(event,ui){
@@ -32,18 +33,18 @@ function changer_radio(xPos){
 
 
 
-  if(!hasChanged){
+  if(!hasChanged){ // Cas initial
     var valeur = parseInt(((xPos - xPosOrigin)/31))+9; //Valeur réelle
     $( "#nomRadio" ).text(radios[valeur]);
     //console.log((valeur));
     valeurRadio = valeur%10+1;
-    valeurMusique = valeur%16+1;
+    valeurMusique = valeur%16+1; // Changement de musique et image géré en modulo
     document.getElementById('imgBackground').src="img/RadioFm/Radiofm_fréquence_"+valeurRadio+".png";
     x.pause();
     document.getElementById('musique').src="musiques/AUDIO HYBLAB/hyblablfm_"+valeurMusique+".wav";
     x.load();
     x.play();
-  }else{
+  }else{ // cas après dépassement
     var valeur = parseInt(((xPos - xPosOrigin)/41))+12; //Valeur réelle
     console.log((valeur));
     $( "#nomRadio" ).text(dab[valeur]);
@@ -56,7 +57,7 @@ function changer_radio(xPos){
     x.play();
   }
 
-  if( !hasChanged &&valeur >17){
+  if( !hasChanged &&valeur >17){ // Changement de radio la valeur est en dure mais pourrait être en position
     hasChanged =true;
     document.getElementById("souffle").src = "";
     $( "#draggable" ).draggable({
