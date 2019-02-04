@@ -449,11 +449,6 @@ h4{
 	margin: 0 auto;
 }
 
-#team li img:hover {
-    -webkit-animation: pulse 1s;
-    animation: pulse 1s;
-}
-
 #team h5{
     text-align: center;
 	width: 110px;
