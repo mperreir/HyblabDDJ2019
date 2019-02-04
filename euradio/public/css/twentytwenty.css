@@ -85,11 +85,11 @@
   z-index: 0;
   overflow: hidden;
   position: relative;
-  left: 32.5%;
+  left: 35.5%;
   -webkit-user-select: none;
   -moz-user-select: none; }
   .twentytwenty-container img {
-    max-width: 35%;
+    max-width: 27.5%;
     position: absolute;
     top: 0;
     display: block; }
