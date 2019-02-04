@@ -50,13 +50,23 @@ canvas{
 }
 
 
-
+.salmon-border{
+  border-width: 1px;
+  border-color: #EF8772;
+  border-style: solid;
+  padding: 1px;
+}
 
 .bouton{
   border-width: 2px;
   border-color: white;
   border-style: solid;
   padding: 2px;
+}
+
+.col-md-3.text-left{
+  text-align: left;
+  margin-left: 5%;
 }
 .left{
   margin-left: -8%;
