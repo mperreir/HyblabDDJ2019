@@ -9,7 +9,7 @@ let fs = require('fs');
 let fastcsv = require('fast-csv');
 let readableStreamInput = fs.createReadStream('public/data/musicdata.csv');
 let csvData = [];
-let genremusicales=[];
+let pays=[];
 let k=0;
 app.use(express.static(path.join(__dirname, 'public')));
 app.listen(3000, function(req, res) {
@@ -67,9 +67,9 @@ if(k==1){
 
 
 
-    app.get('/Genres', function(req,resp){
+    app.get('/pays', function(req,resp){
 
-    let genremusicales=[];
+    let pays=[];
     let row={};
 
       if(k==1){
@@ -77,18 +77,19 @@ if(k==1){
         for(var i=0;i<csvData.length;i++)
         {
 
-          if(! genremusicales.includes(csvData[i].Genre))
+          if(! pays.includes(csvData[i].Country))
           {
               //row["Genre"]=csvData[i].Genre;
 
-            genremusicales.push(csvData[i].Genre);
+
+            pays.push(csvData[i].Country);
           }
           else{
             //console.log("element existant");
           }
         }
         //console.log(genremusicales);
-        resp.send(JSON.stringify(genremusicales));
+        resp.send(JSON.stringify(pays));
 
 }
 });
@@ -111,6 +112,7 @@ app.get('/tracks/:genre', function(req,resp){
               rowData["x1"] = csvData[i].Name;
               rowData["y1"] = csvData[i].Tracks;
               rowData["z1"] = csvData[i].Followers;
+              rowData["pays"]=csvData[i].Country;
               tracksgenre.push(rowData);
               rowData={};
 
@@ -151,6 +153,7 @@ app.get('/followers/:genre', function(req,resp){
               rowData["x1"] = csvData[i].Name;
               rowData["y1"] = csvData[i].Followers;
               rowData["z1"] = csvData[i].Tracks;
+              rowData["pays"]=csvData[i].Country;
               followersgenre.push(rowData);
               rowData={};
 
