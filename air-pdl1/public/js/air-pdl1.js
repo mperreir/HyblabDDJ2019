@@ -45,14 +45,14 @@ function dessinerParticule(canvas, nombre){
 function clickVideo2(){
   var video2 = document.getElementById("video2");
   //console.log("click video 2, time : ",video2.currentTime);
-  var clignote = document.getElementById('clignote');
+  //var clignote = document.getElementById('clignote');
 
   if(video2.currentTime > 0){
     var video3 = document.getElementById("video3");
     console.log("fin video 2 : ", video2.currentTime);
     video2.currentTime = 0;
     video2.style.visibility = "hidden";
-    clignote.style.visibility = "hidden";
+    //clignote.style.visibility = "hidden";
     video3.style.visibility = "visible";
     video3.play();}
 }
