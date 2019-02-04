@@ -20,9 +20,9 @@ header img{
     padding:0;
 }
 body{
-    font-family:Ubuntu;
+    font-family:Ubuntu !important;
     background-color: background: #f7f7f7;
-    font-size: 34px;
+    font-size: 25px !important;
     letter-spacing:-1px;
     width:12800px;
     position:absolute;
@@ -39,9 +39,7 @@ body{
     height:100%;
     text-shadow:1px 1px 2px #f0f0f0;
 }
-.section h2{
-    margin:50px 0px 30px 50px;
-}
+
 .section p{
     margin:20px 0px 0px 50px;
     width:600px;
@@ -266,7 +264,7 @@ div#section2 {
 	background-color:white;
 	text-align:center;
 	width:100%;
-	height:100px;
+	height:130px;
 	border:2px solid #555555;
 	border-top-right-radius:80px;
 	border-top-left-radius:80px;
@@ -319,19 +317,18 @@ div#section2 {
 #left{
     float:left;
     height: 100vh;
-    width:75%;
     overflow:hidden;
 }
 #right{
     float:left;
     height: 100vh;
-    width:25%;
     overflow:hidden;
 }
 
 /*FACTORY LOADING CSS*/
 
 .imgcontainer {
+	width: 100%;
 }
 
 
@@ -355,27 +352,29 @@ div#section2 {
 #logo {
     vertical-align: middle;
     justify-content: center;
-    height: 523px;
-    width: 354px;
+    padding-bottom: 190px;
 }
 
 .cloud {
     background-image: url("https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/51124261_2013097502142264_7733117551642673152_n.png?_nc_cat=107&_nc_ht=scontent-cdt1-1.xx&oh=ff9a6d06333640768194bb4442ed75b7&oe=5CF61F58");
+    background-position: 75%;
     justify-content: center;
     vertical-align: middle !important;
     display: table-cell;
     padding-left: 50px;
     padding-right: 50px;
+    padding-top: 20px;
     width: 383px;
     height: 164px;
     font-size: 14px;
     text-align: center;
+    position: relative;
+    bottom: 20%;
 }
 
 .n{
-    padding: 50px;
     font-size: 24px;
-    max-width: 50%;
+    padding-left: 50px;
     max-height: 30%;
 }
 
@@ -411,9 +410,20 @@ div#section2 {
 	margin: 30px 0px 0px 0px;
 }
 
-#section1 {
+#section1, #section4 {
 	background-image: url('./../img/01_Page1_Fond.gif');
 	background-position: -300px;
 }
 
+#section2, #section3 {
+	background-image: url('./../img/FondDroit.gif');
+}
 
+#section4 h2 {
+
+	margin-left: 20px;
+}
+
+#section4 {
+	background-image: url('./../img/FondGauche.gif');
+}
