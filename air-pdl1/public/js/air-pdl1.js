@@ -1,13 +1,15 @@
+function clignote(){
+  var clignote = document.getElementById("clignote");
+  clignote.style.visibility = "visible";
+  clignote.currentTime=0;
+  clignote.play();
+  console.log("clignote");
+}
 
 function montrerInfo(id){
   var afficher = document.getElementById("info_"+id);
   afficher.style.visibility="visible";
-  console.log("leeeeeelo  ", id);
-}
-
-function finVideo1(){
-  console.log("fin video 1");
-  showButton();
+  console.log("ID : ", id);
 }
 function valider_curseur(){
   console.log('leeeelo');
@@ -42,12 +44,15 @@ function dessinerParticule(canvas, nombre){
 
 function clickVideo2(){
   var video2 = document.getElementById("video2");
-  console.log("click video 2, time : ",video2.currentTime);
+  //console.log("click video 2, time : ",video2.currentTime);
+  var clignote = document.getElementById('clignote');
+
   if(video2.currentTime > 0){
     var video3 = document.getElementById("video3");
     console.log("fin video 2 : ", video2.currentTime);
     video2.currentTime = 0;
     video2.style.visibility = "hidden";
+    clignote.style.visibility = "hidden";
     video3.style.visibility = "visible";
     video3.play();}
 }
@@ -158,7 +163,24 @@ function mouvementCurseur(p,v){
 
         },
     });
+    $('#curseurGrandeVille').rangeslider({
+        polyfill: false,
+
+        onInit: function(){
+          dessinerParticule('canvasGrandeVille',18);
+        },
+        // Callback function
+        onSlide: function(position, value) {
+             console.log('on bouge');
+             dessinerParticule('canvasGrandeVille',value);
+        },
+        // Callback function
+        onSlideEnd: function(position,value){
+        },
+    });
     $('#curseurVille').prop("disabled",true);
     $('#curseurVille').rangeslider('update');
+    $('#curseurGrandeVille').prop("disabled",true);
+    $('#curseurGrandeVille').rangeslider('update');
 
   });

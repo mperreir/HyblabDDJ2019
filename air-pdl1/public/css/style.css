@@ -123,6 +123,10 @@ canvas{
   background:url('../img/ville.svg');
   background-repeat: no-repeat;
 }
+#canvasGrandeVille{
+  background:url('../img/ville.svg');
+  background-repeat: no-repeat;
+}
 #canvasCampagne{
   background:url('../img/campagne.svg');
   background-repeat: no-repeat;
@@ -136,7 +140,14 @@ canvas{
   min-width: 100%;
   min-height: 100%;
 }
-
+#clignote{
+  visibility: hidden;
+  position:absolute;
+  width:100%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 100;
+}
 #video2 {
   position:absolute;
   visibility: visible;
