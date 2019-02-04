@@ -184,6 +184,10 @@ function GetAllData()
                //$('.slidecontainer').hide();
                $.each( json, function( key, val ) {
                  // ici je vais affcher l'ensemble des genre accompagnés chacun par le nombre de blog qui le contient
+                 //$('#geresmusicales').append("<button id= "+ escape(key)+ ">"+key+"</button>");
+                 //$('#geresmusicales').append(" le nombre de blogs est " + val +  "<br>");
+                 //$('#onde-genres').append("<div id='genre-+escape(key) class='onde-genre'>key</div>");
+                 //$('#onde-genres').append("<div id="+ escape(key)+ "class='onde-genre'>"+key+"<object type='image/svg+xml' data='img/choix-genres/'"+key+".svg class='onde-genre-svg'</div>");
                  //key ==> le id de genre
                  $('#geresmusicales').append("<button id= "+ escape(key)+ ">"+key+"</button>");
                  //le nombre de blog pour ce genre
