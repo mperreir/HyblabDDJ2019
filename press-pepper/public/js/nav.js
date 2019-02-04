@@ -141,9 +141,20 @@ document.addEventListener('DOMContentLoaded', function() {
 	var score=0;
     var s = new ScrollPages(1,10,document.getElementById('all-pages'));
     s.init();
+	
 	disc=document.getElementById("disc");
 	disc.onclick=function(){s.scrollDown();};
+	disc1=document.getElementById("disc1");
+	disc1.onclick=function(){s.scrollDown();};
 	
+	disc2=document.getElementById("disc2");
+	disc2.onclick=function(){s.scrollDown();};
+	
+	disc3=document.getElementById("disc3");
+	disc3.onclick=function(){s.scrollDown();};
+	
+	disc4=document.getElementById("disc4");
+	disc4.onclick=function(){s.scrollDown();};
 	
 	//Quizz 1 elem 1 -2 -3
 	i=document.getElementById("click");
@@ -204,8 +215,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	iii2.onmouseover=function(){rrr3.style.opacity="0.8";iii2.style.width="19%";};
 	iii2.onmouseout=function(){rrr3.style.opacity="0.0";iii2.style.width="18%";};
 	
-	var delayInMilliseconds = 3000; 
+/*	var delayInMilliseconds = 3000; 
 	setTimeout(function() {
 		s.scrollTo(2);
-	}, delayInMilliseconds);
+	}, delayInMilliseconds);*/
 })
