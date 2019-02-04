@@ -10921,7 +10921,26 @@ var dataDate = [
 {"id":"7221","date":"2019-01-16"}
 ];
 function populate_html(ville,theme){
-	var retour = '<div id = "Popo" style="overflow-y:scroll;max-height:300px;"><strong>'+ville+'</strong><br><p>'+theme+'</p>';
+	if (theme=='delits_routiers'){
+		var theme2 = 'délits routiers';
+	}
+	else {
+		if(theme=='vie_economique'){
+			var theme2='économie';
+		}
+		else{
+			if(theme=='vie_politique'){
+				var theme2='vie politique';
+			}
+			else{
+				if(theme=='stupefiants'){
+					var theme2='stupéfiants';
+				}
+				else{var theme2=theme;}
+			}
+		}
+	}
+		var retour = '<div id = "Popo" style=max-height:300px;"><strong>'+ville+'  /  '+theme2+'</strong><br>';
 	// afficher le nom de la ville, le nom du contentieux (balises strong?)
 	//get tous les id associés à ces critères
 	//supprimer doublons
@@ -10929,30 +10948,36 @@ function populate_html(ville,theme){
 	for(var i = 0; i < data.length;i++)
 	{
 		if (data[i].cities.includes(ville)&&data[i].theme.includes(theme))
-			{
-				retour= retour+'<a onclick="depeche_print('+i+')" style="cursor: pointer;">'+data[i].title+'</a><br><br>';
-			}
+		{
+			retour= retour+'<a onclick="depeche_print('+i+')" style="cursor: pointer;">'+data[i].title+'</a><br><br>';
+		}
 	}
-retour = retour+'</div>'
-return(retour);
+	retour = retour+'</div>'
+	return(retour);
 }
+function isOverflown(element) {
+	return element.scrollHeight > element.clientHeight;
+}
+
 function populate_html_all(ville){
-var retour = '<div id="Popo" style="overflow-y:scroll;max-height:300px;"><strong>'+ville+'</strong><br><p>Selectionnez un article pour en lire plus</p>';
+	var retour = '<div id="Popo" style="max-height:300px;"><strong>'+ville+'</strong><br><p>Selectionnez un article pour en lire plus</p>';
 	// afficher le nom de la ville, le nom du contentieux (balises strong?)
 	//get tous les id associés à ces critères
 	//supprimer doublons
 	//print les titres dans des balises <a></a> déclenchant depecheprint(idAssocie)
+	
 	for(var i = 0; i < data.length;i++)
 	{
 		if (data[i].cities.includes(ville))
-			{
-				var Titre = data[i].title;
-				var corps = data[i].excerpt;
-				retour= retour+'<a onclick="depeche_print('+i+')" style="cursor: pointer;">'+data[i].title+'</a><br><br>';
-			}
+		{
+			var Titre = data[i].title;
+			var corps = data[i].excerpt;
+			retour= retour+'<a onclick="depeche_print('+i+')" style="cursor: pointer;">'+data[i].title+'</a><br><br>';
+		}
 	}
-retour = retour+'</div>'
-return(retour);
+	retour = retour+'</div>';
+
+	return(retour);
 }
 function depeche_print(i){
 	// à partir de l'id envoyé, on remplit la div depeche
