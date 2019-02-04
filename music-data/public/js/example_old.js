@@ -14,6 +14,13 @@ function sortByy1(key1, key2){
    return key1.y1 > key2.y1;
 }
 
+/* Gestion de la fleche pour slider */
+/*$(document).on("click", ".fleche", function(){
+        console.log('clique sur la fleche');
+        $('#fullpage').moveSectionDown();
+    }
+);*/
+
 function GetAllData()
 {
 
@@ -182,19 +189,42 @@ function GetAllData()
           .then(function (json) {
                console.log(json);
                //$('.slidecontainer').hide();
+              var i=0;
+              var j=0;
                $.each( json, function( key, val ) {
                  // ici je vais affcher l'ensemble des genre accompagnés chacun par le nombre de blog qui le contient
-                 //$('#geresmusicales').append("<button id= "+ escape(key)+ ">"+key+"</button>");
-                 //$('#geresmusicales').append(" le nombre de blogs est " + val +  "<br>");
+                 $('#geresmusicales').append("<button id= "+ escape(key)+ ">"+key+"</button>");
+                 $('#geresmusicales').append(" le nombre de blogs est " + val +  "<br>");
                  //$('#onde-genres').append("<div id='genre-+escape(key) class='onde-genre'>key</div>");
                  //$('#onde-genres').append("<div id="+ escape(key)+ "class='onde-genre'>"+key+"<object type='image/svg+xml' data='img/choix-genres/'"+key+".svg class='onde-genre-svg'</div>");
                  //key ==> le id de genre
-                 $('#geresmusicales').append("<button id= "+ escape(key)+ ">"+key+"</button>");
-                 //le nombre de blog pour ce genre
-                 $('#geresmusicales').append(" le nombre de blogs est " + val +  "<br>");
+                  /*var svg = document.createElement('object');
+                   svg.setAttribute("type","image/svg+xml");
+                   svg.append("Your browser doesn't support SVG");
+                   svg.setAttribute("data", "img/choix-genres/"+key+".svg");
+                   svg.style.position = "absolute";
+                   svg.style.width = "15%";
+                   svg.style.height = "15%";
+                   svg.style.color="#ffffff";
+                   svg.setAttribute("id", key);
+                   svg.style.top = 5+(20*j)+"%";
+                   svg.style.left = 5+(20*i)+"%";*/
+                   console.log("creer l'element "+key+" : "+genre+": crea svg : "+svg);
+                   //svg.append("test");
+                   //$('#geresmusicales').append(legend);
+                   //$('#geresmusicales').append(svg); //append genre
+                 //$('#'+key).select('defs')
+                   //$('#geresmusicales').append("<div id= "+ escape(key)+ "1 class='test-g'>"+key+"</div>").style("color", "#ff0000");
+                   //$('#geresmusicales').append("<object type='image/svg+xml' data='img/choix-genres/Electronic.svg'"+" style='width:5%;height:7%;background-color:#ff0000; position:absolute; top: "+(i*30).toString()+"%; left: "+(i*20).toString()+"%; "+ "id= "+ escape(key)+ ">"+key+"</object>");//le nombre de blog pour ce genre
+                   //$('#geresmusicales').append(" le nombre de blogs est " + val +  "<br>");
+                 i++;
+                 if(i==4){
+                     j++;
+                     i=0;
+                 }
 
-                 //var k="#" + key;
                  var k="#"+key.replace("%20","\\ ");
+                 //var k = "#"+key;
                  console.log("k",k);
 
                  $(document).on("click", k, function(){
@@ -635,18 +665,15 @@ else{
 
 if(donnee.length == 0)
 {
-alert("il n'a aucune donnée avec ces choix");
-$('#bloginformations').empty();
+    alert("il n'a aucune donnée avec ces choix");
+    $('#bloginformations').empty();
 }
 else{
-creehistogram(zone,donnee,parseInt(nbbins));
-//creehistogramReflet
-
-
-creehistogramReflet(reflet,donnee,parseInt(nbbins));
+    creehistogram(zone,donnee,parseInt(nbbins));
+    //creehistogramReflet
+    creehistogramReflet(reflet,donnee,parseInt(nbbins));
 }
 
   donnee=[];
 
-}
   Getpays();
