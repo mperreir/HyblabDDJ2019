@@ -1,0 +1,54 @@
+.topnav {
+    background-color: #EB4834;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 10%;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  font-size: 2vw;
+}
+
+.titre_map{
+  color: #ffffff;
+}
+.titre_check{
+  font-size: 1vw;
+  color: #ffffff;
+}
+.box_check{
+  height: 3vw;
+  width: 1vw;
+}
+.map {
+
+}
+
+.section_map{
+  background-color: #EB4834;
+}
+
+#cartevide{
+width: 100%;
+    height: 90%;
+    position: absolute;
+    overflow: hidden;
+    top: 8rem;
+    left: 0rem;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url(font/Rubik-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'RubikR';
+  src: url(font/Rubik-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'RubikB';
+  src: url(font/Rubik-Bold.ttf);
+}
