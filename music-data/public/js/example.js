@@ -57,21 +57,22 @@ function GetAllData()
                 datatracks=json;
                 $('#menu').append('<div class="rectangle-path4"></div>');
                 $('#menu').append('<button class="rectangle-path" > Nombre de bars</button>');
-               $('#menu').append('<button  class="rectangle-path"> Tracks</button>');
-               $('#menu').append('<button class="rectangle-path2" id="followers"  value='+key+'>Followers</button>');
-
+                $('#menu').append('<button  class="rectangle-path"> Tracks</button>');
+                $('#menu').append('<button class="rectangle-path2" id="followers"  value='+key+'>Followers</button>');
+                $('#bottonderetour').append('<button class="left" id="retour"  value="Genres">Genres</button>');
                AfficherCursseur("#trackspourungenre",datatracks);
                creehistogram("#trackspourungenre",json,20);
 
                creehistogramReflet("#trackspourungenreReflet",json,20);
-
-               $(document).on("click", "#retour", function(){
-                  $('.slidecontainer').empty();
+//bottonderetour
+                $(document).on("click", "#retour", function(){
+                $('.slidecontainer').empty();
                 $('#geresmusicales').show();
                 $("#trackspourungenre").empty();
                 $("#trackspourungenreReflet").empty();
                 $('#artistespourungenre').empty();
                 $("#menu").empty();
+                $("#bottonderetour").empty();
                 $("#bloginformations").empty();
                 $("#bloginformations").hide();
                 $("#selectcontry").hide();
@@ -103,10 +104,9 @@ function GetAllData()
                  })
 
                  .then(function (data) {
-                   //par defaut
-                   //il faut definir le cursseur
 
                     datafollowers=data;
+
 
                       //je fais cette affichage juste pour que les choses soit claire, mais apres on doit la changer par le design et le mode d'affichage que l'on veut
                       AfficherCursseur("#followerspourungenre",datafollowers);
@@ -116,7 +116,7 @@ function GetAllData()
                      $('#menu').append('<button class="rectangle-path3">Nombre de Bars</button>');
                      $('#menu').append('<button id="tracks" class="rectangle-path" value='+key+'> Tracks</button>');
                      $('#menu').append('<button class="rectangle-path">Followers</button>');
-
+                     $('#bottonderetour').append('<button class="left" id="retour"  value="Genres">Genres</button>');
                       //$('#menu').append("<button id='retour' class='buttonmenu'> Retour à l'ensemble des Genres </button>");
 
                       $(document).on("click", "#retour", function(){
@@ -126,6 +126,7 @@ function GetAllData()
                        $("#followerspourungenreReflet").empty();
                        $('#artistespourungenre').empty();
                        $("#menu").empty();
+                       $("#bottonderetour").empty();
                        $("#bloginformations").empty();
                        $("#bloginformations").hide();
                        $("#selectcontry").hide();
@@ -158,31 +159,6 @@ function GetAllData()
                              console.log(json);
                              //je fais cette affichage juste pour que les choses soit claire, mais apres on doit la changer par le design et le mode d'affichage que l'on veut
 
-                             $('#artistespourungenre').append('<table>' );
-                             $('#artistespourungenre').append('<tr>' );
-                             $('#artistespourungenre').append( '<td>Blog</td>' );
-                             $('#artistespourungenre').append( '<td>Dernier Artiste</td>' );
-                             $('#artistespourungenre').append('</tr>' );
-                             for(var i=0;i<json.length;i++){
-                                     $('#artistespourungenre').append('<tr>' );
-                                     $('#artistespourungenre').append( '<td>' +  json[i]["NomdeBlog"]+ '</td>' );
-                                     $('#artistespourungenre').append( '<td>' +  json[i]["NomDeDernierArtiste"]+ '</td></tr>' );
-                                   }
-                             $('#artistespourungenre').append(  '</table>' );
-                             $('#menu').append("<button id='tracks' class='buttonmenu' value="+key+"> Tracks/Blogs/"+ key + "</button><br>");
-                             $('#menu').append("<button id='followers' class='buttonmenu' value="+key+"> Followers/Blogs/"+ key + "</button><br>");
-                             $('#menu').append("<button id='retour' class='buttonmenu'> Retour à l'ensemble des Genres </button>");
-
-                             $(document).on("click", "#retour", function(){
-                                 $('.slidecontainer').empty();
-                              $('#geresmusicales').show();
-                              $("#followerspourungenre").empty();
-                              $("#trackspourungenre").empty();
-                              $("#menu").empty();
-                              $("#selectcontry").hide();
-
-
-                           });
 
                            });
                   }
@@ -249,6 +225,7 @@ function GetAllData()
                   console.log(json);
                   var cles = Object.keys(json[0]);
                   $('#bloginformations').show();
+                  $('#bloginformations').append('Genre : '+json[0]["Genre"]+'<br>');
                   $('#bloginformations').append('Name : '+json[0]["Name"]+'<br>');
                   $('#bloginformations').append('Followers : '+json[0]["Followers"]+'<br>');
                   $('#bloginformations').append('Tracks : '+json[0]["Tracks"]+'<br>');
@@ -286,6 +263,8 @@ function GetAllData()
           $('#artistespourungenre').empty();
           $("#trackspourungenreReflet").empty();
           $("#menu").empty();
+          $("#bottonderetour").empty();
+          $("#bloginformations").empty();
           //$("#selectcontry").show();
           followersdesblog(x);
 
@@ -302,6 +281,8 @@ function GetAllData()
       $('#artistespourungenre').empty();
         $('#followerspourungenreReflet').empty();
       $('#menu').empty();
+      $("#bottonderetour").empty();
+      $("#bloginformations").empty();
       tracksdesblog(x);
 
 
@@ -430,112 +411,28 @@ let donnee=[];
 function AfficherCursseur(zone,data)
 {
   var dataactuelle;
-let rowData = {};
+  let rowData = {};
 
-$("#selectcontry").show();
-
-
-
-
-  $('.slidecontainer').append('<div class="rectangle-path"><p id="valeurdeslider1">20</p><input type="range" id="slider" class="slider" min="0" max="157" value="20" step="1"></div>');
+  $("#selectcontry").show();
+  $('.slidecontainer').append('<div class="rectangle-path"><p id="valeurdeslider1">20</p><input type="range" id="slider" class="slider" min="0" max="157" value="20"></div>');
   $('.slidecontainer').append('<div class="rectangle-path2"><p id="valeurdeslider2">0</p><input type="range" id="slider2" class="slider" min="0" max="23000" value="0"></div>');
-
   $('.slidecontainer').append('<div class="rectangle-path3"><p id="valeurdeslider3">0</p><input type="range" id="slider3" class="slider" min="0" max="10000" value="0"></div>');
   $('#slider2').on('change', function () {
   $('#valeurdeslider2').empty();
-    $('#valeurdeslider2').append($(this).val());
-});
-$('#slider3').on('change', function () {
+  $('#valeurdeslider2').append($(this).val());
+  traitementsurlesdonnees(data,zone);
+  });
+  $('#slider3').on('change', function () {
 
   $('#valeurdeslider3').empty();
-    $('#valeurdeslider3').append($(this).val());
+  $('#valeurdeslider3').append($(this).val());
+  traitementsurlesdonnees(data,zone);
 });
-  $('#slider').on('click', function () {
-    console.log("arr",arr);
+  $('#slider').on('change', function () {
+    //la je devrais mettre une copie de data
     $('#valeurdeslider1').empty();
-      $('#valeurdeslider1').append($(this).val());
-    var newval=$(this).val();
-    var mintracks=parseInt($('#slider2').val());
-    var minfollowers=parseInt($('#slider3').val());
-
-    $(zone).empty();
-    var reflet=zone + "Reflet";
-
-    $(reflet).empty();
-
-
-    //pareil on travail sur une copie des donnéelse
-var copiedata=JSON.parse(JSON.stringify(data));
-    //je traite les données
-    for(var i=0;i<copiedata.length;i++)
-    {
-      let rowData = {};
-      let row={};
-      Object.keys(copiedata[i]).forEach(current_key => {
-      rowData[current_key] = copiedata[i][current_key];
-
-
-      });
-      //console.log("pays", rowData["pays"]);
-      console.log("arr444", arr);
-if(arr.includes("All"))
-{
-  if(zone == "#trackspourungenre")
-  {
-    if(rowData["y1"]>= mintracks && rowData["z1"] >= minfollowers)
-  {
-    //console.log();
-    donnee.push(rowData);
-  }
-}
-  else{
-    if(rowData["z1"]>= mintracks && rowData["y1"] >= minfollowers)
-  {
-    //console.log();
-    donnee.push(rowData);
-  }
-  }
-}
-    else{
-      if(arr.includes(rowData["pays"]))
-        {
-          console.log("pays inclue");
-          if(zone == "#trackspourungenre")
-          {
-            if(rowData["y1"]>= mintracks && rowData["z1"] >= minfollowers)
-          {
-            //console.log();
-            donnee.push(rowData);
-          }
-        }
-          else{
-            if(rowData["z1"]>= mintracks && rowData["y1"] >= minfollowers)
-          {
-            //console.log();
-            donnee.push(rowData);
-          }
-          }
-        }
-    }
-
-    }
-
-
-if(donnee.length == 0)
-{
-  alert("il n'a aucune donnée avec ces choix");
-  $('#bloginformations').empty();
-}
-else{
-  creehistogram(zone,donnee,parseInt(newval));
-  //creehistogramReflet
-
-
-  creehistogramReflet(reflet,donnee,parseInt(newval));
-}
-
-    donnee=[];
-
+    $('#valeurdeslider1').append($(this).val());
+    traitementsurlesdonnees(data,zone);
 });
 $('#selectcontry').change(function(){
   arr=[];
@@ -546,6 +443,8 @@ $('#selectcontry').change(function(){
   arr.push(element);
 }
 );
+// j'appelle ici le truc de traitementsurlesdonnees
+traitementsurlesdonnees(data,zone);
 
 
 });
@@ -574,13 +473,18 @@ function creehistogramReflet(id,data1,val)
       var t=data.length -20;
        data.splice(0,t);
        nbbins=20;
+       alert("Le nombre de bar que vous voulez afficher est supérieur aux nombre de blog, on va vous afficher la valeur par défaut des bars, que 20 bars");
     }
     else{
       nbbins=data.length;
+      alert("Le nombre de bar que vous voulez afficher est supérieur aux nombre de blog et superieur à la valeur par défaut 20, on va vous afficher le nombre de bars possible")
     }
     console.log(nbbins);
+
     $('#valeurdeslider1').empty();
-      $('#valeurdeslider1').append(nbbins);
+    $('#valeurdeslider1').append(nbbins);
+    $('#valeurdeslider1').append("|",val);
+
 
     const margin = {top: 5, right: 5, bottom: 5, left: 5},
 
@@ -657,6 +561,84 @@ function Getpays()
            console.log("pays tab",Tabpays);
       });
 
+
+}
+function traitementsurlesdonnees(data,zone)
+{
+
+var nbbins=parseInt($('#slider').val());
+var mintracks=parseInt($('#slider2').val());
+var minfollowers=parseInt($('#slider3').val());
+$(zone).empty();
+var reflet=zone + "Reflet";
+$(reflet).empty();
+var copiedata=JSON.parse(JSON.stringify(data));
+  for(var i=0;i<copiedata.length;i++)
+  {
+    let rowData = {};
+    let row={};
+    Object.keys(copiedata[i]).forEach(current_key => {
+    rowData[current_key] = copiedata[i][current_key];
+
+
+    });
+if(arr.includes("All"))
+{
+if(zone == "#trackspourungenre")
+{
+  if(rowData["y1"]>= mintracks && rowData["z1"] >= minfollowers)
+{
+  //console.log();
+  donnee.push(rowData);
+}
+}
+else{
+  if(rowData["z1"]>= mintracks && rowData["y1"] >= minfollowers)
+{
+  //console.log();
+  donnee.push(rowData);
+}
+}
+}
+  else{
+    if(arr.includes(rowData["pays"]))
+      {
+        console.log("pays inclue");
+        if(zone == "#trackspourungenre")
+        {
+          if(rowData["y1"]>= mintracks && rowData["z1"] >= minfollowers)
+        {
+          //console.log();
+          donnee.push(rowData);
+        }
+      }
+        else{
+          if(rowData["z1"]>= mintracks && rowData["y1"] >= minfollowers)
+        {
+          //console.log();
+          donnee.push(rowData);
+        }
+        }
+      }
+  }
+
+  }
+
+
+if(donnee.length == 0)
+{
+alert("il n'a aucune donnée avec ces choix");
+$('#bloginformations').empty();
+}
+else{
+creehistogram(zone,donnee,parseInt(nbbins));
+//creehistogramReflet
+
+
+creehistogramReflet(reflet,donnee,parseInt(nbbins));
+}
+
+  donnee=[];
 
 }
   Getpays();
