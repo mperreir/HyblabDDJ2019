@@ -268,7 +268,7 @@ body {
 	width: 39.18%;
 	color: #ffffff;
 	font-family: Montserrat;
-	font-size: 39px;
+	font-size: 34px;
 	font-weight: 900;
 	line-height: 35px;
 	text-align: center;
@@ -365,6 +365,16 @@ body {
 	background-color: #374240;;
   color: white;
 }
+
+
+
+#credits {
+    background-color: white;
+}
+
+.test-g {
+    color: #2AF194;
+}
 .rectangle-path2 {
   display: inline-block;
 	height: 51.74px;
@@ -446,9 +456,143 @@ select{
   margin-bottom: 15px;
 
 }
-#bloginformations{
-  	box-sizing: border-box;
-  	height: 90px;
+#bloginformations {
+    box-sizing: border-box;
+    height: 90px;
     width: 300px;
     border: 2.21px solid #2AF194;
     border-radius: 17.66px;
+}
+ /* credits */
+.un-projet-realise-pa {
+    height: 3.13%;
+    width: 18.73%;
+    color: #000000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    position: absolute;
+    top: 7.29%;
+    left: 40.64%;
+}
+
+.logo-audencia {
+    height: 13.15%;
+    width: 15.73%;
+    position: absolute;
+    top: 20.45%;
+    left:10.18%;
+}
+
+.logo-agr {
+    height: 13.28%;
+    width: 9.27%;
+    position: absolute;
+    top: 20.32%;
+    left:45.36%;
+}
+
+.logo-polytech {
+    height: 13.8%;
+    width: 16.55%;
+    position: absolute;
+    top: 19.8%;
+    left:70.64%;
+}
+
+.music-data {
+    height: 7.94%;
+    width: 26.36%;
+    position: absolute;
+    top: 67.45%;
+    left:36.82%;
+}
+
+.logo-open-source {
+    height: 8.46%;
+    width: 5.27%;
+    position: absolute;
+    top: 88.54%;
+    left:7.45%;
+}
+
+.logo-nm {
+    height: 9.64%;
+    width: 15.73%;
+    position: absolute;
+    top: 87.89%;
+    left:16.64%;
+}
+
+.logo-medialab {
+    height: 6.12%;
+    width: 12.64%;
+    position: absolute;
+    top: 89.71%;
+    left:35.82%;
+}
+
+.logo-hyblab {
+    height: 5.99%;
+    width: 20.73%;
+    position: absolute;
+    top: 89.71%;
+    left:53%;
+}
+
+.logo-pdl {
+    height: 7.29%;
+    width: 14.73%;
+    position: absolute;
+    top: 88.54%;
+    left:77.82%;
+}
+
+.guitare {
+    height: 32.81%;
+    width: 10.82%;
+    position: absolute;
+    top: 16.28%;
+    left:80.09%;
+}
+
+.rectangle {
+    height: 5.08%;
+    width: 3.55%;
+    position: absolute;
+    top: 51.82%;
+    left:86.55%;
+}
+
+.cylindre {
+    height: 11.72%;
+    width: 5.91%;
+    position: absolute;
+    top: 73.83%;
+    left:19%;
+}
+
+.text-intro3{
+    height: 22.66%;
+    width: 42.55%;
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 29px;
+    text-align: center;
+    position: absolute;
+    top: 39.19%;
+    left:28.73%;
+
+}
+
+.vagues {
+    height: 4.04%;
+    width: 11.64%;
+    position: absolute;
+    top: 70.83%;
+    left: 29.18%;
+}
