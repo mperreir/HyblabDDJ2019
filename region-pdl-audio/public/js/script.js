@@ -749,9 +749,9 @@ function graph_update_type_reunion() {
             }
 
             var cle = Object.keys(data);
-            if ((cle.indexOf('Non référencé') > -1)) {
-                cle.splice(cle.indexOf('Non référencé'), 1);
-                cle.push('Non référencé')
+            if ((cle.indexOf('Non renseigné') > -1)) {
+                cle.splice(cle.indexOf('Non renseigné'), 1);
+                cle.push('Non renseigné')
             }
             for (var i in cle) {
                 var key = cle[i];
