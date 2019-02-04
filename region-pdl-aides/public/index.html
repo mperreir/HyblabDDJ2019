@@ -36,7 +36,7 @@
 			<p id="h2Acc" >Nous contribuons tous au budget des territoires. <b> Mais savez vous ce que deviennent concrètement nos
 			impôts pour les acteurs locaux ? </b> </br>Découvrez comment la collectivité octroie ses aides 
 			aux professionnels de l’industrie.</p>
-			<a href="#section2" onclick="clickOnNav(1);"><img class="boutonDemarrer" src="img\demarrer.png" /></a>
+			<a href="#section2" id="btnGosec2"><img class="boutonDemarrer" src="img\demarrer.png" /></a>
 		</div>
         </div>
         <div class="section" id="section2">
@@ -64,7 +64,7 @@
                     <div id="francemap2" class="map_index" style="width: 600px; height: 400px;"></div>
                 </div>
                 <div class="col-6">
-                    <h3 class="sec2Text1">Soutenir l’industrie c’est soutenir l’emploi!</h3>
+                    <h3 class="sec2Text1">Un fleuron industriel !</h3>
                     <div id="bubble">
                         <!-- le texte qui apparaitra dans la bulle -->
                         <span id="text">
@@ -127,10 +127,24 @@
             </div>
         </div>
         <div class="section" id="section6">
-            <h2>Qui en bénéficie? </h2>
-        <h3 style="margin:1% 0% 2% 6%;" >Nombre d'entreprise par secteur (2017-2018)</h3>
-        <img style="margin: 0% 0% 0% 18%;" src="img\podiumTotal.png"></img>
-        <p style="top:1px;right:1px;">Les filières ayant le plus sollicité l’aide des Pays de la Loire en 2017 sont : Mécanique et Matériaux, Electronique, Automobile et Aéronautique. Attention, cela ne signifie pas forcément que que ce sont les filières qui ont reçu le plus d’argent ! </p>
+            <div class="container">
+                <div class="col-6">
+                    <h2>Qui en bénéficie? </h2>
+                    <h3 style="margin:1% 0% 2% 6%;" >Nombre d'entreprise par secteur (2017-2018)</h3>
+                    <img style="margin: 0% 0% 0% 18%;" src="img\podiumTotal.png"></img>
+                </div>
+                <div class="col-6">
+                    <div id="bubble" class="bubble5">
+                                <!-- le texte qui apparaitra dans la bulle -->
+                        <span id="text">
+                        Les filières ayant le plus sollicité l’aide des Pays de la Loire en 2017 sont : </br>Mécanique et Matériaux, Electronique, Automobile et Aéronautique. Attention, cela ne signifie pas forcément que que ce sont les filières qui ont reçu le plus d’argent !
+                        </span>
+                        <!-- 2 spans qui nous serviront à créer la flèche pointant vers notre personnage -->
+                        <span id="arrow_border"></span>
+                        <span id="arrow_inner"></span>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="section" id="section7">
             <h2>Section 7</h2>
@@ -149,6 +163,28 @@ Cette dynamique bénéfique pour les territoires est une incitation continue pou
         </div>
         <div class="section" id="section9">
         </div>
+        </div>
+        <div class="section" id="section10">
+            <div class="section" id="section3">
+                <div class="container">
+                    <div class="col-6">
+                        <div id="francemap3" class="map_index" style="width: 600px; height: 400px;"></div>
+                    </div>
+                    <div class="col-6">
+                        <h3 class="sec2Text1">Soutenir l’industrie c’est soutenir l’emploi!</h3>
+                        <div id="bubble">
+                            <!-- le texte qui apparaitra dans la bulle -->
+                            <span id="text">
+                            En 2017, les Pays de la Loire affichent <b>le taux de chômage le plus bas</b> ex-aequo avec la Bretagne avec 7,6%. Ce chiffre indique sans conteste la <b>bonne santé économique de notre région.  </b>
+                            </span>
+                            <!-- 2 spans qui nous serviront à créer la flèche pointant vers notre personnage -->
+                            <span id="arrow_border"></span>
+                            <span id="arrow_inner"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container" id="nav">
             <nav>
                 <a href="#section1" class="active"></a>
@@ -160,6 +196,7 @@ Cette dynamique bénéfique pour les territoires est une incitation continue pou
                 <a href="#section7"></a>
                 <a href="#section8"></a>
                 <a href="#section9"></a>
+                <a href="#section10"></a>
                 <div class="line"></div>
             </nav>
         </div>
@@ -184,6 +221,7 @@ Cette dynamique bénéfique pour les territoires est une incitation continue pou
                 backgroundColor: "#f7f7f7",
                 colors: couleurs,
                 borderColor: "#000000",
+                selectedRegions: ['Bretagne'],
                 selectedColor: "#FFDA00",
                 enableZoom: false,
                 showTooltip: true,
@@ -216,7 +254,28 @@ Cette dynamique bénéfique pour les territoires est une incitation continue pou
                 },
             });
 
+            $('#francemap3').vectorMap({
+                map: 'france_fr',
+                hoverOpacity: 0.5,
+                hoverColor: false,
+                backgroundColor: "#f7f7f7",
+                colors: couleurs,
+                borderColor: "#000000",
+                selectedColor: "#FFDA00",
+                enableZoom: false,
+                showTooltip: true,
+                onRegionClick:function(event, code){            
+                    var name = array[code-1];                        
+                    console.log(name);
+
+                    if(code == 8){
+                        //$("nav a:nth-child(-n+"+3+")").click();
+                    }
+                },
+            });
+
             $('path#jqvmap2_8').click();
+            $('path#jqvmap3_8').click();
             $("a").click(function() {
                 $("a").removeClass('active');
                 var index = $(this).index('nav a') + 1;
@@ -231,6 +290,12 @@ Cette dynamique bénéfique pour les territoires est une incitation continue pou
         $(window).load(function() {
           $(".container").addClass("load");
         });
+
+        $('#btnGosec2').on('click',function(event){
+            event.preventDefault();
+            $("nav a:nth-child(2)").click();
+            $("nav a:nth-child(2)").addClass('active');
+        })
   </script>
   <script>
       /*(document).ready(function() {
@@ -266,11 +331,6 @@ Cette dynamique bénéfique pour les territoires est une incitation continue pou
               }
           }, 150);
       };*/
-
-        function clickOnNav(index){
-            $("nav a:nth-child(-n+"+index+")").click();
-            return false;
-        }
   </script>
 
 </html>

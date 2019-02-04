@@ -24,7 +24,7 @@ body{
     background-color: background: #f7f7f7;
     font-size: 25px !important;
     letter-spacing:-1px;
-    width:17280px;
+    width:19200px;
     position:absolute;
     top:0px;
     left:0px;
@@ -41,6 +41,9 @@ body{
     background-color: #f7f7f7;
 }
 
+.col-6 {
+	max-width: 100% !important;
+}
 .section p{
     margin:20px 0px 0px 50px;
     width:600px;
@@ -244,6 +247,35 @@ div#francemap {
 	height: 300px;
 	margin-top: 20px;
 	z-index: 1000;
+	top: 150px;
+    left: 80px;
+}
+
+div#francemap2 {
+	width: 500px;
+	height: 300px;
+	margin-top: 20px;
+	z-index: 1000;
+	top: 150px;
+    left: 80px;
+}
+
+div#francemap3{
+	width: 500px;
+	height: 300px;
+	margin-top: 20px;
+	z-index: 1000;
+	top: 150px;
+    left: 80px;
+}
+
+div#francemap{
+	width: 500px;
+	height: 300px;
+	margin-top: 20px;
+	z-index: 1000;
+	top: 150px;
+    left: 80px;
 }
 
 div#section2 {
@@ -251,13 +283,14 @@ div#section2 {
 }
 
 .sec2Text1 {
-	margin-top: 20px;
+	padding-top: 200px;
 	margin-left: 35px;
 	text-align: center;
 }
 
 .sec2Text2 {
 	text-align: center;
+
 }
 
 #bubble{
@@ -267,6 +300,36 @@ div#section2 {
 	background-color:white;
 	text-align:center;
 	width:100%;
+	margin-top: 200px;
+	height:130px;
+	border:2px solid #555555;
+	border-top-right-radius:80px;
+	border-top-left-radius:80px;
+	border-bottom-right-radius:80px;
+	border-bottom-left-radius:80px;
+	/* implémentation Firefox */
+	-moz-border-radius-topright:80px 40px;
+	-moz-border-radius-topleft:80px 40px;
+	-moz-border-radius-bottomright:80px 40px;
+	-moz-border-radius-bottomleft:80px 40px;
+	/* implémentation Chrome, Safari, ... */
+	-webkit-border-top-right-radius:20px 20px;
+	-webkit-border-top-left-radius:20px 20px;
+	-webkit-border-bottom-right-radius:20px 20px;
+	-webkit-border-bottom-left-radius:20px 20px;
+
+}
+
+
+#bubble2{
+	z-index: 1000;
+	position: relative;
+	right:-30px;
+	background-color:white;
+	text-align:center;
+	width:100%;
+	margin-top: 450px;
+	margin-left: 80px;
 	height:130px;
 	border:2px solid #555555;
 	border-top-right-radius:80px;
@@ -330,32 +393,24 @@ div#section2 {
 
 /*FACTORY LOADING CSS*/
 
-.imgcontainer {
-	width: 100%;
-}
-
-
 .loadgo-overlay {
-    /*background-color: rgb(0, 170, 195) !important;
-    background-color: #FFD300#d5d5d5 !important;*/
     opacity: 1 !important;
     background: transparent ! important;
-    /*background-color: #FFD300 !important;*/
     justify-content: center !important;
-    background-size: 354px 523px !important;
+    background-size: 562px 900px !important;
     background-image: url("https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/50875301_402700270297028_7810520494473478144_n.png?_nc_cat=103&_nc_ht=scontent-cdt1-1.xx&oh=f1eb6e5937f557b75b078aeb672236e3&oe=5CFD2572") !important;
 }
 
 .imgcontainer {
-    height: 523px;
-    width: 354px;
-    margin-right: 210px;
-    margin-top: 187px;
+    margin-top: 30px;
+    margin-left: 450px;
 }
+
 #logo {
+    height: 900px;
+    width: 562px;
     vertical-align: middle;
     justify-content: center;
-    padding-bottom: 190px;
 }
 
 .cloud {
@@ -384,18 +439,18 @@ div#section2 {
 #bulleAcc { 
   z-index:3;
   position: relative;
-  top: 10%;
-  left: 35%;
+  top: 40px;
+  left: 38%;
   width: 46%;
 }
 
 #textAcc { 
 	position: relative;
 	z-index:4;
-	bottom: 480px;
-	left: 40%;
+	bottom: 550px;
+	left: 45%;
 	margin: 30px 0px 0px 0px;
-	font-size: 80%;
+	font-size: 90%;
 
 }
 
@@ -413,38 +468,41 @@ div#section2 {
 	margin: 30px 0px 0px 0px;
 }
 
-#section1, #section4 {
+#section1 {
 	background-image: url('./../img/page1.gif');
-	background-position: -300px;
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat;
 }
 
 #section2, #section3, #section5, #section6 {
-	background-image: url('./../img/FondDroit.gif');
+	background-image: url('./../img/droit.gif');
+	background-repeat: no-repeat;
 }
 
 #section4 h2 {
-
 	margin-left: 20px;
 }
 
 #section4 {
-	background-image: url('./../img/FondGauche.gif');
+    background-position: -200px;
+	background-image: url('./../img/gauche.gif');
+	background-repeat: no-repeat;
 }
 
 #section8 {
 	background-image: url('./../img/CercleVertueux.gif');
 	background-repeat: no-repeat;
-	background-position: 300px;
+	background-position: 560px;
 }
 
 #section9 {
 	background-image: url('./../img/Fichier 13.png');
 	background-repeat: no-repeat;
-	background-position: 300px;
+	background-position: 560px;
 }
 
 #nav {
-	max-width: 1400px;
+	max-width: 1920px;
 }
 
 .bubble5 {
@@ -454,4 +512,47 @@ div#section2 {
 
 #section5 h2 {
 	margin-top: 50px;
+}
+
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 700px;
+  background-color: yellow;
+  color: #000;
+  text-align: left;
+  border-radius: 6px;
+  padding: 15px 10px;
+  margin:-600px 0px 0px 600px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1000;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+.conclu{
+	margin: 170px 0px 0px 150px;
+}
+
+.conclu b{
+	margin: 0;
+}
+
+div#text6 {
+	margin-top: 60px;
+	margin-left: 80px;
+}
+
+div#text7 {
+	margin-top: 100px;
+	margin-left: 80px;
+}
+
+div#text7 img {
+	height: 600px;
+	margin-top: 100px;
 }

@@ -1,0 +1,8 @@
+
+/* Carte accueil  */
+.map_index{width: 520px; height: 420px;}
+@media only screen and (max-width : 300px){.map_index {width: 200px; height: 162px;}}
+@media only screen and (min-width: 301px) and (max-width: 500px) {.map_index{width: 380px; height: 307px;}}
+@media only screen and (min-width : 501px) and (max-width : 959px) {.map_index{width: 500px; height: 404px;}}
+@media only screen and (min-width: 961px) width: 800px; height: 6646px;}}
+
