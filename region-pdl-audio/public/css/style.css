@@ -1188,9 +1188,8 @@ h1 .h1_highlight {
 
 #bandeau {
 	position: absolute;
-	bottom: 0%;
+	bottom: 2%;
 	left: 5%;
-	padding: 8px;
 }
 
 #bandeau li {
@@ -1201,14 +1200,14 @@ h1 .h1_highlight {
 }
 
 #bandeau img {
-	height: 5vh;
+	height: 4.8vh;
 	width: auto;
 }
 
 #bandeau ul {
 	text-align: center;
 	padding: 0 0;
-	margin-bottom: 4.6vh;
+	margin-bottom: 3.5vh;
 }
 
 #bloc_noms a {
