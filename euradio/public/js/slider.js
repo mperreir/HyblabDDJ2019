@@ -45,7 +45,7 @@ function changer_radio(xPos){
     x.load();
     x.play();
   }else{
-    var valeur = parseInt(((xPos - xPosOrigin)/42))+12; //Valeur réelle
+    var valeur = parseInt(((xPos - xPosOrigin)/42))+3; //Valeur réelle
     console.log((valeur));
     $( "#nomRadio" ).text(dab[valeur]);
     valeurRadio = valeur%7+1;
