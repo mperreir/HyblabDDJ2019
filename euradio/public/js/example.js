@@ -64,7 +64,7 @@ var chartData2;
 function affichageGraphique(data,val1,val2){
 
    chartData2 = {
-      labels: ['% de Véhicules en France'],
+      labels: ["",""],
       datasets: [{
         data: [data[valJaune][donneeAffichee],100-data[valJaune][donneeAffichee]],
         backgroundColor: ['rgba(252, 233, 55, 1)','rgba(252, 233, 55, 0)'], // green
@@ -100,7 +100,7 @@ function affichageGraphique(data,val1,val2){
 
        });
    chartData = {
-      labels: ['% de Véhicules en Norvège'],
+      labels: ["",""],
       datasets: [{
         data: [data[valJaune][donneeAffichee],100-data[valJaune][donneeAffichee]],
         backgroundColor: ['rgba(230, 55, 75, 1)','rgba(230, 55, 75, 0)'], // green
@@ -113,7 +113,7 @@ function affichageGraphique(data,val1,val2){
   };
 
    reseauJauneData = {
-      labels: ['% de Véhicules en Norvège'],
+      labels: ["",""],
       datasets: [{
         data: [data[valJaune]["reseau"],100-data[valJaune]["reseau"]],
         backgroundColor: ['rgba(252, 233, 55, 1)','rgba(252, 233, 55, 0)'], // green
@@ -133,8 +133,8 @@ function affichageGraphique(data,val1,val2){
 
   };
    reseauRougeData = {
-      labels: ['% de Véhicules en Norvège'],
       datasets: [{
+        labels: ["",""],
         data: [data[valRouge]["reseau"],100-data[valRouge]["reseau"]],
         backgroundColor: ['rgba(230, 55, 75, 1)','rgba(230, 55, 75, 0)'], // green
         borderColor:['rgba(230, 55, 75, 1)','rgba(230, 55, 75, 1)'],
@@ -142,6 +142,7 @@ function affichageGraphique(data,val1,val2){
 
       },
       {
+        labels: ["",""],
         data: [data[valRouge]["reseau2"],100-data[valRouge]["reseau2"]],
         backgroundColor: ['rgba(200, 55, 90, 1)','rgba(200, 55, 90, 0)'], // green
         borderColor:['rgba(200, 55, 90, 1)','rgba(200, 55, 90, 1)'],
@@ -352,6 +353,7 @@ function refreshMyLine(chart,data) {
   if(valRouge>8){
     valJaune =8;
   }
+
   if(donneeAffichee=="reseau"){
     chart.data = reseauRougeData;
     chart.data.datasets[0].data = [data[valRouge][donneeAffichee],100-data[valRouge][donneeAffichee]];
