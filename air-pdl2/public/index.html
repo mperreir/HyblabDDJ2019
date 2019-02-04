@@ -23,6 +23,20 @@
 
     <div id="carousel-example-generic" class="carousel slide" data-interval="false" data-wrap="false" data-keyboard="true">
 
+        <!--
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="8"></li>
+        </ol>
+        -->
+
         <div class="carousel-inner" role="listbox">
 
             <div class="item active item12" id="item1">
@@ -44,7 +58,7 @@
             </div>
 
             <div class="item itemq" id="item3">
-                <img class="fond" src="img/cache_1_.svg" alt="fond"/>
+                <img class="fond" src="img/cache_sans_arbre_relou.png" alt="fond"/>
                 <img id="arbre-vert-droit" src="img/arbre_3_2_.svg" alt="avd"/>
                 <img id="arbre-rose" src="img/arbre_1_2_.svg" alt="ar"/>
                 <img id="arbre-vert-rond" src="img/arbre_4_2_.svg" alt="avr"/>
@@ -55,8 +69,8 @@
                         <div class="questions">
                             <img id="imageQ1" src="img/Connaissez-vous%20le%20d@2x.png" alt="q1"/>
                         </div>
-                        <div class="reponses" id="r1">
-                            <img src="img/Ce%20gaz%20toxique%20est%20l@2x.png"/>
+                        <div class="reponses" id="r-q1">
+                            <img id="image-r-q1" src="img/Ce%20gaz%20toxique%20est%20l@2x.png"/>
                         </div>
                     </div>
 
@@ -65,25 +79,24 @@
                             <img id="imageQ2" src="img/Selon%20vous,%20d’où%20pro@2x.png" alt="q2"/>
                         </div>
 
-                        <div class="boutons">
-                            <div id="chauffage">
-                                <a href="#"></a>
-                            </div>
-                            <div id="electricite">
-                                <a href="#"></a>
-                            </div>
-                            <div id="vehicules">
-                                <a href="#"></a>
-                            </div>
-                            <div id="les-trois">
-                                <a href="#"></a>
-                            </div>
+                        <div class="boutons" id="chauffage">
+                            <a href="#"></a>
                         </div>
+                        <div class="boutons" id="electricite">
+                            <a href="#"></a>
+                        </div>
+                        <div class="boutons" id="vehicules">
+                            <a href="#"></a>
+                        </div>
+                        <div class="boutons" id="les-trois">
+                            <a href="#"></a>
+                        </div>
+
                         <div class="reponses" id="r1-q2">
-                            <img class="image-r2" src="img/reponseQ2-bravo.png"/>
+                            <img id="image-r1-q2" src="img/reponseQ2-bravo.png"/>
                         </div>
                         <div class="reponses" id="r2-q2">
-                            <img class="image-r2" src="img/reponseQ2-oui_mais.png"/>
+                            <img id="image-r2-q2" src="img/reponseQ2-oui_mais.png"/>
                         </div>
                     </div>
 
@@ -106,10 +119,10 @@
                             </div>
                         </div>
                         <div class="reponses" id="r1-q3">
-                            <img class="image-r3" src="img/reponseQ3-bravo.png"/>
+                            <img id="image-r1-q3" src="img/reponseQ3-bravo.png"/>
                         </div>
                         <div class="reponses" id="r2-q3">
-                            <img class="image-r3" src="img/reponseQ3-oui_mais.png"/>
+                            <img id="image-r2-q3" src="img/reponseQ3-oui_mais.png"/>
                         </div>
                     </div>
 
@@ -160,10 +173,10 @@
                 <div class="bar-contain">
                     <div class="infos">
                         <h1 class="h1-r">
-                            Concentration de NO2 dans l'air: <span id="demo"></span> µg/m3
+                            <span id="demo"></span> µg/m3
                         </h1>
                         <h1 class="h1-r">
-                            Heure: <span id="demo2"></span> h
+                            <span id="demo2"></span> h
                         </h1>
                     </div>
                     <div class="progress">
@@ -181,7 +194,7 @@
                     </a>
                 </div>
                 <div class="info-i" id="info-i-ru">
-                    <img src="img/info_rural.png"/>
+                    <img class="image-i" src="img/info_rural.png"/>
                 </div>
                 <div class="i">
                     <img onmouseover="afficher('#info-i-ru')" onmouseout="cacher('#info-i-ru')" src="img/BOUTON_INFO_SOURCE_JOUR@2x.png"/>
@@ -232,10 +245,10 @@
                 <div class="bar-contain">
                     <div class="infos">
                         <h1 class="h1-ur">
-                            Concentration de NO2 dans l'air: <span id="demo21"></span> µg/m3
+                            <span id="demo21"></span> µg/m3
                         </h1>
                         <h1 class="h1-ur">
-                            Heure: <span id="demo22"></span> h
+                            <span id="demo22"></span> h
                         </h1>
                     </div>
                     <div class="progress">
@@ -253,7 +266,7 @@
                     </a>
                 </div>
                 <div class="info-i" id="info-i-ur">
-                    <img src="img/info_centre_ville.png"/>
+                    <img class="image-i" src="img/info_centre_ville.png"/>
                 </div>
                 <div class="i">
                     <img onmouseover="afficher('#info-i-ur')" onmouseout="cacher('#info-i-ur')" src="img/BOUTON_INFO_SOURCE_JOUR@2x.png"/>
@@ -324,10 +337,10 @@
                 <div class="bar-contain">
                     <div class="infos">
                         <h1 class="h1-tr">
-                            Concentration de NO2 dans l'air: <span id="demo31"></span> µg/m3
+                            <span id="demo31"></span> µg/m3
                         </h1>
                         <h1 class="h1-tr">
-                            Heure: <span id="demo32"></span> h
+                            <span id="demo32"></span> h
                         </h1>
                     </div>
                     <div class="progress">
@@ -340,7 +353,7 @@
                     <input type="hidden" id="myRange3" class="single-slider" onchange="ran3()" value="12" />
                 </div>
                 <div class="info-i" id="info-i-tr">
-                    <img src="img/info-trafic.png"/>
+                    <img class="image-i" src="img/info-trafic.png"/>
                 </div>
                 <div class="i">
                     <img onmouseover="afficher('#info-i-tr')" onmouseout="cacher('#info-i-tr')" src="img/BOUTON_INFO_SOURCE_JOUR@2x.png"/>

@@ -23,24 +23,24 @@ $('#carousel-example-generic').on('slid.bs.carousel', function() {
         setTimeout(function () {
             $('.fond').show();
             $('.fond').addClass('animated slideInRight');
-        },4000); //4000
+        },0); //4000
 
         setTimeout(function () {
             $('.questions').show();
             $('#q1').show();
             $('.questions').addClass('animated fadeIn');
-        },5000); //5000
+        },0); //5000
 
         setTimeout(function () {
             $('.reponses').show();
             $('#r1').show();
             $('.reponses').addClass('animated fadeIn');
-        },7000); //7000
+        },0); //7000
 
         setTimeout(function () {
             $('.nextQ').show();
             $('.nextQ').addClass('animated fadeIn');
-        },7000); //7000
+        },0); //7000
 
         $('.boutons').addClass('animated fadeIn');
     }
@@ -83,15 +83,16 @@ $('#carousel-example-generic').on('slid.bs.carousel', function() {
 });
 
 
-$('#parti').on('click', function () {
+$('#image-parti').on('click', function () {
         $('#perso').addClass('translate');
+        $(this).addClass('animated rotateOut');
         setTimeout(function(){
             $('#cache1').addClass('animated slideOutUp');
             $('#cache2').addClass('animated slideOutLeft');
-            $('#envie').addClass('animated fadeOutLeft');
-            $('#experience').addClass('animated fadeOutLeft');
-            $('#parti').addClass('animated fadeOutLeft');
-            $('#logo').addClass('animated fadeOutLeft');
+            $('#envie').addClass('animated fadeOutLeftBig');
+            $('#experience').addClass('animated fadeOutLeftBig');
+            $('#parti').addClass('animated fadeOutLeftBig');
+            $('#logo').addClass('animated fadeOutLeftBig');
 
         },800);
 

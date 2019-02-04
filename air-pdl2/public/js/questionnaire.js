@@ -43,8 +43,6 @@ $(function() {
     $('.nextQ').hide();
     $('#q2').hide();
     $('#q3').hide();
-    $('#r2').hide();
-    $('#r3').hide();
 
 
     $('#chauffage').on('click',

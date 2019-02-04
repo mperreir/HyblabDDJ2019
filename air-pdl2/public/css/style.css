@@ -94,15 +94,18 @@ section {
     height:100%;
 }
 
-#parti{
+#image-parti{
     position: absolute;
     top:60%;
-    left:7%;
+    left:6%;
+    width:20%;
 }
 
-#image-parti{
-    width:70%;
+#image-parti:hover{
+    border: 2px solid #23343E;
+    border-radius: 30px;
 }
+
 
 #logo{
     position:absolute;
@@ -127,9 +130,12 @@ section {
 
 #next{
     position: absolute;
-    left:90%;
+    left:95%;
     top:50%;
-    width:15%;
+}
+
+#image-next{
+    width:70%;
 }
 
 #espace-questions{
@@ -157,22 +163,30 @@ section {
 }
 
 .reponses {
-    position: relative;
-    top: 100px;
+    position: absolute;
+    top: 25%;
 }
 
-.image-r2{
-    height:200px;
+#image-r-q1{
+    width:80%;
 }
 
-.image-r3{
-    height:200px;
+#image-r1-q2, #image-r2-q2{
+    width:70%;
+}
+
+#image-r1-q3, #image-r2-q3{
+    width:80%;
 }
 
 .nextQ {
     position: absolute;
     bottom:5%;
     right: 0;
+}
+
+.nextQ .icon{
+    font-size:40px;
 }
 
 .icon {
@@ -537,13 +551,14 @@ section {
 .infos{
     position: relative;
     color: #f9f00e;
-    top:45%;
+    top:80%;
     width: 40%;
     float:right;
 }
 
 .bar-contain{
     position:relative;
+    top:5%;
     left:60%;
     height:60%;
     width:30%;
@@ -650,10 +665,11 @@ section {
     left:95%;
 }
 
-.info-i{
-    position: absolute;
+.image-i{
+    position:absolute;
     top:80%;
-    left:74.5%;
+    left:75.5%;
+    width:20%;
 }
 
 .sources{
@@ -664,9 +680,9 @@ section {
 
 .info-heure{
     position: absolute;
-    top:20%;
-    left:50%;
-    max-width:22%;
+    top:65%;
+    left:78.5%;
+    max-width:12%;
 }
 
 h4{
@@ -694,4 +710,8 @@ h5{
     top: 80.5%;
     width: 31%;
     height: 7%;
+}
+
+#demo, #demo2, #demo21, #demo22, #demo31, #demo32{
+font-size:40px;
 }
