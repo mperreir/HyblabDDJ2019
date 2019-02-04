@@ -13,6 +13,12 @@ header img{
 	max-width: 100%;
 	height: auto;
 }
+
+#pictos{
+	position:absolute;
+	right:3%;
+	top : 15%;
+}
 #map { 
 	padding-top : 25px;
 	height: 550px;
@@ -27,12 +33,13 @@ header img{
 }
 #disclaimer {
 	padding-left : 50px;
-	padding-top : 25px;
+	padding-top : 1%;
+	color:white;
 	font-family: "Verdana";
 }
 #filtres a {
 	font-size: 13px;
-	color: #404040;
+	color: white;
 	display: block;
 	margin: 0;
 	padding: 0;
@@ -47,8 +54,8 @@ header img{
 }
 
 #filtres a:hover {
-	background-color: #f8f8f8;
-	color: #404040;
+	background-color: #138496;
+	color: white;
 }
 
 #filtres a.active {
