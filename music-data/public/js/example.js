@@ -424,18 +424,22 @@ function AfficherCursseur(zone,data)
   $('#slider2').on('change', function () {
   $('#valeurdeslider2').empty();
   $('#valeurdeslider2').append($(this).val());
+    $('#bloginformations').hide();
+
   traitementsurlesdonnees(data,zone);
   });
   $('#slider3').on('change', function () {
 
   $('#valeurdeslider3').empty();
   $('#valeurdeslider3').append($(this).val());
+  $('#bloginformations').hide();
   traitementsurlesdonnees(data,zone);
 });
   $('#slider').on('change', function () {
     //la je devrais mettre une copie de data
     $('#valeurdeslider1').empty();
     $('#valeurdeslider1').append($(this).val());
+      $('#bloginformations').hide();
     traitementsurlesdonnees(data,zone);
 });
 $('#selectcontry').change(function(){

@@ -167,6 +167,42 @@ app.get('/followers/:genre', function(req,resp){
   }
 
 });
+app.get('/indice/:genre', function(req,resp){
+  //il faut enlever les espaces de tous les genre qui contient des espaces, sinon ça donne pas un résultat
+;
+  var p = escape(req.params.genre);
+  var p1=p.replace("%20"," ");
+
+  console.log("p1",p1);
+  let followersgenre=[];
+  let rowData = {};
+
+    if(k==1){
+
+      var nbmaxfollowers= csvData.reduce((max, b) => Math.max(max, b.Followers), csvData[0].Followers);
+      console.log(nbmaxfollowers);
+      /*for(var i=0;i<csvData.length;i++)
+      {
+            if(csvData[i].Genre == p1)
+            {
+              rowData["id"]=csvData[i].id;
+              rowData["x1"] = csvData[i].Name;
+              rowData["y1"] = csvData[i].Followers/nbmaxfollowers;
+              rowData["z1"] = csvData[i].Tracks;
+              rowData["pays"]=csvData[i].Country;
+              followersgenre.push(rowData);
+              rowData={};
+
+            }
+
+
+      }*/
+      followersgenre.sort(sortByy1);
+      console.log(followersgenre);
+  resp.send(JSON.stringify(followersgenre));
+  }
+
+});
 app.get('/artistes/:genre', function(req,resp){
   //il faut enlever les espaces de tous les genre qui contient des espaces, sinon ça donne pas un résultat
   var p = escape(req.params.genre);
