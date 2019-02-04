@@ -289,7 +289,7 @@ function affichageGraphique(data,val1,val2){
          }
          if (voiture) {
            document.getElementById('voiture').src="img/Picto/Picto voiture-blanc.png"
-           document.getElementById('critere').innerHTML=" TAUX DES NOUVEAUX VÉHICULES INTÉGRANTS LE DAB+";
+           document.getElementById('critere').innerHTML=" TAUX DES NOUVEAUX VÉHICULES INTÉGRANT LE DAB+";
            donneeAffichee ="voiture";
          }else{
            document.getElementById('voiture').src="img/Picto/Picto voiture-bleu.png"
