@@ -7,11 +7,12 @@ $('#carousel-example-generic').on('slid.bs.carousel', function() {
     currentIndex = $('div.active').index() + 1;
 
     if(currentIndex===1) {
-        $('#perso').removeClass('translate');
-        $('#svga1').hide();
+        $('#next').hide();
+        $('#svg-container').hide();
     }
 
     if(currentIndex===2) {
+        $('#svg-container').hide();
         $('#voiture').hide();
         $('#nuage').show();
         $('#nuage').addClass('translateNO2');
@@ -26,11 +27,13 @@ $('#carousel-example-generic').on('slid.bs.carousel', function() {
 
         setTimeout(function () {
             $('.questions').show();
+            $('#q1').show();
             $('.questions').addClass('animated fadeIn');
         },5000); //5000
 
         setTimeout(function () {
             $('.reponses').show();
+            $('#r1').show();
             $('.reponses').addClass('animated fadeIn');
         },7000); //7000
 
@@ -40,36 +43,41 @@ $('#carousel-example-generic').on('slid.bs.carousel', function() {
         },7000); //7000
 
         $('.boutons').addClass('animated fadeIn');
-        $('#svga1').hide();
     }
 
     if(currentIndex===3){
-        $('#perso').hide();
+        $('#nuage').hide();
         $('#voiture').hide();
-        $('#svga1').hide();
+        $('#svg-container').hide();
+        $('#carousel-example-generic').addClass('carousel-fade');
     }
 
     if(currentIndex===4){
-        $('#perso').hide();
-        $('#perso3').hide();
-        $('#voiture').hide();
-        $('.svg-container').show();
+        $('#svg-container').show();
+        $('#nextArrow2').show();
     }
 
     if(currentIndex===5){
-        $('.svg-container').show();
+        $('#svg-container').show();
+        $('#nextArrow2').show();
     }
 
     if(currentIndex===6){
-        $('.svg-container').show();
+        $('#svg-container').show();
+        $('#nextArrow2').show();
     }
 
     if(currentIndex===7){
-        $('.svg-container').hide();
+        $('#svg-container').hide();
     }
 
     if(currentIndex===8){
-        $('.svg-container').hide();
+        $('#svg-container').hide();
+        $('#carousel-example-generic').removeClass('carousel-fade');
+    }
+
+    if(currentIndex===9){
+        $('#svg-container').hide();
     }
 
 });
@@ -111,3 +119,11 @@ $('#parti').on('click', function () {
         $('#next').addClass('animated bounce infinite');
     },10500);
 });
+
+var afficher = function(id){
+    $(id).show();
+}
+
+var cacher = function(id){
+    $(id).hide();
+}

@@ -14,7 +14,7 @@ var xBar = d3.scaleBand()
     .padding(0.1);
 var yBar = d3.scaleLinear()
     .range([200, 0]);
-var svg = d3.select("#svga1" ).append("svg")
+var svg = d3.select("#svg-container" ).append("svg")
     .attr("width", 1000)
     .attr("height", 200)
     .attr("class", "svg-transition");
@@ -29,9 +29,18 @@ svg.selectAll(".bar")
     .attr("width", xBar.bandwidth())
     .attr("y", function(d) { return yBar(d.value); })
     .attr("height", function(d) { return 200 - yBar(d.value); });
-d3.select(".svga1Button")
+
+$(".nextArrow")
     .on("click", function () {
-        data = myur;
+        if(data===myru){
+            data=myur;
+        }
+        else if(data===myur){
+            data=mytr;
+        }
+        else{
+            data=myru;
+        }
         xBar.domain(data.map(function(d) { return d.name; }));
         svg.selectAll("rect")
             .data(data)
@@ -42,8 +51,28 @@ d3.select(".svga1Button")
         $('#carousel-example-generic').carousel('next');
     });
 
-d3.select(".svga2Button")
+$(".backArrow")
     .on("click", function () {
+        if(data===myru){
+            data=mytr;
+        }
+        else if(data===myur){
+            data=myru;
+        }
+        else{
+            data=myur;
+        }
+        xBar.domain(data.map(function(d) { return d.name; }));
+        svg.selectAll("rect")
+            .data(data)
+            .transition()
+            .duration(2000)
+            .attr("y", function(d) { return yBar(d.value); })
+            .attr("height", function(d) { return 200 - yBar(d.value); });
+        $('#carousel-example-generic').carousel('prev');
+    });
+
+d3.select("#trafic").on("click", function () {
         data = mytr;
         xBar.domain(data.map(function(d) { return d.name; }));
         svg.selectAll("rect")
@@ -52,21 +81,9 @@ d3.select(".svga2Button")
             .duration(2000)
             .attr("y", function(d) { return yBar(d.value); })
             .attr("height", function(d) { return 200 - yBar(d.value); });
-        $('#carousel-example-generic').carousel('next');
     });
-d3.select("#trafic")
-    .on("click", function () {
-        data = mytr;
-        xBar.domain(data.map(function(d) { return d.name; }));
-        svg.selectAll("rect")
-            .data(data)
-            .transition()
-            .duration(2000)
-            .attr("y", function(d) { return yBar(d.value); })
-            .attr("height", function(d) { return 200 - yBar(d.value); });
-    });
+
 d3.select("#rural").on('click',function(){
-
     data = myru;
     xBar.domain(data.map(function(d) { return d.name; }));
     svg.selectAll("rect")
@@ -76,8 +93,8 @@ d3.select("#rural").on('click',function(){
         .attr("y", function(d) { return yBar(d.value); })
         .attr("height", function(d) { return 200 - yBar(d.value); });
 });
-d3.select("#ville")  .on("click", function () {
 
+d3.select("#ville").on("click", function () {
     data = myur;
     xBar.domain(data.map(function(d) { return d.name; }));
     svg.selectAll("rect")

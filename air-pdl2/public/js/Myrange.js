@@ -51,7 +51,7 @@ function ran(){
     oDiv.style.width =100*(1-myr[aa]/100) + "%";
 
 //changer la nuit et le journee
-    if(aa>19||aa<8){
+    if(aa>=19||aa<8){
         $("#r").css({
             "background": "url(./img/RuralNuit31janvier@2x.png) no-repeat center",
             "height": "100%",
@@ -68,6 +68,18 @@ function ran(){
             "border-radius": "5px",
             "background-color":"#dadc38",
             "filter": "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb1d1f9', endColorstr='#ff64a8f9', GradientType=0)",
+        });
+
+        $(".h1-r").css({
+            "color": "#E1F131"
+        });
+
+        $("#h2-r").css({
+            "color": "#E1F131"
+        });
+
+        $("#h3-r").css({
+            "color": "#E1F131"
         });
     }
     if(aa>8&&aa<19){
@@ -87,8 +99,56 @@ function ran(){
             "background-color":"#1c4649",
             "filter": "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb1d1f9', endColorstr='#ff64a8f9', GradientType=0)",
         });
+        $(".h1-r").css({
+            "color": "#AC0759"
+        });
+
+        $("#h2-r").css({
+            "color": "#AC0759"
+        });
+
+        $("#h3-r").css({
+            "color": "#AC0759"
+        });
     }
+
+    if(aa>=7&&aa<9){
+        $("#7-8-r").show();
+        $("#17-r").hide();
+        $("#autres-r-jour").hide();
+        $("#autres-r-nuit").hide();
+    }
+
+    if(aa>=9&&aa<17){
+        $("#7-8-r").hide();
+        $("#17-r").hide();
+        $("#autres-r-jour").show();
+        $("#autres-r-nuit").hide();
+    }
+
+    if(aa>=17&&aa<18){
+        $("#7-8-r").hide();
+        $("#17-r").show();
+        $("#autres-r-jour").hide();
+        $("#autres-r-nuit").hide();
+    }
+
+    if(aa>=18&&aa<19){
+        $("#7-8-r").hide();
+        $("#17-r").hide();
+        $("#autres-r-jour").hide();
+        $("#autres-r-nuit").hide();
+    }
+
+    if(aa>=19||aa<7){
+        $("#7-8-r").hide();
+        $("#17-r").hide();
+        $("#autres-r-jour").hide();
+        $("#autres-r-nuit").show();
+    }
+
 }
+
 function ran2(){
 
     var aa2 = $("#myRange2").val();
@@ -99,7 +159,7 @@ function ran2(){
     var oDiv2 = document.getElementById("bar2");
     oDiv2.style.width =100*(1-myu[aa2]/100) + "%";
 
-    if(aa2>19||aa2<8){
+    if(aa2>=19||aa2<8){
         $("#ur").css({
             "background": "url(./img/UrbainNuit29janvier@2x.png) no-repeat center",
             "height": "100%",
@@ -117,7 +177,20 @@ function ran2(){
             "background-color":"#dadc38",
             "filter": "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb1d1f9', endColorstr='#ff64a8f9', GradientType=0)",
         });
+
+        $(".h1-ur").css({
+            "color": "#E1F131"
+        });
+
+        $("#h2-ur").css({
+            "color": "#E1F131"
+        });
+
+        $("#h3-ur").css({
+            "color": "#E1F131"
+        });
     }
+
     if(aa2>8&&aa2<19){
         $("#ur").css({
             "background": "url(./img/urban_jb.png) no-repeat center",
@@ -135,8 +208,102 @@ function ran2(){
             "background-color":"#1c4649",
             "filter": "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb1d1f9', endColorstr='#ff64a8f9', GradientType=0)",
         });
+
+        $(".h1-ur").css({
+            "color": "#AC0759"
+        });
+
+        $("#h2-ur").css({
+            "color": "#AC0759"
+        });
+
+        $("#h3-ur").css({
+            "color": "#AC0759"
+        });
+    }
+
+    if(aa2>=0&&aa2<5){
+        $("#0-4-ur").show();
+        $("#5-6-ur").hide();
+        $("#7-8-ur").hide();
+        $("#9-10-11-ur").hide();
+        $("#12-14-ur").hide();
+        $("#15-16-ur").hide();
+        $("#17-18-ur").hide();
+        $("#19-23-ur").hide();
+    }
+    if(aa2>=5&&aa2<7){
+        $("#0-4-ur").hide();
+        $("#5-6-ur").show();
+        $("#7-8-ur").hide();
+        $("#9-10-11-ur").hide();
+        $("#12-14-ur").hide();
+        $("#15-16-ur").hide();
+        $("#17-18-ur").hide();
+        $("#19-23-ur").hide();
+    }
+    if(aa2>=7&&aa2<9){
+        $("#0-4-ur").hide();
+        $("#5-6-ur").hide();
+        $("#7-8-ur").show();
+        $("#9-10-11-ur").hide();
+        $("#12-14-ur").hide();
+        $("#15-16-ur").hide();
+        $("#17-18-ur").hide();
+        $("#19-23-ur").hide();
+    }
+    if(aa2>=9&&aa2<12){
+        $("#0-4-ur").hide();
+        $("#5-6-ur").hide();
+        $("#7-8-ur").hide();
+        $("#9-10-11-ur").show();
+        $("#12-14-ur").hide();
+        $("#15-16-ur").hide();
+        $("#17-18-ur").hide();
+        $("#19-23-ur").hide();
+    }
+    if(aa2>=12&&aa2<15){
+        $("#0-4-ur").hide();
+        $("#5-6-ur").hide();
+        $("#7-8-ur").hide();
+        $("#9-10-11-ur").hide();
+        $("#12-14-ur").show();
+        $("#15-16-ur").hide();
+        $("#17-18-ur").hide();
+        $("#19-23-ur").hide();
+    }
+    if(aa2>=15&&aa2<17){
+        $("#0-4-ur").hide();
+        $("#5-6-ur").hide();
+        $("#7-8-ur").hide();
+        $("#9-10-11-ur").hide();
+        $("#12-14-ur").hide();
+        $("#15-16-ur").show();
+        $("#17-18-ur").hide();
+        $("#19-23-ur").hide();
+    }
+    if(aa2>=17&&aa2<19){
+        $("#0-4-ur").hide();
+        $("#5-6-ur").hide();
+        $("#7-8-ur").hide();
+        $("#9-10-11-ur").hide();
+        $("#12-14-ur").hide();
+        $("#15-16-ur").hide();
+        $("#17-18-ur").show();
+        $("#19-23-ur").hide();
+    }
+    if(aa2>=19&&aa2<24){
+        $("#0-4-ur").hide();
+        $("#5-6-ur").hide();
+        $("#7-8-ur").hide();
+        $("#9-10-11-ur").hide();
+        $("#12-14-ur").hide();
+        $("#15-16-ur").hide();
+        $("#17-18-ur").hide();
+        $("#19-23-ur").show();
     }
 }
+
 function ran3(){
 
     var aa3 = $("#myRange3").val();
@@ -147,7 +314,7 @@ function ran3(){
     var oDiv3 = document.getElementById("bar3");
     oDiv3.style.width =100*(1-myt[aa3]/100) + "%";
 
-    if(aa3>19||aa3<8){
+    if(aa3>=19||aa3<8){
         $("#tr").css({
             "background": "url(./img/TraficNuit29janvier@2x.png) no-repeat center",
             "height": "100%",
@@ -164,6 +331,18 @@ function ran3(){
             "border-radius": "5px",
             "background-color":"#dadc38",
             "filter": "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb1d1f9', endColorstr='#ff64a8f9', GradientType=0)",
+        });
+
+        $(".h1-tr").css({
+            "color": "#E1F131"
+        });
+
+        $("#h2-tr").css({
+            "color": "#E1F131"
+        });
+
+        $("#h3-tr").css({
+            "color": "#E1F131"
         });
     }
     if(aa3>8&&aa3<19){
@@ -183,5 +362,81 @@ function ran3(){
             "background-color":"#1c4649",
             "filter": "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb1d1f9', endColorstr='#ff64a8f9', GradientType=0)",
         });
+
+        $(".h1-tr").css({
+            "color": "#AC0759"
+        });
+
+        $("#h2-tr").css({
+            "color": "#AC0759"
+        });
+
+        $("#h3-tr").css({
+            "color": "#AC0759"
+        });
+    }
+
+    if(aa3>=0&&aa3<4){
+        $("#0-1-2-3-tr").show();
+        $("#4-7-tr").hide();
+        $("#8-tr").hide();
+        $("#9-12-tr").hide();
+        $("#13-16-tr").hide();
+        $("#17-18-tr").hide();
+        $("#19-23-tr").hide();
+    }
+    if(aa3>=4&&aa3<8){
+        $("#0-1-2-3-tr").hide();
+        $("#4-7-tr").show();
+        $("#8-tr").hide();
+        $("#9-12-tr").hide();
+        $("#13-16-tr").hide();
+        $("#17-18-tr").hide();
+        $("#19-23-tr").hide();
+    }
+    if(aa3>=8&&aa3<9){
+        $("#0-1-2-3-tr").hide();
+        $("#4-7-tr").hide();
+        $("#8-tr").show();
+        $("#9-12-tr").hide();
+        $("#13-16-tr").hide();
+        $("#17-18-tr").hide();
+        $("#19-23-tr").hide();
+    }
+    if(aa3>=9&&aa3<13){
+        $("#0-1-2-3-tr").hide();
+        $("#4-7-tr").hide();
+        $("#8-tr").hide();
+        $("#9-12-tr").show();
+        $("#13-16-tr").hide();
+        $("#17-18-tr").hide();
+        $("#19-23-tr").hide();
+    }
+    if(aa3>=13&&aa3<17){
+        $("#0-1-2-3-tr").hide();
+        $("#4-7-tr").hide();
+        $("#8-tr").hide();
+        $("#9-12-tr").hide();
+        $("#13-16-tr").show();
+        $("#17-18-tr").hide();
+        $("#19-23-tr").hide();
+    }
+    if(aa3>=17&&aa3<19){
+        $("#0-1-2-3-tr").hide();
+        $("#4-7-tr").hide();
+        $("#8-tr").hide();
+        $("#9-12-tr").hide();
+        $("#13-16-tr").hide();
+        $("#17-18-tr").show();
+        $("#19-23-tr").hide();
+    }
+    if(aa3>=19&&aa3<24){
+        $("#0-1-2-3-tr").hide();
+        $("#4-7-tr").hide();
+        $("#8-tr").hide();
+        $("#9-12-tr").hide();
+        $("#13-16-tr").hide();
+        $("#17-18-tr").hide();
+        $("#19-23-tr").show();
     }
 }
