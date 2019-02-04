@@ -42,7 +42,7 @@ fetch('data/dummy.json')
       var reseau = false;
       var donneeAffichee ="maison";
 
-var pays =["Norvège","Pays-Bas","Danemark","Belgique","Allemagne","Suisse","France","Italie","Russie"];
+      //Lecture de données
       var ourData;
        d3.csv("csv/Donnees.csv").then(function(data) {
           console.log(data); // [{"Hello": "world"}, …]
@@ -61,8 +61,10 @@ var reseauRougeData;
 var reseauJauneData;
 var chartData;
 var chartData2;
-function affichageGraphique(data,val1,val2){
 
+//Corps du js en asynchrone
+function affichageGraphique(data,val1,val2){
+  //format de données pour un affichage classique jaune
    chartData2 = {
       labels: ["",""],
       datasets: [{
@@ -75,7 +77,7 @@ function affichageGraphique(data,val1,val2){
 
 
   };
-
+  //option associée
   var opt2 = {
     responsive: false,
     legend: {
@@ -92,6 +94,7 @@ function affichageGraphique(data,val1,val2){
     cutoutPercentage: 70,
     segmentShowStroke: false
   };
+  // Chart pour le jaune
    var ctx2 = document.getElementById("ctx2"),
        otherLineChart = new Chart(ctx2, {
           type: 'doughnut',
@@ -99,6 +102,7 @@ function affichageGraphique(data,val1,val2){
           options: opt2,
 
        });
+  //format de données pour un affichage classique rouge
    chartData = {
       labels: ["",""],
       datasets: [{
@@ -111,7 +115,7 @@ function affichageGraphique(data,val1,val2){
 
 
   };
-
+  //format de données splitées jaunes
    reseauJauneData = {
       labels: ["",""],
       datasets: [{
@@ -132,6 +136,7 @@ function affichageGraphique(data,val1,val2){
 
 
   };
+  //format de données splitées rouge
    reseauRougeData = {
       datasets: [{
         labels: ["",""],
@@ -170,6 +175,7 @@ function affichageGraphique(data,val1,val2){
     cutoutPercentage: 70,
     segmentShowStroke: false
   };
+  // Graphique rouge
   ctx = document.getElementById("ctx"),
        myLineChart = new Chart(ctx, {
           type: 'doughnut',
@@ -177,6 +183,7 @@ function affichageGraphique(data,val1,val2){
           options: opt,
 
        });
+       // Ajout des evenements des pictogrammes
        $('#maison').on({
          mouseenter: function () {
            if(!maison){
@@ -259,7 +266,7 @@ function affichageGraphique(data,val1,val2){
        });
 
 
-
+       // Changement du pictogramme selectionné et des données à afficher
        function pictoChanging(maison2,radio2,recepteur2,route2,voiture2,reseau2) {
          maison = maison2;
          radio = radio2;
@@ -303,7 +310,7 @@ function affichageGraphique(data,val1,val2){
 
            document.getElementById('reseau').src="img/Picto/Picto couverture réseaux-bleu.png"
          }
-         refreshOtherLine(otherLineChart,data);
+         refreshOtherLine(otherLineChart,data); //update des graphiques
          refreshMyLine(myLineChart,data);
        }
 
@@ -312,6 +319,8 @@ document.getElementById('paysRouge').innerHTML=data[valRouge]["nomPays"];
 document.getElementById('valeurJaune').innerHTML=data[valJaune][donneeAffichee]+"%";
 document.getElementById('valeurRouge').innerHTML=data[valRouge][donneeAffichee]+"%";
 //fin Graphiques
+
+//bouton rouge du slider
 $('#rouge').draggable({
   axis: "x",
   grid: [ 62, 10 ],
@@ -327,6 +336,7 @@ $('#rouge').draggable({
   },
   containment: "parent"
 });
+//bouton jaune du slider
 $('#jaune').draggable({
   axis: "x",
   grid: [ 62, 10 ],
@@ -346,6 +356,8 @@ $('#jaune').draggable({
 
 
 };
+
+// Update du graphique rouge
 function refreshMyLine(chart,data) {
   if (valRouge<0) {
     valRouge =0;
@@ -354,18 +366,18 @@ function refreshMyLine(chart,data) {
     valJaune =8;
   }
 
-  if(donneeAffichee=="reseau"){
-    chart.data = reseauRougeData;
-    chart.data.datasets[0].data = [data[valRouge][donneeAffichee],100-data[valRouge][donneeAffichee]];
+  if(donneeAffichee=="reseau"){ // Cas de selection du réseau qui est a 2 données
+    chart.data = reseauRougeData; // Changement du type de données
+    chart.data.datasets[0].data = [data[valRouge][donneeAffichee],100-data[valRouge][donneeAffichee]]; //Update des données
     chart.data.datasets[1].data = [data[valRouge]["reseau2"],100-data[valRouge]["reseau2"]];
     document.getElementById('sousRouge').innerHTML= "(2013) / (2018)";
-    if (data[valRouge]["nomPays"]=="Pays-Bas"){
+    if (data[valRouge]["nomPays"]=="Pays-Bas"){ // Les données du Pays-Bas sont manquantes donc à gérer
       document.getElementById('valeurRouge').innerHTML="ND / "+data[valRouge][donneeAffichee]+"%";
     }else{
       document.getElementById('valeurRouge').innerHTML=data[valRouge][donneeAffichee]+"% / "+data[valRouge]["reseau2"]+"%";
     }
 
-  }else if(donneeAffichee=="recepteur"){
+  }else if(donneeAffichee=="recepteur"){ // Dans le cas du recepteur, les données ne sont pas des pourcentages mais un nombre de radios
     chart.data = chartData;
     chart.data.datasets[0].data = [data[valRouge][donneeAffichee],data[valRouge]["recepteur2"]];
     document.getElementById('valeurRouge').innerHTML=data[valRouge][donneeAffichee]+" / "+data[valRouge]["recepteur2"];
@@ -382,9 +394,10 @@ function refreshMyLine(chart,data) {
 
   }
 
-  chart.update();
+  chart.update(); //raffraichissement
   document.getElementById('paysRouge').innerHTML=data[valRouge]["nomPays"];
 }
+// Idem pour le graphique jaune
 function refreshOtherLine(chart,data) {
   if (valJaune<0) {
     valJaune =0;
