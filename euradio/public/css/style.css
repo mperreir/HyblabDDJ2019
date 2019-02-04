@@ -65,7 +65,7 @@ h4 {
   margin-bottom: 0px;
 }
 
-h4 {
+h6 {
   color: #ffffff;
 	font-family:sans-serif;
 	font-size: 16px;
@@ -390,7 +390,7 @@ h4{
 
 .carte
 {
-	width: 55%;
+	width: 50%;
 	height: auto;
 }
 
