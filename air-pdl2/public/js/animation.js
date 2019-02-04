@@ -23,24 +23,24 @@ $('#carousel-example-generic').on('slid.bs.carousel', function() {
         setTimeout(function () {
             $('.fond').show();
             $('.fond').addClass('animated slideInRight');
-        },0); //4000
+        },4000); //4000
 
         setTimeout(function () {
             $('.questions').show();
             $('#q1').show();
             $('.questions').addClass('animated fadeIn');
-        },0); //5000
+        },5000); //5000
 
         setTimeout(function () {
             $('.reponses').show();
             $('#r1').show();
             $('.reponses').addClass('animated fadeIn');
-        },0); //7000
+        },7000); //7000
 
         setTimeout(function () {
             $('.nextQ').show();
             $('.nextQ').addClass('animated fadeIn');
-        },0); //7000
+        },7000); //7000
 
         $('.boutons').addClass('animated fadeIn');
     }
