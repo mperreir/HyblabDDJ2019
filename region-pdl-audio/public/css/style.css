@@ -842,7 +842,7 @@ h1 .h1_highlight {
 .micro_reunion_periode_numero {
 	border-radius: 50%;
 	width: 2.11vw;
-	height: 3.87vh;
+	height: auto;
 	background: #FFFFFF;
 	color: #512C51;
 	text-align: center;
