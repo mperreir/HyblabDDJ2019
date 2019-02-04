@@ -9,7 +9,7 @@ var x;
 
 $('#draggable').draggable({
   axis: "x",
-  grid: [ 31, 10 ],
+  grid: [ 32, 10 ],
   drag: function( event, ui ) {
     var offset = $(this).offset(); // Avoir les coordonnées du slider
     var xPos = offset.left; //
