@@ -1,0 +1,42 @@
+.barre{
+  width:40%;
+  margin: auto;
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+.info{
+  width:60%;
+  margin: auto;
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+.pictolegende{
+  margin-top: 20%;
+  margin-bottom: 10%;
+}
+
+#infoGraphique{
+  margin-top: 20%;
+}
+#info_voiture{
+  visibility: hidden;
+}
+#info_bus{
+  visibility: hidden;
+}
+#info_velo{
+  visibility: hidden;
+}
+ #info_marche{
+   visibility: hidden;
+ }
+ #info_2roues{
+   visibility: hidden;
+ }
+ #info_covoiturage{
+   visibility: hidden;
+ }

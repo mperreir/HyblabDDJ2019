@@ -1,4 +1,10 @@
 
+function montrerInfo(id){
+  var afficher = document.getElementById("info_"+id);
+  afficher.style.visibility="visible";
+  console.log("leeeeeelo  ", id);
+}
+
 function finVideo1(){
   console.log("fin video 1");
   showButton();

@@ -1,8 +1,16 @@
+lien du site :
+https://hyblab.polytech.univ-nantes.fr/ssh/
+
+identifiants:air-pdl1
+mot de passe : ddj4air-pdl1
+
+
 Dans le dossier air pdl1
 lancer le server avec :
 $ npm install
 puis :
 $ pm2 start server.js --name MonApp
 
-site avec idées : 
-https://codepen.io/#
+
+$ pm2 stop id
+$ exit

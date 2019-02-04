@@ -16,10 +16,7 @@
     <link rel="stylesheet" href="css/rangeslider.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sliderQuestion.css">
-    <!-- Simple sample script that loads data from a dummy json file -->
-
-    <script src="js/graph.js"></script>
-    <!-- Initialize Swiper -->
+    <link rel="stylesheet" href="css/SliderTransport.css">
 
 		<!-- Those polyfills are required so that old browsers support fetch mecanism
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
@@ -123,6 +120,7 @@
         <div>
           <h2>Comme évoqué précédemment, les particules fines sont générée par un phénomène de combustion. Outre celles d’origine naturelle (volcans, érosion éolienne, incendie ou feux de végétation), l’émission de PM10 découle aussi de combustions d’origine humaine.
               Découvrez les quatres principaux secteurs sources d’émission de PM10 :</h2>
+          <h4 class ="salmon-text">Cliquez sur les pictogrammes pour decouvrir les 4 principaux secteurs emettants des PM10</h4>
           <div id="wrap">
           <div>
           <img id="q1" class="questionMark" src="img/bouton__.svg" onclick="showAnswer(1)">
@@ -214,12 +212,71 @@
 <!-- ###############################   SLIDER 7   ################################ -->
 <!-- ############################################################################# -->
       <div id="slider7" class="swiper-slide">
-        <h2>Effectivement, des solutions existent, et tout le monde peut agir à petite échelle.
+
+        <h2>Mais alors, quels transports sont à préconiser ?</h2>
+        <h4 >Effectivement, des solutions existent, et tout le monde peut agir à petite échelle.
 
           Par exemple, opter pour un moyen de transport plutôt qu’un autre permettrait d’avoir des effets à grande échelle sur la réduction des émissions.
-        </h2>
-        <h2 class = "salmon-text">Mais alors, quels transports sont à préconiser ?</h2>
-      </div>
+        </h4>
+        <h4 class ="salmon-text">Cliquez sur les pictogrammes pour afficher leur emission en PM10</h4>
+          <div class="modal-body">
+<!-- ############################## ligne reponse ################################ -->
+
+          <div id = "infoGraphique" class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-1">
+              <img class = "barre" src="img/transports/barre.png" alt="legende">
+            </div>
+            <div class="col-md-1">
+              <img id = "info_voiture" class = "info" src="img/transports/info_voiture.png" alt="legende">
+            </div>
+            <div class="col-md-1">
+              <img id = "info_2roues" class = "info" src="img/transports/info_2roues.png" alt="legende">
+            </div>
+            <div class="col-md-1">
+              <img id = "info_covoiturage" class = "info" src="img/transports/info_covoiturage.png" alt="legende">
+            </div>
+            <div class="col-md-1">
+              <img id = "info_bus" class = "info" src="img/transports/info_bus.png" alt="legende">
+            </div>
+            <div class="col-md-1">
+              <img id = "info_velo" class = "barre" src="img/transports/0.png" alt="legende">
+            </div>
+            <div class="col-md-1">
+              <img id = "info_marche" class = "barre" src="img/transports/0.png" alt="legende">
+            </div>
+          </div>
+<!-- ############################## ligne picto legende ################################ -->
+          <div id = "pictolegende" class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-1">
+              <img id = "voiture" class = "pictolegende" src="img/transports/voiture.svg" alt="voiture" onclick="montrerInfo(this.id)">
+              <h4>Voiture</h4><h4>(1 personne)</h4>
+            </div>
+            <div class="col-md-1">
+              <img id = "2roues" class = "pictolegende" src="img/transports/2roues.svg" alt="2 roues" onclick="montrerInfo(this.id)">
+              <h4>2 roues</h4>
+            </div>
+            <div class="col-md-1">
+              <img id = "covoiturage" class = "pictolegende" src="img/transports/voiture.svg" alt="Covoiturage" onclick="montrerInfo(this.id)">
+                <h4>Covoiturage</h4><h4>(4 personnes)</h4>
+            </div>
+            <div class="col-md-1">
+              <img id = "bus" class = "pictolegende" src="img/transports/bus.svg" alt="Bus" onclick="montrerInfo(this.id)">
+              <h4>Bus</h4>
+            </div>
+            <div class="col-md-1">
+              <img id = "velo" class = "pictolegende" src="img/transports/velo.svg" alt="Vélo" onclick="montrerInfo(this.id)">
+              <h4>Vélo</h4>
+            </div>
+            <div class="col-md-1">
+              <img id = "marche" class = "pictolegende" src="img/transports/marche.svg" alt="Marche à pied" onclick="montrerInfo(this.id)">
+              <h4>Marche à pied</h4>
+            </div>
+          </div> <!-- fin balise row -->
+        </div> <!-- fin div modal body -->
+      </div> <!-- fin div slide -->
+
 <!-- ############################################################################# -->
 <!-- ###############################   SLIDER FIN   ############################## -->
 <!-- ############################################################################# -->
@@ -322,6 +379,7 @@
   <script src="js/swiper.min.js"></script>
   <script src="js/rangeslider.min.js"></script>
   <script src="js/air-pdl1.js"></script>
+  <script src="js/graph.js"></script>
   <script>
     var values=[14,9,10,11.5,0,12.5,16,8.5,3.5,8,12,14.5,1.5,13,14,13,2,8,13.5,8.5,12,8,3.5,11,8,14,15,8,12,10,11,6,13,1,8.5,10.5,13,9,8,14,11,1.5,12,2.5,9,6,10.5,16,9.5,12.5,8,2,20,5.5];
 var test=new Graph('graph',300,100);
