@@ -63,7 +63,7 @@ let data = [];
                 .data(function(d) { return d.ages; })
                 .remove()
                 .enter().append("rect")
-                .attr("height", y.rangeBand()/2)
+                .attr("height", y.rangeBand())
                 .attr("x", function(d) { return x(d.y0); })
                 .attr("width", function(d) { return (x(d.y1) - x(d.y0)); })
                 .style("fill", function(d) { return color(d.name); })

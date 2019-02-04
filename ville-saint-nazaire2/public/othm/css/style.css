@@ -1,0 +1,258 @@
+
+.slide1{
+	background-color: #EB4834; 
+}
+.parag{
+	margin-top: 6%;
+  margin-left: 7%;
+  position: absolute;
+}
+.frise_trajet2{
+	margin-left: 26.4%;
+  margin-top: 20%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.titre_slide1{
+	color: #FAFAFA;
+	font-size: 4vw;
+	margin-left: 20%;
+	text-align: left;
+	font-family: Rubik;
+	font-weight: bold;
+}
+.redcontainer{
+  	/*text-align: center;*/
+  	background-color: #EB4834;
+  	height: 26%;
+  	width: 100%;
+ 	top:0;
+ 	position: absolute;
+
+}
+.titrepage{
+    margin-top: 1%;
+    font-size: 1.5vw;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Rubik;
+    font-weight: bold;
+    line-height: 27px
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url(font/Rubik-Medium.ttf);
+}
+
+.frise_trajet{
+	
+  
+  margin-left: 42%;
+  margin-top: -15%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+
+}
+
+.slidecontainer {
+position: absolute;
+    width: 68%;
+    margin-left: 16%;
+    margin-top: 2rem;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 10rem;
+  height: 1rem;
+  border-radius: 5px;
+  background: #FFFFFF;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.km_text{
+	color: #FFFFFF;
+	margin-left: 45%;
+	margin-top:2%;
+	font-family: Rubik;
+  	font-weight: bold;
+  font-size: 1.5vw;
+
+}
+
+.My_chart{
+    margin-top: -6%;
+    margin-left: 15%;
+    position: absolute;
+}
+
+text{
+	
+	display: block;
+	font-weight: bold;
+}
+
+
+
+.redcontainer2{
+    /*text-align: center;*/
+  background-color: #EB4834;
+  height: 80%;
+  width: 100%;
+  top:0;
+  position: absolute;
+
+}
+.text_final{
+  text-align: center;
+  color: #FFFFFF;
+  font-family: Rubik;
+  font-weight: bold;
+
+}
+.projet_com{
+  font-size: 2vw;
+}
+
+.logo_saint_nazaire{
+max-width: 18%;
+  height: auto;
+  display: block;
+    
+}
+
+.port_par{
+top: 30%;
+    /* position: absolute; */
+    left: 70rem;
+    font-size: 2vw;
+}
+.agr_team{
+    max-width: 23%;
+    height: auto;
+}
+.polytech_team{
+    max-width: 20%;
+    height: auto;
+
+}
+.science_com_team{
+  max-width: 22%;
+  height: auto;
+}
+
+.titre_ecole{
+  text-align: center;
+  color: #FFFFFF;
+  font-family: Rubik;
+  font-weight: bold;
+  font-size: 2vw;
+}
+.titre_agr{
+  position: absolute;
+  bottom: 16rem;
+  left: 53rem;
+}
+.titre_popo{
+  position: absolute;
+  bottom: 16rem;
+  left: 88rem;
+}
+.titre_audencia{
+  position: absolute;
+  bottom: 16rem;
+  right: 44rem;
+}
+.nom_teams{
+  color: #FFFFFF;
+  font-family: Rubik;
+  font-weight: bold;
+  font-size: 1vw;
+
+}
+
+
+.partenaire{
+  color: #EB4834;
+  font-family: Rubik;
+  font-weight: bold;
+  font-size: 2vw;
+}
+
+.logo_agr{
+max-width: 6%;
+  height: auto;
+  display: block;
+}
+.logo_polytech{
+max-width: 14%;
+  height: auto;
+  display: block;
+}
+.logo_sciencescom{
+max-width: 14%;
+  height: auto;
+  display: block;
+}
+.logo_univ_nantes{
+ max-width: 9%;
+  height: auto;
+  display: block;
+}
+.logo_pdl{
+max-width: 12%;
+  height: auto;
+  display: block;
+}
+.logo_hyblab{
+ max-width: 11%;
+  height: auto;
+  display: block;
+}
+.logo_medialab{
+ max-width: 16%;
+  height: auto;
+  display: block;
+}
+.logo_open_source{
+ max-width: 5%;
+  height: auto;
+  display: block;
+}
+.logo_cc{
+ max-width: 5%;
+  height: auto;
+  display: block;
+}
+
+.top_mar{
+  margin-top: 4vw;
+}
