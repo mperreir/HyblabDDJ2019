@@ -400,7 +400,7 @@ $('#rouge').draggable({
   drag: function( event, ui ) {
     var offset = $(this).offset(); // Avoir les coordonnées du slider
     var xPos = offset.left; //
-    valRouge = parseInt((xPos - xPosRouge)/64)+2;
+    valRouge = parseInt((xPos - xPosRouge)/60)+2;
     console.log(valRouge);
     refreshMyLine(myLineChart,data);
   },
@@ -411,7 +411,7 @@ $('#rouge').draggable({
 });
 $('#jaune').draggable({
   axis: "x",
-  grid: [ 63, 10 ],
+  grid: [ 62, 10 ],
   drag: function( event, ui ) {
     var offset = $(this).offset(); // Avoir les coordonnées du slider
     var xPos = offset.left; //
