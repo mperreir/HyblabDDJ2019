@@ -317,7 +317,7 @@ $('#rouge').draggable({
   drag: function( event, ui ) {
     var offset = $(this).offset(); // Avoir les coordonnées du slider
     var xPos = offset.left; //
-    valRouge = parseInt((xPos - xPosRouge)/62)+2;
+    valRouge = parseInt((xPos - xPosRouge)/60)+2;
     //console.log(valRouge);
     refreshMyLine(myLineChart,data);
   },
@@ -332,7 +332,7 @@ $('#jaune').draggable({
   drag: function( event, ui ) {
     var offset = $(this).offset(); // Avoir les coordonnées du slider
     var xPos = offset.left; //
-    valJaune = parseInt((xPos - xPosJaune)/62);
+    valJaune = parseInt((xPos - xPosJaune)/60);
     refreshOtherLine(otherLineChart,data);
 
   },
@@ -407,7 +407,7 @@ function refreshOtherLine(chart,data) {
     document.getElementById('valeurJaune').innerHTML=data[valJaune][donneeAffichee]+" / "+data[valJaune]["recepteur2"];
     document.getElementById('sousJaune').innerHTML= "DAB+ / FM";
   }else{
-    if ((data[valJaune]["nomPays"]=="France"|data[valJaune]["nomPays"]=="Belgique"|data[valJaune]["nomPays"]=="Pays-Bas") && donneeAffichee=="maison"){
+    if ((data[valJaune]["nomPays"]=="Suisse"|data[valJaune]["nomPays"]=="Belgique"|data[valJaune]["nomPays"]=="Pays-Bas") && donneeAffichee=="maison"|(data[valRouge]["nomPays"]=="France"&donneeAffichee=="route")){
       document.getElementById('valeurJaune').innerHTML="ND";
     }else{
       document.getElementById('valeurJaune').innerHTML=data[valJaune][donneeAffichee]+"%";
