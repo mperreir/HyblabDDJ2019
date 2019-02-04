@@ -357,7 +357,7 @@ body {
 .rectangle-path {
   display: inline-block;
 	height: 51.74px;
-	width: 165px;
+	width: 178.7px;
   margin-left: 10px;
   margin-right: 10px;
 
@@ -378,7 +378,7 @@ body {
 .rectangle-path2 {
   display: inline-block;
 	height: 51.74px;
-	width: 165px;
+	width: 178.7px;
   margin-left: 10px;
   margin-right: 10px;
 
@@ -389,7 +389,7 @@ body {
 .rectangle-path3 {
   display: inline-block;
 	height: 51.74px;
-	width: 165px;
+	width: 178.7px;
   margin-left: 10px;
   margin-right: 10px;
 
@@ -400,12 +400,12 @@ body {
 .rectangle-path4 {
   display: inline-block;
 	height: 51.74px;
-	width: 165px;
+	width: 178.7px;
   margin-left: 10px;
   margin-right: 10px;
 
 	border-radius: 13.51px;
-	background-color:151515 ;
+	background-color: #151515 ;
   color: white;
 }
 
@@ -435,10 +435,16 @@ body {
 }
 .selectcontry {
   display: inline-block;
+  width: 178.7px;
+
+}
+.slidec{
 
 }
 .slidecontainer{
   display: inline-block;
+
+
 
 }
 select{
@@ -452,17 +458,20 @@ select{
   color: white;
 }
 #menu{
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: 15px;
+  width: 100%;
 
 }
+
+/*
 #bloginformations {
     box-sizing: border-box;
     height: 90px;
     width: 300px;
     border: 2.21px solid #2AF194;
     border-radius: 17.66px;
-}
+}*/
  /* credits */
 .un-projet-realise-pa {
     height: 3.13%;
@@ -596,3 +605,27 @@ select{
     top: 70.83%;
     left: 29.18%;
 }
+
+#bloginformations{
+  display: inline-block;
+	box-sizing: border-box;	height: 100px;	width: 300px;	border: 2.21px solid #2AF194;	border-radius: 17.66px;
+}
+
+#bottonderetour{
+  display: inline-block;
+  width: 700px;
+}
+.left{
+  display: inline-block;
+	height: 51.74px;
+	width: 178.7px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+	border-radius: 13.51px;
+	background-color: #374240;;
+  color: white;
+  float:left;
+
+}
+.nom-du-blog {	height: 19px;	width: 103px;	color: #000000;	font-family: Montserrat;	font-size: 15px;	font-weight: bold;	line-height: NaNpx;}
