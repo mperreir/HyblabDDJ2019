@@ -29,18 +29,17 @@ section {
   */
 }
 
-.personaBulle{
-  height: 432px;
-  width: 441px;
-  border-top-left-radius: 35px;
-  border-top-right-radius: 35px;
-  background-color: #EB4834;
-  position: absolute;
-  margin-left: 155px;
-  float: left;
-  margin-top: 32.5px;
+.personaBulle {
+    height: 511px;
+    width: 500px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    background-color: #EB4834;
+    position: absolute;
+    margin-left: 245px;
+    float: left;
+    margin-top: 69.5px;
 }
-
 .imgStep {
   height: 10px;
 }
@@ -50,19 +49,18 @@ section {
   padding-right: 130px;
 }
 
-.persona .imgGraph {
-  padding-left: 616px;
-  padding-top: 10%;
+.imgGraph {
+    padding-left: 1222px;
+    padding-top: 9%;
+    height: -72rem;
 }
-
 .persona .imgPersona {
-  padding-top: 76px;
-  position: absolute;
-  margin-top: 32px;
-  height: 450px;
-  margin-left: -297px;
+    padding-top: 24px;
+    /* position: absolute; */
+    margin-top: 82px;
+    height: 503px;
+    margin-left: -289px;
 }
-
 #bikeMoove {
   z-index: 9999;
 }
@@ -76,63 +74,64 @@ section {
 }
 
 .progress {
-  z-index: 1000;
-  display: flex;
-  width: 150%;
-  padding-bottom: 216px;
-  padding-top: 160px; /*ici*/
-  margin-top: 10px;
-}
+    z-index: 1000;
+    display: flex;
+    width: 150%;
 
+    padding-bottom: 216px;
+    padding-top: 178px;
+    margin-right: 33px;
+    margin-top: 122px;
+}
 .progress .progress-track {
-  position: absolute;
-  top: 6px;
-  margin-top: 606px;
-  /*margin-top: 130px;*/
-  height: 5px;
-  width: 1000px;
-  margin-left: 171px; /*ici*/
-  background-color: #EB4834;
-  z-index: 9;
+    position: absolute;
+    top: 6px;
+    margin-top: 774px;
+    /* margin-top: 130px; */
+    height: 5px;
+    width: 1000px;
+    margin-left: 455px;
+    background-color: #EB4834;
+    z-index: 9;
+}
+.progress .progress-step {
+    position: relative;
+    min-width: 337px;
+    margin-top: 32px;
+    max-width: 337px;
+    font-size: 12px;
+    text-align: center;
 }
 
-.progress .progress-step {
-  position: relative;
-  min-width: 337px;
-  margin-top: -20px;
-  max-width: 337px;
-  font-size: 12px;
-  text-align: center;
-}
 .progress .progress-step:last-child:after {
   display: none;
 }
 
 .progress .progress-step:before {
-  /*content: "\f00c";*/
-  content: "\c";
-  display: flex;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  width: 18px;
-  height: 17px;
-  background: #EB4834;
-  border: 4px solid #EB4834;
-  border-radius: 100%;
-  color: #fff;
+    /* content: "\f00c"; */
+    content: "\c";
+    display: flex;
+    margin: 2px 443px;
+    margin-bottom: 10px;
+    width: 18px;
+    height: 17px;
+    background: #EB4834;
+    border: 4px solid #EB4834;
+    border-radius: 100%;
+    color: #fff;
+}
+.progress .progress-step:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 133%;
+    width: 0%;
+    transition: width 1s ease-in;
+    height: 5px;
+    background: #B3E540;
+    z-index: 9999;
 }
 
-.progress .progress-step:after {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 50%;
-  width: 0%;
-  transition: width 1s ease-in;
-  height: 5px;
-  background: #B3E540;
-  z-index: -1;
-}
 .progress .progress-step.is-active {
   color: #EB4834;
 }
@@ -192,17 +191,17 @@ section {
   width:100px;
 }
 
-
 .progress .progress-step.is-active img {
-  display: block;
-  position: absolute;
-  left: 120px;
-  z-index: 9999;
-  width: 129px;
-  top: -73px;
-  width: 93px;
-  height: 82px;
-}​
+    display: block;
+    position: absolute;
+    left: 405px;
+    z-index: 9999;
+    width: 129px;
+    top: -91px;
+    width: 108px;
+    height: 102px;
+}
+
 
 
 #mavideo {
@@ -239,25 +238,27 @@ section {
 }
 
 body{font-family: sans-serif; background:#191919;}
-.bubble-text{
-  color: #fff;
-  padding: 25px 25px;
-  border-radius: 3px;
-  position: absolute;
-  margin-top: -737px;
-  margin-left: 339px;
-  height: 154px;
-  width: 246px;
-  color: #FFFFFF;
-  font-family: RubikR;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 17px;
-  text-align: justify;
-  background-image: url('../imgJeux/guillemets.png');
-  background-repeat: no-repeat;
-  background-position: -1px 25px;
+.bubble-text {
+    color: #fff;
+    padding: 25px 25px;
+    border-radius: 3px;
+    position: absolute;
+    margin-top: -806px;
+    margin-left: 458px;
+    height: 154px;
+    width: 273px;
+    color: #FFFFFF;
+    font-family: RubikR;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 17px;
+    text-align: justify;
+    background-image: url(../imgJeux/guillemets.png);
+    background-repeat: no-repeat;
+    background-position: 0px 38px;
 }
+
+
 
 .bubble-text::after{
   content:""; 
@@ -271,23 +272,23 @@ body{font-family: sans-serif; background:#191919;}
 }
 
 .name {
-  color: #FFFFFF;
-  font-family: Rubik;
-  font-size: 26px;
-  font-weight: bold;
-  margin-top: -785px;
-  margin-left: 209px;
-  line-height: 31px;
-  position: absolute;
-  text-align: right;
+    color: #FFFFFF;
+    font-family: Rubik;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: -871px;
+    margin-left: 291px;
+    line-height: 31px;
+    position: absolute;
+    text-align: right;
 }
 
 .bulle {
-  height: 177px;
-  position: absolute;
-  z-index: 1;
-  margin-left: -87px;
-  margin-top: 92px;
+    height: 177px;
+    position: absolute;
+    z-index: 1;
+    margin-left: -151px;
+    margin-top: 128px;
 }
 
 .graphic-title {
@@ -298,7 +299,7 @@ body{font-family: sans-serif; background:#191919;}
   color: #FFFFFF;
   font-family: Rubik;
   position: absolute;
-  margin-left: 850px;
+  margin-left: 1223px;
   font-size: 25px;
   font-weight: 500;
   line-height: 29px;
@@ -311,30 +312,34 @@ body{font-family: sans-serif; background:#191919;}
 }
 
 #bikeMoove {
-  margin-top: -54px;
-  margin-left: 142px;
-  margin-top: -276px;
-  position: absolute;
+    margin-top: -54px;
+    margin-left: 428px;
+    margin-top: -247px;
+    position: absolute;
 }
 
 
 
 #bikeMoove2 {
-  margin-top: -54px;
-  margin-left: 142px;
-  margin-top: -276px;
-  height: 60px;
-  width: 45px;
-  position: absolute;
+    margin-top: -54px;
+    margin-left: 433px;
+    margin-top: -253px;
+    height: 60px;
+    width: 45px;
+    position: absolute;
 }
 
 #bikeMoove3 {
-  margin-top: -54px;
-  margin-left: 142px;
-  margin-top: -276px;
-  height: 60px;
-  width: 45px;
-  position: absolute;
+    margin-top: -54px;
+    margin-left: 415px;
+    margin-top: -252px;
+    height: 60px;
+    width: 45px;
+    position: absolute;
+}
+
+.bullejerome{
+  margin-left: -128px;
 }
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
@@ -346,7 +351,7 @@ body{font-family: sans-serif; background:#191919;}
 
 .frise{
   margin-top: -608px;
-  margin-right: -92px;
+  margin-right: -24px;
   float: right;
 }
 
@@ -361,57 +366,54 @@ body{font-family: sans-serif; background:#191919;}
   transition-duration: 0.4s;
 }
 
-.buttonNext{
-  border: 5px solid #ABDA3E;
-  width: 141px;
-  color: #ABDA3E;
-  font-family: Rubik;
-  position: relative;
-  margin-top: 45px;
-  margin-left: 50%;
-  margin-right: 0px;
-  font-size: 25px;
-  font-weight: 500;
-  line-height: 29px;
-  text-align: center;
-  margin-left: 1250px;
-  margin-top: 590px;
-  position: absolute;
-  height: 60px;
-  border-radius: 4px;
-  font-size: 15px;
-  cursor: pointer;
-  color: white;
-  font-family: Rubik;
-  background-color: #B3E540;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
+.buttonNext {
+    /* border: 5px solid #ABDA3E; */
+    width: 141px;
+    color: #ABDA3E;
+    font-family: Rubik;
+    position: relative;
+    margin-top: 90px;
+    margin-left: 127%;
+    margin-right: 39px;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 29px;
+    text-align: center;
+    margin-left: 1539px;
+    margin-top: 754px;
+    position: absolute;
+    height: 60px;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    font-family: Rubik;
+    background-color: #B3E540;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
-
-.buttonImgPersona1{
-  position: absolute;
-  margin-left: 421px;
-  z-index: 100;
-  height: 75px;
-  width: 75px;
-  margin-top: 63px;
-  border: none;
-  background-color: transparent;
-  background-repeat: no-repeat;
+.buttonImgPersona1 {
+    position: absolute;
+    margin-left: 527px;
+    z-index: 100;
+    height: 75px;
+    width: 75px;
+    margin-top: 85px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
 }
-
-.buttonImgPersona2{
-  position: absolute;
-  margin-left: 494px;
-  z-index: 100;
-  height: 75px;
-  width: 75px;
-  margin-top: 63px;
-  border: none;
-  background-color: transparent;
-  background-repeat: no-repeat;
+.buttonImgPersona2 {
+    position: absolute;
+    margin-left: 615px;
+    z-index: 100;
+    height: 75px;
+    width: 75px;
+    margin-top: 86px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
 }
-
 .buttonImgRetour {
   position: absolute;
   margin-top: 87px;
@@ -436,16 +438,15 @@ body{font-family: sans-serif; background:#191919;}
 }
 
 .choixPersoImg {
-  background-color: #FAFAFA;
-  text-align: center;
-  height: 98%;
-  width: 70%;
-  margin-top: -10px;
-  border-radius: 30px;
-  margin-left: 15%; 
-  margin-right: 15%; 
+    background-color: #FAFAFA;
+    text-align: center;
+    height: 112%;
+    width: 70%;
+    margin-top: -111px;
+    border-radius: 30px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
-
 .jeanne {
   position: absolute;
   margin-top: 10px;
@@ -480,16 +481,16 @@ body{font-family: sans-serif; background:#191919;}
 }
 
 .contentPersona {
-  margin-left: 37%;
-  margin-right: 33%;
-  color: #FFFFFF;
-  font-family: RubikR;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 15px;
-  text-align: justify;
-  position: absolute;
-  margin-top: 30px;
+    margin-left: 34%;
+    margin-right: 32%;
+    color: #FFFFFF;
+    font-family: RubikR;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: justify;
+    position: absolute;
+    margin-top: 30px;
 }
 
 .titlePersona {
@@ -532,21 +533,38 @@ a:hover {
 }
 
 .high-title {
-  height: 135px;
-  margin-left: 25%;
-  position: absolute;
-  margin-top: 56px;
-  width: 657px;
-  color: #EB4834;
-  font-family: RubikB;
-  font-size: 45px;
-  font-weight: 900;
-  line-height: 45px;
-  position: absolute;
+    height: 135px;
+    margin-left: 25%;
+    position: absolute;
+    margin-top: 56px;
+    width: 814px;
+    color: #EB4834;
+    font-family: RubikB;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 55px;
+    position: absolute;
 }
 
+.frisejerome {
+        right: -18rem ! important;
+}
 /* On screens that are 992px or less, set the background color to blue */
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 2010px) {
+  .progress {
+        width: 113%;
+}
+
+  .progressjerome {
+        width: 113%;
+}
+
+.frise {
+
+    position: absolute;
+    right: -20rem;
+
+}
 
 }
 
@@ -623,6 +641,11 @@ a:hover {
   }
 }
 
+.redcontainer2 img{
+
+      height: 94rem;
+  }
+
 @font-face {
   font-family: 'Rubik';
   src: url(../font/Rubik-Medium.ttf);
@@ -680,18 +703,18 @@ a:hover {
   line-height: 48px;
 }
 .redcontainer{
-    /*text-align: center;*/
+    /* text-align: center; */
     background-color: #EB4834;
-    height: 26%;
+    height: 38%;
     width: 100%;
-  top:0;
-  position: absolute;
+    top: 0;
+    position: absolute;
 
 }
 .titrepage{
     margin-top: 5%;
-    margin-bottom: 2%;
-    font-size: 1.5vw;
+    margin-bottom: 3%;
+    font-size: 2.2vw;
     text-align: center;
     color: #FFFFFF;
     font-family: Rubik;
@@ -701,21 +724,21 @@ a:hover {
 
 
 .frise_trajet{
-  margin-left: 43%;
-  margin-top: -15%;
-  max-width: 100%;
-  height: auto;
-  display: block;
+      margin-left: 42.5%;
+    margin-top: -16%;
+    max-width: 100%;
+    height: auto;
+    display: block;
 
 }
 
 .imageF {
- height: 249px;
- margin-top: -10px;
-right: 0;
-width: 100%;
-position: absolute;
-z-index: 0;
+    height: 0px;
+    margin-top: -10px;
+    right: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
 }
 
 .slidecontainer {
@@ -787,7 +810,7 @@ text{
 .redcontainer2{
   text-align: center;
   background-color: #EB4834;
-  height: 525px;
+  height: 73.2rem;
   width: 100%;
   top:0;
   position: absolute;
