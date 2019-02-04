@@ -464,6 +464,10 @@ body.fp-viewing-2ndPage #fp-nav {
 	height: 90vh;
 }
 
+#zone_info_pres {
+	padding: 1vw;
+}
+
 .info_pres {
 	position: absolute;
 	bottom: 20%;
@@ -872,7 +876,8 @@ h1 .h1_highlight {
 	box-sizing: border-box;
 	height: 10vh;
 	width: 2px;
-	border: 0.20vh solid #502C50;
+	border: 0.20vh solid #512C51;
+	background-color: #512C51;
 	border-radius: 10px;
 }
 
