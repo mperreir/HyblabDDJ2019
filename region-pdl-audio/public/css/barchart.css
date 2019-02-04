@@ -71,10 +71,8 @@
     transition: 1s 1600ms;
 }
 
-.chart-wrap .label {
-    position: absolute;
-    top: -95%;
-    left: 18%;
+.chart-wrap .row .label {
+    position: relative;
     color: #512C51;
     font-family: 'Ubuntu';
     text-align: left;
