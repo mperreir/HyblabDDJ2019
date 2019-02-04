@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="129px" viewBox="0 0 150 129" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>FE87BC2F-6B48-4B88-9397-DD1122FB20A4@2x</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Intro-1" transform="translate(-846.000000, -567.000000)" stroke-width="2" stroke="#00FFFF">
+            <g id="illu">
+                <g transform="translate(112.000000, 191.000000)">
+                    <g id="platine" transform="translate(735.000000, 377.000000)">
+                        <path d="M90.64,10.4 L137.44,10.4 C140.237002,10.3893649 142.923092,11.4930222 144.904635,13.4670587 C146.886177,15.4410953 148.00002,18.1229782 148,20.92 L148,116.18 C148,121.990036 143.290036,126.7 137.48,126.7 L11.29,126.7 C5.47996443,126.7 0.77,121.990036 0.77,116.18 L0.77,20.92 C0.77,15.1099644 5.47996443,10.4 11.29,10.4 L31.51,10.4" id="Shape"></path>
+                        <circle id="Oval" cx="61.09" cy="51.8" r="50.86"></circle>
+                        <path d="M125.19,74.02 L125.19,24.16" id="Shape"></path>
+                        <path d="M133.11,24.16 L133.11,74.02" id="Shape"></path>
+                        <circle id="Oval" cx="129.15" cy="17.85" r="7.45"></circle>
+                        <circle id="Oval" cx="61.09" cy="51.8" r="13.66"></circle>
+                        <path d="M124.25,74.49 L134.06,74.49 C135.054113,74.49 135.86,75.2958875 135.86,76.29 L135.86,86.45 C135.86,88.2296026 135.153056,89.9363174 133.894687,91.1946865 C132.636317,92.4530556 130.929603,93.16 129.15,93.16 L129.15,93.16 C127.370397,93.16 125.663683,92.4530556 124.405313,91.1946865 C123.146944,89.9363174 122.44,88.2296026 122.44,86.45 L122.44,76.29 C122.439993,75.8108726 122.631007,75.3515136 122.970738,75.0136592 C123.31047,74.6758048 123.77088,74.4873382 124.25,74.49 L124.25,74.49 Z" id="Shape"></path>
+                        <circle id="Oval" cx="129.15" cy="112.78" r="3.99"></circle>
+                        <circle id="Oval" cx="113.85" cy="112.78" r="3.99"></circle>
+                        <path d="M29.73,23.71 C29.73,23.71 26.91,26.58 24.09,33.29" id="Shape" stroke-linecap="round"></path>
+                        <path d="M21.67,39.55 C20.8940114,41.6157114 20.2428382,43.7261805 19.72,45.87" id="Shape" stroke-linecap="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
