@@ -252,7 +252,7 @@ function GetAllData()
                   $('#bloginformations').append('Name : '+json[0]["Name"]+'<br>');
                   $('#bloginformations').append('Followers : '+json[0]["Followers"]+'<br>');
                   $('#bloginformations').append('Tracks : '+json[0]["Tracks"]+'<br>');
-                  $('#bloginformations').append('Contry : '+json[0]["Contry"]+'<br>');
+                  $('#bloginformations').append('Country : '+json[0]["Country"]+'<br>');
 
                   //la je ferai ce que je veux
                   /*
@@ -437,15 +437,15 @@ $("#selectcontry").show();
 
 
 
-  $('.slidecontainer').append('<div class="rectangle-path"><p id="valeurdeslider1">20</p><input type="range" id="slider" class="slider" min="0" max="157" value="20"></div>');
+  $('.slidecontainer').append('<div class="rectangle-path"><p id="valeurdeslider1">20</p><input type="range" id="slider" class="slider" min="0" max="157" value="20" step="1"></div>');
   $('.slidecontainer').append('<div class="rectangle-path2"><p id="valeurdeslider2">0</p><input type="range" id="slider2" class="slider" min="0" max="23000" value="0"></div>');
 
   $('.slidecontainer').append('<div class="rectangle-path3"><p id="valeurdeslider3">0</p><input type="range" id="slider3" class="slider" min="0" max="10000" value="0"></div>');
-  $('#slider2').on('click', function () {
+  $('#slider2').on('change', function () {
   $('#valeurdeslider2').empty();
     $('#valeurdeslider2').append($(this).val());
 });
-$('#slider3').on('click', function () {
+$('#slider3').on('change', function () {
 
   $('#valeurdeslider3').empty();
     $('#valeurdeslider3').append($(this).val());
@@ -641,7 +641,8 @@ function Getpays()
           return {data: "Invalid JSON"};
       })
       .then(function (json) {
-        $("#selectcontry").append('<option value="All">All</option>');
+        $("#selectcontry").append('<option value="All" selected="selected">All</option>');
+        arr.push("All");
            for(var i=0;i<json.length;i++)
            {
 
