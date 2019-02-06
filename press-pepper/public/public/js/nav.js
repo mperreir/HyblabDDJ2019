@@ -113,15 +113,15 @@ class ScrollPages {
         textContainers.forEach((e) => {
             e.classList.remove('in-sight');
         });
-        let textContainerInSight = textContainers[this.currentPageNumber-1];
-        textContainerInSight.classList.add('in-sight')
+        //let textContainerInSight = textContainers[this.currentPageNumber-1];
+        //textContainerInSight.classList.add('in-sight')
     }
     init() {
         let handleMouseWheel = helper.throttle(this.mouseScroll, 500, this);
         let handleResize = helper.debounce(this.resize, 500, this);
         this.pages.style.height = this.viewHeight + 'px';
      //   this.createNav();
-        this.textFadeInOut();
+      //  this.textFadeInOut();
         if (navigator.userAgent.toLowerCase().indexOf('firefox') === -1) {
             document.addEventListener('wheel', handleMouseWheel);
         } else {
@@ -147,11 +147,13 @@ class ScrollPages {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-	
+	$('body').addClass('stop-scrolling')
 	var score=0;
-    var s = new ScrollPages(1,15,document.getElementById('all-pages'));
+    var s = new ScrollPages(1,9,document.getElementById('all-pages'));
     s.init();
 
+
+	
     disc=document.getElementById("disc");
     disc.onclick=function(){s.scrollDown();};
     disc1=document.getElementById("disc1");
@@ -163,26 +165,27 @@ document.addEventListener('DOMContentLoaded', function() {
     disc3=document.getElementById("disc3");
     disc3.onclick=function(){s.scrollDown();};
 
+	
     disc4=document.getElementById("disc4");
     disc4.onclick=function(){s.scrollDown();};
 
        disc5=document.getElementById("disc5");
-    disc5.onclick=function(){s.scrollDown();};
-
+    disc5.onclick=function(){$('body').removeClass('stop-scrolling');window.scrollBy(0, 1000);};
+/*	
        disc6=document.getElementById("disc6");
     disc6.onclick=function(){s.scrollDown();};
 
        disc6=document.getElementById("disc6");
     disc6.onclick=function(){s.scrollDown();};
 
-       disc7=document.getElementById("disc7");
+       disc7=document.getElementById("disc7");	
     disc7.onclick=function(){s.scrollDown();};
 
        disc8=document.getElementById("disc8");
     disc8.onclick=function(){s.scrollDown();};
 
        disc9=document.getElementById("disc9");
-    disc9.onclick=function(){s.scrollDown();};
+    disc9.onclick=function(){s.scrollDown();};*/
 	//Quizz 1 elem 1 -2 -3
 	i=document.getElementById("click");
 	r=document.getElementById("clickT");
