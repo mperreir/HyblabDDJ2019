@@ -37,12 +37,14 @@ $(function() {
     $('#nextArrow2').hide();
     $('#perso2').hide();
     $('#perso3').hide();
+    $('#perso4').hide();
 
     $('.questions').hide();
     $('.reponses').hide();
     $('.nextQ').hide();
     $('#q2').hide();
     $('#q3').hide();
+    $('#indication_jauge').hide();
 
 
     $('#chauffage').on('click',

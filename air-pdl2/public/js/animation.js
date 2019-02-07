@@ -18,7 +18,7 @@ $('#carousel-example-generic').on('slid.bs.carousel', function() {
         $('#nuage').addClass('translateNO2');
         $('#perso').hide();
         $('#perso3').show();
-        $('#perso3').attr("src", $("#perso2").attr("src"));
+        $('#perso3').attr("src", $("#perso4").attr("src"));
         $('#perso3').addClass('translate3');
         setTimeout(function () {
             $('.fond').show();

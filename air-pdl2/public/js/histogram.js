@@ -15,7 +15,7 @@ var xBar = d3.scaleBand()
 var yBar = d3.scaleLinear()
     .range([200, 0]);
 var svg = d3.select("#svg-container" ).append("svg")
-    .attr("width", 1000)
+    .attr("width", '100%')
     .attr("height", 200)
     .attr("class", "svg-transition");
 var data=myru;

@@ -6,7 +6,7 @@ $(document).ready(function(){
         step: 1,//步长值，每次滑动大小
         scale: ["0h","6h","12h","18h","24h"],//滑动条下方的尺度标签，数组类型，如[0,50,100]
         format: '%s',//数值格式
-        width: 1000, //滑动条宽度
+        width: '50%', //滑动条宽度
         showLabels: true,// 是否显示滑动条下方的尺寸标签
         showScale: true,//是否显示滑块上方的数值标签
         theme: "theme-blue"
@@ -49,6 +49,10 @@ function ran(){
 //changer le up and down of the progress
     var oDiv = document.getElementById("bar");
     oDiv.style.width =100*(1-myr[aa]/100) + "%";
+
+    if(aa>0){
+        $('#indication_jauge_r').hide();
+    }
 
 //changer la nuit et le journee
     if(aa>=19||aa<8){
@@ -158,6 +162,10 @@ function ran2(){
 //changer le up and down of the progress
     var oDiv2 = document.getElementById("bar2");
     oDiv2.style.width =100*(1-myu[aa2]/100) + "%";
+
+    if(aa2>0){
+        $('#indication_jauge_ur').hide();
+    }
 
     if(aa2>=19||aa2<8){
         $("#ur").css({
@@ -313,6 +321,10 @@ function ran3(){
 //changer le up and down of the progress
     var oDiv3 = document.getElementById("bar3");
     oDiv3.style.width =100*(1-myt[aa3]/100) + "%";
+
+    if(aa3>0){
+        $('#indication_jauge_tr').hide();
+    }
 
     if(aa3>=19||aa3<8){
         $("#tr").css({
