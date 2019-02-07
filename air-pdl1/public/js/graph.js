@@ -112,8 +112,8 @@ function Graph(id,width,height)
                         .attr("y",-20)
                         
                         var text = svg.append("text")
-						.attr("x",0)
-						.attr("y",height+200)
+						.attr("x","10%")
+						.attr("y","85%")
 						.attr("font-size",20)
                         .attr("font-family","Roboto");
                         strs = ["   Lorsque le froid s'installe, l'utilisation du chauffage au bois est démultiplié."," La période de l'hiver est donc sujette à produire un taux departicules fines ","    plus élevé que la moyenne."];
@@ -136,8 +136,8 @@ function Graph(id,width,height)
                             .attr('height',200 )
                             
                             var text = svg.append("text")
-                            .attr("x",0)
-                            .attr("y",height+200)
+                            .attr("x","10%")
+                            .attr("y","85%")
                             .attr("font-size",20)
                             .attr("font-family","Roboto");
                             strs = ["L'arrivée du printemps annonce la saison des épandages pour lès agriculteurs,"," ce qui participe également à l'augmentation des particules fines."];
@@ -153,8 +153,8 @@ function Graph(id,width,height)
                         }
                             else if(i==8){
                             var text = svg.append("text")
-                            .attr("x",0)
-                            .attr("y",height+200)
+                            .attr("x","10%")
+                            .attr("y","85%")
                             .attr("font-size",20)
                             .attr("font-family","Roboto");
                             strs = ["Les particules fines sont présentes de manière chronique, c'est à dire tout au ","long de l'année dans notre quotidien et pas uniquement lors des pics de"," pollution."];
