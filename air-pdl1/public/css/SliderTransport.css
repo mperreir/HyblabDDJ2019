@@ -11,6 +11,13 @@
   position: absolute;
   bottom: 0;
 }
+.info_zero{
+  width:20%;
+  margin: auto;
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
 
 .info{
   width:60%;
@@ -24,9 +31,16 @@
   margin-top: 20%;
   margin-bottom: 10%;
 }
+#info_bus{
+  width:38%;
+  margin: auto;
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
 
 #infoGraphique{
-  margin-top: 20%;
+  margin-top: 12%;
 }
 #info_voiture{
   visibility: hidden;

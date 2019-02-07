@@ -1,11 +1,11 @@
 function Graph(id,width,height)
     {
         var api = "data/data.json";
-        
+
     document.addEventListener("DOMContentLoaded", function(event) {
    fetch(api)
      .then(function(response) { return response.json(); })
-     .then(function(data) { 
+     .then(function(data) {
         var parsedData = parseData(data);
         drawChart(parsedData);
      })
@@ -21,7 +21,7 @@ function Graph(id,width,height)
         }
         return arr;
      }
-    
+
      function drawChart(data) {
         var svgWidth = 800, svgHeight = 550;
         var margin = { top: 150, right: 70, bottom: 120, left: 100 };
@@ -31,19 +31,19 @@ function Graph(id,width,height)
           .attr("width", svgWidth)
           .attr("height", svgHeight);
         var g = svg.append("g")
-        .attr("transform", 
+        .attr("transform",
         "translate(" + margin.left + "," + margin.top + ")"
-        );  
+        );
         var x = d3.scaleLinear().rangeRound([0, width]);
         var y = d3.scaleLinear().rangeRound([height, 0]);
 
         var line = d3.line()
         .x(function(d) { return x(d.date)})
         .y(function(d) { return y(d.value)})
-        
+
         x.domain([d3.min(data, function(d) { return d.date }),12]);
         y.domain([0,d3.max(data, function(d) { return d.value })+10]);
-        
+
          g.append("g")
              .attr("transform", "translate(0," + height + ")")
              .call(d3.axisBottom(x))
@@ -69,12 +69,12 @@ function Graph(id,width,height)
              .attr("stroke-width", 5)
              .attr("d", line);
 
-             
+
                 // 添加点
                 svg.selectAll("circle")
                 .data(data)
               .enter().append("circle") // Uses the enter().append() method
-              
+
                 .attr("class", "circle") // Assign a class for styling
                 .attr("cx", function(d, i) { return x(d.date)+margin.left })
                 .attr("cy", function(d) { return y(d.value)+margin.top })
@@ -85,7 +85,7 @@ function Graph(id,width,height)
                         .duration(250)
                         .attr("r", 10);
 
-                        // d3.select(this)   
+                        // d3.select(this)
                         // .style("cursor", "pointer")
                         // .append("text")
                         // .attr("class", "text")
@@ -110,7 +110,7 @@ function Graph(id,width,height)
                         .attr('height',200 )
                         .attr("x",100)
                         .attr("y",-20)
-                        
+
                         var text = svg.append("text")
 						.attr("x","10%")
 						.attr("y","85%")
@@ -134,7 +134,7 @@ function Graph(id,width,height)
                             .attr('y', -30)
                             .attr('width', 200 )
                             .attr('height',200 )
-                            
+
                             var text = svg.append("text")
                             .attr("x","10%")
                             .attr("y","85%")
@@ -156,6 +156,10 @@ function Graph(id,width,height)
                             .attr("x","10%")
                             .attr("y","85%")
                             .attr("font-size",20)
+
+                            .attr("font-family","simsun");
+                            strs = ["Même pendant les périodes de faible concentration, les particules fines sont omniprésentes autour de nous quelle que soit la saison."];
+                            text.selectAll("tspan")
                             .attr("font-family","Roboto");
                             strs = ["Les particules fines sont présentes de manière chronique, c'est à dire tout au ","long de l'année dans notre quotidien et pas uniquement lors des pics de"," pollution."];
                             text.selectAll("tspan")
@@ -168,23 +172,22 @@ function Graph(id,width,height)
                                 return d;
                             });
                             }
-                            
-                        
-                            
-                        
+
+
+
+
                     })
                     .on("mouseout", function(d) {
-                        d3.select(this) 
+                        d3.select(this)
                         .transition()
                         .duration(250)
-                        .attr("r", 5);  
+                        .attr("r", 5);
 
                         g.selectAll(".value-text").remove();
                         svg.selectAll(".chart-img").remove();
                         svg.selectAll("tspan").remove();
                     });
-             
+
         }
 
     }
-    
