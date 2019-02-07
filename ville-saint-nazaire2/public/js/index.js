@@ -413,12 +413,14 @@ function scrollToSection(){
          scrollTop: $('#JeuJeanne').offset().top
     }, 500);
   }
+  /*
     setTimeout(function(){
       haveScroll="ok";
     }, 2000);
-
+*/
 }
 
+/*
 $('document').ready(function() {
 var lastScrollTop = 0;
 $(window).scroll(function(event){
@@ -446,7 +448,7 @@ $(window).scroll(function(event){
    haveScroll="no";
 });});
 
-
+*/
 
 
 
