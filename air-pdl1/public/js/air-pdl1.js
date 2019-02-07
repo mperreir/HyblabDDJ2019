@@ -77,6 +77,11 @@ function showButton(show) {
     dq.style.visibility="visible";
     var tq = document.getElementById("tq"+val+"");
     tq.style.visibility="visible";
+    $("#q"+val+"").toggle(2000);
+    setInterval(function(){changePic(val)},2000)
+    $("#q"+val+"").toggle(2000);
+  }
+  function changePic(val){
     var q = document.getElementById("q"+val+"");
     q.src="img/q"+val+".svg";
   }
