@@ -156,13 +156,12 @@ function Graph(id,width,height)
                             .attr("x",0)
                             .attr("y",height+200)
                             .attr("font-size",20)
-<<<<<<< HEAD
+
                             .attr("font-family","simsun");
                             strs = ["Même pendant les périodes de faible concentration, les particules fines sont omniprésentes autour de nous quelle que soit la saison."];
-=======
+                            text.selectAll("tspan")
                             .attr("font-family","Roboto");
                             strs = ["Les particules fines sont présentes de manière chronique, c'est à dire tout au ","long de l'année dans notre quotidien et pas uniquement lors des pics de"," pollution."];
->>>>>>> 0fd5059eebe39a37b4946628bfe7733c62a2ea1d
                             text.selectAll("tspan")
                             .data(strs)
                             .enter()

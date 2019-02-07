@@ -34,7 +34,7 @@
 <!-- ###############################   SLIDER 1   ################################ -->
 <!-- ############################################################################# -->
         <div id="slider1"class="swiper-slide">
-            <video id = "video1" class="slider-video" width="100%" preload="auto" onended="showButton()" autoplay="" >
+            <video id = "video1" class="slider-video" width="100%" preload="auto" onended="showButton(true)" autoplay="" >
               <source src="vid/animation1.mp4" type="video/mp4">
             </video>
         </div>
@@ -234,28 +234,37 @@ Outre leur origine humaine, les particules fines sont également d’origines na
         <h2>Quelles sont les problèmes générés par les particules ?</h2>
 <!-- ###############################   ligne de texte   ################################ -->
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
             <h4>A ce jour, nous savons que les particules fines sont nocives même si le seuil d’alerte n’est pas atteint. Cette exposition permanente ou chronique aux particules fines même à petite dose peut entraîner des problèmes de santé :</h4>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
             <h4>Il existe des profils qui sont plus sensibles que d’autres à ces particules :</h4>
           </div>
         </div>
 <!-- ###############################   ligne de texte + image   ################################ -->
         <div class="row">
-          <div class="col-md-3">
-             <h5>* Amplification des réactions allergiques</h5><h5>* Maladies respiratoires chroniques (asthme, bronchite ..)</h5>
+          <div class="col-md-2"></div>
+          <div class="col-md-2">
+            <ul>
+              <li>Amplification des réactions allergiques</li>
+              <li>Maladies respiratoires chroniques (asthme, bronchite ..)</li>
+            </ul>
           </div>
-          <div class="col-md-3">
-            <h5>* Amplification des réactions allergiques</h5><h5>* Troubles inflammatoires</h5><h5>*Cancer</h5>
+          <div class="col-md-2">
+            <ul>
+              <li>Troubles cardiovasculaires</li>
+              <li>Troubles inflammatoires</li>
+              <li>Cancer</li>
+            </ul>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-2">
             <img class = "risques" src="img/risque/agee.svg" alt="">
             <h4>Les personnes agées</h4>
             <img class = "risques" src="img/risque/enceinte.svg" alt="">
             <h4>Les femmes enceintes</h4>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-2">
             <img class = "risques" src="img/risque/enfant.svg" alt="">
             <h4>Les enfants</h4>
             <img class = "risques" src="img/risque/trouble_respiratoire.svg" alt="">
@@ -276,16 +285,19 @@ Outre leur origine humaine, les particules fines sont également d’origines na
       <div id="slider7" class="swiper-slide">
 
         <h2>Mais alors, quels transports sont à préconiser ?</h2>
-        <h4 >Effectivement, des solutions existent, et tout le monde peut agir à petite échelle.
 
-          Par exemple, opter pour un moyen de transport plutôt qu’un autre permettrait d’avoir des effets à grande échelle sur la réduction des émissions.
-        </h4>
         <h4 class ="salmon-text">Cliquez sur les pictogrammes pour afficher leur emission en PM10</h4>
           <div class="modal-body">
 <!-- ############################## ligne reponse ################################ -->
 
           <div id = "infoGraphique" class="row">
-            <div class="col-md-3"></div>
+
+            <div class="col-md-3">
+              <h4 class = "salmon-border">
+                Effectivement, des solutions existent, et tout le monde peut agir à petite échelle.
+                Par exemple, opter pour un moyen de transport plutôt qu’un autre permettrait d’avoir des effets à grande échelle sur la réduction des émissions.
+              </h4>
+            </div>
             <div class="col-md-1">
               <img class = "barre" src="img/transports/barre.png" alt="legende">
             </div>
@@ -299,13 +311,13 @@ Outre leur origine humaine, les particules fines sont également d’origines na
               <img id = "info_covoiturage" class = "info" src="img/transports/info_covoiturage.png" alt="legende">
             </div>
             <div class="col-md-1">
-              <img id = "info_bus" class = "info" src="img/transports/info_bus.png" alt="legende">
+              <img id = "info_bus" width = "32%" class = "info" src="img/transports/info_bus.png" alt="legende">
             </div>
-            <div class="col-md-1">
-              <img id = "info_velo" class = "barre" src="img/transports/0.png" alt="legende">
+            <div class="col-md-1" >
+              <img id = "info_velo" class = "info_zero" src="img/transports/0.png" alt="legende">
             </div>
-            <div class="col-md-1">
-              <img id = "info_marche" class = "barre" src="img/transports/0.png" alt="legende">
+            <div class="col-md-1" >
+              <img id = "info_marche"  class = "info_zero" src="img/transports/0.png" alt="legende">
             </div>
           </div>
 <!-- ############################## ligne picto legende ################################ -->
@@ -444,7 +456,7 @@ Outre leur origine humaine, les particules fines sont également d’origines na
   <script src="js/graph.js"></script>
   <script>
     var values=[14,9,10,11.5,0,12.5,16,8.5,3.5,8,12,14.5,1.5,13,14,13,2,8,13.5,8.5,12,8,3.5,11,8,14,15,8,12,10,11,6,13,1,8.5,10.5,13,9,8,14,11,1.5,12,2.5,9,6,10.5,16,9.5,12.5,8,2,20,5.5];
-var test=new Graph('graph',300,100);
+    var test=new Graph('graph',300,100);
   </script>
 </swiper>
   </body>

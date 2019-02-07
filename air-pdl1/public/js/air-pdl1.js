@@ -57,16 +57,18 @@ function clickVideo2(){
     video3.play();}
 }
 
-function showButton() {
+function showButton(show) {
     var down = document.getElementById("up");
     var up = document.getElementById("down");
 
-    if(up.style.visibility == "visible"){
+    if(show){
+      console.log("show");
+      up.style.visibility = "visible";
+      down.style.visibility = "visible";
+    } else{
+      console.log("hide");
       up.style.visibility = "hidden";
       down.style.visibility = "hidden";
-    } else{
-    up.style.visibility = "visible";
-    down.style.visibility = "visible";
     }
   }
 
@@ -96,6 +98,9 @@ function mouvementCurseur(p,v){
             mouse: {
               enabled:false,
             },
+            mousewheel: {
+              invert: false,
+            },
             keyboard: {
               enabled: true,
             },
@@ -120,7 +125,8 @@ function mouvementCurseur(p,v){
                           video2.play();
                           break;
                         case 2:
-                          console.log("Case ", swiper.activeIndex);
+                          console.log("Case ", swiper.activeIndex, " showButton");
+                          showButton(true);
                           break;
                         default:
                       }
