@@ -543,17 +543,10 @@ section {
     position: relative;
     left:15%;
     top:27%;
-    z-index: 4;
 }
+
 #myRange,#myRange2,#myRange3{
-    alignment: top;
-}
-.infos{
-    position: relative;
-    color: #f9f00e;
-    top:80%;
-    width: 40%;
-    float:right;
+    alignment:top;
 }
 
 .bar-contain{
@@ -678,9 +671,17 @@ section {
     left:2%;
 }
 
+.infos{
+    position: relative;
+    color: #f9f00e;
+    top:80%;
+    width: 40%;
+    float:right;
+}
+
 .info-heure{
-    position: absolute;
-    top:65%;
+    position: relative;
+    top:3%;
     left:78.5%;
     max-width:12%;
 }
@@ -714,4 +715,15 @@ h5{
 
 #demo, #demo2, #demo21, #demo22, #demo31, #demo32{
 font-size:40px;
+}
+
+#indication_jauge_r, #indication_jauge_ur, #indication_jauge_tr{
+    position:absolute;
+    left:4%;
+    top:75%;
+    height:5%;
+}
+
+#indication_jauge_r img, #indication_jauge_ur img, #indication_jauge_tr img {
+    width: 50%;
 }
