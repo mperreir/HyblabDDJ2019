@@ -61,26 +61,18 @@
   <div id="sliderVille" class="swiper-slide">
         <h2> En ville la concentration de particules fines dans l’air s’élève à 18 µmol/m3 </h2>
         <div class="modal-body">
-        <div class="vertical-text">
-        <h4>Sources</h4>
-        <a href = "https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health " target ="_blank">
-          <h5>Valeur guide OMS 20</h5>
-        </a>
-        <a href = "https://data.airpl.org " target ="_blank">
-          <h5>DATA air pays de la Loire, moyenne annuelle station St-Denis d'Anjou (Mayenne) et station Bouteillerie (Loire atlantique)</h5>
-        </a>
 
-      </div>
 
           <!-- ligne image canvas -->
           <div class="row">
+            <div class="col-md-2"></div>
             <div class="col-md-8">
               <canvas id='canvasGrandeVille'></canvas>
             </div>
           </div>
           <!-- ligne curseur -->
           <div class="row">
-          <div class="col-md-1"></div>
+          <div class="col-md-3"></div>
           <div class="col-md-1"><p class = "right">0µmol/m3</p></div>
           <div class="col-md-4">
             <input id = "curseurGrandeVille" type="range" min="0" max="20" step="1" value="18"
@@ -91,6 +83,19 @@
             <p class = "left">20µmol/m3</p>
           </div>
           </div>
+          <div class="row">
+
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <h4>Sources</h4>
+          <a href = "https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health " target ="_blank">
+            <h5>Valeur guide OMS 20</h5>
+          </a>
+          <a href = "https://data.airpl.org " target ="_blank">
+            <h5>DATA air pays de la Loire, moyenne annuelle station St-Denis d'Anjou (Mayenne) et station Bouteillerie (Loire atlantique)</h5>
+          </a>
+        </div>
+        </div>
         </div> <!-- fin balise modal-body -->
       </div> <!-- fin balise slide -->
 <!-- ############################################################################# -->
