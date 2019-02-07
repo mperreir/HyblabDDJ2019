@@ -41,6 +41,15 @@ h5 {
   margin-top: 0.1%;
   margin-left: 0.1%;
 }
+
+li {
+ font-family: 'Roboto', sans-serif;
+ font-size: 14px;
+ color: white;
+ line-height: 1.5;
+ display : list-item;
+ list-style-image : url("img/whitecircle.png");
+}
 canvas{
   /*
   border-width: 2px;
