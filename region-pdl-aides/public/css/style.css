@@ -545,6 +545,23 @@ div#section2 {
     position: relative;
 }
 
+.cloud4 {
+    background-image: url("../img/dymek2.png");
+    -webkit-transform: scale(-1, -1);
+    transform: scale(-1, -1);
+    justify-content: center;
+    vertical-align: middle !important;
+    padding-left: 40px;
+    padding-right: 30px;
+    padding-top: 28px;
+    width: 370px;
+    height: 250px;
+    left: 64em;
+    top: 1em;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+}
 .pulse {
     margin-left: 100px;
     margin-top: -300px;
@@ -649,7 +666,14 @@ div#text7 img {
 
 
 /* Carte accueil  */
-.map_index{width: 520px; height: 420px;}
+.map_index{
+    width: 572px !important;
+    height: 462px !important;
+    background-color: rgba(247, 247, 247, 0) !important;
+    position: absolute !important;
+    margin-top: -3.2em !important;
+    margin-left: 14em !important;
+}
 @media only screen and (max-width : 300px){.map_index {width: 200px; height: 162px;}}
 @media only screen and (min-width: 301px) and (max-width: 500px) {.map_index{width: 380px; height: 307px;}}
 @media only screen and (min-width : 501px) and (max-width : 959px) {.map_index{width: 500px; height: 404px;}}
