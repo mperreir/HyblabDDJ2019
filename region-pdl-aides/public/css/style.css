@@ -205,15 +205,6 @@ pre {
     margin: 20px 0px 0px 50px;
     width: 600px;
 }
-.black {
-    color: #fff;
-
-    background: #000 url(../images/black.jpg) no-repeat top right;
-}
-.white {
-    color: #000;
-    background: #fff url(../images/white.jpg) no-repeat top right;
-}
 
 .section ul {
     list-style: none;
@@ -641,7 +632,7 @@ div#section2 {
     vertical-align: middle !important;
     padding-left: 40px;
     padding-right: 30px;
-    padding-top: 28px;
+    padding-top: 18px;
     width: 370px;
     height: 250px;
     left: 64em;
