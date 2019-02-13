@@ -8,8 +8,7 @@
  *
  * Fork Me @ https://github.com/manifestinteractive/jqvmap
  */
-.jqvmap-label
-{
+.jqvmap-label {
   position: absolute;
   display: none;
   -webkit-border-radius: 3px;
@@ -19,11 +18,11 @@
   font-family: sans-serif, Verdana;
   font-size: 15pt;
   padding: 3px;
-  margin-left:60px;
+  margin-left: 60px;
   text-align: left;
 }
-.jqvmap-zoomin, .jqvmap-zoomout
-{
+.jqvmap-zoomin,
+.jqvmap-zoomout {
   position: relative;
   left: 10px;
   -webkit-border-radius: 3px;
@@ -41,18 +40,15 @@
   text-align: center;
 }
 
-.jqvmap-region
-{
+.jqvmap-region {
   cursor: pointer;
 }
-.jqvmap-ajax_response
-{
+.jqvmap-ajax_response {
   width: 100%;
   height: 500px;
 }
 
-.validation
-{
-  position:relative;
+.validation {
+  position: relative;
   text-align: center;
 }
