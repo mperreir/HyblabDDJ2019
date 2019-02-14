@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Si le site est à utiliser pour raison commercial il faut avoir une licence pour le module fullpage -->
 <html lang="fr"> <!-- Notre page est en français -->
   <head>
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
@@ -10,31 +11,149 @@
     <link rel="stylesheet" href="css/style.css">
 		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
 		<!-- Simple sample script that loads data from a dummy json file -->
-		<script src="js/example.js" defer></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+		<script  type="module" src="js/example.js" defer></script>
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
+    <!-- <script src="vendors/jquery.easings.min.js"></script> -->
+
+
+    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+    <!-- <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script> -->
+
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
   </head>
+
+
   <body>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
     <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
     <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+    <div id="fullpage">
+      <!-- l'entête de la page: titre, barre de recherche -->
+      <div class="section" class="intro-1">
+          <object type="image/svg+xml" data="img/intro1/vague1.svg" class="vague1">your browser doesn't support PNG</object>
+          <object type="image/svg+xml" data="img/intro1/platine.svg" class="platine">Votre naviguateur ne prend pas en charge le format SVG</object>
+          <div class="bienvenue-sur-music">Bienvenue sur MusicExplorer</div>
+          <div class="notre-plateforme-te">Notre plateforme te permet de suivre l’<span style="color: #006E6E">actualité musicale</span> de blogs indépendants et internationaux.</div>
+          <object type="image/svg+xml" data="img/intro1/vague2.svg" class="vague2">your browser doesn't support PNG</object>
+          <object type="image/svg+xml" data="img/intro1/vague3.svg" class="vague3">your browser doesn't support PNG</object>
+          <object type="image/svg+xml" data="img/intro1/croix2.svg" class="croix2">your browser doesn't support PNG</object>
+          <object type="image/svg+xml" data="img/intro1/croix2.svg" class="croix1">your browser doesn't support PNG</object>
+          <object type="image/svg+xml" data="img/intro1/croix2.svg" class="croix3">your browser doesn't support PNG</object>
+          <object type="image/svg+xml" data="img/intro1/chapeau2.svg" class="chapeau2">your browser doesn't support PNG</object>
+          <div class="trait"></div>
+          <object type="image/svg+xml" data="img/fleche.svg" class="fleche">your browser doesn't support PNG</object>
+          <span class="skip">skip</span>
+          <div class="skip trait-skip"></div>
+      </div>
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
-      <h1>Hyblab Datajournalism 2019</h1>
-    </header>
+      <div class="section intro-2">
+        <div class="traitup"></div>
+        <object type="image/svg+xml" data="img/Basse.svg" class="basse">Votre navigateur ne prend pas en charge le format SVG</object>
+        <object type="image/svg+xml" data="img/Oval.svg" class="oval">Votre navigateur ne prend pas en charge le format SVG</object>
+        <object type="image/svg+xml" data="img/Forme.svg" class="forme">Votre navigateur ne prend pas en charge le format SVG</object>
+        <object type="image/svg+xml" data="img/Micro.svg" class="micro">Votre navigateur ne prend pas en charge le format SVG</object>
+        <object type="image/svg+xml" data="img/Oval.svg" class="oval2">Votre navigateur ne prend pas en charge le format SVG</object>
+        <object type="image/svg+xml" data="img/Oval.svg" class="oval3">Votre navigateur ne prend pas en charge le format SVG</object>
+        <object type="image/svg+xml" data="img/Forme.svg" class="forme2">Votre navigateur ne prend pas en charge le format SVG</object>
+        <div class="tu-es-un-profession">Tu es un professionnel de la musique ou bien mélomane ?</div>
+        <div class="explore-chaque-genre"><span>Explore</span> chaque genre musical grâce à la navigation filtrée
+selon tes <span>envies</span></div>
+        <div class="traitdown"></div>
+        <object type="image/svg+xml" data="img/fleche.svg" class="fleche">your browser doesn't support PNG</object>
+        <span class="skip">skip</span>
+        <div class="skip trait-skip"></div>
+      </div>
 
-    <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
+      <div class="section intro-3">
+          <object type="image/svg+xml" data="img/intro3/Rectangle.svg" class="rectangle">Votre navigateur ne prend pas en charge le format SVG</object>
+          <object type="image/svg+xml" data="img/intro3/Guitare.svg" class="guitare">Votre navigateur ne prend pas en charge le format SVG</object>
+          <object type="image/svg+xml" data="img/intro3/Cylindre.svg" class="cylindre">Votre navigateur ne prend pas en charge le format SVG</object>
+          <object type="image/svg+xml" data="img/intro3/Vagues.svg" class="vagues">Votre navigateur ne prend pas en charge le format SVG</object>
+          <div class="text-intro3"> Grâce à Music Explorer, découvre
+              des artistes émergents et de nouvelles tendances musicales dont parlent
+              les influenceurs de la blogosphère internationale.
+          </div>
+          <object type="image/svg+xml" data="img/fleche.svg" class="fleche">your browser doesn't support PNG</object>
+          <span class="skip">skip</span>
+          <div class="skip trait-skip"></div>
+      </div>
 
-		<p>Here is some data from a json file : <span id="data"></span><p>
+      <!-- PLATEFORME MUSIC DATA -->
+      <div class="section" id="blogs_stats" style="width:100%">
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2019</p>
-    </footer>
+        <!-- Ce qui permet d'afficher la liste des genres musicales avec leur nb de blogs -->
+        <div id="geresmusicales">
+        </div>
+        
+        <div id="menu">
+
+
+        </div>
+
+        <div class="slidec">
+
+
+
+
+
+        </div>
+
+        <div id="trackspourungenre">
+        </div>
+
+        <div id="trackspourungenreReflet">
+        </div>
+        <div id="followerspourungenre">
+        </div>
+        <div id="followerspourungenreReflet">
+        </div>
+        <div id="infos">
+          <div id="bottonderetour">
+          </div>
+          <div id="bloginformations">
+          </div>
+
+        </div>
+
+        <div id="artistespourungenre">
+        </div>
+      </div><!-- end of section stats -->
+
+        <div class="section genres" id="credits">
+            <div class="un-projet-realise-pa">Un projet réalisé par</div>
+            <object type="image/svg+xml" data="img/credits/logo_audencia.svg" class="logo-audencia"> Your browser doesn't support SVG</object>
+            <object type="image/svg+xml" data="img/credits/logo_agr.svg" class="logo-agr"> Your browser doesn't support SVG</object>
+            <object type="image/svg+xml" data="img/credits/logo_polytech.svg" class="logo-polytech"> Your browser doesn't support SVG</object>
+            <img src="img/credits/logo_open_source.png" align="center" class="logo-open-source"/>
+            <img src="img/credits/logo-pdl.png" align="center" class="logo-pdl"/>
+
+            <img src="img/credits/logo-hyblab.png" align="center" class="logo-hyblab"/>
+
+            <img src="img/credits/logo-nm.png" align="center" class="logo-nm"/>
+
+            <img src="img/credits/logo-medialab.png" align="center" class="logo-medialab"/>
+
+            <img src="img/credits/MusicData.png" align="center" class="music-data"/>
+
+        </div>
+
+
+        <!-- Notre pied de page -->
+        <footer>
+          <p>Copyright Hyblab team 2019</p>
+        </footer>
     </div>
+    <script>
+
+    </script>
   </body>
 </html>
