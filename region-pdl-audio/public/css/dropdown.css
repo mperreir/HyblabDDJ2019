@@ -1,0 +1,66 @@
+.dropdown {
+    display: inline-block;
+    margin-left: 1vw;
+}
+
+.dropdown .btn-default {
+    color: #512C51;
+    background-color: #fff;
+    border-color: #ccc;
+    font-family: "Ubuntu";
+    font-weight: 400;
+    font-size: 1.4vw;
+}
+
+.dropdown .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default {
+    color: #512C51;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.dropdown-menu>li>a {
+    color: #512C51;
+    font-family: "Ubuntu";
+    font-size: .8vw;
+}
+
+.dropdown-menu>li>a .periode_1 {
+    display: inline-block;
+    vertical-align: middle;
+    height: 13px;
+    width: 13px;
+    background-color: #BA4A5C;
+}
+
+.dropdown-menu>li>a .periode_2 {
+    display: inline-block;
+    vertical-align: middle;
+    height: 13px;
+    width: 13px;
+    background-color: #F4B483;
+}
+
+.dropdown-menu>li>a .periode_3 {
+    display: inline-block;
+    vertical-align: middle;
+    height: 13px;
+    width: 13px;
+    background-color: #5DB77B;
+}
+
+
+.dropdown-menu>li>a .periode_nr {
+    display: inline-block;
+    vertical-align: middle;
+    height: 13px;
+    width: 13px;
+    background-color: #627075;
+}
+
+.dropdown-menu>li>a .periode_all {
+    display: inline-block;
+    vertical-align: middle;
+    height: 13px;
+    width: 13px;
+    background-color: #512C51;
+}
