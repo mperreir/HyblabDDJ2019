@@ -1,15 +1,671 @@
 /* just a sample css rule to show that everything works */
+
 footer p
 {
   font-size: small;
   text-align: center;
 }
 
-header{
-  text-align: center;
+body {
+   background-color: #151515;
+   color:white;
+   text-align: center;
 }
 
-header img{
-  max-width: 100%;
-	height: auto;
+/*---------- Section Introduction 1 -----------*/
+
+.intro-1 {
+  height: 100%;
+  width: 100%;
+}
+
+.intro-1 .illu{
+
+}
+
+.vague1 {
+    height: 4.43%;
+    width: 10.18%;
+    position: absolute;
+    top: 24.87%;
+    left: 16.27%;
+}
+
+.vague2 {
+    height: 35px;
+    width: 81px;
+    position: absolute;
+    top: 56.51%;
+    left: 80.55%;
+}
+
+.vague3 {
+    height: 34px;
+    width: 129px;
+    position: absolute;
+    top: 64.06%;
+    left: 84.09%;
+}
+
+.croix1 {
+    box-sizing: border-box;
+    height: 17.16px;
+    width: 17.15px;
+    /*border: 2px solid #00FFFF;*/
+    opacity: 0.3;
+    position: absolute;
+    top: 59.1%;
+    left: 16.16%;
+}
+
+.croix2 {
+    height: 23px;
+    width: 23px;
+    position: absolute;
+    top: 53.52%;
+    left: 17.73%;
+}
+
+.croix3 {
+    box-sizing: border-box;
+    height: 21px;
+    width: 21px;
+    /*border: 2px solid #00FFFF;*/
+    position: absolute;
+    top: 79.3%;
+    left: 68.82%;
+}
+
+.chapeau2 {
+    height: 11.59%;
+    width: 5.09%;
+    position: absolute;
+    top: 35.94%;
+    left: 10.18%;
+}
+
+.trait {
+    box-sizing: border-box;
+    height: 1px;
+    width: 27px;
+    border: 1px solid #FFFFFF;
+    position: absolute;
+    top: 66.67%;
+    left: 49.09%;
+    background-color: white;
+}
+
+.fleche {
+    height: 3.39%;
+    width: 2.36%;
+    position: absolute;
+    top: 84.64%;
+    left: 48.82%;
+}
+
+.skip {
+    height: 2.47%;
+    width: 3.33%;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 19px;
+    position: absolute;
+    top: 93.75%;
+    left: 48.36%;
+}
+
+.trait-skip {
+    box-sizing: border-box;
+    height: 0.13%;
+    width: 1.02%;
+    border: 1px solid #FFFFFF;
+    background-color: white;
+    position: absolute;
+    top: 96.74%;
+    left: 49.45%;
+}
+
+.bienvenue-sur-music {
+	height: 6.77%;
+	width: 62.63%;
+	color: #ffffff;
+	font-family: Montserrat;
+	font-size: 42px;
+	font-weight: 900;
+	line-height: 52px;
+	text-align: center;
+    position: absolute;
+    top: 38.15%;
+    left: 18.73%;
+}
+
+.notre-plateforme-te {
+    height: 11.33%;
+    width: 41.09%;
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 29px;
+    text-align: center;
+    position: absolute;
+    top: 50.17%;
+    left: 29.48%;
+}
+.shape {
+	box-sizing: border-box;
+	height: 21px;
+	width: 21px;
+	border: 2px solid #00FFFF;
+}
+
+.platine {
+  height: 150px;
+  width: 129px;
+  position: absolute;
+  top: 73.83%;
+  left: 76.91%;
+}
+
+#goutte {
+    height: 89px;
+    width: 56px;
+}
+
+.text-intro {
+  height: 87px;
+  width: 452px;
+  color: #FFFFFF;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 29px;
+  text-align: center;
+  position: absolute;
+  left: 324.25px;
+  top: 385.28px;
+}
+
+/* -------- Section introduction 2 ----------- */
+.intro-2 {	height: 100%;	width: 100%; position: "absolute";}
+.intro-2 .illu {	height: 59.77%;	width: 80.55%; position: "absolute"; left: 11.09%; top: 29.17%;}
+/* -----  images ----- */
+.basse {
+	height: 12.89%;
+	width: 8.09%;
+  left: 11.09%;
+  top: 35.29%;
+  position: absolute;
+}
+
+.oval {
+	height: 4.43%;
+	width: 3.18%;
+  position: absolute;
+  left: 84.09%;
+  top: 62.63%;
+}
+
+.forme {
+	height: 1.56%;
+	width: 2.55%;
+  position: absolute;
+  top: 77.34%;
+  left: 74.09%;
+}
+
+.forme2 {
+	height: 1.3%;
+	width: 2.36%;
+  position: absolute;
+  top: 52.73%;
+  left: 12.18%;
+}
+
+.shape1-forme2 {
+	box-sizing: border-box;
+	height: 1.22%;
+	width: 0.85%;
+	border: 2px solid #FF7BAC;
+  position: absolute;
+  top: ;
+  left: ;
+}
+
+.micro {
+	height: 13.93%;
+	width: 4.45%;
+  position: absolute;
+  left: 79.64%;
+  top: 70.83%;
+}
+
+.oval2 {
+	box-sizing: border-box;
+	height: 2.31%;
+	width: 1.61%;
+	/*border: 2px solid #FF6A88;*/
+	opacity: 0.3;
+  position: absolute;
+  top: 61.05%;
+  left: 13.95%;
+}
+
+.oval3 {
+	box-sizing: border-box;
+	height: 4.36%;
+	width: 3.05%;
+	/*border: 2px solid #FF6A88;*/
+  position: absolute;
+  top: 58.22%;
+  left: 17.44%;
+}
+
+.tu-es-un-profession {
+	height: 7.55%;
+	width: 39.18%;
+	color: #ffffff;
+	font-family: Montserrat;
+	font-size: 39px;
+	font-weight: 900;
+	line-height: 35px;
+	text-align: center;
+  position: absolute;
+  left: 30.36%;
+  top: 35.81%;
+}
+
+.explore-chaque-genre {
+	height: 11.33%;
+	width: 36.02%;
+	font-family: Montserrat;
+	font-size: 24px;
+	font-weight: 200;
+	line-height: 29px;
+	text-align: center;
+  position: absolute;
+  left: 32%;
+  top: 49.48%;
+}
+
+.explore-chaque-genre span {
+  	color: #FF7BAC;
+}
+
+.intro-2 .traitup {
+    box-sizing: border-box;
+    height: 0.13%;
+    width: 2.45%;
+    border: 1px solid #FFFFFF;
+    position: absolute;
+    top: 30.6%;
+    left: 48.82%;
+}
+
+.traitdown {
+    box-sizing: border-box;
+    height: 0.13%;
+    width: 2.45%;
+    border: 1px solid #FFFFFF;
+    background-color: white;
+    position: absolute;
+    top: 30.6%;
+    left: 48.82%;
+}
+
+/* Section 3 - Affichage des genres */
+.onde-genre-svg {
+  box-sizing: border-box;
+  height: 15.52%;
+  width: 20.76%;
+  position: absolute;
+  top: 69.14%;
+  left: 48.82%;
+  /*border: 1px solid #FFFFFF;*/
+}
+
+.onde-genre{
+    color: white;
+}
+/* Section 4 - Zoom sur un genre */
+
+/* Section 5 -  Affichage de l'histogramme dynamique */
+.bar{
+
+
+  fill : white;
+
+  font-size: 16.71px;
+  font-weight: 200;
+}
+.bar1{
+  fill : #FFFFFF;
+  font-size: 16.71px;
+  font-weight: 200;
+}
+#trackspourungenreReflet {
+  opacity: 0.8;
+}
+#followerspourungenreReflet {
+  opacity: 0.8;
+}
+#geresmusicales{
+
+}
+.rectangle-path {
+  display: inline-block;
+	border-radius: 13.51px;
+	background-color: #374240;;
+  color: white;
+	height: 99.56%;
+	width: 16%;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+.rectangle-path4 {
+  display: inline-block;
+  height: 99.56%;
+  width: 16%;
+	border-radius: 13.51px;
+	background-color: #151515 ;
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+.cylindre {
+    height: 11.72%;
+    width: 5.91%;
+    position: absolute;
+    top: 73.83%;
+    left:19%;
+}
+.vagues {
+    height: 4.04%;
+    width: 11.64%;
+    position: absolute;
+    top: 70.83%;
+    left: 29.18%;
+}
+
+.text-intro3{
+    height: 22.66%;
+    width: 42.55%;
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 29px;
+    text-align: center;
+    position: absolute;
+    top: 39.19%;
+    left:28.73%;
+
+}
+
+.titre-choix-genre {
+    height: 1.69%;
+    width: 4.82%;
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 13px;
+    text-align: center;
+}
+.presentation-choix-genre {
+    height: 10%;
+    width: 56%;
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 24px;
+    /*text-align: center;*/
+    position: absolute;
+    top: 13%;
+    left: 16%;
+}
+
+.skip {
+    height: 2.47%;
+    width: 3.33%;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 19px;
+    position: absolute;
+    top: 93.75%;
+    left: 48.36%;
+}
+
+.trait-skip {
+    box-sizing: border-box;
+    height: 0.13%;
+    width: 1.02%;
+    border: 1px solid #FFFFFF;
+    background-color: white;
+    position: absolute;
+    top: 96.74%;
+    left: 49.45%;
+}
+.fleche {
+    height: 3.39%;
+    width: 2.36%;
+    position: absolute;
+    top: 84.64%;
+    left: 48.82%;
+}
+
+.guitare {
+    height: 32.81%;
+    width: 10.82%;
+    position: absolute;
+    top: 16.28%;
+    left:80.09%;
+}
+
+.rectangle {
+    height: 5.08%;
+    width: 3.55%;
+    position: absolute;
+    top: 51.82%;
+    left:86.55%;
+}
+
+
+.slidecontainer{
+
+}
+#valeurdeslider1 {
+    display: block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+}
+#valeurdeslider2 {
+    display: block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+}
+#valeurdeslider3 {
+    display: block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+}
+.selectcontry {
+  /*display: inline-block;
+  width: 178.7px;*/
+  display: inline-block;
+  height: 99.56%;
+  width: 16%;
+	border-radius: 13.51px;
+	background-color: #151515 ;
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+.slidec{
+  display: inline-block;
+    width: 100%;
+    height: 55px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+/*.slidecontainer{
+  display: inline-block;
+  width: 84%;
+
+
+}*/
+select{
+  height: auto;
+  width: 100%;
+
+
+  border-radius: 13.51px;
+  background-color: #374240;;
+  color: white;
+}
+#menu{
+display: inline-block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  margin-top: 0px;
+
+}
+#bloginformations{
+  display: inline-block;
+	box-sizing: border-box;	height: 100px;	width: 300px;	border: 2.21px solid #2AF194;	border-radius: 17.66px;
+}
+#bottonderetour{
+  display: inline-block;
+  width: 700px;
+}
+.left{
+  display: inline-block;
+	height: 51.74px;
+	width: 178.7px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+	border-radius: 13.51px;
+	background-color: #374240;;
+  color: white;
+  float:left;
+
+}
+#nomdegenre{
+  height: 4.17%;
+  width: 29.64%;
+  color: #FFFFFF;
+  font-family: Montserrat;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 32px;
+
+  }
+.nom-du-blog {	height: 19px;	width: 103px;	color: #000000;	font-family: Montserrat;	font-size: 15px;	font-weight: bold;	line-height: NaNpx;}
+
+
+
+.logo-audencia {
+    height: 13.15%;
+    width: 15.73%;
+    position: absolute;
+    top: 20.45%;
+    left:10.18%;
+}
+
+.logo-agr {
+    height: 13.28%;
+    width: 9.27%;
+    position: absolute;
+    top: 20.32%;
+    left:45.36%;
+}
+
+.logo-polytech {
+    height: 13.8%;
+    width: 16.55%;
+    position: absolute;
+    top: 19.8%;
+    left:70.64%;
+}
+
+.music-data {
+    height: 7.94%;
+    width: 26.36%;
+    position: absolute;
+    top: 67.45%;
+    left:36.82%;
+}
+
+.logo-open-source {
+    height: 8.46%;
+    width: 5.27%;
+    position: absolute;
+    top: 88.54%;
+    left:7.45%;
+}
+
+.logo-nm {
+    height: 9.64%;
+    width: 15.73%;
+    position: absolute;
+    top: 87.89%;
+    left:16.64%;
+}
+
+.logo-medialab {
+    height: 6.12%;
+    width: 12.64%;
+    position: absolute;
+    top: 89.71%;
+    left:35.82%;
+}
+
+#nomdegenre{
+    height: 4.17%;
+    width: 29.64%;
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 32px;
+
+}
+
+
+.logo-hyblab {
+    height: 5.99%;
+    width: 20.73%;
+    position: absolute;
+    top: 89.71%;
+    left:53%;
+}
+
+.logo-pdl {
+    height: 7.29%;
+    width: 14.73%;
+    position: absolute;
+    top: 88.54%;
+    left:77.82%;
+}
+
+#credits{
+    background-color: white;
 }
