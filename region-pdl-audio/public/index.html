@@ -1,40 +1,370 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
-  <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-    <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-		<!-- Basic viewport setting for mobile friendly page -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
-		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-		<!-- Simple sample script that loads data from a dummy json file -->
-		<script src="js/example.js" defer></script>
-  </head>
-  <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+<html lang="fr">
+<!-- Notre page est en français -->
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
-      <h1>Hyblab Datajournalism 2019</h1>
-    </header>
+<head>
+  <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
+  <meta charset="utf-8">
+  <title>Archi-Sons</title>
+  <link rel="icon" type="image/png" href="img/logo_archisons.png" />
+  <!-- Basic viewport setting for mobile friendly page -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Déclaration de la feuille de style du document-->
+  <link rel="stylesheet" href="css/fullpage.css">
+  <link rel="stylesheet" href="css/parallax.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/15af25ac7b.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,700|Zilla+Slab:300,400,500,600,700">
+  <link rel="stylesheet" href="css/checkbox.css">
+  <link rel="stylesheet" href="css/dropdown.css">
+  <link rel="stylesheet" href="css/barchart.css">
+  <link rel="stylesheet" href="css/barchart_cumulative.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Those polyfills are required so that old browsers support fetch mecanism -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js' defer></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/typeit@6.0.2/dist/typeit.min.js"></script>
+  <!-- Simple sample script that loads data from a dummy json file -->
+  <script src="js/script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="js/fullpage.js"></script>
 
-    <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
+</head>
 
-		<p>Here is some data from a json file : <span id="data"></span><p>
-
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2019</p>
-    </footer>
+<body>
+  <div id="fullpage">
+    <div class="section" id="accueil">
+      <div id="accueil_left" class="accueil_block">
+        <img id="pdl_logo" src="img/pdl_logo.svg" alt="Logo de la région des Pays de la Loire" />
+        <h1 id="title_au_coeur"><span class="au_coeur">Au c&oelig;ur des</span> <span class="archives_sonores">archives
+            sonores</span> <span class="pays_de_la_loire">des Pays de la Loire</span></h1>
+        <h2 id="title_notre_patrimoine">
+          Rembobinez le temps,</br>
+          ce patrimoine est aussi le vôtre.
+        </h2>
+        <div id="tips_audio">
+          <p>
+            Activez le son pour une meilleure expérience
+          </p>
+        </div>
+        <audio id="audio_accueil" preload="true" data-autoplay>
+          <source src="./data/audio_accueil.mp3">
+        </audio>
+        <div id="audioplayer">
+          <button id="pButton" class="play"></button>
+          <div id="timeline">
+            <div id="playhead"></div>
+            <span id="current-time">--:--</span>
+            <span id="total-time">--:--</span>
+          </div>
+        </div>
+        <p id="discours"></p>
+      </div>
+      <div id="accueil_right" class="accueil_block">
+        <img id="magneto" src="img/magneto.gif" alt="Gif d'un magnéto" />
+      </div>
     </div>
-  </body>
+    <div class="section" id="welcome">
+      <audio id="audio_brouhaha" preload="true" loop="true" data-autoplay>
+        <source src="./data/brouhaha.mp3">
+      </audio>
+      <script>
+        var audio_brouhaha = document.getElementById('audio_brouhaha');
+        audio_brouhaha.volume = 0.3;
+      </script>
+      <div id="welcome_left" class="welcome_block">
+        <p id="conseil_regional_title">Le conseil régional</p>
+        <p id="description_conseil_regional_partie_1">
+          a vu le jour dès <b>1974</b>, et est devenu une collectivité territoriale après la
+          décentralisation des pouvoirs en 1982.
+          Les archives sonores des Pays de la Loire rassemblent les enregistrements des réunions des conseils régionaux
+          entre 1974 et 1994.
+        </p>
+        <img id="hemicycle_img" src="img/hemicycle.jpg" alt="Hémicycle" />
+        <p id="legende_img_hemicycle">
+          Photo de l’hémicycle - Archives régionales des Pays de la Loire
+        </p>
+        <p id="description_conseil_regional_partie_2">
+          Les archives sonores se découpent en <b>trois périodes</b> :
+          l’époque où la région n’était pas encore considérée comme une collectivité territoriale (1974-1986),
+          suivi par le premier mandat après la prise en fonction effective de la loi sur la décentralisation de 1986 à
+          1992,
+          puis le second mandat en 1992 après l’élection d’une nouvelle assemblée.
+        </p>
+      </div>
+      <div id="welcome_right" class="welcome_block">
+        <img id="dictaphone" src="img/dictaphone.svg" alt="Dictaphone" />
+        <div id="description_archive_duree">
+          <span class="duree_audio count_2"></span> minutes
+        </div>
+        <div id="description_archive_nb_audio">
+          <img id="bande_magnetique" src="img/bande_magnetique.svg" alt="Bande magnétique" />
+          <span class="nb_fichier_audio count_2"></span> bandes magnétiques
+        </div>
+      </div>
+    </div>
+    <div class="section" id="president">
+      <div id="president_entete">
+        <div id="president_intro">
+          <h1>Qui êtes-vous, Monsieur le</span> <span class="h1_highlight">Président</span> ?</h1>
+          <p class="intro">
+            De 1974 à 1994, le conseil régional est représenté par deux présidents.
+          </p>
+          <div class="separator"></div>
+          <p class="tips">
+            Survolez les bobines pour en connaître davantage.
+          </p>
+        </div>
+        <div id="bobine_graph">
+          <div id="bobine_vincent" onmouseenter="info_president_display(this.id)" onmouseleave="info_president_undisplay(this.id)"
+            onclick="start_pres_audio(this.id)">
+            <img id="bobine_vincent_img" src="img/bobine_photo_vincent_ansquer.png" alt="Vincent Ansquer" />
+            <img id="play_vincent" src="img/play_white.svg" alt="Bouton play" />
+            <audio id="audio_vincent" preload="true">
+              <source src="./data/extrait_vincent.mp3">
+            </audio>
+          </div>
+          <div id="bobine_olivier" onmouseenter="info_president_display(this.id)" onmouseleave="info_president_undisplay(this.id)"
+            onclick="start_pres_audio(this.id)">
+            <img id="bobine_olivier_img" src="img/bobine_photo_olivier_guichard.png" alt="Olivier Guichard" />
+            <img id="play_olivier" src="img/play_white.svg" alt="Bouton play" />
+            <audio id="audio_olivier" preload="true">
+              <source src="./data/extrait_olivier.mp3">
+            </audio>
+          </div>
+          <div id="zone_info_pres">
+            <span id="info_vincent" class="info_pres">
+              <p class="president_name">Vincent Ansquer</p>
+              <p class="president_date">Président du conseil de <b>janvier à octobre 1974</b></p>
+              <div class="separator_2"></div>
+              <p class="president_partie">Son parti politique : Union des démocrates pour la République (UDR)</p>
+              <div class="separator_2"></div>
+              <p class="president_audio_info">
+                Durée : 7 min.</br>
+                FRAR52_396PR11_1_BM_2</br>
+                Date : 30/01/1974
+              </p>
+            </span>
+            <span id="info_olivier" class="info_pres">
+              <p class="president_name">Olivier Guichard</p>
+              <p class="president_date">Président du conseil <b>d’octobre 1974 à mars 1996</b></p>
+              <div class="separator_2"></div>
+              <p class="president_partie">Son parti politique : Rassemblement pour la république (RPR)</p>
+              <div class="separator_2"></div>
+              <p class="president_audio_info">
+                Durée : 5 min.</br>
+                Réf. : FRAR52_396PR15_1_BM_1</br>
+                Date : 21/03/1986
+              </p>
+            </span>
+          </div>
+          <p id="name_vincent">Vincent Ansquer</p>
+          <p id="name_olivier">Olivier Guichard</p>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="enregistrement">
+      <div id="enregistrement_entete">
+        <div id="enregistrement_intro">
+          <h1>Zoom sur les <span class="h1_highlight">archives sonores</span></h1>
+          <p class="intro">
+            Pendant 20 ans, le conseil régional enregistre un total de <span class="nb_fichier_audio"></span>
+            enregistrements audios,
+            et tient <span class="nb_reunion"></span> réunions.
+          </p>
+          <div class="separator"></div>
+          <p class="tips">
+            Cliquez sur une cassette pour écouter.
+          </p>
+        </div>
+        <div id="enregistrement_info">
+
+        </div>
+      </div>
+      <audio id="audio_k7">
+        <source src=" ">
+      </audio>
+      <button id="info_audio_button" class="play"></button>
+      <div id="filter_graph_1">
+        <label class="cb_container">Enregistrements audio
+          <input type="radio" checked="checked" name="filtre_type" id="cb_audio" onclick="graph_audio_reunion(this.id)">
+          <span class="checkmark"></span>
+        </label>
+        <label class="cb_container">Réunions
+          <input type="radio" name="filtre_type" id="cb_reunion" onclick="graph_audio_reunion(this.id)">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+
+      <div id="filter_graph_2">
+        <label class="cb_container">Afficher tout
+          <input type="radio" checked="checked" name="filtre_periode" id="periode_all" onclick="graph_audio_reunion_filter(this.id)">
+          <span class="checkmark"></span>
+        </label>
+        <label class="cb_container">1/ 1974 - 1986
+          <input type="radio" name="filtre_periode" id="periode_1" onclick="graph_audio_reunion_filter(this.id)">
+          <span class="checkmark"></span>
+        </label>
+        <label class="cb_container">2/ 1986 - 1992
+          <input type="radio" name="filtre_periode" id="periode_2" onclick="graph_audio_reunion_filter(this.id)">
+          <span class="checkmark"></span>
+        </label>
+        <label class="cb_container">3/ 1992 - 1994
+          <input type="radio" name="filtre_periode" id="periode_3" onclick="graph_audio_reunion_filter(this.id)">
+          <span class="checkmark"></span>
+        </label>
+        <label class="cb_container">Non renseigné
+          <input type="radio" name="filtre_periode" id="periode_nr" onclick="graph_audio_reunion_filter(this.id)">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div id="graph_k7"></div>
+    </div>
+    <div class="section" id="reunion">
+      <div id="reunion_intro">
+        <h1>Quels sont <span class="h1_highlight"> les types de réunion</span> ?</h1>
+        <p class="intro">
+          Les décisions modificatives occupent la majeure partie des ordres du jour.
+        </p>
+        <div class="separator"></div>
+        <p class="tips">
+          Sélectionnez les périodes qui vous intéressent en cliquant sur les boutons du micro.
+        </p>
+      </div>
+      <img id="micro_reunion" src="img/micro.svg" alt="Micro" />
+      <img id="micro_reunion_bouton_periode_1" onclick="graph_type_reunion_filter(this.id)" src="img/bouton_micro_off.svg"
+        alt="Bouton micro période 1" />
+      <img id="micro_reunion_bouton_periode_2" onclick="graph_type_reunion_filter(this.id)" src="img/bouton_micro_off.svg"
+        alt="Bouton micro période 2" />
+      <img id="micro_reunion_bouton_periode_3" onclick="graph_type_reunion_filter(this.id)" src="img/bouton_micro_off.svg"
+        alt="Bouton micro période 3" />
+      <div id="micro_reunion_periode_1">
+        <div class="micro_reunion_periode_numero">1</div>
+        <div class="micro_reunion_periode_date">1974</div>
+        <div class="micro_reunion_periode_date">1986</div>
+      </div>
+      <div id="separator_v1" class="separator_vertical"></div>
+      <div id="micro_reunion_periode_2">
+        <div class="micro_reunion_periode_numero">2</div>
+        <div class="micro_reunion_periode_date">1986</div>
+        <div class="micro_reunion_periode_date">1992</div>
+      </div>
+      <div id="separator_v2" class="separator_vertical"></div>
+      <div id="micro_reunion_periode_3">
+        <div class="micro_reunion_periode_numero">3</div>
+        <div class="micro_reunion_periode_date">1992</div>
+        <div class="micro_reunion_periode_date">1994</div>
+      </div>
+
+      <div id="reunion_graph">
+        <div class="chart-wrap">
+          <div id="dashboard-stats" class="chart bars-horizontal brand-primary"></div>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="mot_cle">
+      <div id="mot_cle_intro">
+        <h1>Quels <span class="h1_highlight"> thèmes</span> sont évoqués ?</h1>
+        <p class="intro">
+          De l'agriculture, à l'éducation en passant par l'environnement, de nombreux thèmes
+          sont abordés lors des réunions du conseil régional.
+        </p>
+        <div class="separator"></div>
+        <p class="tips">
+          Cliquez sur les bobines et survolez les bandes pour découvrir combien de réunions ont abordé ces thèmes.
+        </p>
+      </div>
+
+      <div id="graph_theme">
+        <img id="bobine_theme_periode_1" src="img/bobine_theme.svg" alt="Bobine" />
+        <img id="bobine_theme_periode_2" src="img/bobine_theme.svg" alt="Bobine" />
+        <img id="bobine_theme_periode_3" src="img/bobine_theme.svg" alt="Bobine" />
+      </div>
+    </div>
+    <div class="section" id="bye">
+      <div id="bye_left" class="bye_bloc">
+        <h1 id="end_field"><span class="la_seance">La séance</span> <span class="est_levee">est levée</span></h1>
+        <h2 id="contribution">
+          Vous venez de découvrir les archives sonores, sachez que vous pourrez bientôt,
+          vous aussi, contribuer à l’ajout des données non-renseignées.
+          Les archives de la région Pays de la Loire sont aussi les vôtres.
+        </h2>
+        <audio id="audio_fin" preload="true" data-autoplay>
+          <source src="./data/audio_fin.mp3">
+        </audio>
+        <div id="audioplayer_end">
+          <button id="pButton_end" class="play"></button>
+          <div id="timeline_end">
+            <div id="playhead_end"></div>
+            <span id="current-time_end">--:--</span>
+            <span id="total-time_end">--:--</span>
+          </div>
+          <div id="recueil_info">
+            <a href="http://www.paysdelaloire.fr/no_cache/pages-speciales/menu-bas/contacts/" target="_blank"><img id="picto_mail"
+                src="img/picto_mail.svg" alt="Picto du mail" /> </a>
+            <p id="mail_field">
+              Pour être informé en premier</br>
+              du lancement de cette</br>
+              fonctionnalité, dites-le nous :
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="bye_right" class="bye_bloc">
+        <img id="marto" src="img/marteau.gif" alt="Gif d'un marto" />
+        <div id="bloc_ecoles">
+          <p id="AGR_ecole">AGR, l’école de l’image</p>
+          <p id="AGR_profession">Design graphique</p>
+          <p id="Polytech_ecole">Polytech Nantes</p>
+          <p id="Polytech_profession">Intégration</p>
+          <p id="scom_ecole">Audencia SciencesCom</p>
+          <p id="scom_prof">Rédaction des contenus</p>
+        </div>
+        <div id="bloc_noms">
+          <img id="picto_agr" src="img/picto_agr.svg" alt="Picto de l'ecole AGR" />
+          <img id="picto_polytech" src="img/picto_polytech.svg" alt="Picto de l'ecole POLYTECH" />
+          <img id="picto_com" src="img/picto_sciences_com.svg" alt="Picto de l'ecole SCIENCES COM" />
+          <p id="AGR_field">
+            <a href="https://www.behance.net/amBre2e623" target="_blank">Ambre Lemaître</a></br>
+            <a href="https://www.behance.net/astridogereau" target="_blank">Astrid Ogereau-Legay</a></br>
+            <a href="https://www.behance.net/paulinerouziou" target="_blank">Pauline Rouziou</a>
+          </p>
+          <p id="Polytech_field">
+            <a href="https://www.linkedin.com/in/julien-guitton/" target="_blank">Julien Guitton</a></br>
+            <a href="https://www.linkedin.com/in/ibrahsm/" target="_blank">Ibrahim Souleymane</a>
+          </p>
+          <p id="com_field">
+            <a href="https://www.linkedin.com/in/gwendoline-barbu/" target="_blank">Gwendoline Barbu</a></br>
+            <a href="https://www.linkedin.com/in/delphine-lossec/" target="_blank">Delphine Lossec</a>
+          </p>
+        </div>
+        <p id="partenaires">Partenaires:</p>
+        <div id="bandeau">
+          <ul>
+            <li><a href="http://www.hyblab.fr/" target="_blank"><img src="img/logo_hyblab.png" alt="Hyblab DataSport"></a></li>
+            <li><a href="http://www.ouestmedialab.fr/" target="_blank"><img src="img/logo_oml.png" alt="Ouest Médialab"></a></li>
+            <li><a href="http://www.agrnantes.fr" target="_blank"><img src="img/logo_agr.png" alt="AGR école de l'image"></a></li>
+            <li><a href="http://www.univ-nantes.fr/" target="_blank"><img src="img/logo_universitenantes.jpg" alt="Université de Nantes"></a></li>
+            <li><a href="http://www.polytech.univ-nantes.fr/" target="_blank"><img src="img/logo_polytech.png" alt="Polytech Nantes"></a></li>
+            <li><a href="http://sciencescom.audencia.com/" target="_blank"><img src="img/logo_sciencescom.jpg" alt="SciencesCom"></a></li>
+          </ul>
+          <ul>
+            <li><a href="http://www.paysdelaloire.fr/" target="_blank"><img src="img/pdl_logo.png" alt="Pays de La Loire"></a></li>
+            <li><a href="http://www.nantesmetropole.fr/" target="_blank"><img src="img/logo_nantesmetropole.png" alt="Nantes Métropole"></a></li>
+            <li>
+            <li><img id="cc" src="img/logo_cc.png" alt="Creative commons"></li>
+            <li><img id="opensource" src="img/logo_opensource.png" alt="Open source"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="arrowDown bounce"></div>
+</body>
+
 </html>

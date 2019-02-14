@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="39px" viewBox="0 0 55 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-5.4%" y="-15.7%" width="110.8%" height="154.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.636559311   0 0 0 0 0.603566507   0 0 0 0 0.514014611  0 0 0 0.652372056 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PAGE-5---OBJETS-DE-REUNION" transform="translate(-242.000000, -456.000000)" fill="#B94A5B">
+            <g id="boutons-filtres" filter="url(#filter-1)" transform="translate(181.000000, 451.000000)">
+                <path d="M78.0890509,6 C71.4128151,6 66,13.3709726 66,22.462836 L66,31.5969298 C66,31.5969298 75.2017856,35 88.5,35 C102.460929,35 111,31.5969298 111,31.5969298 L111,22.462836 C111,13.3709726 105.588477,6 98.9122409,6 L78.0890509,6 Z" id="Fill-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>
