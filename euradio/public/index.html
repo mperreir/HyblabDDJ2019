@@ -3,38 +3,216 @@
   <head>
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
     <meta charset="utf-8">
-    <title>Hyblab 2016</title>
+    <title>Hyblab 2019</title>
 		<!-- Basic viewport setting for mobile friendly page -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Déclaration de la feuille de style du document-->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="css/twentytwenty.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+    <!--<link rel="stylesheet" href="css/juxtapose.css">-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.js" defer></script>
+    <!--graphique en stack -->
+    <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+    <script src="js/fullpage.js" defer></script>
+    <!--<script src="js/juxtapose.js" defer></script>-->
+    <script src="js/example.js" defer></script>
+    <script src="js/slider.js" defer></script>
+    <script src="js/imageslider.js" defer></script>
+    <script src="js/stacked.js" defer></script>
 		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-		<!-- Simple sample script that loads data from a dummy json file -->
-		<script src="js/example.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   </head>
   <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+    <div id="fullpage">
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
-      <h1>Hyblab Datajournalism 2019</h1>
-    </header>
 
-    <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
+    <div class="section" id="section1"> <!-- Page 1 -->
+        <div class="haut">
+    			<h2 id="titre11">Branchez-vous sur la fréquence de demain...</h2>
+          <h3 id="titre12">En jouant avec le curseur</h3>
+            </div>
+            <div id="triche">
+              <audio id="musique" controls="controls">
+                <source id="audioSource" src="musiques/hyblablfm_1.wav"></source>
+                Your browser does not support the audio format.
+              </audio>
+              <audio id="souffle" controls="controls">
+                <source id="fondSource" src="musiques/souffle.wav"></source>
+                Your browser does not support the audio format.
+              </audio>
+            </div>
+            <div class="imagesPage1">
+              <div id="conteneurRadio">
+                <img src="img/RadioFm/Radiofm_fréquence_1.png" id="imgBackground" class="images_petit"/>
+              </div>
+              <p id="nomRadio">94.4 : France Inter</p>
 
-		<p>Here is some data from a json file : <span id="data"></span><p>
-
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2019</p>
-    </footer>
+        </div>
+        <div class="containerSliderRadio">
+          <div class="containerButtonRadio">
+            <div id="partie">
+              <img src="img/BTN slider.png" id="draggable" />
+            </div>
+          </div>
+          <img src="img/Slider FM.png" id="sliderBackground" class="slider_petit"/>
+          <img src="img/sliderrnt.png" id="sliderBackground2" class="slider_petit"/>
+        </div>
+        <div class="arrow down"></div>
     </div>
+
+
+    <div class="section" id="section2"> <!-- Page 2 -->
+      <div class="haut">
+      <div class="arrow up"></div>
+        <h2>ET CONCRÈTEMENT, ÇA CHANGE QUOI ?</h2>
+        <h3 class = space id="test">DÉCOUVREZ LES DIFFÉRENCES ENTRE LA RADIO FM ET LA RNT</h3>
+      </div>
+      <div class="savoirPlusContainer">
+        <a href="https://www.dabplus.fr"><span title="Cliquez pour plus d'informations !"><img src="img/Plus.png" class="savoirPlus"></span></a>
+      </div>
+      <div id="before_after_images">
+        <img src="img/Radiornt_img_2.gif">
+			  <img src="img/Radiofm.gif">
+      </div>
+      <center><img src="img/fm_spécialisations.png" id="differences" class="specialisations"></center>
+      <div class="arrow down"></div>
+    </div>
+
+
+    <div class="section" id="section3">  <!-- Page 3 -->
+      <div class="haut">
+      <div class="arrow up"></div>
+        <h2>DÉPLOIEMENT DU DAB+ EN EUROPE</h2>
+
+
+        <div id="Pictos">
+
+          <img class="picto" id="recepteur"  src="img/Picto/Picto recepteur-bleu.png">
+          <img class="picto" id="maison"  src="img/Picto/Picto maison-blanc.png">
+          <img class="picto" id="route" src="img/Picto/Picto route-bleu.png">
+          <img class="picto" id="voiture"  src="img/Picto/Picto voiture-bleu.png">
+          <img class="picto" id="reseau"  src="img/Picto/Picto couverture réseaux-bleu.png">
+        </div>
+
+      </div>
+      <div class="imagesPage3">
+
+        <div class="affichageGraphiques">
+          <div class="conteneurPictoCentrale">
+            <img class="picto" id="pictoCentrale"  src="img/Picto/Picto maison-bleu.png">
+          </div>
+          <div class="affichageGraphique">
+            <h4 id="paysRouge"></h4>
+              <div class ="contenuCentre">
+                <p id="valeurRouge" class="surTexte">Coucou</p>
+                <p id="sousRouge" class="sousTexte">(2018)</p>
+              </div>
+            <canvas id="ctx" width="375" height="220"></canvas>
+          </div>
+
+          <div class="affichageGraphique">
+            <h4 id="paysJaune"></h4>
+            <div class ="contenuCentre">
+              <p id="valeurJaune" class="surTexte">Coucou</p>
+              <p id="sousJaune" class="sousTexte">(2018)</p>
+            </div>
+            <canvas id="ctx2" width="375" height="220"></canvas>
+          </div>-
+        </div>
+        <h3 id="critere">TAUX D’ÉQUIPEMENT EN RÉCEPTEURS DAB+</h3>
+        <div class="containerSliderPays">
+          <div class="containerButtonPays">
+            <div id="partieGauche">
+              <img id="rouge"src="img/bouton carte rouge .png"/>
+            </div>
+            <div id="partieDroite">
+              <img id="jaune"src="img/Bonton carte jaune.png"/>
+            </div>
+          </div>
+            <img id="sliderPays"src="img/barre pays.png"/>
+        </div>
+
+      </div>
+      <div class="arrow down"></div>
+    </div>
+
+    <div class="section" id="section4">  <!-- Page 4 -->
+      <div class="haut">
+      <div class="arrow up"></div>
+        <h2>LA RNT DÉBARQUE DANS VOS RÉGIONS</h2>
+      </div>
+      <h6>En retard sur ses voisins européens, la France s’est lancée depuis 2014 dans le DAB+<br>
+        (radio numérique terrestre) et se développe progressivement dans les régions françaises.<br>
+        Certaines radios ont décidé de miser sur cette nouvelle technologie, depuis le départ : Euradio <br>
+        est l’une d’entre elles. Retrouvez sur la carte quelques radios déjà diffusées en DAB+ par ville.
+      </h6>
+        <center><img src="img/carte.png" class="carte"></center>
+        <h3>Alors, prêts à passer au DAB + ?</h3>
+      <div class="arrow down"></div>
+    </div>
+
+    <div class="section" id="section5"> <!-- Page 5 -->
+        <div id="team">
+          <div class="arrow up"></div>
+            <h2 id="credits">CRÉDITS</h2>
+            <ul>
+          <li>
+            <img src="img/Sans titre-3.png"/>
+            <h5> Audencia SciencesCom </h5>
+            <p>
+              <a href="#">Sarah Lobe-Eleme</a><br/>
+              <a href="#">Garance Lunven</a><br/>
+              <a href="https://www.linkedin.com/in/denis-si/">Denis Si</a>
+            </p>
+          </li>
+          <li class="secondli">
+            <img src="img/Sans titre-2.png"/>
+            <h5> Polytech Nantes </h5>
+            <p>
+              <a href="https://www.linkedin.com/in/bryan-audic-366677174/">Bryan Audic</a><br/>
+              <a href="https://www.linkedin.com/in/maxim-le-cloerec-33347710a/">Maxim Le Cloerec</a><br/>
+            </p>
+          </li>
+          <li class="secondli">
+            <img src="img/Sans titre-1.png"/>
+            <h5> AGR, l'école de l'Image </h5>
+            <p>
+              <a href="http://emmabellet-monbook.e-monsite.com/">Emma Bellet</a><br/>
+              <a href="https://www.behance.net/dimitrijeanselme">Dimitri Jeanselme</a>
+            </p>
+          </li>
+          <li class="secondli">
+            <img src="img/Sans titre-4.png"/>
+            <h5> Euradio </h5>
+            <p>
+              <a href="#">Hélène Lévêque</a><br/>
+            </p>
+          </li>
+        </ul>
+        </div>
+        <img src="img/bandeau lodo.png">
+
+    </div>
+
+    </div>
+
   </body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="js/jquery.event.move.js"></script>
+  <script src="js/jquery.twentytwenty.js"></script>
 </html>
