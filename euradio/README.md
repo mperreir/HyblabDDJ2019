@@ -1,17 +1,18 @@
 # Descriptif du projet
 
-Porteur de projet :
+Porteur de projet : Euradio Nantes
 
-Sujet :
+Sujet : 
 
-Equipe :
+Equipe : HyblabFM
 
-Participants : 
+Participants :
 
-- Sciencescom
+- Sciencescom : Sarah Lobé-Élémé & Garance Lunven & Denis Si
 
-- EDNA :
-- Polytech :  
+- AGR : Emma Bellet & Colas Darnet & Dimitri Jeanselme
+
+- Polytech :  Bryan Audic & Maxim Le Cloerec
 
 # Installation
 
