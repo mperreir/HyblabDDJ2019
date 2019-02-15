@@ -1,0 +1,83 @@
+[
+  {
+    "nom": "Entre Mès et Brière, d’un Marais à l’Autre",
+    "distance_en_km":14,
+    "temps_en_min": 210,
+    "description": "Du site de la Belle Fontaine, le circuit pénètre directement dans ce milieu sauvage si caractéristique du marais briéron par sa vaste étendue de canaux, de mares et de roseaux.",
+    "theme": ["forêt / nature"],
+    "pdf":"https://www.labaule-guerande.com/download?t=prestataire&id=1572729&ext=.pdf",
+    "numero": 1
+  },
+  {
+    "nom": "Du port de Tréhigier à la baie de Pont Mahé",
+    "distance_en_km": 17,
+    "temps_en_min": 80,
+    "description": "Du port de Tréhiguier, haut-lieu de la mytiliculture, accroché à l’estuaire de la Vilaine, vousdécouvrirez ensuite les dunes de Ménard, îlots de sable sauvage où règne une grande tranquillité.",
+    "theme": ["forêt / nature"],
+    "pdf":"https://www.labaule-guerande.com/download?t=prestataire&id=1572729&ext=.pdf",
+    "numero": 2
+  },
+  {
+    "nom": "Entre eau douce et eau salée",
+    "distance_en_km": 16.8,
+    "temps_en_min": 75,
+    "description": "Territoire d’eaux, la Presqu’île de Guérande vous offre ici une balade insolite, vous menant des marais de Brière aux marais salants, ouvrant sur l’océan Atlantique.",
+    "theme": ["plage / bord de mer", "forêt / nature"],
+    "pdf":"https://www.labaule-guerande.com/download?t=prestataire&id=1572729&ext=.pdf",
+    "numero": 3
+  },
+  {
+    "nom": "Du sel à la mer",
+    "distance_en_km": 11.3,
+    "temps_en_min": 50,
+    "description": "Avant de quitter Guérande, êtes-vous sûr d’avoir découvert toutes ses facettes ? Ses petites rues médiévales invitent à la balade, profitez-en !",
+    "theme": ["plage / bord de mer", "forêt / nature"],
+    "pdf":"https://www.labaule-guerande.com/download?t=prestataire&id=1572729&ext=.pdf",
+    "numero": 4
+  },
+  {
+    "nom": "Du port de pêche et de plaisance aux chantiers navals",
+    "distance_en_km": 20.7,
+    "temps_en_min": 105,
+    "description": "Au départ de la place du Marché de Pornichet, vous longerez la baie de Pornichet et La Baule pour découvrir le charme du front de mer.",
+    "theme": ["plage / bord de mer"],
+    "pdf":"https://www.labaule-guerande.com/download?t=prestataire&id=1572729&ext=.pdf",
+    "numero": 5
+  },
+  {
+    "nom": "Entre Plage et Bocage",
+    "distance_en_km": 15.5,
+    "temps_en_min": 270,
+    "description": "Ce circuit reflète les atouts de Pornichet : une ville bleue avec l’océan et une ville verte avec la nature. La diversité du circuit permet aux randonneurs d’apprécier les différents paysages mais aussi de s’imprégner de leur ambiance.",
+    "theme": ["plage / bord de mer", "forêt / nature"],
+    "pdf":"https://www.labaule-guerande.com/download?t=prestataire&id=1572729&ext=.pdf",
+    "numero": 6
+  },
+  {
+    "nom": "St Nazaire, entre eau et industrie",
+    "distance_en_km": 27,
+    "temps_en_min": 88,
+    "description": "De Berné jusqu'à St Nazaire, en passant par l’impressionnante raffinerie de Donges, découvrez les chantiers naval et pour terminer dans le centre de St Nazaire et sa magnifique église.",
+    "theme": ["plage / bord de mer", "musée / culturel"],
+    "pdf":"https://www.labaule-guerande.com/download?t=prestataire&id=1572729&ext=.pdf",
+    "numero": 7
+  },
+  {
+    "nom": "St Nazaire, ville artistique",
+    "distance_en_km": 19,
+    "temps_en_min": 80,
+    "description": "Parcourez les bords de mer de St Nazaire, et découvrez son patrimoine. Vous y trouverez de nombreux théâtres et salles de spectacle ainsi que des cafés culturels.",
+    "theme": ["plage / bord de mer", "musée / culturel"],
+    "pdf":"https://www.labaule-guerande.com/download?t=prestataire&id=1572729&ext=.pdf",
+    "numero": 8
+  },
+  {
+    "nom": "St Nazaire, ville historique",
+    "distance_en_km": 18,
+    "temps_en_min":100,
+    "description": "Visitez le centre de St Nazaire et voyagez à travers le temps au milieu des blockhaus, phares et des musées sur l’histoire maritime.",
+    "theme": ["plage / bord de mer", "musée / culturel"],
+    "pdf":"https://www.labaule-guerande.com/download?t=prestataire&id=1572729&ext=.pdf",
+    "numero": 9
+  }
+]
