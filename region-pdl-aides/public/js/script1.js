@@ -27,7 +27,6 @@ $(document).ready(function() {
             mainDemo();
         }
     }
-
     LoadFactory();
     jssor_1_slider.$On($JssorSlider$.$EVT_PARK, LoadFactory);
 

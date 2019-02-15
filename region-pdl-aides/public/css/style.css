@@ -7,6 +7,7 @@ html {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background-color: #f7f7f7;
 }
 
 body {
@@ -93,7 +94,6 @@ body {
     opacity: 0.3;
     pointer-events: none;
 }
-
 /**************PAGE 1***************/
 .bulle {
     z-index: 3;
@@ -395,7 +395,7 @@ div#francemap {
     margin-top: 20px;
     z-index: 1000;
     top: 150px;
-    left: 80px;
+    left: 40px;
 }
 
 div#francemap2 {
@@ -404,7 +404,7 @@ div#francemap2 {
     margin-top: 20px;
     z-index: 1000;
     top: 150px;
-    left: 80px;
+    left: 40px;
 }
 
 div#francemap3 {
@@ -413,16 +413,7 @@ div#francemap3 {
     margin-top: 20px;
     z-index: 1000;
     top: 150px;
-    left: 80px;
-}
-
-div#francemap {
-    width: 500px;
-    height: 300px;
-    margin-top: 20px;
-    z-index: 1000;
-    top: 150px;
-    left: 80px;
+    left: 40px;
 }
 
 div#section2 {
@@ -582,7 +573,7 @@ div#section2 {
     padding-top: 28px;
     width: 370px;
     height: 150px;
-    left: 44em;
+    left: 48em;
     top: 31em;
     font-size: 14px;
     text-align: center;
@@ -617,8 +608,8 @@ div#section2 {
     padding-top: 28px;
     width: 370px;
     height: 250px;
-    left: 64em;
-    top: 1em;
+    left: 54em;
+    top: 2.5em;
     font-size: 14px;
     text-align: center;
     position: relative;
@@ -635,14 +626,14 @@ div#section2 {
     padding-top: 18px;
     width: 370px;
     height: 250px;
-    left: 64em;
-    top: 1em;
+    left: 57em;
+    top: 0em;
     font-size: 14px;
     text-align: center;
     position: relative;
 }
 .pulse {
-    margin-left: 100px;
+    margin-left: 70px;
     margin-top: -300px;
     position: absolute;
     font-family: Ubuntu;
