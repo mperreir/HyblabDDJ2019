@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 1047" style="enable-background:new 0 0 1920 1047;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:#E8D8BC;}
+	.st2{font-family:'Roboto-Medium';}
+	.st3{font-size:29.6727px;}
+	.st4{font-family:'Roboto-Light';}
+	.st5{font-size:45.3818px;}
+	.st6{fill:none;stroke:#E8D8BC;stroke-width:3.4909;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st7{opacity:0.5;fill:#02737D;enable-background:new    ;}
+	.st8{fill:#02737D;}
+	.st9{fill:none;stroke:#02737D;stroke-width:3.4909;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1902.9073" y1="9.6864" x2="14.3589" y2="1038.703" gradientTransform="matrix(1 0 0 -1 0 1047)">
+	<stop  offset="0" style="stop-color:#003B47"/>
+	<stop  offset="1" style="stop-color:#01232D"/>
+</linearGradient>
+<rect y="-0.1" class="st0" width="1920" height="1047.3"/>
+<g>
+	<text transform="matrix(1 0 0 1 701.5757 272.952)" class="st1 st2 st3">Les gendarmes se sont fait semer par :</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 505.8188 272.952)" class="st1 st4 st5">1</text>
+	<text transform="matrix(1 0 0 1 531.0188 272.952)" class="st1 st4 st3">/3</text>
+</g>
+<line class="st6" x1="1413.8" y1="309.1" x2="506.2" y2="309.1"/>
+<g>
+	<circle class="st7" cx="1902.5" cy="437.1" r="5.1"/>
+	<circle class="st7" cx="1902.5" cy="506.9" r="5.1"/>
+	<circle class="st7" cx="1902.5" cy="541.7" r="5.1"/>
+	<circle class="st7" cx="1902.5" cy="576.6" r="5.1"/>
+	<circle class="st7" cx="1902.5" cy="611.4" r="5.1"/>
+	<circle class="st8" cx="1902.5" cy="472" r="6.7"/>
+</g>
+<polyline class="st9" points="984.7,992.8 960,1012.2 935.3,992.8 "/>
+<polyline class="st9" points="935.3,54.2 959.9,34.8 984.6,54.2 "/>
+<g>
+	<circle class="st8" cx="1274.3" cy="543.2" r="138.5"/>
+</g>
+<g>
+	<circle class="st8" cx="960.1" cy="543.2" r="138.5"/>
+</g>
+<g>
+	<circle class="st8" cx="645.6" cy="543.2" r="138.5"/>
+</g>
+</svg>

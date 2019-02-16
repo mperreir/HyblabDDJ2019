@@ -1,0 +1,208 @@
+	<!DOCTYPE html>
+<html lang="fr"> <!-- Notre page est en français -->
+<head>
+  <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
+  <meta charset="utf-8">
+  <title>Hyblab 2019!</title>
+  <!-- Basic viewport setting for mobile friendly page -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Déclaration de la feuille de style du document-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+  crossorigin=""/>
+  <!-- Bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <!-- Those polyfills are required so that old browsers support fetch mecanism -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+  <!-- Simple sample script that loads data from a dummy json file -->
+  <!-- Script de nav-->
+  <script src="js/nav.js" defer></script>
+  <!--  Leaflet's JS -->
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+  integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+  crossorigin=""></script>
+  <script src="js/depeche.js" defer></script>
+  <script src="js/map.js" defer></script>
+  <script src="js/example.js" defer></script>
+</head>
+<body>
+  <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
+  <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
+  <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
+  <div id="container" >
+
+    <!-- l'entête de la page: titre, barre de recherche 
+    <header>
+     <img src="img/logo_hyblab.png" alt="logo hyblab"/>
+     <h1>Press Pepper Scoville Team</h1>
+   </header>
+
+   Le contenu du site -->
+   <!-- Système de naviguation test -->
+
+   <div class="fullscreen-container">
+
+
+    <div id="all-pages">
+      <section class="page">
+	    <button id="disc" style="opacity:0;position:absolute;width:100%;height:100%";"type="button" class="btn btn-danger">Découvrir!</button>
+       <img src="anim/intro_site.gif" alt="Intro" style="width:100%;height:100%;">
+     </section>
+
+     <section class="page" style="position:relative">
+
+      <button id="disc1" style="opacity:0;position:absolute;top:93%;left:43%;width:15%;height:15%";"type="button" class="btn btn-danger">Découvrir!</button>
+      <img src="img/accueil.svg" style="width:100%;height:auto;" alt="accueil">
+    </section>
+
+
+    <!-- quizz 1 -->
+    <section class="page" style="position:relative;">
+     <div class="zoom">
+      <img id="click" style="width:18%;height:18%px;position:absolute;left:19.5%;top:35%;" src="anim/sansfond/bourré.gif" alt="Quizz1_test" >
+      <img id="click2" style="width:18%;height:18%px;position:absolute;left:41%;top:35%;" src="anim/sansfond/velo.gif" alt="Quizz2_test" >
+      <img id="click3" style="width:18%;height:18%px;position:absolute;left:62.5%;top:35%;" src="anim/sansfond/mamie.gif" alt="Quizz3_test" >
+    </div> 
+
+    <img id="clickT" style="opacity:0.0;width:20%;height:8%;position:absolute;left:18%;top:80%;" src="img/ivre.PNG" alt="Quizz1t_test" >
+    <img id="clickT2" style="opacity:0.0;width:25%;position:absolute;left:38%;top:80%;" src="img/velo.PNG" alt="Quizz1t2_test" >
+    <img id="clickT3" style="opacity:0.0;width:22%;position:absolute;left:60%;top:80%;" src="img/meme.PNG" alt="Quizz1t3_test" >
+
+
+
+    <img src="img/quizz_1.jpg" alt="Quizz1_test" style="width:100%;height:100%;">
+  </section>
+
+  <!-- résultat quizz  1 -->
+
+  <section class="page" style="position:relative">
+   <button id="disc2" style="opacity:0;position:absolute;top:93%;left:43%;width:15%;height:15%";"type="button" class="btn btn-danger">Découvrir!</button>
+   <img src="img/res_quizz1.png" style="width:100%,height:100%;" alt="Quizz1_test"">
+
+ </section>
+
+ <!-- quizz 2 -->
+ <section class="page" style="position:relative;">
+   <div class="zoom">
+    <img id="clickk" style="width:18%;height:18%px;position:absolute;left:19.5%;top:35%;" src="anim/sansfond/feu.gif" alt="Quizz1_test" >
+    <img id="clickk2" style="width:18%;height:18%px;position:absolute;left:41%;top:35%;" src="anim/sansfond/braceletelectro.gif" alt="Quizz2_test" >
+    <img id="clickk3" style="width:18%;height:18%px;position:absolute;left:62.5%;top:35%;" src="anim/sansfond/montre.gif" alt="Quizz3_test" >
+  </div> 
+
+  <img id="clickkT" style="opacity:0.0;width:22%;position:absolute;left:18%;top:80%;" src="img/feu.PNG" alt="Quizz1t_test" >
+  <img id="clickkT2" style="opacity:0.0;width:27%;position:absolute;left:38%;top:80%;" src="img/bracelet.PNG" alt="Quizz1t2_test" >
+  <img id="clickkT3" style="opacity:0.0;width:27%;position:absolute;left:60%;top:80%;" src="img/retard.PNG" alt="Quizz1t3_test" >
+
+
+
+  <img src="img/quizz_2.jpg" alt="Quizz1_test" style="width:100%;height:100%;">
+</section>
+<!-- fin quizz 2 -->
+
+
+<!-- résultat quizz  2 -->
+
+<section class="page" style="position:relative">
+ <img src="img/res_quizz2.png" alt="Quizz1_test">
+ 
+   <button id="disc3" style="opacity:0;position:absolute;top:93%;left:43%;width:15%;height:15%";"type="button" class="btn btn-danger">Découvrir!</button>
+
+</section>
+
+<!-- quizz 3 -->
+<section class="page" style="position:relative;">
+ <div class="zoom">
+  <img id="clickkk" style="width:18%;height:18%px;position:absolute;left:19.5%;top:35%;" src="anim/sansfond/anniversaire.gif" alt="Quizz1_test" >
+  <img id="clickkk2" style="width:18%;height:18%px;position:absolute;left:41%;top:35%;" src="anim/sansfond/police.gif" alt="Quizz2_test" >
+  <img id="clickkk3" style="width:18%;height:18%px;position:absolute;left:62.5%;top:35%;" src="anim/sansfond/entretien.gif" alt="Quizz3_test" >
+</div> 
+
+<img id="clickkkT" style="opacity:0.0;width:22%;position:absolute;left:16%;top:80%;" src="img/age.PNG" alt="Quizz1t_test" >
+<img id="clickkkT2" style="opacity:0.0;width:25%;position:absolute;left:38%;top:80%;" src="img/police.PNG" alt="Quizz1t2_test" >
+<img id="clickkkT3" style="opacity:0.0;width:22%;position:absolute;left:60%;top:80%;" src="img/tig.PNG" alt="Quizz1t3_test" >
+
+
+
+<img src="img/quizz_3.jpg" alt="Quizz1_test" style="width:100%;height:100%;">
+</section>
+<!-- fin quizz 3 -->
+
+
+<!-- résultat quizz  3 -->
+
+<section class="page" style="position:relative;">
+   <button id="disc4" style="opacity:0;position:absolute;top:93%;left:43%;width:15%;height:15%";"type="button" class="btn btn-danger">Découvrir!</button>
+
+ <img src="img/res_quizz3.png" alt="Quizz3_test">
+
+</section>
+
+
+<section class="page" id ='pagemap'style="position:relative;">
+          <button id="disc5" style="opacity:1;position:absolute;width:20%;height:10%;left:80%;top:90%;z-index:3000;"type="button" class="btn btn-danger">Suite</button>
+
+  <img style ="width:3000px;height:2000px; position:absolute; z-index: 0;" src="img/fond.svg#Calque3">
+  <div class="container" style="margin-left: 2%">
+    <div class="row">
+      <div class="col">
+        <h3 id = 'notice'>Consultez les dépêches autour de chez vous</h3>
+      </div>
+    </div>
+    <div class="row justify-content-left">
+      <div class="col-lg-8" >
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+        <div id='map'></div>
+      </div>
+	
+      <div class = "col-lg-4" id = "oui">
+        <span id = "disclaimer"> Filtrer les dépêches par thématique :</span>
+        <div id = 'filtres'></div>
+        <img class = 'picto' style="position:absolute;left:75%;top:19.5%;" src="img/pictoPNG/picto_routier.png"  >
+        <img class = 'picto' style="position:absolute;left:75%;top:26%;" src="img/pictoPNG/picto_stupefiant.png"  >
+        <img class = 'picto' style="position:absolute;left:75%;top:32%;" src="img/pictoPNG/picto_violence.png"  >
+        <img class = 'picto' style="position:absolute;left:75%;top:38%;" src="img/pictoPNG/picto_vols.png"  >
+        <img class = 'picto' style="position:absolute;left:75%;top:44%;" src="img/pictoPNG/picto_economique.png"  >
+        <img class = 'picto' style="position:absolute;left:75%;top:50.5%;" src="img/pictoPNG/picto_impots.png"  >
+        <img class = 'picto' style="position:absolute;left:75%;top:56.8%;" src="img/pictoPNG/picto_urbanisme.png"  >
+        <img class = 'picto' style="position:absolute;left:75%;top:63%;" src="img/pictoPNG/picto_politique.png"  >
+        <img class = 'picto' style="position:absolute;left:75%;top:69.2%;" src="img/pictoPNG/picto_agriculture.png"  >
+        <img class = 'picto' style="position:absolute;left:75%;top:75.4%;" src="img/pictoPNG/picto_environnement.png"  >
+        <img class = 'picto' style="position:absolute;left:75%;top:82%;" src="img/pictoPNG/picto_sante.png"  >
+      </div>
+      <div id='depeche'>
+        <h1 id = 'titre_depeche'></h1>
+        <span id = 'date_depeche'></span> <br>
+        <span id = 'corps_depeche'></span>
+        <br>
+        <button id = 'hideButton' type="button" class="btn btn-info" onclick="depeche_cache()">Retour</button>
+      </div> <!--à afficher et remplir si clic sur titre de depeche -->
+    </div>
+  </div>
+</section>
+
+
+</div>
+
+ <img src="img/dataviz.svg" alt="Quizz3_test">
+ <img src="img/merci.svg" alt="Quizz3_test">
+
+</div>
+
+<!-- <p>Here is some data from a json file : <span id="data"></span><p> -->
+ <!-- Notre pied de page -->
+
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+
+</html>
