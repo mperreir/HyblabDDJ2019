@@ -135,7 +135,7 @@ section {
 }
 
 #image-next{
-    width:70%;
+    width:100%;
 }
 
 #espace-questions{
@@ -236,10 +236,26 @@ section {
     position:relative;
 }
 
+#chauffage, #sante{
+    top:70px;
+}
+
+#electricite, #environnement{
+    top:90px;
+}
+
+#vehicules, #les-deux{
+    top:110px;
+}
+
+#les-trois{
+    top:130px;
+}
+
 #chauffage a{
     position:relative;
-    top:110px;
     display:block;
+    width: auto;
     height:40px;
     background: url(../img/bouton_chauffage.png) no-repeat left;
     background-size:contain;
@@ -252,7 +268,6 @@ section {
 
 #electricite a{
     position:relative;
-    top:130px;
     display:block;
     width:auto;
     height:40px;
@@ -267,7 +282,6 @@ section {
 
 #vehicules a{
     position:relative;
-    top:150px;
     display:block;
     width:auto;
     height:40px;
@@ -282,7 +296,6 @@ section {
 
 #les-trois a{
     position:relative;
-    top:170px;
     display:block;
     width:auto;
     height:40px;
@@ -297,8 +310,8 @@ section {
 
 #sante a{
     position:relative;
-    top:110px;
     display:block;
+    width:auto;
     height:40px;
     background: url(../img/bouton_sante.png) no-repeat left;
     background-size:contain;
@@ -310,7 +323,6 @@ section {
 }
 #environnement a{
     position:relative;
-    top:130px;
     display:block;
     width:auto;
     height:40px;
@@ -325,7 +337,6 @@ section {
 
 #les-deux a{
     position:relative;
-    top:150px;
     display:block;
     width:auto;
     height:40px;
@@ -510,7 +521,7 @@ section {
 }
 
 #r{
-    background:url(../img/RuralJour31janvier@2x.png) no-repeat center;
+    background:url(../img/NuitRural4fevrier.png) no-repeat center;
     height:100%;
     background-size: cover;
     -webkit-transition: all .5s;
@@ -520,7 +531,7 @@ section {
     transition: all .5s;
 }
 #ur{
-    background:url(../img/urban_jb.png) no-repeat center;
+    background:url(../img/UrbainNuit29janvier@2x.png) no-repeat center;
     height:100%;
     background-size:cover;
     -webkit-transition: all .5s;
@@ -530,7 +541,7 @@ section {
     transition: all .5s;
 }
 #tr{
-    background:url(../img/TraficJour29janvier@2x.png) no-repeat center;
+    background:url(../img/TraficNuit4fevrier.png) no-repeat center;
     background-size:cover;
     height:100%;
     -webkit-transition: all .5s;
@@ -597,7 +608,7 @@ section {
     box-shadow: inset 0 1px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
-.nextArrow, #nextArrow2{
+.nextArrow, #nextArrow2, #nextBackArrow{
     position: absolute;
     right:5%;
     top:50%;
@@ -626,7 +637,7 @@ section {
 }
 
 #h3-r, #h3-ur, #h3-tr{
-    color: #AC0759;
+    color: #E1F131;
     font-family: Sarabun, sans-serif;
     font-size: 30px;
     font-weight: bold;
@@ -635,7 +646,7 @@ section {
 }
 
 #h2-r, #h2-ur, #h2-tr{
-    color: #AC0759;
+    color: #E1F131;
     font-family: Sarabun, sans-serif;
     font-size: 16px;
     font-weight: bold;
@@ -644,7 +655,7 @@ section {
 }
 
 .h1-r, .h1-ur, .h1-tr{
-    color: #AC0759;
+    color: #E1F131;
     font-family: Sarabun, sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -717,13 +728,19 @@ h5{
 font-size:40px;
 }
 
-#indication_jauge_r, #indication_jauge_ur, #indication_jauge_tr{
+#indication_jauge_r, #indication_jauge_tr, #indication_jauge_ur{
     position:absolute;
     left:4%;
-    top:75%;
+    width: 20%;
+    top:77%;
     height:5%;
 }
 
-#indication_jauge_r img, #indication_jauge_ur img, #indication_jauge_tr img {
-    width: 50%;
+#indication_jauge_r p, #indication_jauge_ur p, #indication_jauge_tr p{
+    color: #E1F131;
+    font-family: Sarabun, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 20px;
 }

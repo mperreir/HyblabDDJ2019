@@ -45,3 +45,7 @@ $('#recommandations').on('click', function () {
 $('#retour-slide-2').on('click',function () {
     $('.fond').hide();
 });
+
+$('#nextBackArrow').on('click',function () {
+    $('#carousel-example-generic').carousel(2);
+})

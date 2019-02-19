@@ -1,4 +1,8 @@
 $(function() {
+    //SLiders
+    $('#myRange').val('12');
+    $('#myRange2').val('12');
+    $('#myRange3').val('12');
 
     //Rural
     $('#info-i-ru').hide();
