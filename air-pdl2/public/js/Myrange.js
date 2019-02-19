@@ -12,21 +12,22 @@ $(document).ready(function(){
         theme: "theme-blue"
     });
 });
+
 //les donnees des NO2
 var myr=new Array(5.74,5.57,5.32,5.09,5.11,5.43,6.96,7.96,7.97,6.67,5.91,5.49,5,5.08,5.08,5.86,9.07,10.78,10.13,8.99,8.47,7.82,6.75,6.10,5.74);
 var myt=new Array(21.89,18.67,17.53,20.17,24.2,34.39,43.64,47.9,50.62,46.81,43.91,38.42,35.59,37.37,38.92,43.75,50.74,55.66,53.93,46.13,37.29,33.84,30.24,25.8,21.89);
 var myu=new Array(14.22,12.87,11.79,12.43,13.33,16.87,23.41,28.46,29.27,23.54,19.45,15.79,12.37,12.35,13.03,16.48,23.1,30.45,32.12,29.32,24.15,20.71,18.71,16.39,14.22);
+
 //pour rural
 var val = document.getElementById("demo");
-var t=document.getElementById("demo2")
-
+var t=document.getElementById("demo2");
 var aa = $("#myRange").val();
 val.innerHTML =myr[aa];
 t.innerHTML=aa;
+
 //urban
 var val2=document.getElementById("demo21");
 var t2=document.getElementById("demo22");
-
 var aa2=$("#myRange2").val();
 val2.innerHTML=myu[aa2];
 t2.innerHTML=aa2;
@@ -34,7 +35,6 @@ t2.innerHTML=aa2;
 //pour traffic
 var val3=document.getElementById("demo31");
 var t3=document.getElementById("demo32");
-
 var aa3=$("#myRange3").val();
 val3.innerHTML=myt[aa3];
 t3.innerHTML=aa3;
