@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="129px" height="29px" viewBox="0 0 129 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>BOUTON NON</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ECRAN-7-REP-2" transform="translate(-684.000000, -234.000000)">
+            <g id="BOUTON-NON" transform="translate(684.000000, 234.000000)">
+                <rect id="Rectangle-2" fill="#AC0759" x="0" y="0" width="128.773585" height="28.75" rx="14.375"></rect>
+                <text id="LES-DEUX" font-family="Sarabun-SemiBold, Sarabun SemiBold" font-size="14" font-weight="500" letter-spacing="1.67172158" fill="#FFFFFF">
+                    <tspan x="25.754717" y="18.6785714">LES DEUX</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
