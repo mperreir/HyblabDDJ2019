@@ -13,3 +13,734 @@ header img{
   max-width: 100%;
 	height: auto;
 }
+
+html {
+    height:100%;
+    width: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+    color:white;
+}
+
+section {
+    height: 100%;
+}
+
+.item12{
+    background: url(../img/bg.png) no-repeat center;
+    background-size:cover;
+    height:100%;
+}
+
+.itemq{
+    background: url(../img/ECRAN_QUESTION_GOOD_GOOD@2x.png) no-repeat center;
+    background-size:cover;
+    height:100%;
+}
+
+#choix{
+    background: url(../img/choix_endroit.png) no-repeat center;
+    background-size:contain;
+    height:100%;
+}
+
+#pas-de-panique{
+    background: url(../img/pas_de_panique.png) no-repeat center;
+    background-size:contain;
+    height:100%;
+}
+
+#conseils{
+    background: url(../img/conseils.png) no-repeat center;
+    background-size:contain;
+    height:100%;
+}
+
+#equipe{
+    background: url(../img/equipe.png) no-repeat center;
+    background-size:contain;
+    height:100%;
+}
+
+.carousel {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.item {
+    background-color: #176261;
+    height: 100%;
+    width:100%;
+}
+
+.carousel-caption{
+    position: absolute;
+}
+
+.container-fluid{
+    height: 100%;
+    width:100%;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+}
+#carousel-example-generic{
+    height:100%;
+    width:100%;
+}
+.carousel-inner{
+    width:100%;
+    height:100%;
+}
+
+#image-parti{
+    position: absolute;
+    top:60%;
+    left:6%;
+    width:20%;
+}
+
+#image-parti:hover{
+    border: 2px solid #23343E;
+    border-radius: 30px;
+}
+
+
+#logo{
+    position:absolute;
+    top:75%;
+    left:10%;
+    width: 10%;
+}
+
+#envie{
+    position: absolute;
+    left:5%;
+    top:30%;
+    width: 25%;
+}
+
+#experience{
+    position: absolute;
+    left:7%;
+    top:40%;
+    width:20%;
+}
+
+#next{
+    position: absolute;
+    left:95%;
+    top:50%;
+}
+
+#image-next{
+    width:100%;
+}
+
+#espace-questions{
+    position: absolute;
+    right:5%;
+    top:30%;
+    left:69%;
+    bottom:10%;
+}
+
+.questions{
+    position: relative;
+}
+
+#imageQ1{
+    width:60%;
+}
+
+#imageQ2{
+    width:65%;
+}
+
+#imageQ3{
+    width:80%;
+}
+
+.reponses {
+    position: absolute;
+    top: 25%;
+}
+
+#image-r-q1{
+    width:80%;
+}
+
+#image-r1-q2, #image-r2-q2{
+    width:70%;
+}
+
+#image-r1-q3, #image-r2-q3{
+    width:80%;
+}
+
+.nextQ {
+    position: absolute;
+    bottom:5%;
+    right: 0;
+}
+
+.nextQ .icon{
+    font-size:40px;
+}
+
+.icon {
+    font: normal normal normal 16px/1 FontAwesome;
+    font-size: 50px;
+    text-rendering: auto;
+    color: #AC0759;
+    float: right;
+}
+
+
+.fond{
+    position: absolute;
+    width:73%;
+    right:0;
+    height:auto;
+}
+
+#arbre-vert-rond{
+    position: absolute;
+    top:80%;
+    left:54.2%;
+    height:22%;
+}
+
+#arbre-vert-droit{
+    position: absolute;
+    top:48%;
+    left: 48%;
+    height:52.5%;
+}
+
+#arbre-rose{
+    position: absolute;
+    top:65%;
+    left:54.7%;
+    height:40%;
+}
+
+.calque{
+    position:absolute;
+    bottom:-13%;
+    width:100%;
+}
+
+.boutons{
+    position:relative;
+}
+
+#chauffage, #sante{
+    top:70px;
+}
+
+#electricite, #environnement{
+    top:90px;
+}
+
+#vehicules, #les-deux{
+    top:110px;
+}
+
+#les-trois{
+    top:130px;
+}
+
+#chauffage a{
+    position:relative;
+    display:block;
+    width: auto;
+    height:40px;
+    background: url(../img/bouton_chauffage.png) no-repeat left;
+    background-size:contain;
+}
+
+#chauffage a:hover{
+    background: url(../img/bouton_chauffage_hover.png) no-repeat left;
+    background-size:contain;
+}
+
+#electricite a{
+    position:relative;
+    display:block;
+    width:auto;
+    height:40px;
+    background: url(../img/bouton_electricite.png) no-repeat left;
+    background-size:contain;
+}
+
+#electricite a:hover{
+    background: url(../img/bouton_electricite_hover.png) no-repeat left;
+    background-size:contain;
+}
+
+#vehicules a{
+    position:relative;
+    display:block;
+    width:auto;
+    height:40px;
+    background: url(../img/bouton_vehicules.png) no-repeat left;
+    background-size:contain;
+}
+
+#vehicules a:hover{
+    background: url(../img/bouton_vehicules_hover.png) no-repeat left;
+    background-size:contain;
+}
+
+#les-trois a{
+    position:relative;
+    display:block;
+    width:auto;
+    height:40px;
+    background: url(../img/bouton_trois.png) no-repeat left;
+    background-size:contain;
+}
+
+#les-trois a:hover{
+    background: url(../img/bouton_trois_hover.png) no-repeat left;
+    background-size:contain;
+}
+
+#sante a{
+    position:relative;
+    display:block;
+    width:auto;
+    height:40px;
+    background: url(../img/bouton_sante.png) no-repeat left;
+    background-size:contain;
+}
+
+#sante a:hover{
+    background: url(../img/bouton_sante_hover.png) no-repeat left;
+    background-size:contain;
+}
+#environnement a{
+    position:relative;
+    display:block;
+    width:auto;
+    height:40px;
+    background: url(../img/bouton_environnement.png) no-repeat left;
+    background-size:contain;
+}
+
+#environnement a:hover{
+    background: url(../img/bouton_environnement_hover.png) no-repeat left;
+    background-size:contain;
+}
+
+#les-deux a{
+    position:relative;
+    display:block;
+    width:auto;
+    height:40px;
+    background: url(../img/bouton_deux.png) no-repeat left;
+    background-size:contain;
+}
+
+#les-deux a:hover{
+    background: url(../img/bouton_deux_hover.png) no-repeat left;
+    background-size:contain;
+}
+
+
+#rural a{
+    position: absolute;
+    background-color: rgba(108, 255, 108, 0);
+    left: 24.5%;
+    top: 36%;
+    width: 15%;
+    height: 34%;
+}
+
+
+#ville a{
+    position: absolute;
+    background-color: rgba(111, 255, 111, 0);
+    left: 43%;
+    top: 34%;
+    width: 15%;
+    height: 34%;
+}
+
+#trafic a{
+    position: absolute;
+    background-color: rgba(109, 255, 109, 0);
+    left: 61.5%;
+    top: 38%;
+    width: 15%;
+    height: 34%;
+}
+
+
+
+#perso {
+    position: absolute;
+    bottom: 5%;
+    left: 20%;
+    height: 25%;
+    width: auto;
+}
+
+#perso3 {
+    position: absolute;
+    bottom: 5%;
+    left: -8%;
+    height: 25%;
+    width: auto;
+}
+
+#perso2 {
+    position: absolute;
+    bottom: 5%;
+    left: 10.4%;
+    height: 25%;
+    width: auto;
+}
+
+#voiture{
+    position: absolute;
+    bottom: 5%;
+    right: 30%;
+    height: 18%;
+    width: auto;
+}
+
+#voiture-gif{
+    position: absolute;
+    bottom: 0;
+    right: -12%;
+    height: 90%;
+    width: auto;
+}
+
+#nuage{
+    position: absolute;
+    left:-8%;
+    top:20%;
+}
+
+#cache1{
+    height: 61.96%;
+    float: right;
+}
+
+#cache2{
+    height:100%;
+    margin-left:-2%;
+}
+
+.translate{
+    animation: translate 4s linear forwards;
+}
+
+@keyframes translate {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(330%);
+    }
+}
+
+.translate2{
+    animation: translate2 2s linear forwards;
+}
+
+@keyframes translate2 {
+    0% {
+        transform: translate(330%,0%);
+    }
+    10%{
+        transform: translate(350%,-20%);
+    }
+    15%{
+        transform: translate(360%,7%);
+    }
+    100% {
+        transform: translate(750%,0%);
+    }
+}
+
+.translate2d{
+    animation: translate2d 8s linear forwards;
+}
+
+@keyframes translate2d {
+    0% {
+        transform: translate(0%,0%);
+    }
+    100% {
+        transform: translate(130%,-180%);
+    }
+}
+
+.translateNO2{
+    animation: translateNO2 7.5s linear forwards;
+}
+
+@keyframes translateNO2 {
+    0% {
+        transform: translate(0%,0%);
+    }
+    55%{
+        opacity:1;
+    }
+    65%{
+        opacity:0;
+    }
+    100% {
+        transform: translate(550%,-80%);
+        opacity: 0;
+    }
+}
+
+.translate3{
+    animation: translate3 4s ease-out forwards;
+}
+
+@keyframes translate3 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(250%);
+    }
+}
+
+.retour{
+    position: absolute;
+    top:5%;
+    left:5%;
+}
+
+#r{
+    background:url(../img/NuitRural4fevrier.png) no-repeat center;
+    height:100%;
+    background-size: cover;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+#ur{
+    background:url(../img/UrbainNuit29janvier@2x.png) no-repeat center;
+    height:100%;
+    background-size:cover;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+#tr{
+    background:url(../img/TraficNuit4fevrier.png) no-repeat center;
+    background-size:cover;
+    height:100%;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+#myR,#myR2,#myR3{
+    position: relative;
+    left:15%;
+    top:27%;
+}
+
+#myRange,#myRange2,#myRange3{
+    alignment:top;
+}
+
+.bar-contain{
+    position:relative;
+    top:5%;
+    left:60%;
+    height:60%;
+    width:30%;
+}
+
+.progress {
+    width: 100%;
+    height:10%;
+    top:40%;
+    position: relative;
+    background-color: rgba(255,255,255,0);
+    -webkit-transform: rotate(+90deg); /* Chrome, Safari, Opera */
+    transform: rotate(+90deg);
+}
+
+.progress-bar {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    height: 30px;
+    margin:0 auto;
+    border: rgba(253,255,251,0);
+    line-height: 12px;
+    background: #fafafa;
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, #ac125b, #dadc38);
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -moz-linear-gradient(left, #ac125b, #dadc38);
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), -o-linear-gradient(left, #ac125b, #dadc38);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.2)), linear-gradient(to right, #ac125b, #dadc38);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.6);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.6);
+    position: relative;
+}
+
+.progress-in {
+    display: block;
+    height: 30px;
+    background: #fafafa;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent 60%);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent 60%);
+    -webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.nextArrow, #nextArrow2, #nextBackArrow{
+    position: absolute;
+    right:5%;
+    top:50%;
+}
+
+.backArrow, #backArrow2{
+    position: absolute;
+    left:5%;
+    top:50%;
+}
+
+#attention{
+    position:absolute;
+    top:95%;
+    width:30px;
+    height:30px;
+    left: 96%;
+    background: url(../img/BOUTON_INFO_SOURCE_JOUR@2x.png) no-repeat left;
+    background-size:contain;
+}
+
+.titre{
+    position: absolute;
+    top:4%;
+    left:10%;
+}
+
+#h3-r, #h3-ur, #h3-tr{
+    color: #E1F131;
+    font-family: Sarabun, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 28px;
+}
+
+#h2-r, #h2-ur, #h2-tr{
+    color: #E1F131;
+    font-family: Sarabun, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 13px;
+}
+
+.h1-r, .h1-ur, .h1-tr{
+    color: #E1F131;
+    font-family: Sarabun, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+
+.i{
+    position: absolute;
+    top:95%;
+    left:95%;
+}
+
+.image-i{
+    position:absolute;
+    top:80%;
+    left:75.5%;
+    width:20%;
+}
+
+.sources{
+    position: absolute;
+    top:95%;
+    left:2%;
+}
+
+.infos{
+    position: relative;
+    color: #f9f00e;
+    top:80%;
+    width: 40%;
+    float:right;
+}
+
+.info-heure{
+    position: relative;
+    top:3%;
+    left:78.5%;
+    max-width:12%;
+}
+
+h4{
+    color: #E1F131;
+    font-family: Sarabun, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 17px;
+}
+
+h5{
+    color: #AC0759;
+    font-family: Sarabun, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 17px;
+}
+
+#recommandations a{
+    position: absolute;
+    background-color: rgba(108, 255, 108, 0);
+    left: 34.7%;
+    top: 80.5%;
+    width: 31%;
+    height: 7%;
+}
+
+#demo, #demo2, #demo21, #demo22, #demo31, #demo32{
+font-size:40px;
+}
+
+#indication_jauge_r, #indication_jauge_tr, #indication_jauge_ur{
+    position:absolute;
+    left:4%;
+    width: 20%;
+    top:77%;
+    height:5%;
+}
+
+#indication_jauge_r p, #indication_jauge_ur p, #indication_jauge_tr p{
+    color: #E1F131;
+    font-family: Sarabun, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
