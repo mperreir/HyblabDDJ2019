@@ -1,15 +1,760 @@
-/* just a sample css rule to show that everything works */
-footer p
-{
-  font-size: small;
+body{
+  background-color:#4e687f;
+  margin:0px;
+}
+
+#container{
+  height:100vh;
+  width:auto;
+  max-width:1280px;
+  max-height:850px;
+  text-align:center;
+}
+
+.bouton{
+  z-index:3;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  border-color: #ec1c24;
+  cursor: pointer;
+
+  color: #FFFFFF;
+  font-family: 'Lato';
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 22px;
+  position: absolute;
+
+  background-color: #EC1C24;
+  box-shadow: 0 2px 7px 0 rgba(0,0,0,0.5);
+}
+
+
+/* Page Accueil */
+
+#accueil{
+  position:relative;
+  height:100vh;
+  width:100vw;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+}
+
+#video_accueil{
+  position:relative;
+  display:block;
+  height:100vh;
+  width:100vw;
+  z-index:1;
+}
+
+#bouton_accueil{
+  top : 70%;
+  left: 50%;
+  height: 55px;
+  width: 209px;
+  display:none;
+}
+
+/* Page Présentation */
+
+#presentation, #presentation2{
+  height:100vh;
+  width:100vw;
+  display:none;
+  z-index: 1;
+  position: relative;
+  overflow:hidden;
+}
+
+#dialogue{
+  height:100vh;
+  width:100vw;
+  bottom: 5vh;
+  left: 10vw;
+  z-index: 3;
+  position: absolute;
+}
+
+.bulle{
+  height: 20vh;
+  width: 30vw;
+  left: 38vw;
+  position: absolute;
+}
+
+#bulle_presentation{top: 10vh;}
+
+#bulle_presentation2{
+  top: 37vh;
+  display:none;
+}
+
+.reponse{
+  height: 5vh;
+  width:auto;
+  position: absolute;
+}
+
+#reponse1{
+  top: 31vh;
+  left: 61vw;
+  cursor:pointer;
+}
+
+#reponse2{
+  top: 58vh;
+  left: 61vw;
+  display:none;
+  cursor:pointer;
+}
+
+#bouton_presentation{
+  height: 4vh;
+  width: 9vw;
+  top: 43vh;
+  left: 65vw;
+}
+
+
+#leon_mov{
+  height:100vh;
+  width:100vw;
+  margin-left: auto;
+  margin-right: auto;
+
+  position:relative;
+  z-index:1;
+}
+
+/* Page Personnalisation */
+#page_personnalisation{
+  background-repeat:no-repeat;
+  background-size: cover;
+  display: none;
+  height:100vh;
+  width:100vw;
+  left:0%;
+  position:absolute;
+  z-index: 1;
+  color: #4E687F;
+  font-family: 'Lato';
+}
+
+#personnalisation{
+  border-radius: 20px;
+  position:absolute;
+  top:5%;
+  width:90%;
+  margin-left:5%;
+  height:85vh;
+  background-color: #ffffff;
+  z-index:2;
+}
+
+#text_personnalisation{
+  top:5vh;
+	height: 44px;
+  width: 770px;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 44px;
+  position:relative;
+}
+
+#objet_curseurs{
+  position:absolute;
+  height: 85vh;
+  width:auto;
+  right: 0%;
+  bottom: 0%;
+  z-index: 3;
+}
+
+#personnalisation2{
+  position:absolute;
+  top:5%;
+  width:90%;
+  margin-left:5%;
+  height:85vh;
+  z-index:4;
+}
+
+/* Coté gauche : personnage */
+
+#socle_curseurs{
+  width:40%;
+  position:absolute;
+  left:5%;
+  bottom:0%;
+  z-index: 4;
+}
+
+#velo_curseurs{
+  left :5%;
+  width: 40%;
+  bottom:10%;
+  height: auto;
+  z-index: 4;
+  position: absolute;
+  float:left;
+}
+
+/* Coté Droit : curseurs */
+#curseurs{
+  background-color:#ffffff;
+  position: relative;
+  width:50%;
+  float:right;
+  font-size:16px;
+  margin-top:5%;
+  margin-right:10%;
+  z-index: 4;
+}
+
+#curs_dist, #curs_theme{
+  margin-top:2%;
+  position: relative;
+  right:15%;
+  float:right;
+  width: 80%;
+  height: 5px;
+  padding-top:3%;
+}
+
+#curs_theme{
+  margin-top:20%;
+}
+
+#curs_theme label, #curs_dist label{
+  width: 80%;
+  text-align:left;
+  float:right;
+  position: relative;
+  top: 1px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* Style des slider */
+input[type="range"] {
+  display: block;
+  -webkit-appearance: none;
+  border-radius: 5px;
+  margin: 0 auto;
+  outline: 0;
+  width: 70%;
+  height:30px;
+  float:right;
+  right:0%;
+  position: relative;
+}
+/* A faire pour les autres navigateurs */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height:20px;
+  width:20px;
+  background-color: #FFFFFF;
+  border: 2px solid #4E687F;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  margin-top: -6px;
+}
+
+input[type=range]::-moz-range-thumb {
+  height:20px;
+  width:20px;
+  background-color: #FFFFFF;
+  border: 2px solid #4E687F;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+input[type=range]::-ms-thumb {
+  height:20px;
+  width:20px;
+  background-color: #FFFFFF;
+  border: 2px solid #4E687F;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height:8px;
+  background-color: #D5D5d5;
+  border-radius: 3px;
+}
+
+input[type=range]::-moz-range-track {
+  height:8px;
+  background-color: #D5D5d5;
+  border-radius: 3px;
+}
+
+input[type=range]::-ms-fill-upper {
+  height:8px;
+  background-color: #D5D5d5;
+  border-radius: 3px;
+}
+
+input[type=range]::-moz-range-progress {
+  height:8px;
+  background-color: #4E687F;
+  border-radius: 3px;
+}
+
+input[type=range]::-ms-fill-lower {
+  height:8px;
+  background-color: #4E687F;
+  border-radius: 3px;
+}
+
+
+
+/* Style des labels */
+.range-labels-dist, .range-labels-theme {
+  right: 6%;
+  padding: 0;
+  list-style: none;
+}
+
+.range-labels-dist li, .range-labels-theme li {
+    position: relative;
+    float:right;
+    font-size: 12px;
+    font-family: 'Lato';
+    line-height: 12px;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.range-labels-dist li {width:22%; left:8.5%;}
+.range-labels-theme li {width:33%; left:15%;}
+
+/* Bouton */
+#bouton_personnalisation{
+  top : 70%;
+  left: 80%;
+  height: 55px;
+  width: 155px;
+}
+
+/* Page de la carte */
+
+#page_carte{
+  display:none;
+  background-image: url('../img/carte/fond_carte.png');
+  background-repeat:no-repeat;
+  background-size: cover;
+  height:100vh;
+  width:100vw;
+  left:0%;
+  position:absolute;
+
+}
+
+#carte_generale{
+  height:100vh;
+  width:auto;
+  right:0%;
+  position:absolute;
+  z-index: 2;
+  display:none;
+}
+
+.circuit{
+  z-index:3;
+  height:100vh;
+  width:auto;
+  position:absolute;
+  top:0%;
+  right:0%;
+  display: none;
+}
+
+.lieu{
+  z-index:1;
+  height:100vh;
+  width:auto;
+  position:absolute;
+  right:0%;
+  /* display:none; */
+}
+
+#choix_lieu{
+  border-radius: 20px;
+  background-color: #ffffff;
+  color:#4e687f;
+
+  text-align: left;
+
+  width:30vw;
+  top:30px;
+  bottom:30px;
+  left:30px;
+  position:absolute;
+  display: block;
+  z-index:5;
+}
+
+.checkbox_lieu{
+  position:relative;
+  margin-left: 10px;
+  margin-left: 2vw;
+  text-align: left;
+}
+
+#leon_carte{
+  width:60%;
+  height:auto;
+  left: 18%;
+  bottom:5%;
+  display:block;
+  position:absolute;
+  z-index:7;
+}
+
+#socle_carte{
+  width:60%;
+  height:auto;
+  left: 18%;
+  bottom:2%;
+  display:block;
+  position:absolute;
+  z-index:6;
+}
+
+#bouton_retour{
+  top:85px;
+  left:35vw;
+  height: 50px;
+  width: 120px;
+  position: fixed;
+  font-size: 16px;
+  z-index: 7;
+}
+
+.texte_leon_classe{
+  color: #4e687f;
+  font-family: 'Lato';
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5%;
+  width:100%;
+}
+#lieux{
+  margin-top:15px;
+  color: #051039;
+  font-family: 'Lato';
+  font-size: 20px;
+  font-weight: 300;
+}
+#texte_parcours{
+	color: #0EA5C7;
+  font-family: 'Lato';
+  font-size: 18px;
+  margin-bottom:15px;
+}
+#liste_parcours{
+  position:relative;
+  margin-top:15px;
+  color: #EC1C24;
+  font-family: 'Lato';
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.parcours_disponible{
+  	color: #051039;
+    font-family: 'Lato';
+    font-size: 20px;
+    font-weight: 300;
+}
+#choix_parcours{
+  border-radius: 20px;
+  background-color: #ffffff;
+  color:#4e687f;
+
+  text-align: right;
+
+  width:22vw;
+  top:30px;
+  right:30px;
+  position:absolute;
+  display: none;
+  z-index:5;
+}
+
+#nom_circuit{
+  margin-left:1.5vw;
+  color: #EC1C24;
+  font-family: 'Lato';
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+}
+
+#description{
+  margin-left:1.5vw;
+  color: #4D677D;
+  font-family: 'Lato';
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+}
+
+#kilometre_temps{
+  margin-left:1.5vw;
+  color: #02A7AC;
+  font-family: 'Lato';
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+}
+
+#text_avant_pdf{
+  margin-left:1.5vw;
+  color: #0EA5C7;
+  font-family: 'Lato';
+  font-size: 18px;
+  text-align: left;
+}
+
+#bouton_pdf{
+  margin-left:1.5vw;
+  width:80%;
+  float:left;
+  position: relative;
+  z-index: 7;
+  cursor:pointer;
+}
+
+#bouton_credits{
+  right:1vh;
+  bottom:1vh;
+  position: absolute;
+  z-index: 7;
+  cursor:pointer;
+  height: 50px;
+  width: 110px;
+  font-size: 16px;
+}
+
+
+/* Page des crédits */
+
+#page_credits{
+  height:100vh;
+  width:100vw;
+  position: absolute;
+  display: none;
+  width:100vw;
+  height:100vh;
+  overflow: hidden;
+}
+
+#fond_image{
+  position:relative;
+  float:center;
+  height:100vh;
+  width:auto;
+  z-index:1;
+}
+
+.credits_rectangle{
+  border-radius: 20px;
+  background-color: #ffffff;
+  border:1px solid grey;
+  color:#4e687f;
+  box-shadow: 4px 4px 6px #555;
+  top:4vh;
+  bottom:4vh;
+  height: 91vh;
+  position:absolute;
+}
+
+#rect_gauche{
+  left:8vw;
+  width:61vw;
+  z-index:2;
+}
+
+#rect_droite{
+  right: 8vw;
+  width:21vw;
+  z-index:2;
+}
+
+/* Dans le rectangle de droite */
+
+#logo{
+  position: absolute;
+  height: 100%;
+  width: 100%;
   text-align: center;
 }
 
-header{
-  text-align: center;
+.credits_logo{
+  position: relative;
+  height: auto;
+  max-width: 80%;
+  height: 10%;
 }
 
-header img{
-  max-width: 100%;
-	height: auto;
+#logo_hyblab{
+  top:2%;
+  width: 80%;
+  height: auto;
+  z-index: 3;
+}
+#logo_audencia{
+  top:3%;
+  width: 90%;
+  height: auto;
+  z-index: 2;
+}
+
+#logo_polytech{
+  top:3%;
+  width: 90%;
+  height: auto;
+}
+
+#logo_agr{
+  top: 3%;
+  width: 50%;
+  height: auto;
+}
+
+#credits_noms{
+  margin-right: auto;
+  margin-left: auto;
+  top: 58%;
+  left:5%;
+  right:5%;
+  position: absolute;
+  color:red;
+}
+
+#credits_sources{
+  margin-right: auto;
+  margin-left: auto;
+  top:68%;
+  left:5%;
+  right:5%;
+  position: absolute;
+}
+
+ul{
+  list-style-type: none;
+}
+
+/* Dans le rectangle de gauche */
+
+#bouton_retour2{
+  top:10vh;
+  left:10vw;
+  height: 50px;
+  width: 120px;
+  position: fixed;
+  font-size: 16px;
+  z-index: 7;
+}
+
+#logos_gauche{
+  top:8%;
+  position:relative;
+  width:100%;
+  height:13vh;
+  z-index:2;
+}
+
+#logo_carene{
+  float:left;
+  height:13vh;
+  width:17vw;
+  z-index:2;
+}
+
+#logo_st_naz{
+  height:13vh;
+  width:17vw;
+  z-index:2;
+}
+
+#logo_gauche_gauche{
+  text-align: right;
+  position:relative;
+  width:50%;
+  height:15vh;
+  float:left;
+}
+
+#logo_gauche_droite{
+  text-align: left;
+  position:relative;
+  width:50%;
+
+  float:right;
+}
+
+#bas_gauche{
+  position:absolute;
+  width:90%;
+  height:100%;
+  top:-38%;
+  left:3vw;
+
+}
+#bas{
+  top:20%;
+  position:absolute;
+  width:100%;
+  height:100%;
+}
+
+#bas_droite{
+  height:30%;
+  top:30%;
+  width:60%;
+  float:right;
+}
+
+#reseaux{
+  left:0%;
+  top:50%;
+  position:relative;
+  width:90%;
+  z-index:2;
+}
+
+#bas_louer{
+  position:relative;
+  right:3%;
+  bottom:0%;
+  width:20%;
+  z-index:2;
+}
+
+#louer{
+  width:20%;
+  bottom:5%;
+  right:5%;
+  position:absolute;
+  z-index:2;
+  cursor:pointer;
+}
+
+#video_coucou{
+  position:relative;
+  display:block;
+  bottom:0%;
+  left:1%;
+  width:90%;
+  height:83%;
+  z-index:1;
 }

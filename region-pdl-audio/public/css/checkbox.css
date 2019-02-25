@@ -1,0 +1,94 @@
+.cb_container {
+    float: left;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: "Ubuntu";
+    font-weight: 400;
+    font-size: 1.2vw;
+    color: #512C51;
+}
+
+.cb_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border-radius: 100%;
+    border-color: #512C51;
+    border-style: solid;
+}
+
+#periode_1+.checkmark {
+    background-color: #BA4A5C;
+}
+
+#periode_2+.checkmark {
+    background-color: #F4B483;
+}
+
+#periode_3+.checkmark {
+    background-color: #5DB77B;
+}
+
+#periode_nr+.checkmark {
+    background-color: #627075;
+}
+
+.cb_container:hover {
+    opacity: 0.7;
+}
+
+.cb_container input:checked~.checkmark {
+    background-color: white;
+}
+
+.cb_container input:checked~#periode_1>.checkmark {
+    background-color: #BA4A5C;
+}
+
+.cb_container input:checked~#periode_2 .checkmark {
+    background-color: #F4B483;
+}
+
+.cb_container input:checked~#periode_3 .checkmark {
+    background-color: #5DB77B;
+}
+
+.cb_container input:checked~#periode_nr .checkmark {
+    background-color: #627075;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.cb_container input:checked~.checkmark:after {
+    display: block;
+}
+
+.cb_container .checkmark:after {
+    top: 4.5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #512C51;
+}

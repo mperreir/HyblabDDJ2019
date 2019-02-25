@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="206px" height="230px" viewBox="0 0 206 230" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>RURAL@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="49.7718933%" y1="-1.34880492%" x2="50.218189%" y2="100.104136%" id="linearGradient-1">
+            <stop stop-color="#B9E0E1" offset="27%"></stop>
+            <stop stop-color="#D5EBEC" offset="83%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ECRAN-8" transform="translate(-183.000000, -238.000000)">
+            <g id="differente_typos_ecrann" transform="translate(183.000000, 224.000000)">
+                <g id="RURAL" transform="translate(0.000000, 14.000000)">
+                    <circle id="Oval" fill="url(#linearGradient-1)" fill-rule="nonzero" cx="104.71" cy="128.81" r="100.83"></circle>
+                    <polygon id="Shape" fill="#0C9E92" fill-rule="nonzero" points="159.87 87.46 85.42 87.46 86.53 144.36"></polygon>
+                    <polygon id="Shape" fill="#0C9E92" fill-rule="nonzero" points="183.88 115 168.14 87.46 159.15 87.46 158.01 88.35 183.88 133.61"></polygon>
+                    <path d="M184.99,134.38 L159.13,87.6095149 L134.928003,106.504946 L86.53,144.291132 L86.53,228.16 C92.5370434,229.100818 98.6097968,229.55895 104.69,229.53 C136.221022,229.557915 165.942949,214.807992 184.99,189.68 L184.99,134.38 Z" id="Shape" fill="#126969" fill-rule="nonzero"></path>
+                    <polygon id="Shape" fill="#0C9E92" fill-rule="nonzero" points="183.88 87.46 167.568468 87.46 183.88 116"></polygon>
+                    <g id="fenetre-eglise" transform="translate(124.000000, 100.000000)" stroke="#F5EFC1" stroke-width="1.5">
+                        <path d="M20.3,9.42 C19.8114319,4.2874377 15.5007632,0.367615428 10.345,0.367615428 C5.18923676,0.367615428 0.878568079,4.2874377 0.39,9.42 L0.39,47.32 L20.3,47.32 L20.3,9.42 Z" id="Shape" fill="#B9E0E1" fill-rule="nonzero"></path>
+                        <path d="M10.35,0.5 L10.35,47.32" id="Shape"></path>
+                        <path d="M0.4,11.09 L20.3,11.09" id="Shape"></path>
+                        <path d="M0.4,22.12 L20.3,22.12" id="Shape"></path>
+                        <path d="M0.4,33.14 L20.3,33.14" id="Shape"></path>
+                    </g>
+                    <g id="Tour" transform="translate(127.000000, 89.000000)">
+                        <path d="M32.15,2.56 L32.15,2.56 L1.81,55.64 L2.18,55.64 L2.18,137.53 C12.8237869,134.866866 22.9584351,130.475185 32.18,124.53 L32.15,2.56 Z" id="Shape" fill="#0D6F73" fill-rule="nonzero"></path>
+                        <path d="M62.48,94.29 L62.48,54.42 L32.15,1.34 L32.15,124.57 C44.300362,116.750971 54.6409347,106.427445 62.48,94.29 Z" id="Shape" fill="#0C9E92" fill-rule="nonzero"></path>
+                        <polyline id="Shape" stroke="#AD115B" stroke-width="3.32" points="63.6826055 55.4696352 32.1426834 0.290364782 0.987394499 55.4696352"></polyline>
+                        <circle id="Oval" fill="#B9E0E1" fill-rule="nonzero" cx="32.15" cy="33.32" r="8.77"></circle>
+                    </g>
+                    <g id="fenetre-tour-" transform="translate(150.000000, 150.000000)" stroke="#F5EFC1" stroke-width="1.5">
+                        <path d="M17.91,9.61 C17.75036,4.88441424 13.8732815,1.13609965 9.145,1.13609965 C4.41671853,1.13609965 0.539639962,4.88441424 0.38,9.61 L0.38,42.99 L17.91,42.99 L17.91,9.61 Z" id="Shape" fill="#B9E0E1" fill-rule="nonzero"></path>
+                        <path d="M9.15,0.85 L9.15,42.99" id="Shape"></path>
+                        <path d="M0.38,11.09 L17.92,11.09" id="Shape"></path>
+                        <path d="M0.38,20.79 L17.92,20.79" id="Shape"></path>
+                        <path d="M0.38,30.5 L17.92,30.5" id="Shape"></path>
+                    </g>
+                    <polygon id="Shape" fill="#AD115B" fill-rule="nonzero" points="168.47 87.46 184.21 87.46 134.68 0.79 85.15 87.46 140.94 87.46"></polygon>
+                    <g id="Arbre-1" transform="translate(31.000000, 54.000000)">
+                        <path d="M35.2,0.54 L35.08,0.66 L35.08,90 L35.32,90 C114.58,90 35.2,0.54 35.2,0.54 Z" id="Shape" fill="#DADC38" fill-rule="nonzero"></path>
+                        <path d="M24.69,89.32 C28.1571671,89.7424949 31.6471991,89.949559 35.14,89.94 L35.08,0.66 C20.3,20.94 7.81,40.42 13.08,50.25 C18.08,59.71 31.31,70.65 24.69,89.32 Z" id="Shape" fill="#DADC38" fill-rule="nonzero"></path>
+                        <path d="M24.57,89.32 C31.24,70.65 18.08,59.71 13.01,50.25 C7.81,40.42 20.3,20.94 35.01,0.66 C31.92,4.17 -34.91,81.47 24.57,89.32 Z" id="Shape" fill="#9BB81F" fill-rule="nonzero"></path>
+                        <path d="M35.33,121.47 L35.33,0.67" id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round"></path>
+                    </g>
+                    <g id="Tour-2" transform="translate(51.000000, 119.000000)" fill-rule="nonzero">
+                        <path d="M41,35.85 L20.82,35.85 L20.82,105.56 C27.3827761,107.670323 34.1449079,109.101161 41,109.83 L41,35.85 Z" id="Shape" fill="#0C9E92"></path>
+                        <path d="M20.82,35.85 L0.63,35.85 L0.63,96.23 C6.95871468,100.143582 13.7380608,103.276386 20.82,105.56 L20.82,35.85 Z" id="Shape" fill="#0D6F73"></path>
+                        <rect id="Rectangle-path" stroke="#F5EFC1" stroke-width="1.5" fill="#B9E0E1" x="19.27" y="46.96" width="3.11" height="13.52"></rect>
+                        <rect id="Rectangle-path" stroke="#F5EFC1" stroke-width="1.5" fill="#B9E0E1" x="19.27" y="69.67" width="3.11" height="13.52"></rect>
+                        <polygon id="Shape" fill="#AD115B" points="20.7 0.31 0.39 35.85 41.01 35.85"></polygon>
+                    </g>
+                    <g id="Arbre-2" transform="translate(0.000000, 116.000000)">
+                        <path d="M27.27,68.89 C26.47,50.09 21.54,49.89 15.4,35.68 C9.4,21.88 16.17,10.3 26.4,0.68 C11.75,1.68 0.04,23.38 0.04,38.16 C-1.17961196e-16,52.73 25.38,53.66 27.27,68.89 Z" id="Shape" fill="#9BB81F" fill-rule="nonzero"></path>
+                        <path d="M27.27,68.89 C27.3427175,69.4972975 27.3794484,70.1083647 27.38,70.72 C27.38,53.72 54.76,53.3 54.76,38.17 C54.76,23.04 42.5,0.65 27.38,0.65 C27.04,0.65 26.7,0.65 26.38,0.65 C16.19,10.26 9.45,21.84 15.38,35.65 C21.54,49.85 26.47,50.09 27.27,68.89 Z" id="Shape" fill="#DADC38" fill-rule="nonzero"></path>
+                        <polyline id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round" points="27.38 76.8 27.38 49.52 27.38 16.24"></polyline>
+                        <path d="M27.38,41.06 L14.01,27.69" id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M51.02,34.25 L27.38,53.68" id="Shape" stroke="#F5EFC1" stroke-width="1.5" stroke-linecap="round"></path>
+                    </g>
+                    <g id="Arbre-rose" transform="translate(38.000000, 141.000000)">
+                        <path d="M1.92,38.53 C-1.76,38.53 6.74,51.28 3.54,51.28 C0.34,51.28 9.76,63.39 9.76,63.39 C9.76,42.64 1.56,42.26 4.27,39.1 C6.98,35.94 1.96,29.1 4.27,27.26 C6.58,25.42 3.84,13.4 5.86,12.67 C7.88,11.94 5.86,3 9.76,0.06 C0.33,0.06 8.03,11.34 3.23,11.33 C-1.57,11.32 5.35,26.51 1.44,26.51 C-2.47,26.51 5.6,38.53 1.92,38.53 Z" id="Shape" fill="#511123" fill-rule="nonzero"></path>
+                        <path d="M4.27,39.1 C1.56,42.26 9.76,42.64 9.76,63.39 C9.76,63.39 19.19,51.28 15.99,51.28 C12.79,51.28 21.28,38.53 17.6,38.53 C13.92,38.53 21.99,26.53 18.08,26.53 C14.17,26.53 21.08,11.34 16.29,11.35 C11.5,11.36 19.19,0.08 9.76,0.08 C5.86,3.02 7.88,11.97 5.86,12.69 C3.84,13.41 6.58,25.4 4.27,27.28 C1.96,29.16 6.98,35.93 4.27,39.1 Z" id="Shape" fill="#AD115B" fill-rule="nonzero"></path>
+                        <path d="M9.77,70.92 L9.77,0.06" id="Shape" stroke="#F5EFC1" stroke-width="1.27" stroke-linecap="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
