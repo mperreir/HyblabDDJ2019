@@ -14,7 +14,7 @@ function sortByy1(key1, key2){
 function GetAllData()
 {
 
-  fetch('/data/')
+  fetch('data/')
       .then(function (response){
           if( response.ok )
           {
@@ -34,7 +34,7 @@ function GetAllData()
 // les genres  accompagnés par leurs nombre de blogs
 function GetGenres()
 {
-  fetch('/BlogParGenre/')
+  fetch('BlogParGenre/')
       .then(function (response){
           if( response.ok )
           {
@@ -72,7 +72,7 @@ function GetGenres()
 function tracksdesblog(key) {
   key= key.replace(" ", "_");
   console.log("lien",key);
-  let lien="/tracks/"+key
+  let lien="tracks/"+key
   fetch(lien)
     .then(function (response){
         if( response.ok )
@@ -110,7 +110,7 @@ function followersdesblog(key)
     //$(document).ready(function(){
     key = key.replace(" ", "_");
     console.log("lien",key)  ;
-    let lien="/followers/"+key
+    let lien="followers/"+key
     fetch(lien)
         .then(function (response){
             if( response.ok )
@@ -156,7 +156,7 @@ function artistesdesblog(key)
        key = key.replace(" ", "_");
        //$(document).ready(function(){
        console.log("lien",key)  ;
-       let lien="/artistes/"+key
+       let lien="artistes/"+key
        fetch(lien)
            .then(function (response){
                if( response.ok )
@@ -206,7 +206,7 @@ function artistesdesblog(key)
 
 function bloginformations(key) {
  key = key.replace(' ', '_')
-  let lien="/blogs/"+key
+  let lien="blogs/"+key
    fetch(lien)
    .then(function (response){
     if( response.ok )
