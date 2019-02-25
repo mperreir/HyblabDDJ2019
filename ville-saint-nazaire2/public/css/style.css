@@ -1,15 +1,964 @@
-/* just a sample css rule to show that everything works */
-footer p
-{
-  font-size: small;
+section {
+  /*
+  font-size: 35px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  */
+  background-color: white;
+}
+
+.jeuxPersona {
+  top: 0;
+  position: absolute;
+}
+
+.jeux {
+  background-color: #B3E540;
+  background-size: 50% auto;
+}
+
+.persona {
+  padding-bottom: 130px;
+  text-align: center;
+  /*
+  height: 400px;
+  margin-left: -10px;
+  margin-top: -10px;
+  */
+}
+
+.personaBulle {
+    height: 511px;
+    width: 500px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    background-color: #EB4834;
+    position: absolute;
+    margin-left: 245px;
+    float: left;
+    margin-top: 69.5px;
+}
+.imgStep {
+  height: 10px;
+}
+
+.persona .imgBulle{
+  padding-left: 130px;
+  padding-right: 130px;
+}
+
+.imgGraph {
+    padding-left: 1222px;
+    padding-top: 9%;
+    height: -72rem;
+}
+.persona .imgPersona {
+    padding-top: 24px;
+    /* position: absolute; */
+    margin-top: 82px;
+    height: 503px;
+    margin-left: -289px;
+}
+#bikeMoove {
+  z-index: 9999;
+}
+
+#bikeMoove2 {
+  z-index: 9999;
+}
+
+#bikeMoove3 {
+  z-index: 9999;
+}
+
+.progress {
+    z-index: 1000;
+    display: flex;
+    width: 150%;
+
+    padding-bottom: 216px;
+    padding-top: 178px;
+    margin-right: 33px;
+    margin-top: 122px;
+}
+.progress .progress-track {
+    position: absolute;
+    top: 6px;
+    margin-top: 774px;
+    /* margin-top: 130px; */
+    height: 5px;
+    width: 1000px;
+    margin-left: 455px;
+    background-color: #EB4834;
+    z-index: 9;
+}
+.progress .progress-step {
+    position: relative;
+    min-width: 337px;
+    margin-top: 32px;
+    max-width: 337px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.progress .progress-step:last-child:after {
+  display: none;
+}
+
+.progress .progress-step:before {
+    /* content: "\f00c"; */
+    content: "\c";
+    display: flex;
+    margin: 2px 443px;
+    margin-bottom: 10px;
+    width: 18px;
+    height: 17px;
+    background: #EB4834;
+    border: 4px solid #EB4834;
+    border-radius: 100%;
+    color: #fff;
+}
+.progress .progress-step:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 133%;
+    width: 0%;
+    transition: width 1s ease-in;
+    height: 5px;
+    background: #B3E540;
+    z-index: 9999;
+}
+
+.progress .progress-step.is-active {
+  color: #EB4834;
+}
+.progress .progress-step.is-active:before {
+  border: 4px solid #B3E540;
+  animation: pulse 2s infinite;
+}
+.progress .progress-step.is-complete {
+  color: #B3E540;
+}
+.progress .progress-step.is-complete:before {
+  font-family: FontAwesome;
+  font-size: 10px;
+  color: #fff;
+  background: #EB4834;
+  border: 4px solid transparent;
+}
+.progress .progress-step.is-complete:after {
+  background: #B3E540;
+  animation: nextStep 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(33, 131, 221, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(33, 131, 221, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(33, 131, 221, 0);
+  }
+}
+@keyframes nextStep {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.container {
+  margin: 50px 100px;
+}
+
+.nextStep {
+  position: absolute;
+  right: 100px;
+  bottom: -142px;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.progress .progress-step img {
+  display: none;
+  width:100px;
+}
+
+.progress .progress-step.is-active img {
+    display: block;
+    position: absolute;
+    left: 405px;
+    z-index: 9999;
+    width: 129px;
+    top: -91px;
+    width: 108px;
+    height: 102px;
+}
+
+
+
+#mavideo {
+  position: fixed;
+  right: 0;
+  bottom: 100px;
+  z-index: 9999;
+  width: auto; /* En pratique : supérieur à la largeur du viewport */
+  height: 100%;
+  transition: all 3s 1s;
+  transform: translateY(50px);
+}
+@media (min-aspect-ratio: 16/9) {
+  #mavideo {
+    z-index: 9999;
+    position: fixed;
+    right: 0;
+    bottom: 100px;
+    top:0;
+    width: 100%;
+    height: auto; /* En pratique : supérieur à la hauteur du viewport */
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  #mavideo {
+    position: fixed;
+    z-index: 9999;
+    right: 0;
+    bottom: 0;
+    top:0;
+    width: auto; /* En pratique : supérieur à la largeur du viewport */
+    height: 100%;
+  }
+}
+
+body{font-family: sans-serif; background:#191919;}
+.bubble-text {
+    color: #fff;
+    padding: 25px 25px;
+    border-radius: 3px;
+    position: absolute;
+    margin-top: -806px;
+    margin-left: 458px;
+    height: 154px;
+    width: 273px;
+    color: #FFFFFF;
+    font-family: RubikR;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 17px;
+    text-align: justify;
+    background-image: url(../imgJeux/guillemets.png);
+    background-repeat: no-repeat;
+    background-position: 0px 38px;
+}
+
+
+
+.bubble-text::after{
+  content:""; 
+  border-left:20px solid transparent;
+  border-right:20px solid transparent;
+  transform: rotate(90deg);
+  top: 69px;
+  right: 216px;
+  position: absolute;
+ 
+}
+
+.name {
+    color: #FFFFFF;
+    font-family: Rubik;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: -871px;
+    margin-left: 291px;
+    line-height: 31px;
+    position: absolute;
+    text-align: right;
+}
+
+.bulle {
+    height: 177px;
+    position: absolute;
+    z-index: 1;
+    margin-left: -151px;
+    margin-top: 128px;
+}
+
+.graphic-title {
+  height: 58px;
+  width: 473px;
+  text-align: left;
+  padding-top: 3%;
+  color: #FFFFFF;
+  font-family: Rubik;
+  position: absolute;
+  margin-left: 1223px;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 29px;
+}
+
+.imgDeco {
+  padding-top: 321px;
+  padding-left: 63px;
+  position: absolute;
+}
+
+#bikeMoove {
+    margin-top: -54px;
+    margin-left: 428px;
+    margin-top: -247px;
+    position: absolute;
+}
+
+
+
+#bikeMoove2 {
+    margin-top: -54px;
+    margin-left: 433px;
+    margin-top: -253px;
+    height: 60px;
+    width: 45px;
+    position: absolute;
+}
+
+#bikeMoove3 {
+    margin-top: -54px;
+    margin-left: 415px;
+    margin-top: -252px;
+    height: 60px;
+    width: 45px;
+    position: absolute;
+}
+
+.bullejerome{
+  margin-left: -128px;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  color: white;
+  border: 1px solid red;
+  background-color: white;
+
+}
+
+.frise{
+  margin-top: -608px;
+  margin-right: -24px;
+  float: right;
+}
+
+.nextStep {
+  border-radius: 4px;
+  font-size: 12px;
+  color: white;
+  font-family: Rubik;
+  margin-top: 60px; 
+  background-color: #B3E540;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.buttonNext {
+    /* border: 5px solid #ABDA3E; */
+    width: 141px;
+    color: #ABDA3E;
+    font-family: Rubik;
+    position: relative;
+    margin-top: 90px;
+    margin-left: 127%;
+    margin-right: 39px;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 29px;
+    text-align: center;
+    margin-left: 1539px;
+    margin-top: 754px;
+    position: absolute;
+    height: 60px;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    font-family: Rubik;
+    background-color: #B3E540;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.buttonImgPersona1 {
+    position: absolute;
+    margin-left: 527px;
+    z-index: 100;
+    height: 75px;
+    width: 75px;
+    margin-top: 85px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+.buttonImgPersona2 {
+    position: absolute;
+    margin-left: 615px;
+    z-index: 100;
+    height: 75px;
+    width: 75px;
+    margin-top: 86px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+.buttonImgRetour {
+  position: absolute;
+  margin-top: 87px;
+  z-index: 100;
+  margin-left: 189px;
+}
+
+/*Vue choix perso */
+
+.sectionPersona{
+  background-color: #EB4834;
+}
+
+.choixPerso {
+  text-align: center;
+  height: 700px;
+  margin-top: -25px;
+  margin-left: -10px;
+  margin-bottom: -45px;
+  margin-right: -10px;
+  
+}
+
+.choixPersoImg {
+    background-color: #FAFAFA;
+    text-align: center;
+    height: 112%;
+    width: 70%;
+    margin-top: -111px;
+    border-radius: 30px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.jeanne {
+  position: absolute;
+  margin-top: 10px;
+  margin-top: 235px;
+  margin-left: -440px;
+  opacity: 1;
+  height: 465px;
+}
+
+.camille {
+  position: absolute;
+  margin-top: 10px;
+  margin-top: 231px;
+  margin-left: -234px;
+  height: 465px;
+}
+
+.jerome {
+  position: absolute;
+  margin-top: 234px;
+  margin-left: 16px;
+  height: 465px;
+}
+
+.descriptionPersona {
+  background-color: #EB4834;
+  width: 100%;
+  height: 155px;
+  position: absolute;
+  bottom:0;
+  display: none;
+}
+
+.contentPersona {
+    margin-left: 34%;
+    margin-right: 32%;
+    color: #FFFFFF;
+    font-family: RubikR;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: justify;
+    position: absolute;
+    margin-top: 30px;
+}
+
+.titlePersona {
+  color: #B3E540;
+  font-family: Rubik;
+  position: absolute;
+  font-size: 36px;
+  margin-top: 45px;
+  font-weight: bold;
+  margin-left: 25%;
+  margin-right: 340px;
+}
+
+.choisir {
+  background-color: rgba(235,72,52,0.3);
+  border: 5px solid #ABDA3E;
+  height: 51px;
+  width: 141px;
+  color: #ABDA3E;
+  font-family: Rubik;
+  position: relative;
+  margin-top: 45px;
+  margin-left: 50%;
+  margin-right: 0px;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 29px;
   text-align: center;
 }
 
-header{
-  text-align: center;
+a {
+    display: block;
+    color: #ABDA3E;
+    text-decoration: none;
 }
 
-header img{
-  max-width: 100%;
-	height: auto;
+a:hover {
+    color: #ABDA3E;
+    text-decoration: none;
 }
+
+.high-title {
+    height: 135px;
+    margin-left: 25%;
+    position: absolute;
+    margin-top: 56px;
+    width: 814px;
+    color: #EB4834;
+    font-family: RubikB;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 55px;
+    position: absolute;
+}
+
+.frisejerome {
+        right: -18rem ! important;
+}
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 2010px) {
+  .progress {
+        width: 113%;
+}
+
+  .progressjerome {
+        width: 113%;
+}
+
+.frise {
+
+    position: absolute;
+    right: -20rem;
+
+}
+
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 1252px) {
+  .choixPersoImg {
+    width: 800px;
+    margin-left: 17%;
+  }
+  .high-title {
+    margin-left: 20%;
+  }
+  .contentPersona {
+    margin-left: 390px;
+  }
+  .titlePersona {
+    margin-left: 230px;
+  }
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 1180px) {
+  .choixPersoImg {
+    margin-left: 14%;
+  }
+  .titlePersona {
+    margin-left: 22%;
+  }
+  .contentPersona {
+    margin-left: 35%;
+  }
+
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 1100px) {
+  .choixPersoImg {
+    margin-left: 13%;
+  }
+  .contentPersona {
+    margin-left: 43%;
+  }
+  .contentPersona {
+    margin-left: 35%;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 1050px) {
+  .choixPersoImg {
+    margin-left: 10%;
+  }
+  .high-title {
+    margin-left: 13%;
+  }
+  .contentPersona {
+    margin-left: 38%;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 980px) {
+  .contentPersona {
+    margin-left: 45%;
+  }
+  .choixPersoImg {
+    margin-left: 5%;
+  }
+  .titlePersona {
+    margin-left: 14%;
+  }
+  .contentPersona {
+    margin-left: 30%;
+  }
+}
+
+.redcontainer2 img{
+
+      height: 94rem;
+  }
+
+@font-face {
+  font-family: 'Rubik';
+  src: url(../font/Rubik-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'RubikR';
+  src: url(../font/Rubik-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'RubikB';
+  src: url(../font/Rubik-Bold.ttf);
+}
+
+
+
+
+
+
+
+/*****************/
+.slide1{
+  background-color: #EB4834; 
+}
+.parag{
+  width: 51%;
+  margin-top: 6%;
+  margin-left: 7%;
+  position: absolute;
+}
+.frise_trajet2{
+  margin-left: 26.4%;
+  margin-top: 20%;
+  max-width: 75%;
+  height: auto;
+  display: block;
+}
+.titre_slide1{
+  color: #FAFAFA;
+  font-size: 4vw;
+  font-weight: 900;
+  line-height: 68px;
+  margin-left: 12%;
+  text-align: left;
+  font-family: RubikB;
+}
+.et-vous-quelles-eco {
+  height: 192px;
+  width: 674.77px;
+  color: #FAFAFA;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 48px;
+}
+.redcontainer{
+    /* text-align: center; */
+    background-color: #EB4834;
+    height: 38%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+
+}
+.titrepage{
+    margin-top: 5%;
+    margin-bottom: 3%;
+    font-size: 2.2vw;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Rubik;
+    font-weight: bold;
+    line-height: 27px
+}
+
+
+.frise_trajet{
+      margin-left: 42.5%;
+    margin-top: -16%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.imageF {
+    height: 0px;
+    margin-top: -10px;
+    right: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.slidecontainer {
+position: absolute;
+    width: 68%;
+    z-index: 1;
+    margin-left: 16%;
+    margin-top: 2rem;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 10rem;
+  height: 1rem;
+  border-radius: 5px;
+  background: #FFFFFF;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.km_text{
+  color: #FFFFFF;
+  margin-left: 45%;
+  margin-top:2%;
+  font-family: Rubik;
+    font-weight: bold;
+  font-size: 1.5vw;
+
+}
+
+.My_chart{
+    margin-top: -6%;
+    margin-left: 15%;
+    position: absolute;
+}
+
+text{
+  
+  display: block;
+  font-weight: bold;
+}
+
+
+
+.redcontainer2{
+  text-align: center;
+  background-color: #EB4834;
+  height: 73.2rem;
+  width: 100%;
+  top:0;
+  position: absolute;
+
+}
+.text_final{
+  text-align: center;
+  color: #FFFFFF;
+  font-family: Rubik;
+  font-weight: bold;
+
+}
+.projet_com{
+  font-size: 2vw;
+}
+
+.logo_saint_nazaire{
+max-width: 18%;
+  height: auto;
+  display: block;
+    
+}
+
+.port_par{
+top: 30%;
+    /* position: absolute; */
+    left: 70rem;
+    font-size: 2vw;
+}
+.agr_team{
+    max-width: 23%;
+    height: auto;
+}
+.polytech_team{
+    max-width: 20%;
+    height: auto;
+
+}
+.science_com_team{
+  max-width: 22%;
+  height: auto;
+}
+
+.titre_ecole{
+  text-align: center;
+  color: #FFFFFF;
+  font-family: Rubik;
+  font-weight: bold;
+  font-size: 2vw;
+}
+.titre_agr{
+  position: absolute;
+  bottom: 16rem;
+  left: 53rem;
+}
+.titre_popo{
+  position: absolute;
+  bottom: 16rem;
+  left: 88rem;
+}
+.titre_audencia{
+  position: absolute;
+  bottom: 16rem;
+  right: 44rem;
+}
+.nom_teams{
+  color: #FFFFFF;
+  font-family: Rubik;
+  font-weight: bold;
+  font-size: 1vw;
+
+}
+
+
+.partenaire{
+  color: #EB4834;
+  font-family: Rubik;
+  font-weight: bold;
+  font-size: 2vw;
+}
+
+.logo_agr{
+max-width: 6%;
+  height: auto;
+  display: block;
+}
+.logo_polytech{
+max-width: 14%;
+  height: auto;
+  display: block;
+}
+.logo_sciencescom{
+max-width: 14%;
+  height: auto;
+  display: block;
+}
+.logo_univ_nantes{
+ max-width: 9%;
+  height: auto;
+  display: block;
+}
+.logo_pdl{
+max-width: 12%;
+  height: auto;
+  display: block;
+}
+.logo_hyblab{
+ max-width: 11%;
+  height: auto;
+  display: block;
+}
+.logo_medialab{
+ max-width: 16%;
+  height: auto;
+  display: block;
+}
+.logo_open_source{
+ max-width: 5%;
+  height: auto;
+  display: block;
+}
+.logo_cc{
+ max-width: 5%;
+  height: auto;
+  display: block;
+}
+
+.top_mar{
+  margin-top: 4vw;
+}
+
+/*************/
+
+
+
+.maps iframe{
+    pointer-events: none;
+}
+
+/* Style the links inside the navigation bar */
+
+
+
+
+
+.map {
+  width : 100%;
+  height:100%;
+  overflow:hidden;
+}
+
