@@ -24,7 +24,7 @@ function sortByy1(key1, key2){
 function GetAllData()
 {
 
-  fetch('/data/')
+  fetch('data/')
       .then(function (response){
           if( response.ok )
           {
@@ -45,7 +45,7 @@ function GetAllData()
     function tracksdesblog(key) {
       key= key.replace(" ", "_");
       console.log("lien",key);
-      let lien="/tracks/"+key
+      let lien="tracks/"+key
       fetch(lien)
           .then(function (response){
               if( response.ok )
@@ -96,7 +96,7 @@ function GetAllData()
              //$(document).ready(function(){
              key = key.replace(" ", "_");
              console.log("lien",key)  ;
-             let lien="/followers/"+key
+             let lien="followers/"+key
              fetch(lien)
                  .then(function (response){
                      if( response.ok )
@@ -148,7 +148,7 @@ function GetAllData()
                     key = key.replace(" ", "_");
                     //$(document).ready(function(){
                     console.log("lien",key)  ;
-                    let lien="/artistes/"+key
+                    let lien="artistes/"+key
                     fetch(lien)
                         .then(function (response){
                             if( response.ok )
@@ -173,7 +173,7 @@ function GetAllData()
     function GetGenres()
     {
       $("#selectcontry").hide();
-      fetch('/BlogParGenre/')
+      fetch('BlogParGenre/')
           .then(function (response){
               if( response.ok )
               {
@@ -243,7 +243,7 @@ function GetAllData()
 
         function bloginformations(key) {
           key = key.replace(' ', '_')
-           let lien="/blogs/"+key
+           let lien="blogs/"+key
             fetch(lien)
             .then(function (response){
              if( response.ok )
@@ -569,7 +569,7 @@ function creehistogramReflet(id,data1,val)
 }
 function Getpays()
 {
-  fetch('/pays/')
+  fetch('pays/')
       .then(function (response){
           if( response.ok )
           {

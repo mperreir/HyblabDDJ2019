@@ -7,14 +7,15 @@ var http = require('http');
 var app = express();
 let fs = require('fs');
 let fastcsv = require('fast-csv');
-let readableStreamInput = fs.createReadStream('public/data/musicdata.csv');
+let readableStreamInput = fs.createReadStream(path.join(__dirname,'public/data/musicdata.csv'));
 let csvData = [];
 let pays=[];
 let k=0;
 app.use(express.static(path.join(__dirname, 'public')));
-app.listen(3000, function(req, res) {
-  console.log('en ecoute sur le port 3000');
-});
+// No need for manual listen in hyblab modules !!!
+//app.listen(3000, function(req, res) {
+//  console.log('en ecoute sur le port 3000');
+//});
 fastcsv.fromStream(readableStreamInput, {headers: true,strictColumnHandling: true})
         .on('data', (data) => {
         let rowData = {};
