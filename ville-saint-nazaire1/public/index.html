@@ -1,40 +1,211 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
-  <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-    <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-		<!-- Basic viewport setting for mobile friendly page -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
-		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-		<!-- Simple sample script that loads data from a dummy json file -->
-		<script src="js/example.js" defer></script>
-  </head>
-  <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+<html lang="fr">
+<meta charset="UTF-8">
+<head>
+	<title>Hyblab 2019</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style_checkbox.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/svg-injector.min.js" sdefer></script>
+	<script src="js/script.js" defer></script>
+</head>
+<body>
+	<div id="container">
+		<!-- Page d'accueil -->
+		<div id="accueil">
+			<video id="video_accueil" autoplay loop muted preload="metadata">
+				<source src="img/VIDEO_ACCUEIL.mp4">
+			</video>
+			<button id="bouton_accueil" class="bouton" onclick="en_avant_toute()" type="button"> EN AVANT TOUTE !</button>
+		</div>
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
-      <h1>Hyblab Datajournalism 2019</h1>
-    </header>
+		<!-- Ecran 2 -->
+		<div id="presentation">
+			<video id="leon_mov" muted preload="metadata">
+				<source src="img/ecran2/ARRIVEE_RAPHAEL.mp4">
+			</video>
+			<div id=dialogue>
+				<img id="bulle_presentation" class="bulle" src="img/ecran2/bulle_1.png"  alt="bulle"/>
+				<img id="reponse1" class="reponse" src="img/ecran2/Bouton_D_accord.png"  onclick="d_accord()" alt="d'accord"/>
+				<img id="bulle_presentation2" class="bulle" src="img/ecran2/bulle_2.png" alt="bulle_2"/>
+				<img id="reponse2" class="reponse" src="img/ecran2/Bouton_On_y_va.png" onclick="curseurs()" alt="on y va !" >
 
-    <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
+			</div>
+		</div>
 
-		<p>Here is some data from a json file : <span id="data"></span><p>
+		<!-- Ecran 3 -->
+		<div id="page_personnalisation">
+			<img id="objet_curseurs" src="img/slider/objet_musee.svg"  alt="objet"/>
+			<div id="personnalisation"></div>
+			<div id="personnalisation2">
+				<span id="text_personnalisation"> Alors, qu'avez vous envie de faire aujourd'hui ? </span>
+				<div id="div_personnage">
+					<img id="socle_curseurs" src="img/slider/socle_musee.png"  alt="socle"/>
+					<img id="velo_curseurs" src="img/slider/leon_velo_moyen.png"  alt="velo"/>
+				</div>
+				<div id="curseurs">
+					<div id="curs_dist">
+						<label for="distance">Distance (Km) : <span id="val"></span></label>
+						<br/><br/>
+						<div width="100%">
+							<input oninput="actualiser_dist()" onchange="actualiser_dist()" type="range" min="10" max="30" step="1" value="20" class="slider" id="distance" name="distance">
+						</div><br/>
+						<ul class="range-labels-dist">
+							<li onclick="click_curseur_dist('30')">30</li>
+							<li onclick="click_curseur_dist('23')">23</li>
+							<li onclick="click_curseur_dist('16')">16</li>
+							<li onclick="click_curseur_dist('10')">10</li>
+						</ul>
+					</div>
+					<div id="curs_theme">
+						<label for="distance">Thème :</label>
+						<br/><br/>
+						<div width="100%">
+							<input oninput="actualiser_decor()" onchange="actualiser_decor()" type="range" min="1" max="3" step="1" value="2" class="slider" id="num_theme" name="theme" >
+						</div>
+						<br/>
+						<ul id="theme" class="range-labels-theme">
+							<li style="color:#11c1ea" onclick="click_curseur_theme('3')">Plage / Bord de Mer</li>
+							<li style="color:#7d3549" onclick="click_curseur_theme('2')">Musée / Culturel</li>
+							<li style="color:#004600" onclick="click_curseur_theme('1')">Forêt / Nature</li>
+						</ul>
+					</div>
+				</div>
+				<button id="bouton_personnalisation" class="bouton" onclick="c_est_parti()" type="button"> C'EST PARTI !</button>
+			</div>
+		</div>
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2019</p>
-    </footer>
-    </div>
-  </body>
+		<!-- Ecran 3 -->
+		<div id="page_carte">
+
+			<img class="circuit" id="circuits" src="img/circuits/map_circuits.svg" title="">
+
+			<fieldset id="choix_lieu">
+
+				</br>
+				<span id="texte_leon_circuit" class="texte_leon_classe"></span></br>
+				<span id="texte_leon_circuit2" class="texte_leon_classe" ></span>
+				<br/>
+
+				<div id = "liste_parcours"></div>
+
+				<br/>
+				<span id="texte_parcours"> Quelles informations souhaitez-vous faire apparaitre sur la carte ? </span><br/>
+				<div id="lieux" >
+					<div class="checkbox_lieu">
+						<input class="css-checkbox lrg" type="checkbox" id="Wifi-checkbox" name="hotspot" value="checkbox" onchange="modif_checkbox('Wifi')">
+						<label class="css-label vlad lrg" for="Wifi-checkbox"> Wi-fi </label>
+					</div>
+
+					<div class="checkbox_lieu">
+						<input class="css-checkbox lrg" type="checkbox" id="Bar-checkbox" name="bars" value="checkbox" onchange="modif_checkbox('Bar')">
+						<label class="css-label vlad lrg" for="Bar-checkbox"> Bars / Cafés </label>
+					</div>
+
+					<div class="checkbox_lieu">
+						<input class="css-checkbox lrg" type="checkbox" id="Point_dinteret-checkbox" name="culturels" value="checkbox" onchange="modif_checkbox('Point_dinteret')">
+						<label class="css-label vlad lrg" for="Point_dinteret-checkbox"> Points culturels </label>
+					</div>
+
+					<div class="checkbox_lieu">
+						<input class="css-checkbox lrg" type="checkbox" id="Toilettes-checkbox" name="toilettes" value="checkbox" onchange="modif_checkbox('Toilettes')">
+						<label class="css-label vlad lrg" for="Toilettes-checkbox"> Toilettes publiques </label>
+					</div>
+
+					<div class="checkbox_lieu">
+						<input class="css-checkbox lrg" type="checkbox" id="Monument-checkbox" name="office" value="checkbox" onchange="modif_checkbox('Monument')">
+						<label class="css-label vlad lrg" for="Monument-checkbox"> Monuments </label>
+					</div>
+
+					<div class="checkbox_lieu">
+						<input class="css-checkbox lrg" type="checkbox" id="Restau-checkbox" name="restaurants" value="checkbox" onchange="modif_checkbox('Restau')">
+						<label class="css-label vlad lrg" for="Restau-checkbox"> Restaurants </label>
+					</div>
+				</div>
+
+				<img id="leon_carte" src="img/slider/leon_velo_moyen.png" alt="leon le cameleon"/>
+				<img id="socle_carte" src="img/slider/socle_musee.png"  alt="socle carte"/>
+
+			</fieldset>
+
+			<button id="bouton_retour" class="bouton" onclick="retour()" type="button"> RETOUR </button>
+
+			<fieldset id="choix_parcours">
+				<div id="nom_circuit"> </div><br/>
+				<div id="kilometre_temps"> </div><br/>
+				<div id="description"> </div><br/>
+				<div id="text_avant_pdf"> </div><br/>
+				<div id="lien_pdf"> </div><br/>
+			</fieldset>
+
+			<button id="bouton_credits" class="bouton" onclick="credits()" type="button"> SUIVANT </button>
+
+		</div>
+
+		<!-- Ecran 4 -->
+		<div id="page_credits">
+
+			<img id="fond_image" src="img/fond_image.jpg">
+
+			<div class="credits_rectangle" id=rect_droite>
+
+				<div id="logo">
+					<img class="credits_logo" id="logo_hyblab" src="img/credits/HYBLAB.png" alt="logo_hyblab">
+					<img class="credits_logo" id="logo_audencia" src="img/credits/AUDENCIA.png" alt="logo_audencia">
+					<img class="credits_logo" id="logo_polytech" src="img/credits/POLYTECH.png" alt="logo_polytech">
+					<img class="credits_logo" id="logo_agr" src="img/credits/AGR.png" alt="logo_agr">
+				</div>
+
+				<p id="credits_noms"> Gautier Marchal / Luna Marie-Taillefer </br> Théo Richard / Allan Gomes </br> Julien Trannoy / Nicolas Barbanchon </br> Cléo Chaplin / Luc Demany
+				</p>
+
+				<div id="credits_sources">
+					<p> Les données de notre équipe nous ont été fournies par la ville de Saint-Nazaire.</p>
+					<ul>
+					 	<li>www.data.agglo-carene.fr</li>
+						<li>www.montoirdebretagne.fr</li>
+						<li>www.ville-pornichet.fr</li>
+						<li>www.mairie-besne.fr</li>
+						<li>www.lachapelledesmarais.fr</li>
+						<li>www.ville-donges.fr</li>
+						<li>www.saint-andre-des-eaux.fr</li>
+						<li>www.saint-joachim.com</li>
+						<li>www.saintmalodeguersac.fr</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="credits_rectangle" id="rect_gauche">
+				<button id="bouton_retour2" class="bouton" onclick="retour_2()" type="button"> RETOUR </button>
+				<div id="logos_gauche">
+					<div id="logo_gauche_gauche">
+						<img id="logo_st_naz" src="img/credits/logo_st_nazaire.png">
+					</div>
+					<div id="logos_gauche_droite">
+						<img id="logo_carene" src="img/credits/logo_carene.png">
+					</div>
+				</div>
+				<div id="bas">
+					<div id="bas_gauche">
+					</div>
+					<div id="bas_droite">
+						<img id="reseaux" src="img/credits/reseaux.svg">
+					</div>
+				</div>
+				<video id="video_coucou" loop muted preload="metadata">
+					<source src="img/credits/COUCOU.mp4">
+				</video>
+				<div id="bas_bouton">
+					<img id="louer" src="img/credits/louer.png">
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+</meta>
 </html>

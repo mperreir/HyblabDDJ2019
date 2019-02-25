@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="49px" height="107px" viewBox="0 0 49 107" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>60589D72-7DDA-4FA8-A660-560AB2AE3142@2x</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Intro-2" transform="translate(-876.000000, -544.000000)" stroke="#FF7BAC" stroke-width="2">
+            <g id="illu">
+                <g transform="translate(122.000000, 224.000000)">
+                    <g id="Micro" transform="translate(755.000000, 321.000000)">
+                        <rect id="Rectangle-path" transform="translate(23.847903, 29.528396) rotate(0.390000) translate(-23.847903, -29.528396) " x="7.07790329" y="0.468396462" width="33.54" height="58.12" rx="16.77"></rect>
+                        <path d="M8.48,18.29 L17.56,18.35" id="Shape"></path>
+                        <path d="M8.41,28.85 L17.49,28.91" id="Shape"></path>
+                        <path d="M8.33,39.41 L17.41,39.48" id="Shape"></path>
+                        <path d="M30.27,18.44 L39.35,18.5" id="Shape"></path>
+                        <path d="M30.2,29 L39.27,29.06" id="Shape"></path>
+                        <path d="M30.12,39.56 L39.2,39.62" id="Shape"></path>
+                        <path d="M46.92,43.92 C47.0264682,52.3125898 42.5897329,60.1076802 35.3193907,64.3016073 C28.0490485,68.4955343 19.0799781,68.4336387 11.8682103,64.1397704 C4.65644255,59.8459021 0.327712657,51.9903211 0.55,43.6" id="Shape"></path>
+                        <polyline id="Shape" points="19.92 92.69 20.1 66.92 26.83 66.97 26.65 92.74"></polyline>
+                        <path d="M12.43,104.59 L34.22,104.74 C34.22,104.74 23.15,89.69 12.43,104.59 Z" id="Shape"></path>
+                        <path d="M14.06,9.49 C14.4670658,8.77464896 15.0066851,8.14339621 15.65,7.63" id="Shape"></path>
+                        <path d="M18.5,5.56 C18.5,5.56 19.11,5.27 19.75,5" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
