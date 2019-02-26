@@ -1,0 +1,49 @@
+LIENS CODEPEN 
+
+liens librairie swiper
+https://idangero.us/swiper/api/#methods
+
+
+particules en mouvement
+https://codepen.io/joshatoutthink/pen/magRyO
+https://codepen.io/slyka85/pen/BJEbVL
+https://codepen.io/mikegolus/pen/Jegvym   <3
+
+
+rings / effet caillou dans l’eau / bouton CTA
+https://codepen.io/Artemis1/pen/QJMXVL
+https://codepen.io/DennisTap/pen/xHbfp
+https://codepen.io/codycurley/pen/XbRbyX
+https://codepen.io/inthejungle/pen/PZvmjb
+https://codepen.io/bldng/pen/bpsvL
+
+
+zoom lettre
+https://codepen.io/zyumbik/pen/ZVaNbw
+
+
+graphique bouge en fonction d’un curseur
+https://codepen.io/fuzzyma/pen/bOWdrp
+
+flèches / scroll
+https://codepen.io/YggLife/pen/MZGbrQ
+
+apparition différée
+https://codepen.io/syedrafeeq/pen/yEJKn
+
+scroll pages
+https://codepen.io/Yanestsang/pen/Lpapgb
+
+pop up
+https://codepen.io/DominicFrancois/pen/vlJbf
+https://codepen.io/dope/pen/Kcmiq
+
+hover stylé
+https://codepen.io/magnificode/pen/zGVyQm
+
+animation de texte
+https://codepen.io/LaithHaleem/pen/wzyrBd
+https://codepen.io/tmrDevelops/pen/yyprGq
+
+arrivée boutons après motion 
+https://codepen.io/bootstrapthemes/pen/YpLYJx

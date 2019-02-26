@@ -21,7 +21,7 @@ console.log( "loading data from server..." );
 d3.json('data', function(error,data) { // D3 HTTP GET request + parse JSON to the server
     if(error)
     {
-      // in case of error when retreiving the data, diplay a message
+      // in case of error when retreiving the data, display a message
       d3.select('#ParkingsLibres')
         .append('p')
         .attr('class', 'text-center') // use external (bootstrap) css for styling
@@ -71,7 +71,8 @@ function buildGraph( myGraph, myData )
     // declare useful variables
     var margin = {top: 20, right: 20, bottom: 220, left: 30},
         width = d3.select(myGraph).node().getBoundingClientRect().width - margin.left - margin.right,
-        height = d3.select(myGraph).node().getBoundingClientRect().height - margin.top - margin.bottom;      // the D3 way of getting width and height is a little bit complicated :-(
+        height = d3.select(myGraph).node().getBoundingClientRect().height - margin.top - margin.bottom;
+        // the D3 way of getting width and height is a little bit complicated :-(
 
     // Generate useful data for our x and y axis
     var x = d3.scale.ordinal()
