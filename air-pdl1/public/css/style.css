@@ -1,15 +1,202 @@
-/* just a sample css rule to show that everything works */
-footer p
-{
-  font-size: small;
+
+h1 {
+  color:white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
   text-align: center;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+h2 {
+  color:white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+h3 {
+  color:white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+h4 {
+  color:white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+h5 {
+  color:white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 0.1%;
+  margin-left: 0.1%;
 }
 
-header{
-  text-align: center;
+li {
+ font-family: 'Roboto', sans-serif;
+ font-size: 14px;
+ color: white;
+ line-height: 1.5;
+ display : list-item;
+ list-style-image : url("img/whitecircle.png");
+}
+canvas{
+  /*
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
+  padding: 2px;
+  */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  display: block;
+  width:400px;
+  height: 275px;
+}
+.petit_text{
+  font-size: 12px;
+}
+.vertical-text {
+  margin-top:10%;
+  margin-left: -15%;
+  margin-bottom:10%;
+  float:left;
+	transform: rotate(270deg);
 }
 
-header img{
-  max-width: 100%;
-	height: auto;
+.salmon-border{
+  border-width: 1px;
+  border-color: #EF8772;
+  border-style: solid;
+  padding: 1px;
+}
+
+.bouton{
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
+  padding: 2px;
+}
+
+.col-md-3.text-left{
+  text-align: left;
+  margin-left: 5%;
+}
+.left{
+  margin-left: -8%;
+  text-align: left;
+}
+.right{
+  margin-right:-8%;
+  text-align:right;
+}
+
+.flex {
+  display: flex;
+}
+.salmon-text{
+  color:#EF8772;
+}
+.white-text{
+  color:white;
+}
+.image{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  display: block;
+  width:400px;
+
+}
+.persofin{
+  margin-left: -50%;
+  width: 200%;
+}
+
+.logo{
+  width:66%;
+  vertical-align: bottom;
+  margin-left: 17%;
+  margin-right: 17%;
+  margin-bottom: 5%;
+}
+
+#Logo_Polytech {
+  width:100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  vertical-align: middle;
+  margin-bottom: 5%;
+}
+
+#realise_par{
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+#canvasVille{
+  background:url('../img/ville.svg');
+  background-repeat: no-repeat;
+}
+#canvasGrandeVille{
+  background:url('../img/ville.svg');
+  background-repeat: no-repeat;
+}
+#canvasCampagne{
+  background:url('../img/campagne.svg');
+  background-repeat: no-repeat;
+}
+#slider2{
+  position: relative;
+}
+#video1 {
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+#clignote{
+  visibility: hidden;
+  position:absolute;
+  width:100%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 100;
+}
+#video2 {
+  position:absolute;
+  visibility: visible;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#video3 {
+  position: absolute;
+  visibility: hidden;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+#reponse_ville{
+  visibility: hidden;
+}
+
+#bandeau{
+  width: 100%;
+}
+#derniereligne{
+  margin-bottom: 0%;
 }

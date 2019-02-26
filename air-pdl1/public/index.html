@@ -3,38 +3,466 @@
   <head>
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
     <meta charset="utf-8">
-    <title>Hyblab 2016</title>
+    <title>Air-pdl1</title>
+    <!-- Link Swiper's CSS -->
+
 		<!-- Basic viewport setting for mobile friendly page -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
     <!-- Déclaration de la feuille de style du document-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/rangeslider.css">
     <link rel="stylesheet" href="css/style.css">
-		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
+    <link rel="stylesheet" href="css/sliderQuestion.css">
+    <link rel="stylesheet" href="css/SliderTransport.css">
+
+		<!-- Those polyfills are required so that old browsers support fetch mecanism
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+  -->
 		<!-- Simple sample script that loads data from a dummy json file -->
-		<script src="js/example.js" defer></script>
+
   </head>
   <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+      <swiper class="swiper swiper-no-swiping" :options="swiperOption" ref="mySwiper">
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
-      <h1>Hyblab Datajournalism 2019</h1>
-    </header>
+    <div class="swiper-container">
+    <div class="swiper-wrapper">
+<!-- ############################################################################# -->
+<!-- ###############################   SLIDER 1   ################################ -->
+<!-- ############################################################################# -->
+        <div id="slider1"class="swiper-slide">
+            <video id = "video1" class="slider-video" width="100%" preload="auto" onended="showButton(true)" autoplay="" >
+              <source src="vid/animation1.mp4" type="video/mp4">
+            </video>
+        </div>
+<!-- ############################################################################# -->
+<!-- ###############################   SLIDER 2   ################################ -->
+<!-- ############################################################################# -->
+        <div id="slider2"class="swiper-slide">
+          <video id = "video2" class="slider-video" width="100%" preload="auto" onclick="clickVideo2()" >
+            <source src="vid/animation2.mp4" type="video/mp4">
+          </video>
+          <!--
+          <video id = "clignote" class="slider-video" preload="auto" onended="clignote()" onclick="clickVideo2()">
+            <source src="vid/clignote.mp4" type="video/mp4">
+          </video>
+          -->
+          <video id = "video3" class="slider-video" width="100%" preload="auto">
+            <source src="vid/animation3.mp4" type="video/mp4">
+          </video>
+        </div>
 
-    <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
+<!-- ############################################################################# -->
+<!-- ###############################   SLIDER VILLE  ############################# -->
+<!-- ############################################################################# -->
+  <div id="sliderVille" class="swiper-slide">
+        <h2> En ville la concentration de particules fines dans l’air s’élève à 18 µmol/m3 </h2>
+        <div class="modal-body">
 
-		<p>Here is some data from a json file : <span id="data"></span><p>
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2019</p>
-    </footer>
-    </div>
+          <!-- ligne image canvas -->
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <canvas id='canvasGrandeVille'></canvas>
+            </div>
+          </div>
+          <!-- ligne curseur -->
+          <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-1"><p class = "right">0µmol/m3</p></div>
+          <div class="col-md-4">
+            <input id = "curseurGrandeVille" type="range" min="0" max="20" step="1" value="18"
+            data-orientation="horizontal" class="form-control" data-rangeslider>
+            <h3 id="concentrationGrandeVille" class = 'salmon-text'>18 µmol/m3</h3>
+          </div>
+          <div class="col-md-1">
+            <p class = "left">20µmol/m3</p>
+          </div>
+          </div>
+          <div class="row">
+
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <h4>Sources</h4>
+          <a href = "https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health " target ="_blank">
+            <h5>Valeur guide OMS 20</h5>
+          </a>
+          <a href = "https://data.airpl.org " target ="_blank">
+            <h5>DATA air pays de la Loire, moyenne annuelle station St-Denis d'Anjou (Mayenne) et station Bouteillerie (Loire atlantique)</h5>
+          </a>
+        </div>
+        </div>
+        </div> <!-- fin balise modal-body -->
+      </div> <!-- fin balise slide -->
+<!-- ############################################################################# -->
+<!-- ######################   SLIDER VILLE VS CAMPAGNE ########################### -->
+<!-- ############################################################################# -->
+      <div id="slider3" class="swiper-slide">
+        <h2>A votre avis, qu’en est-il dans les zones rurales ?</h2>
+        <h4 class = 'salmon-text'>Donnez votre estimation en déplaçant le curseur campagne</h4>
+
+        <div class="modal-body">
+          <!-- Bootstrap divide pages in twelve columns -->
+          <div class="row">
+            <div class="col-md-6">
+              <canvas id='canvasVille'></canvas>
+              <h3 class="white-text center-text">Ville</h3>
+            </div>
+            <div class="col-md-6">
+              <canvas id='canvasCampagne'></canvas>
+              <h3>Campagne</h3>
+            </div>
+          </div>
+
+          <div class = "row">
+            <div class="col-md-1">
+              <p class = "right">0µmol/m3</p>
+            </div>
+            <div class="col-md-4">
+              <input id = "curseurVille" type="range" min="0" max="20" step="1" value="18"
+              data-orientation="horizontal" class="form-control" data-rangeslider>
+              <h3 id="concentrationVille" class = 'salmon-text'>18 µmol/m3</h3>
+            </div>
+            <div class="col-md-1">
+              <p>20µmol/m3</p>
+            </div>
+            <div class="col-md-1">
+              <p class = "right">0µmol/m3</p>
+            </div>
+            <div class="col-md-4">
+              <input id = "curseurCampagne" type="range" min="0" max="20" step="1" value="0"
+              data-orientation="horizontal" class="form-control" data-rangeslider>
+              <h3 id="concentrationCampagne" class = 'salmon-text'></h3>
+            </div>
+            <div class = "flex" class="col-md-1">
+              <p class = "left">20µg/mol</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+              <h4> En ville la concentration de particules fines dans l’air s’élève à 18 sur 20</h4>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+              <h4 id = "reponse_ville">Aviez-vous la bonne réponse ? Contrairement à ce que l’on pourrait penser, nous sommes autant exposés aux particules fines quel que soit notre environnement, rural ou urbain. </h4>
+            </div>
+            <div class="col-md-1">
+              <img src="img/bouton_valider_tic.png" alt="Valider" class = "bouton" onclick="valider_curseur()" width="100px" >
+
+            </div>
+          </div>
+
+          </div>
+        </div>
+<!-- ############################################################################# -->
+<!-- ###############################   SLIDER 4   ################################ -->
+<!-- ############################################################################# -->
+      <div id="slider4"class="swiper-slide">
+        <div>
+          <h2>Découvrez d’où proviennent ces particules fines</h2>
+          <h4 class ="salmon-text">Cliquez sur les pictogrammes pour decouvrir les 4 principaux secteurs emettants des PM10</h4>
+          <div id="wrap">
+          <div>
+          <img id="q1" class="questionMark" src="img/bouton__.svg" onclick="showAnswer(1)">
+          <div id="tq1" class="responseTitle"><p>TRANSPORTS</p></div>
+          <div id="dq1" class="responseText"><p>Comprend les combustibles des véhicules automobiles diesel et essence, mais aussi l’usure des routes, des carrières et chantiers.
+            </p></div>
+          </div>
+          <div>
+          <img id="q2" class="questionMark" src="img/bouton__.svg" onclick="showAnswer(2)">
+          <div id="tq2" class="responseTitle"><p>AGRICULTURE</p></div>
+          <div id="dq2" class="responseText"><p>Les activités agricoles au champ, épandages, récolte et utilisation d’engrais azotés, génèrent de l’ammoniac constituant l’une des sources majeures de particules fines.
+            </p></div>
+          </div>
+          <div>
+
+          <img id="q3" class="questionMark" src="img/bouton__.svg" onclick="showAnswer(3)">
+          <div id="tq3" class="responseTitle"><p>RÉSIDENTIEL</p></div>
+          <div id="dq3" class="responseText"><p>Résidentiel / tertiaire : Fait principalement référence au chauffage dans les habitations (notamment au bois).
+            </p></div>
+        </div>
+        <div>
+            <img id="q4" class="questionMark" src="img/bouton__.svg" onclick="showAnswer(4)">
+            <div id="tq4" class="responseTitle"><p>INDUSTRIES</p>
+            </div>
+            <div id="dq4" class="responseText"><p>Les industries : Prend en compte, les centrales thermiques et tout type d’activité industrielle (secteur sidérurgique, chaînes d’agglomération de minerai).
+              </p></div>
+          </div>
+          <div>
+            <button class="questionButton" data-toggle="modal" data-target="#myModal"><p class="text-question">?</p></button>
+
+              <div class="textPlus">Les autres sources
+              </div>
+            </div>
+        </div>
+
+                     <!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <img src="img/modal.svg" width="300px" height="400px">
+            <p class="text-modal">
+Outre leur origine humaine, les particules fines sont également d’origines naturelles : éruptions volcaniques, l’érosion éolienne naturelle, l’avancée des déserts, les incendies et feux de végétation.
+            </p>
+          </div>
+      </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</div>
+        </div>
+      </div>
+<!-- ############################################################################# -->
+<!-- ###############################   SLIDER 5   ################################ -->
+<!-- ############################################################################# -->
+<div id="slider5"class="swiper-slide">
+  <div>
+  <h2>Le taux de particules fines varie-t-il selon les saisons ?</h2>
+  <h4 class = 'salmon-text'>Placer la souris sur les pics et les creux pour obtenir des informations</h4>
+  <div><svg></svg></div>
+  </div>
+  <p></p>
+</div>
+
+<!-- ############################################################################# -->
+<!-- ###############################   SLIDER 6   ################################ -->
+<!-- ############################################################################# -->
+      <div id="slider6" class="swiper-slide">
+        <h2>Quelles sont les problèmes générés par les particules ?</h2>
+<!-- ###############################   ligne de texte   ################################ -->
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <h4>A ce jour, nous savons que les particules fines sont nocives même si le seuil d’alerte n’est pas atteint. Cette exposition permanente ou chronique aux particules fines même à petite dose peut entraîner des problèmes de santé :</h4>
+          </div>
+          <div class="col-md-4">
+            <h4>Il existe des profils qui sont plus sensibles que d’autres à ces particules :</h4>
+          </div>
+        </div>
+<!-- ###############################   ligne de texte + image   ################################ -->
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-2">
+            <ul>
+              <li>Amplification des réactions allergiques</li>
+              <li>Maladies respiratoires chroniques (asthme, bronchite ..)</li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <ul>
+              <li>Troubles cardiovasculaires</li>
+              <li>Troubles inflammatoires</li>
+              <li>Cancer</li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <img class = "risques" src="img/risque/agee.svg" alt="">
+            <h4>Les personnes agées</h4>
+            <img class = "risques" src="img/risque/enceinte.svg" alt="">
+            <h4>Les femmes enceintes</h4>
+          </div>
+          <div class="col-md-2">
+            <img class = "risques" src="img/risque/enfant.svg" alt="">
+            <h4>Les enfants</h4>
+            <img class = "risques" src="img/risque/trouble_respiratoire.svg" alt="">
+            <h4>Les individus présentant des problèmes respiratoires</h4>
+          </div>
+        </div>
+        <div class = "row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+              <h4 class="salmon-border">De manière général, peu importe le profil, tout le monde est exposé à ces particules fines quel que soit son milieu. Malgré le danger potentiel pour notre santé nous pouvons tous jouer un rôle pour prévenir ces risques.</h4>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+      </div> <!-- fin slider -->
+<!-- ############################################################################# -->
+<!-- ###############################   SLIDER TRANSPORTS ######################### -->
+<!-- ############################################################################# -->
+      <div id="slider7" class="swiper-slide">
+
+        <h2>Mais alors, quels transports sont à préconiser ?</h2>
+
+        <h4 class ="salmon-text">Cliquez sur les pictogrammes pour afficher leur emission en PM10</h4>
+          <div class="modal-body">
+<!-- ############################## ligne reponse ################################ -->
+
+          <div id = "infoGraphique" class="row">
+
+            <div class="col-md-3">
+              <h4 class = "salmon-border">
+                Effectivement, des solutions existent, et tout le monde peut agir à petite échelle.
+                Par exemple, opter pour un moyen de transport plutôt qu’un autre permettrait d’avoir des effets à grande échelle sur la réduction des émissions.
+              </h4>
+            </div>
+            <div class="col-md-1">
+              <img class = "barre" src="img/transports/barre.png" alt="legende">
+            </div>
+            <div class="col-md-1">
+              <img id = "info_voiture" class = "info" src="img/transports/info_voiture.png" alt="legende">
+            </div>
+            <div class="col-md-1">
+              <img id = "info_2roues" class = "info" src="img/transports/info_2roues.png" alt="legende">
+            </div>
+            <div class="col-md-1">
+              <img id = "info_covoiturage" class = "info" src="img/transports/info_covoiturage.png" alt="legende">
+            </div>
+            <div class="col-md-1">
+              <img id = "info_bus" width = "32%" class = "info" src="img/transports/info_bus.png" alt="legende">
+            </div>
+            <div class="col-md-1" >
+              <img id = "info_velo" class = "info_zero" src="img/transports/0.png" alt="legende">
+            </div>
+            <div class="col-md-1" >
+              <img id = "info_marche"  class = "info_zero" src="img/transports/0.png" alt="legende">
+            </div>
+          </div>
+<!-- ############################## ligne picto legende ################################ -->
+          <div id = "pictolegende" class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-1">
+              <img id = "voiture" class = "pictolegende" src="img/transports/voiture.svg" alt="voiture" onclick="montrerInfo(this.id)">
+              <h4>Voiture</h4><h4 style = "font-size:12px;">(1 personne)</h4>
+            </div>
+            <div class="col-md-1">
+              <img id = "2roues" class = "pictolegende" src="img/transports/2roues.svg" alt="2 roues" onclick="montrerInfo(this.id)">
+              <h4>2 roues</h4>
+            </div>
+            <div class="col-md-1">
+              <img id = "covoiturage" class = "pictolegende" src="img/transports/voiture.svg" alt="Covoiturage" onclick="montrerInfo(this.id)">
+                <h4>Covoiturage</h4><h4 style = "font-size:12px;">(4 personnes)</h4>
+            </div>
+            <div class="col-md-1">
+              <img id = "bus" class = "pictolegende" src="img/transports/bus.svg" alt="Bus" onclick="montrerInfo(this.id)">
+              <h4>Bus</h4>
+            </div>
+            <div class="col-md-1">
+              <img id = "velo" class = "pictolegende" src="img/transports/velo.svg" alt="Vélo" onclick="montrerInfo(this.id)">
+              <h4>Vélo</h4>
+            </div>
+            <div class="col-md-1">
+              <img id = "marche" class = "pictolegende" src="img/transports/marche.svg" alt="Marche à pied" onclick="montrerInfo(this.id)">
+              <h4>Marche à pied</h4>
+            </div>
+          </div> <!-- fin balise row -->
+        </div> <!-- fin div modal body -->
+      </div> <!-- fin div slide -->
+
+<!-- ############################################################################# -->
+<!-- ###############################   SLIDER FIN   ############################## -->
+<!-- ############################################################################# -->
+      <div id="sliderfin" class="swiper-slide">
+        <h2>Alors, comment vous déplacerez-vous demain ?</h2>
+
+        <h3 id = "realise_par" class = "salmon-text">Un projet réalisé par</h3>
+        <div class="modal-body">
+<!-- ############################## ligne logo ################################ -->
+          <div class = "row white-background">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+              <img id = "Logo_Audencia" class = "logo" src="img/logo/audencia.svg" alt="Logo Audencia">
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+              <img id = "Logo_AGR" class = "logo" src="img/logo/agr.png" alt="Logo AGR">
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+              <img id = "Logo_Polytech" class = "logo" src="img/logo/polytech.png" alt="Logo Polytech">
+            </div>
+          </div>
+<!-- ############################ Ligne personnages #################################### -->
+          <div class = "row flex">
+            <div class="col-md-1"></div>
+            <div class="col-md-1">
+              <a href = "https://www.linkedin.com/in/sarahduliscouet/" target ="_blank">
+                <img id = "Sarah" class = "persofin" src="img/perso/sarah.svg" alt="Sarah">
+              </a>
+            </div>
+            <div class="col-md-1">
+              <a href = "https://www.linkedin.com/in/brune-de-la-ferte/" target ="_blank">
+                <img id = "Brune" class = "persofin" src="img/perso/brune.svg" alt="Brune">
+              </a>
+            </div>
+            <div class="col-md-1">
+              <a href = "https://www.linkedin.com/in/emilie-mocaer/" target ="_blank">
+                <img id = "Emilie" class = "persofin margedroite" src="img/perso/emilie.svg" alt="Emilie">
+              </a>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1">
+              <a href = "https://www.behance.net/jeremiegauthier" target ="_blank">
+                <img id = "Jeremie" class = "persofin" src="img/perso/jerem.svg" alt="Jeremie">
+              </a>
+            </div>
+            <div class="col-md-1">
+              <a href = "https://celinelafond.myportfolio.com/" target ="_blank">
+                <img id = "Celine" class = "persofin" src="img/perso/celine.svg" alt="Celine">
+              </a>
+            </div>
+            <div class="col-md-1">
+              <a href = "https://www.linkedin.com/in/cécile-moody-5762b6132/" target ="_blank">
+                <img id = "Cecile" class = "persofin margedroite" src="img/perso/cecile.svg" alt="Cecile"></div>
+              </a>
+            <div class="col-md-1"></div>
+            <div class="col-md-1">
+              <a href = "https://www.linkedin.com/in/%E5%AE%B6%E6%98%8A-%E5%90%B4-663083171/" target ="_blank">
+                <img id = "Jiahao" class = "persofin" src="img/perso/jiahao.svg" alt="Jiaho">
+              </a>
+            </div>
+            <div class="col-md-1">
+              <a href = "https://www.linkedin.com/in/alexandre-nonnon-29304a14a" target ="_blank">
+                <img id = "Alexandre" class = "persofin margedroite" src="img/perso/alex.svg" alt="Aexandre">
+              </a>
+            </div>
+        </div>
+<!-- ############################ Bandeau logos #################################### -->
+      <div id = "derniereligne" class = "row">
+        <img id = "bandeau" src="img/logo/bandeau.svg">
+      </div>
+      </div>
+<!-- ############################################################################# -->
+<!-- #########################  FIN DES SLIDERS   ################################ -->
+<!-- ############################################################################# -->
+  </div>
+
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Arrows -->
+  <div id="down" class="swiper-button-next"></div>
+  <div id="up"class="swiper-button-prev"></div>
+</div>
+
+
+  <!-- ajout des frameworks :
+  * d3
+  * jquery
+  * cloudflare
+  *  Bootstrap
+  * swiper
+  * rangeslider,
+  -->
+
+  <script type="text/javascript" src="js/d3.min.js" charset="utf-8"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/rangeslider.min.js"></script>
+  <script src="js/air-pdl1.js"></script>
+  <script src="js/graph.js"></script>
+  <script>
+    var values=[14,9,10,11.5,0,12.5,16,8.5,3.5,8,12,14.5,1.5,13,14,13,2,8,13.5,8.5,12,8,3.5,11,8,14,15,8,12,10,11,6,13,1,8.5,10.5,13,9,8,14,11,1.5,12,2.5,9,6,10.5,16,9.5,12.5,8,2,20,5.5];
+    var test=new Graph('graph',300,100);
+  </script>
+</swiper>
   </body>
 </html>
