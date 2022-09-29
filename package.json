@@ -9,7 +9,7 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "chart.js": "^2.7.3",
-    "d3": "^4.12.2",
+    "d3": "^7.6.1",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "node-fetch": "^1.7.3",
